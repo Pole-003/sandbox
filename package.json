@@ -16,7 +16,8 @@
     "test:watch": "vitest",
     "check:securite": "node scripts/check-securite.ts",
     "veille:test": "node scripts/veille/diagnostic.ts",
-    "veille:collecte": "node scripts/veille/collecte.ts"
+    "veille:collecte": "node scripts/veille/collecte.ts",
+    "veille:explorer-suivi": "node scripts/veille/explorer-suivi.ts"
   },
   "devDependencies": {
     "@types/node": "^26.6.4",

@@ -49,3 +49,6 @@ jobs:
 
       - name: Diagnostic des sources
         run: npm run veille:test
+
+      - name: Exploration des sources du suivi PLF / PLFSS
+        run: npm run veille:explorer-suivi
