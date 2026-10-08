@@ -1,0 +1,212 @@
+{
+  "_lisezmoi": "Hiérarchie des mesures du PLF et du PLFSS établie pour le cabinet (docs/VEILLE.md). Clé : numéro du projet de loi, puis numéro d’article. L’intitulé sert de contrôle : si l’article change d’intitulé (renumérotation, amendement), la ligne est ignorée et le classement par mots-clés s’applique. Les articles non listés d’un texte hiérarchisé sont plafonnés à l’importance 2.",
+  "textes": {
+    "3210": {
+      "texte": "PLF 2027",
+      "etablie_le": "2026-10-08",
+      "articles": {
+        "2": {
+          "importance": 5,
+          "rubrique": "Impôt sur le revenu",
+          "intitule": "Soutenir le travail en revalorisant le barème de l’impôt sur le revenu grâce à un traitement fiscal équivalent des différents types de revenus"
+        },
+        "3": {
+          "importance": 4,
+          "rubrique": "Impôt sur le revenu",
+          "intitule": "Réduction à 3 000 € du plafond de l’abattement d’impôt sur le revenu en faveur des bénéficiaires de pensions de retraite"
+        },
+        "4": {
+          "importance": 4,
+          "rubrique": "Transmission et patrimoine",
+          "intitule": "Mesure temporaire d’allègement de la fiscalité des donations pour encourager les transmissions intergénérationnelles"
+        },
+        "5": {
+          "importance": 5,
+          "rubrique": "Transmission et patrimoine",
+          "intitule": "Recentrage du dispositif de l’apport-cession sur son objectif de soutien à l’investissement"
+        },
+        "6": {
+          "importance": 4,
+          "rubrique": "Transmission et patrimoine",
+          "intitule": "Protection du modèle de l’assurance-vie"
+        },
+        "7": {
+          "importance": 4,
+          "rubrique": "Transmission et patrimoine",
+          "intitule": "Réorienter les soutiens publics vers le logement familial et de longue durée"
+        },
+        "9": {
+          "importance": 4,
+          "rubrique": "Fiscalité des entreprises",
+          "intitule": "Soutien à l’industrie"
+        },
+        "10": {
+          "importance": 5,
+          "rubrique": "Transmission et patrimoine",
+          "intitule": "Soutien aux reprises d’entreprises (pacte « Papin »)"
+        },
+        "11": {
+          "importance": 3,
+          "rubrique": "Fiscalité des entreprises",
+          "intitule": "Prorogation d’un an de l’application du crédit d’impôt pour la compétitivité et l’emploi à Mayotte"
+        },
+        "13": {
+          "importance": 4,
+          "rubrique": "Secteurs d’activité",
+          "intitule": "Soutien au secteur agricole"
+        },
+        "14": {
+          "importance": 3,
+          "rubrique": "Secteurs d’activité",
+          "intitule": "Soutien aux entreprises touchées par les incendies de l’été 2026"
+        },
+        "15": {
+          "importance": 5,
+          "rubrique": "Fiscalité des entreprises",
+          "intitule": "Mise à contribution des grandes entreprises"
+        },
+        "17": {
+          "importance": 3,
+          "rubrique": "Fiscalité des entreprises",
+          "intitule": "Ajustements sur les taxes sur les réductions de capital"
+        },
+        "18": {
+          "importance": 3,
+          "rubrique": "Secteurs d’activité",
+          "intitule": "Aménagement du régime des provisions assurantielles"
+        },
+        "19": {
+          "importance": 4,
+          "rubrique": "TVA et autres taxes",
+          "intitule": "Mesures diverses de correction, clarification et coordination en matière de fiscalité sur les biens et services"
+        },
+        "24": {
+          "importance": 3,
+          "rubrique": "TVA et autres taxes",
+          "intitule": "Soutien à l’électrification et renforcement des incitations environnementales dans le secteur des transports"
+        },
+        "25": {
+          "importance": 4,
+          "rubrique": "TVA et autres taxes",
+          "intitule": "Mesures relatives à la fiscalité des véhicules"
+        },
+        "26": {
+          "importance": 4,
+          "rubrique": "Fiscalité locale",
+          "intitule": "Prorogations d’exonérations et précisions en matière de fiscalité locale"
+        },
+        "29": {
+          "importance": 5,
+          "rubrique": "Contrôle et procédures fiscales",
+          "intitule": "Nouvelle étape de la relation de confiance"
+        },
+        "30": {
+          "importance": 5,
+          "rubrique": "Contrôle et procédures fiscales",
+          "intitule": "Renforcement de la lutte contre la fraude fiscale et mesures anti-contournement"
+        },
+        "31": {
+          "importance": 5,
+          "rubrique": "Contrôle et procédures fiscales",
+          "intitule": "Modernisation et simplification des procédures fiscales"
+        },
+        "32": {
+          "importance": 3,
+          "rubrique": "Contrôle et procédures fiscales",
+          "intitule": "Sécurisation et amélioration de la lisibilité de dispositifs fiscaux mis en œuvre par la douane"
+        },
+        "33": {
+          "importance": 4,
+          "rubrique": "Entrée en vigueur",
+          "intitule": "Modalités d’entrée en vigueur des mesures fiscales"
+        },
+        "74": {
+          "importance": 3,
+          "rubrique": "Social et paie",
+          "intitule": "Maîtrise de l’évolution des aides personnelles au logement et de la prime d’activité"
+        },
+        "78": {
+          "importance": 3,
+          "rubrique": "Impôt sur le revenu",
+          "intitule": "Droit d’option entre le bénéfice des aides personnelles au logement (APL) versées aux étudiants et les avantages en matière d’impôt sur le revenu pour les foyers les plus aisés"
+        },
+        "88": {
+          "importance": 3,
+          "rubrique": "Social et paie",
+          "intitule": "Évolution des missions de France compétences et création d’une plateforme numérique pour la gestion des contrats d’apprentissage et des contrats de professionnalisation"
+        },
+        "89": {
+          "importance": 3,
+          "rubrique": "Social et paie",
+          "intitule": "Renforcement de la participation des titulaires au financement de leur formation dans le cadre du compte personnel de formation (CPF) et modification des dispositions relatives à la validation des acquis de l’expérience (VAE)"
+        },
+        "liminaire": {
+          "importance": 3,
+          "rubrique": "Finances publiques",
+          "intitule": "Prévisions de solde structurel et de solde effectif de l’ensemble des administrations publiques de l’année 2027, prévisions d’exécution 2026 et exécution 2025"
+        }
+      }
+    },
+    "3211": {
+      "texte": "PLFSS 2027",
+      "etablie_le": "2026-10-08",
+      "articles": {
+        "4": {
+          "importance": 3,
+          "rubrique": "Social et paie",
+          "intitule": "Aide aux cotisants affectés par les incendies et le cyclone Chido et soutien aux employeurs de sapeurs‑pompiers volontaires"
+        },
+        "6": {
+          "importance": 5,
+          "rubrique": "Social et paie",
+          "intitule": "[Simplifier le régime social applicable aux indemnités de rupture du contrat de travail]"
+        },
+        "7": {
+          "importance": 5,
+          "rubrique": "Social et paie",
+          "intitule": "Rationaliser l’assiette des allègements généraux de cotisations sociales"
+        },
+        "8": {
+          "importance": 3,
+          "rubrique": "Secteurs d’activité",
+          "intitule": "Extension de la « taxe soda » à des produits sucrés et transformés"
+        },
+        "12": {
+          "importance": 3,
+          "rubrique": "Secteurs d’activité",
+          "intitule": "Prorogation de la contribution exceptionnelle au financement du système de santé et de la couverture santé des Français les plus précaires de 2,05 % à la charge des organismes complémentaires au titre de 2027"
+        },
+        "16": {
+          "importance": 3,
+          "rubrique": "Finances publiques",
+          "intitule": "Tableau d’équilibre 2027"
+        },
+        "20": {
+          "importance": 4,
+          "rubrique": "Social et paie",
+          "intitule": "Renforcer la coordination entre le médecin traitant, le médecin du travail et le médecin conseil pour améliorer le suivi médical des personnes en arrêts de travail de longue durée et prévenir la désinsertion professionnelle"
+        },
+        "34": {
+          "importance": 4,
+          "rubrique": "Retraite",
+          "intitule": "Forfaitiser et harmoniser la majoration de pension pour enfants"
+        },
+        "35": {
+          "importance": 4,
+          "rubrique": "Retraite",
+          "intitule": "Dérogation exceptionnelle aux modalités de revalorisation des pensions de retraite pour 2027"
+        },
+        "36": {
+          "importance": 3,
+          "rubrique": "Secteurs d’activité",
+          "intitule": "Créer une allocation de remplacement bénéficiant aux non‑salariés agricoles dont un enfant est gravement malade, porteur d’un handicap ou victime d’un accident grave"
+        },
+        "39": {
+          "importance": 3,
+          "rubrique": "Secteurs d’activité",
+          "intitule": "Intéressement à l’efficience des EHPAD et des services autonomie à domicile"
+        }
+      }
+    }
+  }
+}

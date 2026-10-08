@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "genere_le": "2026-10-08T12:50:08.281Z",
+  "genere_le": "2026-10-08T13:26:46.915Z",
   "articles": [
     {
       "id": "b069aa48d1f16264",
@@ -1007,7 +1007,1242 @@
       ],
       "source": "Assemblée nationale — dossier législatif",
       "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/PLF_2027",
-      "mis_a_jour_le": "2026-10-08"
+      "mis_a_jour_le": "2026-10-08",
+      "mesures": {
+        "libelle": "Projet de loi n° 3210 (texte déposé par le Gouvernement)",
+        "url": "https://www.assemblee-nationale.fr/dyn/17/textes/l17b3210_projet-loi",
+        "articles": [
+          {
+            "numero": "liminaire",
+            "intitule": "Prévisions de solde structurel et de solde effectif de l’ensemble des administrations publiques de l’année 2027, prévisions d’exécution 2026 et exécution 2025",
+            "partie": null,
+            "groupe": null,
+            "theme": "Loi de finances",
+            "importance": 3,
+            "public": [
+              "Expertise comptable",
+              "Conseil aux dirigeants"
+            ],
+            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710665",
+            "rubrique": "Finances publiques"
+          },
+          {
+            "numero": "1",
+            "intitule": "Autorisation de percevoir les impôts existants",
+            "partie": "Première partie : conditions générales de l’équilibre financier",
+            "groupe": "A – Autorisation de perception des impôts et produits",
+            "theme": "Fiscal et comptable",
+            "importance": 2,
+            "public": [
+              "Expertise comptable"
+            ],
+            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710670",
+            "rubrique": null
+          },
+          {
+            "numero": "2",
+            "intitule": "Soutenir le travail en revalorisant le barème de l’impôt sur le revenu grâce à un traitement fiscal équivalent des différents types de revenus",
+            "partie": "Première partie : conditions générales de l’équilibre financier",
+            "groupe": "B – Mesures fiscales",
+            "theme": "Fiscal et comptable",
+            "importance": 5,
+            "public": [
+              "Expertise comptable"
+            ],
+            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710672",
+            "rubrique": "Impôt sur le revenu"
+          },
+          {
+            "numero": "3",
+            "intitule": "Réduction à 3 000 € du plafond de l’abattement d’impôt sur le revenu en faveur des bénéficiaires de pensions de retraite",
+            "partie": "Première partie : conditions générales de l’équilibre financier",
+            "groupe": "B – Mesures fiscales",
+            "theme": "Fiscal et comptable",
+            "importance": 4,
+            "public": [
+              "Expertise comptable",
+              "Social / paie"
+            ],
+            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710673",
+            "rubrique": "Impôt sur le revenu"
+          },
+          {
+            "numero": "4",
+            "intitule": "Mesure temporaire d’allègement de la fiscalité des donations pour encourager les transmissions intergénérationnelles",
+            "partie": "Première partie : conditions générales de l’équilibre financier",
+            "groupe": "B – Mesures fiscales",
+            "theme": "Sécurité sociale",
+            "importance": 4,
+            "public": [
+              "Expertise comptable",
+              "Conseil aux dirigeants"
+            ],
+            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710674",
+            "rubrique": "Transmission et patrimoine"
+          },
+          {
+            "numero": "5",
+            "intitule": "Recentrage du dispositif de l’apport-cession sur son objectif de soutien à l’investissement",
+            "partie": "Première partie : conditions générales de l’équilibre financier",
+            "groupe": "B – Mesures fiscales",
+            "theme": "Fiscal et comptable",
+            "importance": 5,
+            "public": [
+              "Expertise comptable",
+              "Conseil aux dirigeants"
+            ],
+            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710675",
+            "rubrique": "Transmission et patrimoine"
+          },
+          {
+            "numero": "6",
+            "intitule": "Protection du modèle de l’assurance-vie",
+            "partie": "Première partie : conditions générales de l’équilibre financier",
+            "groupe": "B – Mesures fiscales",
+            "theme": "Fiscal et comptable",
+            "importance": 4,
+            "public": [
+              "Expertise comptable"
+            ],
+            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710676",
+            "rubrique": "Transmission et patrimoine"
+          },
+          {
+            "numero": "7",
+            "intitule": "Réorienter les soutiens publics vers le logement familial et de longue durée",
+            "partie": "Première partie : conditions générales de l’équilibre financier",
+            "groupe": "B – Mesures fiscales",
+            "theme": "Fiscal et comptable",
+            "importance": 4,
+            "public": [
+              "Expertise comptable"
+            ],
+            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710677",
+            "rubrique": "Transmission et patrimoine"
+          },
+          {
+            "numero": "8",
+            "intitule": "Soutien au logement social",
+            "partie": "Première partie : conditions générales de l’équilibre financier",
+            "groupe": "B – Mesures fiscales",
+            "theme": "Fiscal et comptable",
+            "importance": 2,
+            "public": [
+              "Expertise comptable"
+            ],
+            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710678",
+            "rubrique": null
+          },
+          {
+            "numero": "9",
+            "intitule": "Soutien à l’industrie",
+            "partie": "Première partie : conditions générales de l’équilibre financier",
+            "groupe": "B – Mesures fiscales",
+            "theme": "Fiscal et comptable",
+            "importance": 4,
+            "public": [
+              "Expertise comptable"
+            ],
+            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710679",
+            "rubrique": "Fiscalité des entreprises"
+          },
+          {
+            "numero": "10",
+            "intitule": "Soutien aux reprises d’entreprises (pacte « Papin »)",
+            "partie": "Première partie : conditions générales de l’équilibre financier",
+            "groupe": "B – Mesures fiscales",
+            "theme": "Fiscal et comptable",
+            "importance": 5,
+            "public": [
+              "Expertise comptable",
+              "Conseil aux dirigeants"
+            ],
+            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710680",
+            "rubrique": "Transmission et patrimoine"
+          },
+          {
+            "numero": "11",
+            "intitule": "Prorogation d’un an de l’application du crédit d’impôt pour la compétitivité et l’emploi à Mayotte",
+            "partie": "Première partie : conditions générales de l’équilibre financier",
+            "groupe": "B – Mesures fiscales",
+            "theme": "Fiscal et comptable",
+            "importance": 3,
+            "public": [
+              "Expertise comptable"
+            ],
+            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710681",
+            "rubrique": "Fiscalité des entreprises"
+          },
+          {
+            "numero": "12",
+            "intitule": "Soutien au secteur culturel",
+            "partie": "Première partie : conditions générales de l’équilibre financier",
+            "groupe": "B – Mesures fiscales",
+            "theme": "Fiscal et comptable",
+            "importance": 2,
+            "public": [
+              "Expertise comptable"
+            ],
+            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710682",
+            "rubrique": null
+          },
+          {
+            "numero": "13",
+            "intitule": "Soutien au secteur agricole",
+            "partie": "Première partie : conditions générales de l’équilibre financier",
+            "groupe": "B – Mesures fiscales",
+            "theme": "Fiscal et comptable",
+            "importance": 4,
+            "public": [
+              "Expertise comptable"
+            ],
+            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710683",
+            "rubrique": "Secteurs d’activité"
+          },
+          {
+            "numero": "14",
+            "intitule": "Soutien aux entreprises touchées par les incendies de l’été 2026",
+            "partie": "Première partie : conditions générales de l’équilibre financier",
+            "groupe": "B – Mesures fiscales",
+            "theme": "Fiscal et comptable",
+            "importance": 3,
+            "public": [
+              "Expertise comptable",
+              "Conseil aux dirigeants"
+            ],
+            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710684",
+            "rubrique": "Secteurs d’activité"
+          },
+          {
+            "numero": "15",
+            "intitule": "Mise à contribution des grandes entreprises",
+            "partie": "Première partie : conditions générales de l’équilibre financier",
+            "groupe": "B – Mesures fiscales",
+            "theme": "Fiscal et comptable",
+            "importance": 5,
+            "public": [
+              "Expertise comptable",
+              "Conseil aux dirigeants"
+            ],
+            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710685",
+            "rubrique": "Fiscalité des entreprises"
+          },
+          {
+            "numero": "16",
+            "intitule": "Rationalisation des taux de taxe sur la valeur ajoutée applicables aux services de télévision",
+            "partie": "Première partie : conditions générales de l’équilibre financier",
+            "groupe": "B – Mesures fiscales",
+            "theme": "Fiscal et comptable",
+            "importance": 2,
+            "public": [
+              "Expertise comptable"
+            ],
+            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710686",
+            "rubrique": null
+          },
+          {
+            "numero": "17",
+            "intitule": "Ajustements sur les taxes sur les réductions de capital",
+            "partie": "Première partie : conditions générales de l’équilibre financier",
+            "groupe": "B – Mesures fiscales",
+            "theme": "Fiscal et comptable",
+            "importance": 3,
+            "public": [
+              "Expertise comptable"
+            ],
+            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710687",
+            "rubrique": "Fiscalité des entreprises"
+          },
+          {
+            "numero": "18",
+            "intitule": "Aménagement du régime des provisions assurantielles",
+            "partie": "Première partie : conditions générales de l’équilibre financier",
+            "groupe": "B – Mesures fiscales",
+            "theme": "Fiscal et comptable",
+            "importance": 3,
+            "public": [
+              "Expertise comptable"
+            ],
+            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710688",
+            "rubrique": "Secteurs d’activité"
+          },
+          {
+            "numero": "19",
+            "intitule": "Mesures diverses de correction, clarification et coordination en matière de fiscalité sur les biens et services",
+            "partie": "Première partie : conditions générales de l’équilibre financier",
+            "groupe": "B – Mesures fiscales",
+            "theme": "Fiscal et comptable",
+            "importance": 4,
+            "public": [
+              "Expertise comptable"
+            ],
+            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710689",
+            "rubrique": "TVA et autres taxes"
+          },
+          {
+            "numero": "20",
+            "intitule": "Création de tarifs réduits de taxes sur les installations nucléaires de base applicables pendant la phase de construction",
+            "partie": "Première partie : conditions générales de l’équilibre financier",
+            "groupe": "B – Mesures fiscales",
+            "theme": "Fiscal et comptable",
+            "importance": 2,
+            "public": [
+              "Expertise comptable",
+              "Conseil aux dirigeants"
+            ],
+            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710690",
+            "rubrique": null
+          },
+          {
+            "numero": "21",
+            "intitule": "Adaptation de la fiscalité aérienne au soutien à la continuité territoriale",
+            "partie": "Première partie : conditions générales de l’équilibre financier",
+            "groupe": "B – Mesures fiscales",
+            "theme": "Fiscal et comptable",
+            "importance": 2,
+            "public": [
+              "Expertise comptable"
+            ],
+            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710691",
+            "rubrique": null
+          },
+          {
+            "numero": "22",
+            "intitule": "Renforcement de la taxe sur l’exploitation des infrastructures de transport de longue distance pour les exploitants les plus rentables",
+            "partie": "Première partie : conditions générales de l’équilibre financier",
+            "groupe": "B – Mesures fiscales",
+            "theme": "Fiscal et comptable",
+            "importance": 2,
+            "public": [
+              "Expertise comptable"
+            ],
+            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710692",
+            "rubrique": null
+          },
+          {
+            "numero": "23",
+            "intitule": "Instauration d’un prélèvement exceptionnel sur les avoirs en déshérence déposés auprès de la Caisse des dépôts et consignations",
+            "partie": "Première partie : conditions générales de l’équilibre financier",
+            "groupe": "B – Mesures fiscales",
+            "theme": "Fiscal et comptable",
+            "importance": 2,
+            "public": [
+              "Expertise comptable"
+            ],
+            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710693",
+            "rubrique": null
+          },
+          {
+            "numero": "24",
+            "intitule": "Soutien à l’électrification et renforcement des incitations environnementales dans le secteur des transports",
+            "partie": "Première partie : conditions générales de l’équilibre financier",
+            "groupe": "B – Mesures fiscales",
+            "theme": "Fiscal et comptable",
+            "importance": 3,
+            "public": [
+              "Expertise comptable"
+            ],
+            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710694",
+            "rubrique": "TVA et autres taxes"
+          },
+          {
+            "numero": "25",
+            "intitule": "Mesures relatives à la fiscalité des véhicules",
+            "partie": "Première partie : conditions générales de l’équilibre financier",
+            "groupe": "B – Mesures fiscales",
+            "theme": "Fiscal et comptable",
+            "importance": 4,
+            "public": [
+              "Expertise comptable"
+            ],
+            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710695",
+            "rubrique": "TVA et autres taxes"
+          },
+          {
+            "numero": "26",
+            "intitule": "Prorogations d’exonérations et précisions en matière de fiscalité locale",
+            "partie": "Première partie : conditions générales de l’équilibre financier",
+            "groupe": "B – Mesures fiscales",
+            "theme": "Fiscal et comptable",
+            "importance": 4,
+            "public": [
+              "Expertise comptable"
+            ],
+            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710696",
+            "rubrique": "Fiscalité locale"
+          },
+          {
+            "numero": "27",
+            "intitule": "Mesures relatives au financement du service public de la justice",
+            "partie": "Première partie : conditions générales de l’équilibre financier",
+            "groupe": "B – Mesures fiscales",
+            "theme": "Fiscal et comptable",
+            "importance": 2,
+            "public": [
+              "Expertise comptable"
+            ],
+            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710697",
+            "rubrique": null
+          },
+          {
+            "numero": "28",
+            "intitule": "Mise à jour de références au droit de l’Union européenne dans des dispositifs fiscaux",
+            "partie": "Première partie : conditions générales de l’équilibre financier",
+            "groupe": "B – Mesures fiscales",
+            "theme": "Fiscal et comptable",
+            "importance": 2,
+            "public": [
+              "Expertise comptable"
+            ],
+            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710698",
+            "rubrique": null
+          },
+          {
+            "numero": "29",
+            "intitule": "Nouvelle étape de la relation de confiance",
+            "partie": "Première partie : conditions générales de l’équilibre financier",
+            "groupe": "B – Mesures fiscales",
+            "theme": "Fiscal et comptable",
+            "importance": 5,
+            "public": [
+              "Expertise comptable"
+            ],
+            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710699",
+            "rubrique": "Contrôle et procédures fiscales"
+          },
+          {
+            "numero": "30",
+            "intitule": "Renforcement de la lutte contre la fraude fiscale et mesures anti-contournement",
+            "partie": "Première partie : conditions générales de l’équilibre financier",
+            "groupe": "B – Mesures fiscales",
+            "theme": "Fiscal et comptable",
+            "importance": 5,
+            "public": [
+              "Expertise comptable"
+            ],
+            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710700",
+            "rubrique": "Contrôle et procédures fiscales"
+          },
+          {
+            "numero": "31",
+            "intitule": "Modernisation et simplification des procédures fiscales",
+            "partie": "Première partie : conditions générales de l’équilibre financier",
+            "groupe": "B – Mesures fiscales",
+            "theme": "Fiscal et comptable",
+            "importance": 5,
+            "public": [
+              "Expertise comptable"
+            ],
+            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710701",
+            "rubrique": "Contrôle et procédures fiscales"
+          },
+          {
+            "numero": "32",
+            "intitule": "Sécurisation et amélioration de la lisibilité de dispositifs fiscaux mis en œuvre par la douane",
+            "partie": "Première partie : conditions générales de l’équilibre financier",
+            "groupe": "B – Mesures fiscales",
+            "theme": "Fiscal et comptable",
+            "importance": 3,
+            "public": [
+              "Expertise comptable"
+            ],
+            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710702",
+            "rubrique": "Contrôle et procédures fiscales"
+          },
+          {
+            "numero": "33",
+            "intitule": "Modalités d’entrée en vigueur des mesures fiscales",
+            "partie": "Première partie : conditions générales de l’équilibre financier",
+            "groupe": "B – Mesures fiscales",
+            "theme": "Fiscal et comptable",
+            "importance": 4,
+            "public": [
+              "Expertise comptable"
+            ],
+            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710703",
+            "rubrique": "Entrée en vigueur"
+          },
+          {
+            "numero": "34",
+            "intitule": "Fixation pour 2027 des montants de la dotation globale de fonctionnement (DGF) et des variables d’ajustement",
+            "partie": "Première partie : conditions générales de l’équilibre financier",
+            "groupe": "A – Dispositions relatives aux collectivités territoriales",
+            "theme": "Loi de finances",
+            "importance": 1,
+            "public": [
+              "Expertise comptable",
+              "Conseil aux dirigeants"
+            ],
+            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710706",
+            "rubrique": null
+          },
+          {
+            "numero": "35",
+            "intitule": "Modalités d’attribution du fonds de compensation pour la taxe sur la valeur ajoutée",
+            "partie": "Première partie : conditions générales de l’équilibre financier",
+            "groupe": "A – Dispositions relatives aux collectivités territoriales",
+            "theme": "Fiscal et comptable",
+            "importance": 2,
+            "public": [
+              "Expertise comptable"
+            ],
+            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710707",
+            "rubrique": null
+          },
+          {
+            "numero": "36",
+            "intitule": "Maîtrise de la dynamique de la taxe sur la valeur ajoutée (TVA) affectée aux collectivités territoriales",
+            "partie": "Première partie : conditions générales de l’équilibre financier",
+            "groupe": "A – Dispositions relatives aux collectivités territoriales",
+            "theme": "Fiscal et comptable",
+            "importance": 2,
+            "public": [
+              "Expertise comptable"
+            ],
+            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710708",
+            "rubrique": null
+          },
+          {
+            "numero": "37",
+            "intitule": "Contribution progressive des collectivités territoriales et de leurs groupements à l’effort budgétaire (CPEB)",
+            "partie": "Première partie : conditions générales de l’équilibre financier",
+            "groupe": "A – Dispositions relatives aux collectivités territoriales",
+            "theme": "Loi de finances",
+            "importance": 2,
+            "public": [
+              "Expertise comptable",
+              "Conseil aux dirigeants"
+            ],
+            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710709",
+            "rubrique": null
+          },
+          {
+            "numero": "38",
+            "intitule": "Compensations financières dues aux régions dans le domaine des formations professionnelle et sanitaires et de la gestion des aides non-surfaciques du Fonds européen agricole pour le développement rural (FEADER)",
+            "partie": "Première partie : conditions générales de l’équilibre financier",
+            "groupe": "A – Dispositions relatives aux collectivités territoriales",
+            "theme": "Loi de finances",
+            "importance": 1,
+            "public": [
+              "Expertise comptable",
+              "Conseil aux dirigeants"
+            ],
+            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710710",
+            "rubrique": null
+          },
+          {
+            "numero": "39",
+            "intitule": "Suppression de l’affectation aux régions de la fraction d’accises sur les énergies allouée au titre de la neutralisation de l’impact financier des transferts de compétences de la loi pour la liberté de choisir son avenir professionnel",
+            "partie": "Première partie : conditions générales de l’équilibre financier",
+            "groupe": "A – Dispositions relatives aux collectivités territoriales",
+            "theme": "Loi de finances",
+            "importance": 1,
+            "public": [
+              "Expertise comptable",
+              "Conseil aux dirigeants"
+            ],
+            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710711",
+            "rubrique": null
+          },
+          {
+            "numero": "40",
+            "intitule": "Prolongation du schéma de financement transitoire de la Métropole du Grand Paris",
+            "partie": "Première partie : conditions générales de l’équilibre financier",
+            "groupe": "A – Dispositions relatives aux collectivités territoriales",
+            "theme": "Loi de finances",
+            "importance": 1,
+            "public": [
+              "Expertise comptable",
+              "Conseil aux dirigeants"
+            ],
+            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710712",
+            "rubrique": null
+          },
+          {
+            "numero": "41",
+            "intitule": "Évaluation des prélèvements opérés sur les recettes de l’État au profit des collectivités territoriales",
+            "partie": "Première partie : conditions générales de l’équilibre financier",
+            "groupe": "A – Dispositions relatives aux collectivités territoriales",
+            "theme": "Loi de finances",
+            "importance": 1,
+            "public": [
+              "Expertise comptable",
+              "Conseil aux dirigeants"
+            ],
+            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710713",
+            "rubrique": null
+          },
+          {
+            "numero": "42",
+            "intitule": "Dispositions relatives à l’affectation de ressources à des tiers",
+            "partie": "Première partie : conditions générales de l’équilibre financier",
+            "groupe": "B – Impositions et autres ressources affectées à des tiers",
+            "theme": "Loi de finances",
+            "importance": 1,
+            "public": [
+              "Expertise comptable",
+              "Conseil aux dirigeants"
+            ],
+            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710715",
+            "rubrique": null
+          },
+          {
+            "numero": "43",
+            "intitule": "Dispositions relatives aux affectations : reconduction des budgets annexes et comptes spéciaux existants",
+            "partie": "Première partie : conditions générales de l’équilibre financier",
+            "groupe": "C – Dispositions relatives aux budgets annexes et aux comptes spéciaux",
+            "theme": "Loi de finances",
+            "importance": 2,
+            "public": [
+              "Expertise comptable",
+              "Conseil aux dirigeants"
+            ],
+            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710717",
+            "rubrique": null
+          },
+          {
+            "numero": "44",
+            "intitule": "Plafonnement en 2027 de l’affectation du tarif de l’aviation civile (TAC) au budget annexe « Contrôle et exploitation aériens » (BACEA)",
+            "partie": "Première partie : conditions générales de l’équilibre financier",
+            "groupe": "C – Dispositions relatives aux budgets annexes et aux comptes spéciaux",
+            "theme": "Loi de finances",
+            "importance": 2,
+            "public": [
+              "Expertise comptable",
+              "Conseil aux dirigeants"
+            ],
+            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710718",
+            "rubrique": null
+          },
+          {
+            "numero": "45",
+            "intitule": "Abaissement en 2027 du plafond de la première section du compte d’affectation spéciale « Contrôle de la circulation et du stationnement routiers »",
+            "partie": "Première partie : conditions générales de l’équilibre financier",
+            "groupe": "C – Dispositions relatives aux budgets annexes et aux comptes spéciaux",
+            "theme": "Loi de finances",
+            "importance": 2,
+            "public": [
+              "Expertise comptable",
+              "Conseil aux dirigeants"
+            ],
+            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710719",
+            "rubrique": null
+          },
+          {
+            "numero": "46",
+            "intitule": "Modification des dispositions relatives au compte de concours financiers « Avances aux collectivités territoriales »",
+            "partie": "Première partie : conditions générales de l’équilibre financier",
+            "groupe": "C – Dispositions relatives aux budgets annexes et aux comptes spéciaux",
+            "theme": "Loi de finances",
+            "importance": 2,
+            "public": [
+              "Expertise comptable",
+              "Conseil aux dirigeants"
+            ],
+            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710720",
+            "rubrique": null
+          },
+          {
+            "numero": "47",
+            "intitule": "Modification des dispositions relatives au compte de concours financiers « Avances à l’audiovisuel public » en lien avec la suppression du programme 848 « Programme de transformation »",
+            "partie": "Première partie : conditions générales de l’équilibre financier",
+            "groupe": "C – Dispositions relatives aux budgets annexes et aux comptes spéciaux",
+            "theme": "Loi de finances",
+            "importance": 2,
+            "public": [
+              "Expertise comptable",
+              "Conseil aux dirigeants"
+            ],
+            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710721",
+            "rubrique": null
+          },
+          {
+            "numero": "48",
+            "intitule": "Création d’un compte de commerce « Soutien financier à la mise en œuvre du nouveau nucléaire français »",
+            "partie": "Première partie : conditions générales de l’équilibre financier",
+            "groupe": "C – Dispositions relatives aux budgets annexes et aux comptes spéciaux",
+            "theme": "Loi de finances",
+            "importance": 2,
+            "public": [
+              "Conseil aux dirigeants"
+            ],
+            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710722",
+            "rubrique": null
+          },
+          {
+            "numero": "49",
+            "intitule": "Relations financières entre l’Etat et la sécurité sociale",
+            "partie": "Première partie : conditions générales de l’équilibre financier",
+            "groupe": "D - Autres dispositions",
+            "theme": "Sécurité sociale",
+            "importance": 2,
+            "public": [
+              "Social / paie"
+            ],
+            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710724",
+            "rubrique": null
+          },
+          {
+            "numero": "50",
+            "intitule": "Prélèvement sur les ressources de l’Agence nationale pour les chèques-vacances (ANCV) et du Fonds de compensation des risques de l’assurance de la construction (FCAC)",
+            "partie": "Première partie : conditions générales de l’équilibre financier",
+            "groupe": "D - Autres dispositions",
+            "theme": "Loi de finances",
+            "importance": 1,
+            "public": [
+              "Expertise comptable",
+              "Conseil aux dirigeants"
+            ],
+            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710725",
+            "rubrique": null
+          },
+          {
+            "numero": "51",
+            "intitule": "Modification de l’affectation des astreintes prononcées au titre du droit au logement opposable (DALO)",
+            "partie": "Première partie : conditions générales de l’équilibre financier",
+            "groupe": "D - Autres dispositions",
+            "theme": "Loi de finances",
+            "importance": 1,
+            "public": [
+              "Expertise comptable",
+              "Conseil aux dirigeants"
+            ],
+            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710726",
+            "rubrique": null
+          },
+          {
+            "numero": "52",
+            "intitule": "Maintien du niveau de contribution des bailleurs sociaux au financement des aides à la pierre",
+            "partie": "Première partie : conditions générales de l’équilibre financier",
+            "groupe": "D - Autres dispositions",
+            "theme": "Loi de finances",
+            "importance": 1,
+            "public": [
+              "Expertise comptable",
+              "Conseil aux dirigeants"
+            ],
+            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710727",
+            "rubrique": null
+          },
+          {
+            "numero": "53",
+            "intitule": "Affectation d’une part du produit des forfaits de post-stationnement au budget général de l’Etat",
+            "partie": "Première partie : conditions générales de l’équilibre financier",
+            "groupe": "D - Autres dispositions",
+            "theme": "Loi de finances",
+            "importance": 2,
+            "public": [
+              "Expertise comptable",
+              "Conseil aux dirigeants"
+            ],
+            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710728",
+            "rubrique": null
+          },
+          {
+            "numero": "54",
+            "intitule": "Instauration de droits d’inscription en classes préparatoires aux grandes écoles (CPGE) et dans les sections de techniciens supérieurs (STS)",
+            "partie": "Première partie : conditions générales de l’équilibre financier",
+            "groupe": "D - Autres dispositions",
+            "theme": "Loi de finances",
+            "importance": 1,
+            "public": [
+              "Expertise comptable",
+              "Conseil aux dirigeants"
+            ],
+            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710729",
+            "rubrique": null
+          },
+          {
+            "numero": "55",
+            "intitule": "Évaluation du prélèvement opéré sur les recettes de l’État au titre de la participation de la France au budget de l’Union européenne (PSR-UE)",
+            "partie": "Première partie : conditions générales de l’équilibre financier",
+            "groupe": "D - Autres dispositions",
+            "theme": "Loi de finances",
+            "importance": 2,
+            "public": [
+              "Expertise comptable",
+              "Conseil aux dirigeants"
+            ],
+            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710730",
+            "rubrique": null
+          },
+          {
+            "numero": "56",
+            "intitule": "Recours à une chambre de compensation pour les opérations de pensions de titres financiers",
+            "partie": "Première partie : conditions générales de l’équilibre financier",
+            "groupe": "D - Autres dispositions",
+            "theme": "Loi de finances",
+            "importance": 1,
+            "public": [
+              "Expertise comptable",
+              "Conseil aux dirigeants"
+            ],
+            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710731",
+            "rubrique": null
+          },
+          {
+            "numero": "57",
+            "intitule": "Équilibre général du budget, trésorerie et plafond d’autorisation des emplois",
+            "partie": "Première partie : conditions générales de l’équilibre financier",
+            "groupe": "Titre ii : dispositions relatives à l’équilibre des ressources et des charges",
+            "theme": "Loi de finances",
+            "importance": 2,
+            "public": [
+              "Expertise comptable",
+              "Conseil aux dirigeants"
+            ],
+            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710733",
+            "rubrique": null
+          },
+          {
+            "numero": "58",
+            "intitule": "Crédits du budget général",
+            "partie": "Seconde partie : moyens des politiques publiques et dispositions spéciales",
+            "groupe": "A. - Crédits des missions",
+            "theme": "Loi de finances",
+            "importance": 2,
+            "public": [
+              "Expertise comptable",
+              "Conseil aux dirigeants"
+            ],
+            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710738",
+            "rubrique": null
+          },
+          {
+            "numero": "59",
+            "intitule": "Crédits des budgets annexes",
+            "partie": "Seconde partie : moyens des politiques publiques et dispositions spéciales",
+            "groupe": "A. - Crédits des missions",
+            "theme": "Loi de finances",
+            "importance": 2,
+            "public": [
+              "Expertise comptable",
+              "Conseil aux dirigeants"
+            ],
+            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710739",
+            "rubrique": null
+          },
+          {
+            "numero": "60",
+            "intitule": "Crédits des comptes d’affectation spéciale et des comptes de concours financiers",
+            "partie": "Seconde partie : moyens des politiques publiques et dispositions spéciales",
+            "groupe": "A. - Crédits des missions",
+            "theme": "Loi de finances",
+            "importance": 1,
+            "public": [
+              "Expertise comptable",
+              "Conseil aux dirigeants"
+            ],
+            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710740",
+            "rubrique": null
+          },
+          {
+            "numero": "61",
+            "intitule": "Objectifs et indicateurs de performance",
+            "partie": "Seconde partie : moyens des politiques publiques et dispositions spéciales",
+            "groupe": "B. - Données de la performance",
+            "theme": "Loi de finances",
+            "importance": 1,
+            "public": [
+              "Expertise comptable",
+              "Conseil aux dirigeants"
+            ],
+            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710742",
+            "rubrique": null
+          },
+          {
+            "numero": "62",
+            "intitule": "Autorisations de découvert",
+            "partie": "Seconde partie : moyens des politiques publiques et dispositions spéciales",
+            "groupe": "II – Autorisations de découvert",
+            "theme": "Loi de finances",
+            "importance": 1,
+            "public": [
+              "Expertise comptable",
+              "Conseil aux dirigeants"
+            ],
+            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710744",
+            "rubrique": null
+          },
+          {
+            "numero": "63",
+            "intitule": "Plafond d’autorisation des emplois de l’État",
+            "partie": "Seconde partie : moyens des politiques publiques et dispositions spéciales",
+            "groupe": "III. – Plafonds des autorisations d’emplois",
+            "theme": "Loi de finances",
+            "importance": 1,
+            "public": [
+              "Expertise comptable",
+              "Conseil aux dirigeants"
+            ],
+            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710746",
+            "rubrique": null
+          },
+          {
+            "numero": "64",
+            "intitule": "Plafond d’autorisation des emplois des opérateurs de l’État",
+            "partie": "Seconde partie : moyens des politiques publiques et dispositions spéciales",
+            "groupe": "III. – Plafonds des autorisations d’emplois",
+            "theme": "Loi de finances",
+            "importance": 1,
+            "public": [
+              "Expertise comptable",
+              "Conseil aux dirigeants"
+            ],
+            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710747",
+            "rubrique": null
+          },
+          {
+            "numero": "65",
+            "intitule": "Plafond d’autorisation des emplois des établissements à autonomie financière",
+            "partie": "Seconde partie : moyens des politiques publiques et dispositions spéciales",
+            "groupe": "III. – Plafonds des autorisations d’emplois",
+            "theme": "Loi de finances",
+            "importance": 1,
+            "public": [
+              "Expertise comptable",
+              "Conseil aux dirigeants"
+            ],
+            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710748",
+            "rubrique": null
+          },
+          {
+            "numero": "66",
+            "intitule": "Plafond d’autorisation des emplois des autorités publiques indépendantes",
+            "partie": "Seconde partie : moyens des politiques publiques et dispositions spéciales",
+            "groupe": "III. – Plafonds des autorisations d’emplois",
+            "theme": "Loi de finances",
+            "importance": 1,
+            "public": [
+              "Expertise comptable",
+              "Conseil aux dirigeants"
+            ],
+            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710749",
+            "rubrique": null
+          },
+          {
+            "numero": "67",
+            "intitule": "Majoration des plafonds de report de crédits de paiement",
+            "partie": "Seconde partie : moyens des politiques publiques et dispositions spéciales",
+            "groupe": "IV. - Reports de crédits de 2026 sur 2027",
+            "theme": "Loi de finances",
+            "importance": 1,
+            "public": [
+              "Social / paie"
+            ],
+            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710751",
+            "rubrique": null
+          },
+          {
+            "numero": "68",
+            "intitule": "Garantie de l’Etat à l’Unédic",
+            "partie": "Seconde partie : moyens des politiques publiques et dispositions spéciales",
+            "groupe": "I – Mesures budgétaires non rattachées",
+            "theme": "Loi de finances",
+            "importance": 2,
+            "public": [
+              "Expertise comptable",
+              "Conseil aux dirigeants"
+            ],
+            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710754",
+            "rubrique": null
+          },
+          {
+            "numero": "69",
+            "intitule": "Garantie de l’Etat pour le financement du programme du Nouveau Nucléaire Français (NNF)",
+            "partie": "Seconde partie : moyens des politiques publiques et dispositions spéciales",
+            "groupe": "I – Mesures budgétaires non rattachées",
+            "theme": "Loi de finances",
+            "importance": 2,
+            "public": [
+              "Expertise comptable",
+              "Conseil aux dirigeants"
+            ],
+            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710755",
+            "rubrique": null
+          },
+          {
+            "numero": "70",
+            "intitule": "Garantie de l’Etat aux emprunts accordés par la Banque européenne d’investissement à la Société des Grands Projets dans le cadre de la réalisation de la ligne 15 Ouest du Grand Paris Express",
+            "partie": "Seconde partie : moyens des politiques publiques et dispositions spéciales",
+            "groupe": "I – Mesures budgétaires non rattachées",
+            "theme": "Loi de finances",
+            "importance": 2,
+            "public": [
+              "Conseil aux dirigeants"
+            ],
+            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710756",
+            "rubrique": null
+          },
+          {
+            "numero": "71",
+            "intitule": "Prorogation pour 2027 de la garantie pour le réaménagement des dettes et le renforcement de la trésorerie des exploitations agricoles (GRETEA)",
+            "partie": "Seconde partie : moyens des politiques publiques et dispositions spéciales",
+            "groupe": "I – Mesures budgétaires non rattachées",
+            "theme": "Loi de finances",
+            "importance": 2,
+            "public": [
+              "Expertise comptable",
+              "Conseil aux dirigeants"
+            ],
+            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710757",
+            "rubrique": null
+          },
+          {
+            "numero": "72",
+            "intitule": "Réforme du régime de l’invalidité non professionnelle des fonctionnaires de l’État",
+            "partie": "Seconde partie : moyens des politiques publiques et dispositions spéciales",
+            "groupe": "I – Mesures budgétaires non rattachées",
+            "theme": "Loi de finances",
+            "importance": 2,
+            "public": [
+              "Expertise comptable",
+              "Conseil aux dirigeants"
+            ],
+            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710758",
+            "rubrique": null
+          },
+          {
+            "numero": "73",
+            "intitule": "Adaptations du régime de la responsabilité pécuniaire des agents des services publics",
+            "partie": "Seconde partie : moyens des politiques publiques et dispositions spéciales",
+            "groupe": "I – Mesures budgétaires non rattachées",
+            "theme": "Loi de finances",
+            "importance": 2,
+            "public": [
+              "Expertise comptable",
+              "Conseil aux dirigeants"
+            ],
+            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710759",
+            "rubrique": null
+          },
+          {
+            "numero": "74",
+            "intitule": "Maîtrise de l’évolution des aides personnelles au logement et de la prime d’activité",
+            "partie": "Seconde partie : moyens des politiques publiques et dispositions spéciales",
+            "groupe": "I – Mesures budgétaires non rattachées",
+            "theme": "Loi de finances",
+            "importance": 3,
+            "public": [
+              "Expertise comptable",
+              "Conseil aux dirigeants"
+            ],
+            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710760",
+            "rubrique": "Social et paie"
+          },
+          {
+            "numero": "75",
+            "intitule": "Évolution de la documentation budgétaire annexée aux projets de lois de finances",
+            "partie": "Seconde partie : moyens des politiques publiques et dispositions spéciales",
+            "groupe": "I – Mesures budgétaires non rattachées",
+            "theme": "Loi de finances",
+            "importance": 2,
+            "public": [
+              "Expertise comptable",
+              "Conseil aux dirigeants"
+            ],
+            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710761",
+            "rubrique": null
+          },
+          {
+            "numero": "76",
+            "intitule": "Révision des modalités d’envoi de la propagande électorale et de vote pour les élections législatives",
+            "partie": "Seconde partie : moyens des politiques publiques et dispositions spéciales",
+            "groupe": "Administration générale et territoriale de l’Etat",
+            "theme": "Loi de finances",
+            "importance": 1,
+            "public": [
+              "Expertise comptable",
+              "Conseil aux dirigeants"
+            ],
+            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710764",
+            "rubrique": null
+          },
+          {
+            "numero": "77",
+            "intitule": "Suppression de la dotation annuelle versée aux régions au titre de la gestion du Fonds européen agricole pour le développement rural (FEADER)",
+            "partie": "Seconde partie : moyens des politiques publiques et dispositions spéciales",
+            "groupe": "Agriculture et alimentation",
+            "theme": "Loi de finances",
+            "importance": 1,
+            "public": [
+              "Expertise comptable",
+              "Conseil aux dirigeants"
+            ],
+            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710766",
+            "rubrique": null
+          },
+          {
+            "numero": "78",
+            "intitule": "Droit d’option entre le bénéfice des aides personnelles au logement (APL) versées aux étudiants et les avantages en matière d’impôt sur le revenu pour les foyers les plus aisés",
+            "partie": "Seconde partie : moyens des politiques publiques et dispositions spéciales",
+            "groupe": "Cohésion des territoires",
+            "theme": "Fiscal et comptable",
+            "importance": 3,
+            "public": [
+              "Expertise comptable"
+            ],
+            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710768",
+            "rubrique": "Impôt sur le revenu"
+          },
+          {
+            "numero": "79",
+            "intitule": "Création d’un complément de pension de retraite des militaires relevant du ministre de la défense",
+            "partie": "Seconde partie : moyens des politiques publiques et dispositions spéciales",
+            "groupe": "Défense",
+            "theme": "Sécurité sociale",
+            "importance": 2,
+            "public": [
+              "Social / paie",
+              "Conseil aux dirigeants"
+            ],
+            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710770",
+            "rubrique": null
+          },
+          {
+            "numero": "80",
+            "intitule": "Extinction de la commission nationale indépendante de reconnaissance et de réparation des préjudices subis par les harkis (CNIH) et fixation d’une date limite du droit à demander une réparation",
+            "partie": "Seconde partie : moyens des politiques publiques et dispositions spéciales",
+            "groupe": "Défense",
+            "theme": "Loi de finances",
+            "importance": 1,
+            "public": [
+              "Expertise comptable",
+              "Conseil aux dirigeants"
+            ],
+            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710771",
+            "rubrique": null
+          },
+          {
+            "numero": "81",
+            "intitule": "Amélioration des conditions de délivrance et de versement du chèque énergie",
+            "partie": "Seconde partie : moyens des politiques publiques et dispositions spéciales",
+            "groupe": "Ecologie, développement et mobilité durables",
+            "theme": "Loi de finances",
+            "importance": 1,
+            "public": [
+              "Expertise comptable",
+              "Conseil aux dirigeants"
+            ],
+            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710773",
+            "rubrique": null
+          },
+          {
+            "numero": "82",
+            "intitule": "Adaptation des dispositifs de soutien à la production d’énergie renouvelable et maîtrise des charges de service public de l’énergie",
+            "partie": "Seconde partie : moyens des politiques publiques et dispositions spéciales",
+            "groupe": "Ecologie, développement et mobilité durables",
+            "theme": "Loi de finances",
+            "importance": 1,
+            "public": [
+              "Expertise comptable",
+              "Conseil aux dirigeants"
+            ],
+            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710774",
+            "rubrique": null
+          },
+          {
+            "numero": "83",
+            "intitule": "Répartition de la dotation globale de fonctionnement (DGF)",
+            "partie": "Seconde partie : moyens des politiques publiques et dispositions spéciales",
+            "groupe": "Relations avec les collectivités territoriales",
+            "theme": "Loi de finances",
+            "importance": 1,
+            "public": [
+              "Expertise comptable",
+              "Conseil aux dirigeants"
+            ],
+            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710776",
+            "rubrique": null
+          },
+          {
+            "numero": "84",
+            "intitule": "Aménagement du calendrier de reversement des dispositifs de lissage conjoncturel des recettes fiscales des collectivités territoriales",
+            "partie": "Seconde partie : moyens des politiques publiques et dispositions spéciales",
+            "groupe": "Relations avec les collectivités territoriales",
+            "theme": "Économie et statistiques",
+            "importance": 2,
+            "public": [
+              "Expertise comptable"
+            ],
+            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710777",
+            "rubrique": null
+          },
+          {
+            "numero": "85",
+            "intitule": "Institution d’une dotation pour les communes rurales de faible densité",
+            "partie": "Seconde partie : moyens des politiques publiques et dispositions spéciales",
+            "groupe": "Relations avec les collectivités territoriales",
+            "theme": "Loi de finances",
+            "importance": 1,
+            "public": [
+              "Expertise comptable",
+              "Conseil aux dirigeants"
+            ],
+            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710778",
+            "rubrique": null
+          },
+          {
+            "numero": "86",
+            "intitule": "Éligibilité en 2027 des départements et des collectivités territoriales à statut particulier au dispositif d’aides exceptionnelles",
+            "partie": "Seconde partie : moyens des politiques publiques et dispositions spéciales",
+            "groupe": "Relations avec les collectivités territoriales",
+            "theme": "Loi de finances",
+            "importance": 1,
+            "public": [
+              "Expertise comptable",
+              "Conseil aux dirigeants"
+            ],
+            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710779",
+            "rubrique": null
+          },
+          {
+            "numero": "87",
+            "intitule": "Fonds de soutien exceptionnel aux communes contribuant à la contribution progressive des collectivités territoriales et de leurs groupements à l’effort budgétaire (CPEB)",
+            "partie": "Seconde partie : moyens des politiques publiques et dispositions spéciales",
+            "groupe": "Relations avec les collectivités territoriales",
+            "theme": "Loi de finances",
+            "importance": 2,
+            "public": [
+              "Expertise comptable",
+              "Conseil aux dirigeants"
+            ],
+            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710780",
+            "rubrique": null
+          },
+          {
+            "numero": "88",
+            "intitule": "Évolution des missions de France compétences et création d’une plateforme numérique pour la gestion des contrats d’apprentissage et des contrats de professionnalisation",
+            "partie": "Seconde partie : moyens des politiques publiques et dispositions spéciales",
+            "groupe": "Travail, emploi et administration des ministères sociaux",
+            "theme": "Loi de finances",
+            "importance": 3,
+            "public": [
+              "Conseil aux dirigeants"
+            ],
+            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710782",
+            "rubrique": "Social et paie"
+          },
+          {
+            "numero": "89",
+            "intitule": "Renforcement de la participation des titulaires au financement de leur formation dans le cadre du compte personnel de formation (CPF) et modification des dispositions relatives à la validation des acquis de l’expérience (VAE)",
+            "partie": "Seconde partie : moyens des politiques publiques et dispositions spéciales",
+            "groupe": "Travail, emploi et administration des ministères sociaux",
+            "theme": "Loi de finances",
+            "importance": 3,
+            "public": [
+              "Expertise comptable",
+              "Conseil aux dirigeants"
+            ],
+            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710783",
+            "rubrique": "Social et paie"
+          }
+        ],
+        "hierarchie": {
+          "origine": "pole",
+          "etablie_le": "2026-10-08"
+        }
+      }
     },
     "plfss": {
       "texte": "PLFSS 2027",
@@ -1063,7 +2298,641 @@
       ],
       "source": "Assemblée nationale — dossier législatif",
       "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/PLFSS_2027",
-      "mis_a_jour_le": "2026-10-08"
+      "mis_a_jour_le": "2026-10-08",
+      "mesures": {
+        "libelle": "Projet de loi n° 3211 (texte déposé par le Gouvernement)",
+        "url": "https://www.assemblee-nationale.fr/dyn/17/textes/l17b3211_projet-loi",
+        "articles": [
+          {
+            "numero": "1er",
+            "intitule": "Rectification des tableaux d’équilibre",
+            "partie": "Dispositions relatives aux recettes et à l’équilibre financier de la sécurité sociale pour l’exercice 2026",
+            "groupe": null,
+            "theme": "Sécurité sociale",
+            "importance": 1,
+            "public": [
+              "Social / paie"
+            ],
+            "url": null,
+            "rubrique": null
+          },
+          {
+            "numero": "2",
+            "intitule": "Rectification de l’ONDAM et des sous‑objectifs ONDAM",
+            "partie": "Dispositions relatives aux recettes et à l’équilibre financier de la sécurité sociale pour l’exercice 2026",
+            "groupe": null,
+            "theme": "Sécurité sociale",
+            "importance": 1,
+            "public": [
+              "Social / paie"
+            ],
+            "url": null,
+            "rubrique": null
+          },
+          {
+            "numero": "3",
+            "intitule": "Rectification des contributions des régimes d’assurance maladie et de la 5ème branche au FMIS et de la 5ème branche au FIR des ARS",
+            "partie": "Dispositions relatives aux recettes et à l’équilibre financier de la sécurité sociale pour l’exercice 2026",
+            "groupe": null,
+            "theme": "Sécurité sociale",
+            "importance": 2,
+            "public": [
+              "Social / paie"
+            ],
+            "url": null,
+            "rubrique": null
+          },
+          {
+            "numero": "4",
+            "intitule": "Aide aux cotisants affectés par les incendies et le cyclone Chido et soutien aux employeurs de sapeurs‑pompiers volontaires",
+            "partie": "Dispositions relatives aux recettes et à l’équilibre financier de la sécurité sociale pour l’exercice 2027",
+            "groupe": "DISPOSITIONS RELATIVES AUX RECETTES, AU RECOUVREMENT ET À LA TRÉSORERIE",
+            "theme": "Sécurité sociale",
+            "importance": 3,
+            "public": [
+              "Social / paie"
+            ],
+            "url": null,
+            "rubrique": "Social et paie"
+          },
+          {
+            "numero": "5",
+            "intitule": "Suppression des exonérations sociales applicables aux ateliers et chantiers d’insertion publics",
+            "partie": "Dispositions relatives aux recettes et à l’équilibre financier de la sécurité sociale pour l’exercice 2027",
+            "groupe": "DISPOSITIONS RELATIVES AUX RECETTES, AU RECOUVREMENT ET À LA TRÉSORERIE",
+            "theme": "Sécurité sociale",
+            "importance": 1,
+            "public": [
+              "Social / paie"
+            ],
+            "url": null,
+            "rubrique": null
+          },
+          {
+            "numero": "6",
+            "intitule": "[Simplifier le régime social applicable aux indemnités de rupture du contrat de travail]",
+            "partie": "Dispositions relatives aux recettes et à l’équilibre financier de la sécurité sociale pour l’exercice 2027",
+            "groupe": "DISPOSITIONS RELATIVES AUX RECETTES, AU RECOUVREMENT ET À LA TRÉSORERIE",
+            "theme": "Sécurité sociale",
+            "importance": 5,
+            "public": [
+              "Social / paie"
+            ],
+            "url": null,
+            "rubrique": "Social et paie"
+          },
+          {
+            "numero": "7",
+            "intitule": "Rationaliser l’assiette des allègements généraux de cotisations sociales",
+            "partie": "Dispositions relatives aux recettes et à l’équilibre financier de la sécurité sociale pour l’exercice 2027",
+            "groupe": "DISPOSITIONS RELATIVES AUX RECETTES, AU RECOUVREMENT ET À LA TRÉSORERIE",
+            "theme": "Sécurité sociale",
+            "importance": 5,
+            "public": [
+              "Social / paie"
+            ],
+            "url": null,
+            "rubrique": "Social et paie"
+          },
+          {
+            "numero": "8",
+            "intitule": "Extension de la « taxe soda » à des produits sucrés et transformés",
+            "partie": "Dispositions relatives aux recettes et à l’équilibre financier de la sécurité sociale pour l’exercice 2027",
+            "groupe": "DISPOSITIONS RELATIVES AUX RECETTES, AU RECOUVREMENT ET À LA TRÉSORERIE",
+            "theme": "Sécurité sociale",
+            "importance": 3,
+            "public": [
+              "Social / paie"
+            ],
+            "url": null,
+            "rubrique": "Secteurs d’activité"
+          },
+          {
+            "numero": "9",
+            "intitule": "Régulation macroéconomique des dispositifs médicaux",
+            "partie": "Dispositions relatives aux recettes et à l’équilibre financier de la sécurité sociale pour l’exercice 2027",
+            "groupe": "DISPOSITIONS RELATIVES AUX RECETTES, AU RECOUVREMENT ET À LA TRÉSORERIE",
+            "theme": "Sécurité sociale",
+            "importance": 1,
+            "public": [
+              "Social / paie"
+            ],
+            "url": null,
+            "rubrique": null
+          },
+          {
+            "numero": "10",
+            "intitule": "Amélioration de la régulation de la chaîne de valeur de la distribution du médicament",
+            "partie": "Dispositions relatives aux recettes et à l’équilibre financier de la sécurité sociale pour l’exercice 2027",
+            "groupe": "DISPOSITIONS RELATIVES AUX RECETTES, AU RECOUVREMENT ET À LA TRÉSORERIE",
+            "theme": "Sécurité sociale",
+            "importance": 1,
+            "public": [
+              "Social / paie"
+            ],
+            "url": null,
+            "rubrique": null
+          },
+          {
+            "numero": "11",
+            "intitule": "Régulation macro‑économique des produits de santé",
+            "partie": "Dispositions relatives aux recettes et à l’équilibre financier de la sécurité sociale pour l’exercice 2027",
+            "groupe": "« Contribution à la charge des groupements de pharmacies d’officine »",
+            "theme": "Sécurité sociale",
+            "importance": 1,
+            "public": [
+              "Social / paie"
+            ],
+            "url": null,
+            "rubrique": null
+          },
+          {
+            "numero": "12",
+            "intitule": "Prorogation de la contribution exceptionnelle au financement du système de santé et de la couverture santé des Français les plus précaires de 2,05 % à la charge des organismes complémentaires au titre de 2027",
+            "partie": "Dispositions relatives aux recettes et à l’équilibre financier de la sécurité sociale pour l’exercice 2027",
+            "groupe": "« Contribution à la charge des groupements de pharmacies d’officine »",
+            "theme": "Sécurité sociale",
+            "importance": 3,
+            "public": [
+              "Social / paie"
+            ],
+            "url": null,
+            "rubrique": "Secteurs d’activité"
+          },
+          {
+            "numero": "13",
+            "intitule": "Réforme du financement des départements pour les dépenses APA/PCH",
+            "partie": "Dispositions relatives aux recettes et à l’équilibre financier de la sécurité sociale pour l’exercice 2027",
+            "groupe": "« Contribution à la charge des groupements de pharmacies d’officine »",
+            "theme": "Sécurité sociale",
+            "importance": 1,
+            "public": [
+              "Social / paie"
+            ],
+            "url": null,
+            "rubrique": null
+          },
+          {
+            "numero": "14",
+            "intitule": "Clarifier les transferts financiers au sein de la sécurité sociale",
+            "partie": "Dispositions relatives aux recettes et à l’équilibre financier de la sécurité sociale pour l’exercice 2027",
+            "groupe": "« Contribution à la charge des groupements de pharmacies d’officine »",
+            "theme": "Sécurité sociale",
+            "importance": 2,
+            "public": [
+              "Social / paie"
+            ],
+            "url": null,
+            "rubrique": null
+          },
+          {
+            "numero": "15",
+            "intitule": "Approbation du montant de la compensation des exonérations ciblées",
+            "partie": "Dispositions relatives aux recettes et à l’équilibre financier de la sécurité sociale pour l’exercice 2027",
+            "groupe": "CONDITIONS GÉNÉRALES DE L’ÉQUILIBRE FINANCIER DE LA SÉCURITE SOCIALE",
+            "theme": "Sécurité sociale",
+            "importance": 2,
+            "public": [
+              "Social / paie"
+            ],
+            "url": null,
+            "rubrique": null
+          },
+          {
+            "numero": "16",
+            "intitule": "Tableau d’équilibre 2027",
+            "partie": "Dispositions relatives aux recettes et à l’équilibre financier de la sécurité sociale pour l’exercice 2027",
+            "groupe": "CONDITIONS GÉNÉRALES DE L’ÉQUILIBRE FINANCIER DE LA SÉCURITE SOCIALE",
+            "theme": "Sécurité sociale",
+            "importance": 3,
+            "public": [
+              "Social / paie"
+            ],
+            "url": null,
+            "rubrique": "Finances publiques"
+          },
+          {
+            "numero": "17",
+            "intitule": "Objectif d’amortissement de la dette sociale et prévisions sur les recettes du FRR",
+            "partie": "Dispositions relatives aux recettes et à l’équilibre financier de la sécurité sociale pour l’exercice 2027",
+            "groupe": "CONDITIONS GÉNÉRALES DE L’ÉQUILIBRE FINANCIER DE LA SÉCURITE SOCIALE",
+            "theme": "Sécurité sociale",
+            "importance": 2,
+            "public": [
+              "Social / paie"
+            ],
+            "url": null,
+            "rubrique": null
+          },
+          {
+            "numero": "18",
+            "intitule": "Liste et plafonds de trésorerie des régimes et organismes habilités à recourir à des ressources non permanentes",
+            "partie": "Dispositions relatives aux recettes et à l’équilibre financier de la sécurité sociale pour l’exercice 2027",
+            "groupe": "CONDITIONS GÉNÉRALES DE L’ÉQUILIBRE FINANCIER DE LA SÉCURITE SOCIALE",
+            "theme": "Sécurité sociale",
+            "importance": 2,
+            "public": [
+              "Social / paie"
+            ],
+            "url": null,
+            "rubrique": null
+          },
+          {
+            "numero": "19",
+            "intitule": "Approbation du rapport sur l’évolution pluriannuelle du financement de la sécurité sociale (annexe \"A\")",
+            "partie": "Dispositions relatives aux recettes et à l’équilibre financier de la sécurité sociale pour l’exercice 2027",
+            "groupe": "CONDITIONS GÉNÉRALES DE L’ÉQUILIBRE FINANCIER DE LA SÉCURITE SOCIALE",
+            "theme": "Sécurité sociale",
+            "importance": 2,
+            "public": [
+              "Social / paie"
+            ],
+            "url": null,
+            "rubrique": null
+          },
+          {
+            "numero": "20",
+            "intitule": "Renforcer la coordination entre le médecin traitant, le médecin du travail et le médecin conseil pour améliorer le suivi médical des personnes en arrêts de travail de longue durée et prévenir la désinsertion professionnelle",
+            "partie": "Dispositions relatives aux dépenses pour l’exercice 2027",
+            "groupe": "RENFORCER L’ACCÈS AUX SOINS",
+            "theme": "Sécurité sociale",
+            "importance": 4,
+            "public": [
+              "Social / paie"
+            ],
+            "url": null,
+            "rubrique": "Social et paie"
+          },
+          {
+            "numero": "21",
+            "intitule": "Renforcer l’accès aux soins : déployer une mission de solidarité territoriale pour les médecins en soutien du réseau France Santé",
+            "partie": "Dispositions relatives aux dépenses pour l’exercice 2027",
+            "groupe": "RENFORCER L’ACCÈS AUX SOINS",
+            "theme": "Sécurité sociale",
+            "importance": 1,
+            "public": [
+              "Social / paie"
+            ],
+            "url": null,
+            "rubrique": null
+          },
+          {
+            "numero": "22",
+            "intitule": "Conforter le mode de rémunération de structures d’exercice coordonné pour renforcer l’accès aux soins des personnes vulnérables",
+            "partie": "Dispositions relatives aux dépenses pour l’exercice 2027",
+            "groupe": "« Mission de solidarité territoriale",
+            "theme": "Sécurité sociale",
+            "importance": 1,
+            "public": [
+              "Social / paie"
+            ],
+            "url": null,
+            "rubrique": null
+          },
+          {
+            "numero": "23",
+            "intitule": "Permettre la prise en charge des actes d’assistance à la téléconsultation pour les infirmiers salariés intervenant au domicile des patients",
+            "partie": "Dispositions relatives aux dépenses pour l’exercice 2027",
+            "groupe": "« Financement spécifique des centres de santé et des maisons de santé assurant une « démarche participative en santé",
+            "theme": "Sécurité sociale",
+            "importance": 1,
+            "public": [
+              "Social / paie"
+            ],
+            "url": null,
+            "rubrique": null
+          },
+          {
+            "numero": "24",
+            "intitule": "Renforcer l’accès aux soins des enfants pris en charge par le service d’aide sociale à l’enfance",
+            "partie": "Dispositions relatives aux dépenses pour l’exercice 2027",
+            "groupe": "« Financement spécifique des centres de santé et des maisons de santé assurant une « démarche participative en santé",
+            "theme": "Sécurité sociale",
+            "importance": 1,
+            "public": [
+              "Social / paie"
+            ],
+            "url": null,
+            "rubrique": null
+          },
+          {
+            "numero": "25",
+            "intitule": "MO36- Renforcer la prise en charge sanitaire des mineurs victimes de violences",
+            "partie": "Dispositions relatives aux dépenses pour l’exercice 2027",
+            "groupe": "« Financement spécifique des centres de santé et des maisons de santé assurant une « démarche participative en santé",
+            "theme": "Sécurité sociale",
+            "importance": 1,
+            "public": [
+              "Social / paie"
+            ],
+            "url": null,
+            "rubrique": null
+          },
+          {
+            "numero": "26",
+            "intitule": "Mise en place de la complémentaire santé au bénéfice des agents de la fonction publique hospitalière (FPH)",
+            "partie": "Dispositions relatives aux dépenses pour l’exercice 2027",
+            "groupe": "« Financement spécifique des centres de santé et des maisons de santé assurant une « démarche participative en santé",
+            "theme": "Sécurité sociale",
+            "importance": 1,
+            "public": [
+              "Social / paie"
+            ],
+            "url": null,
+            "rubrique": null
+          },
+          {
+            "numero": "27",
+            "intitule": "Favoriser l’accès à la vaccination",
+            "partie": "Dispositions relatives aux dépenses pour l’exercice 2027",
+            "groupe": "CONSOLIDER LES DISPOSITIFS DE PRÉVENTION EN SANTÉ",
+            "theme": "Sécurité sociale",
+            "importance": 1,
+            "public": [
+              "Social / paie"
+            ],
+            "url": null,
+            "rubrique": null
+          },
+          {
+            "numero": "28",
+            "intitule": "Préserver l’efficacité des médicaments antibiotiques et sécuriser leur disponibilité",
+            "partie": "Dispositions relatives aux dépenses pour l’exercice 2027",
+            "groupe": "CONSOLIDER LES DISPOSITIFS DE PRÉVENTION EN SANTÉ",
+            "theme": "Sécurité sociale",
+            "importance": 1,
+            "public": [
+              "Social / paie"
+            ],
+            "url": null,
+            "rubrique": null
+          },
+          {
+            "numero": "29",
+            "intitule": "Renforcer l’accessibilité aux dispositifs de prévention",
+            "partie": "Dispositions relatives aux dépenses pour l’exercice 2027",
+            "groupe": "CONSOLIDER LES DISPOSITIFS DE PRÉVENTION EN SANTÉ",
+            "theme": "Sécurité sociale",
+            "importance": 1,
+            "public": [
+              "Social / paie"
+            ],
+            "url": null,
+            "rubrique": null
+          },
+          {
+            "numero": "30",
+            "intitule": "Accès aux médicaments et à l’innovation : adapter le remboursement aux progrès scientifiques et sécuriser la délivrance sans prescription",
+            "partie": "Dispositions relatives aux dépenses pour l’exercice 2027",
+            "groupe": "RENFORCER LA PERTINENCE ET L’EFFICIENCE DU SYSTÈME DE SANTÉ",
+            "theme": "Sécurité sociale",
+            "importance": 1,
+            "public": [
+              "Social / paie"
+            ],
+            "url": null,
+            "rubrique": null
+          },
+          {
+            "numero": "31",
+            "intitule": "Assurer l’harmonisation et la convergence tarifaire de l’activité de radiothérapie en ville et à l’hôpital",
+            "partie": "Dispositions relatives aux dépenses pour l’exercice 2027",
+            "groupe": "RENFORCER LA PERTINENCE ET L’EFFICIENCE DU SYSTÈME DE SANTÉ",
+            "theme": "Sécurité sociale",
+            "importance": 1,
+            "public": [
+              "Social / paie"
+            ],
+            "url": null,
+            "rubrique": null
+          },
+          {
+            "numero": "32",
+            "intitule": "Sécuriser les modalités de facturation à l’assurance maladie",
+            "partie": "Dispositions relatives aux dépenses pour l’exercice 2027",
+            "groupe": "RENFORCER LA PERTINENCE ET L’EFFICIENCE DU SYSTÈME DE SANTÉ",
+            "theme": "Sécurité sociale",
+            "importance": 2,
+            "public": [
+              "Social / paie"
+            ],
+            "url": null,
+            "rubrique": null
+          },
+          {
+            "numero": "33",
+            "intitule": "Suppression de l’ANDPC et convergence des dispositifs de développement professionnel continu et de certification périodique",
+            "partie": "Dispositions relatives aux dépenses pour l’exercice 2027",
+            "groupe": "RENFORCER LA PERTINENCE ET L’EFFICIENCE DU SYSTÈME DE SANTÉ",
+            "theme": "Sécurité sociale",
+            "importance": 1,
+            "public": [
+              "Audit / CAC"
+            ],
+            "url": null,
+            "rubrique": null
+          },
+          {
+            "numero": "34",
+            "intitule": "Forfaitiser et harmoniser la majoration de pension pour enfants",
+            "partie": "Dispositions relatives aux dépenses pour l’exercice 2027",
+            "groupe": "PÉRENNISER LE SYSTÈME DE RETRAITES ET LE RENDRE PLUS ÉQUITABLE",
+            "theme": "Sécurité sociale",
+            "importance": 4,
+            "public": [
+              "Social / paie"
+            ],
+            "url": null,
+            "rubrique": "Retraite"
+          },
+          {
+            "numero": "35",
+            "intitule": "Dérogation exceptionnelle aux modalités de revalorisation des pensions de retraite pour 2027",
+            "partie": "Dispositions relatives aux dépenses pour l’exercice 2027",
+            "groupe": "PÉRENNISER LE SYSTÈME DE RETRAITES ET LE RENDRE PLUS ÉQUITABLE",
+            "theme": "Sécurité sociale",
+            "importance": 4,
+            "public": [
+              "Social / paie"
+            ],
+            "url": null,
+            "rubrique": "Retraite"
+          },
+          {
+            "numero": "36",
+            "intitule": "Créer une allocation de remplacement bénéficiant aux non‑salariés agricoles dont un enfant est gravement malade, porteur d’un handicap ou victime d’un accident grave",
+            "partie": "Dispositions relatives aux dépenses pour l’exercice 2027",
+            "groupe": "GARANTIR L’EQUITE DES PRESTATIONS FAMILIALES",
+            "theme": "Sécurité sociale",
+            "importance": 3,
+            "public": [
+              "Social / paie"
+            ],
+            "url": null,
+            "rubrique": "Secteurs d’activité"
+          },
+          {
+            "numero": "37",
+            "intitule": "Restreindre l’accès aux prestations familiales pour les étrangers extra‑UE",
+            "partie": "Dispositions relatives aux dépenses pour l’exercice 2027",
+            "groupe": "GARANTIR L’EQUITE DES PRESTATIONS FAMILIALES",
+            "theme": "Sécurité sociale",
+            "importance": 1,
+            "public": [
+              "Social / paie"
+            ],
+            "url": null,
+            "rubrique": null
+          },
+          {
+            "numero": "38",
+            "intitule": "Prolongation de l’expérimentation \"fusion des sections\" (réforme du modèle de financement des EHPAD)",
+            "partie": "Dispositions relatives aux dépenses pour l’exercice 2027",
+            "groupe": "RENFORCER LA PERTINENCE DE LA PRISE EN CHARGE DE LA DEPENDANCE",
+            "theme": "Sécurité sociale",
+            "importance": 1,
+            "public": [
+              "Social / paie"
+            ],
+            "url": null,
+            "rubrique": null
+          },
+          {
+            "numero": "39",
+            "intitule": "Intéressement à l’efficience des EHPAD et des services autonomie à domicile",
+            "partie": "Dispositions relatives aux dépenses pour l’exercice 2027",
+            "groupe": "RENFORCER LA PERTINENCE DE LA PRISE EN CHARGE DE LA DEPENDANCE",
+            "theme": "Sécurité sociale",
+            "importance": 3,
+            "public": [
+              "Social / paie"
+            ],
+            "url": null,
+            "rubrique": "Secteurs d’activité"
+          },
+          {
+            "numero": "40",
+            "intitule": "Dotation de l’Assurance maladie au FMIS et de la CNSA aux ARS",
+            "partie": "Dispositions relatives aux dépenses pour l’exercice 2027",
+            "groupe": "DOTATIONS ET OBJECTIFS DE DEPENSES DES BRANCHES ET DES ORGANISMES CONCOURANT AU FINANCEMENT DES REGIMES OBLIGATOIRES",
+            "theme": "Sécurité sociale",
+            "importance": 2,
+            "public": [
+              "Social / paie"
+            ],
+            "url": null,
+            "rubrique": null
+          },
+          {
+            "numero": "41",
+            "intitule": "Dotation aux opérateurs financés par le 6ème sous‑objectif",
+            "partie": "Dispositions relatives aux dépenses pour l’exercice 2027",
+            "groupe": "DOTATIONS ET OBJECTIFS DE DEPENSES DES BRANCHES ET DES ORGANISMES CONCOURANT AU FINANCEMENT DES REGIMES OBLIGATOIRES",
+            "theme": "Sécurité sociale",
+            "importance": 1,
+            "public": [
+              "Social / paie"
+            ],
+            "url": null,
+            "rubrique": null
+          },
+          {
+            "numero": "42",
+            "intitule": "Objectif de dépenses de la branche maladie, maternité, invalidité et décès",
+            "partie": "Dispositions relatives aux dépenses pour l’exercice 2027",
+            "groupe": "DOTATIONS ET OBJECTIFS DE DEPENSES DES BRANCHES ET DES ORGANISMES CONCOURANT AU FINANCEMENT DES REGIMES OBLIGATOIRES",
+            "theme": "Sécurité sociale",
+            "importance": 1,
+            "public": [
+              "Social / paie"
+            ],
+            "url": null,
+            "rubrique": null
+          },
+          {
+            "numero": "43",
+            "intitule": "ONDAM et sous objectifs de l’ONDAM",
+            "partie": "Dispositions relatives aux dépenses pour l’exercice 2027",
+            "groupe": "DOTATIONS ET OBJECTIFS DE DEPENSES DES BRANCHES ET DES ORGANISMES CONCOURANT AU FINANCEMENT DES REGIMES OBLIGATOIRES",
+            "theme": "Sécurité sociale",
+            "importance": 1,
+            "public": [
+              "Social / paie"
+            ],
+            "url": null,
+            "rubrique": null
+          },
+          {
+            "numero": "44",
+            "intitule": "Dotations au FIVA et au FCAATA, transfert de la compensation de sous‑déclaration ATMP et dépenses engendrées par les dispositifs de prise en compte de la pénibilité",
+            "partie": "Dispositions relatives aux dépenses pour l’exercice 2027",
+            "groupe": "DOTATIONS ET OBJECTIFS DE DEPENSES DES BRANCHES ET DES ORGANISMES CONCOURANT AU FINANCEMENT DES REGIMES OBLIGATOIRES",
+            "theme": "Sécurité sociale",
+            "importance": 1,
+            "public": [
+              "Expertise comptable"
+            ],
+            "url": null,
+            "rubrique": null
+          },
+          {
+            "numero": "45",
+            "intitule": "Objectif de dépenses de la branche ATMP",
+            "partie": "Dispositions relatives aux dépenses pour l’exercice 2027",
+            "groupe": "DOTATIONS ET OBJECTIFS DE DEPENSES DES BRANCHES ET DES ORGANISMES CONCOURANT AU FINANCEMENT DES REGIMES OBLIGATOIRES",
+            "theme": "Sécurité sociale",
+            "importance": 1,
+            "public": [
+              "Social / paie"
+            ],
+            "url": null,
+            "rubrique": null
+          },
+          {
+            "numero": "46",
+            "intitule": "Objectif de dépenses de la branche vieillesse",
+            "partie": "Dispositions relatives aux dépenses pour l’exercice 2027",
+            "groupe": "DOTATIONS ET OBJECTIFS DE DEPENSES DES BRANCHES ET DES ORGANISMES CONCOURANT AU FINANCEMENT DES REGIMES OBLIGATOIRES",
+            "theme": "Sécurité sociale",
+            "importance": 1,
+            "public": [
+              "Social / paie"
+            ],
+            "url": null,
+            "rubrique": null
+          },
+          {
+            "numero": "47",
+            "intitule": "Objectif de dépenses de la branche famille",
+            "partie": "Dispositions relatives aux dépenses pour l’exercice 2027",
+            "groupe": "DOTATIONS ET OBJECTIFS DE DEPENSES DES BRANCHES ET DES ORGANISMES CONCOURANT AU FINANCEMENT DES REGIMES OBLIGATOIRES",
+            "theme": "Sécurité sociale",
+            "importance": 1,
+            "public": [
+              "Social / paie"
+            ],
+            "url": null,
+            "rubrique": null
+          },
+          {
+            "numero": "48",
+            "intitule": "Objectif de dépenses de la branche autonomie",
+            "partie": "Dispositions relatives aux dépenses pour l’exercice 2027",
+            "groupe": "DOTATIONS ET OBJECTIFS DE DEPENSES DES BRANCHES ET DES ORGANISMES CONCOURANT AU FINANCEMENT DES REGIMES OBLIGATOIRES",
+            "theme": "Sécurité sociale",
+            "importance": 1,
+            "public": [
+              "Social / paie"
+            ],
+            "url": null,
+            "rubrique": null
+          }
+        ],
+        "hierarchie": {
+          "origine": "pole",
+          "etablie_le": "2026-10-08"
+        }
+      }
     }
   },
   "sources": [

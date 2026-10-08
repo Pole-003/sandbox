@@ -76,7 +76,7 @@ const json = (valeur: unknown) => `${JSON.stringify(valeur, null, 2)}\n`;
 export const RAISON_IA = 'désactivée : la veille fonctionne à 0 €, sans appel à un service d’IA';
 
 export async function collecter(d: DependancesCollecte): Promise<Bilan> {
-  const { config, sources, motsCles, suivi } = d.reglages;
+  const { config, sources, motsCles, suivi, hierarchie } = d.reglages;
   const journal = d.journal ?? (() => {});
   const aujourdhui = dateIsoParis(d.maintenant);
 
@@ -104,7 +104,7 @@ export async function collecter(d: DependancesCollecte): Promise<Bilan> {
   journal(`Recherche IA : ${RAISON_IA}`);
 
   // --- Suivi PLF / PLFSS : dossiers législatifs de l'Assemblée nationale ---
-  const dossiers = await collecterDossiers(sources, { client: d.http, maintenant: d.maintenant, etatPrecedent: sourcesPrecedentes, motsCles });
+  const dossiers = await collecterDossiers(sources, { client: d.http, maintenant: d.maintenant, etatPrecedent: sourcesPrecedentes, motsCles, hierarchie });
   for (const e of dossiers.etats) journal(`  ${e.etat === 'ok' ? 'OK    ' : 'ÉCHEC '} ${e.id} : ${e.nb_elements ?? 0} étape(s)${e.erreur ? ` — ${e.erreur}` : ''}`);
   // Priorité : suivi lu aujourd'hui, sinon celui déjà publié, sinon la saisie manuelle (veille/suivi.json).
   const suiviPublie = {

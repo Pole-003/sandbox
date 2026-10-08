@@ -90,6 +90,8 @@ export interface ArticleProjet {
   public: Public[];
   /** Lien direct vers l'article dans le texte, quand il existe. */
   url: string | null;
+  /** Rubrique de la hiérarchie établie par le pôle (ex. « Social et paie »). */
+  rubrique?: string | null;
 }
 
 export interface MesuresProjet {
@@ -97,6 +99,8 @@ export interface MesuresProjet {
   libelle: string;
   url: string;
   articles: ArticleProjet[];
+  /** Origine de l'importance : hiérarchie établie par le pôle (veille/hierarchie-mesures.json) ou mots-clés. */
+  hierarchie?: { origine: 'pole' | 'mots-cles'; etablie_le: string | null };
 }
 
 export interface SuiviTexte {

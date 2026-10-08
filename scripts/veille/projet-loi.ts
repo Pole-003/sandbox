@@ -133,3 +133,55 @@ export function construireMesures(
     }),
   };
 }
+
+/** Hiérarchie des mesures établie par le pôle (veille/hierarchie-mesures.json), par numéro de projet de loi. */
+export interface HierarchieMesures {
+  textes: Record<string, {
+    texte: string;
+    etablie_le: string;
+    articles: Record<string, { importance: ArticleProjet['importance']; rubrique: string; intitule: string }>;
+  }>;
+}
+
+/** Plafond des articles non retenus d'un texte hiérarchisé par le pôle. */
+export const PLAFOND_NON_RETENU = 2;
+
+const comparable = (t: string) =>
+  t.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase().replace(/[’'«»"\[\]]/g, ' ').replace(/\s+/g, ' ').trim();
+
+export function verifierHierarchie(h: HierarchieMesures): void {
+  const erreurs: string[] = [];
+  for (const [numero, t] of Object.entries(h.textes ?? {})) {
+    for (const [art, l] of Object.entries(t.articles ?? {})) {
+      if (![1, 2, 3, 4, 5].includes(l.importance)) erreurs.push(`texte ${numero}, art. ${art} : importance de 1 à 5`);
+      if (!l.rubrique || !l.intitule) erreurs.push(`texte ${numero}, art. ${art} : rubrique et intitulé obligatoires`);
+    }
+  }
+  if (erreurs.length) throw new Error(`veille/hierarchie-mesures.json invalide : ${erreurs.join(' ; ')}`);
+}
+
+/**
+ * Applique la hiérarchie du pôle au texte n° `numero`, si elle existe. Une ligne dont l'intitulé ne correspond
+ * plus (renumérotation, amendement) est ignorée et signalée dans `ecarts` : le classement par mots-clés s'applique.
+ */
+export function appliquerHierarchie(
+  mesures: MesuresProjet,
+  numero: string,
+  hierarchie: HierarchieMesures | undefined,
+): { mesures: MesuresProjet; ecarts: string[] } {
+  const t = hierarchie?.textes?.[numero];
+  if (!t) return { mesures: { ...mesures, hierarchie: { origine: 'mots-cles', etablie_le: null } }, ecarts: [] };
+  const ecarts: string[] = [];
+  const presents = new Set(mesures.articles.map((a) => a.numero));
+  for (const art of Object.keys(t.articles)) if (!presents.has(art)) ecarts.push(`art. ${art} absent du texte`);
+  const articles = mesures.articles.map((a) => {
+    const ligne = t.articles[a.numero];
+    if (!ligne) return { ...a, importance: Math.min(a.importance, PLAFOND_NON_RETENU) as ArticleProjet['importance'], rubrique: null };
+    if (comparable(ligne.intitule) !== comparable(a.intitule)) {
+      ecarts.push(`art. ${a.numero} : intitulé modifié`);
+      return { ...a, rubrique: null };
+    }
+    return { ...a, importance: ligne.importance, rubrique: ligne.rubrique };
+  });
+  return { mesures: { ...mesures, articles, hierarchie: { origine: 'pole', etablie_le: t.etablie_le } }, ecarts };
+}

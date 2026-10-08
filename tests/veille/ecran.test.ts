@@ -171,10 +171,12 @@ describe('veille · écran', () => {
     expect(conteneur.querySelector<HTMLAnchorElement>('.suivi a[href="https://exemple.invalid/PLF_2027"]')?.rel).toBe('noopener noreferrer');
     expect(conteneur.querySelector('.actualites-suivi')?.textContent).toContain('Le Sénat adopte la première partie du PLF');
     const mesures = conteneur.querySelector('.mesures')!;
-    expect([...mesures.querySelectorAll(':scope > .liste-mesures > li')].map((li) => li.textContent?.split(' Importance')[0])).toEqual([
+    expect([...mesures.querySelectorAll('.paliers-mesures .palier')].map((t) => t.textContent)).toEqual(['Important (1)', 'À suivre (1)']);
+    expect([...mesures.querySelectorAll('.paliers-mesures .liste-mesures > li')].map((li) => li.textContent?.split(' Importance')[0])).toEqual([
       'Art. 4 — Report de la facturation électronique (nouvel onglet)',
       'Art. 3 — Crédit d’impôt recherche des PME',
     ]);
+    expect(mesures.querySelector('.note')?.textContent).toContain('choisies par nos mots-clés');
     expect(mesures.querySelector('summary')?.textContent).toBe('Tous les articles du projet (3)');
     expect(mesures.querySelector<HTMLAnchorElement>('a[href="https://exemple.invalid/texte-3210#_Toc4"]')?.rel).toBe('noopener noreferrer');
 
@@ -195,6 +197,22 @@ describe('veille · écran', () => {
     expect(panneau).toContain('Recherche IA : désactivée : la veille fonctionne à 0 €');
     expect(panneau).toContain('dont 1 marginal(aux) masqué(s) par défaut ; 2 exclu(s)');
     expect(panneau).toContain('Coût : 0 €');
+  });
+
+  it('suivi : hiérarchie du pôle, par palier, avec la rubrique', async () => {
+    const plf = NEWS.suivi.plf!;
+    const mesures = {
+      ...plf.mesures!,
+      hierarchie: { origine: 'pole' as const, etablie_le: '2026-10-08' },
+      articles: plf.mesures!.articles.map((a) => (a.numero === '1' ? { ...a, importance: 5 as const, rubrique: 'Finances publiques' } : { ...a, importance: 2 as const, rubrique: null })),
+    };
+    servir({ 'news.json': { ...NEWS, suivi: { ...NEWS.suivi, plf: { ...plf, mesures } } }, 'veille-etat.json': ETAT });
+    location.hash = '#/veille/plf';
+    await rendreVeille(conteneur, { magasin: magasinMemoire() });
+    const carte = conteneur.querySelector('.mesures')!;
+    expect([...carte.querySelectorAll('.palier')].map((t) => t.textContent)).toEqual(['Essentiel pour nos dossiers (1)']);
+    expect(carte.querySelector('.paliers-mesures .puce-rubrique')?.textContent).toBe('Finances publiques');
+    expect(carte.querySelector('.note')?.textContent).toContain('Hiérarchie établie par le pôle le 08/10/2026');
   });
 
   it('navigation au clavier entre les onglets (flèches, Début, Fin)', async () => {

@@ -3,11 +3,13 @@
  *  - veille/config.json : fenêtres, conservation, longueur des résumés, User-Agent ;
  *  - veille/sources.json : catalogue des sources ;
  *  - veille/mots-cles.json : classement par mots-clés (thème, importance, public, exclusions) ;
- *  - veille/suivi.json : suivi PLF / PLFSS saisi à la main.
+ *  - veille/suivi.json : suivi PLF / PLFSS saisi à la main ;
+ *  - veille/hierarchie-mesures.json : hiérarchie des mesures du PLF et du PLFSS établie par le pôle.
  */
 import { readFileSync } from 'node:fs';
 import { THEMES, type SuiviTexte, type Theme, type TypeArticle } from '../../src/modules/veille/modele.ts';
 import { verifierMotsCles, type MotsCles } from './classement.ts';
+import { verifierHierarchie, type HierarchieMesures } from './projet-loi.ts';
 
 export interface ConfigVeille {
   /** Toujours false : la recherche IA (couche C) est désactivée, la veille fonctionne à 0 €. */
@@ -43,6 +45,8 @@ export interface Reglages {
   motsCles: MotsCles;
   /** Suivi PLF / PLFSS saisi à la main (veille/suivi.json). */
   suivi: { plf: SuiviTexte | null; plfss: SuiviTexte | null };
+  /** Hiérarchie des mesures établie par le pôle ; à défaut, classement par mots-clés. */
+  hierarchie?: HierarchieMesures;
 }
 
 const RACINE = new URL('../../', import.meta.url);
@@ -68,7 +72,9 @@ export function chargerReglages(): Reglages {
   const motsCles = lireJson<MotsCles>('veille/mots-cles.json');
   verifierMotsCles(motsCles);
   const suivi = lireJson<{ plf?: SuiviTexte | null; plfss?: SuiviTexte | null }>('veille/suivi.json');
-  return { config, sources, motsCles, suivi: { plf: suivi.plf ?? null, plfss: suivi.plfss ?? null } };
+  const hierarchie = lireJson<HierarchieMesures>('veille/hierarchie-mesures.json');
+  verifierHierarchie(hierarchie);
+  return { config, sources, motsCles, suivi: { plf: suivi.plf ?? null, plfss: suivi.plfss ?? null }, hierarchie };
 }
 
 /** Fenêtre de veille (en jours) d'un thème. */
