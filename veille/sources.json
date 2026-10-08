@@ -1,5 +1,5 @@
 {
-  "_commentaire": "Catalogue des sources de veille. statut : 'verifie' = flux testé et fonctionnel le 2026-10-08 ; 'a_verifier' = existence ou URL à confirmer avant activation. Couche A = rss, couche B = api.",
+  "_commentaire": "Catalogue des sources de veille. statut : 'verifie' = flux testé et fonctionnel ; 'en_panne' = testé, ne répond pas correctement (voir notes) ; 'a_verifier' = existence ou URL à confirmer avant activation. Couche A = rss (et page), couche B = api. Diagnostic : npm run veille:test (workflow veille-diagnostic.yml).",
   "sources": [
     {
       "id": "bofip-actualites",
@@ -34,7 +34,8 @@
       "type": "rss",
       "url": "https://www.senat.fr/themes/rss/therss10.rss",
       "theme": "Loi de finances",
-      "statut": "a_verifier"
+      "statut": "verifie",
+      "notes": "Diagnostic du 08/10/2026 : flux valide (173 éléments) mais rien de publié depuis le 23/06/2026. À surveiller."
     },
     {
       "id": "senat-fiscalite",
@@ -42,7 +43,7 @@
       "type": "rss",
       "url": "https://www.senat.fr/themes/rss/therss17.rss",
       "theme": "Fiscal et comptable",
-      "statut": "a_verifier"
+      "statut": "verifie"
     },
     {
       "id": "senat-entreprises",
@@ -50,7 +51,7 @@
       "type": "rss",
       "url": "https://www.senat.fr/themes/rss/therss33.rss",
       "theme": "Économie et statistiques",
-      "statut": "a_verifier"
+      "statut": "verifie"
     },
     {
       "id": "senat-pme",
@@ -58,7 +59,7 @@
       "type": "rss",
       "url": "https://www.senat.fr/themes/rss/therss28.rss",
       "theme": "Économie et statistiques",
-      "statut": "a_verifier"
+      "statut": "verifie"
     },
     {
       "id": "senat-secu",
@@ -66,7 +67,7 @@
       "type": "rss",
       "url": "https://www.senat.fr/themes/rss/therss25.rss",
       "theme": "Sécurité sociale",
-      "statut": "a_verifier"
+      "statut": "verifie"
     },
     {
       "id": "an-documents",
@@ -83,7 +84,7 @@
       "type": "rss",
       "url": "https://www2.assemblee-nationale.fr/feeds/detail/ID_59048/(type)/instance",
       "theme": "Loi de finances",
-      "statut": "a_verifier",
+      "statut": "verifie",
       "notes": "URL publiée en http sur la page officielle des flux ; tester en https."
     },
     {
@@ -92,7 +93,7 @@
       "type": "rss",
       "url": "https://www2.assemblee-nationale.fr/feeds/detail/ID_420120/(type)/instance",
       "theme": "Sécurité sociale",
-      "statut": "a_verifier"
+      "statut": "verifie"
     },
     {
       "id": "an-commission-affaires-economiques",
@@ -100,7 +101,7 @@
       "type": "rss",
       "url": "https://www2.assemblee-nationale.fr/feeds/detail/ID_419610/(type)/instance",
       "theme": "Économie et statistiques",
-      "statut": "a_verifier"
+      "statut": "verifie"
     },
     {
       "id": "an-presse",
@@ -108,7 +109,8 @@
       "type": "rss",
       "url": "https://www.assemblee-nationale.fr/rss/communiques-de-presse.xml",
       "theme": "Loi de finances",
-      "statut": "a_verifier"
+      "statut": "en_panne",
+      "notes": "Diagnostic du 08/10/2026 : HTTP 404, l'adresse n'existe plus."
     },
     {
       "id": "ce-analyses-jurisprudence",
@@ -116,7 +118,7 @@
       "type": "rss",
       "url": "https://www.conseil-etat.fr/rss/analyses-de-jurisprudence-rss",
       "theme": "Fiscal et comptable",
-      "statut": "a_verifier",
+      "statut": "verifie",
       "notes": "URL issue de la page officielle des flux du Conseil d'État ; filtrer sur fiscalité, TVA, impôt, procédure fiscale."
     },
     {
@@ -125,7 +127,7 @@
       "type": "rss",
       "url": "https://www.conseil-etat.fr/rss/actualites-rss",
       "theme": "Fiscal et comptable",
-      "statut": "a_verifier"
+      "statut": "verifie"
     },
     {
       "id": "ce-avis",
@@ -133,8 +135,8 @@
       "type": "rss",
       "url": "https://www.conseil-etat.fr/rss/avis-rss",
       "theme": "Loi de finances",
-      "statut": "a_verifier",
-      "notes": "Contient l'avis sur le PLF et le PLFSS chaque automne."
+      "statut": "verifie",
+      "notes": "Contient l'avis sur le PLF et le PLFSS chaque automne. Diagnostic du 08/10/2026 : flux valide mais rien de publié depuis le 23/07/2026 (rythme saisonnier probable). À surveiller."
     },
     {
       "id": "an-dossier-plf",
@@ -142,7 +144,7 @@
       "type": "page",
       "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/PLF_2027",
       "theme": "Loi de finances",
-      "statut": "a_verifier",
+      "statut": "verifie",
       "notes": "Page de suivi : détecter les changements (nouvelle étape, nouveau texte) par comparaison avec la veille. Mettre à jour l'année chaque automne."
     },
     {
