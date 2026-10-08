@@ -32,6 +32,8 @@ data-reelles/
 *fec2[0-9][0-9][0-9]*
 # … sauf les FEC fictifs générés par scripts/generer-fec-fictifs.ts
 !tests/fixtures/**
+# Gros FEC fictif de performance (npm run fec:gros) : trop volumineux pour le dépôt.
+tests/fixtures/fec/gros/
 
 # --- Système et éditeurs ---
 .DS_Store

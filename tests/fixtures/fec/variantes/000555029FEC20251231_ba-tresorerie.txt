@@ -1,0 +1,225 @@
+JournalCode	JournalLib	EcritureNum	EcritureDate	CompteNum	CompteLib	CompAuxNum	CompAuxLib	PieceRef	PieceDate	EcritureLib	Debit	Credit	EcritureLet	DateLet	ValidDate	Montantdevise	Idevise	DateRglt	ModeRglt	NatOp
+AN	A-nouveaux	1	20250101	512000	Banque			AN	20250101	A nouveaux	7226,96	0,00			20250131			20250101	Report	Reprise du solde de trésorerie
+AN	A-nouveaux	1	20250101	108000	Compte de l'exploitant			AN	20250101	A nouveaux	0,00	7226,96			20250131			20250101	Report	Reprise du solde de trésorerie
+BQ	Banque	2	20250103	512000	Banque			R0001	20250101	Vente de blé tendre	12777,44	0,00			20250131			20250103	CHQ	Vente de blé tendre
+BQ	Banque	2	20250103	701100	Ventes de céréales			R0001	20250101	Vente de blé tendre	0,00	12777,44			20250131			20250103	CHQ	Vente de blé tendre
+BQ	Banque	3	20250107	601200	Engrais et amendements			D0002	20250103	Achat engrais	569,81	0,00			20250131			20250107	VIR	Achat engrais
+BQ	Banque	3	20250107	512000	Banque			D0002	20250103	Achat engrais	0,00	569,81			20250131			20250107	VIR	Achat engrais
+BQ	Banque	4	20250110	512000	Banque			R0003	20250101	Vente de blé tendre	4452,89	0,00			20250131			20250110	CHQ	Vente de blé tendre
+BQ	Banque	4	20250110	701100	Ventes de céréales			R0003	20250101	Vente de blé tendre	0,00	4452,89			20250131			20250110	CHQ	Vente de blé tendre
+BQ	Banque	5	20250113	601200	Engrais et amendements			D0004	20250112	Achat engrais	6101,36	0,00			20250131			20250113	CB	Achat engrais
+BQ	Banque	5	20250113	512000	Banque			D0004	20250112	Achat engrais	0,00	6101,36			20250131			20250113	CB	Achat engrais
+BQ	Banque	6	20250121	512000	Banque			R0005	20250112	Aides PAC	8587,96	0,00			20250131			20250121	CHQ	Aides PAC
+BQ	Banque	6	20250121	741000	Aides et subventions d'exploitation			R0005	20250112	Aides PAC	0,00	8587,96			20250131			20250121	CHQ	Aides PAC
+BQ	Banque	7	20250122	606100	Carburants			D0006	20250114	Gazole non routier	837,41	0,00			20250131			20250122	CHQ	Gazole non routier
+BQ	Banque	7	20250122	512000	Banque			D0006	20250114	Gazole non routier	0,00	837,41			20250131			20250122	CHQ	Gazole non routier
+BQ	Banque	8	20250131	512000	Banque			R0007	20250126	Aides PAC	4316,51	0,00			20250131			20250131	CHQ	Aides PAC
+BQ	Banque	8	20250131	741000	Aides et subventions d'exploitation			R0007	20250126	Aides PAC	0,00	4316,51			20250131			20250131	CHQ	Aides PAC
+BQ	Banque	9	20250203	615500	Entretien du matériel			D0008	20250202	Réparation tracteur	483,77	0,00			20250228			20250203	VIR	Réparation tracteur
+BQ	Banque	9	20250203	512000	Banque			D0008	20250202	Réparation tracteur	0,00	483,77			20250228			20250203	VIR	Réparation tracteur
+BQ	Banque	10	20250205	601200	Engrais et amendements			D0009	20250130	Achat engrais	2603,31	0,00			20250228			20250205	CHQ	Achat engrais
+BQ	Banque	10	20250205	512000	Banque			D0009	20250130	Achat engrais	0,00	2603,31			20250228			20250205	CHQ	Achat engrais
+BQ	Banque	11	20250206	512000	Banque			R0010	20250202	Vente de blé tendre	14502,53	0,00			20250228			20250206	VIR	Vente de blé tendre
+BQ	Banque	11	20250206	701100	Ventes de céréales			R0010	20250202	Vente de blé tendre	0,00	14502,53			20250228			20250206	VIR	Vente de blé tendre
+BQ	Banque	12	20250211	606100	Carburants			D0011	20250201	Gazole non routier	555,95	0,00			20250228			20250211	PRLV	Gazole non routier
+BQ	Banque	12	20250211	512000	Banque			D0011	20250201	Gazole non routier	0,00	555,95			20250228			20250211	PRLV	Gazole non routier
+BQ	Banque	13	20250212	615500	Entretien du matériel			D0012	20250212	Réparation tracteur	218,65	0,00			20250228			20250212	PRLV	Réparation tracteur
+BQ	Banque	13	20250212	512000	Banque			D0012	20250212	Réparation tracteur	0,00	218,65			20250228			20250212	PRLV	Réparation tracteur
+BQ	Banque	14	20250214	512000	Banque			R0013	20250206	Vente de blé tendre	3370,11	0,00			20250228			20250214	VIR	Vente de blé tendre
+BQ	Banque	14	20250214	701100	Ventes de céréales			R0013	20250206	Vente de blé tendre	0,00	3370,11			20250228			20250214	VIR	Vente de blé tendre
+BQ	Banque	15	20250218	606100	Carburants			D0014	20250213	Gazole non routier	711,96	0,00			20250228			20250218	PRLV	Gazole non routier
+BQ	Banque	15	20250218	512000	Banque			D0014	20250213	Gazole non routier	0,00	711,96			20250228			20250218	PRLV	Gazole non routier
+BQ	Banque	16	20250221	601200	Engrais et amendements			D0015	20250212	Achat engrais	1077,50	0,00			20250228			20250221	CB	Achat engrais
+BQ	Banque	16	20250221	512000	Banque			D0015	20250212	Achat engrais	0,00	1077,50			20250228			20250221	CB	Achat engrais
+BQ	Banque	17	20250225	601200	Engrais et amendements			D0016	20250224	Achat engrais	1371,07	0,00			20250228			20250225	PRLV	Achat engrais
+BQ	Banque	17	20250225	512000	Banque			D0016	20250224	Achat engrais	0,00	1371,07			20250228			20250225	PRLV	Achat engrais
+BQ	Banque	18	20250226	606100	Carburants			D0017	20250225	Gazole non routier	697,31	0,00			20250228			20250226	VIR	Gazole non routier
+BQ	Banque	18	20250226	512000	Banque			D0017	20250225	Gazole non routier	0,00	697,31			20250228			20250226	VIR	Gazole non routier
+BQ	Banque	19	20250228	606100	Carburants			D0018	20250223	Gazole non routier	855,21	0,00			20250228			20250228	VIR	Gazole non routier
+BQ	Banque	19	20250228	512000	Banque			D0018	20250223	Gazole non routier	0,00	855,21			20250228			20250228	VIR	Gazole non routier
+BQ	Banque	20	20250303	615500	Entretien du matériel			D0019	20250225	Réparation tracteur	2964,18	0,00			20250331			20250303	CB	Réparation tracteur
+BQ	Banque	20	20250303	512000	Banque			D0019	20250225	Réparation tracteur	0,00	2964,18			20250331			20250303	CB	Réparation tracteur
+BQ	Banque	21	20250311	512000	Banque			R0020	20250304	Vente de blé tendre	7001,07	0,00			20250331			20250311	VIR	Vente de blé tendre
+BQ	Banque	21	20250311	701100	Ventes de céréales			R0020	20250304	Vente de blé tendre	0,00	7001,07			20250331			20250311	VIR	Vente de blé tendre
+BQ	Banque	22	20250312	601200	Engrais et amendements			D0021	20250310	Achat engrais	755,89	0,00			20250331			20250312	VIR	Achat engrais
+BQ	Banque	22	20250312	512000	Banque			D0021	20250310	Achat engrais	0,00	755,89			20250331			20250312	VIR	Achat engrais
+BQ	Banque	23	20250313	512000	Banque			R0022	20250312	Vente de blé tendre	2749,41	0,00			20250331			20250313	CHQ	Vente de blé tendre
+BQ	Banque	23	20250313	701100	Ventes de céréales			R0022	20250312	Vente de blé tendre	0,00	2749,41			20250331			20250313	CHQ	Vente de blé tendre
+BQ	Banque	24	20250317	512000	Banque			R0023	20250313	Aides PAC	7884,68	0,00			20250331			20250317	VIR	Aides PAC
+BQ	Banque	24	20250317	741000	Aides et subventions d'exploitation			R0023	20250313	Aides PAC	0,00	7884,68			20250331			20250317	VIR	Aides PAC
+BQ	Banque	25	20250318	512000	Banque			R0024	20250311	Aides PAC	4070,40	0,00			20250331			20250318	CB	Aides PAC
+BQ	Banque	25	20250318	741000	Aides et subventions d'exploitation			R0024	20250311	Aides PAC	0,00	4070,40			20250331			20250318	CB	Aides PAC
+BQ	Banque	26	20250320	512000	Banque			R0025	20250319	Vente de blé tendre	20067,21	0,00			20250331			20250320	PRLV	Vente de blé tendre
+BQ	Banque	26	20250320	701100	Ventes de céréales			R0025	20250319	Vente de blé tendre	0,00	20067,21			20250331			20250320	PRLV	Vente de blé tendre
+BQ	Banque	27	20250324	606100	Carburants			D0026	20250317	Gazole non routier	1787,81	0,00			20250331			20250324	VIR	Gazole non routier
+BQ	Banque	27	20250324	512000	Banque			D0026	20250317	Gazole non routier	0,00	1787,81			20250331			20250324	VIR	Gazole non routier
+BQ	Banque	28	20250327	512000	Banque			R0027	20250327	Vente de blé tendre	16951,71	0,00			20250331			20250327	CB	Vente de blé tendre
+BQ	Banque	28	20250327	701100	Ventes de céréales			R0027	20250327	Vente de blé tendre	0,00	16951,71			20250331			20250327	CB	Vente de blé tendre
+BQ	Banque	29	20250331	512000	Banque			R0028	20250321	Aides PAC	8222,33	0,00			20250331			20250331	CHQ	Aides PAC
+BQ	Banque	29	20250331	741000	Aides et subventions d'exploitation			R0028	20250321	Aides PAC	0,00	8222,33			20250331			20250331	CHQ	Aides PAC
+BQ	Banque	30	20250401	601200	Engrais et amendements			D0029	20250324	Achat engrais	634,38	0,00			20250430			20250401	CHQ	Achat engrais
+BQ	Banque	30	20250401	512000	Banque			D0029	20250324	Achat engrais	0,00	634,38			20250430			20250401	CHQ	Achat engrais
+BQ	Banque	31	20250409	512000	Banque			R0030	20250403	Vente de blé tendre	6397,67	0,00			20250430			20250409	VIR	Vente de blé tendre
+BQ	Banque	31	20250409	701100	Ventes de céréales			R0030	20250403	Vente de blé tendre	0,00	6397,67			20250430			20250409	VIR	Vente de blé tendre
+BQ	Banque	32	20250416	512000	Banque			R0031	20250413	Vente de blé tendre	13389,55	0,00			20250430			20250416	CB	Vente de blé tendre
+BQ	Banque	32	20250416	701100	Ventes de céréales			R0031	20250413	Vente de blé tendre	0,00	13389,55			20250430			20250416	CB	Vente de blé tendre
+BQ	Banque	33	20250422	512000	Banque			R0032	20250412	Vente de blé tendre	15271,47	0,00			20250430			20250422	CB	Vente de blé tendre
+BQ	Banque	33	20250422	701100	Ventes de céréales			R0032	20250412	Vente de blé tendre	0,00	15271,47			20250430			20250422	CB	Vente de blé tendre
+BQ	Banque	34	20250425	512000	Banque			R0033	20250425	Vente de blé tendre	3611,51	0,00			20250430			20250425	CHQ	Vente de blé tendre
+BQ	Banque	34	20250425	701100	Ventes de céréales			R0033	20250425	Vente de blé tendre	0,00	3611,51			20250430			20250425	CHQ	Vente de blé tendre
+BQ	Banque	35	20250429	512000	Banque			R0034	20250421	Aides PAC	10238,02	0,00			20250430			20250429	CHQ	Aides PAC
+BQ	Banque	35	20250429	741000	Aides et subventions d'exploitation			R0034	20250421	Aides PAC	0,00	10238,02			20250430			20250429	CHQ	Aides PAC
+BQ	Banque	36	20250430	601200	Engrais et amendements			D0035	20250423	Achat engrais	4590,10	0,00			20250430			20250430	CB	Achat engrais
+BQ	Banque	36	20250430	512000	Banque			D0035	20250423	Achat engrais	0,00	4590,10			20250430			20250430	CB	Achat engrais
+BQ	Banque	37	20250502	512000	Banque			R0036	20250422	Vente de blé tendre	22227,81	0,00			20250531			20250502	CB	Vente de blé tendre
+BQ	Banque	37	20250502	701100	Ventes de céréales			R0036	20250422	Vente de blé tendre	0,00	22227,81			20250531			20250502	CB	Vente de blé tendre
+BQ	Banque	38	20250507	512000	Banque			R0037	20250428	Vente de blé tendre	2039,94	0,00			20250531			20250507	CHQ	Vente de blé tendre
+BQ	Banque	38	20250507	701100	Ventes de céréales			R0037	20250428	Vente de blé tendre	0,00	2039,94			20250531			20250507	CHQ	Vente de blé tendre
+BQ	Banque	39	20250515	512000	Banque			R0038	20250508	Vente de blé tendre	15784,00	0,00			20250531			20250515	PRLV	Vente de blé tendre
+BQ	Banque	39	20250515	701100	Ventes de céréales			R0038	20250508	Vente de blé tendre	0,00	15784,00			20250531			20250515	PRLV	Vente de blé tendre
+BQ	Banque	40	20250516	606100	Carburants			D0039	20250515	Gazole non routier	1149,01	0,00			20250531			20250516	CB	Gazole non routier
+BQ	Banque	40	20250516	512000	Banque			D0039	20250515	Gazole non routier	0,00	1149,01			20250531			20250516	CB	Gazole non routier
+BQ	Banque	41	20250519	606100	Carburants			D0040	20250509	Gazole non routier	781,66	0,00			20250531			20250519	CHQ	Gazole non routier
+BQ	Banque	41	20250519	512000	Banque			D0040	20250509	Gazole non routier	0,00	781,66			20250531			20250519	CHQ	Gazole non routier
+BQ	Banque	42	20250521	601200	Engrais et amendements			D0041	20250517	Achat engrais	3098,94	0,00			20250531			20250521	CB	Achat engrais
+BQ	Banque	42	20250521	512000	Banque			D0041	20250517	Achat engrais	0,00	3098,94			20250531			20250521	CB	Achat engrais
+BQ	Banque	43	20250522	615500	Entretien du matériel			D0042	20250521	Réparation tracteur	609,81	0,00			20250531			20250522	CB	Réparation tracteur
+BQ	Banque	43	20250522	512000	Banque			D0042	20250521	Réparation tracteur	0,00	609,81			20250531			20250522	CB	Réparation tracteur
+BQ	Banque	44	20250523	512000	Banque			R0043	20250519	Aides PAC	8431,95	0,00			20250531			20250523	CHQ	Aides PAC
+BQ	Banque	44	20250523	741000	Aides et subventions d'exploitation			R0043	20250519	Aides PAC	0,00	8431,95			20250531			20250523	CHQ	Aides PAC
+BQ	Banque	45	20250527	606100	Carburants			D0044	20250519	Gazole non routier	2460,76	0,00			20250531			20250527	CB	Gazole non routier
+BQ	Banque	45	20250527	512000	Banque			D0044	20250519	Gazole non routier	0,00	2460,76			20250531			20250527	CB	Gazole non routier
+BQ	Banque	46	20250528	512000	Banque			R0045	20250524	Vente de blé tendre	20042,91	0,00			20250531			20250528	PRLV	Vente de blé tendre
+BQ	Banque	46	20250528	701100	Ventes de céréales			R0045	20250524	Vente de blé tendre	0,00	20042,91			20250531			20250528	PRLV	Vente de blé tendre
+BQ	Banque	47	20250602	615500	Entretien du matériel			D0046	20250527	Réparation tracteur	1484,81	0,00			20250630			20250602	PRLV	Réparation tracteur
+BQ	Banque	47	20250602	512000	Banque			D0046	20250527	Réparation tracteur	0,00	1484,81			20250630			20250602	PRLV	Réparation tracteur
+BQ	Banque	48	20250605	606100	Carburants			D0047	20250530	Gazole non routier	1450,56	0,00			20250630			20250605	VIR	Gazole non routier
+BQ	Banque	48	20250605	512000	Banque			D0047	20250530	Gazole non routier	0,00	1450,56			20250630			20250605	VIR	Gazole non routier
+BQ	Banque	49	20250610	512000	Banque			R0048	20250607	Vente de blé tendre	23843,71	0,00			20250630			20250610	VIR	Vente de blé tendre
+BQ	Banque	49	20250610	701100	Ventes de céréales			R0048	20250607	Vente de blé tendre	0,00	23843,71			20250630			20250610	VIR	Vente de blé tendre
+BQ	Banque	50	20250612	601200	Engrais et amendements			D0049	20250604	Achat engrais	4161,88	0,00			20250630			20250612	CHQ	Achat engrais
+BQ	Banque	50	20250612	512000	Banque			D0049	20250604	Achat engrais	0,00	4161,88			20250630			20250612	CHQ	Achat engrais
+BQ	Banque	51	20250616	512000	Banque			R0050	20250607	Vente de blé tendre	1624,50	0,00			20250630			20250616	CHQ	Vente de blé tendre
+BQ	Banque	51	20250616	701100	Ventes de céréales			R0050	20250607	Vente de blé tendre	0,00	1624,50			20250630			20250616	CHQ	Vente de blé tendre
+BQ	Banque	52	20250617	606100	Carburants			D0051	20250613	Gazole non routier	868,96	0,00			20250630			20250617	CB	Gazole non routier
+BQ	Banque	52	20250617	512000	Banque			D0051	20250613	Gazole non routier	0,00	868,96			20250630			20250617	CB	Gazole non routier
+BQ	Banque	53	20250618	606100	Carburants			D0052	20250611	Gazole non routier	689,44	0,00			20250630			20250618	VIR	Gazole non routier
+BQ	Banque	53	20250618	512000	Banque			D0052	20250611	Gazole non routier	0,00	689,44			20250630			20250618	VIR	Gazole non routier
+BQ	Banque	54	20250620	606100	Carburants			D0053	20250617	Gazole non routier	677,55	0,00			20250630			20250620	CHQ	Gazole non routier
+BQ	Banque	54	20250620	512000	Banque			D0053	20250617	Gazole non routier	0,00	677,55			20250630			20250620	CHQ	Gazole non routier
+BQ	Banque	55	20250623	615500	Entretien du matériel			D0054	20250617	Réparation tracteur	248,24	0,00			20250630			20250623	CB	Réparation tracteur
+BQ	Banque	55	20250623	512000	Banque			D0054	20250617	Réparation tracteur	0,00	248,24			20250630			20250623	CB	Réparation tracteur
+BQ	Banque	56	20250627	601200	Engrais et amendements			D0055	20250622	Achat engrais	3430,71	0,00			20250630			20250627	VIR	Achat engrais
+BQ	Banque	56	20250627	512000	Banque			D0055	20250622	Achat engrais	0,00	3430,71			20250630			20250627	VIR	Achat engrais
+BQ	Banque	57	20250630	606100	Carburants			D0056	20250627	Gazole non routier	2111,13	0,00			20250630			20250630	VIR	Gazole non routier
+BQ	Banque	57	20250630	512000	Banque			D0056	20250627	Gazole non routier	0,00	2111,13			20250630			20250630	VIR	Gazole non routier
+BQ	Banque	58	20250703	606100	Carburants			D0057	20250629	Gazole non routier	1879,81	0,00			20250731			20250703	PRLV	Gazole non routier
+BQ	Banque	58	20250703	512000	Banque			D0057	20250629	Gazole non routier	0,00	1879,81			20250731			20250703	PRLV	Gazole non routier
+BQ	Banque	59	20250708	512000	Banque			R0058	20250628	Aides PAC	9486,98	0,00			20250731			20250708	VIR	Aides PAC
+BQ	Banque	59	20250708	741000	Aides et subventions d'exploitation			R0058	20250628	Aides PAC	0,00	9486,98			20250731			20250708	VIR	Aides PAC
+BQ	Banque	60	20250709	615500	Entretien du matériel			D0059	20250707	Réparation tracteur	2103,25	0,00			20250731			20250709	CB	Réparation tracteur
+BQ	Banque	60	20250709	512000	Banque			D0059	20250707	Réparation tracteur	0,00	2103,25			20250731			20250709	CB	Réparation tracteur
+BQ	Banque	61	20250715	512000	Banque			R0060	20250705	Vente de blé tendre	13667,56	0,00			20250731			20250715	CHQ	Vente de blé tendre
+BQ	Banque	61	20250715	701100	Ventes de céréales			R0060	20250705	Vente de blé tendre	0,00	13667,56			20250731			20250715	CHQ	Vente de blé tendre
+BQ	Banque	62	20250721	512000	Banque			R0061	20250714	Vente de blé tendre	11880,96	0,00			20250731			20250721	CB	Vente de blé tendre
+BQ	Banque	62	20250721	701100	Ventes de céréales			R0061	20250714	Vente de blé tendre	0,00	11880,96			20250731			20250721	CB	Vente de blé tendre
+BQ	Banque	63	20250722	512000	Banque			R0062	20250712	Vente de blé tendre	1718,32	0,00			20250731			20250722	CB	Vente de blé tendre
+BQ	Banque	63	20250722	701100	Ventes de céréales			R0062	20250712	Vente de blé tendre	0,00	1718,32			20250731			20250722	CB	Vente de blé tendre
+BQ	Banque	64	20250724	512000	Banque			R0063	20250715	Vente de blé tendre	9004,91	0,00			20250731			20250724	CB	Vente de blé tendre
+BQ	Banque	64	20250724	701100	Ventes de céréales			R0063	20250715	Vente de blé tendre	0,00	9004,91			20250731			20250724	CB	Vente de blé tendre
+BQ	Banque	65	20250725	512000	Banque			R0064	20250725	Vente de blé tendre	4297,95	0,00			20250731			20250725	CHQ	Vente de blé tendre
+BQ	Banque	65	20250725	701100	Ventes de céréales			R0064	20250725	Vente de blé tendre	0,00	4297,95			20250731			20250725	CHQ	Vente de blé tendre
+BQ	Banque	66	20250728	606100	Carburants			D0065	20250726	Gazole non routier	767,49	0,00			20250731			20250728	CB	Gazole non routier
+BQ	Banque	66	20250728	512000	Banque			D0065	20250726	Gazole non routier	0,00	767,49			20250731			20250728	CB	Gazole non routier
+BQ	Banque	67	20250730	606100	Carburants			D0066	20250728	Gazole non routier	2136,19	0,00			20250731			20250730	CHQ	Gazole non routier
+BQ	Banque	67	20250730	512000	Banque			D0066	20250728	Gazole non routier	0,00	2136,19			20250731			20250730	CHQ	Gazole non routier
+BQ	Banque	68	20250804	601200	Engrais et amendements			D0067	20250729	Achat engrais	4665,83	0,00			20250831			20250804	VIR	Achat engrais
+BQ	Banque	68	20250804	512000	Banque			D0067	20250729	Achat engrais	0,00	4665,83			20250831			20250804	VIR	Achat engrais
+BQ	Banque	69	20250805	615500	Entretien du matériel			D0068	20250805	Réparation tracteur	734,92	0,00			20250831			20250805	VIR	Réparation tracteur
+BQ	Banque	69	20250805	512000	Banque			D0068	20250805	Réparation tracteur	0,00	734,92			20250831			20250805	VIR	Réparation tracteur
+BQ	Banque	70	20250806	606100	Carburants			D0069	20250804	Gazole non routier	269,32	0,00			20250831			20250806	CHQ	Gazole non routier
+BQ	Banque	70	20250806	512000	Banque			D0069	20250804	Gazole non routier	0,00	269,32			20250831			20250806	CHQ	Gazole non routier
+BQ	Banque	71	20250811	615500	Entretien du matériel			D0070	20250808	Réparation tracteur	1973,40	0,00			20250831			20250811	CHQ	Réparation tracteur
+BQ	Banque	71	20250811	512000	Banque			D0070	20250808	Réparation tracteur	0,00	1973,40			20250831			20250811	CHQ	Réparation tracteur
+BQ	Banque	72	20250813	512000	Banque			R0071	20250809	Vente de blé tendre	1568,20	0,00			20250831			20250813	PRLV	Vente de blé tendre
+BQ	Banque	72	20250813	701100	Ventes de céréales			R0071	20250809	Vente de blé tendre	0,00	1568,20			20250831			20250813	PRLV	Vente de blé tendre
+BQ	Banque	73	20250818	512000	Banque			R0072	20250813	Vente de blé tendre	16613,79	0,00			20250831			20250818	VIR	Vente de blé tendre
+BQ	Banque	73	20250818	701100	Ventes de céréales			R0072	20250813	Vente de blé tendre	0,00	16613,79			20250831			20250818	VIR	Vente de blé tendre
+BQ	Banque	74	20250820	601200	Engrais et amendements			D0073	20250813	Achat engrais	551,34	0,00			20250831			20250820	VIR	Achat engrais
+BQ	Banque	74	20250820	512000	Banque			D0073	20250813	Achat engrais	0,00	551,34			20250831			20250820	VIR	Achat engrais
+BQ	Banque	75	20250822	512000	Banque			R0074	20250817	Vente de blé tendre	10164,89	0,00			20250831			20250822	VIR	Vente de blé tendre
+BQ	Banque	75	20250822	701100	Ventes de céréales			R0074	20250817	Vente de blé tendre	0,00	10164,89			20250831			20250822	VIR	Vente de blé tendre
+BQ	Banque	76	20250826	606100	Carburants			D0075	20250822	Gazole non routier	1925,33	0,00			20250831			20250826	CHQ	Gazole non routier
+BQ	Banque	76	20250826	512000	Banque			D0075	20250822	Gazole non routier	0,00	1925,33			20250831			20250826	CHQ	Gazole non routier
+BQ	Banque	77	20250827	512000	Banque			R0076	20250817	Vente de blé tendre	2411,92	0,00			20250831			20250827	VIR	Vente de blé tendre
+BQ	Banque	77	20250827	701100	Ventes de céréales			R0076	20250817	Vente de blé tendre	0,00	2411,92			20250831			20250827	VIR	Vente de blé tendre
+BQ	Banque	78	20250829	601200	Engrais et amendements			D0077	20250821	Achat engrais	4885,36	0,00			20250831			20250829	CHQ	Achat engrais
+BQ	Banque	78	20250829	512000	Banque			D0077	20250821	Achat engrais	0,00	4885,36			20250831			20250829	CHQ	Achat engrais
+BQ	Banque	79	20250902	606100	Carburants			D0078	20250828	Gazole non routier	449,88	0,00			20250930			20250902	PRLV	Gazole non routier
+BQ	Banque	79	20250902	512000	Banque			D0078	20250828	Gazole non routier	0,00	449,88			20250930			20250902	PRLV	Gazole non routier
+BQ	Banque	80	20250905	601200	Engrais et amendements			D0079	20250828	Achat engrais	1102,57	0,00			20250930			20250905	VIR	Achat engrais
+BQ	Banque	80	20250905	512000	Banque			D0079	20250828	Achat engrais	0,00	1102,57			20250930			20250905	VIR	Achat engrais
+BQ	Banque	81	20250908	615500	Entretien du matériel			D0080	20250831	Réparation tracteur	1709,47	0,00			20250930			20250908	CB	Réparation tracteur
+BQ	Banque	81	20250908	512000	Banque			D0080	20250831	Réparation tracteur	0,00	1709,47			20250930			20250908	CB	Réparation tracteur
+BQ	Banque	82	20250909	512000	Banque			R0081	20250906	Vente de blé tendre	11640,30	0,00			20250930			20250909	CB	Vente de blé tendre
+BQ	Banque	82	20250909	701100	Ventes de céréales			R0081	20250906	Vente de blé tendre	0,00	11640,30			20250930			20250909	CB	Vente de blé tendre
+BQ	Banque	83	20250912	512000	Banque			R0082	20250905	Vente de blé tendre	7272,28	0,00			20250930			20250912	VIR	Vente de blé tendre
+BQ	Banque	83	20250912	701100	Ventes de céréales			R0082	20250905	Vente de blé tendre	0,00	7272,28			20250930			20250912	VIR	Vente de blé tendre
+BQ	Banque	84	20250917	512000	Banque			R0083	20250911	Vente de blé tendre	10798,26	0,00			20250930			20250917	PRLV	Vente de blé tendre
+BQ	Banque	84	20250917	701100	Ventes de céréales			R0083	20250911	Vente de blé tendre	0,00	10798,26			20250930			20250917	PRLV	Vente de blé tendre
+BQ	Banque	85	20250918	615500	Entretien du matériel			D0084	20250915	Réparation tracteur	1750,86	0,00			20250930			20250918	VIR	Réparation tracteur
+BQ	Banque	85	20250918	512000	Banque			D0084	20250915	Réparation tracteur	0,00	1750,86			20250930			20250918	VIR	Réparation tracteur
+BQ	Banque	86	20250919	512000	Banque			R0085	20250913	Vente de blé tendre	1734,79	0,00			20250930			20250919	CHQ	Vente de blé tendre
+BQ	Banque	86	20250919	701100	Ventes de céréales			R0085	20250913	Vente de blé tendre	0,00	1734,79			20250930			20250919	CHQ	Vente de blé tendre
+BQ	Banque	87	20250923	601200	Engrais et amendements			D0086	20250922	Achat engrais	4089,66	0,00			20250930			20250923	CB	Achat engrais
+BQ	Banque	87	20250923	512000	Banque			D0086	20250922	Achat engrais	0,00	4089,66			20250930			20250923	CB	Achat engrais
+BQ	Banque	88	20250926	601200	Engrais et amendements			D0087	20250919	Achat engrais	6828,67	0,00			20250930			20250926	VIR	Achat engrais
+BQ	Banque	88	20250926	512000	Banque			D0087	20250919	Achat engrais	0,00	6828,67			20250930			20250926	VIR	Achat engrais
+BQ	Banque	89	20250930	601200	Engrais et amendements			D0088	20250926	Achat engrais	766,84	0,00			20250930			20250930	CB	Achat engrais
+BQ	Banque	89	20250930	512000	Banque			D0088	20250926	Achat engrais	0,00	766,84			20250930			20250930	CB	Achat engrais
+BQ	Banque	90	20251009	512000	Banque			R0089	20251006	Aides PAC	7958,24	0,00			20251031			20251009	PRLV	Aides PAC
+BQ	Banque	90	20251009	741000	Aides et subventions d'exploitation			R0089	20251006	Aides PAC	0,00	7958,24			20251031			20251009	PRLV	Aides PAC
+BQ	Banque	91	20251010	606100	Carburants			D0090	20251009	Gazole non routier	254,58	0,00			20251031			20251010	CB	Gazole non routier
+BQ	Banque	91	20251010	512000	Banque			D0090	20251009	Gazole non routier	0,00	254,58			20251031			20251010	CB	Gazole non routier
+BQ	Banque	92	20251013	606100	Carburants			D0091	20251003	Gazole non routier	611,05	0,00			20251031			20251013	CB	Gazole non routier
+BQ	Banque	92	20251013	512000	Banque			D0091	20251003	Gazole non routier	0,00	611,05			20251031			20251013	CB	Gazole non routier
+BQ	Banque	93	20251014	601200	Engrais et amendements			D0092	20251005	Achat engrais	5965,23	0,00			20251031			20251014	VIR	Achat engrais
+BQ	Banque	93	20251014	512000	Banque			D0092	20251005	Achat engrais	0,00	5965,23			20251031			20251014	VIR	Achat engrais
+BQ	Banque	94	20251022	606100	Carburants			D0093	20251020	Gazole non routier	679,32	0,00			20251031			20251022	VIR	Gazole non routier
+BQ	Banque	94	20251022	512000	Banque			D0093	20251020	Gazole non routier	0,00	679,32			20251031			20251022	VIR	Gazole non routier
+BQ	Banque	95	20251023	601200	Engrais et amendements			D0094	20251016	Achat engrais	1436,73	0,00			20251031			20251023	CHQ	Achat engrais
+BQ	Banque	95	20251023	512000	Banque			D0094	20251016	Achat engrais	0,00	1436,73			20251031			20251023	CHQ	Achat engrais
+BQ	Banque	96	20251024	601200	Engrais et amendements			D0095	20251018	Achat engrais	1498,66	0,00			20251031			20251024	VIR	Achat engrais
+BQ	Banque	96	20251024	512000	Banque			D0095	20251018	Achat engrais	0,00	1498,66			20251031			20251024	VIR	Achat engrais
+BQ	Banque	97	20251028	512000	Banque			R0096	20251019	Vente de blé tendre	3856,08	0,00			20251031			20251028	PRLV	Vente de blé tendre
+BQ	Banque	97	20251028	701100	Ventes de céréales			R0096	20251019	Vente de blé tendre	0,00	3856,08			20251031			20251028	PRLV	Vente de blé tendre
+BQ	Banque	98	20251031	601200	Engrais et amendements			D0097	20251025	Achat engrais	2524,53	0,00			20251031			20251031	CHQ	Achat engrais
+BQ	Banque	98	20251031	512000	Banque			D0097	20251025	Achat engrais	0,00	2524,53			20251031			20251031	CHQ	Achat engrais
+BQ	Banque	99	20251104	512000	Banque			R0098	20251031	Aides PAC	4757,50	0,00			20251130			20251104	CB	Aides PAC
+BQ	Banque	99	20251104	741000	Aides et subventions d'exploitation			R0098	20251031	Aides PAC	0,00	4757,50			20251130			20251104	CB	Aides PAC
+BQ	Banque	100	20251105	512000	Banque			R0099	20251030	Aides PAC	9988,36	0,00			20251130			20251105	CB	Aides PAC
+BQ	Banque	100	20251105	741000	Aides et subventions d'exploitation			R0099	20251030	Aides PAC	0,00	9988,36			20251130			20251105	CB	Aides PAC
+BQ	Banque	101	20251112	512000	Banque			R0100	20251111	Vente de blé tendre	5103,40	0,00			20251130			20251112	CB	Vente de blé tendre
+BQ	Banque	101	20251112	701100	Ventes de céréales			R0100	20251111	Vente de blé tendre	0,00	5103,40			20251130			20251112	CB	Vente de blé tendre
+BQ	Banque	102	20251117	512000	Banque			R0101	20251116	Vente de blé tendre	3433,40	0,00			20251130			20251117	CB	Vente de blé tendre
+BQ	Banque	102	20251117	701100	Ventes de céréales			R0101	20251116	Vente de blé tendre	0,00	3433,40			20251130			20251117	CB	Vente de blé tendre
+BQ	Banque	103	20251125	512000	Banque			R0102	20251125	Vente de blé tendre	5315,04	0,00			20251130			20251125	CHQ	Vente de blé tendre
+BQ	Banque	103	20251125	701100	Ventes de céréales			R0102	20251125	Vente de blé tendre	0,00	5315,04			20251130			20251125	CHQ	Vente de blé tendre
+BQ	Banque	104	20251126	606100	Carburants			D0103	20251116	Gazole non routier	465,59	0,00			20251130			20251126	CHQ	Gazole non routier
+BQ	Banque	104	20251126	512000	Banque			D0103	20251116	Gazole non routier	0,00	465,59			20251130			20251126	CHQ	Gazole non routier
+BQ	Banque	105	20251128	615500	Entretien du matériel			D0104	20251122	Réparation tracteur	778,65	0,00			20251130			20251128	VIR	Réparation tracteur
+BQ	Banque	105	20251128	512000	Banque			D0104	20251122	Réparation tracteur	0,00	778,65			20251130			20251128	VIR	Réparation tracteur
+BQ	Banque	106	20251202	512000	Banque			R0105	20251128	Vente de blé tendre	8650,39	0,00			20251231			20251202	PRLV	Vente de blé tendre
+BQ	Banque	106	20251202	701100	Ventes de céréales			R0105	20251128	Vente de blé tendre	0,00	8650,39			20251231			20251202	PRLV	Vente de blé tendre
+BQ	Banque	107	20251203	512000	Banque			R0106	20251123	Vente de blé tendre	13121,04	0,00			20251231			20251203	CB	Vente de blé tendre
+BQ	Banque	107	20251203	701100	Ventes de céréales			R0106	20251123	Vente de blé tendre	0,00	13121,04			20251231			20251203	CB	Vente de blé tendre
+BQ	Banque	108	20251208	512000	Banque			R0107	20251208	Vente de blé tendre	3476,00	0,00			20251231			20251208	VIR	Vente de blé tendre
+BQ	Banque	108	20251208	701100	Ventes de céréales			R0107	20251208	Vente de blé tendre	0,00	3476,00			20251231			20251208	VIR	Vente de blé tendre
+BQ	Banque	109	20251212	606100	Carburants			D0108	20251205	Gazole non routier	965,08	0,00			20251231			20251212	VIR	Gazole non routier
+BQ	Banque	109	20251212	512000	Banque			D0108	20251205	Gazole non routier	0,00	965,08			20251231			20251212	VIR	Gazole non routier
+BQ	Banque	110	20251216	615500	Entretien du matériel			D0109	20251209	Réparation tracteur	277,72	0,00			20251231			20251216	PRLV	Réparation tracteur
+BQ	Banque	110	20251216	512000	Banque			D0109	20251209	Réparation tracteur	0,00	277,72			20251231			20251216	PRLV	Réparation tracteur
+BQ	Banque	111	20251218	606100	Carburants			D0110	20251217	Gazole non routier	521,03	0,00			20251231			20251218	PRLV	Gazole non routier
+BQ	Banque	111	20251218	512000	Banque			D0110	20251217	Gazole non routier	0,00	521,03			20251231			20251218	PRLV	Gazole non routier
+BQ	Banque	112	20251226	601200	Engrais et amendements			D0111	20251222	Achat engrais	2880,75	0,00			20251231			20251226	CHQ	Achat engrais
+BQ	Banque	112	20251226	512000	Banque			D0111	20251222	Achat engrais	0,00	2880,75			20251231			20251226	CHQ	Achat engrais

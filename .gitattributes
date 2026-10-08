@@ -1,0 +1,3 @@
+# FEC fictifs : octets exacts (fins de ligne CR, LF, CRLF et encodages testés volontairement).
+# Sans cette règle, Git pour Windows (core.autocrlf) convertirait les fins de ligne au checkout.
+tests/fixtures/fec/** -text

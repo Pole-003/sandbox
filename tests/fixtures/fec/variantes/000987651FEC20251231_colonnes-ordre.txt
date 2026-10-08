@@ -1,0 +1,861 @@
+CompteNum	CompteLib	JournalCode	JournalLib	EcritureNum	EcritureDate	CompAuxNum	CompAuxLib	PieceRef	PieceDate	EcritureLib	Credit	Debit	EcritureLet	DateLet	ValidDate	Montantdevise	Idevise
+411000	Clients	AN	A-nouveaux	1	20250101	C0002	Société Bœuf & Cie SARL	AN	20250101	A nouveaux	0,00	1168,42	AA	20250103	20250131		
+411000	Clients	AN	A-nouveaux	1	20250101	C0003	Établissements du Littoral EURL	AN	20250101	A nouveaux	0,00	4084,86	AA	20250217	20250131		
+411000	Clients	AN	A-nouveaux	1	20250101	C0003	Établissements du Littoral EURL	AN	20250101	A nouveaux	0,00	2020,63	AB	20250123	20250131		
+411000	Clients	AN	A-nouveaux	1	20250101	C0004	Atelier Bœuf & Cie SAS	AN	20250101	A nouveaux	0,00	126,49	AA	20250114	20250131		
+411000	Clients	AN	A-nouveaux	1	20250101	C0004	Atelier Bœuf & Cie SAS	AN	20250101	A nouveaux	0,00	965,78	AB	20250121	20250131		
+411000	Clients	AN	A-nouveaux	1	20250101	C0007	Atelier du Moulin SNC	AN	20250101	A nouveaux	0,00	1314,78	AA	20250120	20250131		
+411000	Clients	AN	A-nouveaux	1	20250101	C0008	Atelier de la Forêt SAS	AN	20250101	A nouveaux	0,00	1008,38	AA	20250114	20250131		
+411000	Clients	AN	A-nouveaux	1	20250101	C0008	Atelier de la Forêt SAS	AN	20250101	A nouveaux	0,00	9517,93	AB	20250129	20250131		
+401000	Fournisseurs	AN	A-nouveaux	1	20250101	F0001	Grossiste Central Fictif SA	AN	20250101	A nouveaux	11758,55	0,00	AA	20250106	20250131		
+401000	Fournisseurs	AN	A-nouveaux	1	20250101	F0003	Négoce Mirabeau SARL	AN	20250101	A nouveaux	15918,61	0,00	AA	20250203	20250131		
+401000	Fournisseurs	AN	A-nouveaux	1	20250101	F0004	Cœur de Pré-Vert SAS	AN	20250101	A nouveaux	6009,84	0,00	AA	20250204	20250131		
+401000	Fournisseurs	AN	A-nouveaux	1	20250101	F0005	Comptoir des Lilas SARL	AN	20250101	A nouveaux	6755,35	0,00	AA	20250122	20250131		
+215400	Matériel industriel	AN	A-nouveaux	1	20250101			AN	20250101	A nouveaux	0,00	6400,00			20250131		
+218200	Matériel de transport	AN	A-nouveaux	1	20250101			AN	20250101	A nouveaux	0,00	2800,00			20250131		
+218300	Matériel de bureau et informatique	AN	A-nouveaux	1	20250101			AN	20250101	A nouveaux	0,00	960,00			20250131		
+281540	Amortissements du matériel industriel	AN	A-nouveaux	1	20250101			AN	20250101	A nouveaux	2400,00	0,00			20250131		
+281820	Amortissements du matériel de transport	AN	A-nouveaux	1	20250101			AN	20250101	A nouveaux	1120,00	0,00			20250131		
+281830	Amortissements du matériel de bureau	AN	A-nouveaux	1	20250101			AN	20250101	A nouveaux	480,00	0,00			20250131		
+370000	Stocks de marchandises	AN	A-nouveaux	1	20250101			AN	20250101	A nouveaux	0,00	12000,00			20250131		
+512100	Banque Alpha	AN	A-nouveaux	1	20250101			AN	20250101	A nouveaux	0,00	6800,00			20250131		
+512200	Banque Bêta	AN	A-nouveaux	1	20250101			AN	20250101	A nouveaux	0,00	2560,00			20250131		
+512300	Banque Gamma	AN	A-nouveaux	1	20250101			AN	20250101	A nouveaux	0,00	1200,00			20250131		
+164000	Emprunts auprès des établissements de crédit	AN	A-nouveaux	1	20250101			AN	20250101	A nouveaux	9600,00	0,00			20250131		
+445510	TVA à décaisser	AN	A-nouveaux	1	20250101			AN	20250101	A nouveaux	3360,00	0,00			20250131		
+431000	Sécurité sociale	AN	A-nouveaux	1	20250101			AN	20250101	A nouveaux	1880,00	0,00			20250131		
+101300	Capital souscrit appelé versé	AN	A-nouveaux	1	20250101			AN	20250101	A nouveaux	4000,00	0,00			20250131		
+106100	Réserve légale	AN	A-nouveaux	1	20250101			AN	20250101	A nouveaux	400,00	0,00			20250131		
+120000	Résultat de l'exercice (bénéfice)	AN	A-nouveaux	1	20250101			AN	20250101	A nouveaux	3600,00	0,00			20250131		
+106800	Autres réserves	AN	A-nouveaux	1	20250101			AN	20250101	A nouveaux	0,00	14355,08			20250131		
+613200	Locations immobilières	AC	Journal des achats	2	20250102			LOY-2025-01	20250102	Loyer 01/2025 entrepôt	0,00	240,00			20250131		
+445660	TVA déductible sur autres biens et services	AC	Journal des achats	2	20250102			LOY-2025-01	20250102	Loyer 01/2025 entrepôt	0,00	48,00			20250131		
+401000	Fournisseurs	AC	Journal des achats	2	20250102	F0002	SCI des Entrepôts Fictifs	LOY-2025-01	20250102	Loyer 01/2025 entrepôt	288,00	0,00	AA	20250107	20250131		
+512200	Banque Bêta	BQ2	Banque Bêta	3	20250103			RC2500001	20250103	Règlement Société Bœuf & Cie SARL FA2400001	0,00	1168,42			20250131		
+411000	Clients	BQ2	Banque Bêta	3	20250103	C0002	Société Bœuf & Cie SARL	RC2500001	20250103	Règlement Société Bœuf & Cie SARL FA2400001	1168,42	0,00	AA	20250103	20250131		
+164000	Emprunts auprès des établissements de crédit	BQ1	Banque Alpha	4	20250106			ECH-2025-01	20250106	Échéance emprunt Banque Alpha	0,00	160,00			20250131		
+661100	Intérêts des emprunts et dettes	BQ1	Banque Alpha	4	20250106			ECH-2025-01	20250106	Échéance emprunt Banque Alpha	0,00	32,00			20250131		
+512100	Banque Alpha	BQ1	Banque Alpha	4	20250106			ECH-2025-01	20250106	Échéance emprunt Banque Alpha	192,00	0,00			20250131		
+411000	Clients	VT	Journal des ventes	5	20250106	C0010	Atelier Bœuf & Cie 2 SAS	FA2500001	20250106	Facture FA2500001 Atelier Bœuf & Cie 2 SAS	0,00	511,98	AA	20250217	20250131		
+707000	Ventes de marchandises	VT	Journal des ventes	5	20250106			FA2500001	20250106	Facture FA2500001 Atelier Bœuf & Cie 2 SAS	426,65	0,00			20250131		
+445710	TVA collectée	VT	Journal des ventes	5	20250106			FA2500001	20250106	Facture FA2500001 Atelier Bœuf & Cie 2 SAS	85,33	0,00			20250131		
+401000	Fournisseurs	BQ1	Banque Alpha	6	20250106	F0001	Grossiste Central Fictif SA	VIR2500001	20250106	Virement Grossiste Central Fictif SA F0001-241366	0,00	11758,55	AA	20250106	20250131		
+512100	Banque Alpha	BQ1	Banque Alpha	6	20250106			VIR2500001	20250106	Virement Grossiste Central Fictif SA F0001-241366	11758,55	0,00			20250131		
+401000	Fournisseurs	BQ1	Banque Alpha	7	20250107	F0002	SCI des Entrepôts Fictifs	VIR2500002	20250107	Virement SCI des Entrepôts Fictifs LOY-2025-01	0,00	288,00	AA	20250107	20250131		
+512100	Banque Alpha	BQ1	Banque Alpha	7	20250107			VIR2500002	20250107	Virement SCI des Entrepôts Fictifs LOY-2025-01	288,00	0,00			20250131		
+411000	Clients	VT	Journal des ventes	8	20250110	C0008	Atelier de la Forêt SAS	FA2500002	20250110	Facture FA2500002 Atelier de la Forêt SAS	0,00	126,52	AC	20250313	20250131		
+707000	Ventes de marchandises	VT	Journal des ventes	8	20250110			FA2500002	20250110	Facture FA2500002 Atelier de la Forêt SAS	105,43	0,00			20250131		
+445710	TVA collectée	VT	Journal des ventes	8	20250110			FA2500002	20250110	Facture FA2500002 Atelier de la Forêt SAS	21,09	0,00			20250131		
+512200	Banque Bêta	BQ2	Banque Bêta	9	20250114			RC2500002	20250114	Règlement Atelier Bœuf & Cie SAS FA2400004	0,00	126,49			20250131		
+411000	Clients	BQ2	Banque Bêta	9	20250114	C0004	Atelier Bœuf & Cie SAS	RC2500002	20250114	Règlement Atelier Bœuf & Cie SAS FA2400004	126,49	0,00	AA	20250114	20250131		
+512100	Banque Alpha	BQ1	Banque Alpha	10	20250114			RC2500003	20250114	Règlement Atelier de la Forêt SAS FA2400007	0,00	1008,38			20250131		
+411000	Clients	BQ1	Banque Alpha	10	20250114	C0008	Atelier de la Forêt SAS	RC2500003	20250114	Règlement Atelier de la Forêt SAS FA2400007	1008,38	0,00	AA	20250114	20250131		
+431000	Sécurité sociale	BQ1	Banque Alpha	11	20250115			PRL-2025-01-431000	20250115	Cotisations URSSAF	0,00	1880,00			20250131		
+512100	Banque Alpha	BQ1	Banque Alpha	11	20250115			PRL-2025-01-431000	20250115	Cotisations URSSAF	1880,00	0,00			20250131		
+411000	Clients	VT	Journal des ventes	12	20250115	C0001	Boutique Lafontaine SNC	FA2500003	20250115	Facture FA2500003 Boutique Lafontaine SNC	0,00	13503,48			20250131		
+707000	Ventes de marchandises	VT	Journal des ventes	12	20250115			FA2500003	20250115	Facture FA2500003 Boutique Lafontaine SNC	11252,90	0,00			20250131		
+445710	TVA collectée	VT	Journal des ventes	12	20250115			FA2500003	20250115	Facture FA2500003 Boutique Lafontaine SNC	2250,58	0,00			20250131		
+445510	TVA à décaisser	BQ1	Banque Alpha	13	20250120			PRL-2025-01-445510	20250120	Paiement TVA	0,00	3360,00			20250131		
+512100	Banque Alpha	BQ1	Banque Alpha	13	20250120			PRL-2025-01-445510	20250120	Paiement TVA	3360,00	0,00			20250131		
+512100	Banque Alpha	BQ1	Banque Alpha	14	20250120			RC2500004	20250120	Règlement Atelier du Moulin SNC FA2400006	0,00	1314,78			20250131		
+411000	Clients	BQ1	Banque Alpha	14	20250120	C0007	Atelier du Moulin SNC	RC2500004	20250120	Règlement Atelier du Moulin SNC FA2400006	1314,78	0,00	AA	20250120	20250131		
+512200	Banque Bêta	BQ2	Banque Bêta	15	20250121			RC2500005	20250121	Règlement Atelier Bœuf & Cie SAS FA2400005	0,00	965,78			20250131		
+411000	Clients	BQ2	Banque Bêta	15	20250121	C0004	Atelier Bœuf & Cie SAS	RC2500005	20250121	Règlement Atelier Bœuf & Cie SAS FA2400005	965,78	0,00	AB	20250121	20250131		
+411000	Clients	VT	Journal des ventes	16	20250122	C0003	Établissements du Littoral EURL	FA2500004	20250122	Facture FA2500004 Établissements du Littoral EURL	0,00	2203,58	AC	20250318	20250131		
+707000	Ventes de marchandises	VT	Journal des ventes	16	20250122			FA2500004	20250122	Facture FA2500004 Établissements du Littoral EURL	1836,32	0,00			20250131		
+445710	TVA collectée	VT	Journal des ventes	16	20250122			FA2500004	20250122	Facture FA2500004 Établissements du Littoral EURL	367,26	0,00			20250131		
+401000	Fournisseurs	BQ1	Banque Alpha	17	20250122	F0005	Comptoir des Lilas SARL	VIR2500003	20250122	Virement Comptoir des Lilas SARL F0005-247726	0,00	6755,35	AA	20250122	20250131		
+512100	Banque Alpha	BQ1	Banque Alpha	17	20250122			VIR2500003	20250122	Virement Comptoir des Lilas SARL F0005-247726	6755,35	0,00			20250131		
+512100	Banque Alpha	BQ1	Banque Alpha	18	20250123			RC2500006	20250123	Règlement Établissements du Littoral EURL FA2400003	0,00	2020,63			20250131		
+411000	Clients	BQ1	Banque Alpha	18	20250123	C0003	Établissements du Littoral EURL	RC2500006	20250123	Règlement Établissements du Littoral EURL FA2400003	2020,63	0,00	AB	20250123	20250131		
+411000	Clients	VT	Journal des ventes	19	20250127	C0001	Boutique Lafontaine SNC	FA2500005	20250127	Facture FA2500005 Boutique Lafontaine SNC	0,00	1764,68	AA	20250327	20250131		
+707000	Ventes de marchandises	VT	Journal des ventes	19	20250127			FA2500005	20250127	Facture FA2500005 Boutique Lafontaine SNC	1470,57	0,00			20250131		
+445710	TVA collectée	VT	Journal des ventes	19	20250127			FA2500005	20250127	Facture FA2500005 Boutique Lafontaine SNC	294,11	0,00			20250131		
+607000	Achats de marchandises	AC	Journal des achats	20	20250128			F0001-2552798	20250128	Facture F0001-2552798 Grossiste Central Fictif SA	0,00	20559,90			20250131		
+445660	TVA déductible sur autres biens et services	AC	Journal des achats	20	20250128			F0001-2552798	20250128	Facture F0001-2552798 Grossiste Central Fictif SA	0,00	4111,98			20250131		
+401000	Fournisseurs	AC	Journal des achats	20	20250128	F0001	Grossiste Central Fictif SA	F0001-2552798	20250128	Facture F0001-2552798 Grossiste Central Fictif SA	24671,88	0,00	AB	20250207	20250131		
+512100	Banque Alpha	BQ1	Banque Alpha	21	20250129			RC2500007	20250129	Règlement Atelier de la Forêt SAS FA2400008	0,00	9517,93			20250131		
+411000	Clients	BQ1	Banque Alpha	21	20250129	C0008	Atelier de la Forêt SAS	RC2500007	20250129	Règlement Atelier de la Forêt SAS FA2400008	9517,93	0,00	AB	20250129	20250131		
+627000	Services bancaires et assimilés	BQ1	Banque Alpha	22	20250131			FRAIS-2025-01	20250131	Frais bancaires	0,00	38,46			20250131		
+512100	Banque Alpha	BQ1	Banque Alpha	22	20250131			FRAIS-2025-01	20250131	Frais bancaires	38,46	0,00			20250131		
+627000	Services bancaires et assimilés	BQ2	Banque Bêta	23	20250131			FRAIS-2025-01	20250131	Frais bancaires	0,00	34,48			20250131		
+512200	Banque Bêta	BQ2	Banque Bêta	23	20250131			FRAIS-2025-01	20250131	Frais bancaires	34,48	0,00			20250131		
+641100	Salaires, appointements	OD	Opérations diverses	24	20250131			PAIE-2025-01	20250131	Salaires 01/2025	0,00	3072,00			20250131		
+645100	Cotisations à l'URSSAF	OD	Opérations diverses	24	20250131			PAIE-2025-01	20250131	Salaires 01/2025	0,00	1290,24			20250131		
+421000	Personnel - rémunérations dues	OD	Opérations diverses	24	20250131			PAIE-2025-01	20250131	Salaires 01/2025	2396,16	0,00			20250131		
+431000	Sécurité sociale	OD	Opérations diverses	24	20250131			PAIE-2025-01	20250131	Salaires 01/2025	1966,08	0,00			20250131		
+421000	Personnel - rémunérations dues	BQ1	Banque Alpha	25	20250131			SAL-2025-01	20250131	Virement salaires 01/2025	0,00	2396,16			20250131		
+512100	Banque Alpha	BQ1	Banque Alpha	25	20250131			SAL-2025-01	20250131	Virement salaires 01/2025	2396,16	0,00			20250131		
+613200	Locations immobilières	AC	Journal des achats	26	20250203			LOY-2025-02	20250203	Loyer 02/2025 entrepôt	0,00	240,00			20250228		
+445660	TVA déductible sur autres biens et services	AC	Journal des achats	26	20250203			LOY-2025-02	20250203	Loyer 02/2025 entrepôt	0,00	48,00			20250228		
+401000	Fournisseurs	AC	Journal des achats	26	20250203	F0002	SCI des Entrepôts Fictifs	LOY-2025-02	20250203	Loyer 02/2025 entrepôt	288,00	0,00	AB	20250210	20250228		
+411000	Clients	VT	Journal des ventes	27	20250203	C0001	Boutique Lafontaine SNC	FA2500006	20250203	Facture FA2500006 Boutique Lafontaine SNC	0,00	16645,56			20250228		
+707000	Ventes de marchandises	VT	Journal des ventes	27	20250203			FA2500006	20250203	Facture FA2500006 Boutique Lafontaine SNC	13871,30	0,00			20250228		
+445710	TVA collectée	VT	Journal des ventes	27	20250203			FA2500006	20250203	Facture FA2500006 Boutique Lafontaine SNC	2774,26	0,00			20250228		
+401000	Fournisseurs	BQ1	Banque Alpha	28	20250203	F0003	Négoce Mirabeau SARL	VIR2500004	20250203	Virement Négoce Mirabeau SARL F0003-247321	0,00	15918,61	AA	20250203	20250228		
+512100	Banque Alpha	BQ1	Banque Alpha	28	20250203			VIR2500004	20250203	Virement Négoce Mirabeau SARL F0003-247321	15918,61	0,00			20250228		
+401000	Fournisseurs	BQ2	Banque Bêta	29	20250204	F0004	Cœur de Pré-Vert SAS	VIR2500005	20250204	Virement Cœur de Pré-Vert SAS F0004-249902	0,00	6009,84	AA	20250204	20250228		
+512200	Banque Bêta	BQ2	Banque Bêta	29	20250204			VIR2500005	20250204	Virement Cœur de Pré-Vert SAS F0004-249902	6009,84	0,00			20250228		
+164000	Emprunts auprès des établissements de crédit	BQ1	Banque Alpha	30	20250205			ECH-2025-02	20250205	Échéance emprunt Banque Alpha	0,00	160,00			20250228		
+661100	Intérêts des emprunts et dettes	BQ1	Banque Alpha	30	20250205			ECH-2025-02	20250205	Échéance emprunt Banque Alpha	0,00	31,47			20250228		
+512100	Banque Alpha	BQ1	Banque Alpha	30	20250205			ECH-2025-02	20250205	Échéance emprunt Banque Alpha	191,47	0,00			20250228		
+401000	Fournisseurs	BQ1	Banque Alpha	31	20250207	F0001	Grossiste Central Fictif SA	VIR2500006	20250207	Virement Grossiste Central Fictif SA F0001-2552798	0,00	24671,88	AB	20250207	20250228		
+512100	Banque Alpha	BQ1	Banque Alpha	31	20250207			VIR2500006	20250207	Virement Grossiste Central Fictif SA F0001-2552798	24671,88	0,00			20250228		
+607000	Achats de marchandises	AC	Journal des achats	32	20250210			F0003-2511268	20250210	Facture F0003-2511268 Négoce Mirabeau SARL	0,00	3788,15			20250228		
+445660	TVA déductible sur autres biens et services	AC	Journal des achats	32	20250210			F0003-2511268	20250210	Facture F0003-2511268 Négoce Mirabeau SARL	0,00	757,63			20250228		
+401000	Fournisseurs	AC	Journal des achats	32	20250210	F0003	Négoce Mirabeau SARL	F0003-2511268	20250210	Facture F0003-2511268 Négoce Mirabeau SARL	4545,78	0,00	AB	20250321	20250228		
+401000	Fournisseurs	BQ1	Banque Alpha	33	20250210	F0002	SCI des Entrepôts Fictifs	VIR2500007	20250210	Virement SCI des Entrepôts Fictifs LOY-2025-02	0,00	288,00	AB	20250210	20250228		
+512100	Banque Alpha	BQ1	Banque Alpha	33	20250210			VIR2500007	20250210	Virement SCI des Entrepôts Fictifs LOY-2025-02	288,00	0,00			20250228		
+607000	Achats de marchandises	AC	Journal des achats	34	20250211			F0005-2516293	20250211	Facture F0005-2516293 Comptoir des Lilas SARL	0,00	200,55			20250228		
+445660	TVA déductible sur autres biens et services	AC	Journal des achats	34	20250211			F0005-2516293	20250211	Facture F0005-2516293 Comptoir des Lilas SARL	0,00	40,11			20250228		
+401000	Fournisseurs	AC	Journal des achats	34	20250211	F0005	Comptoir des Lilas SARL	F0005-2516293	20250211	Facture F0005-2516293 Comptoir des Lilas SARL	240,66	0,00	AB	20250324	20250228		
+411000	Clients	VT	Journal des ventes	35	20250212	C0005	Atelier Grand Large SNC	FA2500007	20250212	Facture FA2500007 Atelier Grand Large SNC	0,00	1890,13	AA	20250317	20250228		
+707000	Ventes de marchandises	VT	Journal des ventes	35	20250212			FA2500007	20250212	Facture FA2500007 Atelier Grand Large SNC	1575,11	0,00			20250228		
+445710	TVA collectée	VT	Journal des ventes	35	20250212			FA2500007	20250212	Facture FA2500007 Atelier Grand Large SNC	315,02	0,00			20250228		
+607000	Achats de marchandises	AC	Journal des achats	36	20250212			F0006-2582130	20250212	Facture F0006-2582130 Pacific Trading Co (fictif)	0,00	13107,15			20250228	14155,72	USD
+401000	Fournisseurs	AC	Journal des achats	36	20250212	F0006	Pacific Trading Co (fictif)	F0006-2582130	20250212	Facture F0006-2582130 Pacific Trading Co (fictif)	13107,15	0,00	AA	20250415	20250228	14155,72	USD
+401000	Fournisseurs	BQ2	Banque Bêta	37	20250213	F0004	Cœur de Pré-Vert SAS	VIR2500008	20250213	Virement Cœur de Pré-Vert SAS F0004-249902	0,00	6009,84			20250228		
+512200	Banque Bêta	BQ2	Banque Bêta	37	20250213			VIR2500008	20250213	Virement Cœur de Pré-Vert SAS F0004-249902	6009,84	0,00			20250228		
+607000	Achats de marchandises	AC	Journal des achats	38	20250214			F0003-2527192	20250214	Facture F0003-2527192 Négoce Mirabeau SARL	0,00	675,14			20250228		
+445660	TVA déductible sur autres biens et services	AC	Journal des achats	38	20250214			F0003-2527192	20250214	Facture F0003-2527192 Négoce Mirabeau SARL	0,00	135,03			20250228		
+401000	Fournisseurs	AC	Journal des achats	38	20250214	F0003	Négoce Mirabeau SARL	F0003-2527192	20250214	Facture F0003-2527192 Négoce Mirabeau SARL	810,17	0,00	AC	20250325	20250228		
+431000	Sécurité sociale	BQ1	Banque Alpha	39	20250217			URS-2025-01	20250217	Cotisations URSSAF	0,00	1966,08			20250228		
+512100	Banque Alpha	BQ1	Banque Alpha	39	20250217			URS-2025-01	20250217	Cotisations URSSAF	1966,08	0,00			20250228		
+512100	Banque Alpha	BQ1	Banque Alpha	40	20250217			RC2500008	20250217	Règlement Établissements du Littoral EURL FA2400002	0,00	4084,86			20250228		
+411000	Clients	BQ1	Banque Alpha	40	20250217	C0003	Établissements du Littoral EURL	RC2500008	20250217	Règlement Établissements du Littoral EURL FA2400002	4084,86	0,00	AA	20250217	20250228		
+512200	Banque Bêta	BQ2	Banque Bêta	41	20250217			RC2500009	20250217	Règlement Atelier Bœuf & Cie 2 SAS FA2500001	0,00	511,98			20250228		
+411000	Clients	BQ2	Banque Bêta	41	20250217	C0010	Atelier Bœuf & Cie 2 SAS	RC2500009	20250217	Règlement Atelier Bœuf & Cie 2 SAS FA2500001	511,98	0,00	AA	20250217	20250228		
+445710	TVA collectée	OD	Opérations diverses	42	20250220			CA3-2025-01	20250220	Déclaration de TVA 01/2025	0,00	3018,37			20250228		
+445660	TVA déductible sur autres biens et services	OD	Opérations diverses	42	20250220			CA3-2025-01	20250220	Déclaration de TVA 01/2025	4159,98	0,00			20250228		
+445670	Crédit de TVA à reporter	OD	Opérations diverses	42	20250220			CA3-2025-01	20250220	Déclaration de TVA 01/2025	0,00	1141,61			20250228		
+607000	Achats de marchandises	AC	Journal des achats	43	20250221			F0001-2594206	20250221	Facture F0001-2594206 Grossiste Central Fictif SA	0,00	3300,21			20250228		
+445660	TVA déductible sur autres biens et services	AC	Journal des achats	43	20250221			F0001-2594206	20250221	Facture F0001-2594206 Grossiste Central Fictif SA	0,00	660,04			20250228		
+401000	Fournisseurs	AC	Journal des achats	43	20250221	F0001	Grossiste Central Fictif SA	F0001-2594206	20250221	Facture F0001-2594206 Grossiste Central Fictif SA	3960,25	0,00	AC	20250303	20250228		
+512200	Banque Bêta	BQ2	Banque Bêta	44	20250226			RC2500010	20250226	Règlement Atelier Bœuf & Cie 2 SAS FA2500001	0,00	511,98			20250228		
+411000	Clients	BQ2	Banque Bêta	44	20250226	C0010	Atelier Bœuf & Cie 2 SAS	RC2500010	20250226	Règlement Atelier Bœuf & Cie 2 SAS FA2500001	511,98	0,00			20250228		
+627000	Services bancaires et assimilés	OD	Opérations diverses	45	20250228			GAM-2025-02	20250228	Frais de tenue de compte Banque Gamma 18 €	0,00	18,00			20250228		
+512300	Banque Gamma	OD	Opérations diverses	45	20250228			GAM-2025-02	20250228	Frais de tenue de compte Banque Gamma 18 €	18,00	0,00			20250228		
+627000	Services bancaires et assimilés	BQ1	Banque Alpha	46	20250228			FRAIS-2025-02	20250228	Frais bancaires	0,00	29,04			20250228		
+512100	Banque Alpha	BQ1	Banque Alpha	46	20250228			FRAIS-2025-02	20250228	Frais bancaires	29,04	0,00			20250228		
+627000	Services bancaires et assimilés	BQ2	Banque Bêta	47	20250228			FRAIS-2025-02	20250228	Frais bancaires	0,00	64,38			20250228		
+512200	Banque Bêta	BQ2	Banque Bêta	47	20250228			FRAIS-2025-02	20250228	Frais bancaires	64,38	0,00			20250228		
+641100	Salaires, appointements	OD	Opérations diverses	48	20250228			PAIE-2025-02	20250228	Salaires 02/2025	0,00	2943,00			20250228		
+645100	Cotisations à l'URSSAF	OD	Opérations diverses	48	20250228			PAIE-2025-02	20250228	Salaires 02/2025	0,00	1236,06			20250228		
+421000	Personnel - rémunérations dues	OD	Opérations diverses	48	20250228			PAIE-2025-02	20250228	Salaires 02/2025	2295,54	0,00			20250228		
+431000	Sécurité sociale	OD	Opérations diverses	48	20250228			PAIE-2025-02	20250228	Salaires 02/2025	1883,52	0,00			20250228		
+421000	Personnel - rémunérations dues	BQ1	Banque Alpha	49	20250228			SAL-2025-02	20250228	Virement salaires 02/2025	0,00	2295,54			20250228		
+512100	Banque Alpha	BQ1	Banque Alpha	49	20250228			SAL-2025-02	20250228	Virement salaires 02/2025	2295,54	0,00			20250228		
+613200	Locations immobilières	AC	Journal des achats	50	20250303			LOY-2025-03	20250303	Loyer 03/2025 entrepôt	0,00	240,00			20250331		
+445660	TVA déductible sur autres biens et services	AC	Journal des achats	50	20250303			LOY-2025-03	20250303	Loyer 03/2025 entrepôt	0,00	48,00			20250331		
+401000	Fournisseurs	AC	Journal des achats	50	20250303	F0002	SCI des Entrepôts Fictifs	LOY-2025-03	20250303	Loyer 03/2025 entrepôt	288,00	0,00	AC	20250310	20250331		
+401000	Fournisseurs	BQ1	Banque Alpha	51	20250303	F0001	Grossiste Central Fictif SA	VIR2500009	20250303	Virement Grossiste Central Fictif SA F0001-2594206	0,00	3960,25	AC	20250303	20250331		
+512100	Banque Alpha	BQ1	Banque Alpha	51	20250303			VIR2500009	20250303	Virement Grossiste Central Fictif SA F0001-2594206	3960,25	0,00			20250331		
+411000	Clients	VT	Journal des ventes	52	20250304	C0008	Atelier de la Forêt SAS	FA2500008	20250304	Facture FA2500008 Atelier de la Forêt SAS	0,00	127,82	AD	20250506	20250331		
+707000	Ventes de marchandises	VT	Journal des ventes	52	20250304			FA2500008	20250304	Facture FA2500008 Atelier de la Forêt SAS	106,52	0,00			20250331		
+445710	TVA collectée	VT	Journal des ventes	52	20250304			FA2500008	20250304	Facture FA2500008 Atelier de la Forêt SAS	21,30	0,00			20250331		
+164000	Emprunts auprès des établissements de crédit	BQ1	Banque Alpha	53	20250305			ECH-2025-03	20250305	Échéance emprunt Banque Alpha	0,00	160,00			20250331		
+661100	Intérêts des emprunts et dettes	BQ1	Banque Alpha	53	20250305			ECH-2025-03	20250305	Échéance emprunt Banque Alpha	0,00	30,93			20250331		
+512100	Banque Alpha	BQ1	Banque Alpha	53	20250305			ECH-2025-03	20250305	Échéance emprunt Banque Alpha	190,93	0,00			20250331		
+607000	Achats de marchandises	AC	Journal des achats	54	20250306			F0001-2543645	20250306	Facture F0001-2543645 Grossiste Central Fictif SA	0,00	133,86			20250331		
+445660	TVA déductible sur autres biens et services	AC	Journal des achats	54	20250306			F0001-2543645	20250306	Facture F0001-2543645 Grossiste Central Fictif SA	0,00	26,77			20250331		
+401000	Fournisseurs	AC	Journal des achats	54	20250306	F0001	Grossiste Central Fictif SA	F0001-2543645	20250306	Facture F0001-2543645 Grossiste Central Fictif SA	160,63	0,00	AD	20250317	20250331		
+411000	Clients	VT	Journal des ventes	55	20250307	C0010	Atelier Bœuf & Cie 2 SAS	FA2500009	20250307	Facture FA2500009 Atelier Bœuf & Cie 2 SAS	0,00	10191,38	AB	20250414	20250331		
+707000	Ventes de marchandises	VT	Journal des ventes	55	20250307			FA2500009	20250307	Facture FA2500009 Atelier Bœuf & Cie 2 SAS	8492,82	0,00			20250331		
+445710	TVA collectée	VT	Journal des ventes	55	20250307			FA2500009	20250307	Facture FA2500009 Atelier Bœuf & Cie 2 SAS	1698,56	0,00			20250331		
+401000	Fournisseurs	BQ1	Banque Alpha	56	20250310	F0002	SCI des Entrepôts Fictifs	VIR2500010	20250310	Virement SCI des Entrepôts Fictifs LOY-2025-03	0,00	288,00	AC	20250310	20250331		
+512100	Banque Alpha	BQ1	Banque Alpha	56	20250310			VIR2500010	20250310	Virement SCI des Entrepôts Fictifs LOY-2025-03	288,00	0,00			20250331		
+607000	Achats de marchandises	AC	Journal des achats	57	20250312			F0006-2556774	20250312	Facture F0006-2556774 Pacific Trading Co (fictif)	0,00	6770,78			20250331	7312,44	USD
+401000	Fournisseurs	AC	Journal des achats	57	20250312	F0006	Pacific Trading Co (fictif)	F0006-2556774	20250312	Facture F0006-2556774 Pacific Trading Co (fictif)	6770,78	0,00	AB	20250505	20250331	7312,44	USD
+512100	Banque Alpha	BQ1	Banque Alpha	58	20250313			RC2500011	20250313	Règlement Atelier de la Forêt SAS FA2500002	0,00	126,52			20250331		
+411000	Clients	BQ1	Banque Alpha	58	20250313	C0008	Atelier de la Forêt SAS	RC2500011	20250313	Règlement Atelier de la Forêt SAS FA2500002	126,52	0,00	AC	20250313	20250331		
+431000	Sécurité sociale	BQ1	Banque Alpha	59	20250317			URS-2025-02	20250317	Cotisations URSSAF	0,00	1883,52			20250331		
+512100	Banque Alpha	BQ1	Banque Alpha	59	20250317			URS-2025-02	20250317	Cotisations URSSAF	1883,52	0,00			20250331		
+607000	Achats de marchandises	AC	Journal des achats	60	20250317			F0005-2566180	20250317	Facture F0005-2566180 Comptoir des Lilas SARL	0,00	4026,58			20250331		
+445660	TVA déductible sur autres biens et services	AC	Journal des achats	60	20250317			F0005-2566180	20250317	Facture F0005-2566180 Comptoir des Lilas SARL	0,00	805,32			20250331		
+401000	Fournisseurs	AC	Journal des achats	60	20250317	F0005	Comptoir des Lilas SARL	F0005-2566180	20250317	Facture F0005-2566180 Comptoir des Lilas SARL	4831,90	0,00	AC	20250422	20250331		
+512100	Banque Alpha	BQ1	Banque Alpha	61	20250317			RC2500012	20250317	Règlement Atelier Grand Large SNC FA2500007	0,00	1890,13			20250331		
+411000	Clients	BQ1	Banque Alpha	61	20250317	C0005	Atelier Grand Large SNC	RC2500012	20250317	Règlement Atelier Grand Large SNC FA2500007	1890,13	0,00	AA	20250317	20250331		
+401000	Fournisseurs	BQ1	Banque Alpha	62	20250317	F0001	Grossiste Central Fictif SA	VIR2500011	20250317	Virement Grossiste Central Fictif SA F0001-2543645	0,00	160,63	AD	20250317	20250331		
+512100	Banque Alpha	BQ1	Banque Alpha	62	20250317			VIR2500011	20250317	Virement Grossiste Central Fictif SA F0001-2543645	160,63	0,00			20250331		
+411000	Clients	VT	Journal des ventes	63	20250318	C0002	Société Bœuf & Cie SARL	FA2500010	20250318	Facture FA2500010 Société Bœuf & Cie SARL	0,00	1282,67	AB	20250417	20250331		
+707000	Ventes de marchandises	VT	Journal des ventes	63	20250318			FA2500010	20250318	Facture FA2500010 Société Bœuf & Cie SARL	1068,89	0,00			20250331		
+445710	TVA collectée	VT	Journal des ventes	63	20250318			FA2500010	20250318	Facture FA2500010 Société Bœuf & Cie SARL	213,78	0,00			20250331		
+512100	Banque Alpha	BQ1	Banque Alpha	64	20250318			RC2500013	20250318	Règlement Établissements du Littoral EURL FA2500004	0,00	2203,58			20250331		
+411000	Clients	BQ1	Banque Alpha	64	20250318	C0003	Établissements du Littoral EURL	RC2500013	20250318	Règlement Établissements du Littoral EURL FA2500004	2203,58	0,00	AC	20250318	20250331		
+445710	TVA collectée	OD	Opérations diverses	65	20250320			CA3-2025-02	20250320	Déclaration de TVA 02/2025	0,00	3089,28			20250331		
+445660	TVA déductible sur autres biens et services	OD	Opérations diverses	65	20250320			CA3-2025-02	20250320	Déclaration de TVA 02/2025	1640,81	0,00			20250331		
+445510	TVA à décaisser	OD	Opérations diverses	65	20250320			CA3-2025-02	20250320	Déclaration de TVA 02/2025	1448,47	0,00			20250331		
+445510	TVA à décaisser	BQ1	Banque Alpha	66	20250320			TVA-2025-02	20250320	Paiement TVA 02/2025	0,00	1448,47			20250331		
+512100	Banque Alpha	BQ1	Banque Alpha	66	20250320			TVA-2025-02	20250320	Paiement TVA 02/2025	1448,47	0,00			20250331		
+401000	Fournisseurs	BQ1	Banque Alpha	67	20250321	F0003	Négoce Mirabeau SARL	VIR2500012	20250321	Virement Négoce Mirabeau SARL F0003-2511268	0,00	4545,78	AB	20250321	20250331		
+512100	Banque Alpha	BQ1	Banque Alpha	67	20250321			VIR2500012	20250321	Virement Négoce Mirabeau SARL F0003-2511268	4545,78	0,00			20250331		
+512100	Banque Alpha	BQ1	Banque Alpha	68	20250324			RC2500014	20250324	Règlement Boutique Lafontaine SNC FA2500003	0,00	13503,48			20250331		
+411000	Clients	BQ1	Banque Alpha	68	20250324	C0001	Boutique Lafontaine SNC	RC2500014	20250324	Règlement Boutique Lafontaine SNC FA2500003	13503,48	0,00			20250331		
+401000	Fournisseurs	BQ1	Banque Alpha	69	20250324	F0005	Comptoir des Lilas SARL	VIR2500013	20250324	Virement Comptoir des Lilas SARL F0005-2516293	0,00	240,66	AB	20250324	20250331		
+512100	Banque Alpha	BQ1	Banque Alpha	69	20250324			VIR2500013	20250324	Virement Comptoir des Lilas SARL F0005-2516293	240,66	0,00			20250331		
+411000	Clients	VT	Journal des ventes	70	20250325	C0010	Atelier Bœuf & Cie 2 SAS	FA2500011	20250325	Facture FA2500011 Atelier Bœuf & Cie 2 SAS	0,00	171,91	AC	20250502	20250331		
+707000	Ventes de marchandises	VT	Journal des ventes	70	20250325			FA2500011	20250325	Facture FA2500011 Atelier Bœuf & Cie 2 SAS	143,26	0,00			20250331		
+445710	TVA collectée	VT	Journal des ventes	70	20250325			FA2500011	20250325	Facture FA2500011 Atelier Bœuf & Cie 2 SAS	28,65	0,00			20250331		
+607000	Achats de marchandises	AC	Journal des achats	71	20250325			F0001-2592318	20250325	Facture F0001-2592318 Grossiste Central Fictif SA	0,00	544,92			20250331		
+445660	TVA déductible sur autres biens et services	AC	Journal des achats	71	20250325			F0001-2592318	20250325	Facture F0001-2592318 Grossiste Central Fictif SA	0,00	108,98			20250331		
+401000	Fournisseurs	AC	Journal des achats	71	20250325	F0001	Grossiste Central Fictif SA	F0001-2592318	20250325	Facture F0001-2592318 Grossiste Central Fictif SA	653,90	0,00	AE	20250404	20250331		
+401000	Fournisseurs	BQ1	Banque Alpha	72	20250325	F0003	Négoce Mirabeau SARL	VIR2500014	20250325	Virement Négoce Mirabeau SARL F0003-2527192	0,00	810,17	AC	20250325	20250331		
+512100	Banque Alpha	BQ1	Banque Alpha	72	20250325			VIR2500014	20250325	Virement Négoce Mirabeau SARL F0003-2527192	810,17	0,00			20250331		
+512100	Banque Alpha	BQ1	Banque Alpha	73	20250327			RC2500015	20250327	Règlement Boutique Lafontaine SNC FA2500005	0,00	1764,68			20250331		
+411000	Clients	BQ1	Banque Alpha	73	20250327	C0001	Boutique Lafontaine SNC	RC2500015	20250327	Règlement Boutique Lafontaine SNC FA2500005	1764,68	0,00	AA	20250327	20250331		
+627000	Services bancaires et assimilés	BQ1	Banque Alpha	74	20250331			FRAIS-2025-03	20250331	Frais bancaires	0,00	49,14			20250331		
+512100	Banque Alpha	BQ1	Banque Alpha	74	20250331			FRAIS-2025-03	20250331	Frais bancaires	49,14	0,00			20250331		
+627000	Services bancaires et assimilés	BQ2	Banque Bêta	75	20250331			FRAIS-2025-03	20250331	Frais bancaires	0,00	49,84			20250331		
+512200	Banque Bêta	BQ2	Banque Bêta	75	20250331			FRAIS-2025-03	20250331	Frais bancaires	49,84	0,00			20250331		
+641100	Salaires, appointements	OD	Opérations diverses	76	20250331			PAIE-2025-03	20250331	Salaires 03/2025	0,00	3103,00			20250331		
+645100	Cotisations à l'URSSAF	OD	Opérations diverses	76	20250331			PAIE-2025-03	20250331	Salaires 03/2025	0,00	1303,26			20250331		
+421000	Personnel - rémunérations dues	OD	Opérations diverses	76	20250331			PAIE-2025-03	20250331	Salaires 03/2025	2420,34	0,00			20250331		
+431000	Sécurité sociale	OD	Opérations diverses	76	20250331			PAIE-2025-03	20250331	Salaires 03/2025	1985,92	0,00			20250331		
+421000	Personnel - rémunérations dues	BQ1	Banque Alpha	77	20250331			SAL-2025-03	20250331	Virement salaires 03/2025	0,00	2420,34			20250331		
+512100	Banque Alpha	BQ1	Banque Alpha	77	20250331			SAL-2025-03	20250331	Virement salaires 03/2025	2420,34	0,00			20250331		
+613200	Locations immobilières	AC	Journal des achats	78	20250401			LOY-2025-04	20250401	Loyer 04/2025 entrepôt	0,00	240,00			20250430		
+445660	TVA déductible sur autres biens et services	AC	Journal des achats	78	20250401			LOY-2025-04	20250401	Loyer 04/2025 entrepôt	0,00	48,00			20250430		
+401000	Fournisseurs	AC	Journal des achats	78	20250401	F0002	SCI des Entrepôts Fictifs	LOY-2025-04	20250401	Loyer 04/2025 entrepôt	288,00	0,00	AD	20250407	20250430		
+607000	Achats de marchandises	AC	Journal des achats	79	20250402			F0001-2515673	20250402	Facture F0001-2515673 Grossiste Central Fictif SA	0,00	141,67			20250430		
+445660	TVA déductible sur autres biens et services	AC	Journal des achats	79	20250402			F0001-2515673	20250402	Facture F0001-2515673 Grossiste Central Fictif SA	0,00	28,33			20250430		
+401000	Fournisseurs	AC	Journal des achats	79	20250402	F0001	Grossiste Central Fictif SA	F0001-2515673	20250402	Facture F0001-2515673 Grossiste Central Fictif SA	170,00	0,00	AF	20250414	20250430		
+401000	Fournisseurs	BQ1	Banque Alpha	80	20250404	F0001	Grossiste Central Fictif SA	VIR2500015	20250404	Virement Grossiste Central Fictif SA F0001-2592318	0,00	653,90	AE	20250404	20250430		
+512100	Banque Alpha	BQ1	Banque Alpha	80	20250404			VIR2500015	20250404	Virement Grossiste Central Fictif SA F0001-2592318	653,90	0,00			20250430		
+164000	Emprunts auprès des établissements de crédit	BQ1	Banque Alpha	81	20250407			ECH-2025-04	20250407	Échéance emprunt Banque Alpha	0,00	160,00			20250430		
+661100	Intérêts des emprunts et dettes	BQ1	Banque Alpha	81	20250407			ECH-2025-04	20250407	Échéance emprunt Banque Alpha	0,00	30,40			20250430		
+512100	Banque Alpha	BQ1	Banque Alpha	81	20250407			ECH-2025-04	20250407	Échéance emprunt Banque Alpha	190,40	0,00			20250430		
+401000	Fournisseurs	BQ1	Banque Alpha	82	20250407	F0002	SCI des Entrepôts Fictifs	VIR2500016	20250407	Virement SCI des Entrepôts Fictifs LOY-2025-04	0,00	288,00	AD	20250407	20250430		
+512100	Banque Alpha	BQ1	Banque Alpha	82	20250407			VIR2500016	20250407	Virement SCI des Entrepôts Fictifs LOY-2025-04	288,00	0,00			20250430		
+411000	Clients	VT	Journal des ventes	83	20250411	C0010	Atelier Bœuf & Cie 2 SAS	FA2500012	20250411	Facture FA2500012 Atelier Bœuf & Cie 2 SAS	0,00	3515,04			20250430		
+707000	Ventes de marchandises	VT	Journal des ventes	83	20250411			FA2500012	20250411	Facture FA2500012 Atelier Bœuf & Cie 2 SAS	2929,20	0,00			20250430		
+445710	TVA collectée	VT	Journal des ventes	83	20250411			FA2500012	20250411	Facture FA2500012 Atelier Bœuf & Cie 2 SAS	585,84	0,00			20250430		
+411000	Clients	VT	Journal des ventes	84	20250414	C0008	Atelier de la Forêt SAS	FA2500013	20250414	Facture FA2500013 Atelier de la Forêt SAS	0,00	1123,48	AE	20250623	20250430		
+707000	Ventes de marchandises	VT	Journal des ventes	84	20250414			FA2500013	20250414	Facture FA2500013 Atelier de la Forêt SAS	936,23	0,00			20250430		
+445710	TVA collectée	VT	Journal des ventes	84	20250414			FA2500013	20250414	Facture FA2500013 Atelier de la Forêt SAS	187,25	0,00			20250430		
+512200	Banque Bêta	BQ2	Banque Bêta	85	20250414			RC2500016	20250414	Règlement Atelier Bœuf & Cie 2 SAS FA2500009	0,00	10191,38			20250430		
+411000	Clients	BQ2	Banque Bêta	85	20250414	C0010	Atelier Bœuf & Cie 2 SAS	RC2500016	20250414	Règlement Atelier Bœuf & Cie 2 SAS FA2500009	10191,38	0,00	AB	20250414	20250430		
+401000	Fournisseurs	BQ1	Banque Alpha	86	20250414	F0001	Grossiste Central Fictif SA	VIR2500017	20250414	Virement Grossiste Central Fictif SA F0001-2515673	0,00	170,00	AF	20250414	20250430		
+512100	Banque Alpha	BQ1	Banque Alpha	86	20250414			VIR2500017	20250414	Virement Grossiste Central Fictif SA F0001-2515673	170,00	0,00			20250430		
+431000	Sécurité sociale	BQ1	Banque Alpha	87	20250415			URS-2025-03	20250415	Cotisations URSSAF	0,00	1985,92			20250430		
+512100	Banque Alpha	BQ1	Banque Alpha	87	20250415			URS-2025-03	20250415	Cotisations URSSAF	1985,92	0,00			20250430		
+411000	Clients	VT	Journal des ventes	88	20250415	C0004	Atelier Bœuf & Cie SAS	FA2500014	20250415	Facture FA2500014 Atelier Bœuf & Cie SAS	0,00	3404,94	AC	20250606	20250430		
+707000	Ventes de marchandises	VT	Journal des ventes	88	20250415			FA2500014	20250415	Facture FA2500014 Atelier Bœuf & Cie SAS	2837,45	0,00			20250430		
+445710	TVA collectée	VT	Journal des ventes	88	20250415			FA2500014	20250415	Facture FA2500014 Atelier Bœuf & Cie SAS	567,49	0,00			20250430		
+607000	Achats de marchandises	AC	Journal des achats	89	20250415			F0001-2582694	20250415	Facture F0001-2582694 Grossiste Central Fictif SA	0,00	463,83			20250430		
+445660	TVA déductible sur autres biens et services	AC	Journal des achats	89	20250415			F0001-2582694	20250415	Facture F0001-2582694 Grossiste Central Fictif SA	0,00	92,77			20250430		
+401000	Fournisseurs	AC	Journal des achats	89	20250415	F0001	Grossiste Central Fictif SA	F0001-2582694	20250415	Facture F0001-2582694 Grossiste Central Fictif SA	556,60	0,00	AG	20250425	20250430		
+401000	Fournisseurs	BQ2	Banque Bêta	90	20250415	F0006	Pacific Trading Co (fictif)	VIR2500018	20250415	Virement Pacific Trading Co (fictif) F0006-2582130	0,00	13107,15	AA	20250415	20250430	14155,72	USD
+512200	Banque Bêta	BQ2	Banque Bêta	90	20250415			VIR2500018	20250415	Virement Pacific Trading Co (fictif) F0006-2582130	13107,15	0,00			20250430		
+512200	Banque Bêta	BQ2	Banque Bêta	91	20250417			RC2500017	20250417	Règlement Société Bœuf & Cie SARL FA2500010	0,00	1282,67			20250430		
+411000	Clients	BQ2	Banque Bêta	91	20250417	C0002	Société Bœuf & Cie SARL	RC2500017	20250417	Règlement Société Bœuf & Cie SARL FA2500010	1282,67	0,00	AB	20250417	20250430		
+445710	TVA collectée	OD	Opérations diverses	92	20250422			CA3-2025-03	20250422	Déclaration de TVA 03/2025	0,00	1962,29			20250430		
+445660	TVA déductible sur autres biens et services	OD	Opérations diverses	92	20250422			CA3-2025-03	20250422	Déclaration de TVA 03/2025	989,07	0,00			20250430		
+445510	TVA à décaisser	OD	Opérations diverses	92	20250422			CA3-2025-03	20250422	Déclaration de TVA 03/2025	973,22	0,00			20250430		
+445510	TVA à décaisser	BQ1	Banque Alpha	93	20250422			TVA-2025-03	20250422	Paiement TVA 03/2025	0,00	973,22			20250430		
+512100	Banque Alpha	BQ1	Banque Alpha	93	20250422			TVA-2025-03	20250422	Paiement TVA 03/2025	973,22	0,00			20250430		
+401000	Fournisseurs	BQ1	Banque Alpha	94	20250422	F0005	Comptoir des Lilas SARL	VIR2500019	20250422	Virement Comptoir des Lilas SARL F0005-2566180	0,00	4831,90	AC	20250422	20250430		
+512100	Banque Alpha	BQ1	Banque Alpha	94	20250422			VIR2500019	20250422	Virement Comptoir des Lilas SARL F0005-2566180	4831,90	0,00			20250430		
+411000	Clients	VT	Journal des ventes	95	20250424	C0002	Société Bœuf & Cie SARL	FA2500015	20250424	Facture FA2500015 Société Bœuf & Cie SARL	0,00	230,66	AC	20250528	20250430		
+707000	Ventes de marchandises	VT	Journal des ventes	95	20250424			FA2500015	20250424	Facture FA2500015 Société Bœuf & Cie SARL	192,22	0,00			20250430		
+445710	TVA collectée	VT	Journal des ventes	95	20250424			FA2500015	20250424	Facture FA2500015 Société Bœuf & Cie SARL	38,44	0,00			20250430		
+411000	Clients	VT	Journal des ventes	96	20250425	C0009	Entrepôts Rivière SARL	FA2500016	20250425	Facture FA2500016 Entrepôts Rivière SARL	0,00	168,61	AA	20250519	20250430		
+707000	Ventes de marchandises	VT	Journal des ventes	96	20250425			FA2500016	20250425	Facture FA2500016 Entrepôts Rivière SARL	140,51	0,00			20250430		
+445710	TVA collectée	VT	Journal des ventes	96	20250425			FA2500016	20250425	Facture FA2500016 Entrepôts Rivière SARL	28,10	0,00			20250430		
+401000	Fournisseurs	BQ1	Banque Alpha	97	20250425	F0001	Grossiste Central Fictif SA	VIR2500020	20250425	Virement Grossiste Central Fictif SA F0001-2582694	0,00	556,60	AG	20250425	20250430		
+512100	Banque Alpha	BQ1	Banque Alpha	97	20250425			VIR2500020	20250425	Virement Grossiste Central Fictif SA F0001-2582694	556,60	0,00			20250430		
+411000	Clients	VT	Journal des ventes	98	20250429	C0004	Atelier Bœuf & Cie SAS	FA2500017	20250429	Facture FA2500017 Atelier Bœuf & Cie SAS	0,00	224,16	AD	20250616	20250430		
+707000	Ventes de marchandises	VT	Journal des ventes	98	20250429			FA2500017	20250429	Facture FA2500017 Atelier Bœuf & Cie SAS	186,80	0,00			20250430		
+445710	TVA collectée	VT	Journal des ventes	98	20250429			FA2500017	20250429	Facture FA2500017 Atelier Bœuf & Cie SAS	37,36	0,00			20250430		
+627000	Services bancaires et assimilés	BQ1	Banque Alpha	99	20250430			FRAIS-2025-04	20250430	Frais bancaires	0,00	44,86			20250430		
+512100	Banque Alpha	BQ1	Banque Alpha	99	20250430			FRAIS-2025-04	20250430	Frais bancaires	44,86	0,00			20250430		
+627000	Services bancaires et assimilés	BQ2	Banque Bêta	100	20250430			FRAIS-2025-04	20250430	Frais bancaires	0,00	50,57			20250430		
+512200	Banque Bêta	BQ2	Banque Bêta	100	20250430			FRAIS-2025-04	20250430	Frais bancaires	50,57	0,00			20250430		
+641100	Salaires, appointements	OD	Opérations diverses	101	20250430			PAIE-2025-04	20250430	Salaires 04/2025	0,00	2938,00			20250430		
+645100	Cotisations à l'URSSAF	OD	Opérations diverses	101	20250430			PAIE-2025-04	20250430	Salaires 04/2025	0,00	1233,96			20250430		
+421000	Personnel - rémunérations dues	OD	Opérations diverses	101	20250430			PAIE-2025-04	20250430	Salaires 04/2025	2291,64	0,00			20250430		
+431000	Sécurité sociale	OD	Opérations diverses	101	20250430			PAIE-2025-04	20250430	Salaires 04/2025	1880,32	0,00			20250430		
+421000	Personnel - rémunérations dues	BQ1	Banque Alpha	102	20250430			SAL-2025-04	20250430	Virement salaires 04/2025	0,00	2291,64			20250430		
+512100	Banque Alpha	BQ1	Banque Alpha	102	20250430			SAL-2025-04	20250430	Virement salaires 04/2025	2291,64	0,00			20250430		
+613200	Locations immobilières	AC	Journal des achats	103	20250502			LOY-2025-05	20250502	Loyer 05/2025 entrepôt	0,00	240,00			20250531		
+445660	TVA déductible sur autres biens et services	AC	Journal des achats	103	20250502			LOY-2025-05	20250502	Loyer 05/2025 entrepôt	0,00	48,00			20250531		
+401000	Fournisseurs	AC	Journal des achats	103	20250502	F0002	SCI des Entrepôts Fictifs	LOY-2025-05	20250502	Loyer 05/2025 entrepôt	288,00	0,00	AE	20250507	20250531		
+512200	Banque Bêta	BQ2	Banque Bêta	104	20250502			RC2500018	20250502	Règlement Atelier Bœuf & Cie 2 SAS FA2500011	0,00	171,91			20250531		
+411000	Clients	BQ2	Banque Bêta	104	20250502	C0010	Atelier Bœuf & Cie 2 SAS	RC2500018	20250502	Règlement Atelier Bœuf & Cie 2 SAS FA2500011	171,91	0,00	AC	20250502	20250531		
+164000	Emprunts auprès des établissements de crédit	BQ1	Banque Alpha	105	20250505			ECH-2025-05	20250505	Échéance emprunt Banque Alpha	0,00	160,00			20250531		
+661100	Intérêts des emprunts et dettes	BQ1	Banque Alpha	105	20250505			ECH-2025-05	20250505	Échéance emprunt Banque Alpha	0,00	29,87			20250531		
+512100	Banque Alpha	BQ1	Banque Alpha	105	20250505			ECH-2025-05	20250505	Échéance emprunt Banque Alpha	189,87	0,00			20250531		
+607000	Achats de marchandises	AC	Journal des achats	106	20250505			F0001-2519213	20250505	Facture F0001-2519213 Grossiste Central Fictif SA	0,00	16882,61			20250531		
+445660	TVA déductible sur autres biens et services	AC	Journal des achats	106	20250505			F0001-2519213	20250505	Facture F0001-2519213 Grossiste Central Fictif SA	0,00	3376,52			20250531		
+401000	Fournisseurs	AC	Journal des achats	106	20250505	F0001	Grossiste Central Fictif SA	F0001-2519213	20250505	Facture F0001-2519213 Grossiste Central Fictif SA	20259,13	0,00	AH	20250515	20250531		
+401000	Fournisseurs	BQ2	Banque Bêta	107	20250505	F0006	Pacific Trading Co (fictif)	VIR2500021	20250505	Virement Pacific Trading Co (fictif) F0006-2556774	0,00	6770,78	AB	20250505	20250531	7312,44	USD
+512200	Banque Bêta	BQ2	Banque Bêta	107	20250505			VIR2500021	20250505	Virement Pacific Trading Co (fictif) F0006-2556774	6770,78	0,00			20250531		
+512100	Banque Alpha	BQ1	Banque Alpha	108	20250506			RC2500019	20250506	Règlement Atelier de la Forêt SAS FA2500008	0,00	127,82			20250531		
+411000	Clients	BQ1	Banque Alpha	108	20250506	C0008	Atelier de la Forêt SAS	RC2500019	20250506	Règlement Atelier de la Forêt SAS FA2500008	127,82	0,00	AD	20250506	20250531		
+401000	Fournisseurs	BQ1	Banque Alpha	109	20250507	F0002	SCI des Entrepôts Fictifs	VIR2500022	20250507	Virement SCI des Entrepôts Fictifs LOY-2025-05	0,00	288,00	AE	20250507	20250531		
+512100	Banque Alpha	BQ1	Banque Alpha	109	20250507			VIR2500022	20250507	Virement SCI des Entrepôts Fictifs LOY-2025-05	288,00	0,00			20250531		
+607000	Achats de marchandises	AC	Journal des achats	110	20250509			F0001-2522173	20250509	Facture F0001-2522173 Grossiste Central Fictif SA	0,00	816,36			20250531		
+445660	TVA déductible sur autres biens et services	AC	Journal des achats	110	20250509			F0001-2522173	20250509	Facture F0001-2522173 Grossiste Central Fictif SA	0,00	163,27			20250531		
+401000	Fournisseurs	AC	Journal des achats	110	20250509	F0001	Grossiste Central Fictif SA	F0001-2522173	20250509	Facture F0001-2522173 Grossiste Central Fictif SA	979,63	0,00	AI	20250519	20250531		
+607000	Achats de marchandises	AC	Journal des achats	111	20250512			F0001-2551804	20250512	Facture F0001-2551804 Grossiste Central Fictif SA	0,00	4902,08			20250531		
+445660	TVA déductible sur autres biens et services	AC	Journal des achats	111	20250512			F0001-2551804	20250512	Facture F0001-2551804 Grossiste Central Fictif SA	0,00	980,42			20250531		
+401000	Fournisseurs	AC	Journal des achats	111	20250512	F0001	Grossiste Central Fictif SA	F0001-2551804	20250512	Facture F0001-2551804 Grossiste Central Fictif SA	5882,50	0,00	AJ	20250522	20250531		
+607000	Achats de marchandises	AC	Journal des achats	112	20250512			F0006-2545149	20250512	Facture F0006-2545149 Pacific Trading Co (fictif)	0,00	5179,47			20250531	5593,83	USD
+401000	Fournisseurs	AC	Journal des achats	112	20250512	F0006	Pacific Trading Co (fictif)	F0006-2545149	20250512	Facture F0006-2545149 Pacific Trading Co (fictif)	5179,47	0,00	AC	20250718	20250531	5593,83	USD
+512100	Banque Alpha	OD	Opérations diverses	113	20250514			GAM-CLOTURE	20250514	Clôture compte Banque Gamma, virement du solde	0,00	1182,00			20250531		
+512300	Banque Gamma	OD	Opérations diverses	113	20250514			GAM-CLOTURE	20250514	Clôture compte Banque Gamma, virement du solde	1182,00	0,00			20250531		
+411000	Clients	VT	Journal des ventes	114	20250514	C0001	Boutique Lafontaine SNC	FA2500018	20250514	Facture FA2500018 Boutique Lafontaine SNC	0,00	238,06			20250531		
+707000	Ventes de marchandises	VT	Journal des ventes	114	20250514			FA2500018	20250514	Facture FA2500018 Boutique Lafontaine SNC	198,38	0,00			20250531		
+445710	TVA collectée	VT	Journal des ventes	114	20250514			FA2500018	20250514	Facture FA2500018 Boutique Lafontaine SNC	39,68	0,00			20250531		
+431000	Sécurité sociale	BQ1	Banque Alpha	115	20250515			URS-2025-04	20250515	Cotisations URSSAF	0,00	1880,32			20250531		
+512100	Banque Alpha	BQ1	Banque Alpha	115	20250515			URS-2025-04	20250515	Cotisations URSSAF	1880,32	0,00			20250531		
+401000	Fournisseurs	BQ1	Banque Alpha	116	20250515	F0001	Grossiste Central Fictif SA	VIR2500023	20250515	Virement Grossiste Central Fictif SA F0001-2519213	0,00	20259,13	AH	20250515	20250531		
+512100	Banque Alpha	BQ1	Banque Alpha	116	20250515			VIR2500023	20250515	Virement Grossiste Central Fictif SA F0001-2519213	20259,13	0,00			20250531		
+512100	Banque Alpha	BQ1	Banque Alpha	117	20250519			RC2500020	20250519	Règlement Entrepôts Rivière SARL FA2500016	0,00	168,61			20250531		
+411000	Clients	BQ1	Banque Alpha	117	20250519	C0009	Entrepôts Rivière SARL	RC2500020	20250519	Règlement Entrepôts Rivière SARL FA2500016	168,61	0,00	AA	20250519	20250531		
+401000	Fournisseurs	BQ1	Banque Alpha	118	20250519	F0001	Grossiste Central Fictif SA	VIR2500024	20250519	Virement Grossiste Central Fictif SA F0001-2522173	0,00	979,63	AI	20250519	20250531		
+512100	Banque Alpha	BQ1	Banque Alpha	118	20250519			VIR2500024	20250519	Virement Grossiste Central Fictif SA F0001-2522173	979,63	0,00			20250531		
+445710	TVA collectée	OD	Opérations diverses	119	20250520			CA3-2025-04	20250520	Déclaration de TVA 04/2025	0,00	1444,48			20250531		
+445660	TVA déductible sur autres biens et services	OD	Opérations diverses	119	20250520			CA3-2025-04	20250520	Déclaration de TVA 04/2025	169,10	0,00			20250531		
+445510	TVA à décaisser	OD	Opérations diverses	119	20250520			CA3-2025-04	20250520	Déclaration de TVA 04/2025	1275,38	0,00			20250531		
+445510	TVA à décaisser	BQ1	Banque Alpha	120	20250520			TVA-2025-04	20250520	Paiement TVA 04/2025	0,00	1275,38			20250531		
+512100	Banque Alpha	BQ1	Banque Alpha	120	20250520			TVA-2025-04	20250520	Paiement TVA 04/2025	1275,38	0,00			20250531		
+401000	Fournisseurs	BQ1	Banque Alpha	121	20250522	F0001	Grossiste Central Fictif SA	VIR2500025	20250522	Virement Grossiste Central Fictif SA F0001-2551804	0,00	5882,50	AJ	20250522	20250531		
+512100	Banque Alpha	BQ1	Banque Alpha	121	20250522			VIR2500025	20250522	Virement Grossiste Central Fictif SA F0001-2551804	5882,50	0,00			20250531		
+512200	Banque Bêta	BQ2	Banque Bêta	122	20250523			RC2500021	20250523	Règlement Atelier Bœuf & Cie 2 SAS FA2500012	0,00	3515,04			20250531		
+411000	Clients	BQ2	Banque Bêta	122	20250523	C0010	Atelier Bœuf & Cie 2 SAS	RC2500021	20250523	Règlement Atelier Bœuf & Cie 2 SAS FA2500012	3515,04	0,00			20250531		
+411000	Clients	VT	Journal des ventes	123	20250526	C0005	Atelier Grand Large SNC	FA2500019	20250526	Facture FA2500019 Atelier Grand Large SNC	0,00	217,36	AB	20250623	20250531		
+707000	Ventes de marchandises	VT	Journal des ventes	123	20250526			FA2500019	20250526	Facture FA2500019 Atelier Grand Large SNC	181,13	0,00			20250531		
+445710	TVA collectée	VT	Journal des ventes	123	20250526			FA2500019	20250526	Facture FA2500019 Atelier Grand Large SNC	36,23	0,00			20250531		
+512200	Banque Bêta	BQ2	Banque Bêta	124	20250528			RC2500022	20250528	Règlement Société Bœuf & Cie SARL FA2500015	0,00	230,66			20250531		
+411000	Clients	BQ2	Banque Bêta	124	20250528	C0002	Société Bœuf & Cie SARL	RC2500022	20250528	Règlement Société Bœuf & Cie SARL FA2500015	230,66	0,00	AC	20250528	20250531		
+607000	Achats de marchandises	AC	Journal des achats	125	20250530			F0001-2544780	20250530	Facture F0001-2544780 Grossiste Central Fictif SA	0,00	1701,06			20250531		
+445660	TVA déductible sur autres biens et services	AC	Journal des achats	125	20250530			F0001-2544780	20250530	Facture F0001-2544780 Grossiste Central Fictif SA	0,00	340,21			20250531		
+401000	Fournisseurs	AC	Journal des achats	125	20250530	F0001	Grossiste Central Fictif SA	F0001-2544780	20250530	Facture F0001-2544780 Grossiste Central Fictif SA	2041,27	0,00	AK	20250610	20250531		
+627000	Services bancaires et assimilés	BQ1	Banque Alpha	126	20250530			FRAIS-2025-05	20250530	Frais bancaires	0,00	33,95			20250531		
+512100	Banque Alpha	BQ1	Banque Alpha	126	20250530			FRAIS-2025-05	20250530	Frais bancaires	33,95	0,00			20250531		
+627000	Services bancaires et assimilés	BQ2	Banque Bêta	127	20250530			FRAIS-2025-05	20250530	Frais bancaires	0,00	43,35			20250531		
+512200	Banque Bêta	BQ2	Banque Bêta	127	20250530			FRAIS-2025-05	20250530	Frais bancaires	43,35	0,00			20250531		
+641100	Salaires, appointements	OD	Opérations diverses	128	20250530			PAIE-2025-05	20250530	Salaires 05/2025	0,00	3021,00			20250531		
+645100	Cotisations à l'URSSAF	OD	Opérations diverses	128	20250530			PAIE-2025-05	20250530	Salaires 05/2025	0,00	1268,82			20250531		
+421000	Personnel - rémunérations dues	OD	Opérations diverses	128	20250530			PAIE-2025-05	20250530	Salaires 05/2025	2356,38	0,00			20250531		
+431000	Sécurité sociale	OD	Opérations diverses	128	20250530			PAIE-2025-05	20250530	Salaires 05/2025	1933,44	0,00			20250531		
+421000	Personnel - rémunérations dues	BQ1	Banque Alpha	129	20250530			SAL-2025-05	20250530	Virement salaires 05/2025	0,00	2356,38			20250531		
+512100	Banque Alpha	BQ1	Banque Alpha	129	20250530			SAL-2025-05	20250530	Virement salaires 05/2025	2356,38	0,00			20250531		
+613200	Locations immobilières	AC	Journal des achats	130	20250602			LOY-2025-06	20250602	Loyer 06/2025 entrepôt	0,00	240,00			20250630		
+445660	TVA déductible sur autres biens et services	AC	Journal des achats	130	20250602			LOY-2025-06	20250602	Loyer 06/2025 entrepôt	0,00	48,00			20250630		
+401000	Fournisseurs	AC	Journal des achats	130	20250602	F0002	SCI des Entrepôts Fictifs	LOY-2025-06	20250602	Loyer 06/2025 entrepôt	288,00	0,00	AF	20250610	20250630		
+164000	Emprunts auprès des établissements de crédit	BQ1	Banque Alpha	131	20250605			ECH-2025-06	20250605	Échéance emprunt Banque Alpha	0,00	160,00			20250630		
+661100	Intérêts des emprunts et dettes	BQ1	Banque Alpha	131	20250605			ECH-2025-06	20250605	Échéance emprunt Banque Alpha	0,00	29,33			20250630		
+512100	Banque Alpha	BQ1	Banque Alpha	131	20250605			ECH-2025-06	20250605	Échéance emprunt Banque Alpha	189,33	0,00			20250630		
+411000	Clients	VT	Journal des ventes	132	20250605	C0008	Atelier de la Forêt SAS	FA2500020	20250605	Facture FA2500020 Atelier de la Forêt SAS	0,00	2960,75	AF	20250813	20250630		
+707000	Ventes de marchandises	VT	Journal des ventes	132	20250605			FA2500020	20250605	Facture FA2500020 Atelier de la Forêt SAS	2467,29	0,00			20250630		
+445710	TVA collectée	VT	Journal des ventes	132	20250605			FA2500020	20250605	Facture FA2500020 Atelier de la Forêt SAS	493,46	0,00			20250630		
+607000	Achats de marchandises	AC	Journal des achats	133	20250606			F0001-2548452	20250606	Facture F0001-2548452 Grossiste Central Fictif SA	0,00	925,68			20250630		
+445660	TVA déductible sur autres biens et services	AC	Journal des achats	133	20250606			F0001-2548452	20250606	Facture F0001-2548452 Grossiste Central Fictif SA	0,00	185,14			20250630		
+401000	Fournisseurs	AC	Journal des achats	133	20250606	F0001	Grossiste Central Fictif SA	F0001-2548452	20250606	Facture F0001-2548452 Grossiste Central Fictif SA	1110,82	0,00	AL	20250616	20250630		
+512200	Banque Bêta	BQ2	Banque Bêta	134	20250606			RC2500023	20250606	Règlement Atelier Bœuf & Cie SAS FA2500014	0,00	3404,94			20250630		
+411000	Clients	BQ2	Banque Bêta	134	20250606	C0004	Atelier Bœuf & Cie SAS	RC2500023	20250606	Règlement Atelier Bœuf & Cie SAS FA2500014	3404,94	0,00	AC	20250606	20250630		
+411000	Clients	VT	Journal des ventes	135	20250610	C0005	Atelier Grand Large SNC	FA2500021	20250610	Facture FA2500021 Atelier Grand Large SNC	0,00	488,92	AC	20250724	20250630		
+707000	Ventes de marchandises	VT	Journal des ventes	135	20250610			FA2500021	20250610	Facture FA2500021 Atelier Grand Large SNC	407,43	0,00			20250630		
+445710	TVA collectée	VT	Journal des ventes	135	20250610			FA2500021	20250610	Facture FA2500021 Atelier Grand Large SNC	81,49	0,00			20250630		
+401000	Fournisseurs	BQ1	Banque Alpha	136	20250610	F0001	Grossiste Central Fictif SA	VIR2500026	20250610	Virement Grossiste Central Fictif SA F0001-2544780	0,00	2041,27	AK	20250610	20250630		
+512100	Banque Alpha	BQ1	Banque Alpha	136	20250610			VIR2500026	20250610	Virement Grossiste Central Fictif SA F0001-2544780	2041,27	0,00			20250630		
+401000	Fournisseurs	BQ1	Banque Alpha	137	20250610	F0002	SCI des Entrepôts Fictifs	VIR2500027	20250610	Virement SCI des Entrepôts Fictifs LOY-2025-06	0,00	288,00	AF	20250610	20250630		
+512100	Banque Alpha	BQ1	Banque Alpha	137	20250610			VIR2500027	20250610	Virement SCI des Entrepôts Fictifs LOY-2025-06	288,00	0,00			20250630		
+607000	Achats de marchandises	AC	Journal des achats	138	20250612			F0006-2550706	20250612	Facture F0006-2550706 Pacific Trading Co (fictif)	0,00	6014,96			20250630	6496,16	USD
+401000	Fournisseurs	AC	Journal des achats	138	20250612	F0006	Pacific Trading Co (fictif)	F0006-2550706	20250612	Facture F0006-2550706 Pacific Trading Co (fictif)	6014,96	0,00	AD	20250811	20250630	6496,16	USD
+411000	Clients	VT	Journal des ventes	139	20250613	C0001	Boutique Lafontaine SNC	FA2500022	20250613	Facture FA2500022 Boutique Lafontaine SNC	0,00	14302,13	AB	20250820	20250630		
+707000	Ventes de marchandises	VT	Journal des ventes	139	20250613			FA2500022	20250613	Facture FA2500022 Boutique Lafontaine SNC	11918,44	0,00			20250630		
+445710	TVA collectée	VT	Journal des ventes	139	20250613			FA2500022	20250613	Facture FA2500022 Boutique Lafontaine SNC	2383,69	0,00			20250630		
+431000	Sécurité sociale	BQ1	Banque Alpha	140	20250616			URS-2025-05	20250616	Cotisations URSSAF	0,00	1933,44			20250630		
+512100	Banque Alpha	BQ1	Banque Alpha	140	20250616			URS-2025-05	20250616	Cotisations URSSAF	1933,44	0,00			20250630		
+120000	Résultat de l'exercice (bénéfice)	OD	Opérations diverses	141	20250616			AG-AFFECT	20250616	Affectation du résultat N-1 (AGO)	0,00	3600,00			20250630		
+106100	Réserve légale	OD	Opérations diverses	141	20250616			AG-AFFECT	20250616	Affectation du résultat N-1 (AGO)	180,00	0,00			20250630		
+106800	Autres réserves	OD	Opérations diverses	141	20250616			AG-AFFECT	20250616	Affectation du résultat N-1 (AGO)	3420,00	0,00			20250630		
+512200	Banque Bêta	BQ2	Banque Bêta	142	20250616			RC2500024	20250616	Règlement Atelier Bœuf & Cie SAS FA2500017	0,00	224,16			20250630		
+411000	Clients	BQ2	Banque Bêta	142	20250616	C0004	Atelier Bœuf & Cie SAS	RC2500024	20250616	Règlement Atelier Bœuf & Cie SAS FA2500017	224,16	0,00	AD	20250616	20250630		
+401000	Fournisseurs	BQ1	Banque Alpha	143	20250616	F0001	Grossiste Central Fictif SA	VIR2500028	20250616	Virement Grossiste Central Fictif SA F0001-2548452	0,00	1110,82	AL	20250616	20250630		
+512100	Banque Alpha	BQ1	Banque Alpha	143	20250616			VIR2500028	20250616	Virement Grossiste Central Fictif SA F0001-2548452	1110,82	0,00			20250630		
+411000	Clients	VT	Journal des ventes	144	20250617	C0004	Atelier Bœuf & Cie SAS	FA2500023	20250617	Facture FA2500023 Atelier Bœuf & Cie SAS	0,00	19349,83	AE	20250807	20250630		
+707000	Ventes de marchandises	VT	Journal des ventes	144	20250617			FA2500023	20250617	Facture FA2500023 Atelier Bœuf & Cie SAS	16124,86	0,00			20250630		
+445710	TVA collectée	VT	Journal des ventes	144	20250617			FA2500023	20250617	Facture FA2500023 Atelier Bœuf & Cie SAS	3224,97	0,00			20250630		
+411000	Clients	VT	Journal des ventes	145	20250618	C0005	Atelier Grand Large SNC	FA2500024	20250618	Facture FA2500024 Atelier Grand Large SNC	0,00	361,82	AD	20250715	20250630		
+707000	Ventes de marchandises	VT	Journal des ventes	145	20250618			FA2500024	20250618	Facture FA2500024 Atelier Grand Large SNC	301,52	0,00			20250630		
+445710	TVA collectée	VT	Journal des ventes	145	20250618			FA2500024	20250618	Facture FA2500024 Atelier Grand Large SNC	60,30	0,00			20250630		
+411000	Clients	VT	Journal des ventes	146	20250619	C0002	Société Bœuf & Cie SARL	FA2500025	20250619	Facture FA2500025 Société Bœuf & Cie SARL	0,00	13628,28			20250630		
+707000	Ventes de marchandises	VT	Journal des ventes	146	20250619			FA2500025	20250619	Facture FA2500025 Société Bœuf & Cie SARL	11356,90	0,00			20250630		
+445710	TVA collectée	VT	Journal des ventes	146	20250619			FA2500025	20250619	Facture FA2500025 Société Bœuf & Cie SARL	2271,38	0,00			20250630		
+445710	TVA collectée	OD	Opérations diverses	147	20250620			CA3-2025-05	20250620	Déclaration de TVA 05/2025	0,00	75,91			20250630		
+445660	TVA déductible sur autres biens et services	OD	Opérations diverses	147	20250620			CA3-2025-05	20250620	Déclaration de TVA 05/2025	4908,42	0,00			20250630		
+445670	Crédit de TVA à reporter	OD	Opérations diverses	147	20250620			CA3-2025-05	20250620	Déclaration de TVA 05/2025	0,00	4832,51			20250630		
+512100	Banque Alpha	BQ1	Banque Alpha	148	20250623			RC2500025	20250623	Règlement Atelier de la Forêt SAS FA2500013	0,00	1123,48			20250630		
+411000	Clients	BQ1	Banque Alpha	148	20250623	C0008	Atelier de la Forêt SAS	RC2500025	20250623	Règlement Atelier de la Forêt SAS FA2500013	1123,48	0,00	AE	20250623	20250630		
+512100	Banque Alpha	BQ1	Banque Alpha	149	20250623			RC2500026	20250623	Règlement Atelier Grand Large SNC FA2500019	0,00	217,36			20250630		
+411000	Clients	BQ1	Banque Alpha	149	20250623	C0005	Atelier Grand Large SNC	RC2500026	20250623	Règlement Atelier Grand Large SNC FA2500019	217,36	0,00	AB	20250623	20250630		
+411000	Clients	VT	Journal des ventes	150	20250625	C0001	Boutique Lafontaine SNC	FA2500026	20250625	Facture FA2500026 Boutique Lafontaine SNC	0,00	524,64	AC	20250821	20250630		
+707000	Ventes de marchandises	VT	Journal des ventes	150	20250625			FA2500026	20250625	Facture FA2500026 Boutique Lafontaine SNC	437,20	0,00			20250630		
+445710	TVA collectée	VT	Journal des ventes	150	20250625			FA2500026	20250625	Facture FA2500026 Boutique Lafontaine SNC	87,44	0,00			20250630		
+411000	Clients	VT	Journal des ventes	151	20250627	C0001	Boutique Lafontaine SNC	FA2500027	20250627	Facture FA2500027 Boutique Lafontaine SNC	0,00	831,50	AD	20250825	20250630		
+707000	Ventes de marchandises	VT	Journal des ventes	151	20250627			FA2500027	20250627	Facture FA2500027 Boutique Lafontaine SNC	692,92	0,00			20250630		
+445710	TVA collectée	VT	Journal des ventes	151	20250627			FA2500027	20250627	Facture FA2500027 Boutique Lafontaine SNC	138,58	0,00			20250630		
+627000	Services bancaires et assimilés	BQ1	Banque Alpha	152	20250630			FRAIS-2025-06	20250630	Frais bancaires	0,00	42,88			20250630		
+512100	Banque Alpha	BQ1	Banque Alpha	152	20250630			FRAIS-2025-06	20250630	Frais bancaires	42,88	0,00			20250630		
+627000	Services bancaires et assimilés	BQ2	Banque Bêta	153	20250630			FRAIS-2025-06	20250630	Frais bancaires	0,00	64,34			20250630		
+512200	Banque Bêta	BQ2	Banque Bêta	153	20250630			FRAIS-2025-06	20250630	Frais bancaires	64,34	0,00			20250630		
+641100	Salaires, appointements	OD	Opérations diverses	154	20250630			PAIE-2025-06	20250630	Salaires 06/2025	0,00	2888,00			20250630		
+645100	Cotisations à l'URSSAF	OD	Opérations diverses	154	20250630			PAIE-2025-06	20250630	Salaires 06/2025	0,00	1212,96			20250630		
+421000	Personnel - rémunérations dues	OD	Opérations diverses	154	20250630			PAIE-2025-06	20250630	Salaires 06/2025	2252,64	0,00			20250630		
+431000	Sécurité sociale	OD	Opérations diverses	154	20250630			PAIE-2025-06	20250630	Salaires 06/2025	1848,32	0,00			20250630		
+421000	Personnel - rémunérations dues	BQ1	Banque Alpha	155	20250630			SAL-2025-06	20250630	Virement salaires 06/2025	0,00	2252,64			20250630		
+512100	Banque Alpha	BQ1	Banque Alpha	155	20250630			SAL-2025-06	20250630	Virement salaires 06/2025	2252,64	0,00			20250630		
+613200	Locations immobilières	AC	Journal des achats	156	20250701			LOY-2025-07	20250701	Loyer 07/2025 entrepôt	0,00	240,00			20250731		
+445660	TVA déductible sur autres biens et services	AC	Journal des achats	156	20250701			LOY-2025-07	20250701	Loyer 07/2025 entrepôt	0,00	48,00			20250731		
+401000	Fournisseurs	AC	Journal des achats	156	20250701	F0002	SCI des Entrepôts Fictifs	LOY-2025-07	20250701	Loyer 07/2025 entrepôt	288,00	0,00	AG	20250707	20250731		
+164000	Emprunts auprès des établissements de crédit	BQ1	Banque Alpha	157	20250707			ECH-2025-07	20250707	Échéance emprunt Banque Alpha	0,00	160,00			20250731		
+661100	Intérêts des emprunts et dettes	BQ1	Banque Alpha	157	20250707			ECH-2025-07	20250707	Échéance emprunt Banque Alpha	0,00	28,80			20250731		
+512100	Banque Alpha	BQ1	Banque Alpha	157	20250707			ECH-2025-07	20250707	Échéance emprunt Banque Alpha	188,80	0,00			20250731		
+401000	Fournisseurs	BQ1	Banque Alpha	158	20250707	F0002	SCI des Entrepôts Fictifs	VIR2500029	20250707	Virement SCI des Entrepôts Fictifs LOY-2025-07	0,00	288,00	AG	20250707	20250731		
+512100	Banque Alpha	BQ1	Banque Alpha	158	20250707			VIR2500029	20250707	Virement SCI des Entrepôts Fictifs LOY-2025-07	288,00	0,00			20250731		
+607000	Achats de marchandises	AC	Journal des achats	159	20250709			F0001-2511907	20250709	Facture F0001-2511907 Grossiste Central Fictif SA	0,00	130,15			20250731		
+445660	TVA déductible sur autres biens et services	AC	Journal des achats	159	20250709			F0001-2511907	20250709	Facture F0001-2511907 Grossiste Central Fictif SA	0,00	26,03			20250731		
+401000	Fournisseurs	AC	Journal des achats	159	20250709	F0001	Grossiste Central Fictif SA	F0001-2511907	20250709	Facture F0001-2511907 Grossiste Central Fictif SA	156,18	0,00	AM	20250721	20250731		
+431000	Sécurité sociale	BQ1	Banque Alpha	160	20250715			URS-2025-06	20250715	Cotisations URSSAF	0,00	1848,32			20250731		
+512100	Banque Alpha	BQ1	Banque Alpha	160	20250715			URS-2025-06	20250715	Cotisations URSSAF	1848,32	0,00			20250731		
+512100	Banque Alpha	BQ1	Banque Alpha	161	20250715			RC2500027	20250715	Règlement Boutique Lafontaine SNC FA2500018	0,00	238,06			20250731		
+411000	Clients	BQ1	Banque Alpha	161	20250715	C0001	Boutique Lafontaine SNC	RC2500027	20250715	Règlement Boutique Lafontaine SNC FA2500018	238,06	0,00			20250731		
+512100	Banque Alpha	BQ1	Banque Alpha	162	20250715			RC2500028	20250715	Règlement Atelier Grand Large SNC FA2500024	0,00	361,82			20250731		
+411000	Clients	BQ1	Banque Alpha	162	20250715	C0005	Atelier Grand Large SNC	RC2500028	20250715	Règlement Atelier Grand Large SNC FA2500024	361,82	0,00	AD	20250715	20250731		
+607000	Achats de marchandises	AC	Journal des achats	163	20250718			F0001-2539584	20250718	Facture F0001-2539584 Grossiste Central Fictif SA	0,00	184,60			20250731		
+445660	TVA déductible sur autres biens et services	AC	Journal des achats	163	20250718			F0001-2539584	20250718	Facture F0001-2539584 Grossiste Central Fictif SA	0,00	36,92			20250731		
+401000	Fournisseurs	AC	Journal des achats	163	20250718	F0001	Grossiste Central Fictif SA	F0001-2539584	20250718	Facture F0001-2539584 Grossiste Central Fictif SA	221,52	0,00	AN	20250728	20250731		
+401000	Fournisseurs	BQ2	Banque Bêta	164	20250718	F0006	Pacific Trading Co (fictif)	VIR2500030	20250718	Virement Pacific Trading Co (fictif) F0006-2545149	0,00	5179,47	AC	20250718	20250731	5593,83	USD
+512200	Banque Bêta	BQ2	Banque Bêta	164	20250718			VIR2500030	20250718	Virement Pacific Trading Co (fictif) F0006-2545149	5179,47	0,00			20250731		
+445710	TVA collectée	OD	Opérations diverses	165	20250721			CA3-2025-06	20250721	Déclaration de TVA 06/2025	0,00	8741,31			20250731		
+445660	TVA déductible sur autres biens et services	OD	Opérations diverses	165	20250721			CA3-2025-06	20250721	Déclaration de TVA 06/2025	233,14	0,00			20250731		
+445510	TVA à décaisser	OD	Opérations diverses	165	20250721			CA3-2025-06	20250721	Déclaration de TVA 06/2025	8508,17	0,00			20250731		
+445510	TVA à décaisser	BQ1	Banque Alpha	166	20250721			TVA-2025-06	20250721	Paiement TVA 06/2025	0,00	8508,17			20250731		
+512100	Banque Alpha	BQ1	Banque Alpha	166	20250721			TVA-2025-06	20250721	Paiement TVA 06/2025	8508,17	0,00			20250731		
+411000	Clients	VT	Journal des ventes	167	20250721	C0009	Entrepôts Rivière SARL	FA2500028	20250721	Facture FA2500028 Entrepôts Rivière SARL	0,00	5815,03	AB	20250818	20250731		
+707000	Ventes de marchandises	VT	Journal des ventes	167	20250721			FA2500028	20250721	Facture FA2500028 Entrepôts Rivière SARL	4845,86	0,00			20250731		
+445710	TVA collectée	VT	Journal des ventes	167	20250721			FA2500028	20250721	Facture FA2500028 Entrepôts Rivière SARL	969,17	0,00			20250731		
+607000	Achats de marchandises	AC	Journal des achats	168	20250721			F0001-2516858	20250721	Facture F0001-2516858 Grossiste Central Fictif SA	0,00	457,47			20250731		
+445660	TVA déductible sur autres biens et services	AC	Journal des achats	168	20250721			F0001-2516858	20250721	Facture F0001-2516858 Grossiste Central Fictif SA	0,00	91,49			20250731		
+401000	Fournisseurs	AC	Journal des achats	168	20250721	F0001	Grossiste Central Fictif SA	F0001-2516858	20250721	Facture F0001-2516858 Grossiste Central Fictif SA	548,96	0,00	AO	20250731	20250731		
+401000	Fournisseurs	BQ1	Banque Alpha	169	20250721	F0001	Grossiste Central Fictif SA	VIR2500031	20250721	Virement Grossiste Central Fictif SA F0001-2511907	0,00	156,18	AM	20250721	20250731		
+512100	Banque Alpha	BQ1	Banque Alpha	169	20250721			VIR2500031	20250721	Virement Grossiste Central Fictif SA F0001-2511907	156,18	0,00			20250731		
+411000	Clients	VT	Journal des ventes	170	20250722	C0001	Boutique Lafontaine SNC	FA2500029	20250722	Facture FA2500029 Boutique Lafontaine SNC	0,00	8195,45	AE	20250929	20250731		
+707000	Ventes de marchandises	VT	Journal des ventes	170	20250722			FA2500029	20250722	Facture FA2500029 Boutique Lafontaine SNC	6829,54	0,00			20250731		
+445710	TVA collectée	VT	Journal des ventes	170	20250722			FA2500029	20250722	Facture FA2500029 Boutique Lafontaine SNC	1365,91	0,00			20250731		
+607000	Achats de marchandises	AC	Journal des achats	171	20250723			F0001-2569508	20250723	Facture F0001-2569508 Grossiste Central Fictif SA	0,00	25379,69			20250731		
+445660	TVA déductible sur autres biens et services	AC	Journal des achats	171	20250723			F0001-2569508	20250723	Facture F0001-2569508 Grossiste Central Fictif SA	0,00	5075,94			20250731		
+401000	Fournisseurs	AC	Journal des achats	171	20250723	F0001	Grossiste Central Fictif SA	F0001-2569508	20250723	Facture F0001-2569508 Grossiste Central Fictif SA	30455,63	0,00	AP	20250804	20250731		
+512100	Banque Alpha	BQ1	Banque Alpha	172	20250724			RC2500029	20250724	Règlement Atelier Grand Large SNC FA2500021	0,00	488,92			20250731		
+411000	Clients	BQ1	Banque Alpha	172	20250724	C0005	Atelier Grand Large SNC	RC2500029	20250724	Règlement Atelier Grand Large SNC FA2500021	488,92	0,00	AC	20250724	20250731		
+401000	Fournisseurs	BQ1	Banque Alpha	173	20250728	F0001	Grossiste Central Fictif SA	VIR2500032	20250728	Virement Grossiste Central Fictif SA F0001-2539584	0,00	221,52	AN	20250728	20250731		
+512100	Banque Alpha	BQ1	Banque Alpha	173	20250728			VIR2500032	20250728	Virement Grossiste Central Fictif SA F0001-2539584	221,52	0,00			20250731		
+401000	Fournisseurs	BQ1	Banque Alpha	174	20250731	F0001	Grossiste Central Fictif SA	VIR2500033	20250731	Virement Grossiste Central Fictif SA F0001-2516858	0,00	548,96	AO	20250731	20250731		
+512100	Banque Alpha	BQ1	Banque Alpha	174	20250731			VIR2500033	20250731	Virement Grossiste Central Fictif SA F0001-2516858	548,96	0,00			20250731		
+627000	Services bancaires et assimilés	BQ1	Banque Alpha	175	20250731			FRAIS-2025-07	20250731	Frais bancaires	0,00	50,93			20250731		
+512100	Banque Alpha	BQ1	Banque Alpha	175	20250731			FRAIS-2025-07	20250731	Frais bancaires	50,93	0,00			20250731		
+627000	Services bancaires et assimilés	BQ2	Banque Bêta	176	20250731			FRAIS-2025-07	20250731	Frais bancaires	0,00	30,87			20250731		
+512200	Banque Bêta	BQ2	Banque Bêta	176	20250731			FRAIS-2025-07	20250731	Frais bancaires	30,87	0,00			20250731		
+641100	Salaires, appointements	OD	Opérations diverses	177	20250731			PAIE-2025-07	20250731	Salaires 07/2025	0,00	3035,00			20250731		
+645100	Cotisations à l'URSSAF	OD	Opérations diverses	177	20250731			PAIE-2025-07	20250731	Salaires 07/2025	0,00	1274,70			20250731		
+421000	Personnel - rémunérations dues	OD	Opérations diverses	177	20250731			PAIE-2025-07	20250731	Salaires 07/2025	2367,30	0,00			20250731		
+431000	Sécurité sociale	OD	Opérations diverses	177	20250731			PAIE-2025-07	20250731	Salaires 07/2025	1942,40	0,00			20250731		
+421000	Personnel - rémunérations dues	BQ1	Banque Alpha	178	20250731			SAL-2025-07	20250731	Virement salaires 07/2025	0,00	2367,30			20250731		
+512100	Banque Alpha	BQ1	Banque Alpha	178	20250731			SAL-2025-07	20250731	Virement salaires 07/2025	2367,30	0,00			20250731		
+613200	Locations immobilières	AC	Journal des achats	179	20250801			LOY-2025-08	20250801	Loyer 08/2025 entrepôt	0,00	240,00			20250831		
+445660	TVA déductible sur autres biens et services	AC	Journal des achats	179	20250801			LOY-2025-08	20250801	Loyer 08/2025 entrepôt	0,00	48,00			20250831		
+401000	Fournisseurs	AC	Journal des achats	179	20250801	F0002	SCI des Entrepôts Fictifs	LOY-2025-08	20250801	Loyer 08/2025 entrepôt	288,00	0,00	AH	20250806	20250831		
+411000	Clients	VT	Journal des ventes	180	20250804	C0001	Boutique Lafontaine SNC	FA2500030	20250804	Facture FA2500030 Boutique Lafontaine SNC	0,00	1844,75			20250831		
+707000	Ventes de marchandises	VT	Journal des ventes	180	20250804			FA2500030	20250804	Facture FA2500030 Boutique Lafontaine SNC	1537,29	0,00			20250831		
+445710	TVA collectée	VT	Journal des ventes	180	20250804			FA2500030	20250804	Facture FA2500030 Boutique Lafontaine SNC	307,46	0,00			20250831		
+607000	Achats de marchandises	AC	Journal des achats	181	20250804			F0001-2556900	20250804	Facture F0001-2556900 Grossiste Central Fictif SA	0,00	5971,23			20250831		
+445660	TVA déductible sur autres biens et services	AC	Journal des achats	181	20250804			F0001-2556900	20250804	Facture F0001-2556900 Grossiste Central Fictif SA	0,00	1194,25			20250831		
+401000	Fournisseurs	AC	Journal des achats	181	20250804	F0001	Grossiste Central Fictif SA	F0001-2556900	20250804	Facture F0001-2556900 Grossiste Central Fictif SA	7165,48	0,00	AQ	20250814	20250831		
+401000	Fournisseurs	BQ1	Banque Alpha	182	20250804	F0001	Grossiste Central Fictif SA	VIR2500034	20250804	Virement Grossiste Central Fictif SA F0001-2569508	0,00	30455,63	AP	20250804	20250831		
+512100	Banque Alpha	BQ1	Banque Alpha	182	20250804			VIR2500034	20250804	Virement Grossiste Central Fictif SA F0001-2569508	30455,63	0,00			20250831		
+164000	Emprunts auprès des établissements de crédit	BQ1	Banque Alpha	183	20250805			ECH-2025-08	20250805	Échéance emprunt Banque Alpha	0,00	160,00			20250831		
+661100	Intérêts des emprunts et dettes	BQ1	Banque Alpha	183	20250805			ECH-2025-08	20250805	Échéance emprunt Banque Alpha	0,00	28,27			20250831		
+512100	Banque Alpha	BQ1	Banque Alpha	183	20250805			ECH-2025-08	20250805	Échéance emprunt Banque Alpha	188,27	0,00			20250831		
+401000	Fournisseurs	BQ1	Banque Alpha	184	20250806	F0002	SCI des Entrepôts Fictifs	VIR2500035	20250806	Virement SCI des Entrepôts Fictifs LOY-2025-08	0,00	288,00	AH	20250806	20250831		
+512100	Banque Alpha	BQ1	Banque Alpha	184	20250806			VIR2500035	20250806	Virement SCI des Entrepôts Fictifs LOY-2025-08	288,00	0,00			20250831		
+411000	Clients	VT	Journal des ventes	185	20250807	C0004	Atelier Bœuf & Cie SAS	FA2500031	20250807	Facture FA2500031 Atelier Bœuf & Cie SAS	0,00	25091,30	AF	20250922	20250831		
+707000	Ventes de marchandises	VT	Journal des ventes	185	20250807			FA2500031	20250807	Facture FA2500031 Atelier Bœuf & Cie SAS	20909,42	0,00			20250831		
+445710	TVA collectée	VT	Journal des ventes	185	20250807			FA2500031	20250807	Facture FA2500031 Atelier Bœuf & Cie SAS	4181,88	0,00			20250831		
+512200	Banque Bêta	BQ2	Banque Bêta	186	20250807			RC2500030	20250807	Règlement Atelier Bœuf & Cie SAS FA2500023	0,00	19349,83			20250831		
+411000	Clients	BQ2	Banque Bêta	186	20250807	C0004	Atelier Bœuf & Cie SAS	RC2500030	20250807	Règlement Atelier Bœuf & Cie SAS FA2500023	19349,83	0,00	AE	20250807	20250831		
+411000	Clients	VT	Journal des ventes	187	20250808	C0001	Boutique Lafontaine SNC	FA2500032	20250808	Facture FA2500032 Boutique Lafontaine SNC	0,00	252,82	AF	20251021	20250831		
+707000	Ventes de marchandises	VT	Journal des ventes	187	20250808			FA2500032	20250808	Facture FA2500032 Boutique Lafontaine SNC	210,68	0,00			20250831		
+445710	TVA collectée	VT	Journal des ventes	187	20250808			FA2500032	20250808	Facture FA2500032 Boutique Lafontaine SNC	42,14	0,00			20250831		
+411000	Clients	VT	Journal des ventes	188	20250811	C0007	Atelier du Moulin SNC	FA2500033	20250811	Facture FA2500033 Atelier du Moulin SNC	0,00	897,06	AB	20250922	20250831		
+707000	Ventes de marchandises	VT	Journal des ventes	188	20250811			FA2500033	20250811	Facture FA2500033 Atelier du Moulin SNC	747,55	0,00			20250831		
+445710	TVA collectée	VT	Journal des ventes	188	20250811			FA2500033	20250811	Facture FA2500033 Atelier du Moulin SNC	149,51	0,00			20250831		
+401000	Fournisseurs	BQ2	Banque Bêta	189	20250811	F0006	Pacific Trading Co (fictif)	VIR2500036	20250811	Virement Pacific Trading Co (fictif) F0006-2550706	0,00	6014,96	AD	20250811	20250831	6496,16	USD
+512200	Banque Bêta	BQ2	Banque Bêta	189	20250811			VIR2500036	20250811	Virement Pacific Trading Co (fictif) F0006-2550706	6014,96	0,00			20250831		
+607000	Achats de marchandises	AC	Journal des achats	190	20250812			F0006-2589985	20250812	Facture F0006-2589985 Pacific Trading Co (fictif)	0,00	27245,76			20250831	29425,42	USD
+401000	Fournisseurs	AC	Journal des achats	190	20250812	F0006	Pacific Trading Co (fictif)	F0006-2589985	20250812	Facture F0006-2589985 Pacific Trading Co (fictif)	27245,76	0,00	AE	20251020	20250831	29425,42	USD
+512100	Banque Alpha	BQ1	Banque Alpha	191	20250813			RC2500031	20250813	Règlement Atelier de la Forêt SAS FA2500020	0,00	2960,75			20250831		
+411000	Clients	BQ1	Banque Alpha	191	20250813	C0008	Atelier de la Forêt SAS	RC2500031	20250813	Règlement Atelier de la Forêt SAS FA2500020	2960,75	0,00	AF	20250813	20250831		
+401000	Fournisseurs	BQ1	Banque Alpha	192	20250814	F0001	Grossiste Central Fictif SA	VIR2500037	20250814	Virement Grossiste Central Fictif SA F0001-2556900	0,00	7165,48	AQ	20250814	20250831		
+512100	Banque Alpha	BQ1	Banque Alpha	192	20250814			VIR2500037	20250814	Virement Grossiste Central Fictif SA F0001-2556900	7165,48	0,00			20250831		
+431000	Sécurité sociale	BQ1	Banque Alpha	193	20250818			URS-2025-07	20250818	Cotisations URSSAF	0,00	1942,40			20250831		
+512100	Banque Alpha	BQ1	Banque Alpha	193	20250818			URS-2025-07	20250818	Cotisations URSSAF	1942,40	0,00			20250831		
+607000	Achats de marchandises	AC	Journal des achats	194	20250818			F0001-2544987	20250818	Facture F0001-2544987 Grossiste Central Fictif SA	0,00	11120,02			20250831		
+445660	TVA déductible sur autres biens et services	AC	Journal des achats	194	20250818			F0001-2544987	20250818	Facture F0001-2544987 Grossiste Central Fictif SA	0,00	2224,00			20250831		
+401000	Fournisseurs	AC	Journal des achats	194	20250818	F0001	Grossiste Central Fictif SA	F0001-2544987	20250818	Facture F0001-2544987 Grossiste Central Fictif SA	13344,02	0,00	AR	20250828	20250831		
+512100	Banque Alpha	BQ1	Banque Alpha	195	20250818			RC2500032	20250818	Règlement Entrepôts Rivière SARL FA2500028	0,00	5815,03			20250831		
+411000	Clients	BQ1	Banque Alpha	195	20250818	C0009	Entrepôts Rivière SARL	RC2500032	20250818	Règlement Entrepôts Rivière SARL FA2500028	5815,03	0,00	AB	20250818	20250831		
+411000	Clients	VT	Journal des ventes	196	20250819	C0008	Atelier de la Forêt SAS	FA2500034	20250819	Facture FA2500034 Atelier de la Forêt SAS	0,00	5706,42	AG	20251022	20250831		
+707000	Ventes de marchandises	VT	Journal des ventes	196	20250819			FA2500034	20250819	Facture FA2500034 Atelier de la Forêt SAS	4755,35	0,00			20250831		
+445710	TVA collectée	VT	Journal des ventes	196	20250819			FA2500034	20250819	Facture FA2500034 Atelier de la Forêt SAS	951,07	0,00			20250831		
+445710	TVA collectée	OD	Opérations diverses	197	20250820			CA3-2025-07	20250820	Déclaration de TVA 07/2025	0,00	2335,08			20250831		
+445660	TVA déductible sur autres biens et services	OD	Opérations diverses	197	20250820			CA3-2025-07	20250820	Déclaration de TVA 07/2025	5278,38	0,00			20250831		
+445670	Crédit de TVA à reporter	OD	Opérations diverses	197	20250820			CA3-2025-07	20250820	Déclaration de TVA 07/2025	0,00	2943,30			20250831		
+512100	Banque Alpha	BQ1	Banque Alpha	198	20250820			RC2500033	20250820	Règlement Boutique Lafontaine SNC FA2500022	0,00	14302,13			20250831		
+411000	Clients	BQ1	Banque Alpha	198	20250820	C0001	Boutique Lafontaine SNC	RC2500033	20250820	Règlement Boutique Lafontaine SNC FA2500022	14302,13	0,00	AB	20250820	20250831		
+512100	Banque Alpha	BQ1	Banque Alpha	199	20250821			RC2500034	20250821	Règlement Boutique Lafontaine SNC FA2500026	0,00	524,64			20250831		
+411000	Clients	BQ1	Banque Alpha	199	20250821	C0001	Boutique Lafontaine SNC	RC2500034	20250821	Règlement Boutique Lafontaine SNC FA2500026	524,64	0,00	AC	20250821	20250831		
+411000	Clients	VT	Journal des ventes	200	20250822	C0001	Boutique Lafontaine SNC	FA2500035	20250822	Facture FA2500035 Boutique Lafontaine SNC	0,00	4607,58			20250831		
+707000	Ventes de marchandises	VT	Journal des ventes	200	20250822			FA2500035	20250822	Facture FA2500035 Boutique Lafontaine SNC	3839,65	0,00			20250831		
+445710	TVA collectée	VT	Journal des ventes	200	20250822			FA2500035	20250822	Facture FA2500035 Boutique Lafontaine SNC	767,93	0,00			20250831		
+607000	Achats de marchandises	AC	Journal des achats	201	20250825			F0001-2532065	20250825	Facture F0001-2532065 Grossiste Central Fictif SA	0,00	1896,41			20250831		
+445660	TVA déductible sur autres biens et services	AC	Journal des achats	201	20250825			F0001-2532065	20250825	Facture F0001-2532065 Grossiste Central Fictif SA	0,00	379,28			20250831		
+401000	Fournisseurs	AC	Journal des achats	201	20250825	F0001	Grossiste Central Fictif SA	F0001-2532065	20250825	Facture F0001-2532065 Grossiste Central Fictif SA	2275,69	0,00	AS	20250904	20250831		
+512100	Banque Alpha	BQ1	Banque Alpha	202	20250825			RC2500035	20250825	Règlement Boutique Lafontaine SNC FA2500027	0,00	831,50			20250831		
+411000	Clients	BQ1	Banque Alpha	202	20250825	C0001	Boutique Lafontaine SNC	RC2500035	20250825	Règlement Boutique Lafontaine SNC FA2500027	831,50	0,00	AD	20250825	20250831		
+411000	Clients	VT	Journal des ventes	203	20250826	C0002	Société Bœuf & Cie SARL	FA2500036	20250826	Facture FA2500036 Société Bœuf & Cie SARL	0,00	120,91			20250831		
+707000	Ventes de marchandises	VT	Journal des ventes	203	20250826			FA2500036	20250826	Facture FA2500036 Société Bœuf & Cie SARL	100,76	0,00			20250831		
+445710	TVA collectée	VT	Journal des ventes	203	20250826			FA2500036	20250826	Facture FA2500036 Société Bœuf & Cie SARL	20,15	0,00			20250831		
+411000	Clients	VT	Journal des ventes	204	20250828	C0004	Atelier Bœuf & Cie SAS	FA2500037	20250828	Facture FA2500037 Atelier Bœuf & Cie SAS	0,00	1487,24			20250831		
+707000	Ventes de marchandises	VT	Journal des ventes	204	20250828			FA2500037	20250828	Facture FA2500037 Atelier Bœuf & Cie SAS	1239,37	0,00			20250831		
+445710	TVA collectée	VT	Journal des ventes	204	20250828			FA2500037	20250828	Facture FA2500037 Atelier Bœuf & Cie SAS	247,87	0,00			20250831		
+607000	Achats de marchandises	AC	Journal des achats	205	20250828			F0001-2591363	20250828	Facture F0001-2591363 Grossiste Central Fictif SA	0,00	1377,75			20250831		
+445660	TVA déductible sur autres biens et services	AC	Journal des achats	205	20250828			F0001-2591363	20250828	Facture F0001-2591363 Grossiste Central Fictif SA	0,00	275,55			20250831		
+401000	Fournisseurs	AC	Journal des achats	205	20250828	F0001	Grossiste Central Fictif SA	F0001-2591363	20250828	Facture F0001-2591363 Grossiste Central Fictif SA	1653,30	0,00	AT	20250908	20250831		
+401000	Fournisseurs	BQ1	Banque Alpha	206	20250828	F0001	Grossiste Central Fictif SA	VIR2500038	20250828	Virement Grossiste Central Fictif SA F0001-2544987	0,00	13344,02	AR	20250828	20250831		
+512100	Banque Alpha	BQ1	Banque Alpha	206	20250828			VIR2500038	20250828	Virement Grossiste Central Fictif SA F0001-2544987	13344,02	0,00			20250831		
+607000	Achats de marchandises	AC	Journal des achats	207	20250829			F0003-2510998	20250829	Facture F0003-2510998 Négoce Mirabeau SARL	0,00	12693,01			20250831		
+445660	TVA déductible sur autres biens et services	AC	Journal des achats	207	20250829			F0003-2510998	20250829	Facture F0003-2510998 Négoce Mirabeau SARL	0,00	2538,60			20250831		
+401000	Fournisseurs	AC	Journal des achats	207	20250829	F0003	Négoce Mirabeau SARL	F0003-2510998	20250829	Facture F0003-2510998 Négoce Mirabeau SARL	15231,61	0,00	AD	20251006	20250831		
+627000	Services bancaires et assimilés	BQ1	Banque Alpha	208	20250829			FRAIS-2025-08	20250829	Frais bancaires	0,00	49,76			20250831		
+512100	Banque Alpha	BQ1	Banque Alpha	208	20250829			FRAIS-2025-08	20250829	Frais bancaires	49,76	0,00			20250831		
+627000	Services bancaires et assimilés	BQ2	Banque Bêta	209	20250829			FRAIS-2025-08	20250829	Frais bancaires	0,00	33,05			20250831		
+512200	Banque Bêta	BQ2	Banque Bêta	209	20250829			FRAIS-2025-08	20250829	Frais bancaires	33,05	0,00			20250831		
+641100	Salaires, appointements	OD	Opérations diverses	210	20250829			PAIE-2025-08	20250829	Salaires 08/2025	0,00	3033,00			20250831		
+645100	Cotisations à l'URSSAF	OD	Opérations diverses	210	20250829			PAIE-2025-08	20250829	Salaires 08/2025	0,00	1273,86			20250831		
+421000	Personnel - rémunérations dues	OD	Opérations diverses	210	20250829			PAIE-2025-08	20250829	Salaires 08/2025	2365,74	0,00			20250831		
+431000	Sécurité sociale	OD	Opérations diverses	210	20250829			PAIE-2025-08	20250829	Salaires 08/2025	1941,12	0,00			20250831		
+421000	Personnel - rémunérations dues	BQ1	Banque Alpha	211	20250829			SAL-2025-08	20250829	Virement salaires 08/2025	0,00	2365,74			20250831		
+512100	Banque Alpha	BQ1	Banque Alpha	211	20250829			SAL-2025-08	20250829	Virement salaires 08/2025	2365,74	0,00			20250831		
+613200	Locations immobilières	AC	Journal des achats	212	20250901			LOY-2025-09	20250901	Loyer 09/2025 entrepôt	0,00	240,00			20250930		
+445660	TVA déductible sur autres biens et services	AC	Journal des achats	212	20250901			LOY-2025-09	20250901	Loyer 09/2025 entrepôt	0,00	48,00			20250930		
+401000	Fournisseurs	AC	Journal des achats	212	20250901	F0002	SCI des Entrepôts Fictifs	LOY-2025-09	20250901	Loyer 09/2025 entrepôt	288,00	0,00	AI	20250908	20250930		
+411000	Clients	VT	Journal des ventes	213	20250902	C0001	Boutique Lafontaine SNC	FA2500038	20250902	Facture FA2500038 Boutique Lafontaine SNC	0,00	23932,69	AG	20251106	20250930		
+707000	Ventes de marchandises	VT	Journal des ventes	213	20250902			FA2500038	20250902	Facture FA2500038 Boutique Lafontaine SNC	19943,91	0,00			20250930		
+445710	TVA collectée	VT	Journal des ventes	213	20250902			FA2500038	20250902	Facture FA2500038 Boutique Lafontaine SNC	3988,78	0,00			20250930		
+607000	Achats de marchandises	AC	Journal des achats	214	20250903			F0001-2585283	20250903	Facture F0001-2585283 Grossiste Central Fictif SA	0,00	413,30			20250930		
+445660	TVA déductible sur autres biens et services	AC	Journal des achats	214	20250903			F0001-2585283	20250903	Facture F0001-2585283 Grossiste Central Fictif SA	0,00	82,66			20250930		
+401000	Fournisseurs	AC	Journal des achats	214	20250903	F0001	Grossiste Central Fictif SA	F0001-2585283	20250903	Facture F0001-2585283 Grossiste Central Fictif SA	495,96	0,00	AU	20250915	20250930		
+411000	Clients	VT	Journal des ventes	215	20250904	C0001	Boutique Lafontaine SNC	FA2500039	20250904	Facture FA2500039 Boutique Lafontaine SNC	0,00	9501,53	AH	20251106	20250930		
+707000	Ventes de marchandises	VT	Journal des ventes	215	20250904			FA2500039	20250904	Facture FA2500039 Boutique Lafontaine SNC	7917,94	0,00			20250930		
+445710	TVA collectée	VT	Journal des ventes	215	20250904			FA2500039	20250904	Facture FA2500039 Boutique Lafontaine SNC	1583,59	0,00			20250930		
+401000	Fournisseurs	BQ1	Banque Alpha	216	20250904	F0001	Grossiste Central Fictif SA	VIR2500039	20250904	Virement Grossiste Central Fictif SA F0001-2532065	0,00	2275,69	AS	20250904	20250930		
+512100	Banque Alpha	BQ1	Banque Alpha	216	20250904			VIR2500039	20250904	Virement Grossiste Central Fictif SA F0001-2532065	2275,69	0,00			20250930		
+164000	Emprunts auprès des établissements de crédit	BQ1	Banque Alpha	217	20250905			ECH-2025-09	20250905	Échéance emprunt Banque Alpha	0,00	160,00			20250930		
+661100	Intérêts des emprunts et dettes	BQ1	Banque Alpha	217	20250905			ECH-2025-09	20250905	Échéance emprunt Banque Alpha	0,00	27,73			20250930		
+512100	Banque Alpha	BQ1	Banque Alpha	217	20250905			ECH-2025-09	20250905	Échéance emprunt Banque Alpha	187,73	0,00			20250930		
+607000	Achats de marchandises	AC	Journal des achats	218	20250908			F0001-2538258	20250908	Facture F0001-2538258 Grossiste Central Fictif SA	0,00	661,61			20250930		
+445660	TVA déductible sur autres biens et services	AC	Journal des achats	218	20250908			F0001-2538258	20250908	Facture F0001-2538258 Grossiste Central Fictif SA	0,00	132,32			20250930		
+401000	Fournisseurs	AC	Journal des achats	218	20250908	F0001	Grossiste Central Fictif SA	F0001-2538258	20250908	Facture F0001-2538258 Grossiste Central Fictif SA	793,93	0,00	AV	20250918	20250930		
+401000	Fournisseurs	BQ1	Banque Alpha	219	20250908	F0001	Grossiste Central Fictif SA	VIR2500040	20250908	Virement Grossiste Central Fictif SA F0001-2591363	0,00	1653,30	AT	20250908	20250930		
+512100	Banque Alpha	BQ1	Banque Alpha	219	20250908			VIR2500040	20250908	Virement Grossiste Central Fictif SA F0001-2591363	1653,30	0,00			20250930		
+401000	Fournisseurs	BQ1	Banque Alpha	220	20250908	F0002	SCI des Entrepôts Fictifs	VIR2500041	20250908	Virement SCI des Entrepôts Fictifs LOY-2025-09	0,00	288,00	AI	20250908	20250930		
+512100	Banque Alpha	BQ1	Banque Alpha	220	20250908			VIR2500041	20250908	Virement SCI des Entrepôts Fictifs LOY-2025-09	288,00	0,00			20250930		
+607000	Achats de marchandises	AC	Journal des achats	221	20250910			F0001-2570676	20250910	Facture F0001-2570676 Grossiste Central Fictif SA	0,00	13015,36			20250930		
+445660	TVA déductible sur autres biens et services	AC	Journal des achats	221	20250910			F0001-2570676	20250910	Facture F0001-2570676 Grossiste Central Fictif SA	0,00	2603,07			20250930		
+401000	Fournisseurs	AC	Journal des achats	221	20250910	F0001	Grossiste Central Fictif SA	F0001-2570676	20250910	Facture F0001-2570676 Grossiste Central Fictif SA	15618,43	0,00	AW	20250922	20250930		
+607000	Achats de marchandises	AC	Journal des achats	222	20250912			F0006-2587977	20250912	Facture F0006-2587977 Pacific Trading Co (fictif)	0,00	5037,20			20250930	5440,18	USD
+401000	Fournisseurs	AC	Journal des achats	222	20250912	F0006	Pacific Trading Co (fictif)	F0006-2587977	20250912	Facture F0006-2587977 Pacific Trading Co (fictif)	5037,20	0,00	AF	20251113	20250930	5440,18	USD
+431000	Sécurité sociale	BQ1	Banque Alpha	223	20250915			URS-2025-08	20250915	Cotisations URSSAF	0,00	1941,12			20250930		
+512100	Banque Alpha	BQ1	Banque Alpha	223	20250915			URS-2025-08	20250915	Cotisations URSSAF	1941,12	0,00			20250930		
+401000	Fournisseurs	BQ1	Banque Alpha	224	20250915	F0001	Grossiste Central Fictif SA	VIR2500042	20250915	Virement Grossiste Central Fictif SA F0001-2585283	0,00	495,96	AU	20250915	20250930		
+512100	Banque Alpha	BQ1	Banque Alpha	224	20250915			VIR2500042	20250915	Virement Grossiste Central Fictif SA F0001-2585283	495,96	0,00			20250930		
+411000	Clients	VT	Journal des ventes	225	20250916	C0002	Société Bœuf & Cie SARL	FA2500040	20250916	Facture FA2500040 Société Bœuf & Cie SARL	0,00	729,84	AD	20251013	20250930		
+707000	Ventes de marchandises	VT	Journal des ventes	225	20250916			FA2500040	20250916	Facture FA2500040 Société Bœuf & Cie SARL	608,20	0,00			20250930		
+445710	TVA collectée	VT	Journal des ventes	225	20250916			FA2500040	20250916	Facture FA2500040 Société Bœuf & Cie SARL	121,64	0,00			20250930		
+607000	Achats de marchandises	AC	Journal des achats	226	20250918			F0001-2575094	20250918	Facture F0001-2575094 Grossiste Central Fictif SA	0,00	13946,33			20250930		
+445660	TVA déductible sur autres biens et services	AC	Journal des achats	226	20250918			F0001-2575094	20250918	Facture F0001-2575094 Grossiste Central Fictif SA	0,00	2789,27			20250930		
+401000	Fournisseurs	AC	Journal des achats	226	20250918	F0001	Grossiste Central Fictif SA	F0001-2575094	20250918	Facture F0001-2575094 Grossiste Central Fictif SA	16735,60	0,00	AX	20250929	20250930		
+401000	Fournisseurs	BQ1	Banque Alpha	227	20250918	F0001	Grossiste Central Fictif SA	VIR2500043	20250918	Virement Grossiste Central Fictif SA F0001-2538258	0,00	793,93	AV	20250918	20250930		
+512100	Banque Alpha	BQ1	Banque Alpha	227	20250918			VIR2500043	20250918	Virement Grossiste Central Fictif SA F0001-2538258	793,93	0,00			20250930		
+445710	TVA collectée	OD	Opérations diverses	228	20250922			CA3-2025-08	20250922	Déclaration de TVA 08/2025	0,00	6668,01			20250930		
+445660	TVA déductible sur autres biens et services	OD	Opérations diverses	228	20250922			CA3-2025-08	20250922	Déclaration de TVA 08/2025	6659,68	0,00			20250930		
+445510	TVA à décaisser	OD	Opérations diverses	228	20250922			CA3-2025-08	20250922	Déclaration de TVA 08/2025	8,33	0,00			20250930		
+445510	TVA à décaisser	BQ1	Banque Alpha	229	20250922			TVA-2025-08	20250922	Paiement TVA 08/2025	0,00	8,33			20250930		
+512100	Banque Alpha	BQ1	Banque Alpha	229	20250922			TVA-2025-08	20250922	Paiement TVA 08/2025	8,33	0,00			20250930		
+512200	Banque Bêta	BQ2	Banque Bêta	230	20250922			RC2500036	20250922	Règlement Atelier Bœuf & Cie SAS FA2500031	0,00	25091,30			20250930		
+411000	Clients	BQ2	Banque Bêta	230	20250922	C0004	Atelier Bœuf & Cie SAS	RC2500036	20250922	Règlement Atelier Bœuf & Cie SAS FA2500031	25091,30	0,00	AF	20250922	20250930		
+512100	Banque Alpha	BQ1	Banque Alpha	231	20250922			RC2500037	20250922	Règlement Atelier du Moulin SNC FA2500033	0,00	897,06			20250930		
+411000	Clients	BQ1	Banque Alpha	231	20250922	C0007	Atelier du Moulin SNC	RC2500037	20250922	Règlement Atelier du Moulin SNC FA2500033	897,06	0,00	AB	20250922	20250930		
+401000	Fournisseurs	BQ1	Banque Alpha	232	20250922	F0001	Grossiste Central Fictif SA	VIR2500044	20250922	Virement Grossiste Central Fictif SA F0001-2570676	0,00	15618,43	AW	20250922	20250930		
+512100	Banque Alpha	BQ1	Banque Alpha	232	20250922			VIR2500044	20250922	Virement Grossiste Central Fictif SA F0001-2570676	15618,43	0,00			20250930		
+607000	Achats de marchandises	AC	Journal des achats	233	20250926			F0001-2537345	20250926	Facture F0001-2537345 Grossiste Central Fictif SA	0,00	2005,83			20250930		
+445660	TVA déductible sur autres biens et services	AC	Journal des achats	233	20250926			F0001-2537345	20250926	Facture F0001-2537345 Grossiste Central Fictif SA	0,00	401,17			20250930		
+401000	Fournisseurs	AC	Journal des achats	233	20250926	F0001	Grossiste Central Fictif SA	F0001-2537345	20250926	Facture F0001-2537345 Grossiste Central Fictif SA	2407,00	0,00	AY	20251006	20250930		
+512100	Banque Alpha	BQ1	Banque Alpha	234	20250929			RC2500038	20250929	Règlement Boutique Lafontaine SNC FA2500029	0,00	8195,45			20250930		
+411000	Clients	BQ1	Banque Alpha	234	20250929	C0001	Boutique Lafontaine SNC	RC2500038	20250929	Règlement Boutique Lafontaine SNC FA2500029	8195,45	0,00	AE	20250929	20250930		
+401000	Fournisseurs	BQ1	Banque Alpha	235	20250929	F0001	Grossiste Central Fictif SA	VIR2500045	20250929	Virement Grossiste Central Fictif SA F0001-2575094	0,00	16735,60	AX	20250929	20250930		
+512100	Banque Alpha	BQ1	Banque Alpha	235	20250929			VIR2500045	20250929	Virement Grossiste Central Fictif SA F0001-2575094	16735,60	0,00			20250930		
+411000	Clients	VT	Journal des ventes	236	20250930	C0004	Atelier Bœuf & Cie SAS	FA2500041	20250930	Facture FA2500041 Atelier Bœuf & Cie SAS	0,00	393,55	AG	20251117	20250930		
+707000	Ventes de marchandises	VT	Journal des ventes	236	20250930			FA2500041	20250930	Facture FA2500041 Atelier Bœuf & Cie SAS	327,96	0,00			20250930		
+445710	TVA collectée	VT	Journal des ventes	236	20250930			FA2500041	20250930	Facture FA2500041 Atelier Bœuf & Cie SAS	65,59	0,00			20250930		
+627000	Services bancaires et assimilés	BQ1	Banque Alpha	237	20250930			FRAIS-2025-09	20250930	Frais bancaires	0,00	44,46			20250930		
+512100	Banque Alpha	BQ1	Banque Alpha	237	20250930			FRAIS-2025-09	20250930	Frais bancaires	44,46	0,00			20250930		
+627000	Services bancaires et assimilés	BQ2	Banque Bêta	238	20250930			FRAIS-2025-09	20250930	Frais bancaires	0,00	60,48			20250930		
+512200	Banque Bêta	BQ2	Banque Bêta	238	20250930			FRAIS-2025-09	20250930	Frais bancaires	60,48	0,00			20250930		
+641100	Salaires, appointements	OD	Opérations diverses	239	20250930			PAIE-2025-09	20250930	Salaires 09/2025	0,00	3014,00			20250930		
+645100	Cotisations à l'URSSAF	OD	Opérations diverses	239	20250930			PAIE-2025-09	20250930	Salaires 09/2025	0,00	1265,88			20250930		
+421000	Personnel - rémunérations dues	OD	Opérations diverses	239	20250930			PAIE-2025-09	20250930	Salaires 09/2025	2350,92	0,00			20250930		
+431000	Sécurité sociale	OD	Opérations diverses	239	20250930			PAIE-2025-09	20250930	Salaires 09/2025	1928,96	0,00			20250930		
+421000	Personnel - rémunérations dues	BQ1	Banque Alpha	240	20250930			SAL-2025-09	20250930	Virement salaires 09/2025	0,00	2350,92			20250930		
+512100	Banque Alpha	BQ1	Banque Alpha	240	20250930			SAL-2025-09	20250930	Virement salaires 09/2025	2350,92	0,00			20250930		
+613200	Locations immobilières	AC	Journal des achats	241	20251001			LOY-2025-10	20251001	Loyer 10/2025 entrepôt	0,00	240,00			20251031		
+445660	TVA déductible sur autres biens et services	AC	Journal des achats	241	20251001			LOY-2025-10	20251001	Loyer 10/2025 entrepôt	0,00	48,00			20251031		
+401000	Fournisseurs	AC	Journal des achats	241	20251001	F0002	SCI des Entrepôts Fictifs	LOY-2025-10	20251001	Loyer 10/2025 entrepôt	288,00	0,00	AJ	20251006	20251031		
+607000	Achats de marchandises	AC	Journal des achats	242	20251001			F0006-2539914	20251001	Facture F0006-2539914 Pacific Trading Co (fictif)	0,00	12782,86			20251031	13805,49	USD
+401000	Fournisseurs	AC	Journal des achats	242	20251001	F0006	Pacific Trading Co (fictif)	F0006-2539914	20251001	Facture F0006-2539914 Pacific Trading Co (fictif)	12782,86	0,00	AG	20251208	20251031	13805,49	USD
+512100	Banque Alpha	BQ1	Banque Alpha	243	20251003			RC2500039	20251003	Règlement Boutique Lafontaine SNC FA2500030	0,00	1844,75			20251031		
+411000	Clients	BQ1	Banque Alpha	243	20251003	C0001	Boutique Lafontaine SNC	RC2500039	20251003	Règlement Boutique Lafontaine SNC FA2500030	1844,75	0,00			20251031		
+512200	Banque Bêta	BQ2	Banque Bêta	244	20251003			RC2500040	20251003	Règlement Société Bœuf & Cie SARL FA2500036	0,00	120,91			20251031		
+411000	Clients	BQ2	Banque Bêta	244	20251003	C0002	Société Bœuf & Cie SARL	RC2500040	20251003	Règlement Société Bœuf & Cie SARL FA2500036	120,91	0,00			20251031		
+164000	Emprunts auprès des établissements de crédit	BQ1	Banque Alpha	245	20251006			ECH-2025-10	20251006	Échéance emprunt Banque Alpha	0,00	160,00			20251031		
+661100	Intérêts des emprunts et dettes	BQ1	Banque Alpha	245	20251006			ECH-2025-10	20251006	Échéance emprunt Banque Alpha	0,00	27,20			20251031		
+512100	Banque Alpha	BQ1	Banque Alpha	245	20251006			ECH-2025-10	20251006	Échéance emprunt Banque Alpha	187,20	0,00			20251031		
+401000	Fournisseurs	BQ1	Banque Alpha	246	20251006	F0003	Négoce Mirabeau SARL	VIR2500046	20251006	Virement Négoce Mirabeau SARL F0003-2510998	0,00	15231,61	AD	20251006	20251031		
+512100	Banque Alpha	BQ1	Banque Alpha	246	20251006			VIR2500046	20251006	Virement Négoce Mirabeau SARL F0003-2510998	15231,61	0,00			20251031		
+401000	Fournisseurs	BQ1	Banque Alpha	247	20251006	F0001	Grossiste Central Fictif SA	VIR2500047	20251006	Virement Grossiste Central Fictif SA F0001-2537345	0,00	2407,00	AY	20251006	20251031		
+512100	Banque Alpha	BQ1	Banque Alpha	247	20251006			VIR2500047	20251006	Virement Grossiste Central Fictif SA F0001-2537345	2407,00	0,00			20251031		
+401000	Fournisseurs	BQ1	Banque Alpha	248	20251006	F0002	SCI des Entrepôts Fictifs	VIR2500048	20251006	Virement SCI des Entrepôts Fictifs LOY-2025-10	0,00	288,00	AJ	20251006	20251031		
+512100	Banque Alpha	BQ1	Banque Alpha	248	20251006			VIR2500048	20251006	Virement SCI des Entrepôts Fictifs LOY-2025-10	288,00	0,00			20251031		
+411000	Clients	VT	Journal des ventes	249	20251008	C0003	Établissements du Littoral EURL	FA2500042	20251008	Facture FA2500042 Établissements du Littoral EURL	0,00	4456,01			20251031		
+707000	Ventes de marchandises	VT	Journal des ventes	249	20251008			FA2500042	20251008	Facture FA2500042 Établissements du Littoral EURL	3713,34	0,00			20251031		
+445710	TVA collectée	VT	Journal des ventes	249	20251008			FA2500042	20251008	Facture FA2500042 Établissements du Littoral EURL	742,67	0,00			20251031		
+607000	Achats de marchandises	AC	Journal des achats	250	20251008			F0006-2525366	20251008	Facture F0006-2525366 Pacific Trading Co (fictif)	0,00	20532,18			20251031	22174,75	USD
+401000	Fournisseurs	AC	Journal des achats	250	20251008	F0006	Pacific Trading Co (fictif)	F0006-2525366	20251008	Facture F0006-2525366 Pacific Trading Co (fictif)	20532,18	0,00	AH	20251216	20251031	22174,75	USD
+411000	Clients	VT	Journal des ventes	251	20251009	C0001	Boutique Lafontaine SNC	FA2500043	20251009	Facture FA2500043 Boutique Lafontaine SNC	0,00	4146,71	AI	20251202	20251031		
+707000	Ventes de marchandises	VT	Journal des ventes	251	20251009			FA2500043	20251009	Facture FA2500043 Boutique Lafontaine SNC	3455,59	0,00			20251031		
+445710	TVA collectée	VT	Journal des ventes	251	20251009			FA2500043	20251009	Facture FA2500043 Boutique Lafontaine SNC	691,12	0,00			20251031		
+411000	Clients	VT	Journal des ventes	252	20251010	C0001	Boutique Lafontaine SNC	FA2500044	20251010	Facture FA2500044 Boutique Lafontaine SNC	0,00	189,16	AJ	20251208	20251031		
+707000	Ventes de marchandises	VT	Journal des ventes	252	20251010			FA2500044	20251010	Facture FA2500044 Boutique Lafontaine SNC	157,63	0,00			20251031		
+445710	TVA collectée	VT	Journal des ventes	252	20251010			FA2500044	20251010	Facture FA2500044 Boutique Lafontaine SNC	31,53	0,00			20251031		
+411000	Clients	VT	Journal des ventes	253	20251013	C0005	Atelier Grand Large SNC	FA2500045	20251013	Facture FA2500045 Atelier Grand Large SNC	0,00	13381,00	AE	20251110	20251031		
+707000	Ventes de marchandises	VT	Journal des ventes	253	20251013			FA2500045	20251013	Facture FA2500045 Atelier Grand Large SNC	11150,83	0,00			20251031		
+445710	TVA collectée	VT	Journal des ventes	253	20251013			FA2500045	20251013	Facture FA2500045 Atelier Grand Large SNC	2230,17	0,00			20251031		
+512200	Banque Bêta	BQ2	Banque Bêta	254	20251013			RC2500041	20251013	Règlement Atelier Bœuf & Cie SAS FA2500037	0,00	1487,24			20251031		
+411000	Clients	BQ2	Banque Bêta	254	20251013	C0004	Atelier Bœuf & Cie SAS	RC2500041	20251013	Règlement Atelier Bœuf & Cie SAS FA2500037	1487,24	0,00			20251031		
+512200	Banque Bêta	BQ2	Banque Bêta	255	20251013			RC2500042	20251013	Règlement Société Bœuf & Cie SARL FA2500040	0,00	729,84			20251031		
+411000	Clients	BQ2	Banque Bêta	255	20251013	C0002	Société Bœuf & Cie SARL	RC2500042	20251013	Règlement Société Bœuf & Cie SARL FA2500040	729,84	0,00	AD	20251013	20251031		
+431000	Sécurité sociale	BQ1	Banque Alpha	256	20251015			URS-2025-09	20251015	Cotisations URSSAF	0,00	1928,96			20251031		
+512100	Banque Alpha	BQ1	Banque Alpha	256	20251015			URS-2025-09	20251015	Cotisations URSSAF	1928,96	0,00			20251031		
+607000	Achats de marchandises	AC	Journal des achats	257	20251016			F0003-2555215	20251016	Facture F0003-2555215 Négoce Mirabeau SARL	0,00	21328,99			20251031		
+445660	TVA déductible sur autres biens et services	AC	Journal des achats	257	20251016			F0003-2555215	20251016	Facture F0003-2555215 Négoce Mirabeau SARL	0,00	4265,80			20251031		
+401000	Fournisseurs	AC	Journal des achats	257	20251016	F0003	Négoce Mirabeau SARL	F0003-2555215	20251016	Facture F0003-2555215 Négoce Mirabeau SARL	25594,79	0,00	AE	20251128	20251031		
+445710	TVA collectée	OD	Opérations diverses	258	20251020			CA3-2025-09	20251020	Déclaration de TVA 09/2025	0,00	5759,60			20251031		
+445660	TVA déductible sur autres biens et services	OD	Opérations diverses	258	20251020			CA3-2025-09	20251020	Déclaration de TVA 09/2025	6056,49	0,00			20251031		
+445670	Crédit de TVA à reporter	OD	Opérations diverses	258	20251020			CA3-2025-09	20251020	Déclaration de TVA 09/2025	0,00	296,89			20251031		
+401000	Fournisseurs	BQ2	Banque Bêta	259	20251020	F0006	Pacific Trading Co (fictif)	VIR2500049	20251020	Virement Pacific Trading Co (fictif) F0006-2589985	0,00	27245,76	AE	20251020	20251031	29425,42	USD
+512200	Banque Bêta	BQ2	Banque Bêta	259	20251020			VIR2500049	20251020	Virement Pacific Trading Co (fictif) F0006-2589985	27245,76	0,00			20251031		
+512100	Banque Alpha	BQ1	Banque Alpha	260	20251021			RC2500043	20251021	Règlement Boutique Lafontaine SNC FA2500032	0,00	252,82			20251031		
+411000	Clients	BQ1	Banque Alpha	260	20251021	C0001	Boutique Lafontaine SNC	RC2500043	20251021	Règlement Boutique Lafontaine SNC FA2500032	252,82	0,00	AF	20251021	20251031		
+411000	Clients	VT	Journal des ventes	261	20251022	C0002	Société Bœuf & Cie SARL	FA2500046	20251022	Facture FA2500046 Société Bœuf & Cie SARL	0,00	1679,29	AE	20251208	20251031		
+707000	Ventes de marchandises	VT	Journal des ventes	261	20251022			FA2500046	20251022	Facture FA2500046 Société Bœuf & Cie SARL	1399,41	0,00			20251031		
+445710	TVA collectée	VT	Journal des ventes	261	20251022			FA2500046	20251022	Facture FA2500046 Société Bœuf & Cie SARL	279,88	0,00			20251031		
+512100	Banque Alpha	BQ1	Banque Alpha	262	20251022			RC2500044	20251022	Règlement Atelier de la Forêt SAS FA2500034	0,00	5706,42			20251031		
+411000	Clients	BQ1	Banque Alpha	262	20251022	C0008	Atelier de la Forêt SAS	RC2500044	20251022	Règlement Atelier de la Forêt SAS FA2500034	5706,42	0,00	AG	20251022	20251031		
+411000	Clients	VT	Journal des ventes	263	20251024	C0004	Atelier Bœuf & Cie SAS	FA2500047	20251024	Facture FA2500047 Atelier Bœuf & Cie SAS	0,00	5200,66	AH	20251215	20251031		
+707000	Ventes de marchandises	VT	Journal des ventes	263	20251024			FA2500047	20251024	Facture FA2500047 Atelier Bœuf & Cie SAS	4333,88	0,00			20251031		
+445710	TVA collectée	VT	Journal des ventes	263	20251024			FA2500047	20251024	Facture FA2500047 Atelier Bœuf & Cie SAS	866,78	0,00			20251031		
+411000	Clients	VT	Journal des ventes	264	20251030	C0001	Boutique Lafontaine SNC	FA2500048	20251030	Facture FA2500048 Boutique Lafontaine SNC	0,00	3099,28	AK	20251229	20251031		
+707000	Ventes de marchandises	VT	Journal des ventes	264	20251030			FA2500048	20251030	Facture FA2500048 Boutique Lafontaine SNC	2582,73	0,00			20251031		
+445710	TVA collectée	VT	Journal des ventes	264	20251030			FA2500048	20251030	Facture FA2500048 Boutique Lafontaine SNC	516,55	0,00			20251031		
+627000	Services bancaires et assimilés	BQ1	Banque Alpha	265	20251031			FRAIS-2025-10	20251031	Frais bancaires	0,00	48,78			20251031		
+512100	Banque Alpha	BQ1	Banque Alpha	265	20251031			FRAIS-2025-10	20251031	Frais bancaires	48,78	0,00			20251031		
+627000	Services bancaires et assimilés	BQ2	Banque Bêta	266	20251031			FRAIS-2025-10	20251031	Frais bancaires	0,00	44,19			20251031		
+512200	Banque Bêta	BQ2	Banque Bêta	266	20251031			FRAIS-2025-10	20251031	Frais bancaires	44,19	0,00			20251031		
+641100	Salaires, appointements	OD	Opérations diverses	267	20251031			PAIE-2025-10	20251031	Salaires 10/2025	0,00	3093,00			20251031		
+645100	Cotisations à l'URSSAF	OD	Opérations diverses	267	20251031			PAIE-2025-10	20251031	Salaires 10/2025	0,00	1299,06			20251031		
+421000	Personnel - rémunérations dues	OD	Opérations diverses	267	20251031			PAIE-2025-10	20251031	Salaires 10/2025	2412,54	0,00			20251031		
+431000	Sécurité sociale	OD	Opérations diverses	267	20251031			PAIE-2025-10	20251031	Salaires 10/2025	1979,52	0,00			20251031		
+421000	Personnel - rémunérations dues	BQ1	Banque Alpha	268	20251031			SAL-2025-10	20251031	Virement salaires 10/2025	0,00	2412,54			20251031		
+512100	Banque Alpha	BQ1	Banque Alpha	268	20251031			SAL-2025-10	20251031	Virement salaires 10/2025	2412,54	0,00			20251031		
+613200	Locations immobilières	AC	Journal des achats	269	20251103			LOY-2025-11	20251103	Loyer 11/2025 entrepôt	0,00	240,00			20251130		
+445660	TVA déductible sur autres biens et services	AC	Journal des achats	269	20251103			LOY-2025-11	20251103	Loyer 11/2025 entrepôt	0,00	48,00			20251130		
+401000	Fournisseurs	AC	Journal des achats	269	20251103	F0002	SCI des Entrepôts Fictifs	LOY-2025-11	20251103	Loyer 11/2025 entrepôt	288,00	0,00	AK	20251110	20251130		
+512100	Banque Alpha	BQ1	Banque Alpha	270	20251103			RC2500045	20251103	Règlement Boutique Lafontaine SNC FA2500035	0,00	4607,58			20251130		
+411000	Clients	BQ1	Banque Alpha	270	20251103	C0001	Boutique Lafontaine SNC	RC2500045	20251103	Règlement Boutique Lafontaine SNC FA2500035	4607,58	0,00			20251130		
+411000	Clients	VT	Journal des ventes	271	20251104	C0003	Établissements du Littoral EURL	FA2500049	20251104	Facture FA2500049 Établissements du Littoral EURL	0,00	22296,97	AD	20251229	20251130		
+707000	Ventes de marchandises	VT	Journal des ventes	271	20251104			FA2500049	20251104	Facture FA2500049 Établissements du Littoral EURL	18580,81	0,00			20251130		
+445710	TVA collectée	VT	Journal des ventes	271	20251104			FA2500049	20251104	Facture FA2500049 Établissements du Littoral EURL	3716,16	0,00			20251130		
+164000	Emprunts auprès des établissements de crédit	BQ1	Banque Alpha	272	20251105			ECH-2025-11	20251105	Échéance emprunt Banque Alpha	0,00	160,00			20251130		
+661100	Intérêts des emprunts et dettes	BQ1	Banque Alpha	272	20251105			ECH-2025-11	20251105	Échéance emprunt Banque Alpha	0,00	26,67			20251130		
+512100	Banque Alpha	BQ1	Banque Alpha	272	20251105			ECH-2025-11	20251105	Échéance emprunt Banque Alpha	186,67	0,00			20251130		
+411000	Clients	VT	Journal des ventes	273	20251106	C0003	Établissements du Littoral EURL	FA2500050	20251106	Facture FA2500050 Établissements du Littoral EURL	0,00	1455,96			20251130		
+707000	Ventes de marchandises	VT	Journal des ventes	273	20251106			FA2500050	20251106	Facture FA2500050 Établissements du Littoral EURL	1213,30	0,00			20251130		
+445710	TVA collectée	VT	Journal des ventes	273	20251106			FA2500050	20251106	Facture FA2500050 Établissements du Littoral EURL	242,66	0,00			20251130		
+512100	Banque Alpha	BQ1	Banque Alpha	274	20251106			RC2500046	20251106	Règlement Boutique Lafontaine SNC FA2500038	0,00	23932,69			20251130		
+411000	Clients	BQ1	Banque Alpha	274	20251106	C0001	Boutique Lafontaine SNC	RC2500046	20251106	Règlement Boutique Lafontaine SNC FA2500038	23932,69	0,00	AG	20251106	20251130		
+512100	Banque Alpha	BQ1	Banque Alpha	275	20251106			RC2500047	20251106	Règlement Boutique Lafontaine SNC FA2500039	0,00	9501,53			20251130		
+411000	Clients	BQ1	Banque Alpha	275	20251106	C0001	Boutique Lafontaine SNC	RC2500047	20251106	Règlement Boutique Lafontaine SNC FA2500039	9501,53	0,00	AH	20251106	20251130		
+512100	Banque Alpha	BQ1	Banque Alpha	276	20251110			RC2500048	20251110	Règlement Atelier Grand Large SNC FA2500045	0,00	13381,00			20251130		
+411000	Clients	BQ1	Banque Alpha	276	20251110	C0005	Atelier Grand Large SNC	RC2500048	20251110	Règlement Atelier Grand Large SNC FA2500045	13381,00	0,00	AE	20251110	20251130		
+401000	Fournisseurs	BQ1	Banque Alpha	277	20251110	F0002	SCI des Entrepôts Fictifs	VIR2500050	20251110	Virement SCI des Entrepôts Fictifs LOY-2025-11	0,00	288,00	AK	20251110	20251130		
+512100	Banque Alpha	BQ1	Banque Alpha	277	20251110			VIR2500050	20251110	Virement SCI des Entrepôts Fictifs LOY-2025-11	288,00	0,00			20251130		
+607000	Achats de marchandises	AC	Journal des achats	278	20251112			F0006-2521338	20251112	Facture F0006-2521338 Pacific Trading Co (fictif)	0,00	6394,05			20251130	6905,57	USD
+401000	Fournisseurs	AC	Journal des achats	278	20251112	F0006	Pacific Trading Co (fictif)	F0006-2521338	20251112	Facture F0006-2521338 Pacific Trading Co (fictif)	6394,05	0,00			20251130	6905,57	USD
+401000	Fournisseurs	BQ2	Banque Bêta	279	20251113	F0006	Pacific Trading Co (fictif)	VIR2500051	20251113	Virement Pacific Trading Co (fictif) F0006-2587977	0,00	5037,20	AF	20251113	20251130	5440,18	USD
+512200	Banque Bêta	BQ2	Banque Bêta	279	20251113			VIR2500051	20251113	Virement Pacific Trading Co (fictif) F0006-2587977	5037,20	0,00			20251130		
+431000	Sécurité sociale	BQ1	Banque Alpha	280	20251117			URS-2025-10	20251117	Cotisations URSSAF	0,00	1979,52			20251130		
+512100	Banque Alpha	BQ1	Banque Alpha	280	20251117			URS-2025-10	20251117	Cotisations URSSAF	1979,52	0,00			20251130		
+607000	Achats de marchandises	AC	Journal des achats	281	20251117			F0001-2564841	20251117	Facture F0001-2564841 Grossiste Central Fictif SA	0,00	2160,82			20251130		
+445660	TVA déductible sur autres biens et services	AC	Journal des achats	281	20251117			F0001-2564841	20251117	Facture F0001-2564841 Grossiste Central Fictif SA	0,00	432,16			20251130		
+401000	Fournisseurs	AC	Journal des achats	281	20251117	F0001	Grossiste Central Fictif SA	F0001-2564841	20251117	Facture F0001-2564841 Grossiste Central Fictif SA	2592,98	0,00	AZ	20251127	20251130		
+512200	Banque Bêta	BQ2	Banque Bêta	282	20251117			RC2500049	20251117	Règlement Atelier Bœuf & Cie SAS FA2500041	0,00	393,55			20251130		
+411000	Clients	BQ2	Banque Bêta	282	20251117	C0004	Atelier Bœuf & Cie SAS	RC2500049	20251117	Règlement Atelier Bœuf & Cie SAS FA2500041	393,55	0,00	AG	20251117	20251130		
+411000	Clients	VT	Journal des ventes	283	20251119	C0004	Atelier Bœuf & Cie SAS	FA2500051	20251119	Facture FA2500051 Atelier Bœuf & Cie SAS	0,00	209,36	AI	20251230	20251130		
+707000	Ventes de marchandises	VT	Journal des ventes	283	20251119			FA2500051	20251119	Facture FA2500051 Atelier Bœuf & Cie SAS	174,47	0,00			20251130		
+445710	TVA collectée	VT	Journal des ventes	283	20251119			FA2500051	20251119	Facture FA2500051 Atelier Bœuf & Cie SAS	34,89	0,00			20251130		
+445710	TVA collectée	OD	Opérations diverses	284	20251120			CA3-2025-10	20251120	Déclaration de TVA 10/2025	0,00	5358,70			20251130		
+445660	TVA déductible sur autres biens et services	OD	Opérations diverses	284	20251120			CA3-2025-10	20251120	Déclaration de TVA 10/2025	4313,80	0,00			20251130		
+445510	TVA à décaisser	OD	Opérations diverses	284	20251120			CA3-2025-10	20251120	Déclaration de TVA 10/2025	1044,90	0,00			20251130		
+445510	TVA à décaisser	BQ1	Banque Alpha	285	20251120			TVA-2025-10	20251120	Paiement TVA 10/2025	0,00	1044,90			20251130		
+512100	Banque Alpha	BQ1	Banque Alpha	285	20251120			TVA-2025-10	20251120	Paiement TVA 10/2025	1044,90	0,00			20251130		
+607000	Achats de marchandises	AC	Journal des achats	286	20251120			F0001-2594633	20251120	Facture F0001-2594633 Grossiste Central Fictif SA	0,00	6233,68			20251130		
+445660	TVA déductible sur autres biens et services	AC	Journal des achats	286	20251120			F0001-2594633	20251120	Facture F0001-2594633 Grossiste Central Fictif SA	0,00	1246,74			20251130		
+401000	Fournisseurs	AC	Journal des achats	286	20251120	F0001	Grossiste Central Fictif SA	F0001-2594633	20251120	Facture F0001-2594633 Grossiste Central Fictif SA	7480,42	0,00	BA	20251201	20251130		
+411000	Clients	VT	Journal des ventes	287	20251127	C0006	Cœur de Valmont EURL	FA2500052	20251127	Facture FA2500052 Cœur de Valmont EURL	0,00	1769,68			20251130		
+707000	Ventes de marchandises	VT	Journal des ventes	287	20251127			FA2500052	20251127	Facture FA2500052 Cœur de Valmont EURL	1474,73	0,00			20251130		
+445710	TVA collectée	VT	Journal des ventes	287	20251127			FA2500052	20251127	Facture FA2500052 Cœur de Valmont EURL	294,95	0,00			20251130		
+401000	Fournisseurs	BQ1	Banque Alpha	288	20251127	F0001	Grossiste Central Fictif SA	VIR2500052	20251127	Virement Grossiste Central Fictif SA F0001-2564841	0,00	2592,98	AZ	20251127	20251130		
+512100	Banque Alpha	BQ1	Banque Alpha	288	20251127			VIR2500052	20251127	Virement Grossiste Central Fictif SA F0001-2564841	2592,98	0,00			20251130		
+401000	Fournisseurs	AC	Journal des achats	289	20251128	F0005	Comptoir des Lilas SARL	F0005-AV01	20251128	Avoir Comptoir des Lilas SARL remise de fin d'année	0,00	540,00			20251130		
+607000	Achats de marchandises	AC	Journal des achats	289	20251128			F0005-AV01	20251128	Avoir Comptoir des Lilas SARL remise de fin d'année	450,00	0,00			20251130		
+445660	TVA déductible sur autres biens et services	AC	Journal des achats	289	20251128			F0005-AV01	20251128	Avoir Comptoir des Lilas SARL remise de fin d'année	90,00	0,00			20251130		
+401000	Fournisseurs	BQ1	Banque Alpha	290	20251128	F0003	Négoce Mirabeau SARL	VIR2500053	20251128	Virement Négoce Mirabeau SARL F0003-2555215	0,00	25594,79	AE	20251128	20251130		
+512100	Banque Alpha	BQ1	Banque Alpha	290	20251128			VIR2500053	20251128	Virement Négoce Mirabeau SARL F0003-2555215	25594,79	0,00			20251130		
+627000	Services bancaires et assimilés	BQ1	Banque Alpha	291	20251128			FRAIS-2025-11	20251128	Frais bancaires	0,00	64,35			20251130		
+512100	Banque Alpha	BQ1	Banque Alpha	291	20251128			FRAIS-2025-11	20251128	Frais bancaires	64,35	0,00			20251130		
+627000	Services bancaires et assimilés	BQ2	Banque Bêta	292	20251128			FRAIS-2025-11	20251128	Frais bancaires	0,00	59,20			20251130		
+512200	Banque Bêta	BQ2	Banque Bêta	292	20251128			FRAIS-2025-11	20251128	Frais bancaires	59,20	0,00			20251130		
+641100	Salaires, appointements	OD	Opérations diverses	293	20251128			PAIE-2025-11	20251128	Salaires 11/2025	0,00	2880,00			20251130		
+645100	Cotisations à l'URSSAF	OD	Opérations diverses	293	20251128			PAIE-2025-11	20251128	Salaires 11/2025	0,00	1209,60			20251130		
+421000	Personnel - rémunérations dues	OD	Opérations diverses	293	20251128			PAIE-2025-11	20251128	Salaires 11/2025	2246,40	0,00			20251130		
+431000	Sécurité sociale	OD	Opérations diverses	293	20251128			PAIE-2025-11	20251128	Salaires 11/2025	1843,20	0,00			20251130		
+421000	Personnel - rémunérations dues	BQ1	Banque Alpha	294	20251128			SAL-2025-11	20251128	Virement salaires 11/2025	0,00	2246,40			20251130		
+512100	Banque Alpha	BQ1	Banque Alpha	294	20251128			SAL-2025-11	20251128	Virement salaires 11/2025	2246,40	0,00			20251130		
+613200	Locations immobilières	AC	Journal des achats	295	20251201			LOY-2025-12	20251201	Loyer 12/2025 entrepôt	0,00	240,00			20251231		
+445660	TVA déductible sur autres biens et services	AC	Journal des achats	295	20251201			LOY-2025-12	20251201	Loyer 12/2025 entrepôt	0,00	48,00			20251231		
+401000	Fournisseurs	AC	Journal des achats	295	20251201	F0002	SCI des Entrepôts Fictifs	LOY-2025-12	20251201	Loyer 12/2025 entrepôt	288,00	0,00	AL	20251208	20251231		
+411000	Clients	VT	Journal des ventes	296	20251201	C0001	Boutique Lafontaine SNC	FA2500053	20251201	Facture FA2500053 Boutique Lafontaine SNC	0,00	19313,34			20251231		
+707000	Ventes de marchandises	VT	Journal des ventes	296	20251201			FA2500053	20251201	Facture FA2500053 Boutique Lafontaine SNC	16094,45	0,00			20251231		
+445710	TVA collectée	VT	Journal des ventes	296	20251201			FA2500053	20251201	Facture FA2500053 Boutique Lafontaine SNC	3218,89	0,00			20251231		
+401000	Fournisseurs	BQ1	Banque Alpha	297	20251201	F0001	Grossiste Central Fictif SA	VIR2500054	20251201	Virement Grossiste Central Fictif SA F0001-2594633	0,00	7480,42	BA	20251201	20251231		
+512100	Banque Alpha	BQ1	Banque Alpha	297	20251201			VIR2500054	20251201	Virement Grossiste Central Fictif SA F0001-2594633	7480,42	0,00			20251231		
+411000	Clients	VT	Journal des ventes	298	20251202	C0001	Boutique Lafontaine SNC	FA2500054	20251202	Facture FA2500054 Boutique Lafontaine SNC	0,00	295,13			20251231		
+707000	Ventes de marchandises	VT	Journal des ventes	298	20251202			FA2500054	20251202	Facture FA2500054 Boutique Lafontaine SNC	245,94	0,00			20251231		
+445710	TVA collectée	VT	Journal des ventes	298	20251202			FA2500054	20251202	Facture FA2500054 Boutique Lafontaine SNC	49,19	0,00			20251231		
+411000	Clients	VT	Journal des ventes	299	20251202	C0001	Boutique Lafontaine SNC	AV2500001	20251202	Avoir AV2500001 sur FA2500054	29,51	0,00			20251231		
+707000	Ventes de marchandises	VT	Journal des ventes	299	20251202			AV2500001	20251202	Avoir AV2500001 sur FA2500054	0,00	24,59			20251231		
+445710	TVA collectée	VT	Journal des ventes	299	20251202			AV2500001	20251202	Avoir AV2500001 sur FA2500054	0,00	4,92			20251231		
+512100	Banque Alpha	BQ1	Banque Alpha	300	20251202			RC2500050	20251202	Règlement Boutique Lafontaine SNC FA2500043	0,00	4146,71			20251231		
+411000	Clients	BQ1	Banque Alpha	300	20251202	C0001	Boutique Lafontaine SNC	RC2500050	20251202	Règlement Boutique Lafontaine SNC FA2500043	4146,71	0,00	AI	20251202	20251231		
+164000	Emprunts auprès des établissements de crédit	BQ1	Banque Alpha	301	20251205			ECH-2025-12	20251205	Échéance emprunt Banque Alpha	0,00	160,00			20251231		
+661100	Intérêts des emprunts et dettes	BQ1	Banque Alpha	301	20251205			ECH-2025-12	20251205	Échéance emprunt Banque Alpha	0,00	26,13			20251231		
+512100	Banque Alpha	BQ1	Banque Alpha	301	20251205			ECH-2025-12	20251205	Échéance emprunt Banque Alpha	186,13	0,00			20251231		
+411000	Clients	VT	Journal des ventes	302	20251205	C0001	Boutique Lafontaine SNC	FA2500055	20251205	Facture FA2500055 Boutique Lafontaine SNC	0,00	6450,91			20251231		
+707000	Ventes de marchandises	VT	Journal des ventes	302	20251205			FA2500055	20251205	Facture FA2500055 Boutique Lafontaine SNC	5375,76	0,00			20251231		
+445710	TVA collectée	VT	Journal des ventes	302	20251205			FA2500055	20251205	Facture FA2500055 Boutique Lafontaine SNC	1075,15	0,00			20251231		
+401000	Fournisseurs	BQ2	Banque Bêta	303	20251208	F0006	Pacific Trading Co (fictif)	VIR2500055	20251208	Virement Pacific Trading Co (fictif) F0006-2539914	0,00	12782,86	AG	20251208	20251231	13805,49	USD
+512200	Banque Bêta	BQ2	Banque Bêta	303	20251208			VIR2500055	20251208	Virement Pacific Trading Co (fictif) F0006-2539914	12782,86	0,00			20251231		
+512100	Banque Alpha	BQ1	Banque Alpha	304	20251208			RC2500051	20251208	Règlement Boutique Lafontaine SNC FA2500044	0,00	189,16			20251231		
+411000	Clients	BQ1	Banque Alpha	304	20251208	C0001	Boutique Lafontaine SNC	RC2500051	20251208	Règlement Boutique Lafontaine SNC FA2500044	189,16	0,00	AJ	20251208	20251231		
+512200	Banque Bêta	BQ2	Banque Bêta	305	20251208			RC2500052	20251208	Règlement Société Bœuf & Cie SARL FA2500046	0,00	1679,29			20251231		
+411000	Clients	BQ2	Banque Bêta	305	20251208	C0002	Société Bœuf & Cie SARL	RC2500052	20251208	Règlement Société Bœuf & Cie SARL FA2500046	1679,29	0,00	AE	20251208	20251231		
+401000	Fournisseurs	BQ1	Banque Alpha	306	20251208	F0002	SCI des Entrepôts Fictifs	VIR2500056	20251208	Virement SCI des Entrepôts Fictifs LOY-2025-12	0,00	288,00	AL	20251208	20251231		
+512100	Banque Alpha	BQ1	Banque Alpha	306	20251208			VIR2500056	20251208	Virement SCI des Entrepôts Fictifs LOY-2025-12	288,00	0,00			20251231		
+411000	Clients	VT	Journal des ventes	307	20251210	C0001	Boutique Lafontaine SNC	FA2500056	20251210	Facture FA2500056 Boutique Lafontaine SNC	0,00	3132,76			20251231		
+707000	Ventes de marchandises	VT	Journal des ventes	307	20251210			FA2500056	20251210	Facture FA2500056 Boutique Lafontaine SNC	2610,63	0,00			20251231		
+445710	TVA collectée	VT	Journal des ventes	307	20251210			FA2500056	20251210	Facture FA2500056 Boutique Lafontaine SNC	522,13	0,00			20251231		
+607000	Achats de marchandises	AC	Journal des achats	308	20251212			F0006-2597187	20251212	Facture F0006-2597187 Pacific Trading Co (fictif)	0,00	20736,20			20251231	22395,10	USD
+401000	Fournisseurs	AC	Journal des achats	308	20251212	F0006	Pacific Trading Co (fictif)	F0006-2597187	20251212	Facture F0006-2597187 Pacific Trading Co (fictif)	20736,20	0,00			20251231	22395,10	USD
+431000	Sécurité sociale	BQ1	Banque Alpha	309	20251215			URS-2025-11	20251215	Cotisations URSSAF	0,00	1843,20			20251231		
+512100	Banque Alpha	BQ1	Banque Alpha	309	20251215			URS-2025-11	20251215	Cotisations URSSAF	1843,20	0,00			20251231		
+607000	Achats de marchandises	AC	Journal des achats	310	20251215			F0003-2539839	20251215	Facture F0003-2539839 Négoce Mirabeau SARL	0,00	735,36			20251231		
+445660	TVA déductible sur autres biens et services	AC	Journal des achats	310	20251215			F0003-2539839	20251215	Facture F0003-2539839 Négoce Mirabeau SARL	0,00	147,07			20251231		
+401000	Fournisseurs	AC	Journal des achats	310	20251215	F0003	Négoce Mirabeau SARL	F0003-2539839	20251215	Facture F0003-2539839 Négoce Mirabeau SARL	882,43	0,00			20251231		
+512100	Banque Alpha	BQ1	Banque Alpha	311	20251215			RC2500053	20251215	Règlement Établissements du Littoral EURL FA2500042	0,00	4456,01			20251231		
+411000	Clients	BQ1	Banque Alpha	311	20251215	C0003	Établissements du Littoral EURL	RC2500053	20251215	Règlement Établissements du Littoral EURL FA2500042	4456,01	0,00			20251231		
+512200	Banque Bêta	BQ2	Banque Bêta	312	20251215			RC2500054	20251215	Règlement Atelier Bœuf & Cie SAS FA2500047	0,00	5200,66			20251231		
+411000	Clients	BQ2	Banque Bêta	312	20251215	C0004	Atelier Bœuf & Cie SAS	RC2500054	20251215	Règlement Atelier Bœuf & Cie SAS FA2500047	5200,66	0,00	AH	20251215	20251231		
+411000	Clients	VT	Journal des ventes	313	20251216	C0008	Atelier de la Forêt SAS	FA2500057	20251216	Facture FA2500057 Atelier de la Forêt SAS	0,00	27711,79			20251231		
+707000	Ventes de marchandises	VT	Journal des ventes	313	20251216			FA2500057	20251216	Facture FA2500057 Atelier de la Forêt SAS	23093,16	0,00			20251231		
+445710	TVA collectée	VT	Journal des ventes	313	20251216			FA2500057	20251216	Facture FA2500057 Atelier de la Forêt SAS	4618,63	0,00			20251231		
+401000	Fournisseurs	BQ2	Banque Bêta	314	20251216	F0006	Pacific Trading Co (fictif)	VIR2500057	20251216	Virement Pacific Trading Co (fictif) F0006-2525366	0,00	20532,18	AH	20251216	20251231	22174,75	USD
+512200	Banque Bêta	BQ2	Banque Bêta	314	20251216			VIR2500057	20251216	Virement Pacific Trading Co (fictif) F0006-2525366	20532,18	0,00			20251231		
+607000	Achats de marchandises	AC	Journal des achats	315	20251218			F0003-2576339	20251218	Facture F0003-2576339 Négoce Mirabeau SARL	0,00	73,79			20251231		
+445660	TVA déductible sur autres biens et services	AC	Journal des achats	315	20251218			F0003-2576339	20251218	Facture F0003-2576339 Négoce Mirabeau SARL	0,00	14,76			20251231		
+401000	Fournisseurs	AC	Journal des achats	315	20251218	F0003	Négoce Mirabeau SARL	F0003-2576339	20251218	Facture F0003-2576339 Négoce Mirabeau SARL	88,55	0,00			20251231		
+607000	Achats de marchandises	AC	Journal des achats	316	20251219			F0003-2537622	20251219	Facture F0003-2537622 Négoce Mirabeau SARL	0,00	9558,55			20251231		
+445660	TVA déductible sur autres biens et services	AC	Journal des achats	316	20251219			F0003-2537622	20251219	Facture F0003-2537622 Négoce Mirabeau SARL	0,00	1911,71			20251231		
+401000	Fournisseurs	AC	Journal des achats	316	20251219	F0003	Négoce Mirabeau SARL	F0003-2537622	20251219	Facture F0003-2537622 Négoce Mirabeau SARL	11470,26	0,00			20251231		
+445710	TVA collectée	OD	Opérations diverses	317	20251222			CA3-2025-11	20251222	Déclaration de TVA 11/2025	0,00	4288,66			20251231		
+445660	TVA déductible sur autres biens et services	OD	Opérations diverses	317	20251222			CA3-2025-11	20251222	Déclaration de TVA 11/2025	1636,90	0,00			20251231		
+445510	TVA à décaisser	OD	Opérations diverses	317	20251222			CA3-2025-11	20251222	Déclaration de TVA 11/2025	2651,76	0,00			20251231		
+445510	TVA à décaisser	BQ1	Banque Alpha	318	20251222			TVA-2025-11	20251222	Paiement TVA 11/2025	0,00	2651,76			20251231		
+512100	Banque Alpha	BQ1	Banque Alpha	318	20251222			TVA-2025-11	20251222	Paiement TVA 11/2025	2651,76	0,00			20251231		
+607000	Achats de marchandises	AC	Journal des achats	319	20251223			F0003-2583264	20251223	Facture F0003-2583264 Négoce Mirabeau SARL	0,00	19550,06			20251231		
+445660	TVA déductible sur autres biens et services	AC	Journal des achats	319	20251223			F0003-2583264	20251223	Facture F0003-2583264 Négoce Mirabeau SARL	0,00	3910,01			20251231		
+401000	Fournisseurs	AC	Journal des achats	319	20251223	F0003	Négoce Mirabeau SARL	F0003-2583264	20251223	Facture F0003-2583264 Négoce Mirabeau SARL	23460,07	0,00			20251231		
+607000	Achats de marchandises	AC	Journal des achats	320	20251224			F0006-2583671	20251224	Facture F0006-2583671 Pacific Trading Co (fictif)	0,00	9699,63			20251231	10475,60	USD
+401000	Fournisseurs	AC	Journal des achats	320	20251224	F0006	Pacific Trading Co (fictif)	F0006-2583671	20251224	Facture F0006-2583671 Pacific Trading Co (fictif)	9699,63	0,00			20251231	10475,60	USD
+411000	Clients	VT	Journal des ventes	321	20251229	C0007	Atelier du Moulin SNC	FA2500058	20251229	Facture FA2500058 Atelier du Moulin SNC	0,00	736,90			20251231		
+707000	Ventes de marchandises	VT	Journal des ventes	321	20251229			FA2500058	20251229	Facture FA2500058 Atelier du Moulin SNC	614,08	0,00			20251231		
+445710	TVA collectée	VT	Journal des ventes	321	20251229			FA2500058	20251229	Facture FA2500058 Atelier du Moulin SNC	122,82	0,00			20251231		
+512100	Banque Alpha	BQ1	Banque Alpha	322	20251229			RC2500055	20251229	Règlement Boutique Lafontaine SNC FA2500048	0,00	3099,28			20251231		
+411000	Clients	BQ1	Banque Alpha	322	20251229	C0001	Boutique Lafontaine SNC	RC2500055	20251229	Règlement Boutique Lafontaine SNC FA2500048	3099,28	0,00	AK	20251229	20251231		
+512100	Banque Alpha	BQ1	Banque Alpha	323	20251229			RC2500056	20251229	Règlement Établissements du Littoral EURL FA2500049	0,00	22296,97			20251231		
+411000	Clients	BQ1	Banque Alpha	323	20251229	C0003	Établissements du Littoral EURL	RC2500056	20251229	Règlement Établissements du Littoral EURL FA2500049	22296,97	0,00	AD	20251229	20251231		
+607000	Achats de marchandises	AC	Journal des achats	324	20251230			F0003-2578098	20251230	Facture F0003-2578098 Négoce Mirabeau SARL	0,00	167,06			20251231		
+445660	TVA déductible sur autres biens et services	AC	Journal des achats	324	20251230			F0003-2578098	20251230	Facture F0003-2578098 Négoce Mirabeau SARL	0,00	33,41			20251231		
+401000	Fournisseurs	AC	Journal des achats	324	20251230	F0003	Négoce Mirabeau SARL	F0003-2578098	20251230	Facture F0003-2578098 Négoce Mirabeau SARL	200,47	0,00			20251231		
+512200	Banque Bêta	BQ2	Banque Bêta	325	20251230			RC2500057	20251230	Règlement Atelier Bœuf & Cie SAS FA2500051	0,00	209,36			20251231		
+411000	Clients	BQ2	Banque Bêta	325	20251230	C0004	Atelier Bœuf & Cie SAS	RC2500057	20251230	Règlement Atelier Bœuf & Cie SAS FA2500051	209,36	0,00	AI	20251230	20251231		
+627000	Services bancaires et assimilés	BQ1	Banque Alpha	326	20251231			FRAIS-2025-12	20251231	Frais bancaires	0,00	26,49			20251231		
+512100	Banque Alpha	BQ1	Banque Alpha	326	20251231			FRAIS-2025-12	20251231	Frais bancaires	26,49	0,00			20251231		
+627000	Services bancaires et assimilés	BQ2	Banque Bêta	327	20251231			FRAIS-2025-12	20251231	Frais bancaires	0,00	54,37			20251231		
+512200	Banque Bêta	BQ2	Banque Bêta	327	20251231			FRAIS-2025-12	20251231	Frais bancaires	54,37	0,00			20251231		
+641100	Salaires, appointements	OD	Opérations diverses	328	20251231			PAIE-2025-12	20251231	Salaires 12/2025	0,00	2961,00			20251231		
+645100	Cotisations à l'URSSAF	OD	Opérations diverses	328	20251231			PAIE-2025-12	20251231	Salaires 12/2025	0,00	1243,62			20251231		
+421000	Personnel - rémunérations dues	OD	Opérations diverses	328	20251231			PAIE-2025-12	20251231	Salaires 12/2025	2309,58	0,00			20251231		
+431000	Sécurité sociale	OD	Opérations diverses	328	20251231			PAIE-2025-12	20251231	Salaires 12/2025	1895,04	0,00			20251231		
+421000	Personnel - rémunérations dues	BQ1	Banque Alpha	329	20251231			SAL-2025-12	20251231	Virement salaires 12/2025	0,00	2309,58			20251231		
+512100	Banque Alpha	BQ1	Banque Alpha	329	20251231			SAL-2025-12	20251231	Virement salaires 12/2025	2309,58	0,00			20251231		
+681120	Dotations aux amortissements des immobilisations corporelles	OD	Opérations diverses	330	20251231			INV-AMORT	20251231	Dotations aux amortissements de l'exercice	0,00	1280,00			20251231		
+281540	Amortissements du matériel industriel	OD	Opérations diverses	330	20251231			INV-AMORT	20251231	Dotations aux amortissements de l'exercice	1280,00	0,00			20251231		
+681120	Dotations aux amortissements des immobilisations corporelles	OD	Opérations diverses	330	20251231			INV-AMORT	20251231	Dotations aux amortissements de l'exercice	0,00	560,00			20251231		
+281820	Amortissements du matériel de transport	OD	Opérations diverses	330	20251231			INV-AMORT	20251231	Dotations aux amortissements de l'exercice	560,00	0,00			20251231		
+681120	Dotations aux amortissements des immobilisations corporelles	OD	Opérations diverses	330	20251231			INV-AMORT	20251231	Dotations aux amortissements de l'exercice	0,00	320,00			20251231		
+281830	Amortissements du matériel de bureau	OD	Opérations diverses	330	20251231			INV-AMORT	20251231	Dotations aux amortissements de l'exercice	320,00	0,00			20251231		
+603700	Variation des stocks de marchandises	OD	Opérations diverses	331	20251231			INV-STOCK	20251231	Variation des stocks de marchandises	0,00	12000,00			20251231		
+370000	Stocks de marchandises	OD	Opérations diverses	331	20251231			INV-STOCK	20251231	Variation des stocks de marchandises	12000,00	0,00			20251231		
+370000	Stocks de marchandises	OD	Opérations diverses	331	20251231			INV-STOCK	20251231	Variation des stocks de marchandises	0,00	11119,00			20251231		
+603700	Variation des stocks de marchandises	OD	Opérations diverses	331	20251231			INV-STOCK	20251231	Variation des stocks de marchandises	11119,00	0,00			20251231		
+607000	Achats de marchandises	OD	Opérations diverses	332	20251231			INV-FNP	20251231	Factures non parvenues	0,00	1480,00			20251231		
+445860	TVA sur factures non parvenues	OD	Opérations diverses	332	20251231			INV-FNP	20251231	Factures non parvenues	0,00	296,00			20251231		
+408100	Fournisseurs - factures non parvenues	OD	Opérations diverses	332	20251231			INV-FNP	20251231	Factures non parvenues	1776,00	0,00			20251231		
+418100	Clients - factures à établir	OD	Opérations diverses	333	20251231			INV-FAE	20251231	Factures à établir	0,00	921,60			20251231		
+707000	Ventes de marchandises	OD	Opérations diverses	333	20251231			INV-FAE	20251231	Factures à établir	768,00	0,00			20251231		
+445870	TVA sur factures à établir	OD	Opérations diverses	333	20251231			INV-FAE	20251231	Factures à établir	153,60	0,00			20251231		
+486000	Charges constatées d'avance	OD	Opérations diverses	334	20251231			INV-CCA	20251231	Charges constatées d'avance (loyer)	0,00	120,00			20251231		
+613200	Locations immobilières	OD	Opérations diverses	334	20251231			INV-CCA	20251231	Charges constatées d'avance (loyer)	120,00	0,00			20251231		

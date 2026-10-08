@@ -17,7 +17,9 @@
     "check:securite": "node scripts/check-securite.ts",
     "veille:test": "node scripts/veille/diagnostic.ts",
     "veille:collecte": "node scripts/veille/collecte.ts",
-    "veille:explorer-suivi": "node scripts/veille/explorer-suivi.ts"
+    "veille:explorer-suivi": "node scripts/veille/explorer-suivi.ts",
+    "fec:fictifs": "node scripts/generer-fec-fictifs.ts",
+    "fec:gros": "node scripts/generer-fec-fictifs.ts --gros"
   },
   "devDependencies": {
     "@types/node": "^26.6.4",

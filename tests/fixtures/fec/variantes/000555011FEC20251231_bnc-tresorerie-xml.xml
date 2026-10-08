@@ -1,0 +1,2791 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<comptabilite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="formatA47A-I-VIII-7.xsd">
+  <exercice>
+    <DateCloture>2025-12-31</DateCloture>
+    <journal>
+      <JournalCode>AN</JournalCode>
+      <JournalLib>A-nouveaux</JournalLib>
+      <ecriture>
+        <EcritureNum>1</EcritureNum>
+        <EcritureDate>2025-01-01</EcritureDate>
+        <EcritureLib>A nouveaux</EcritureLib>
+        <PieceRef>AN</PieceRef>
+        <PieceDate>2025-01-01</PieceDate>
+        <ValidDate>2025-01-31</ValidDate>
+        <DateRglt>2025-01-01</DateRglt>
+        <ModeRglt>Report</ModeRglt>
+        <NatOp>Reprise du solde de trésorerie</NatOp>
+        <ligne>
+          <CompteNum>512000</CompteNum>
+          <CompteLib>Banque</CompteLib>
+          <Debit>10701.64</Debit>
+        </ligne>
+        <ligne>
+          <CompteNum>108000</CompteNum>
+          <CompteLib>Compte de l'exploitant</CompteLib>
+          <Credit>10701.64</Credit>
+        </ligne>
+      </ecriture>
+    </journal>
+    <journal>
+      <JournalCode>BQ</JournalCode>
+      <JournalLib>Banque</JournalLib>
+      <ecriture>
+        <EcritureNum>2</EcritureNum>
+        <EcritureDate>2025-01-08</EcritureDate>
+        <EcritureLib>Abonnement logiciel de CAO</EcritureLib>
+        <PieceRef>D0001</PieceRef>
+        <PieceDate>2025-01-03</PieceDate>
+        <ValidDate>2025-01-31</ValidDate>
+        <DateRglt>2025-01-08</DateRglt>
+        <ModeRglt>VIR</ModeRglt>
+        <NatOp>Abonnement logiciel de CAO</NatOp>
+        <ligne>
+          <CompteNum>651000</CompteNum>
+          <CompteLib>Licences logicielles</CompteLib>
+          <Debit>99.00</Debit>
+        </ligne>
+        <ligne>
+          <CompteNum>512000</CompteNum>
+          <CompteLib>Banque</CompteLib>
+          <Credit>99.00</Credit>
+        </ligne>
+      </ecriture>
+      <ecriture>
+        <EcritureNum>3</EcritureNum>
+        <EcritureDate>2025-01-09</EcritureDate>
+        <EcritureLib>Honoraires mission de maîtrise d'œuvre CLI003</EcritureLib>
+        <PieceRef>R0002</PieceRef>
+        <PieceDate>2025-01-01</PieceDate>
+        <ValidDate>2025-01-31</ValidDate>
+        <DateRglt>2025-01-09</DateRglt>
+        <ModeRglt>CHQ</ModeRglt>
+        <NatOp>Honoraires mission de maîtrise d'œuvre</NatOp>
+        <IdClient>CLI003</IdClient>
+        <ligne>
+          <CompteNum>512000</CompteNum>
+          <CompteLib>Banque</CompteLib>
+          <Debit>8629.82</Debit>
+        </ligne>
+        <ligne>
+          <CompteNum>706000</CompteNum>
+          <CompteLib>Honoraires</CompteLib>
+          <Credit>8629.82</Credit>
+        </ligne>
+      </ecriture>
+      <ecriture>
+        <EcritureNum>4</EcritureNum>
+        <EcritureDate>2025-01-10</EcritureDate>
+        <EcritureLib>Honoraires esquisse CLI025</EcritureLib>
+        <PieceRef>R0003</PieceRef>
+        <PieceDate>2025-01-09</PieceDate>
+        <ValidDate>2025-01-31</ValidDate>
+        <DateRglt>2025-01-10</DateRglt>
+        <ModeRglt>CB</ModeRglt>
+        <NatOp>Honoraires esquisse</NatOp>
+        <IdClient>CLI025</IdClient>
+        <ligne>
+          <CompteNum>512000</CompteNum>
+          <CompteLib>Banque</CompteLib>
+          <Debit>1060.52</Debit>
+        </ligne>
+        <ligne>
+          <CompteNum>706100</CompteNum>
+          <CompteLib>Honoraires esquisse</CompteLib>
+          <Credit>1060.52</Credit>
+        </ligne>
+      </ecriture>
+      <ecriture>
+        <EcritureNum>5</EcritureNum>
+        <EcritureDate>2025-01-13</EcritureDate>
+        <EcritureLib>Honoraires mission de maîtrise d'œuvre CLI016</EcritureLib>
+        <PieceRef>R0004</PieceRef>
+        <PieceDate>2025-01-09</PieceDate>
+        <ValidDate>2025-01-31</ValidDate>
+        <DateRglt>2025-01-13</DateRglt>
+        <ModeRglt>CB</ModeRglt>
+        <NatOp>Honoraires mission de maîtrise d'œuvre</NatOp>
+        <IdClient>CLI016</IdClient>
+        <ligne>
+          <CompteNum>512000</CompteNum>
+          <CompteLib>Banque</CompteLib>
+          <Debit>11213.46</Debit>
+        </ligne>
+        <ligne>
+          <CompteNum>706000</CompteNum>
+          <CompteLib>Honoraires</CompteLib>
+          <Credit>11213.46</Credit>
+        </ligne>
+      </ecriture>
+      <ecriture>
+        <EcritureNum>6</EcritureNum>
+        <EcritureDate>2025-01-16</EcritureDate>
+        <EcritureLib>Fournitures</EcritureLib>
+        <PieceRef>D0005</PieceRef>
+        <PieceDate>2025-01-15</PieceDate>
+        <ValidDate>2025-01-31</ValidDate>
+        <DateRglt>2025-01-16</DateRglt>
+        <ModeRglt>VIR</ModeRglt>
+        <NatOp>Fournitures</NatOp>
+        <ligne>
+          <CompteNum>606400</CompteNum>
+          <CompteLib>Fournitures de bureau</CompteLib>
+          <Debit>66.00</Debit>
+        </ligne>
+        <ligne>
+          <CompteNum>512000</CompteNum>
+          <CompteLib>Banque</CompteLib>
+          <Credit>66.00</Credit>
+        </ligne>
+      </ecriture>
+      <ecriture>
+        <EcritureNum>7</EcritureNum>
+        <EcritureDate>2025-01-17</EcritureDate>
+        <EcritureLib>Déplacements chantier</EcritureLib>
+        <PieceRef>D0006</PieceRef>
+        <PieceDate>2025-01-11</PieceDate>
+        <ValidDate>2025-01-31</ValidDate>
+        <DateRglt>2025-01-17</DateRglt>
+        <ModeRglt>PRLV</ModeRglt>
+        <NatOp>Déplacements chantier</NatOp>
+        <ligne>
+          <CompteNum>625100</CompteNum>
+          <CompteLib>Frais de déplacement</CompteLib>
+          <Debit>35.99</Debit>
+        </ligne>
+        <ligne>
+          <CompteNum>512000</CompteNum>
+          <CompteLib>Banque</CompteLib>
+          <Credit>35.99</Credit>
+        </ligne>
+      </ecriture>
+      <ecriture>
+        <EcritureNum>8</EcritureNum>
+        <EcritureDate>2025-01-21</EcritureDate>
+        <EcritureLib>Déplacements chantier</EcritureLib>
+        <PieceRef>D0007</PieceRef>
+        <PieceDate>2025-01-17</PieceDate>
+        <ValidDate>2025-01-31</ValidDate>
+        <DateRglt>2025-01-21</DateRglt>
+        <ModeRglt>CHQ</ModeRglt>
+        <NatOp>Déplacements chantier</NatOp>
+        <ligne>
+          <CompteNum>625100</CompteNum>
+          <CompteLib>Frais de déplacement</CompteLib>
+          <Debit>24.77</Debit>
+        </ligne>
+        <ligne>
+          <CompteNum>512000</CompteNum>
+          <CompteLib>Banque</CompteLib>
+          <Credit>24.77</Credit>
+        </ligne>
+      </ecriture>
+      <ecriture>
+        <EcritureNum>9</EcritureNum>
+        <EcritureDate>2025-01-22</EcritureDate>
+        <EcritureLib>Honoraires esquisse CLI017</EcritureLib>
+        <PieceRef>R0008</PieceRef>
+        <PieceDate>2025-01-15</PieceDate>
+        <ValidDate>2025-01-31</ValidDate>
+        <DateRglt>2025-01-22</DateRglt>
+        <ModeRglt>CB</ModeRglt>
+        <NatOp>Honoraires esquisse</NatOp>
+        <IdClient>CLI017</IdClient>
+        <ligne>
+          <CompteNum>512000</CompteNum>
+          <CompteLib>Banque</CompteLib>
+          <Debit>354.24</Debit>
+        </ligne>
+        <ligne>
+          <CompteNum>706100</CompteNum>
+          <CompteLib>Honoraires esquisse</CompteLib>
+          <Credit>354.24</Credit>
+        </ligne>
+      </ecriture>
+      <ecriture>
+        <EcritureNum>10</EcritureNum>
+        <EcritureDate>2025-01-24</EcritureDate>
+        <EcritureLib>Déplacements chantier</EcritureLib>
+        <PieceRef>D0009</PieceRef>
+        <PieceDate>2025-01-14</PieceDate>
+        <ValidDate>2025-01-31</ValidDate>
+        <DateRglt>2025-01-24</DateRglt>
+        <ModeRglt>CHQ</ModeRglt>
+        <NatOp>Déplacements chantier</NatOp>
+        <ligne>
+          <CompteNum>625100</CompteNum>
+          <CompteLib>Frais de déplacement</CompteLib>
+          <Debit>230.79</Debit>
+        </ligne>
+        <ligne>
+          <CompteNum>512000</CompteNum>
+          <CompteLib>Banque</CompteLib>
+          <Credit>230.79</Credit>
+        </ligne>
+      </ecriture>
+      <ecriture>
+        <EcritureNum>11</EcritureNum>
+        <EcritureDate>2025-01-27</EcritureDate>
+        <EcritureLib>Déplacements chantier</EcritureLib>
+        <PieceRef>D0010</PieceRef>
+        <PieceDate>2025-01-20</PieceDate>
+        <ValidDate>2025-01-31</ValidDate>
+        <DateRglt>2025-01-27</DateRglt>
+        <ModeRglt>VIR</ModeRglt>
+        <NatOp>Déplacements chantier</NatOp>
+        <ligne>
+          <CompteNum>625100</CompteNum>
+          <CompteLib>Frais de déplacement</CompteLib>
+          <Debit>23.78</Debit>
+        </ligne>
+        <ligne>
+          <CompteNum>512000</CompteNum>
+          <CompteLib>Banque</CompteLib>
+          <Credit>23.78</Credit>
+        </ligne>
+      </ecriture>
+      <ecriture>
+        <EcritureNum>12</EcritureNum>
+        <EcritureDate>2025-01-29</EcritureDate>
+        <EcritureLib>Abonnement logiciel de CAO</EcritureLib>
+        <PieceRef>D0011</PieceRef>
+        <PieceDate>2025-01-25</PieceDate>
+        <ValidDate>2025-01-31</ValidDate>
+        <DateRglt>2025-01-29</DateRglt>
+        <ModeRglt>VIR</ModeRglt>
+        <NatOp>Abonnement logiciel de CAO</NatOp>
+        <ligne>
+          <CompteNum>651000</CompteNum>
+          <CompteLib>Licences logicielles</CompteLib>
+          <Debit>99.00</Debit>
+        </ligne>
+        <ligne>
+          <CompteNum>512000</CompteNum>
+          <CompteLib>Banque</CompteLib>
+          <Credit>99.00</Credit>
+        </ligne>
+      </ecriture>
+      <ecriture>
+        <EcritureNum>13</EcritureNum>
+        <EcritureDate>2025-01-30</EcritureDate>
+        <EcritureLib>Honoraires mission de maîtrise d'œuvre CLI006</EcritureLib>
+        <PieceRef>R0012</PieceRef>
+        <PieceDate>2025-01-30</PieceDate>
+        <ValidDate>2025-01-31</ValidDate>
+        <DateRglt>2025-01-30</DateRglt>
+        <ModeRglt>CHQ</ModeRglt>
+        <NatOp>Honoraires mission de maîtrise d'œuvre</NatOp>
+        <IdClient>CLI006</IdClient>
+        <ligne>
+          <CompteNum>512000</CompteNum>
+          <CompteLib>Banque</CompteLib>
+          <Debit>2964.45</Debit>
+        </ligne>
+        <ligne>
+          <CompteNum>706000</CompteNum>
+          <CompteLib>Honoraires</CompteLib>
+          <Credit>2964.45</Credit>
+        </ligne>
+      </ecriture>
+      <ecriture>
+        <EcritureNum>14</EcritureNum>
+        <EcritureDate>2025-01-31</EcritureDate>
+        <EcritureLib>Fournitures</EcritureLib>
+        <PieceRef>D0013</PieceRef>
+        <PieceDate>2025-01-26</PieceDate>
+        <ValidDate>2025-01-31</ValidDate>
+        <DateRglt>2025-01-31</DateRglt>
+        <ModeRglt>CB</ModeRglt>
+        <NatOp>Fournitures</NatOp>
+        <ligne>
+          <CompteNum>606400</CompteNum>
+          <CompteLib>Fournitures de bureau</CompteLib>
+          <Debit>318.54</Debit>
+        </ligne>
+        <ligne>
+          <CompteNum>512000</CompteNum>
+          <CompteLib>Banque</CompteLib>
+          <Credit>318.54</Credit>
+        </ligne>
+      </ecriture>
+      <ecriture>
+        <EcritureNum>15</EcritureNum>
+        <EcritureDate>2025-02-03</EcritureDate>
+        <EcritureLib>Honoraires mission de maîtrise d'œuvre CLI006</EcritureLib>
+        <PieceRef>R0014</PieceRef>
+        <PieceDate>2025-01-27</PieceDate>
+        <ValidDate>2025-02-28</ValidDate>
+        <DateRglt>2025-02-03</DateRglt>
+        <ModeRglt>PRLV</ModeRglt>
+        <NatOp>Honoraires mission de maîtrise d'œuvre</NatOp>
+        <IdClient>CLI006</IdClient>
+        <ligne>
+          <CompteNum>512000</CompteNum>
+          <CompteLib>Banque</CompteLib>
+          <Debit>968.42</Debit>
+        </ligne>
+        <ligne>
+          <CompteNum>706000</CompteNum>
+          <CompteLib>Honoraires</CompteLib>
+          <Credit>968.42</Credit>
+        </ligne>
+      </ecriture>
+      <ecriture>
+        <EcritureNum>16</EcritureNum>
+        <EcritureDate>2025-02-04</EcritureDate>
+        <EcritureLib>Honoraires mission de maîtrise d'œuvre CLI023</EcritureLib>
+        <PieceRef>R0015</PieceRef>
+        <PieceDate>2025-02-02</PieceDate>
+        <ValidDate>2025-02-28</ValidDate>
+        <DateRglt>2025-02-04</DateRglt>
+        <ModeRglt>PRLV</ModeRglt>
+        <NatOp>Honoraires mission de maîtrise d'œuvre</NatOp>
+        <IdClient>CLI023</IdClient>
+        <ligne>
+          <CompteNum>512000</CompteNum>
+          <CompteLib>Banque</CompteLib>
+          <Debit>1737.02</Debit>
+        </ligne>
+        <ligne>
+          <CompteNum>706000</CompteNum>
+          <CompteLib>Honoraires</CompteLib>
+          <Credit>1737.02</Credit>
+        </ligne>
+      </ecriture>
+      <ecriture>
+        <EcritureNum>17</EcritureNum>
+        <EcritureDate>2025-02-05</EcritureDate>
+        <EcritureLib>Fournitures</EcritureLib>
+        <PieceRef>D0016</PieceRef>
+        <PieceDate>2025-01-31</PieceDate>
+        <ValidDate>2025-02-28</ValidDate>
+        <DateRglt>2025-02-05</DateRglt>
+        <ModeRglt>VIR</ModeRglt>
+        <NatOp>Fournitures</NatOp>
+        <ligne>
+          <CompteNum>606400</CompteNum>
+          <CompteLib>Fournitures de bureau</CompteLib>
+          <Debit>34.64</Debit>
+        </ligne>
+        <ligne>
+          <CompteNum>512000</CompteNum>
+          <CompteLib>Banque</CompteLib>
+          <Credit>34.64</Credit>
+        </ligne>
+      </ecriture>
+      <ecriture>
+        <EcritureNum>18</EcritureNum>
+        <EcritureDate>2025-02-07</EcritureDate>
+        <EcritureLib>Fournitures</EcritureLib>
+        <PieceRef>D0017</PieceRef>
+        <PieceDate>2025-02-01</PieceDate>
+        <ValidDate>2025-02-28</ValidDate>
+        <DateRglt>2025-02-07</DateRglt>
+        <ModeRglt>CB</ModeRglt>
+        <NatOp>Fournitures</NatOp>
+        <ligne>
+          <CompteNum>606400</CompteNum>
+          <CompteLib>Fournitures de bureau</CompteLib>
+          <Debit>115.82</Debit>
+        </ligne>
+        <ligne>
+          <CompteNum>512000</CompteNum>
+          <CompteLib>Banque</CompteLib>
+          <Credit>115.82</Credit>
+        </ligne>
+      </ecriture>
+      <ecriture>
+        <EcritureNum>19</EcritureNum>
+        <EcritureDate>2025-02-13</EcritureDate>
+        <EcritureLib>Loyer cabinet</EcritureLib>
+        <PieceRef>D0018</PieceRef>
+        <PieceDate>2025-02-04</PieceDate>
+        <ValidDate>2025-02-28</ValidDate>
+        <DateRglt>2025-02-13</DateRglt>
+        <ModeRglt>CB</ModeRglt>
+        <NatOp>Loyer cabinet</NatOp>
+        <ligne>
+          <CompteNum>613200</CompteNum>
+          <CompteLib>Loyer du cabinet</CompteLib>
+          <Debit>1200.00</Debit>
+        </ligne>
+        <ligne>
+          <CompteNum>512000</CompteNum>
+          <CompteLib>Banque</CompteLib>
+          <Credit>1200.00</Credit>
+        </ligne>
+      </ecriture>
+      <ecriture>
+        <EcritureNum>20</EcritureNum>
+        <EcritureDate>2025-02-14</EcritureDate>
+        <EcritureLib>Loyer cabinet</EcritureLib>
+        <PieceRef>D0019</PieceRef>
+        <PieceDate>2025-02-08</PieceDate>
+        <ValidDate>2025-02-28</ValidDate>
+        <DateRglt>2025-02-14</DateRglt>
+        <ModeRglt>VIR</ModeRglt>
+        <NatOp>Loyer cabinet</NatOp>
+        <ligne>
+          <CompteNum>613200</CompteNum>
+          <CompteLib>Loyer du cabinet</CompteLib>
+          <Debit>1200.00</Debit>
+        </ligne>
+        <ligne>
+          <CompteNum>512000</CompteNum>
+          <CompteLib>Banque</CompteLib>
+          <Credit>1200.00</Credit>
+        </ligne>
+      </ecriture>
+      <ecriture>
+        <EcritureNum>21</EcritureNum>
+        <EcritureDate>2025-02-17</EcritureDate>
+        <EcritureLib>Honoraires mission de maîtrise d'œuvre CLI022</EcritureLib>
+        <PieceRef>R0020</PieceRef>
+        <PieceDate>2025-02-09</PieceDate>
+        <ValidDate>2025-02-28</ValidDate>
+        <DateRglt>2025-02-17</DateRglt>
+        <ModeRglt>VIR</ModeRglt>
+        <NatOp>Honoraires mission de maîtrise d'œuvre</NatOp>
+        <IdClient>CLI022</IdClient>
+        <ligne>
+          <CompteNum>512000</CompteNum>
+          <CompteLib>Banque</CompteLib>
+          <Debit>3377.90</Debit>
+        </ligne>
+        <ligne>
+          <CompteNum>706000</CompteNum>
+          <CompteLib>Honoraires</CompteLib>
+          <Credit>3377.90</Credit>
+        </ligne>
+      </ecriture>
+      <ecriture>
+        <EcritureNum>22</EcritureNum>
+        <EcritureDate>2025-02-18</EcritureDate>
+        <EcritureLib>Honoraires mission de maîtrise d'œuvre CLI019</EcritureLib>
+        <PieceRef>R0021</PieceRef>
+        <PieceDate>2025-02-14</PieceDate>
+        <ValidDate>2025-02-28</ValidDate>
+        <DateRglt>2025-02-18</DateRglt>
+        <ModeRglt>CHQ</ModeRglt>
+        <NatOp>Honoraires mission de maîtrise d'œuvre</NatOp>
+        <IdClient>CLI019</IdClient>
+        <ligne>
+          <CompteNum>512000</CompteNum>
+          <CompteLib>Banque</CompteLib>
+          <Debit>850.93</Debit>
+        </ligne>
+        <ligne>
+          <CompteNum>706000</CompteNum>
+          <CompteLib>Honoraires</CompteLib>
+          <Credit>850.93</Credit>
+        </ligne>
+      </ecriture>
+      <ecriture>
+        <EcritureNum>23</EcritureNum>
+        <EcritureDate>2025-02-26</EcritureDate>
+        <EcritureLib>Honoraires mission de maîtrise d'œuvre CLI017</EcritureLib>
+        <PieceRef>R0022</PieceRef>
+        <PieceDate>2025-02-17</PieceDate>
+        <ValidDate>2025-02-28</ValidDate>
+        <DateRglt>2025-02-26</DateRglt>
+        <ModeRglt>VIR</ModeRglt>
+        <NatOp>Honoraires mission de maîtrise d'œuvre</NatOp>
+        <IdClient>CLI017</IdClient>
+        <ligne>
+          <CompteNum>512000</CompteNum>
+          <CompteLib>Banque</CompteLib>
+          <Debit>11620.19</Debit>
+        </ligne>
+        <ligne>
+          <CompteNum>706000</CompteNum>
+          <CompteLib>Honoraires</CompteLib>
+          <Credit>11620.19</Credit>
+        </ligne>
+      </ecriture>
+      <ecriture>
+        <EcritureNum>24</EcritureNum>
+        <EcritureDate>2025-02-27</EcritureDate>
+        <EcritureLib>Fournitures</EcritureLib>
+        <PieceRef>D0023</PieceRef>
+        <PieceDate>2025-02-19</PieceDate>
+        <ValidDate>2025-02-28</ValidDate>
+        <DateRglt>2025-02-27</DateRglt>
+        <ModeRglt>PRLV</ModeRglt>
+        <NatOp>Fournitures</NatOp>
+        <ligne>
+          <CompteNum>606400</CompteNum>
+          <CompteLib>Fournitures de bureau</CompteLib>
+          <Debit>98.40</Debit>
+        </ligne>
+        <ligne>
+          <CompteNum>512000</CompteNum>
+          <CompteLib>Banque</CompteLib>
+          <Credit>98.40</Credit>
+        </ligne>
+      </ecriture>
+      <ecriture>
+        <EcritureNum>25</EcritureNum>
+        <EcritureDate>2025-02-28</EcritureDate>
+        <EcritureLib>Déplacements chantier</EcritureLib>
+        <PieceRef>D0024</PieceRef>
+        <PieceDate>2025-02-19</PieceDate>
+        <ValidDate>2025-02-28</ValidDate>
+        <DateRglt>2025-02-28</DateRglt>
+        <ModeRglt>VIR</ModeRglt>
+        <NatOp>Déplacements chantier</NatOp>
+        <ligne>
+          <CompteNum>625100</CompteNum>
+          <CompteLib>Frais de déplacement</CompteLib>
+          <Debit>35.04</Debit>
+        </ligne>
+        <ligne>
+          <CompteNum>512000</CompteNum>
+          <CompteLib>Banque</CompteLib>
+          <Credit>35.04</Credit>
+        </ligne>
+      </ecriture>
+      <ecriture>
+        <EcritureNum>26</EcritureNum>
+        <EcritureDate>2025-03-04</EcritureDate>
+        <EcritureLib>Honoraires esquisse CLI023</EcritureLib>
+        <PieceRef>R0025</PieceRef>
+        <PieceDate>2025-02-22</PieceDate>
+        <ValidDate>2025-03-31</ValidDate>
+        <DateRglt>2025-03-04</DateRglt>
+        <ModeRglt>CHQ</ModeRglt>
+        <NatOp>Honoraires esquisse</NatOp>
+        <IdClient>CLI023</IdClient>
+        <ligne>
+          <CompteNum>512000</CompteNum>
+          <CompteLib>Banque</CompteLib>
+          <Debit>309.57</Debit>
+        </ligne>
+        <ligne>
+          <CompteNum>706100</CompteNum>
+          <CompteLib>Honoraires esquisse</CompteLib>
+          <Credit>309.57</Credit>
+        </ligne>
+      </ecriture>
+      <ecriture>
+        <EcritureNum>27</EcritureNum>
+        <EcritureDate>2025-03-05</EcritureDate>
+        <EcritureLib>Honoraires mission de maîtrise d'œuvre CLI019</EcritureLib>
+        <PieceRef>R0026</PieceRef>
+        <PieceDate>2025-02-24</PieceDate>
+        <ValidDate>2025-03-31</ValidDate>
+        <DateRglt>2025-03-05</DateRglt>
+        <ModeRglt>VIR</ModeRglt>
+        <NatOp>Honoraires mission de maîtrise d'œuvre</NatOp>
+        <IdClient>CLI019</IdClient>
+        <ligne>
+          <CompteNum>512000</CompteNum>
+          <CompteLib>Banque</CompteLib>
+          <Debit>3115.48</Debit>
+        </ligne>
+        <ligne>
+          <CompteNum>706000</CompteNum>
+          <CompteLib>Honoraires</CompteLib>
+          <Credit>3115.48</Credit>
+        </ligne>
+      </ecriture>
+      <ecriture>
+        <EcritureNum>28</EcritureNum>
+        <EcritureDate>2025-03-06</EcritureDate>
+        <EcritureLib>Honoraires esquisse CLI004</EcritureLib>
+        <PieceRef>R0027</PieceRef>
+        <PieceDate>2025-03-01</PieceDate>
+        <ValidDate>2025-03-31</ValidDate>
+        <DateRglt>2025-03-06</DateRglt>
+        <ModeRglt>CHQ</ModeRglt>
+        <NatOp>Honoraires esquisse</NatOp>
+        <IdClient>CLI004</IdClient>
+        <ligne>
+          <CompteNum>512000</CompteNum>
+          <CompteLib>Banque</CompteLib>
+          <Debit>2137.59</Debit>
+        </ligne>
+        <ligne>
+          <CompteNum>706100</CompteNum>
+          <CompteLib>Honoraires esquisse</CompteLib>
+          <Credit>2137.59</Credit>
+        </ligne>
+      </ecriture>
+      <ecriture>
+        <EcritureNum>29</EcritureNum>
+        <EcritureDate>2025-03-07</EcritureDate>
+        <EcritureLib>Abonnement logiciel de CAO</EcritureLib>
+        <PieceRef>D0028</PieceRef>
+        <PieceDate>2025-03-01</PieceDate>
+        <ValidDate>2025-03-31</ValidDate>
+        <DateRglt>2025-03-07</DateRglt>
+        <ModeRglt>PRLV</ModeRglt>
+        <NatOp>Abonnement logiciel de CAO</NatOp>
+        <ligne>
+          <CompteNum>651000</CompteNum>
+          <CompteLib>Licences logicielles</CompteLib>
+          <Debit>99.00</Debit>
+        </ligne>
+        <ligne>
+          <CompteNum>512000</CompteNum>
+          <CompteLib>Banque</CompteLib>
+          <Credit>99.00</Credit>
+        </ligne>
+      </ecriture>
+      <ecriture>
+        <EcritureNum>30</EcritureNum>
+        <EcritureDate>2025-03-11</EcritureDate>
+        <EcritureLib>Honoraires mission de maîtrise d'œuvre CLI004</EcritureLib>
+        <PieceRef>R0029</PieceRef>
+        <PieceDate>2025-03-01</PieceDate>
+        <ValidDate>2025-03-31</ValidDate>
+        <DateRglt>2025-03-11</DateRglt>
+        <ModeRglt>PRLV</ModeRglt>
+        <NatOp>Honoraires mission de maîtrise d'œuvre</NatOp>
+        <IdClient>CLI004</IdClient>
+        <ligne>
+          <CompteNum>512000</CompteNum>
+          <CompteLib>Banque</CompteLib>
+          <Debit>2492.08</Debit>
+        </ligne>
+        <ligne>
+          <CompteNum>706000</CompteNum>
+          <CompteLib>Honoraires</CompteLib>
+          <Credit>2492.08</Credit>
+        </ligne>
+      </ecriture>
+      <ecriture>
+        <EcritureNum>31</EcritureNum>
+        <EcritureDate>2025-03-12</EcritureDate>
+        <EcritureLib>Honoraires esquisse CLI010</EcritureLib>
+        <PieceRef>R0030</PieceRef>
+        <PieceDate>2025-03-10</PieceDate>
+        <ValidDate>2025-03-31</ValidDate>
+        <DateRglt>2025-03-12</DateRglt>
+        <ModeRglt>CHQ</ModeRglt>
+        <NatOp>Honoraires esquisse</NatOp>
+        <IdClient>CLI010</IdClient>
+        <ligne>
+          <CompteNum>512000</CompteNum>
+          <CompteLib>Banque</CompteLib>
+          <Debit>1563.87</Debit>
+        </ligne>
+        <ligne>
+          <CompteNum>706100</CompteNum>
+          <CompteLib>Honoraires esquisse</CompteLib>
+          <Credit>1563.87</Credit>
+        </ligne>
+      </ecriture>
+      <ecriture>
+        <EcritureNum>32</EcritureNum>
+        <EcritureDate>2025-03-13</EcritureDate>
+        <EcritureLib>Loyer cabinet</EcritureLib>
+        <PieceRef>D0031</PieceRef>
+        <PieceDate>2025-03-11</PieceDate>
+        <ValidDate>2025-03-31</ValidDate>
+        <DateRglt>2025-03-13</DateRglt>
+        <ModeRglt>CB</ModeRglt>
+        <NatOp>Loyer cabinet</NatOp>
+        <ligne>
+          <CompteNum>613200</CompteNum>
+          <CompteLib>Loyer du cabinet</CompteLib>
+          <Debit>1200.00</Debit>
+        </ligne>
+        <ligne>
+          <CompteNum>512000</CompteNum>
+          <CompteLib>Banque</CompteLib>
+          <Credit>1200.00</Credit>
+        </ligne>
+      </ecriture>
+      <ecriture>
+        <EcritureNum>33</EcritureNum>
+        <EcritureDate>2025-03-19</EcritureDate>
+        <EcritureLib>Honoraires mission de maîtrise d'œuvre CLI015</EcritureLib>
+        <PieceRef>R0032</PieceRef>
+        <PieceDate>2025-03-10</PieceDate>
+        <ValidDate>2025-03-31</ValidDate>
+        <DateRglt>2025-03-19</DateRglt>
+        <ModeRglt>VIR</ModeRglt>
+        <NatOp>Honoraires mission de maîtrise d'œuvre</NatOp>
+        <IdClient>CLI015</IdClient>
+        <ligne>
+          <CompteNum>512000</CompteNum>
+          <CompteLib>Banque</CompteLib>
+          <Debit>3312.58</Debit>
+        </ligne>
+        <ligne>
+          <CompteNum>706000</CompteNum>
+          <CompteLib>Honoraires</CompteLib>
+          <Credit>3312.58</Credit>
+        </ligne>
+      </ecriture>
+      <ecriture>
+        <EcritureNum>34</EcritureNum>
+        <EcritureDate>2025-03-20</EcritureDate>
+        <EcritureLib>Déplacements chantier</EcritureLib>
+        <PieceRef>D0033</PieceRef>
+        <PieceDate>2025-03-13</PieceDate>
+        <ValidDate>2025-03-31</ValidDate>
+        <DateRglt>2025-03-20</DateRglt>
+        <ModeRglt>PRLV</ModeRglt>
+        <NatOp>Déplacements chantier</NatOp>
+        <ligne>
+          <CompteNum>625100</CompteNum>
+          <CompteLib>Frais de déplacement</CompteLib>
+          <Debit>29.62</Debit>
+        </ligne>
+        <ligne>
+          <CompteNum>512000</CompteNum>
+          <CompteLib>Banque</CompteLib>
+          <Credit>29.62</Credit>
+        </ligne>
+      </ecriture>
+      <ecriture>
+        <EcritureNum>35</EcritureNum>
+        <EcritureDate>2025-03-24</EcritureDate>
+        <EcritureLib>Honoraires mission de maîtrise d'œuvre CLI003</EcritureLib>
+        <PieceRef>R0034</PieceRef>
+        <PieceDate>2025-03-23</PieceDate>
+        <ValidDate>2025-03-31</ValidDate>
+        <DateRglt>2025-03-24</DateRglt>
+        <ModeRglt>PRLV</ModeRglt>
+        <NatOp>Honoraires mission de maîtrise d'œuvre</NatOp>
+        <IdClient>CLI003</IdClient>
+        <ligne>
+          <CompteNum>512000</CompteNum>
+          <CompteLib>Banque</CompteLib>
+          <Debit>1432.73</Debit>
+        </ligne>
+        <ligne>
+          <CompteNum>706000</CompteNum>
+          <CompteLib>Honoraires</CompteLib>
+          <Credit>1432.73</Credit>
+        </ligne>
+      </ecriture>
+      <ecriture>
+        <EcritureNum>36</EcritureNum>
+        <EcritureDate>2025-03-25</EcritureDate>
+        <EcritureLib>Déplacements chantier</EcritureLib>
+        <PieceRef>D0035</PieceRef>
+        <PieceDate>2025-03-23</PieceDate>
+        <ValidDate>2025-03-31</ValidDate>
+        <DateRglt>2025-03-25</DateRglt>
+        <ModeRglt>PRLV</ModeRglt>
+        <NatOp>Déplacements chantier</NatOp>
+        <ligne>
+          <CompteNum>625100</CompteNum>
+          <CompteLib>Frais de déplacement</CompteLib>
+          <Debit>225.22</Debit>
+        </ligne>
+        <ligne>
+          <CompteNum>512000</CompteNum>
+          <CompteLib>Banque</CompteLib>
+          <Credit>225.22</Credit>
+        </ligne>
+      </ecriture>
+      <ecriture>
+        <EcritureNum>37</EcritureNum>
+        <EcritureDate>2025-03-27</EcritureDate>
+        <EcritureLib>Loyer cabinet</EcritureLib>
+        <PieceRef>D0036</PieceRef>
+        <PieceDate>2025-03-26</PieceDate>
+        <ValidDate>2025-03-31</ValidDate>
+        <DateRglt>2025-03-27</DateRglt>
+        <ModeRglt>CB</ModeRglt>
+        <NatOp>Loyer cabinet</NatOp>
+        <ligne>
+          <CompteNum>613200</CompteNum>
+          <CompteLib>Loyer du cabinet</CompteLib>
+          <Debit>1200.00</Debit>
+        </ligne>
+        <ligne>
+          <CompteNum>512000</CompteNum>
+          <CompteLib>Banque</CompteLib>
+          <Credit>1200.00</Credit>
+        </ligne>
+      </ecriture>
+      <ecriture>
+        <EcritureNum>38</EcritureNum>
+        <EcritureDate>2025-04-04</EcritureDate>
+        <EcritureLib>Honoraires esquisse CLI018</EcritureLib>
+        <PieceRef>R0037</PieceRef>
+        <PieceDate>2025-04-04</PieceDate>
+        <ValidDate>2025-04-30</ValidDate>
+        <DateRglt>2025-04-04</DateRglt>
+        <ModeRglt>CB</ModeRglt>
+        <NatOp>Honoraires esquisse</NatOp>
+        <IdClient>CLI018</IdClient>
+        <ligne>
+          <CompteNum>512000</CompteNum>
+          <CompteLib>Banque</CompteLib>
+          <Debit>961.01</Debit>
+        </ligne>
+        <ligne>
+          <CompteNum>706100</CompteNum>
+          <CompteLib>Honoraires esquisse</CompteLib>
+          <Credit>961.01</Credit>
+        </ligne>
+      </ecriture>
+      <ecriture>
+        <EcritureNum>39</EcritureNum>
+        <EcritureDate>2025-04-07</EcritureDate>
+        <EcritureLib>Honoraires esquisse CLI009</EcritureLib>
+        <PieceRef>R0038</PieceRef>
+        <PieceDate>2025-04-04</PieceDate>
+        <ValidDate>2025-04-30</ValidDate>
+        <DateRglt>2025-04-07</DateRglt>
+        <ModeRglt>PRLV</ModeRglt>
+        <NatOp>Honoraires esquisse</NatOp>
+        <IdClient>CLI009</IdClient>
+        <ligne>
+          <CompteNum>512000</CompteNum>
+          <CompteLib>Banque</CompteLib>
+          <Debit>319.22</Debit>
+        </ligne>
+        <ligne>
+          <CompteNum>706100</CompteNum>
+          <CompteLib>Honoraires esquisse</CompteLib>
+          <Credit>319.22</Credit>
+        </ligne>
+      </ecriture>
+      <ecriture>
+        <EcritureNum>40</EcritureNum>
+        <EcritureDate>2025-04-10</EcritureDate>
+        <EcritureLib>Honoraires mission de maîtrise d'œuvre CLI015</EcritureLib>
+        <PieceRef>R0039</PieceRef>
+        <PieceDate>2025-04-01</PieceDate>
+        <ValidDate>2025-04-30</ValidDate>
+        <DateRglt>2025-04-10</DateRglt>
+        <ModeRglt>CB</ModeRglt>
+        <NatOp>Honoraires mission de maîtrise d'œuvre</NatOp>
+        <IdClient>CLI015</IdClient>
+        <ligne>
+          <CompteNum>512000</CompteNum>
+          <CompteLib>Banque</CompteLib>
+          <Debit>13546.54</Debit>
+        </ligne>
+        <ligne>
+          <CompteNum>706000</CompteNum>
+          <CompteLib>Honoraires</CompteLib>
+          <Credit>13546.54</Credit>
+        </ligne>
+      </ecriture>
+      <ecriture>
+        <EcritureNum>41</EcritureNum>
+        <EcritureDate>2025-04-11</EcritureDate>
+        <EcritureLib>Fournitures</EcritureLib>
+        <PieceRef>D0040</PieceRef>
+        <PieceDate>2025-04-09</PieceDate>
+        <ValidDate>2025-04-30</ValidDate>
+        <DateRglt>2025-04-11</DateRglt>
+        <ModeRglt>PRLV</ModeRglt>
+        <NatOp>Fournitures</NatOp>
+        <ligne>
+          <CompteNum>606400</CompteNum>
+          <CompteLib>Fournitures de bureau</CompteLib>
+          <Debit>43.76</Debit>
+        </ligne>
+        <ligne>
+          <CompteNum>512000</CompteNum>
+          <CompteLib>Banque</CompteLib>
+          <Credit>43.76</Credit>
+        </ligne>
+      </ecriture>
+      <ecriture>
+        <EcritureNum>42</EcritureNum>
+        <EcritureDate>2025-04-15</EcritureDate>
+        <EcritureLib>Honoraires mission de maîtrise d'œuvre CLI022</EcritureLib>
+        <PieceRef>R0041</PieceRef>
+        <PieceDate>2025-04-12</PieceDate>
+        <ValidDate>2025-04-30</ValidDate>
+        <DateRglt>2025-04-15</DateRglt>
+        <ModeRglt>VIR</ModeRglt>
+        <NatOp>Honoraires mission de maîtrise d'œuvre</NatOp>
+        <IdClient>CLI022</IdClient>
+        <ligne>
+          <CompteNum>512000</CompteNum>
+          <CompteLib>Banque</CompteLib>
+          <Debit>4794.66</Debit>
+        </ligne>
+        <ligne>
+          <CompteNum>706000</CompteNum>
+          <CompteLib>Honoraires</CompteLib>
+          <Credit>4794.66</Credit>
+        </ligne>
+      </ecriture>
+      <ecriture>
+        <EcritureNum>43</EcritureNum>
+        <EcritureDate>2025-04-24</EcritureDate>
+        <EcritureLib>Honoraires mission de maîtrise d'œuvre CLI004</EcritureLib>
+        <PieceRef>R0042</PieceRef>
+        <PieceDate>2025-04-23</PieceDate>
+        <ValidDate>2025-04-30</ValidDate>
+        <DateRglt>2025-04-24</DateRglt>
+        <ModeRglt>PRLV</ModeRglt>
+        <NatOp>Honoraires mission de maîtrise d'œuvre</NatOp>
+        <IdClient>CLI004</IdClient>
+        <ligne>
+          <CompteNum>512000</CompteNum>
+          <CompteLib>Banque</CompteLib>
+          <Debit>2135.90</Debit>
+        </ligne>
+        <ligne>
+          <CompteNum>706000</CompteNum>
+          <CompteLib>Honoraires</CompteLib>
+          <Credit>2135.90</Credit>
+        </ligne>
+      </ecriture>
+      <ecriture>
+        <EcritureNum>44</EcritureNum>
+        <EcritureDate>2025-04-28</EcritureDate>
+        <EcritureLib>Honoraires mission de maîtrise d'œuvre CLI008</EcritureLib>
+        <PieceRef>R0043</PieceRef>
+        <PieceDate>2025-04-26</PieceDate>
+        <ValidDate>2025-04-30</ValidDate>
+        <DateRglt>2025-04-28</DateRglt>
+        <ModeRglt>CHQ</ModeRglt>
+        <NatOp>Honoraires mission de maîtrise d'œuvre</NatOp>
+        <IdClient>CLI008</IdClient>
+        <ligne>
+          <CompteNum>512000</CompteNum>
+          <CompteLib>Banque</CompteLib>
+          <Debit>10113.35</Debit>
+        </ligne>
+        <ligne>
+          <CompteNum>706000</CompteNum>
+          <CompteLib>Honoraires</CompteLib>
+          <Credit>10113.35</Credit>
+        </ligne>
+      </ecriture>
+      <ecriture>
+        <EcritureNum>45</EcritureNum>
+        <EcritureDate>2025-04-29</EcritureDate>
+        <EcritureLib>Honoraires mission de maîtrise d'œuvre CLI012</EcritureLib>
+        <PieceRef>R0044</PieceRef>
+        <PieceDate>2025-04-22</PieceDate>
+        <ValidDate>2025-04-30</ValidDate>
+        <DateRglt>2025-04-29</DateRglt>
+        <ModeRglt>PRLV</ModeRglt>
+        <NatOp>Honoraires mission de maîtrise d'œuvre</NatOp>
+        <IdClient>CLI012</IdClient>
+        <ligne>
+          <CompteNum>512000</CompteNum>
+          <CompteLib>Banque</CompteLib>
+          <Debit>11345.47</Debit>
+        </ligne>
+        <ligne>
+          <CompteNum>706000</CompteNum>
+          <CompteLib>Honoraires</CompteLib>
+          <Credit>11345.47</Credit>
+        </ligne>
+      </ecriture>
+      <ecriture>
+        <EcritureNum>46</EcritureNum>
+        <EcritureDate>2025-04-30</EcritureDate>
+        <EcritureLib>Fournitures</EcritureLib>
+        <PieceRef>D0045</PieceRef>
+        <PieceDate>2025-04-21</PieceDate>
+        <ValidDate>2025-04-30</ValidDate>
+        <DateRglt>2025-04-30</DateRglt>
+        <ModeRglt>CHQ</ModeRglt>
+        <NatOp>Fournitures</NatOp>
+        <ligne>
+          <CompteNum>606400</CompteNum>
+          <CompteLib>Fournitures de bureau</CompteLib>
+          <Debit>24.08</Debit>
+        </ligne>
+        <ligne>
+          <CompteNum>512000</CompteNum>
+          <CompteLib>Banque</CompteLib>
+          <Credit>24.08</Credit>
+        </ligne>
+      </ecriture>
+      <ecriture>
+        <EcritureNum>47</EcritureNum>
+        <EcritureDate>2025-05-05</EcritureDate>
+        <EcritureLib>Déplacements chantier</EcritureLib>
+        <PieceRef>D0046</PieceRef>
+        <PieceDate>2025-05-05</PieceDate>
+        <ValidDate>2025-05-31</ValidDate>
+        <DateRglt>2025-05-05</DateRglt>
+        <ModeRglt>VIR</ModeRglt>
+        <NatOp>Déplacements chantier</NatOp>
+        <ligne>
+          <CompteNum>625100</CompteNum>
+          <CompteLib>Frais de déplacement</CompteLib>
+          <Debit>236.26</Debit>
+        </ligne>
+        <ligne>
+          <CompteNum>512000</CompteNum>
+          <CompteLib>Banque</CompteLib>
+          <Credit>236.26</Credit>
+        </ligne>
+      </ecriture>
+      <ecriture>
+        <EcritureNum>48</EcritureNum>
+        <EcritureDate>2025-05-07</EcritureDate>
+        <EcritureLib>Honoraires mission de maîtrise d'œuvre CLI006</EcritureLib>
+        <PieceRef>R0047</PieceRef>
+        <PieceDate>2025-05-01</PieceDate>
+        <ValidDate>2025-05-31</ValidDate>
+        <DateRglt>2025-05-07</DateRglt>
+        <ModeRglt>VIR</ModeRglt>
+        <NatOp>Honoraires mission de maîtrise d'œuvre</NatOp>
+        <IdClient>CLI006</IdClient>
+        <ligne>
+          <CompteNum>512000</CompteNum>
+          <CompteLib>Banque</CompteLib>
+          <Debit>6469.37</Debit>
+        </ligne>
+        <ligne>
+          <CompteNum>706000</CompteNum>
+          <CompteLib>Honoraires</CompteLib>
+          <Credit>6469.37</Credit>
+        </ligne>
+      </ecriture>
+      <ecriture>
+        <EcritureNum>49</EcritureNum>
+        <EcritureDate>2025-05-09</EcritureDate>
+        <EcritureLib>Honoraires esquisse CLI024</EcritureLib>
+        <PieceRef>R0048</PieceRef>
+        <PieceDate>2025-05-08</PieceDate>
+        <ValidDate>2025-05-31</ValidDate>
+        <DateRglt>2025-05-09</DateRglt>
+        <ModeRglt>CB</ModeRglt>
+        <NatOp>Honoraires esquisse</NatOp>
+        <IdClient>CLI024</IdClient>
+        <ligne>
+          <CompteNum>512000</CompteNum>
+          <CompteLib>Banque</CompteLib>
+          <Debit>714.18</Debit>
+        </ligne>
+        <ligne>
+          <CompteNum>706100</CompteNum>
+          <CompteLib>Honoraires esquisse</CompteLib>
+          <Credit>714.18</Credit>
+        </ligne>
+      </ecriture>
+      <ecriture>
+        <EcritureNum>50</EcritureNum>
+        <EcritureDate>2025-05-13</EcritureDate>
+        <EcritureLib>Déplacements chantier</EcritureLib>
+        <PieceRef>D0049</PieceRef>
+        <PieceDate>2025-05-12</PieceDate>
+        <ValidDate>2025-05-31</ValidDate>
+        <DateRglt>2025-05-13</DateRglt>
+        <ModeRglt>VIR</ModeRglt>
+        <NatOp>Déplacements chantier</NatOp>
+        <ligne>
+          <CompteNum>625100</CompteNum>
+          <CompteLib>Frais de déplacement</CompteLib>
+          <Debit>47.31</Debit>
+        </ligne>
+        <ligne>
+          <CompteNum>512000</CompteNum>
+          <CompteLib>Banque</CompteLib>
+          <Credit>47.31</Credit>
+        </ligne>
+      </ecriture>
+      <ecriture>
+        <EcritureNum>51</EcritureNum>
+        <EcritureDate>2025-05-14</EcritureDate>
+        <EcritureLib>Déplacements chantier</EcritureLib>
+        <PieceRef>D0050</PieceRef>
+        <PieceDate>2025-05-13</PieceDate>
+        <ValidDate>2025-05-31</ValidDate>
+        <DateRglt>2025-05-14</DateRglt>
+        <ModeRglt>CB</ModeRglt>
+        <NatOp>Déplacements chantier</NatOp>
+        <ligne>
+          <CompteNum>625100</CompteNum>
+          <CompteLib>Frais de déplacement</CompteLib>
+          <Debit>21.39</Debit>
+        </ligne>
+        <ligne>
+          <CompteNum>512000</CompteNum>
+          <CompteLib>Banque</CompteLib>
+          <Credit>21.39</Credit>
+        </ligne>
+      </ecriture>
+      <ecriture>
+        <EcritureNum>52</EcritureNum>
+        <EcritureDate>2025-05-19</EcritureDate>
+        <EcritureLib>Honoraires mission de maîtrise d'œuvre CLI016</EcritureLib>
+        <PieceRef>R0051</PieceRef>
+        <PieceDate>2025-05-14</PieceDate>
+        <ValidDate>2025-05-31</ValidDate>
+        <DateRglt>2025-05-19</DateRglt>
+        <ModeRglt>CHQ</ModeRglt>
+        <NatOp>Honoraires mission de maîtrise d'œuvre</NatOp>
+        <IdClient>CLI016</IdClient>
+        <ligne>
+          <CompteNum>512000</CompteNum>
+          <CompteLib>Banque</CompteLib>
+          <Debit>1538.27</Debit>
+        </ligne>
+        <ligne>
+          <CompteNum>706000</CompteNum>
+          <CompteLib>Honoraires</CompteLib>
+          <Credit>1538.27</Credit>
+        </ligne>
+      </ecriture>
+      <ecriture>
+        <EcritureNum>53</EcritureNum>
+        <EcritureDate>2025-05-20</EcritureDate>
+        <EcritureLib>Abonnement logiciel de CAO</EcritureLib>
+        <PieceRef>D0052</PieceRef>
+        <PieceDate>2025-05-14</PieceDate>
+        <ValidDate>2025-05-31</ValidDate>
+        <DateRglt>2025-05-20</DateRglt>
+        <ModeRglt>PRLV</ModeRglt>
+        <NatOp>Abonnement logiciel de CAO</NatOp>
+        <ligne>
+          <CompteNum>651000</CompteNum>
+          <CompteLib>Licences logicielles</CompteLib>
+          <Debit>99.00</Debit>
+        </ligne>
+        <ligne>
+          <CompteNum>512000</CompteNum>
+          <CompteLib>Banque</CompteLib>
+          <Credit>99.00</Credit>
+        </ligne>
+      </ecriture>
+      <ecriture>
+        <EcritureNum>54</EcritureNum>
+        <EcritureDate>2025-05-28</EcritureDate>
+        <EcritureLib>Honoraires mission de maîtrise d'œuvre CLI006</EcritureLib>
+        <PieceRef>R0053</PieceRef>
+        <PieceDate>2025-05-26</PieceDate>
+        <ValidDate>2025-05-31</ValidDate>
+        <DateRglt>2025-05-28</DateRglt>
+        <ModeRglt>CHQ</ModeRglt>
+        <NatOp>Honoraires mission de maîtrise d'œuvre</NatOp>
+        <IdClient>CLI006</IdClient>
+        <ligne>
+          <CompteNum>512000</CompteNum>
+          <CompteLib>Banque</CompteLib>
+          <Debit>2655.69</Debit>
+        </ligne>
+        <ligne>
+          <CompteNum>706000</CompteNum>
+          <CompteLib>Honoraires</CompteLib>
+          <Credit>2655.69</Credit>
+        </ligne>
+      </ecriture>
+      <ecriture>
+        <EcritureNum>55</EcritureNum>
+        <EcritureDate>2025-06-06</EcritureDate>
+        <EcritureLib>Honoraires esquisse CLI004</EcritureLib>
+        <PieceRef>R0054</PieceRef>
+        <PieceDate>2025-05-30</PieceDate>
+        <ValidDate>2025-06-30</ValidDate>
+        <DateRglt>2025-06-06</DateRglt>
+        <ModeRglt>PRLV</ModeRglt>
+        <NatOp>Honoraires esquisse</NatOp>
+        <IdClient>CLI004</IdClient>
+        <ligne>
+          <CompteNum>512000</CompteNum>
+          <CompteLib>Banque</CompteLib>
+          <Debit>1982.65</Debit>
+        </ligne>
+        <ligne>
+          <CompteNum>706100</CompteNum>
+          <CompteLib>Honoraires esquisse</CompteLib>
+          <Credit>1982.65</Credit>
+        </ligne>
+      </ecriture>
+      <ecriture>
+        <EcritureNum>56</EcritureNum>
+        <EcritureDate>2025-06-13</EcritureDate>
+        <EcritureLib>Déplacements chantier</EcritureLib>
+        <PieceRef>D0055</PieceRef>
+        <PieceDate>2025-06-05</PieceDate>
+        <ValidDate>2025-06-30</ValidDate>
+        <DateRglt>2025-06-13</DateRglt>
+        <ModeRglt>CB</ModeRglt>
+        <NatOp>Déplacements chantier</NatOp>
+        <ligne>
+          <CompteNum>625100</CompteNum>
+          <CompteLib>Frais de déplacement</CompteLib>
+          <Debit>205.60</Debit>
+        </ligne>
+        <ligne>
+          <CompteNum>512000</CompteNum>
+          <CompteLib>Banque</CompteLib>
+          <Credit>205.60</Credit>
+        </ligne>
+      </ecriture>
+      <ecriture>
+        <EcritureNum>57</EcritureNum>
+        <EcritureDate>2025-06-25</EcritureDate>
+        <EcritureLib>Déplacements chantier</EcritureLib>
+        <PieceRef>D0056</PieceRef>
+        <PieceDate>2025-06-23</PieceDate>
+        <ValidDate>2025-06-30</ValidDate>
+        <DateRglt>2025-06-25</DateRglt>
+        <ModeRglt>CHQ</ModeRglt>
+        <NatOp>Déplacements chantier</NatOp>
+        <ligne>
+          <CompteNum>625100</CompteNum>
+          <CompteLib>Frais de déplacement</CompteLib>
+          <Debit>102.50</Debit>
+        </ligne>
+        <ligne>
+          <CompteNum>512000</CompteNum>
+          <CompteLib>Banque</CompteLib>
+          <Credit>102.50</Credit>
+        </ligne>
+      </ecriture>
+      <ecriture>
+        <EcritureNum>58</EcritureNum>
+        <EcritureDate>2025-07-02</EcritureDate>
+        <EcritureLib>Déplacements chantier</EcritureLib>
+        <PieceRef>D0057</PieceRef>
+        <PieceDate>2025-06-23</PieceDate>
+        <ValidDate>2025-07-31</ValidDate>
+        <DateRglt>2025-07-02</DateRglt>
+        <ModeRglt>CHQ</ModeRglt>
+        <NatOp>Déplacements chantier</NatOp>
+        <ligne>
+          <CompteNum>625100</CompteNum>
+          <CompteLib>Frais de déplacement</CompteLib>
+          <Debit>69.21</Debit>
+        </ligne>
+        <ligne>
+          <CompteNum>512000</CompteNum>
+          <CompteLib>Banque</CompteLib>
+          <Credit>69.21</Credit>
+        </ligne>
+      </ecriture>
+      <ecriture>
+        <EcritureNum>59</EcritureNum>
+        <EcritureDate>2025-07-04</EcritureDate>
+        <EcritureLib>Abonnement logiciel de CAO</EcritureLib>
+        <PieceRef>D0058</PieceRef>
+        <PieceDate>2025-06-25</PieceDate>
+        <ValidDate>2025-07-31</ValidDate>
+        <DateRglt>2025-07-04</DateRglt>
+        <ModeRglt>PRLV</ModeRglt>
+        <NatOp>Abonnement logiciel de CAO</NatOp>
+        <ligne>
+          <CompteNum>651000</CompteNum>
+          <CompteLib>Licences logicielles</CompteLib>
+          <Debit>99.00</Debit>
+        </ligne>
+        <ligne>
+          <CompteNum>512000</CompteNum>
+          <CompteLib>Banque</CompteLib>
+          <Credit>99.00</Credit>
+        </ligne>
+      </ecriture>
+      <ecriture>
+        <EcritureNum>60</EcritureNum>
+        <EcritureDate>2025-07-07</EcritureDate>
+        <EcritureLib>Loyer cabinet</EcritureLib>
+        <PieceRef>D0059</PieceRef>
+        <PieceDate>2025-07-05</PieceDate>
+        <ValidDate>2025-07-31</ValidDate>
+        <DateRglt>2025-07-07</DateRglt>
+        <ModeRglt>CB</ModeRglt>
+        <NatOp>Loyer cabinet</NatOp>
+        <ligne>
+          <CompteNum>613200</CompteNum>
+          <CompteLib>Loyer du cabinet</CompteLib>
+          <Debit>1200.00</Debit>
+        </ligne>
+        <ligne>
+          <CompteNum>512000</CompteNum>
+          <CompteLib>Banque</CompteLib>
+          <Credit>1200.00</Credit>
+        </ligne>
+      </ecriture>
+      <ecriture>
+        <EcritureNum>61</EcritureNum>
+        <EcritureDate>2025-07-08</EcritureDate>
+        <EcritureLib>Honoraires esquisse CLI003</EcritureLib>
+        <PieceRef>R0060</PieceRef>
+        <PieceDate>2025-07-06</PieceDate>
+        <ValidDate>2025-07-31</ValidDate>
+        <DateRglt>2025-07-08</DateRglt>
+        <ModeRglt>PRLV</ModeRglt>
+        <NatOp>Honoraires esquisse</NatOp>
+        <IdClient>CLI003</IdClient>
+        <ligne>
+          <CompteNum>512000</CompteNum>
+          <CompteLib>Banque</CompteLib>
+          <Debit>493.28</Debit>
+        </ligne>
+        <ligne>
+          <CompteNum>706100</CompteNum>
+          <CompteLib>Honoraires esquisse</CompteLib>
+          <Credit>493.28</Credit>
+        </ligne>
+      </ecriture>
+      <ecriture>
+        <EcritureNum>62</EcritureNum>
+        <EcritureDate>2025-07-09</EcritureDate>
+        <EcritureLib>Déplacements chantier</EcritureLib>
+        <PieceRef>D0061</PieceRef>
+        <PieceDate>2025-07-03</PieceDate>
+        <ValidDate>2025-07-31</ValidDate>
+        <DateRglt>2025-07-09</DateRglt>
+        <ModeRglt>CB</ModeRglt>
+        <NatOp>Déplacements chantier</NatOp>
+        <ligne>
+          <CompteNum>625100</CompteNum>
+          <CompteLib>Frais de déplacement</CompteLib>
+          <Debit>27.21</Debit>
+        </ligne>
+        <ligne>
+          <CompteNum>512000</CompteNum>
+          <CompteLib>Banque</CompteLib>
+          <Credit>27.21</Credit>
+        </ligne>
+      </ecriture>
+      <ecriture>
+        <EcritureNum>63</EcritureNum>
+        <EcritureDate>2025-07-15</EcritureDate>
+        <EcritureLib>Honoraires mission de maîtrise d'œuvre CLI025</EcritureLib>
+        <PieceRef>R0062</PieceRef>
+        <PieceDate>2025-07-08</PieceDate>
+        <ValidDate>2025-07-31</ValidDate>
+        <DateRglt>2025-07-15</DateRglt>
+        <ModeRglt>PRLV</ModeRglt>
+        <NatOp>Honoraires mission de maîtrise d'œuvre</NatOp>
+        <IdClient>CLI025</IdClient>
+        <ligne>
+          <CompteNum>512000</CompteNum>
+          <CompteLib>Banque</CompteLib>
+          <Debit>3411.76</Debit>
+        </ligne>
+        <ligne>
+          <CompteNum>706000</CompteNum>
+          <CompteLib>Honoraires</CompteLib>
+          <Credit>3411.76</Credit>
+        </ligne>
+      </ecriture>
+      <ecriture>
+        <EcritureNum>64</EcritureNum>
+        <EcritureDate>2025-07-21</EcritureDate>
+        <EcritureLib>Honoraires mission de maîtrise d'œuvre CLI015</EcritureLib>
+        <PieceRef>R0063</PieceRef>
+        <PieceDate>2025-07-14</PieceDate>
+        <ValidDate>2025-07-31</ValidDate>
+        <DateRglt>2025-07-21</DateRglt>
+        <ModeRglt>PRLV</ModeRglt>
+        <NatOp>Honoraires mission de maîtrise d'œuvre</NatOp>
+        <IdClient>CLI015</IdClient>
+        <ligne>
+          <CompteNum>512000</CompteNum>
+          <CompteLib>Banque</CompteLib>
+          <Debit>6241.82</Debit>
+        </ligne>
+        <ligne>
+          <CompteNum>706000</CompteNum>
+          <CompteLib>Honoraires</CompteLib>
+          <Credit>6241.82</Credit>
+        </ligne>
+      </ecriture>
+      <ecriture>
+        <EcritureNum>65</EcritureNum>
+        <EcritureDate>2025-07-22</EcritureDate>
+        <EcritureLib>Déplacements chantier</EcritureLib>
+        <PieceRef>D0064</PieceRef>
+        <PieceDate>2025-07-17</PieceDate>
+        <ValidDate>2025-07-31</ValidDate>
+        <DateRglt>2025-07-22</DateRglt>
+        <ModeRglt>VIR</ModeRglt>
+        <NatOp>Déplacements chantier</NatOp>
+        <ligne>
+          <CompteNum>625100</CompteNum>
+          <CompteLib>Frais de déplacement</CompteLib>
+          <Debit>21.51</Debit>
+        </ligne>
+        <ligne>
+          <CompteNum>512000</CompteNum>
+          <CompteLib>Banque</CompteLib>
+          <Credit>21.51</Credit>
+        </ligne>
+      </ecriture>
+      <ecriture>
+        <EcritureNum>66</EcritureNum>
+        <EcritureDate>2025-07-23</EcritureDate>
+        <EcritureLib>Déplacements chantier</EcritureLib>
+        <PieceRef>D0065</PieceRef>
+        <PieceDate>2025-07-17</PieceDate>
+        <ValidDate>2025-07-31</ValidDate>
+        <DateRglt>2025-07-23</DateRglt>
+        <ModeRglt>PRLV</ModeRglt>
+        <NatOp>Déplacements chantier</NatOp>
+        <ligne>
+          <CompteNum>625100</CompteNum>
+          <CompteLib>Frais de déplacement</CompteLib>
+          <Debit>32.19</Debit>
+        </ligne>
+        <ligne>
+          <CompteNum>512000</CompteNum>
+          <CompteLib>Banque</CompteLib>
+          <Credit>32.19</Credit>
+        </ligne>
+      </ecriture>
+      <ecriture>
+        <EcritureNum>67</EcritureNum>
+        <EcritureDate>2025-07-24</EcritureDate>
+        <EcritureLib>Honoraires mission de maîtrise d'œuvre CLI022</EcritureLib>
+        <PieceRef>R0066</PieceRef>
+        <PieceDate>2025-07-21</PieceDate>
+        <ValidDate>2025-07-31</ValidDate>
+        <DateRglt>2025-07-24</DateRglt>
+        <ModeRglt>CHQ</ModeRglt>
+        <NatOp>Honoraires mission de maîtrise d'œuvre</NatOp>
+        <IdClient>CLI022</IdClient>
+        <ligne>
+          <CompteNum>512000</CompteNum>
+          <CompteLib>Banque</CompteLib>
+          <Debit>13904.20</Debit>
+        </ligne>
+        <ligne>
+          <CompteNum>706000</CompteNum>
+          <CompteLib>Honoraires</CompteLib>
+          <Credit>13904.20</Credit>
+        </ligne>
+      </ecriture>
+      <ecriture>
+        <EcritureNum>68</EcritureNum>
+        <EcritureDate>2025-08-05</EcritureDate>
+        <EcritureLib>Honoraires mission de maîtrise d'œuvre CLI003</EcritureLib>
+        <PieceRef>R0067</PieceRef>
+        <PieceDate>2025-07-27</PieceDate>
+        <ValidDate>2025-08-31</ValidDate>
+        <DateRglt>2025-08-05</DateRglt>
+        <ModeRglt>PRLV</ModeRglt>
+        <NatOp>Honoraires mission de maîtrise d'œuvre</NatOp>
+        <IdClient>CLI003</IdClient>
+        <ligne>
+          <CompteNum>512000</CompteNum>
+          <CompteLib>Banque</CompteLib>
+          <Debit>6896.96</Debit>
+        </ligne>
+        <ligne>
+          <CompteNum>706000</CompteNum>
+          <CompteLib>Honoraires</CompteLib>
+          <Credit>6896.96</Credit>
+        </ligne>
+      </ecriture>
+      <ecriture>
+        <EcritureNum>69</EcritureNum>
+        <EcritureDate>2025-08-06</EcritureDate>
+        <EcritureLib>Abonnement logiciel de CAO</EcritureLib>
+        <PieceRef>D0068</PieceRef>
+        <PieceDate>2025-08-03</PieceDate>
+        <ValidDate>2025-08-31</ValidDate>
+        <DateRglt>2025-08-06</DateRglt>
+        <ModeRglt>VIR</ModeRglt>
+        <NatOp>Abonnement logiciel de CAO</NatOp>
+        <ligne>
+          <CompteNum>651000</CompteNum>
+          <CompteLib>Licences logicielles</CompteLib>
+          <Debit>99.00</Debit>
+        </ligne>
+        <ligne>
+          <CompteNum>512000</CompteNum>
+          <CompteLib>Banque</CompteLib>
+          <Credit>99.00</Credit>
+        </ligne>
+      </ecriture>
+      <ecriture>
+        <EcritureNum>70</EcritureNum>
+        <EcritureDate>2025-08-07</EcritureDate>
+        <EcritureLib>Honoraires esquisse CLI004</EcritureLib>
+        <PieceRef>R0069</PieceRef>
+        <PieceDate>2025-08-06</PieceDate>
+        <ValidDate>2025-08-31</ValidDate>
+        <DateRglt>2025-08-07</DateRglt>
+        <ModeRglt>CHQ</ModeRglt>
+        <NatOp>Honoraires esquisse</NatOp>
+        <IdClient>CLI004</IdClient>
+        <ligne>
+          <CompteNum>512000</CompteNum>
+          <CompteLib>Banque</CompteLib>
+          <Debit>2148.59</Debit>
+        </ligne>
+        <ligne>
+          <CompteNum>706100</CompteNum>
+          <CompteLib>Honoraires esquisse</CompteLib>
+          <Credit>2148.59</Credit>
+        </ligne>
+      </ecriture>
+      <ecriture>
+        <EcritureNum>71</EcritureNum>
+        <EcritureDate>2025-08-13</EcritureDate>
+        <EcritureLib>Honoraires mission de maîtrise d'œuvre CLI018</EcritureLib>
+        <PieceRef>R0070</PieceRef>
+        <PieceDate>2025-08-04</PieceDate>
+        <ValidDate>2025-08-31</ValidDate>
+        <DateRglt>2025-08-13</DateRglt>
+        <ModeRglt>VIR</ModeRglt>
+        <NatOp>Honoraires mission de maîtrise d'œuvre</NatOp>
+        <IdClient>CLI018</IdClient>
+        <ligne>
+          <CompteNum>512000</CompteNum>
+          <CompteLib>Banque</CompteLib>
+          <Debit>2073.41</Debit>
+        </ligne>
+        <ligne>
+          <CompteNum>706000</CompteNum>
+          <CompteLib>Honoraires</CompteLib>
+          <Credit>2073.41</Credit>
+        </ligne>
+      </ecriture>
+      <ecriture>
+        <EcritureNum>72</EcritureNum>
+        <EcritureDate>2025-08-14</EcritureDate>
+        <EcritureLib>Honoraires mission de maîtrise d'œuvre CLI004</EcritureLib>
+        <PieceRef>R0071</PieceRef>
+        <PieceDate>2025-08-04</PieceDate>
+        <ValidDate>2025-08-31</ValidDate>
+        <DateRglt>2025-08-14</DateRglt>
+        <ModeRglt>CB</ModeRglt>
+        <NatOp>Honoraires mission de maîtrise d'œuvre</NatOp>
+        <IdClient>CLI004</IdClient>
+        <ligne>
+          <CompteNum>512000</CompteNum>
+          <CompteLib>Banque</CompteLib>
+          <Debit>985.62</Debit>
+        </ligne>
+        <ligne>
+          <CompteNum>706000</CompteNum>
+          <CompteLib>Honoraires</CompteLib>
+          <Credit>985.62</Credit>
+        </ligne>
+      </ecriture>
+      <ecriture>
+        <EcritureNum>73</EcritureNum>
+        <EcritureDate>2025-08-18</EcritureDate>
+        <EcritureLib>Honoraires mission de maîtrise d'œuvre CLI012</EcritureLib>
+        <PieceRef>R0072</PieceRef>
+        <PieceDate>2025-08-13</PieceDate>
+        <ValidDate>2025-08-31</ValidDate>
+        <DateRglt>2025-08-18</DateRglt>
+        <ModeRglt>CB</ModeRglt>
+        <NatOp>Honoraires mission de maîtrise d'œuvre</NatOp>
+        <IdClient>CLI012</IdClient>
+        <ligne>
+          <CompteNum>512000</CompteNum>
+          <CompteLib>Banque</CompteLib>
+          <Debit>3636.29</Debit>
+        </ligne>
+        <ligne>
+          <CompteNum>706000</CompteNum>
+          <CompteLib>Honoraires</CompteLib>
+          <Credit>3636.29</Credit>
+        </ligne>
+      </ecriture>
+      <ecriture>
+        <EcritureNum>74</EcritureNum>
+        <EcritureDate>2025-08-19</EcritureDate>
+        <EcritureLib>Fournitures</EcritureLib>
+        <PieceRef>D0073</PieceRef>
+        <PieceDate>2025-08-10</PieceDate>
+        <ValidDate>2025-08-31</ValidDate>
+        <DateRglt>2025-08-19</DateRglt>
+        <ModeRglt>CB</ModeRglt>
+        <NatOp>Fournitures</NatOp>
+        <ligne>
+          <CompteNum>606400</CompteNum>
+          <CompteLib>Fournitures de bureau</CompteLib>
+          <Debit>126.36</Debit>
+        </ligne>
+        <ligne>
+          <CompteNum>512000</CompteNum>
+          <CompteLib>Banque</CompteLib>
+          <Credit>126.36</Credit>
+        </ligne>
+      </ecriture>
+      <ecriture>
+        <EcritureNum>75</EcritureNum>
+        <EcritureDate>2025-08-20</EcritureDate>
+        <EcritureLib>Loyer cabinet</EcritureLib>
+        <PieceRef>D0074</PieceRef>
+        <PieceDate>2025-08-11</PieceDate>
+        <ValidDate>2025-08-31</ValidDate>
+        <DateRglt>2025-08-20</DateRglt>
+        <ModeRglt>PRLV</ModeRglt>
+        <NatOp>Loyer cabinet</NatOp>
+        <ligne>
+          <CompteNum>613200</CompteNum>
+          <CompteLib>Loyer du cabinet</CompteLib>
+          <Debit>1200.00</Debit>
+        </ligne>
+        <ligne>
+          <CompteNum>512000</CompteNum>
+          <CompteLib>Banque</CompteLib>
+          <Credit>1200.00</Credit>
+        </ligne>
+      </ecriture>
+      <ecriture>
+        <EcritureNum>76</EcritureNum>
+        <EcritureDate>2025-08-25</EcritureDate>
+        <EcritureLib>Déplacements chantier</EcritureLib>
+        <PieceRef>D0075</PieceRef>
+        <PieceDate>2025-08-19</PieceDate>
+        <ValidDate>2025-08-31</ValidDate>
+        <DateRglt>2025-08-25</DateRglt>
+        <ModeRglt>CB</ModeRglt>
+        <NatOp>Déplacements chantier</NatOp>
+        <ligne>
+          <CompteNum>625100</CompteNum>
+          <CompteLib>Frais de déplacement</CompteLib>
+          <Debit>186.84</Debit>
+        </ligne>
+        <ligne>
+          <CompteNum>512000</CompteNum>
+          <CompteLib>Banque</CompteLib>
+          <Credit>186.84</Credit>
+        </ligne>
+      </ecriture>
+      <ecriture>
+        <EcritureNum>77</EcritureNum>
+        <EcritureDate>2025-08-27</EcritureDate>
+        <EcritureLib>Fournitures</EcritureLib>
+        <PieceRef>D0076</PieceRef>
+        <PieceDate>2025-08-18</PieceDate>
+        <ValidDate>2025-08-31</ValidDate>
+        <DateRglt>2025-08-27</DateRglt>
+        <ModeRglt>PRLV</ModeRglt>
+        <NatOp>Fournitures</NatOp>
+        <ligne>
+          <CompteNum>606400</CompteNum>
+          <CompteLib>Fournitures de bureau</CompteLib>
+          <Debit>16.90</Debit>
+        </ligne>
+        <ligne>
+          <CompteNum>512000</CompteNum>
+          <CompteLib>Banque</CompteLib>
+          <Credit>16.90</Credit>
+        </ligne>
+      </ecriture>
+      <ecriture>
+        <EcritureNum>78</EcritureNum>
+        <EcritureDate>2025-08-28</EcritureDate>
+        <EcritureLib>Déplacements chantier</EcritureLib>
+        <PieceRef>D0077</PieceRef>
+        <PieceDate>2025-08-24</PieceDate>
+        <ValidDate>2025-08-31</ValidDate>
+        <DateRglt>2025-08-28</DateRglt>
+        <ModeRglt>CHQ</ModeRglt>
+        <NatOp>Déplacements chantier</NatOp>
+        <ligne>
+          <CompteNum>625100</CompteNum>
+          <CompteLib>Frais de déplacement</CompteLib>
+          <Debit>83.00</Debit>
+        </ligne>
+        <ligne>
+          <CompteNum>512000</CompteNum>
+          <CompteLib>Banque</CompteLib>
+          <Credit>83.00</Credit>
+        </ligne>
+      </ecriture>
+      <ecriture>
+        <EcritureNum>79</EcritureNum>
+        <EcritureDate>2025-09-01</EcritureDate>
+        <EcritureLib>Honoraires mission de maîtrise d'œuvre CLI011</EcritureLib>
+        <PieceRef>R0078</PieceRef>
+        <PieceDate>2025-08-25</PieceDate>
+        <ValidDate>2025-09-30</ValidDate>
+        <DateRglt>2025-09-01</DateRglt>
+        <ModeRglt>VIR</ModeRglt>
+        <NatOp>Honoraires mission de maîtrise d'œuvre</NatOp>
+        <IdClient>CLI011</IdClient>
+        <ligne>
+          <CompteNum>512000</CompteNum>
+          <CompteLib>Banque</CompteLib>
+          <Debit>8770.52</Debit>
+        </ligne>
+        <ligne>
+          <CompteNum>706000</CompteNum>
+          <CompteLib>Honoraires</CompteLib>
+          <Credit>8770.52</Credit>
+        </ligne>
+      </ecriture>
+      <ecriture>
+        <EcritureNum>80</EcritureNum>
+        <EcritureDate>2025-09-03</EcritureDate>
+        <EcritureLib>Loyer cabinet</EcritureLib>
+        <PieceRef>D0079</PieceRef>
+        <PieceDate>2025-09-01</PieceDate>
+        <ValidDate>2025-09-30</ValidDate>
+        <DateRglt>2025-09-03</DateRglt>
+        <ModeRglt>VIR</ModeRglt>
+        <NatOp>Loyer cabinet</NatOp>
+        <ligne>
+          <CompteNum>613200</CompteNum>
+          <CompteLib>Loyer du cabinet</CompteLib>
+          <Debit>1200.00</Debit>
+        </ligne>
+        <ligne>
+          <CompteNum>512000</CompteNum>
+          <CompteLib>Banque</CompteLib>
+          <Credit>1200.00</Credit>
+        </ligne>
+      </ecriture>
+      <ecriture>
+        <EcritureNum>81</EcritureNum>
+        <EcritureDate>2025-09-04</EcritureDate>
+        <EcritureLib>Fournitures</EcritureLib>
+        <PieceRef>D0080</PieceRef>
+        <PieceDate>2025-08-25</PieceDate>
+        <ValidDate>2025-09-30</ValidDate>
+        <DateRglt>2025-09-04</DateRglt>
+        <ModeRglt>VIR</ModeRglt>
+        <NatOp>Fournitures</NatOp>
+        <ligne>
+          <CompteNum>606400</CompteNum>
+          <CompteLib>Fournitures de bureau</CompteLib>
+          <Debit>236.55</Debit>
+        </ligne>
+        <ligne>
+          <CompteNum>512000</CompteNum>
+          <CompteLib>Banque</CompteLib>
+          <Credit>236.55</Credit>
+        </ligne>
+      </ecriture>
+      <ecriture>
+        <EcritureNum>82</EcritureNum>
+        <EcritureDate>2025-09-08</EcritureDate>
+        <EcritureLib>Honoraires mission de maîtrise d'œuvre CLI003</EcritureLib>
+        <PieceRef>R0081</PieceRef>
+        <PieceDate>2025-09-03</PieceDate>
+        <ValidDate>2025-09-30</ValidDate>
+        <DateRglt>2025-09-08</DateRglt>
+        <ModeRglt>CHQ</ModeRglt>
+        <NatOp>Honoraires mission de maîtrise d'œuvre</NatOp>
+        <IdClient>CLI003</IdClient>
+        <ligne>
+          <CompteNum>512000</CompteNum>
+          <CompteLib>Banque</CompteLib>
+          <Debit>2358.50</Debit>
+        </ligne>
+        <ligne>
+          <CompteNum>706000</CompteNum>
+          <CompteLib>Honoraires</CompteLib>
+          <Credit>2358.50</Credit>
+        </ligne>
+      </ecriture>
+      <ecriture>
+        <EcritureNum>83</EcritureNum>
+        <EcritureDate>2025-09-09</EcritureDate>
+        <EcritureLib>Honoraires esquisse CLI018</EcritureLib>
+        <PieceRef>R0082</PieceRef>
+        <PieceDate>2025-09-01</PieceDate>
+        <ValidDate>2025-09-30</ValidDate>
+        <DateRglt>2025-09-09</DateRglt>
+        <ModeRglt>CHQ</ModeRglt>
+        <NatOp>Honoraires esquisse</NatOp>
+        <IdClient>CLI018</IdClient>
+        <ligne>
+          <CompteNum>512000</CompteNum>
+          <CompteLib>Banque</CompteLib>
+          <Debit>2605.00</Debit>
+        </ligne>
+        <ligne>
+          <CompteNum>706100</CompteNum>
+          <CompteLib>Honoraires esquisse</CompteLib>
+          <Credit>2605.00</Credit>
+        </ligne>
+      </ecriture>
+      <ecriture>
+        <EcritureNum>84</EcritureNum>
+        <EcritureDate>2025-09-10</EcritureDate>
+        <EcritureLib>Honoraires esquisse CLI014</EcritureLib>
+        <PieceRef>R0083</PieceRef>
+        <PieceDate>2025-09-04</PieceDate>
+        <ValidDate>2025-09-30</ValidDate>
+        <DateRglt>2025-09-10</DateRglt>
+        <ModeRglt>CHQ</ModeRglt>
+        <NatOp>Honoraires esquisse</NatOp>
+        <IdClient>CLI014</IdClient>
+        <ligne>
+          <CompteNum>512000</CompteNum>
+          <CompteLib>Banque</CompteLib>
+          <Debit>1258.51</Debit>
+        </ligne>
+        <ligne>
+          <CompteNum>706100</CompteNum>
+          <CompteLib>Honoraires esquisse</CompteLib>
+          <Credit>1258.51</Credit>
+        </ligne>
+      </ecriture>
+      <ecriture>
+        <EcritureNum>85</EcritureNum>
+        <EcritureDate>2025-09-17</EcritureDate>
+        <EcritureLib>Honoraires esquisse CLI018</EcritureLib>
+        <PieceRef>R0084</PieceRef>
+        <PieceDate>2025-09-12</PieceDate>
+        <ValidDate>2025-09-30</ValidDate>
+        <DateRglt>2025-09-17</DateRglt>
+        <ModeRglt>VIR</ModeRglt>
+        <NatOp>Honoraires esquisse</NatOp>
+        <IdClient>CLI018</IdClient>
+        <ligne>
+          <CompteNum>512000</CompteNum>
+          <CompteLib>Banque</CompteLib>
+          <Debit>740.41</Debit>
+        </ligne>
+        <ligne>
+          <CompteNum>706100</CompteNum>
+          <CompteLib>Honoraires esquisse</CompteLib>
+          <Credit>740.41</Credit>
+        </ligne>
+      </ecriture>
+      <ecriture>
+        <EcritureNum>86</EcritureNum>
+        <EcritureDate>2025-09-18</EcritureDate>
+        <EcritureLib>Loyer cabinet</EcritureLib>
+        <PieceRef>D0085</PieceRef>
+        <PieceDate>2025-09-10</PieceDate>
+        <ValidDate>2025-09-30</ValidDate>
+        <DateRglt>2025-09-18</DateRglt>
+        <ModeRglt>VIR</ModeRglt>
+        <NatOp>Loyer cabinet</NatOp>
+        <ligne>
+          <CompteNum>613200</CompteNum>
+          <CompteLib>Loyer du cabinet</CompteLib>
+          <Debit>1200.00</Debit>
+        </ligne>
+        <ligne>
+          <CompteNum>512000</CompteNum>
+          <CompteLib>Banque</CompteLib>
+          <Credit>1200.00</Credit>
+        </ligne>
+      </ecriture>
+      <ecriture>
+        <EcritureNum>87</EcritureNum>
+        <EcritureDate>2025-09-23</EcritureDate>
+        <EcritureLib>Honoraires esquisse CLI025</EcritureLib>
+        <PieceRef>R0086</PieceRef>
+        <PieceDate>2025-09-15</PieceDate>
+        <ValidDate>2025-09-30</ValidDate>
+        <DateRglt>2025-09-23</DateRglt>
+        <ModeRglt>CB</ModeRglt>
+        <NatOp>Honoraires esquisse</NatOp>
+        <IdClient>CLI025</IdClient>
+        <ligne>
+          <CompteNum>512000</CompteNum>
+          <CompteLib>Banque</CompteLib>
+          <Debit>922.82</Debit>
+        </ligne>
+        <ligne>
+          <CompteNum>706100</CompteNum>
+          <CompteLib>Honoraires esquisse</CompteLib>
+          <Credit>922.82</Credit>
+        </ligne>
+      </ecriture>
+      <ecriture>
+        <EcritureNum>88</EcritureNum>
+        <EcritureDate>2025-09-24</EcritureDate>
+        <EcritureLib>Honoraires mission de maîtrise d'œuvre CLI017</EcritureLib>
+        <PieceRef>R0087</PieceRef>
+        <PieceDate>2025-09-14</PieceDate>
+        <ValidDate>2025-09-30</ValidDate>
+        <DateRglt>2025-09-24</DateRglt>
+        <ModeRglt>PRLV</ModeRglt>
+        <NatOp>Honoraires mission de maîtrise d'œuvre</NatOp>
+        <IdClient>CLI017</IdClient>
+        <ligne>
+          <CompteNum>512000</CompteNum>
+          <CompteLib>Banque</CompteLib>
+          <Debit>2973.02</Debit>
+        </ligne>
+        <ligne>
+          <CompteNum>706000</CompteNum>
+          <CompteLib>Honoraires</CompteLib>
+          <Credit>2973.02</Credit>
+        </ligne>
+      </ecriture>
+      <ecriture>
+        <EcritureNum>89</EcritureNum>
+        <EcritureDate>2025-09-25</EcritureDate>
+        <EcritureLib>Honoraires mission de maîtrise d'œuvre CLI023</EcritureLib>
+        <PieceRef>R0088</PieceRef>
+        <PieceDate>2025-09-24</PieceDate>
+        <ValidDate>2025-09-30</ValidDate>
+        <DateRglt>2025-09-25</DateRglt>
+        <ModeRglt>VIR</ModeRglt>
+        <NatOp>Honoraires mission de maîtrise d'œuvre</NatOp>
+        <IdClient>CLI023</IdClient>
+        <ligne>
+          <CompteNum>512000</CompteNum>
+          <CompteLib>Banque</CompteLib>
+          <Debit>9917.57</Debit>
+        </ligne>
+        <ligne>
+          <CompteNum>706000</CompteNum>
+          <CompteLib>Honoraires</CompteLib>
+          <Credit>9917.57</Credit>
+        </ligne>
+      </ecriture>
+      <ecriture>
+        <EcritureNum>90</EcritureNum>
+        <EcritureDate>2025-09-26</EcritureDate>
+        <EcritureLib>Déplacements chantier</EcritureLib>
+        <PieceRef>D0089</PieceRef>
+        <PieceDate>2025-09-21</PieceDate>
+        <ValidDate>2025-09-30</ValidDate>
+        <DateRglt>2025-09-26</DateRglt>
+        <ModeRglt>VIR</ModeRglt>
+        <NatOp>Déplacements chantier</NatOp>
+        <ligne>
+          <CompteNum>625100</CompteNum>
+          <CompteLib>Frais de déplacement</CompteLib>
+          <Debit>112.36</Debit>
+        </ligne>
+        <ligne>
+          <CompteNum>512000</CompteNum>
+          <CompteLib>Banque</CompteLib>
+          <Credit>112.36</Credit>
+        </ligne>
+      </ecriture>
+      <ecriture>
+        <EcritureNum>91</EcritureNum>
+        <EcritureDate>2025-09-29</EcritureDate>
+        <EcritureLib>Fournitures</EcritureLib>
+        <PieceRef>D0090</PieceRef>
+        <PieceDate>2025-09-27</PieceDate>
+        <ValidDate>2025-09-30</ValidDate>
+        <DateRglt>2025-09-29</DateRglt>
+        <ModeRglt>CB</ModeRglt>
+        <NatOp>Fournitures</NatOp>
+        <ligne>
+          <CompteNum>606400</CompteNum>
+          <CompteLib>Fournitures de bureau</CompteLib>
+          <Debit>69.62</Debit>
+        </ligne>
+        <ligne>
+          <CompteNum>512000</CompteNum>
+          <CompteLib>Banque</CompteLib>
+          <Credit>69.62</Credit>
+        </ligne>
+      </ecriture>
+      <ecriture>
+        <EcritureNum>92</EcritureNum>
+        <EcritureDate>2025-10-02</EcritureDate>
+        <EcritureLib>Honoraires mission de maîtrise d'œuvre CLI015</EcritureLib>
+        <PieceRef>R0091</PieceRef>
+        <PieceDate>2025-09-23</PieceDate>
+        <ValidDate>2025-10-31</ValidDate>
+        <DateRglt>2025-10-02</DateRglt>
+        <ModeRglt>CHQ</ModeRglt>
+        <NatOp>Honoraires mission de maîtrise d'œuvre</NatOp>
+        <IdClient>CLI015</IdClient>
+        <ligne>
+          <CompteNum>512000</CompteNum>
+          <CompteLib>Banque</CompteLib>
+          <Debit>3163.87</Debit>
+        </ligne>
+        <ligne>
+          <CompteNum>706000</CompteNum>
+          <CompteLib>Honoraires</CompteLib>
+          <Credit>3163.87</Credit>
+        </ligne>
+      </ecriture>
+      <ecriture>
+        <EcritureNum>93</EcritureNum>
+        <EcritureDate>2025-10-03</EcritureDate>
+        <EcritureLib>Honoraires esquisse CLI011</EcritureLib>
+        <PieceRef>R0092</PieceRef>
+        <PieceDate>2025-10-01</PieceDate>
+        <ValidDate>2025-10-31</ValidDate>
+        <DateRglt>2025-10-03</DateRglt>
+        <ModeRglt>CHQ</ModeRglt>
+        <NatOp>Honoraires esquisse</NatOp>
+        <IdClient>CLI011</IdClient>
+        <ligne>
+          <CompteNum>512000</CompteNum>
+          <CompteLib>Banque</CompteLib>
+          <Debit>667.68</Debit>
+        </ligne>
+        <ligne>
+          <CompteNum>706100</CompteNum>
+          <CompteLib>Honoraires esquisse</CompteLib>
+          <Credit>667.68</Credit>
+        </ligne>
+      </ecriture>
+      <ecriture>
+        <EcritureNum>94</EcritureNum>
+        <EcritureDate>2025-10-08</EcritureDate>
+        <EcritureLib>Honoraires esquisse CLI024</EcritureLib>
+        <PieceRef>R0093</PieceRef>
+        <PieceDate>2025-10-02</PieceDate>
+        <ValidDate>2025-10-31</ValidDate>
+        <DateRglt>2025-10-08</DateRglt>
+        <ModeRglt>CHQ</ModeRglt>
+        <NatOp>Honoraires esquisse</NatOp>
+        <IdClient>CLI024</IdClient>
+        <ligne>
+          <CompteNum>512000</CompteNum>
+          <CompteLib>Banque</CompteLib>
+          <Debit>1297.48</Debit>
+        </ligne>
+        <ligne>
+          <CompteNum>706100</CompteNum>
+          <CompteLib>Honoraires esquisse</CompteLib>
+          <Credit>1297.48</Credit>
+        </ligne>
+      </ecriture>
+      <ecriture>
+        <EcritureNum>95</EcritureNum>
+        <EcritureDate>2025-10-09</EcritureDate>
+        <EcritureLib>Honoraires mission de maîtrise d'œuvre CLI014</EcritureLib>
+        <PieceRef>R0094</PieceRef>
+        <PieceDate>2025-10-02</PieceDate>
+        <ValidDate>2025-10-31</ValidDate>
+        <DateRglt>2025-10-09</DateRglt>
+        <ModeRglt>PRLV</ModeRglt>
+        <NatOp>Honoraires mission de maîtrise d'œuvre</NatOp>
+        <IdClient>CLI014</IdClient>
+        <ligne>
+          <CompteNum>512000</CompteNum>
+          <CompteLib>Banque</CompteLib>
+          <Debit>8567.94</Debit>
+        </ligne>
+        <ligne>
+          <CompteNum>706000</CompteNum>
+          <CompteLib>Honoraires</CompteLib>
+          <Credit>8567.94</Credit>
+        </ligne>
+      </ecriture>
+      <ecriture>
+        <EcritureNum>96</EcritureNum>
+        <EcritureDate>2025-10-10</EcritureDate>
+        <EcritureLib>Honoraires mission de maîtrise d'œuvre CLI010</EcritureLib>
+        <PieceRef>R0095</PieceRef>
+        <PieceDate>2025-10-07</PieceDate>
+        <ValidDate>2025-10-31</ValidDate>
+        <DateRglt>2025-10-10</DateRglt>
+        <ModeRglt>CHQ</ModeRglt>
+        <NatOp>Honoraires mission de maîtrise d'œuvre</NatOp>
+        <IdClient>CLI010</IdClient>
+        <ligne>
+          <CompteNum>512000</CompteNum>
+          <CompteLib>Banque</CompteLib>
+          <Debit>11718.54</Debit>
+        </ligne>
+        <ligne>
+          <CompteNum>706000</CompteNum>
+          <CompteLib>Honoraires</CompteLib>
+          <Credit>11718.54</Credit>
+        </ligne>
+      </ecriture>
+      <ecriture>
+        <EcritureNum>97</EcritureNum>
+        <EcritureDate>2025-10-13</EcritureDate>
+        <EcritureLib>Loyer cabinet</EcritureLib>
+        <PieceRef>D0096</PieceRef>
+        <PieceDate>2025-10-03</PieceDate>
+        <ValidDate>2025-10-31</ValidDate>
+        <DateRglt>2025-10-13</DateRglt>
+        <ModeRglt>CB</ModeRglt>
+        <NatOp>Loyer cabinet</NatOp>
+        <ligne>
+          <CompteNum>613200</CompteNum>
+          <CompteLib>Loyer du cabinet</CompteLib>
+          <Debit>1200.00</Debit>
+        </ligne>
+        <ligne>
+          <CompteNum>512000</CompteNum>
+          <CompteLib>Banque</CompteLib>
+          <Credit>1200.00</Credit>
+        </ligne>
+      </ecriture>
+      <ecriture>
+        <EcritureNum>98</EcritureNum>
+        <EcritureDate>2025-10-14</EcritureDate>
+        <EcritureLib>Fournitures</EcritureLib>
+        <PieceRef>D0097</PieceRef>
+        <PieceDate>2025-10-06</PieceDate>
+        <ValidDate>2025-10-31</ValidDate>
+        <DateRglt>2025-10-14</DateRglt>
+        <ModeRglt>CHQ</ModeRglt>
+        <NatOp>Fournitures</NatOp>
+        <ligne>
+          <CompteNum>606400</CompteNum>
+          <CompteLib>Fournitures de bureau</CompteLib>
+          <Debit>94.71</Debit>
+        </ligne>
+        <ligne>
+          <CompteNum>512000</CompteNum>
+          <CompteLib>Banque</CompteLib>
+          <Credit>94.71</Credit>
+        </ligne>
+      </ecriture>
+      <ecriture>
+        <EcritureNum>99</EcritureNum>
+        <EcritureDate>2025-10-15</EcritureDate>
+        <EcritureLib>Fournitures</EcritureLib>
+        <PieceRef>D0098</PieceRef>
+        <PieceDate>2025-10-10</PieceDate>
+        <ValidDate>2025-10-31</ValidDate>
+        <DateRglt>2025-10-15</DateRglt>
+        <ModeRglt>CHQ</ModeRglt>
+        <NatOp>Fournitures</NatOp>
+        <ligne>
+          <CompteNum>606400</CompteNum>
+          <CompteLib>Fournitures de bureau</CompteLib>
+          <Debit>19.70</Debit>
+        </ligne>
+        <ligne>
+          <CompteNum>512000</CompteNum>
+          <CompteLib>Banque</CompteLib>
+          <Credit>19.70</Credit>
+        </ligne>
+      </ecriture>
+      <ecriture>
+        <EcritureNum>100</EcritureNum>
+        <EcritureDate>2025-10-17</EcritureDate>
+        <EcritureLib>Déplacements chantier</EcritureLib>
+        <PieceRef>D0099</PieceRef>
+        <PieceDate>2025-10-15</PieceDate>
+        <ValidDate>2025-10-31</ValidDate>
+        <DateRglt>2025-10-17</DateRglt>
+        <ModeRglt>CB</ModeRglt>
+        <NatOp>Déplacements chantier</NatOp>
+        <ligne>
+          <CompteNum>625100</CompteNum>
+          <CompteLib>Frais de déplacement</CompteLib>
+          <Debit>27.31</Debit>
+        </ligne>
+        <ligne>
+          <CompteNum>512000</CompteNum>
+          <CompteLib>Banque</CompteLib>
+          <Credit>27.31</Credit>
+        </ligne>
+      </ecriture>
+      <ecriture>
+        <EcritureNum>101</EcritureNum>
+        <EcritureDate>2025-10-21</EcritureDate>
+        <EcritureLib>Fournitures</EcritureLib>
+        <PieceRef>D0100</PieceRef>
+        <PieceDate>2025-10-21</PieceDate>
+        <ValidDate>2025-10-31</ValidDate>
+        <DateRglt>2025-10-21</DateRglt>
+        <ModeRglt>PRLV</ModeRglt>
+        <NatOp>Fournitures</NatOp>
+        <ligne>
+          <CompteNum>606400</CompteNum>
+          <CompteLib>Fournitures de bureau</CompteLib>
+          <Debit>214.28</Debit>
+        </ligne>
+        <ligne>
+          <CompteNum>512000</CompteNum>
+          <CompteLib>Banque</CompteLib>
+          <Credit>214.28</Credit>
+        </ligne>
+      </ecriture>
+      <ecriture>
+        <EcritureNum>102</EcritureNum>
+        <EcritureDate>2025-10-22</EcritureDate>
+        <EcritureLib>Honoraires mission de maîtrise d'œuvre CLI010</EcritureLib>
+        <PieceRef>R0101</PieceRef>
+        <PieceDate>2025-10-18</PieceDate>
+        <ValidDate>2025-10-31</ValidDate>
+        <DateRglt>2025-10-22</DateRglt>
+        <ModeRglt>CHQ</ModeRglt>
+        <NatOp>Honoraires mission de maîtrise d'œuvre</NatOp>
+        <IdClient>CLI010</IdClient>
+        <ligne>
+          <CompteNum>512000</CompteNum>
+          <CompteLib>Banque</CompteLib>
+          <Debit>2450.52</Debit>
+        </ligne>
+        <ligne>
+          <CompteNum>706000</CompteNum>
+          <CompteLib>Honoraires</CompteLib>
+          <Credit>2450.52</Credit>
+        </ligne>
+      </ecriture>
+      <ecriture>
+        <EcritureNum>103</EcritureNum>
+        <EcritureDate>2025-10-23</EcritureDate>
+        <EcritureLib>Déplacements chantier</EcritureLib>
+        <PieceRef>D0102</PieceRef>
+        <PieceDate>2025-10-18</PieceDate>
+        <ValidDate>2025-10-31</ValidDate>
+        <DateRglt>2025-10-23</DateRglt>
+        <ModeRglt>VIR</ModeRglt>
+        <NatOp>Déplacements chantier</NatOp>
+        <ligne>
+          <CompteNum>625100</CompteNum>
+          <CompteLib>Frais de déplacement</CompteLib>
+          <Debit>83.87</Debit>
+        </ligne>
+        <ligne>
+          <CompteNum>512000</CompteNum>
+          <CompteLib>Banque</CompteLib>
+          <Credit>83.87</Credit>
+        </ligne>
+      </ecriture>
+      <ecriture>
+        <EcritureNum>104</EcritureNum>
+        <EcritureDate>2025-10-24</EcritureDate>
+        <EcritureLib>Déplacements chantier</EcritureLib>
+        <PieceRef>D0103</PieceRef>
+        <PieceDate>2025-10-17</PieceDate>
+        <ValidDate>2025-10-31</ValidDate>
+        <DateRglt>2025-10-24</DateRglt>
+        <ModeRglt>CB</ModeRglt>
+        <NatOp>Déplacements chantier</NatOp>
+        <ligne>
+          <CompteNum>625100</CompteNum>
+          <CompteLib>Frais de déplacement</CompteLib>
+          <Debit>23.76</Debit>
+        </ligne>
+        <ligne>
+          <CompteNum>512000</CompteNum>
+          <CompteLib>Banque</CompteLib>
+          <Credit>23.76</Credit>
+        </ligne>
+      </ecriture>
+      <ecriture>
+        <EcritureNum>105</EcritureNum>
+        <EcritureDate>2025-10-27</EcritureDate>
+        <EcritureLib>Honoraires mission de maîtrise d'œuvre CLI015</EcritureLib>
+        <PieceRef>R0104</PieceRef>
+        <PieceDate>2025-10-23</PieceDate>
+        <ValidDate>2025-10-31</ValidDate>
+        <DateRglt>2025-10-27</DateRglt>
+        <ModeRglt>VIR</ModeRglt>
+        <NatOp>Honoraires mission de maîtrise d'œuvre</NatOp>
+        <IdClient>CLI015</IdClient>
+        <ligne>
+          <CompteNum>512000</CompteNum>
+          <CompteLib>Banque</CompteLib>
+          <Debit>1814.60</Debit>
+        </ligne>
+        <ligne>
+          <CompteNum>706000</CompteNum>
+          <CompteLib>Honoraires</CompteLib>
+          <Credit>1814.60</Credit>
+        </ligne>
+      </ecriture>
+      <ecriture>
+        <EcritureNum>106</EcritureNum>
+        <EcritureDate>2025-10-28</EcritureDate>
+        <EcritureLib>Abonnement logiciel de CAO</EcritureLib>
+        <PieceRef>D0105</PieceRef>
+        <PieceDate>2025-10-21</PieceDate>
+        <ValidDate>2025-10-31</ValidDate>
+        <DateRglt>2025-10-28</DateRglt>
+        <ModeRglt>VIR</ModeRglt>
+        <NatOp>Abonnement logiciel de CAO</NatOp>
+        <ligne>
+          <CompteNum>651000</CompteNum>
+          <CompteLib>Licences logicielles</CompteLib>
+          <Debit>99.00</Debit>
+        </ligne>
+        <ligne>
+          <CompteNum>512000</CompteNum>
+          <CompteLib>Banque</CompteLib>
+          <Credit>99.00</Credit>
+        </ligne>
+      </ecriture>
+      <ecriture>
+        <EcritureNum>107</EcritureNum>
+        <EcritureDate>2025-10-29</EcritureDate>
+        <EcritureLib>Honoraires mission de maîtrise d'œuvre CLI010</EcritureLib>
+        <PieceRef>R0106</PieceRef>
+        <PieceDate>2025-10-23</PieceDate>
+        <ValidDate>2025-10-31</ValidDate>
+        <DateRglt>2025-10-29</DateRglt>
+        <ModeRglt>PRLV</ModeRglt>
+        <NatOp>Honoraires mission de maîtrise d'œuvre</NatOp>
+        <IdClient>CLI010</IdClient>
+        <ligne>
+          <CompteNum>512000</CompteNum>
+          <CompteLib>Banque</CompteLib>
+          <Debit>9964.21</Debit>
+        </ligne>
+        <ligne>
+          <CompteNum>706000</CompteNum>
+          <CompteLib>Honoraires</CompteLib>
+          <Credit>9964.21</Credit>
+        </ligne>
+      </ecriture>
+      <ecriture>
+        <EcritureNum>108</EcritureNum>
+        <EcritureDate>2025-10-30</EcritureDate>
+        <EcritureLib>Abonnement logiciel de CAO</EcritureLib>
+        <PieceRef>D0107</PieceRef>
+        <PieceDate>2025-10-20</PieceDate>
+        <ValidDate>2025-10-31</ValidDate>
+        <DateRglt>2025-10-30</DateRglt>
+        <ModeRglt>CB</ModeRglt>
+        <NatOp>Abonnement logiciel de CAO</NatOp>
+        <ligne>
+          <CompteNum>651000</CompteNum>
+          <CompteLib>Licences logicielles</CompteLib>
+          <Debit>99.00</Debit>
+        </ligne>
+        <ligne>
+          <CompteNum>512000</CompteNum>
+          <CompteLib>Banque</CompteLib>
+          <Credit>99.00</Credit>
+        </ligne>
+      </ecriture>
+      <ecriture>
+        <EcritureNum>109</EcritureNum>
+        <EcritureDate>2025-10-31</EcritureDate>
+        <EcritureLib>Abonnement logiciel de CAO</EcritureLib>
+        <PieceRef>D0108</PieceRef>
+        <PieceDate>2025-10-26</PieceDate>
+        <ValidDate>2025-10-31</ValidDate>
+        <DateRglt>2025-10-31</DateRglt>
+        <ModeRglt>CB</ModeRglt>
+        <NatOp>Abonnement logiciel de CAO</NatOp>
+        <ligne>
+          <CompteNum>651000</CompteNum>
+          <CompteLib>Licences logicielles</CompteLib>
+          <Debit>99.00</Debit>
+        </ligne>
+        <ligne>
+          <CompteNum>512000</CompteNum>
+          <CompteLib>Banque</CompteLib>
+          <Credit>99.00</Credit>
+        </ligne>
+      </ecriture>
+      <ecriture>
+        <EcritureNum>110</EcritureNum>
+        <EcritureDate>2025-11-06</EcritureDate>
+        <EcritureLib>Honoraires mission de maîtrise d'œuvre CLI015</EcritureLib>
+        <PieceRef>R0109</PieceRef>
+        <PieceDate>2025-11-02</PieceDate>
+        <ValidDate>2025-11-30</ValidDate>
+        <DateRglt>2025-11-06</DateRglt>
+        <ModeRglt>PRLV</ModeRglt>
+        <NatOp>Honoraires mission de maîtrise d'œuvre</NatOp>
+        <IdClient>CLI015</IdClient>
+        <ligne>
+          <CompteNum>512000</CompteNum>
+          <CompteLib>Banque</CompteLib>
+          <Debit>8656.29</Debit>
+        </ligne>
+        <ligne>
+          <CompteNum>706000</CompteNum>
+          <CompteLib>Honoraires</CompteLib>
+          <Credit>8656.29</Credit>
+        </ligne>
+      </ecriture>
+      <ecriture>
+        <EcritureNum>111</EcritureNum>
+        <EcritureDate>2025-11-07</EcritureDate>
+        <EcritureLib>Honoraires mission de maîtrise d'œuvre CLI021</EcritureLib>
+        <PieceRef>R0110</PieceRef>
+        <PieceDate>2025-11-01</PieceDate>
+        <ValidDate>2025-11-30</ValidDate>
+        <DateRglt>2025-11-07</DateRglt>
+        <ModeRglt>CHQ</ModeRglt>
+        <NatOp>Honoraires mission de maîtrise d'œuvre</NatOp>
+        <IdClient>CLI021</IdClient>
+        <ligne>
+          <CompteNum>512000</CompteNum>
+          <CompteLib>Banque</CompteLib>
+          <Debit>5367.85</Debit>
+        </ligne>
+        <ligne>
+          <CompteNum>706000</CompteNum>
+          <CompteLib>Honoraires</CompteLib>
+          <Credit>5367.85</Credit>
+        </ligne>
+      </ecriture>
+      <ecriture>
+        <EcritureNum>112</EcritureNum>
+        <EcritureDate>2025-11-13</EcritureDate>
+        <EcritureLib>Honoraires esquisse CLI012</EcritureLib>
+        <PieceRef>R0111</PieceRef>
+        <PieceDate>2025-11-05</PieceDate>
+        <ValidDate>2025-11-30</ValidDate>
+        <DateRglt>2025-11-13</DateRglt>
+        <ModeRglt>CHQ</ModeRglt>
+        <NatOp>Honoraires esquisse</NatOp>
+        <IdClient>CLI012</IdClient>
+        <ligne>
+          <CompteNum>512000</CompteNum>
+          <CompteLib>Banque</CompteLib>
+          <Debit>611.76</Debit>
+        </ligne>
+        <ligne>
+          <CompteNum>706100</CompteNum>
+          <CompteLib>Honoraires esquisse</CompteLib>
+          <Credit>611.76</Credit>
+        </ligne>
+      </ecriture>
+      <ecriture>
+        <EcritureNum>113</EcritureNum>
+        <EcritureDate>2025-11-14</EcritureDate>
+        <EcritureLib>Honoraires esquisse CLI013</EcritureLib>
+        <PieceRef>R0112</PieceRef>
+        <PieceDate>2025-11-07</PieceDate>
+        <ValidDate>2025-11-30</ValidDate>
+        <DateRglt>2025-11-14</DateRglt>
+        <ModeRglt>PRLV</ModeRglt>
+        <NatOp>Honoraires esquisse</NatOp>
+        <IdClient>CLI013</IdClient>
+        <ligne>
+          <CompteNum>512000</CompteNum>
+          <CompteLib>Banque</CompteLib>
+          <Debit>1309.01</Debit>
+        </ligne>
+        <ligne>
+          <CompteNum>706100</CompteNum>
+          <CompteLib>Honoraires esquisse</CompteLib>
+          <Credit>1309.01</Credit>
+        </ligne>
+      </ecriture>
+      <ecriture>
+        <EcritureNum>114</EcritureNum>
+        <EcritureDate>2025-11-18</EcritureDate>
+        <EcritureLib>Honoraires mission de maîtrise d'œuvre CLI020</EcritureLib>
+        <PieceRef>R0113</PieceRef>
+        <PieceDate>2025-11-18</PieceDate>
+        <ValidDate>2025-11-30</ValidDate>
+        <DateRglt>2025-11-18</DateRglt>
+        <ModeRglt>CHQ</ModeRglt>
+        <NatOp>Honoraires mission de maîtrise d'œuvre</NatOp>
+        <IdClient>CLI020</IdClient>
+        <ligne>
+          <CompteNum>512000</CompteNum>
+          <CompteLib>Banque</CompteLib>
+          <Debit>1753.20</Debit>
+        </ligne>
+        <ligne>
+          <CompteNum>706000</CompteNum>
+          <CompteLib>Honoraires</CompteLib>
+          <Credit>1753.20</Credit>
+        </ligne>
+      </ecriture>
+      <ecriture>
+        <EcritureNum>115</EcritureNum>
+        <EcritureDate>2025-11-21</EcritureDate>
+        <EcritureLib>Honoraires mission de maîtrise d'œuvre CLI015</EcritureLib>
+        <PieceRef>R0114</PieceRef>
+        <PieceDate>2025-11-18</PieceDate>
+        <ValidDate>2025-11-30</ValidDate>
+        <DateRglt>2025-11-21</DateRglt>
+        <ModeRglt>VIR</ModeRglt>
+        <NatOp>Honoraires mission de maîtrise d'œuvre</NatOp>
+        <IdClient>CLI015</IdClient>
+        <ligne>
+          <CompteNum>512000</CompteNum>
+          <CompteLib>Banque</CompteLib>
+          <Debit>1958.94</Debit>
+        </ligne>
+        <ligne>
+          <CompteNum>706000</CompteNum>
+          <CompteLib>Honoraires</CompteLib>
+          <Credit>1958.94</Credit>
+        </ligne>
+      </ecriture>
+      <ecriture>
+        <EcritureNum>116</EcritureNum>
+        <EcritureDate>2025-11-25</EcritureDate>
+        <EcritureLib>Honoraires esquisse CLI009</EcritureLib>
+        <PieceRef>R0115</PieceRef>
+        <PieceDate>2025-11-18</PieceDate>
+        <ValidDate>2025-11-30</ValidDate>
+        <DateRglt>2025-11-25</DateRglt>
+        <ModeRglt>PRLV</ModeRglt>
+        <NatOp>Honoraires esquisse</NatOp>
+        <IdClient>CLI009</IdClient>
+        <ligne>
+          <CompteNum>512000</CompteNum>
+          <CompteLib>Banque</CompteLib>
+          <Debit>1328.11</Debit>
+        </ligne>
+        <ligne>
+          <CompteNum>706100</CompteNum>
+          <CompteLib>Honoraires esquisse</CompteLib>
+          <Credit>1328.11</Credit>
+        </ligne>
+      </ecriture>
+      <ecriture>
+        <EcritureNum>117</EcritureNum>
+        <EcritureDate>2025-11-27</EcritureDate>
+        <EcritureLib>Fournitures</EcritureLib>
+        <PieceRef>D0116</PieceRef>
+        <PieceDate>2025-11-20</PieceDate>
+        <ValidDate>2025-11-30</ValidDate>
+        <DateRglt>2025-11-27</DateRglt>
+        <ModeRglt>PRLV</ModeRglt>
+        <NatOp>Fournitures</NatOp>
+        <ligne>
+          <CompteNum>606400</CompteNum>
+          <CompteLib>Fournitures de bureau</CompteLib>
+          <Debit>312.71</Debit>
+        </ligne>
+        <ligne>
+          <CompteNum>512000</CompteNum>
+          <CompteLib>Banque</CompteLib>
+          <Credit>312.71</Credit>
+        </ligne>
+      </ecriture>
+      <ecriture>
+        <EcritureNum>118</EcritureNum>
+        <EcritureDate>2025-12-02</EcritureDate>
+        <EcritureLib>Honoraires esquisse CLI010</EcritureLib>
+        <PieceRef>R0117</PieceRef>
+        <PieceDate>2025-11-27</PieceDate>
+        <ValidDate>2025-12-31</ValidDate>
+        <DateRglt>2025-12-02</DateRglt>
+        <ModeRglt>PRLV</ModeRglt>
+        <NatOp>Honoraires esquisse</NatOp>
+        <IdClient>CLI010</IdClient>
+        <ligne>
+          <CompteNum>512000</CompteNum>
+          <CompteLib>Banque</CompteLib>
+          <Debit>1629.13</Debit>
+        </ligne>
+        <ligne>
+          <CompteNum>706100</CompteNum>
+          <CompteLib>Honoraires esquisse</CompteLib>
+          <Credit>1629.13</Credit>
+        </ligne>
+      </ecriture>
+      <ecriture>
+        <EcritureNum>119</EcritureNum>
+        <EcritureDate>2025-12-03</EcritureDate>
+        <EcritureLib>Honoraires mission de maîtrise d'œuvre CLI014</EcritureLib>
+        <PieceRef>R0118</PieceRef>
+        <PieceDate>2025-12-02</PieceDate>
+        <ValidDate>2025-12-31</ValidDate>
+        <DateRglt>2025-12-03</DateRglt>
+        <ModeRglt>PRLV</ModeRglt>
+        <NatOp>Honoraires mission de maîtrise d'œuvre</NatOp>
+        <IdClient>CLI014</IdClient>
+        <ligne>
+          <CompteNum>512000</CompteNum>
+          <CompteLib>Banque</CompteLib>
+          <Debit>4104.12</Debit>
+        </ligne>
+        <ligne>
+          <CompteNum>706000</CompteNum>
+          <CompteLib>Honoraires</CompteLib>
+          <Credit>4104.12</Credit>
+        </ligne>
+      </ecriture>
+      <ecriture>
+        <EcritureNum>120</EcritureNum>
+        <EcritureDate>2025-12-05</EcritureDate>
+        <EcritureLib>Honoraires mission de maîtrise d'œuvre CLI013</EcritureLib>
+        <PieceRef>R0119</PieceRef>
+        <PieceDate>2025-11-29</PieceDate>
+        <ValidDate>2025-12-31</ValidDate>
+        <DateRglt>2025-12-05</DateRglt>
+        <ModeRglt>CB</ModeRglt>
+        <NatOp>Honoraires mission de maîtrise d'œuvre</NatOp>
+        <IdClient>CLI013</IdClient>
+        <ligne>
+          <CompteNum>512000</CompteNum>
+          <CompteLib>Banque</CompteLib>
+          <Debit>11457.32</Debit>
+        </ligne>
+        <ligne>
+          <CompteNum>706000</CompteNum>
+          <CompteLib>Honoraires</CompteLib>
+          <Credit>11457.32</Credit>
+        </ligne>
+      </ecriture>
+      <ecriture>
+        <EcritureNum>121</EcritureNum>
+        <EcritureDate>2025-12-10</EcritureDate>
+        <EcritureLib>Déplacements chantier</EcritureLib>
+        <PieceRef>D0120</PieceRef>
+        <PieceDate>2025-12-03</PieceDate>
+        <ValidDate>2025-12-31</ValidDate>
+        <DateRglt>2025-12-10</DateRglt>
+        <ModeRglt>CB</ModeRglt>
+        <NatOp>Déplacements chantier</NatOp>
+        <ligne>
+          <CompteNum>625100</CompteNum>
+          <CompteLib>Frais de déplacement</CompteLib>
+          <Debit>189.32</Debit>
+        </ligne>
+        <ligne>
+          <CompteNum>512000</CompteNum>
+          <CompteLib>Banque</CompteLib>
+          <Credit>189.32</Credit>
+        </ligne>
+      </ecriture>
+      <ecriture>
+        <EcritureNum>122</EcritureNum>
+        <EcritureDate>2025-12-11</EcritureDate>
+        <EcritureLib>Honoraires mission de maîtrise d'œuvre CLI024</EcritureLib>
+        <PieceRef>R0121</PieceRef>
+        <PieceDate>2025-12-02</PieceDate>
+        <ValidDate>2025-12-31</ValidDate>
+        <DateRglt>2025-12-11</DateRglt>
+        <ModeRglt>PRLV</ModeRglt>
+        <NatOp>Honoraires mission de maîtrise d'œuvre</NatOp>
+        <IdClient>CLI024</IdClient>
+        <ligne>
+          <CompteNum>512000</CompteNum>
+          <CompteLib>Banque</CompteLib>
+          <Debit>1908.24</Debit>
+        </ligne>
+        <ligne>
+          <CompteNum>706000</CompteNum>
+          <CompteLib>Honoraires</CompteLib>
+          <Credit>1908.24</Credit>
+        </ligne>
+      </ecriture>
+      <ecriture>
+        <EcritureNum>123</EcritureNum>
+        <EcritureDate>2025-12-15</EcritureDate>
+        <EcritureLib>Honoraires esquisse CLI025</EcritureLib>
+        <PieceRef>R0122</PieceRef>
+        <PieceDate>2025-12-13</PieceDate>
+        <ValidDate>2025-12-31</ValidDate>
+        <DateRglt>2025-12-15</DateRglt>
+        <ModeRglt>VIR</ModeRglt>
+        <NatOp>Honoraires esquisse</NatOp>
+        <IdClient>CLI025</IdClient>
+        <ligne>
+          <CompteNum>512000</CompteNum>
+          <CompteLib>Banque</CompteLib>
+          <Debit>1524.76</Debit>
+        </ligne>
+        <ligne>
+          <CompteNum>706100</CompteNum>
+          <CompteLib>Honoraires esquisse</CompteLib>
+          <Credit>1524.76</Credit>
+        </ligne>
+      </ecriture>
+      <ecriture>
+        <EcritureNum>124</EcritureNum>
+        <EcritureDate>2025-12-16</EcritureDate>
+        <EcritureLib>Fournitures</EcritureLib>
+        <PieceRef>D0123</PieceRef>
+        <PieceDate>2025-12-06</PieceDate>
+        <ValidDate>2025-12-31</ValidDate>
+        <DateRglt>2025-12-16</DateRglt>
+        <ModeRglt>PRLV</ModeRglt>
+        <NatOp>Fournitures</NatOp>
+        <ligne>
+          <CompteNum>606400</CompteNum>
+          <CompteLib>Fournitures de bureau</CompteLib>
+          <Debit>31.04</Debit>
+        </ligne>
+        <ligne>
+          <CompteNum>512000</CompteNum>
+          <CompteLib>Banque</CompteLib>
+          <Credit>31.04</Credit>
+        </ligne>
+      </ecriture>
+      <ecriture>
+        <EcritureNum>125</EcritureNum>
+        <EcritureDate>2025-12-18</EcritureDate>
+        <EcritureLib>Déplacements chantier</EcritureLib>
+        <PieceRef>D0124</PieceRef>
+        <PieceDate>2025-12-13</PieceDate>
+        <ValidDate>2025-12-31</ValidDate>
+        <DateRglt>2025-12-18</DateRglt>
+        <ModeRglt>CB</ModeRglt>
+        <NatOp>Déplacements chantier</NatOp>
+        <ligne>
+          <CompteNum>625100</CompteNum>
+          <CompteLib>Frais de déplacement</CompteLib>
+          <Debit>66.91</Debit>
+        </ligne>
+        <ligne>
+          <CompteNum>512000</CompteNum>
+          <CompteLib>Banque</CompteLib>
+          <Credit>66.91</Credit>
+        </ligne>
+      </ecriture>
+      <ecriture>
+        <EcritureNum>126</EcritureNum>
+        <EcritureDate>2025-12-19</EcritureDate>
+        <EcritureLib>Fournitures</EcritureLib>
+        <PieceRef>D0125</PieceRef>
+        <PieceDate>2025-12-11</PieceDate>
+        <ValidDate>2025-12-31</ValidDate>
+        <DateRglt>2025-12-19</DateRglt>
+        <ModeRglt>VIR</ModeRglt>
+        <NatOp>Fournitures</NatOp>
+        <ligne>
+          <CompteNum>606400</CompteNum>
+          <CompteLib>Fournitures de bureau</CompteLib>
+          <Debit>88.38</Debit>
+        </ligne>
+        <ligne>
+          <CompteNum>512000</CompteNum>
+          <CompteLib>Banque</CompteLib>
+          <Credit>88.38</Credit>
+        </ligne>
+      </ecriture>
+      <ecriture>
+        <EcritureNum>127</EcritureNum>
+        <EcritureDate>2025-12-23</EcritureDate>
+        <EcritureLib>Honoraires mission de maîtrise d'œuvre CLI019</EcritureLib>
+        <PieceRef>R0126</PieceRef>
+        <PieceDate>2025-12-13</PieceDate>
+        <ValidDate>2025-12-31</ValidDate>
+        <DateRglt>2025-12-23</DateRglt>
+        <ModeRglt>VIR</ModeRglt>
+        <NatOp>Honoraires mission de maîtrise d'œuvre</NatOp>
+        <IdClient>CLI019</IdClient>
+        <ligne>
+          <CompteNum>512000</CompteNum>
+          <CompteLib>Banque</CompteLib>
+          <Debit>1534.67</Debit>
+        </ligne>
+        <ligne>
+          <CompteNum>706000</CompteNum>
+          <CompteLib>Honoraires</CompteLib>
+          <Credit>1534.67</Credit>
+        </ligne>
+      </ecriture>
+      <ecriture>
+        <EcritureNum>128</EcritureNum>
+        <EcritureDate>2025-12-24</EcritureDate>
+        <EcritureLib>Honoraires esquisse CLI015</EcritureLib>
+        <PieceRef>R0127</PieceRef>
+        <PieceDate>2025-12-14</PieceDate>
+        <ValidDate>2025-12-31</ValidDate>
+        <DateRglt>2025-12-24</DateRglt>
+        <ModeRglt>PRLV</ModeRglt>
+        <NatOp>Honoraires esquisse</NatOp>
+        <IdClient>CLI015</IdClient>
+        <ligne>
+          <CompteNum>512000</CompteNum>
+          <CompteLib>Banque</CompteLib>
+          <Debit>564.36</Debit>
+        </ligne>
+        <ligne>
+          <CompteNum>706100</CompteNum>
+          <CompteLib>Honoraires esquisse</CompteLib>
+          <Credit>564.36</Credit>
+        </ligne>
+      </ecriture>
+      <ecriture>
+        <EcritureNum>129</EcritureNum>
+        <EcritureDate>2025-12-30</EcritureDate>
+        <EcritureLib>Déplacements chantier</EcritureLib>
+        <PieceRef>D0128</PieceRef>
+        <PieceDate>2025-12-24</PieceDate>
+        <ValidDate>2025-12-31</ValidDate>
+        <DateRglt>2025-12-30</DateRglt>
+        <ModeRglt>CHQ</ModeRglt>
+        <NatOp>Déplacements chantier</NatOp>
+        <ligne>
+          <CompteNum>625100</CompteNum>
+          <CompteLib>Frais de déplacement</CompteLib>
+          <Debit>46.60</Debit>
+        </ligne>
+        <ligne>
+          <CompteNum>512000</CompteNum>
+          <CompteLib>Banque</CompteLib>
+          <Credit>46.60</Credit>
+        </ligne>
+      </ecriture>
+    </journal>
+  </exercice>
+</comptabilite>

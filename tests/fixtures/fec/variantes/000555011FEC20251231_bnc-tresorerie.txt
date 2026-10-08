@@ -1,0 +1,259 @@
+JournalCode	JournalLib	EcritureNum	EcritureDate	CompteNum	CompteLib	CompAuxNum	CompAuxLib	PieceRef	PieceDate	EcritureLib	Debit	Credit	EcritureLet	DateLet	ValidDate	Montantdevise	Idevise	DateRglt	ModeRglt	NatOp	IdClient
+AN	A-nouveaux	1	20250101	512000	Banque			AN	20250101	A nouveaux	10701,64	0,00			20250131			20250101	Report	Reprise du solde de trésorerie	
+AN	A-nouveaux	1	20250101	108000	Compte de l'exploitant			AN	20250101	A nouveaux	0,00	10701,64			20250131			20250101	Report	Reprise du solde de trésorerie	
+BQ	Banque	2	20250108	651000	Licences logicielles			D0001	20250103	Abonnement logiciel de CAO	99,00	0,00			20250131			20250108	VIR	Abonnement logiciel de CAO	
+BQ	Banque	2	20250108	512000	Banque			D0001	20250103	Abonnement logiciel de CAO	0,00	99,00			20250131			20250108	VIR	Abonnement logiciel de CAO	
+BQ	Banque	3	20250109	512000	Banque			R0002	20250101	Honoraires mission de maîtrise d'œuvre CLI003	8629,82	0,00			20250131			20250109	CHQ	Honoraires mission de maîtrise d'œuvre	CLI003
+BQ	Banque	3	20250109	706000	Honoraires			R0002	20250101	Honoraires mission de maîtrise d'œuvre CLI003	0,00	8629,82			20250131			20250109	CHQ	Honoraires mission de maîtrise d'œuvre	CLI003
+BQ	Banque	4	20250110	512000	Banque			R0003	20250109	Honoraires esquisse CLI025	1060,52	0,00			20250131			20250110	CB	Honoraires esquisse	CLI025
+BQ	Banque	4	20250110	706100	Honoraires esquisse			R0003	20250109	Honoraires esquisse CLI025	0,00	1060,52			20250131			20250110	CB	Honoraires esquisse	CLI025
+BQ	Banque	5	20250113	512000	Banque			R0004	20250109	Honoraires mission de maîtrise d'œuvre CLI016	11213,46	0,00			20250131			20250113	CB	Honoraires mission de maîtrise d'œuvre	CLI016
+BQ	Banque	5	20250113	706000	Honoraires			R0004	20250109	Honoraires mission de maîtrise d'œuvre CLI016	0,00	11213,46			20250131			20250113	CB	Honoraires mission de maîtrise d'œuvre	CLI016
+BQ	Banque	6	20250116	606400	Fournitures de bureau			D0005	20250115	Fournitures	66,00	0,00			20250131			20250116	VIR	Fournitures	
+BQ	Banque	6	20250116	512000	Banque			D0005	20250115	Fournitures	0,00	66,00			20250131			20250116	VIR	Fournitures	
+BQ	Banque	7	20250117	625100	Frais de déplacement			D0006	20250111	Déplacements chantier	35,99	0,00			20250131			20250117	PRLV	Déplacements chantier	
+BQ	Banque	7	20250117	512000	Banque			D0006	20250111	Déplacements chantier	0,00	35,99			20250131			20250117	PRLV	Déplacements chantier	
+BQ	Banque	8	20250121	625100	Frais de déplacement			D0007	20250117	Déplacements chantier	24,77	0,00			20250131			20250121	CHQ	Déplacements chantier	
+BQ	Banque	8	20250121	512000	Banque			D0007	20250117	Déplacements chantier	0,00	24,77			20250131			20250121	CHQ	Déplacements chantier	
+BQ	Banque	9	20250122	512000	Banque			R0008	20250115	Honoraires esquisse CLI017	354,24	0,00			20250131			20250122	CB	Honoraires esquisse	CLI017
+BQ	Banque	9	20250122	706100	Honoraires esquisse			R0008	20250115	Honoraires esquisse CLI017	0,00	354,24			20250131			20250122	CB	Honoraires esquisse	CLI017
+BQ	Banque	10	20250124	625100	Frais de déplacement			D0009	20250114	Déplacements chantier	230,79	0,00			20250131			20250124	CHQ	Déplacements chantier	
+BQ	Banque	10	20250124	512000	Banque			D0009	20250114	Déplacements chantier	0,00	230,79			20250131			20250124	CHQ	Déplacements chantier	
+BQ	Banque	11	20250127	625100	Frais de déplacement			D0010	20250120	Déplacements chantier	23,78	0,00			20250131			20250127	VIR	Déplacements chantier	
+BQ	Banque	11	20250127	512000	Banque			D0010	20250120	Déplacements chantier	0,00	23,78			20250131			20250127	VIR	Déplacements chantier	
+BQ	Banque	12	20250129	651000	Licences logicielles			D0011	20250125	Abonnement logiciel de CAO	99,00	0,00			20250131			20250129	VIR	Abonnement logiciel de CAO	
+BQ	Banque	12	20250129	512000	Banque			D0011	20250125	Abonnement logiciel de CAO	0,00	99,00			20250131			20250129	VIR	Abonnement logiciel de CAO	
+BQ	Banque	13	20250130	512000	Banque			R0012	20250130	Honoraires mission de maîtrise d'œuvre CLI006	2964,45	0,00			20250131			20250130	CHQ	Honoraires mission de maîtrise d'œuvre	CLI006
+BQ	Banque	13	20250130	706000	Honoraires			R0012	20250130	Honoraires mission de maîtrise d'œuvre CLI006	0,00	2964,45			20250131			20250130	CHQ	Honoraires mission de maîtrise d'œuvre	CLI006
+BQ	Banque	14	20250131	606400	Fournitures de bureau			D0013	20250126	Fournitures	318,54	0,00			20250131			20250131	CB	Fournitures	
+BQ	Banque	14	20250131	512000	Banque			D0013	20250126	Fournitures	0,00	318,54			20250131			20250131	CB	Fournitures	
+BQ	Banque	15	20250203	512000	Banque			R0014	20250127	Honoraires mission de maîtrise d'œuvre CLI006	968,42	0,00			20250228			20250203	PRLV	Honoraires mission de maîtrise d'œuvre	CLI006
+BQ	Banque	15	20250203	706000	Honoraires			R0014	20250127	Honoraires mission de maîtrise d'œuvre CLI006	0,00	968,42			20250228			20250203	PRLV	Honoraires mission de maîtrise d'œuvre	CLI006
+BQ	Banque	16	20250204	512000	Banque			R0015	20250202	Honoraires mission de maîtrise d'œuvre CLI023	1737,02	0,00			20250228			20250204	PRLV	Honoraires mission de maîtrise d'œuvre	CLI023
+BQ	Banque	16	20250204	706000	Honoraires			R0015	20250202	Honoraires mission de maîtrise d'œuvre CLI023	0,00	1737,02			20250228			20250204	PRLV	Honoraires mission de maîtrise d'œuvre	CLI023
+BQ	Banque	17	20250205	606400	Fournitures de bureau			D0016	20250131	Fournitures	34,64	0,00			20250228			20250205	VIR	Fournitures	
+BQ	Banque	17	20250205	512000	Banque			D0016	20250131	Fournitures	0,00	34,64			20250228			20250205	VIR	Fournitures	
+BQ	Banque	18	20250207	606400	Fournitures de bureau			D0017	20250201	Fournitures	115,82	0,00			20250228			20250207	CB	Fournitures	
+BQ	Banque	18	20250207	512000	Banque			D0017	20250201	Fournitures	0,00	115,82			20250228			20250207	CB	Fournitures	
+BQ	Banque	19	20250213	613200	Loyer du cabinet			D0018	20250204	Loyer cabinet	1200,00	0,00			20250228			20250213	CB	Loyer cabinet	
+BQ	Banque	19	20250213	512000	Banque			D0018	20250204	Loyer cabinet	0,00	1200,00			20250228			20250213	CB	Loyer cabinet	
+BQ	Banque	20	20250214	613200	Loyer du cabinet			D0019	20250208	Loyer cabinet	1200,00	0,00			20250228			20250214	VIR	Loyer cabinet	
+BQ	Banque	20	20250214	512000	Banque			D0019	20250208	Loyer cabinet	0,00	1200,00			20250228			20250214	VIR	Loyer cabinet	
+BQ	Banque	21	20250217	512000	Banque			R0020	20250209	Honoraires mission de maîtrise d'œuvre CLI022	3377,90	0,00			20250228			20250217	VIR	Honoraires mission de maîtrise d'œuvre	CLI022
+BQ	Banque	21	20250217	706000	Honoraires			R0020	20250209	Honoraires mission de maîtrise d'œuvre CLI022	0,00	3377,90			20250228			20250217	VIR	Honoraires mission de maîtrise d'œuvre	CLI022
+BQ	Banque	22	20250218	512000	Banque			R0021	20250214	Honoraires mission de maîtrise d'œuvre CLI019	850,93	0,00			20250228			20250218	CHQ	Honoraires mission de maîtrise d'œuvre	CLI019
+BQ	Banque	22	20250218	706000	Honoraires			R0021	20250214	Honoraires mission de maîtrise d'œuvre CLI019	0,00	850,93			20250228			20250218	CHQ	Honoraires mission de maîtrise d'œuvre	CLI019
+BQ	Banque	23	20250226	512000	Banque			R0022	20250217	Honoraires mission de maîtrise d'œuvre CLI017	11620,19	0,00			20250228			20250226	VIR	Honoraires mission de maîtrise d'œuvre	CLI017
+BQ	Banque	23	20250226	706000	Honoraires			R0022	20250217	Honoraires mission de maîtrise d'œuvre CLI017	0,00	11620,19			20250228			20250226	VIR	Honoraires mission de maîtrise d'œuvre	CLI017
+BQ	Banque	24	20250227	606400	Fournitures de bureau			D0023	20250219	Fournitures	98,40	0,00			20250228			20250227	PRLV	Fournitures	
+BQ	Banque	24	20250227	512000	Banque			D0023	20250219	Fournitures	0,00	98,40			20250228			20250227	PRLV	Fournitures	
+BQ	Banque	25	20250228	625100	Frais de déplacement			D0024	20250219	Déplacements chantier	35,04	0,00			20250228			20250228	VIR	Déplacements chantier	
+BQ	Banque	25	20250228	512000	Banque			D0024	20250219	Déplacements chantier	0,00	35,04			20250228			20250228	VIR	Déplacements chantier	
+BQ	Banque	26	20250304	512000	Banque			R0025	20250222	Honoraires esquisse CLI023	309,57	0,00			20250331			20250304	CHQ	Honoraires esquisse	CLI023
+BQ	Banque	26	20250304	706100	Honoraires esquisse			R0025	20250222	Honoraires esquisse CLI023	0,00	309,57			20250331			20250304	CHQ	Honoraires esquisse	CLI023
+BQ	Banque	27	20250305	512000	Banque			R0026	20250224	Honoraires mission de maîtrise d'œuvre CLI019	3115,48	0,00			20250331			20250305	VIR	Honoraires mission de maîtrise d'œuvre	CLI019
+BQ	Banque	27	20250305	706000	Honoraires			R0026	20250224	Honoraires mission de maîtrise d'œuvre CLI019	0,00	3115,48			20250331			20250305	VIR	Honoraires mission de maîtrise d'œuvre	CLI019
+BQ	Banque	28	20250306	512000	Banque			R0027	20250301	Honoraires esquisse CLI004	2137,59	0,00			20250331			20250306	CHQ	Honoraires esquisse	CLI004
+BQ	Banque	28	20250306	706100	Honoraires esquisse			R0027	20250301	Honoraires esquisse CLI004	0,00	2137,59			20250331			20250306	CHQ	Honoraires esquisse	CLI004
+BQ	Banque	29	20250307	651000	Licences logicielles			D0028	20250301	Abonnement logiciel de CAO	99,00	0,00			20250331			20250307	PRLV	Abonnement logiciel de CAO	
+BQ	Banque	29	20250307	512000	Banque			D0028	20250301	Abonnement logiciel de CAO	0,00	99,00			20250331			20250307	PRLV	Abonnement logiciel de CAO	
+BQ	Banque	30	20250311	512000	Banque			R0029	20250301	Honoraires mission de maîtrise d'œuvre CLI004	2492,08	0,00			20250331			20250311	PRLV	Honoraires mission de maîtrise d'œuvre	CLI004
+BQ	Banque	30	20250311	706000	Honoraires			R0029	20250301	Honoraires mission de maîtrise d'œuvre CLI004	0,00	2492,08			20250331			20250311	PRLV	Honoraires mission de maîtrise d'œuvre	CLI004
+BQ	Banque	31	20250312	512000	Banque			R0030	20250310	Honoraires esquisse CLI010	1563,87	0,00			20250331			20250312	CHQ	Honoraires esquisse	CLI010
+BQ	Banque	31	20250312	706100	Honoraires esquisse			R0030	20250310	Honoraires esquisse CLI010	0,00	1563,87			20250331			20250312	CHQ	Honoraires esquisse	CLI010
+BQ	Banque	32	20250313	613200	Loyer du cabinet			D0031	20250311	Loyer cabinet	1200,00	0,00			20250331			20250313	CB	Loyer cabinet	
+BQ	Banque	32	20250313	512000	Banque			D0031	20250311	Loyer cabinet	0,00	1200,00			20250331			20250313	CB	Loyer cabinet	
+BQ	Banque	33	20250319	512000	Banque			R0032	20250310	Honoraires mission de maîtrise d'œuvre CLI015	3312,58	0,00			20250331			20250319	VIR	Honoraires mission de maîtrise d'œuvre	CLI015
+BQ	Banque	33	20250319	706000	Honoraires			R0032	20250310	Honoraires mission de maîtrise d'œuvre CLI015	0,00	3312,58			20250331			20250319	VIR	Honoraires mission de maîtrise d'œuvre	CLI015
+BQ	Banque	34	20250320	625100	Frais de déplacement			D0033	20250313	Déplacements chantier	29,62	0,00			20250331			20250320	PRLV	Déplacements chantier	
+BQ	Banque	34	20250320	512000	Banque			D0033	20250313	Déplacements chantier	0,00	29,62			20250331			20250320	PRLV	Déplacements chantier	
+BQ	Banque	35	20250324	512000	Banque			R0034	20250323	Honoraires mission de maîtrise d'œuvre CLI003	1432,73	0,00			20250331			20250324	PRLV	Honoraires mission de maîtrise d'œuvre	CLI003
+BQ	Banque	35	20250324	706000	Honoraires			R0034	20250323	Honoraires mission de maîtrise d'œuvre CLI003	0,00	1432,73			20250331			20250324	PRLV	Honoraires mission de maîtrise d'œuvre	CLI003
+BQ	Banque	36	20250325	625100	Frais de déplacement			D0035	20250323	Déplacements chantier	225,22	0,00			20250331			20250325	PRLV	Déplacements chantier	
+BQ	Banque	36	20250325	512000	Banque			D0035	20250323	Déplacements chantier	0,00	225,22			20250331			20250325	PRLV	Déplacements chantier	
+BQ	Banque	37	20250327	613200	Loyer du cabinet			D0036	20250326	Loyer cabinet	1200,00	0,00			20250331			20250327	CB	Loyer cabinet	
+BQ	Banque	37	20250327	512000	Banque			D0036	20250326	Loyer cabinet	0,00	1200,00			20250331			20250327	CB	Loyer cabinet	
+BQ	Banque	38	20250404	512000	Banque			R0037	20250404	Honoraires esquisse CLI018	961,01	0,00			20250430			20250404	CB	Honoraires esquisse	CLI018
+BQ	Banque	38	20250404	706100	Honoraires esquisse			R0037	20250404	Honoraires esquisse CLI018	0,00	961,01			20250430			20250404	CB	Honoraires esquisse	CLI018
+BQ	Banque	39	20250407	512000	Banque			R0038	20250404	Honoraires esquisse CLI009	319,22	0,00			20250430			20250407	PRLV	Honoraires esquisse	CLI009
+BQ	Banque	39	20250407	706100	Honoraires esquisse			R0038	20250404	Honoraires esquisse CLI009	0,00	319,22			20250430			20250407	PRLV	Honoraires esquisse	CLI009
+BQ	Banque	40	20250410	512000	Banque			R0039	20250401	Honoraires mission de maîtrise d'œuvre CLI015	13546,54	0,00			20250430			20250410	CB	Honoraires mission de maîtrise d'œuvre	CLI015
+BQ	Banque	40	20250410	706000	Honoraires			R0039	20250401	Honoraires mission de maîtrise d'œuvre CLI015	0,00	13546,54			20250430			20250410	CB	Honoraires mission de maîtrise d'œuvre	CLI015
+BQ	Banque	41	20250411	606400	Fournitures de bureau			D0040	20250409	Fournitures	43,76	0,00			20250430			20250411	PRLV	Fournitures	
+BQ	Banque	41	20250411	512000	Banque			D0040	20250409	Fournitures	0,00	43,76			20250430			20250411	PRLV	Fournitures	
+BQ	Banque	42	20250415	512000	Banque			R0041	20250412	Honoraires mission de maîtrise d'œuvre CLI022	4794,66	0,00			20250430			20250415	VIR	Honoraires mission de maîtrise d'œuvre	CLI022
+BQ	Banque	42	20250415	706000	Honoraires			R0041	20250412	Honoraires mission de maîtrise d'œuvre CLI022	0,00	4794,66			20250430			20250415	VIR	Honoraires mission de maîtrise d'œuvre	CLI022
+BQ	Banque	43	20250424	512000	Banque			R0042	20250423	Honoraires mission de maîtrise d'œuvre CLI004	2135,90	0,00			20250430			20250424	PRLV	Honoraires mission de maîtrise d'œuvre	CLI004
+BQ	Banque	43	20250424	706000	Honoraires			R0042	20250423	Honoraires mission de maîtrise d'œuvre CLI004	0,00	2135,90			20250430			20250424	PRLV	Honoraires mission de maîtrise d'œuvre	CLI004
+BQ	Banque	44	20250428	512000	Banque			R0043	20250426	Honoraires mission de maîtrise d'œuvre CLI008	10113,35	0,00			20250430			20250428	CHQ	Honoraires mission de maîtrise d'œuvre	CLI008
+BQ	Banque	44	20250428	706000	Honoraires			R0043	20250426	Honoraires mission de maîtrise d'œuvre CLI008	0,00	10113,35			20250430			20250428	CHQ	Honoraires mission de maîtrise d'œuvre	CLI008
+BQ	Banque	45	20250429	512000	Banque			R0044	20250422	Honoraires mission de maîtrise d'œuvre CLI012	11345,47	0,00			20250430			20250429	PRLV	Honoraires mission de maîtrise d'œuvre	CLI012
+BQ	Banque	45	20250429	706000	Honoraires			R0044	20250422	Honoraires mission de maîtrise d'œuvre CLI012	0,00	11345,47			20250430			20250429	PRLV	Honoraires mission de maîtrise d'œuvre	CLI012
+BQ	Banque	46	20250430	606400	Fournitures de bureau			D0045	20250421	Fournitures	24,08	0,00			20250430			20250430	CHQ	Fournitures	
+BQ	Banque	46	20250430	512000	Banque			D0045	20250421	Fournitures	0,00	24,08			20250430			20250430	CHQ	Fournitures	
+BQ	Banque	47	20250505	625100	Frais de déplacement			D0046	20250505	Déplacements chantier	236,26	0,00			20250531			20250505	VIR	Déplacements chantier	
+BQ	Banque	47	20250505	512000	Banque			D0046	20250505	Déplacements chantier	0,00	236,26			20250531			20250505	VIR	Déplacements chantier	
+BQ	Banque	48	20250507	512000	Banque			R0047	20250501	Honoraires mission de maîtrise d'œuvre CLI006	6469,37	0,00			20250531			20250507	VIR	Honoraires mission de maîtrise d'œuvre	CLI006
+BQ	Banque	48	20250507	706000	Honoraires			R0047	20250501	Honoraires mission de maîtrise d'œuvre CLI006	0,00	6469,37			20250531			20250507	VIR	Honoraires mission de maîtrise d'œuvre	CLI006
+BQ	Banque	49	20250509	512000	Banque			R0048	20250508	Honoraires esquisse CLI024	714,18	0,00			20250531			20250509	CB	Honoraires esquisse	CLI024
+BQ	Banque	49	20250509	706100	Honoraires esquisse			R0048	20250508	Honoraires esquisse CLI024	0,00	714,18			20250531			20250509	CB	Honoraires esquisse	CLI024
+BQ	Banque	50	20250513	625100	Frais de déplacement			D0049	20250512	Déplacements chantier	47,31	0,00			20250531			20250513	VIR	Déplacements chantier	
+BQ	Banque	50	20250513	512000	Banque			D0049	20250512	Déplacements chantier	0,00	47,31			20250531			20250513	VIR	Déplacements chantier	
+BQ	Banque	51	20250514	625100	Frais de déplacement			D0050	20250513	Déplacements chantier	21,39	0,00			20250531			20250514	CB	Déplacements chantier	
+BQ	Banque	51	20250514	512000	Banque			D0050	20250513	Déplacements chantier	0,00	21,39			20250531			20250514	CB	Déplacements chantier	
+BQ	Banque	52	20250519	512000	Banque			R0051	20250514	Honoraires mission de maîtrise d'œuvre CLI016	1538,27	0,00			20250531			20250519	CHQ	Honoraires mission de maîtrise d'œuvre	CLI016
+BQ	Banque	52	20250519	706000	Honoraires			R0051	20250514	Honoraires mission de maîtrise d'œuvre CLI016	0,00	1538,27			20250531			20250519	CHQ	Honoraires mission de maîtrise d'œuvre	CLI016
+BQ	Banque	53	20250520	651000	Licences logicielles			D0052	20250514	Abonnement logiciel de CAO	99,00	0,00			20250531			20250520	PRLV	Abonnement logiciel de CAO	
+BQ	Banque	53	20250520	512000	Banque			D0052	20250514	Abonnement logiciel de CAO	0,00	99,00			20250531			20250520	PRLV	Abonnement logiciel de CAO	
+BQ	Banque	54	20250528	512000	Banque			R0053	20250526	Honoraires mission de maîtrise d'œuvre CLI006	2655,69	0,00			20250531			20250528	CHQ	Honoraires mission de maîtrise d'œuvre	CLI006
+BQ	Banque	54	20250528	706000	Honoraires			R0053	20250526	Honoraires mission de maîtrise d'œuvre CLI006	0,00	2655,69			20250531			20250528	CHQ	Honoraires mission de maîtrise d'œuvre	CLI006
+BQ	Banque	55	20250606	512000	Banque			R0054	20250530	Honoraires esquisse CLI004	1982,65	0,00			20250630			20250606	PRLV	Honoraires esquisse	CLI004
+BQ	Banque	55	20250606	706100	Honoraires esquisse			R0054	20250530	Honoraires esquisse CLI004	0,00	1982,65			20250630			20250606	PRLV	Honoraires esquisse	CLI004
+BQ	Banque	56	20250613	625100	Frais de déplacement			D0055	20250605	Déplacements chantier	205,60	0,00			20250630			20250613	CB	Déplacements chantier	
+BQ	Banque	56	20250613	512000	Banque			D0055	20250605	Déplacements chantier	0,00	205,60			20250630			20250613	CB	Déplacements chantier	
+BQ	Banque	57	20250625	625100	Frais de déplacement			D0056	20250623	Déplacements chantier	102,50	0,00			20250630			20250625	CHQ	Déplacements chantier	
+BQ	Banque	57	20250625	512000	Banque			D0056	20250623	Déplacements chantier	0,00	102,50			20250630			20250625	CHQ	Déplacements chantier	
+BQ	Banque	58	20250702	625100	Frais de déplacement			D0057	20250623	Déplacements chantier	69,21	0,00			20250731			20250702	CHQ	Déplacements chantier	
+BQ	Banque	58	20250702	512000	Banque			D0057	20250623	Déplacements chantier	0,00	69,21			20250731			20250702	CHQ	Déplacements chantier	
+BQ	Banque	59	20250704	651000	Licences logicielles			D0058	20250625	Abonnement logiciel de CAO	99,00	0,00			20250731			20250704	PRLV	Abonnement logiciel de CAO	
+BQ	Banque	59	20250704	512000	Banque			D0058	20250625	Abonnement logiciel de CAO	0,00	99,00			20250731			20250704	PRLV	Abonnement logiciel de CAO	
+BQ	Banque	60	20250707	613200	Loyer du cabinet			D0059	20250705	Loyer cabinet	1200,00	0,00			20250731			20250707	CB	Loyer cabinet	
+BQ	Banque	60	20250707	512000	Banque			D0059	20250705	Loyer cabinet	0,00	1200,00			20250731			20250707	CB	Loyer cabinet	
+BQ	Banque	61	20250708	512000	Banque			R0060	20250706	Honoraires esquisse CLI003	493,28	0,00			20250731			20250708	PRLV	Honoraires esquisse	CLI003
+BQ	Banque	61	20250708	706100	Honoraires esquisse			R0060	20250706	Honoraires esquisse CLI003	0,00	493,28			20250731			20250708	PRLV	Honoraires esquisse	CLI003
+BQ	Banque	62	20250709	625100	Frais de déplacement			D0061	20250703	Déplacements chantier	27,21	0,00			20250731			20250709	CB	Déplacements chantier	
+BQ	Banque	62	20250709	512000	Banque			D0061	20250703	Déplacements chantier	0,00	27,21			20250731			20250709	CB	Déplacements chantier	
+BQ	Banque	63	20250715	512000	Banque			R0062	20250708	Honoraires mission de maîtrise d'œuvre CLI025	3411,76	0,00			20250731			20250715	PRLV	Honoraires mission de maîtrise d'œuvre	CLI025
+BQ	Banque	63	20250715	706000	Honoraires			R0062	20250708	Honoraires mission de maîtrise d'œuvre CLI025	0,00	3411,76			20250731			20250715	PRLV	Honoraires mission de maîtrise d'œuvre	CLI025
+BQ	Banque	64	20250721	512000	Banque			R0063	20250714	Honoraires mission de maîtrise d'œuvre CLI015	6241,82	0,00			20250731			20250721	PRLV	Honoraires mission de maîtrise d'œuvre	CLI015
+BQ	Banque	64	20250721	706000	Honoraires			R0063	20250714	Honoraires mission de maîtrise d'œuvre CLI015	0,00	6241,82			20250731			20250721	PRLV	Honoraires mission de maîtrise d'œuvre	CLI015
+BQ	Banque	65	20250722	625100	Frais de déplacement			D0064	20250717	Déplacements chantier	21,51	0,00			20250731			20250722	VIR	Déplacements chantier	
+BQ	Banque	65	20250722	512000	Banque			D0064	20250717	Déplacements chantier	0,00	21,51			20250731			20250722	VIR	Déplacements chantier	
+BQ	Banque	66	20250723	625100	Frais de déplacement			D0065	20250717	Déplacements chantier	32,19	0,00			20250731			20250723	PRLV	Déplacements chantier	
+BQ	Banque	66	20250723	512000	Banque			D0065	20250717	Déplacements chantier	0,00	32,19			20250731			20250723	PRLV	Déplacements chantier	
+BQ	Banque	67	20250724	512000	Banque			R0066	20250721	Honoraires mission de maîtrise d'œuvre CLI022	13904,20	0,00			20250731			20250724	CHQ	Honoraires mission de maîtrise d'œuvre	CLI022
+BQ	Banque	67	20250724	706000	Honoraires			R0066	20250721	Honoraires mission de maîtrise d'œuvre CLI022	0,00	13904,20			20250731			20250724	CHQ	Honoraires mission de maîtrise d'œuvre	CLI022
+BQ	Banque	68	20250805	512000	Banque			R0067	20250727	Honoraires mission de maîtrise d'œuvre CLI003	6896,96	0,00			20250831			20250805	PRLV	Honoraires mission de maîtrise d'œuvre	CLI003
+BQ	Banque	68	20250805	706000	Honoraires			R0067	20250727	Honoraires mission de maîtrise d'œuvre CLI003	0,00	6896,96			20250831			20250805	PRLV	Honoraires mission de maîtrise d'œuvre	CLI003
+BQ	Banque	69	20250806	651000	Licences logicielles			D0068	20250803	Abonnement logiciel de CAO	99,00	0,00			20250831			20250806	VIR	Abonnement logiciel de CAO	
+BQ	Banque	69	20250806	512000	Banque			D0068	20250803	Abonnement logiciel de CAO	0,00	99,00			20250831			20250806	VIR	Abonnement logiciel de CAO	
+BQ	Banque	70	20250807	512000	Banque			R0069	20250806	Honoraires esquisse CLI004	2148,59	0,00			20250831			20250807	CHQ	Honoraires esquisse	CLI004
+BQ	Banque	70	20250807	706100	Honoraires esquisse			R0069	20250806	Honoraires esquisse CLI004	0,00	2148,59			20250831			20250807	CHQ	Honoraires esquisse	CLI004
+BQ	Banque	71	20250813	512000	Banque			R0070	20250804	Honoraires mission de maîtrise d'œuvre CLI018	2073,41	0,00			20250831			20250813	VIR	Honoraires mission de maîtrise d'œuvre	CLI018
+BQ	Banque	71	20250813	706000	Honoraires			R0070	20250804	Honoraires mission de maîtrise d'œuvre CLI018	0,00	2073,41			20250831			20250813	VIR	Honoraires mission de maîtrise d'œuvre	CLI018
+BQ	Banque	72	20250814	512000	Banque			R0071	20250804	Honoraires mission de maîtrise d'œuvre CLI004	985,62	0,00			20250831			20250814	CB	Honoraires mission de maîtrise d'œuvre	CLI004
+BQ	Banque	72	20250814	706000	Honoraires			R0071	20250804	Honoraires mission de maîtrise d'œuvre CLI004	0,00	985,62			20250831			20250814	CB	Honoraires mission de maîtrise d'œuvre	CLI004
+BQ	Banque	73	20250818	512000	Banque			R0072	20250813	Honoraires mission de maîtrise d'œuvre CLI012	3636,29	0,00			20250831			20250818	CB	Honoraires mission de maîtrise d'œuvre	CLI012
+BQ	Banque	73	20250818	706000	Honoraires			R0072	20250813	Honoraires mission de maîtrise d'œuvre CLI012	0,00	3636,29			20250831			20250818	CB	Honoraires mission de maîtrise d'œuvre	CLI012
+BQ	Banque	74	20250819	606400	Fournitures de bureau			D0073	20250810	Fournitures	126,36	0,00			20250831			20250819	CB	Fournitures	
+BQ	Banque	74	20250819	512000	Banque			D0073	20250810	Fournitures	0,00	126,36			20250831			20250819	CB	Fournitures	
+BQ	Banque	75	20250820	613200	Loyer du cabinet			D0074	20250811	Loyer cabinet	1200,00	0,00			20250831			20250820	PRLV	Loyer cabinet	
+BQ	Banque	75	20250820	512000	Banque			D0074	20250811	Loyer cabinet	0,00	1200,00			20250831			20250820	PRLV	Loyer cabinet	
+BQ	Banque	76	20250825	625100	Frais de déplacement			D0075	20250819	Déplacements chantier	186,84	0,00			20250831			20250825	CB	Déplacements chantier	
+BQ	Banque	76	20250825	512000	Banque			D0075	20250819	Déplacements chantier	0,00	186,84			20250831			20250825	CB	Déplacements chantier	
+BQ	Banque	77	20250827	606400	Fournitures de bureau			D0076	20250818	Fournitures	16,90	0,00			20250831			20250827	PRLV	Fournitures	
+BQ	Banque	77	20250827	512000	Banque			D0076	20250818	Fournitures	0,00	16,90			20250831			20250827	PRLV	Fournitures	
+BQ	Banque	78	20250828	625100	Frais de déplacement			D0077	20250824	Déplacements chantier	83,00	0,00			20250831			20250828	CHQ	Déplacements chantier	
+BQ	Banque	78	20250828	512000	Banque			D0077	20250824	Déplacements chantier	0,00	83,00			20250831			20250828	CHQ	Déplacements chantier	
+BQ	Banque	79	20250901	512000	Banque			R0078	20250825	Honoraires mission de maîtrise d'œuvre CLI011	8770,52	0,00			20250930			20250901	VIR	Honoraires mission de maîtrise d'œuvre	CLI011
+BQ	Banque	79	20250901	706000	Honoraires			R0078	20250825	Honoraires mission de maîtrise d'œuvre CLI011	0,00	8770,52			20250930			20250901	VIR	Honoraires mission de maîtrise d'œuvre	CLI011
+BQ	Banque	80	20250903	613200	Loyer du cabinet			D0079	20250901	Loyer cabinet	1200,00	0,00			20250930			20250903	VIR	Loyer cabinet	
+BQ	Banque	80	20250903	512000	Banque			D0079	20250901	Loyer cabinet	0,00	1200,00			20250930			20250903	VIR	Loyer cabinet	
+BQ	Banque	81	20250904	606400	Fournitures de bureau			D0080	20250825	Fournitures	236,55	0,00			20250930			20250904	VIR	Fournitures	
+BQ	Banque	81	20250904	512000	Banque			D0080	20250825	Fournitures	0,00	236,55			20250930			20250904	VIR	Fournitures	
+BQ	Banque	82	20250908	512000	Banque			R0081	20250903	Honoraires mission de maîtrise d'œuvre CLI003	2358,50	0,00			20250930			20250908	CHQ	Honoraires mission de maîtrise d'œuvre	CLI003
+BQ	Banque	82	20250908	706000	Honoraires			R0081	20250903	Honoraires mission de maîtrise d'œuvre CLI003	0,00	2358,50			20250930			20250908	CHQ	Honoraires mission de maîtrise d'œuvre	CLI003
+BQ	Banque	83	20250909	512000	Banque			R0082	20250901	Honoraires esquisse CLI018	2605,00	0,00			20250930			20250909	CHQ	Honoraires esquisse	CLI018
+BQ	Banque	83	20250909	706100	Honoraires esquisse			R0082	20250901	Honoraires esquisse CLI018	0,00	2605,00			20250930			20250909	CHQ	Honoraires esquisse	CLI018
+BQ	Banque	84	20250910	512000	Banque			R0083	20250904	Honoraires esquisse CLI014	1258,51	0,00			20250930			20250910	CHQ	Honoraires esquisse	CLI014
+BQ	Banque	84	20250910	706100	Honoraires esquisse			R0083	20250904	Honoraires esquisse CLI014	0,00	1258,51			20250930			20250910	CHQ	Honoraires esquisse	CLI014
+BQ	Banque	85	20250917	512000	Banque			R0084	20250912	Honoraires esquisse CLI018	740,41	0,00			20250930			20250917	VIR	Honoraires esquisse	CLI018
+BQ	Banque	85	20250917	706100	Honoraires esquisse			R0084	20250912	Honoraires esquisse CLI018	0,00	740,41			20250930			20250917	VIR	Honoraires esquisse	CLI018
+BQ	Banque	86	20250918	613200	Loyer du cabinet			D0085	20250910	Loyer cabinet	1200,00	0,00			20250930			20250918	VIR	Loyer cabinet	
+BQ	Banque	86	20250918	512000	Banque			D0085	20250910	Loyer cabinet	0,00	1200,00			20250930			20250918	VIR	Loyer cabinet	
+BQ	Banque	87	20250923	512000	Banque			R0086	20250915	Honoraires esquisse CLI025	922,82	0,00			20250930			20250923	CB	Honoraires esquisse	CLI025
+BQ	Banque	87	20250923	706100	Honoraires esquisse			R0086	20250915	Honoraires esquisse CLI025	0,00	922,82			20250930			20250923	CB	Honoraires esquisse	CLI025
+BQ	Banque	88	20250924	512000	Banque			R0087	20250914	Honoraires mission de maîtrise d'œuvre CLI017	2973,02	0,00			20250930			20250924	PRLV	Honoraires mission de maîtrise d'œuvre	CLI017
+BQ	Banque	88	20250924	706000	Honoraires			R0087	20250914	Honoraires mission de maîtrise d'œuvre CLI017	0,00	2973,02			20250930			20250924	PRLV	Honoraires mission de maîtrise d'œuvre	CLI017
+BQ	Banque	89	20250925	512000	Banque			R0088	20250924	Honoraires mission de maîtrise d'œuvre CLI023	9917,57	0,00			20250930			20250925	VIR	Honoraires mission de maîtrise d'œuvre	CLI023
+BQ	Banque	89	20250925	706000	Honoraires			R0088	20250924	Honoraires mission de maîtrise d'œuvre CLI023	0,00	9917,57			20250930			20250925	VIR	Honoraires mission de maîtrise d'œuvre	CLI023
+BQ	Banque	90	20250926	625100	Frais de déplacement			D0089	20250921	Déplacements chantier	112,36	0,00			20250930			20250926	VIR	Déplacements chantier	
+BQ	Banque	90	20250926	512000	Banque			D0089	20250921	Déplacements chantier	0,00	112,36			20250930			20250926	VIR	Déplacements chantier	
+BQ	Banque	91	20250929	606400	Fournitures de bureau			D0090	20250927	Fournitures	69,62	0,00			20250930			20250929	CB	Fournitures	
+BQ	Banque	91	20250929	512000	Banque			D0090	20250927	Fournitures	0,00	69,62			20250930			20250929	CB	Fournitures	
+BQ	Banque	92	20251002	512000	Banque			R0091	20250923	Honoraires mission de maîtrise d'œuvre CLI015	3163,87	0,00			20251031			20251002	CHQ	Honoraires mission de maîtrise d'œuvre	CLI015
+BQ	Banque	92	20251002	706000	Honoraires			R0091	20250923	Honoraires mission de maîtrise d'œuvre CLI015	0,00	3163,87			20251031			20251002	CHQ	Honoraires mission de maîtrise d'œuvre	CLI015
+BQ	Banque	93	20251003	512000	Banque			R0092	20251001	Honoraires esquisse CLI011	667,68	0,00			20251031			20251003	CHQ	Honoraires esquisse	CLI011
+BQ	Banque	93	20251003	706100	Honoraires esquisse			R0092	20251001	Honoraires esquisse CLI011	0,00	667,68			20251031			20251003	CHQ	Honoraires esquisse	CLI011
+BQ	Banque	94	20251008	512000	Banque			R0093	20251002	Honoraires esquisse CLI024	1297,48	0,00			20251031			20251008	CHQ	Honoraires esquisse	CLI024
+BQ	Banque	94	20251008	706100	Honoraires esquisse			R0093	20251002	Honoraires esquisse CLI024	0,00	1297,48			20251031			20251008	CHQ	Honoraires esquisse	CLI024
+BQ	Banque	95	20251009	512000	Banque			R0094	20251002	Honoraires mission de maîtrise d'œuvre CLI014	8567,94	0,00			20251031			20251009	PRLV	Honoraires mission de maîtrise d'œuvre	CLI014
+BQ	Banque	95	20251009	706000	Honoraires			R0094	20251002	Honoraires mission de maîtrise d'œuvre CLI014	0,00	8567,94			20251031			20251009	PRLV	Honoraires mission de maîtrise d'œuvre	CLI014
+BQ	Banque	96	20251010	512000	Banque			R0095	20251007	Honoraires mission de maîtrise d'œuvre CLI010	11718,54	0,00			20251031			20251010	CHQ	Honoraires mission de maîtrise d'œuvre	CLI010
+BQ	Banque	96	20251010	706000	Honoraires			R0095	20251007	Honoraires mission de maîtrise d'œuvre CLI010	0,00	11718,54			20251031			20251010	CHQ	Honoraires mission de maîtrise d'œuvre	CLI010
+BQ	Banque	97	20251013	613200	Loyer du cabinet			D0096	20251003	Loyer cabinet	1200,00	0,00			20251031			20251013	CB	Loyer cabinet	
+BQ	Banque	97	20251013	512000	Banque			D0096	20251003	Loyer cabinet	0,00	1200,00			20251031			20251013	CB	Loyer cabinet	
+BQ	Banque	98	20251014	606400	Fournitures de bureau			D0097	20251006	Fournitures	94,71	0,00			20251031			20251014	CHQ	Fournitures	
+BQ	Banque	98	20251014	512000	Banque			D0097	20251006	Fournitures	0,00	94,71			20251031			20251014	CHQ	Fournitures	
+BQ	Banque	99	20251015	606400	Fournitures de bureau			D0098	20251010	Fournitures	19,70	0,00			20251031			20251015	CHQ	Fournitures	
+BQ	Banque	99	20251015	512000	Banque			D0098	20251010	Fournitures	0,00	19,70			20251031			20251015	CHQ	Fournitures	
+BQ	Banque	100	20251017	625100	Frais de déplacement			D0099	20251015	Déplacements chantier	27,31	0,00			20251031			20251017	CB	Déplacements chantier	
+BQ	Banque	100	20251017	512000	Banque			D0099	20251015	Déplacements chantier	0,00	27,31			20251031			20251017	CB	Déplacements chantier	
+BQ	Banque	101	20251021	606400	Fournitures de bureau			D0100	20251021	Fournitures	214,28	0,00			20251031			20251021	PRLV	Fournitures	
+BQ	Banque	101	20251021	512000	Banque			D0100	20251021	Fournitures	0,00	214,28			20251031			20251021	PRLV	Fournitures	
+BQ	Banque	102	20251022	512000	Banque			R0101	20251018	Honoraires mission de maîtrise d'œuvre CLI010	2450,52	0,00			20251031			20251022	CHQ	Honoraires mission de maîtrise d'œuvre	CLI010
+BQ	Banque	102	20251022	706000	Honoraires			R0101	20251018	Honoraires mission de maîtrise d'œuvre CLI010	0,00	2450,52			20251031			20251022	CHQ	Honoraires mission de maîtrise d'œuvre	CLI010
+BQ	Banque	103	20251023	625100	Frais de déplacement			D0102	20251018	Déplacements chantier	83,87	0,00			20251031			20251023	VIR	Déplacements chantier	
+BQ	Banque	103	20251023	512000	Banque			D0102	20251018	Déplacements chantier	0,00	83,87			20251031			20251023	VIR	Déplacements chantier	
+BQ	Banque	104	20251024	625100	Frais de déplacement			D0103	20251017	Déplacements chantier	23,76	0,00			20251031			20251024	CB	Déplacements chantier	
+BQ	Banque	104	20251024	512000	Banque			D0103	20251017	Déplacements chantier	0,00	23,76			20251031			20251024	CB	Déplacements chantier	
+BQ	Banque	105	20251027	512000	Banque			R0104	20251023	Honoraires mission de maîtrise d'œuvre CLI015	1814,60	0,00			20251031			20251027	VIR	Honoraires mission de maîtrise d'œuvre	CLI015
+BQ	Banque	105	20251027	706000	Honoraires			R0104	20251023	Honoraires mission de maîtrise d'œuvre CLI015	0,00	1814,60			20251031			20251027	VIR	Honoraires mission de maîtrise d'œuvre	CLI015
+BQ	Banque	106	20251028	651000	Licences logicielles			D0105	20251021	Abonnement logiciel de CAO	99,00	0,00			20251031			20251028	VIR	Abonnement logiciel de CAO	
+BQ	Banque	106	20251028	512000	Banque			D0105	20251021	Abonnement logiciel de CAO	0,00	99,00			20251031			20251028	VIR	Abonnement logiciel de CAO	
+BQ	Banque	107	20251029	512000	Banque			R0106	20251023	Honoraires mission de maîtrise d'œuvre CLI010	9964,21	0,00			20251031			20251029	PRLV	Honoraires mission de maîtrise d'œuvre	CLI010
+BQ	Banque	107	20251029	706000	Honoraires			R0106	20251023	Honoraires mission de maîtrise d'œuvre CLI010	0,00	9964,21			20251031			20251029	PRLV	Honoraires mission de maîtrise d'œuvre	CLI010
+BQ	Banque	108	20251030	651000	Licences logicielles			D0107	20251020	Abonnement logiciel de CAO	99,00	0,00			20251031			20251030	CB	Abonnement logiciel de CAO	
+BQ	Banque	108	20251030	512000	Banque			D0107	20251020	Abonnement logiciel de CAO	0,00	99,00			20251031			20251030	CB	Abonnement logiciel de CAO	
+BQ	Banque	109	20251031	651000	Licences logicielles			D0108	20251026	Abonnement logiciel de CAO	99,00	0,00			20251031			20251031	CB	Abonnement logiciel de CAO	
+BQ	Banque	109	20251031	512000	Banque			D0108	20251026	Abonnement logiciel de CAO	0,00	99,00			20251031			20251031	CB	Abonnement logiciel de CAO	
+BQ	Banque	110	20251106	512000	Banque			R0109	20251102	Honoraires mission de maîtrise d'œuvre CLI015	8656,29	0,00			20251130			20251106	PRLV	Honoraires mission de maîtrise d'œuvre	CLI015
+BQ	Banque	110	20251106	706000	Honoraires			R0109	20251102	Honoraires mission de maîtrise d'œuvre CLI015	0,00	8656,29			20251130			20251106	PRLV	Honoraires mission de maîtrise d'œuvre	CLI015
+BQ	Banque	111	20251107	512000	Banque			R0110	20251101	Honoraires mission de maîtrise d'œuvre CLI021	5367,85	0,00			20251130			20251107	CHQ	Honoraires mission de maîtrise d'œuvre	CLI021
+BQ	Banque	111	20251107	706000	Honoraires			R0110	20251101	Honoraires mission de maîtrise d'œuvre CLI021	0,00	5367,85			20251130			20251107	CHQ	Honoraires mission de maîtrise d'œuvre	CLI021
+BQ	Banque	112	20251113	512000	Banque			R0111	20251105	Honoraires esquisse CLI012	611,76	0,00			20251130			20251113	CHQ	Honoraires esquisse	CLI012
+BQ	Banque	112	20251113	706100	Honoraires esquisse			R0111	20251105	Honoraires esquisse CLI012	0,00	611,76			20251130			20251113	CHQ	Honoraires esquisse	CLI012
+BQ	Banque	113	20251114	512000	Banque			R0112	20251107	Honoraires esquisse CLI013	1309,01	0,00			20251130			20251114	PRLV	Honoraires esquisse	CLI013
+BQ	Banque	113	20251114	706100	Honoraires esquisse			R0112	20251107	Honoraires esquisse CLI013	0,00	1309,01			20251130			20251114	PRLV	Honoraires esquisse	CLI013
+BQ	Banque	114	20251118	512000	Banque			R0113	20251118	Honoraires mission de maîtrise d'œuvre CLI020	1753,20	0,00			20251130			20251118	CHQ	Honoraires mission de maîtrise d'œuvre	CLI020
+BQ	Banque	114	20251118	706000	Honoraires			R0113	20251118	Honoraires mission de maîtrise d'œuvre CLI020	0,00	1753,20			20251130			20251118	CHQ	Honoraires mission de maîtrise d'œuvre	CLI020
+BQ	Banque	115	20251121	512000	Banque			R0114	20251118	Honoraires mission de maîtrise d'œuvre CLI015	1958,94	0,00			20251130			20251121	VIR	Honoraires mission de maîtrise d'œuvre	CLI015
+BQ	Banque	115	20251121	706000	Honoraires			R0114	20251118	Honoraires mission de maîtrise d'œuvre CLI015	0,00	1958,94			20251130			20251121	VIR	Honoraires mission de maîtrise d'œuvre	CLI015
+BQ	Banque	116	20251125	512000	Banque			R0115	20251118	Honoraires esquisse CLI009	1328,11	0,00			20251130			20251125	PRLV	Honoraires esquisse	CLI009
+BQ	Banque	116	20251125	706100	Honoraires esquisse			R0115	20251118	Honoraires esquisse CLI009	0,00	1328,11			20251130			20251125	PRLV	Honoraires esquisse	CLI009
+BQ	Banque	117	20251127	606400	Fournitures de bureau			D0116	20251120	Fournitures	312,71	0,00			20251130			20251127	PRLV	Fournitures	
+BQ	Banque	117	20251127	512000	Banque			D0116	20251120	Fournitures	0,00	312,71			20251130			20251127	PRLV	Fournitures	
+BQ	Banque	118	20251202	512000	Banque			R0117	20251127	Honoraires esquisse CLI010	1629,13	0,00			20251231			20251202	PRLV	Honoraires esquisse	CLI010
+BQ	Banque	118	20251202	706100	Honoraires esquisse			R0117	20251127	Honoraires esquisse CLI010	0,00	1629,13			20251231			20251202	PRLV	Honoraires esquisse	CLI010
+BQ	Banque	119	20251203	512000	Banque			R0118	20251202	Honoraires mission de maîtrise d'œuvre CLI014	4104,12	0,00			20251231			20251203	PRLV	Honoraires mission de maîtrise d'œuvre	CLI014
+BQ	Banque	119	20251203	706000	Honoraires			R0118	20251202	Honoraires mission de maîtrise d'œuvre CLI014	0,00	4104,12			20251231			20251203	PRLV	Honoraires mission de maîtrise d'œuvre	CLI014
+BQ	Banque	120	20251205	512000	Banque			R0119	20251129	Honoraires mission de maîtrise d'œuvre CLI013	11457,32	0,00			20251231			20251205	CB	Honoraires mission de maîtrise d'œuvre	CLI013
+BQ	Banque	120	20251205	706000	Honoraires			R0119	20251129	Honoraires mission de maîtrise d'œuvre CLI013	0,00	11457,32			20251231			20251205	CB	Honoraires mission de maîtrise d'œuvre	CLI013
+BQ	Banque	121	20251210	625100	Frais de déplacement			D0120	20251203	Déplacements chantier	189,32	0,00			20251231			20251210	CB	Déplacements chantier	
+BQ	Banque	121	20251210	512000	Banque			D0120	20251203	Déplacements chantier	0,00	189,32			20251231			20251210	CB	Déplacements chantier	
+BQ	Banque	122	20251211	512000	Banque			R0121	20251202	Honoraires mission de maîtrise d'œuvre CLI024	1908,24	0,00			20251231			20251211	PRLV	Honoraires mission de maîtrise d'œuvre	CLI024
+BQ	Banque	122	20251211	706000	Honoraires			R0121	20251202	Honoraires mission de maîtrise d'œuvre CLI024	0,00	1908,24			20251231			20251211	PRLV	Honoraires mission de maîtrise d'œuvre	CLI024
+BQ	Banque	123	20251215	512000	Banque			R0122	20251213	Honoraires esquisse CLI025	1524,76	0,00			20251231			20251215	VIR	Honoraires esquisse	CLI025
+BQ	Banque	123	20251215	706100	Honoraires esquisse			R0122	20251213	Honoraires esquisse CLI025	0,00	1524,76			20251231			20251215	VIR	Honoraires esquisse	CLI025
+BQ	Banque	124	20251216	606400	Fournitures de bureau			D0123	20251206	Fournitures	31,04	0,00			20251231			20251216	PRLV	Fournitures	
+BQ	Banque	124	20251216	512000	Banque			D0123	20251206	Fournitures	0,00	31,04			20251231			20251216	PRLV	Fournitures	
+BQ	Banque	125	20251218	625100	Frais de déplacement			D0124	20251213	Déplacements chantier	66,91	0,00			20251231			20251218	CB	Déplacements chantier	
+BQ	Banque	125	20251218	512000	Banque			D0124	20251213	Déplacements chantier	0,00	66,91			20251231			20251218	CB	Déplacements chantier	
+BQ	Banque	126	20251219	606400	Fournitures de bureau			D0125	20251211	Fournitures	88,38	0,00			20251231			20251219	VIR	Fournitures	
+BQ	Banque	126	20251219	512000	Banque			D0125	20251211	Fournitures	0,00	88,38			20251231			20251219	VIR	Fournitures	
+BQ	Banque	127	20251223	512000	Banque			R0126	20251213	Honoraires mission de maîtrise d'œuvre CLI019	1534,67	0,00			20251231			20251223	VIR	Honoraires mission de maîtrise d'œuvre	CLI019
+BQ	Banque	127	20251223	706000	Honoraires			R0126	20251213	Honoraires mission de maîtrise d'œuvre CLI019	0,00	1534,67			20251231			20251223	VIR	Honoraires mission de maîtrise d'œuvre	CLI019
+BQ	Banque	128	20251224	512000	Banque			R0127	20251214	Honoraires esquisse CLI015	564,36	0,00			20251231			20251224	PRLV	Honoraires esquisse	CLI015
+BQ	Banque	128	20251224	706100	Honoraires esquisse			R0127	20251214	Honoraires esquisse CLI015	0,00	564,36			20251231			20251224	PRLV	Honoraires esquisse	CLI015
+BQ	Banque	129	20251230	625100	Frais de déplacement			D0128	20251224	Déplacements chantier	46,60	0,00			20251231			20251230	CHQ	Déplacements chantier	
+BQ	Banque	129	20251230	512000	Banque			D0128	20251224	Déplacements chantier	0,00	46,60			20251231			20251230	CHQ	Déplacements chantier	
