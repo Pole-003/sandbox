@@ -2,6 +2,12 @@
 
 Toutes les évolutions notables de la Sandbox Pôle 003. Format inspiré de « Keep a Changelog », numéros de version au format semver.
 
+## [0.6.0] - 2026-10-08
+
+### Ajouté
+- Principales mesures du PLF 2027 et du PLFSS 2027 hiérarchisées pour le cabinet : « Essentiel pour nos dossiers », « Important », « À suivre », avec une rubrique par mesure (fiscalité des entreprises, transmission et patrimoine, impôt sur le revenu, contrôle fiscal, social et paie, retraite…).
+- La hiérarchie se modifie sans toucher au code (`veille/hierarchie-mesures.json`). Si un article change de numéro ou d'intitulé, il est reclassé automatiquement et l'écart est signalé dans « État des sources ».
+
 ## [0.5.0] - 2026-10-08
 
 ### Ajouté

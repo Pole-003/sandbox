@@ -274,16 +274,32 @@ function ligneArticle(a: ArticleProjet, avecImportance: boolean): HTMLElement {
     'li',
     { class: 'mesure' },
     a.url ? lienExterne(a.url, libelle) : h('span', {}, libelle),
-    avecImportance ? h('span', { class: 'mesure-meta' }, ' ', badgeImportance(a.importance), ...a.public.map((p) => h('span', { class: 'puce' }, p))) : null,
+    avecImportance
+      ? h(
+          'span',
+          { class: 'mesure-meta' },
+          ' ',
+          a.rubrique ? h('span', { class: 'puce puce-rubrique' }, a.rubrique) : badgeImportance(a.importance),
+          ...a.public.map((p) => h('span', { class: 'puce' }, p)),
+        )
+      : null,
   );
 }
+
+/** Paliers des principales mesures, du plus au moins important. */
+export const PALIERS_MESURES = [
+  { importance: 5, titre: 'Essentiel pour nos dossiers' },
+  { importance: 4, titre: 'Important' },
+  { importance: 3, titre: 'À suivre' },
+] as const;
 
 function mesures(suivi: SuiviTexte | null, nom: string): HTMLElement | null {
   const m = suivi?.mesures;
   if (!suivi || !m) return null;
-  const principales = m.articles
-    .filter((a) => a.importance >= SEUIL_MESURE_PRINCIPALE)
-    .sort((a, b) => b.importance - a.importance);
+  const parPole = m.hierarchie?.origine === 'pole';
+  const paliers = PALIERS_MESURES.map((p) => ({ ...p, articles: m.articles.filter((a) => a.importance === p.importance) })).filter(
+    (p) => p.articles.length > 0,
+  );
   const groupes = new Map<string, ArticleProjet[]>();
   for (const a of m.articles) {
     const cle = [a.partie, a.groupe].filter(Boolean).join(' — ') || 'Articles';
@@ -293,8 +309,15 @@ function mesures(suivi: SuiviTexte | null, nom: string): HTMLElement | null {
     'section',
     { class: 'carte mesures', 'aria-label': `Mesures du ${suivi.texte}` },
     h('h2', {}, `${nom} — principales mesures pour nos métiers`),
-    principales.length
-      ? h('ol', { class: 'liste-mesures' }, ...principales.map((a) => ligneArticle(a, true)))
+    paliers.length
+      ? h(
+          'div',
+          { class: 'paliers-mesures' },
+          ...paliers.flatMap((p) => [
+            h('h3', { class: `palier palier-${p.importance}` }, `${p.titre} (${p.articles.length})`),
+            h('ul', { class: 'liste-mesures' }, ...p.articles.map((a) => ligneArticle(a, true))),
+          ]),
+        )
       : h('p', { class: 'texte-secondaire' }, 'Aucun article ne correspond à nos mots-clés.'),
     h(
       'details',
@@ -307,7 +330,10 @@ function mesures(suivi: SuiviTexte | null, nom: string): HTMLElement | null {
       { class: 'texte-secondaire note' },
       'Intitulés officiels des articles du ',
       lienExterne(m.url, m.libelle.replace(/^Projet/, 'projet')),
-      `. Ils évolueront avec les amendements ; mesures choisies par nos mots-clés (importance ${SEUIL_MESURE_PRINCIPALE} et plus).`,
+      '. Ils évolueront avec les amendements. ',
+      parPole && m.hierarchie?.etablie_le
+        ? `Hiérarchie établie par le pôle le ${dateFr(m.hierarchie.etablie_le)}, d’après les intitulés.`
+        : `Mesures choisies par nos mots-clés (importance ${SEUIL_MESURE_PRINCIPALE} et plus).`,
     ),
   );
 }

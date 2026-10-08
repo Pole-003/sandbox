@@ -3,7 +3,7 @@ import { describe, expect, it } from 'vitest';
 import type { SourceCatalogue } from '../../scripts/veille/config.ts';
 import type { MotsCles } from '../../scripts/veille/classement.ts';
 import { anneesCandidates, collecterDossiers, construireSuivi, lireEtapesAN } from '../../scripts/veille/dossier.ts';
-import { construireMesures, lireArticles, texteDepuisDossier } from '../../scripts/veille/projet-loi.ts';
+import { appliquerHierarchie, construireMesures, lireArticles, texteDepuisDossier, verifierHierarchie, type HierarchieMesures } from '../../scripts/veille/projet-loi.ts';
 import { ClientHttp } from '../../scripts/veille/http.ts';
 
 const page = (nom: string) => readFileSync(new URL(`../fixtures/veille/${nom}`, import.meta.url), 'utf8');
@@ -178,5 +178,48 @@ describe('veille · articles du projet de loi', () => {
     expect(par['4']).toMatchObject({ importance: 3, theme: 'Fiscal et comptable', url: `${OPENDATA_PLF}#_Toc4` });
     expect(par['3']).toMatchObject({ importance: 3, public: ['Conseil aux dirigeants'] });
     expect(par['40']).toMatchObject({ importance: 1, theme: 'Loi de finances' });
+  });
+});
+
+describe('veille · hiérarchie des mesures établie par le pôle', () => {
+  const base = () => construireMesures(lireArticles(page('an-projet-plf-toc.html')), MOTS_CLES, 'Loi de finances', 'PLF', 'https://exemple.invalid/texte', OPENDATA_PLF);
+  const intitule = (numero: string) => base().articles.find((a) => a.numero === numero)!.intitule;
+
+  it('impose importance et rubrique, plafonne les articles non retenus à 2', () => {
+    const hierarchie: HierarchieMesures = {
+      textes: { '3210': { texte: 'PLF 2027', etablie_le: '2026-10-08', articles: { '40': { importance: 5, rubrique: 'Finances publiques', intitule: intitule('40') } } } },
+    };
+    const { mesures, ecarts } = appliquerHierarchie(base(), '3210', hierarchie);
+    const par = Object.fromEntries(mesures.articles.map((a) => [a.numero, a]));
+    expect(ecarts).toEqual([]);
+    expect(mesures.hierarchie).toEqual({ origine: 'pole', etablie_le: '2026-10-08' });
+    expect(par['40']).toMatchObject({ importance: 5, rubrique: 'Finances publiques' });
+    expect(par['4']).toMatchObject({ importance: 2, rubrique: null }); // 3 par mots-clés, non retenu par le pôle
+  });
+
+  it('ignore une ligne dont l’intitulé a changé (renumérotation) et le signale', () => {
+    const hierarchie: HierarchieMesures = {
+      textes: { '3210': { texte: 'PLF 2027', etablie_le: '2026-10-08', articles: {
+        '4': { importance: 5, rubrique: 'Fiscalité des entreprises', intitule: 'Un tout autre article' },
+        '999': { importance: 4, rubrique: 'Social et paie', intitule: 'Article disparu' },
+      } } },
+    };
+    const { mesures, ecarts } = appliquerHierarchie(base(), '3210', hierarchie);
+    expect(mesures.articles.find((a) => a.numero === '4')).toMatchObject({ importance: 3, rubrique: null });
+    expect(ecarts).toEqual(['art. 999 absent du texte', 'art. 4 : intitulé modifié']);
+  });
+
+  it('sans hiérarchie pour ce texte, le classement par mots-clés est conservé', () => {
+    const { mesures, ecarts } = appliquerHierarchie(base(), '4000', { textes: {} });
+    expect(mesures.hierarchie).toEqual({ origine: 'mots-cles', etablie_le: null });
+    expect(mesures.articles).toEqual(base().articles);
+    expect(ecarts).toEqual([]);
+  });
+
+  it('le fichier veille/hierarchie-mesures.json est valide', () => {
+    const fichier = JSON.parse(readFileSync(new URL('../../veille/hierarchie-mesures.json', import.meta.url), 'utf8')) as HierarchieMesures;
+    expect(() => verifierHierarchie(fichier)).not.toThrow();
+    expect(Object.keys(fichier.textes)).toEqual(['3210', '3211']);
+    expect(() => verifierHierarchie({ textes: { '1': { texte: 'X', etablie_le: '2026-10-08', articles: { '1': { importance: 7 as 5, rubrique: '', intitule: '' } } } } })).toThrow(/importance de 1 à 5/);
   });
 });

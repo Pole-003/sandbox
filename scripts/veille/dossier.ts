@@ -20,7 +20,7 @@ import { decoderOctets, lireEncodageDeclare } from './encodage.ts';
 import { decoderEntites } from './flux.ts';
 import type { ClientHttp } from './http.ts';
 import type { MotsCles } from './classement.ts';
-import { construireMesures, lireArticles, texteDepuisDossier } from './projet-loi.ts';
+import { appliquerHierarchie, construireMesures, lireArticles, texteDepuisDossier, type HierarchieMesures } from './projet-loi.ts';
 
 export interface EtapeLue {
   libelle: string;
@@ -141,7 +141,7 @@ const THEMES_SUIVI: Record<'plf' | 'plfss', Theme> = { plf: 'Loi de finances', p
 
 export async function collecterDossiers(
   sources: readonly SourceCatalogue[],
-  options: { client: ClientHttp; maintenant: Date; etatPrecedent: EtatSource[]; motsCles: MotsCles },
+  options: { client: ClientHttp; maintenant: Date; etatPrecedent: EtatSource[]; motsCles: MotsCles; hierarchie?: HierarchieMesures },
 ): Promise<ResultatDossiers> {
   const resultat: ResultatDossiers = { suivi: { plf: null, plfss: null }, articles: [], etats: [] };
   const aujourdhui = dateIsoParis(options.maintenant);
@@ -195,10 +195,16 @@ export async function collecterDossiers(
           if (r.statut !== 200) throw new Error(`HTTP ${r.statut}`);
           const articles = lireArticles(decoderOctets(r.octets, lireEncodageDeclare(r.octets, r.contentType)).texte);
           if (articles.length === 0) throw new Error('aucun article reconnu (présentation du texte modifiée ?)');
-          suivi.mesures = construireMesures(
-            articles, options.motsCles, THEMES_SUIVI[type],
-            `Projet de loi n° ${texteProjet.numero} (texte déposé par le Gouvernement)`, texteProjet.page, texteProjet.opendata,
+          const hierarchise = appliquerHierarchie(
+            construireMesures(
+              articles, options.motsCles, THEMES_SUIVI[type],
+              `Projet de loi n° ${texteProjet.numero} (texte déposé par le Gouvernement)`, texteProjet.page, texteProjet.opendata,
+            ),
+            texteProjet.numero,
+            options.hierarchie,
           );
+          suivi.mesures = hierarchise.mesures;
+          if (hierarchise.ecarts.length) remarque = `hiérarchie du pôle à revoir : ${hierarchise.ecarts.join(', ')}`;
         } catch (e) {
           remarque = `articles du projet de loi non lus : ${e instanceof Error ? e.message : String(e)}`;
         }

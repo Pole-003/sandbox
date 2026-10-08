@@ -55,6 +55,7 @@ Priorité du pôle. Source : les dossiers législatifs de l'Assemblée nationale
 - Deux présentations relevées le 08/10/2026 et toutes deux gérées : table des matières (`assnatTOC2` à `assnatTOC6`, PLF) et blocs d'article (`assnat9ArticleNum`, parties `assnat2PartieIntit`, PLFSS).
 - Chaque article est repris avec son numéro et son intitulé officiel, sans reformulation, puis classé avec les mêmes mots-clés que le fil (sans bonus de source). Les articles d'importance 3 et plus forment les « principales mesures » ; tous les articles restent consultables, groupés par partie.
 - Texte illisible : le suivi reste publié sans les mesures, l'erreur est indiquée dans « État des sources ».
+- Hiérarchie établie par le pôle (`veille/hierarchie-mesures.json`), prioritaire sur les mots-clés : pour chaque projet de loi (clé : son numéro), les articles retenus avec leur importance (5 « Essentiel pour nos dossiers », 4 « Important », 3 « À suivre ») et leur rubrique (Fiscalité des entreprises, Transmission et patrimoine, Social et paie…). Les articles non retenus sont plafonnés à 2. L'intitulé de chaque ligne sert de contrôle : s'il ne correspond plus (renumérotation, amendement, texte adopté), la ligne est ignorée, le classement par mots-clés s'applique et l'écart est signalé dans « État des sources ». Un texte absent du fichier (nouveau numéro, année suivante) est classé par mots-clés. Hiérarchie du PLF 2027 (n° 3210) et du PLFSS 2027 (n° 3211) établie le 08/10/2026 d'après les intitulés.
 
 ## Fusion, déduplication et classement
 
