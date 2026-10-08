@@ -227,7 +227,7 @@ export function creerSectionAnalyses(impN: ImportEnregistre, impN1: ImportEnregi
       h(
         'div',
         { class: 'actions' },
-        bouton('Exporter (.xlsx)', () => void exporter('Chiffres_cles', (X) => classeurChiffresCles(X, c, n1, parametres()))),
+        bouton('Exporter (.xlsx)', () => void exporter('Chiffres_cles', (X) => classeurChiffresCles(X, c, n1, parametres(), { n: b, n1: cache.balanceN1 ?? null }))),
         h('span', { class: 'texte-secondaire note' }, n1 ? `Comparaison avec ${impN1!.meta.nomFichier}` : 'Chargez le FEC N-1 pour la comparaison.'),
       ),
       h('h3', {}, 'Soldes intermédiaires de gestion'),

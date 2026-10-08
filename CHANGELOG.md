@@ -2,6 +2,15 @@
 
 Toutes les évolutions notables de la Sandbox Pôle 003. Format inspiré de « Keep a Changelog », numéros de version au format semver.
 
+## [0.12.0] - 2026-10-08
+
+### Ajouté
+- Exports Excel du module FEC en tableaux croisés dynamiques : chaque export s'ouvre sur un TCD, avec ses données sources dans l'onglet voisin.
+  - Balance générale : regroupement par classe, sous-classe et compte, avec les soldes d'ouverture et de clôture, les mouvements et la comparaison N-1.
+  - Balances clients et fournisseurs : regroupement par compte collectif et par tiers, avec les soldes, le non lettré et la balance âgée.
+  - Soldes intermédiaires de gestion : regroupement par rubrique et par compte ; le total général est le résultat de l'exercice.
+- Les TCD s'actualisent à l'ouverture dans Excel et se manipulent comme d'habitude (déplier, filtrer, réorganiser les champs). Leur contenu est déjà affiché à l'ouverture, même en mode protégé. Les onglets détaillés existants sont conservés.
+
 ## [0.11.0] - 2026-10-08
 
 ### Ajouté

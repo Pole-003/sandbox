@@ -41,8 +41,8 @@ beforeAll(async () => {
 describe('exports Excel des analyses', () => {
   it('chiffres clés : SIG en montants numériques, soldes en gras, comparaison N-1, Paramètres', async () => {
     const c = calculerChiffresCles(calculerBalance(ctx));
-    const wb = await relire(classeurChiffresCles(ExcelJS, c, c, parametres));
-    expect(wb.worksheets.map((w) => w.name)).toEqual(['SIG', 'Chiffres clés', 'Paramètres']);
+    const wb = await relire(classeurChiffresCles(ExcelJS, c, c, parametres, { n: calculerBalance(ctx), n1: calculerBalance(ctx) }));
+    expect(wb.worksheets.map((w) => w.name)).toEqual(['TCD SIG', 'Données TCD', 'SIG', 'Chiffres clés', 'Paramètres']);
     const sig = wb.getWorksheet('SIG')!;
     expect(sig.getRow(4).values).toEqual([undefined, 'Rubrique', 'Comptes', 'Exercice N', 'Exercice N-1', 'Variation']);
     const derniere = sig.getRow(4 + c.sig.length);
@@ -50,6 +50,14 @@ describe('exports Excel des analyses', () => {
     expect(derniere.getCell(3).value).toBe(c.resultat / 100);
     expect(derniere.getCell(5).value).toBe(0);
     expect(derniere.font?.bold).toBe(true);
+    // TCD par compte : le total général est le résultat de l'exercice.
+    const tcd = wb.getWorksheet('TCD SIG')!;
+    expect(tcd.getCell('A4').value).toBe('Étiquettes de lignes');
+    expect(String(tcd.getCell('A5').value)).toMatch(/^01 \+ Ventes de marchandises$/);
+    const derniereTcd = tcd.getRow(tcd.actualRowCount);
+    expect(derniereTcd.getCell(1).value).toBe('Total général');
+    expect(derniereTcd.getCell(2).value).toBeCloseTo(c.resultat / 100, 2);
+    expect(derniereTcd.getCell(3).value).toBeCloseTo(c.resultat / 100, 2);
     const cles = wb.getWorksheet('Chiffres clés')!;
     expect(cles.getCell('A5').value).toBe('Chiffre d’affaires (comptes 70)');
     expect(cles.getCell('B5').value).toBe(c.chiffreAffaires / 100);
@@ -59,7 +67,7 @@ describe('exports Excel des analyses', () => {
   it('balance générale : montants numériques, en-tête figé, filtre, total SOUS.TOTAL, onglet Paramètres', async () => {
     const b = calculerBalance(ctx);
     const wb = await relire(classeurBalanceGenerale(ExcelJS, b, comparerBalances(b, b), parametres));
-    expect(wb.worksheets.map((w) => w.name)).toEqual(['Balance générale', 'Par classe', 'Comparaison N-1', 'Paramètres']);
+    expect(wb.worksheets.map((w) => w.name)).toEqual(['TCD Balance', 'Données TCD', 'Balance générale', 'Par classe', 'Comparaison N-1', 'Paramètres']);
     const ws = wb.getWorksheet('Balance générale')!;
     expect(ws.getRow(4).getCell(3).value).toBe('Compte');
     expect(ws.views[0]).toMatchObject({ state: 'frozen', ySplit: 4 });
@@ -73,7 +81,7 @@ describe('exports Excel des analyses', () => {
 
   it('balances auxiliaires et âgées, grand-livre, statistiques', async () => {
     const aux = await relire(classeurBalancesAuxiliaires(ExcelJS, [calculerBalanceAuxiliaire(ctx, 'clients'), calculerBalanceAuxiliaire(ctx, 'fournisseurs')], parametres));
-    expect(aux.worksheets.map((w) => w.name)).toEqual(['Clients', 'Fournisseurs', 'Paramètres']);
+    expect(aux.worksheets.map((w) => w.name)).toEqual(['TCD Clients', 'Données Clients', 'TCD Fournisseurs', 'Données Fournisseurs', 'Clients', 'Fournisseurs', 'Paramètres']);
     expect(typeof aux.getWorksheet('Clients')!.getRow(5).getCell(10).value).toBe('number');
 
     const gl = filtrerGrandLivre(ctx, { compte: '512' });

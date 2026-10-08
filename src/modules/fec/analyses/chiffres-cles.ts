@@ -64,6 +64,38 @@ const R = {
 
 const commence = (compte: string, prefixes: string[]) => prefixes.some((p) => compte.startsWith(p));
 
+/** Rubriques des SIG dans l'ordre de présentation. */
+const ORDRE: Rubrique[] = [
+  R.ventesMarchandises,
+  R.coutMarchandises,
+  R.productionVendue,
+  R.productionStockee,
+  R.productionImmobilisee,
+  R.consommations,
+  R.subventions,
+  R.impots,
+  R.personnel,
+  R.autresProduits,
+  R.autresCharges,
+  R.produitsFinanciers,
+  R.chargesFinancieres,
+  R.produitsExceptionnels,
+  R.chargesExceptionnelles,
+  R.impotsBenefices,
+];
+
+/**
+ * Rubrique des SIG d'un compte de gestion (classes 6 et 7), numérotée pour le tri : « 01 + Ventes de
+ * marchandises »… ; null pour un compte de bilan. Sert au tableau croisé dynamique de l'export.
+ */
+export function rubriqueSig(compteNum: string): string | null {
+  if (!/^[67]/.test(compteNum)) return null;
+  const k = ORDRE.findIndex((r) => commence(compteNum, r.inclus) && !commence(compteNum, r.exclus ?? []));
+  if (k < 0) return `${ORDRE.length + 1} Comptes de gestion non classés`;
+  const r = ORDRE[k]!;
+  return `${String(k + 1).padStart(2, '0')} ${r.nature === 'produit' ? '+' : '−'} ${r.libelle}`;
+}
+
 export function calculerChiffresCles(b: Balance): ChiffresCles {
   // Produits : solde créditeur (−cloture) ; charges : solde débiteur (cloture).
   const montant = (r: Rubrique) => {

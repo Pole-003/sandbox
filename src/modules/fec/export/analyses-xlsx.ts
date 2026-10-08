@@ -3,15 +3,16 @@
  * grand-livre filtré, statistiques. Montants numériques en euros, formats français, en-têtes figés,
  * filtres, totaux par formule SOUS.TOTAL (insensibles aux filtres), onglet « Paramètres ».
  */
-import type { ChiffresCles, LigneSig } from '../analyses/chiffres-cles.ts';
+import { rubriqueSig, type ChiffresCles, type LigneSig } from '../analyses/chiffres-cles.ts';
 import type { Workbook, Worksheet } from 'exceljs';
 import type { BalanceAuxiliaire, LigneAuxiliaire } from '../analyses/auxiliaire.ts';
 import { TRANCHES } from '../analyses/auxiliaire.ts';
-import type { Balance, LigneBalance, LigneComparaison } from '../analyses/balance.ts';
+import { LIBELLES_CLASSES, type Balance, type LigneBalance, type LigneComparaison } from '../analyses/balance.ts';
 import { type ContexteAnalyse, t } from '../analyses/contexte.ts';
 import type { GrandLivre } from '../analyses/grand-livre.ts';
 import { lignesEcriture } from '../analyses/grand-livre.ts';
 import type { Statistiques } from '../analyses/statistiques.ts';
+import { ajouterTcd, type ChampTcd } from './tcd.ts';
 import { dateExcel, euros, feuilleParametres, feuilleTableau, nomOnglet, type ColonneXlsx, type ExcelJSModule, type Parametres } from './xlsx.ts';
 
 /** Au-delà, l'export du grand-livre est tronqué (limite pratique d'un classeur généré dans le navigateur). */
@@ -50,6 +51,54 @@ const colonnesSoldes = <T extends { ouverture: number; debit: number; credit: nu
   { titre: 'Sens', largeur: 6, valeur: (l) => (l.cloture > 0 ? 'D' : l.cloture < 0 ? 'C' : '') },
 ];
 
+const CHAMPS_SOLDES: ChampTcd[] = [
+  { nom: 'Solde d’ouverture', type: 'montant' },
+  { nom: 'Mouvements débit', type: 'montant' },
+  { nom: 'Mouvements crédit', type: 'montant' },
+  { nom: 'Solde de clôture', type: 'montant' },
+];
+const soldes = (l: { ouverture: number; debit: number; credit: number; cloture: number }) => [l.ouverture, l.debit, l.credit, l.cloture];
+const NOTE_TCD = 'Tableau croisé dynamique (actualisé à l’ouverture dans Excel) ; données sources dans l’onglet voisin. Développez ou réduisez les niveaux avec les boutons + / −.';
+
+/** TCD de la balance : classe → sous-classe → compte ; soldes et mouvements (et N-1 si disponible). */
+function tcdBalance(wb: Workbook, balance: Balance, comparaison: LigneComparaison[] | null, parametres: Parametres): void {
+  const sousClasses = new Map(balance.classes.flatMap((c) => c.sousGroupes.map((g) => [g.code, g.libelle] as const)));
+  const libelleClasse = (c: string) => `${c} – ${LIBELLES_CLASSES[c] ?? 'Comptes non codifiés'}`;
+  const libelleSousClasse = (s: string) => `${s} – ${sousClasses.get(s) ?? ''}`.replace(/ – $/, '');
+  const n1 = new Map((comparaison ?? []).map((c) => [c.compteNum, c]));
+  const vide = { ouverture: 0, debit: 0, credit: 0, cloture: 0 };
+  const comptes = new Map(balance.comptes.map((c) => [c.compteNum, c]));
+  // Union des comptes N et N-1 quand la comparaison est disponible.
+  const numeros = comparaison ? comparaison.map((c) => c.compteNum) : balance.comptes.map((c) => c.compteNum);
+  const lignes = numeros.map((num) => {
+    const c = comptes.get(num);
+    const libelle = c?.compteLib ?? n1.get(num)?.compteLib ?? '';
+    const classe = /^\d/.test(num) ? num[0]! : '?';
+    const sous = /^\d\d/.test(num) ? num.slice(0, 2) : `${classe}?`;
+    const base = [libelleClasse(classe), libelleSousClasse(sous), `${num} – ${libelle}`, ...soldes(c ?? vide)];
+    if (!comparaison) return base;
+    const x = n1.get(num)!;
+    return [...base, x.clotureN1 ?? 0, (c?.cloture ?? 0) - (x.clotureN1 ?? 0)];
+  });
+  const champs: ChampTcd[] = [
+    { nom: 'Classe', type: 'texte', largeur: 30 },
+    { nom: 'Sous-classe', type: 'texte', largeur: 34 },
+    { nom: 'Compte', type: 'texte', largeur: 44 },
+    ...CHAMPS_SOLDES,
+    ...(comparaison ? ([{ nom: 'Solde N-1', type: 'montant' }, { nom: 'Variation', type: 'montant' }] satisfies ChampTcd[]) : []),
+  ];
+  ajouterTcd(wb, {
+    nom: 'TCD_Balance',
+    feuilleCible: 'TCD Balance',
+    feuilleSource: 'Données TCD',
+    titre: [`Balance générale — ${parametres.dossier}`, `Exercice ${parametres.exercice}`, NOTE_TCD],
+    champs,
+    lignes,
+    axes: [0, 1, 2],
+    valeurs: champs.map((_, k) => k).filter((k) => k >= 3),
+  });
+}
+
 export function classeurBalanceGenerale(
   ExcelJS: ExcelJSModule,
   balance: Balance,
@@ -57,6 +106,7 @@ export function classeurBalanceGenerale(
   parametres: Parametres,
 ): Workbook {
   const wb = nouveauClasseur(ExcelJS);
+  tcdBalance(wb, balance, comparaison, parametres);
   const colonnes: ColonneXlsx<LigneBalance>[] = [
     { titre: 'Classe', largeur: 7, valeur: (l) => l.compteNum[0] ?? '' },
     { titre: 'Sous-classe', largeur: 9, valeur: (l) => l.compteNum.slice(0, 2) },
@@ -105,8 +155,43 @@ export function classeurBalanceGenerale(
   return wb;
 }
 
-export function classeurChiffresCles(ExcelJS: ExcelJSModule, c: ChiffresCles, n1: ChiffresCles | null, parametres: Parametres): Workbook {
+export function classeurChiffresCles(
+  ExcelJS: ExcelJSModule,
+  c: ChiffresCles,
+  n1: ChiffresCles | null,
+  parametres: Parametres,
+  balances: { n: Balance; n1: Balance | null },
+): Workbook {
   const wb = nouveauClasseur(ExcelJS);
+  // TCD : contribution de chaque compte de gestion au résultat (produits +, charges −), par rubrique des SIG.
+  const comptes = new Map<string, { libelle: string; n: number; n1: number }>();
+  for (const [cle, b] of [['n', balances.n], ['n1', balances.n1]] as const) {
+    for (const l of b?.comptes ?? []) {
+      if (!rubriqueSig(l.compteNum)) continue;
+      const x = comptes.get(l.compteNum) ?? { libelle: l.compteLib, n: 0, n1: 0 };
+      x[cle] = -l.cloture;
+      comptes.set(l.compteNum, x);
+    }
+  }
+  ajouterTcd(wb, {
+    nom: 'TCD_SIG',
+    feuilleCible: 'TCD SIG',
+    feuilleSource: 'Données TCD',
+    titre: [
+      `Soldes intermédiaires de gestion par compte — ${parametres.dossier}`,
+      `Exercice ${parametres.exercice} ; produits en positif, charges en négatif : le total général est le résultat de l’exercice`,
+      NOTE_TCD,
+    ],
+    champs: [
+      { nom: 'Rubrique', type: 'texte', largeur: 70 },
+      { nom: 'Compte', type: 'texte', largeur: 44 },
+      { nom: 'Exercice N', type: 'montant' },
+      ...(balances.n1 ? ([{ nom: 'Exercice N-1', type: 'montant' }] satisfies ChampTcd[]) : []),
+    ],
+    lignes: [...comptes].map(([num, x]) => [rubriqueSig(num)!, `${num} – ${x.libelle}`, x.n, ...(balances.n1 ? [x.n1] : [])]),
+    axes: [0, 1],
+    valeurs: balances.n1 ? [2, 3] : [2],
+  });
   const titre = [`Chiffres clés et soldes intermédiaires de gestion — ${parametres.dossier}`, `Exercice ${parametres.exercice}`];
   const avant = new Map((n1?.sig ?? []).map((l) => [l.code, l.montant]));
   const colonnes: ColonneXlsx<LigneSig>[] = [
@@ -148,6 +233,25 @@ export function classeurChiffresCles(ExcelJS: ExcelJSModule, c: ChiffresCles, n1
 
 export function classeurBalancesAuxiliaires(ExcelJS: ExcelJSModule, balances: BalanceAuxiliaire[], parametres: Parametres): Workbook {
   const wb = nouveauClasseur(ExcelJS);
+  for (const b of balances) {
+    const nom = b.population === 'clients' ? 'Clients' : 'Fournisseurs';
+    ajouterTcd(wb, {
+      nom: `TCD_${nom}`,
+      feuilleCible: `TCD ${nom}`,
+      feuilleSource: `Données ${nom}`,
+      titre: [`Balance auxiliaire ${nom.toLowerCase()} — ${parametres.dossier}`, `Exercice ${parametres.exercice} ; balance âgée des montants non lettrés à la clôture`, NOTE_TCD],
+      champs: [
+        { nom: 'Compte collectif', type: 'texte', largeur: 18 },
+        { nom: 'Tiers', type: 'texte', largeur: 44 },
+        ...CHAMPS_SOLDES,
+        { nom: 'Non lettré', type: 'montant' },
+        ...TRANCHES.map((tr): ChampTcd => ({ nom: tr.libelle, type: 'montant' })),
+      ],
+      lignes: b.tiers.map((l) => [l.comptes.join(', ') || '—', `${l.cle} – ${l.libelle}`, ...soldes(l), l.nonLettre, ...l.agee]),
+      axes: [0, 1],
+      valeurs: [2, 3, 4, 5, 6, ...TRANCHES.map((_, k) => 7 + k)],
+    });
+  }
   for (const b of balances) {
     const nom = b.population === 'clients' ? 'Clients' : 'Fournisseurs';
     const titre = [`Balance auxiliaire ${nom.toLowerCase()} — ${parametres.dossier}`, `Exercice ${parametres.exercice} ; balance âgée des montants non lettrés à la clôture`];

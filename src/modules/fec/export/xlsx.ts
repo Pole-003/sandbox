@@ -1,8 +1,9 @@
 /**
  * Outils communs aux exports Excel (ExcelJS, chargé à la demande) : feuilles avec en-têtes figés et
- * filtres, montants numériques au format français, onglet « Paramètres ».
+ * filtres, montants numériques au format français, onglet « Paramètres », tableaux croisés dynamiques.
  */
 import type { Workbook, Worksheet } from 'exceljs';
+import { integrerTcd, tcdDeclares } from './tcd.ts';
 
 export type ExcelJSModule = typeof import('exceljs');
 
@@ -125,7 +126,13 @@ export function feuilleParametres(classeur: Workbook, p: Parametres, autres: [st
   return ws;
 }
 
-/** Classeur → octets .xlsx. */
+/** Classeur → octets .xlsx (avec les tableaux croisés dynamiques déclarés par ajouterTcd). */
 export async function octetsClasseur(classeur: Workbook): Promise<Uint8Array> {
-  return new Uint8Array(await classeur.xlsx.writeBuffer());
+  const octets = new Uint8Array(await classeur.xlsx.writeBuffer());
+  const tcd = tcdDeclares(classeur);
+  if (tcd.length === 0) return octets;
+  const { default: JSZip } = await import('jszip');
+  const zip = await JSZip.loadAsync(octets);
+  await integrerTcd(zip, tcd);
+  return zip.generateAsync({ type: 'uint8array', compression: 'DEFLATE' });
 }
