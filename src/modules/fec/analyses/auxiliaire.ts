@@ -61,11 +61,12 @@ export function calculerBalanceAuxiliaire(ctx: ContexteAnalyse, population: Popu
   const { f } = ctx;
   const prefixe = PREFIXES_POPULATION[population];
   const estDeLaPopulation = new Uint8Array(f.textes.length);
-  for (let i = 0; i < f.nbLignes; i++) if (prefixe.test(f.textes[f.compteNum[i]!]!)) estDeLaPopulation[f.compteNum[i]!] = 1;
+  for (const c of new Set(f.compteNum)) if (prefixe.test(f.textes[c]!)) estDeLaPopulation[c] = 1;
   const retenir = (i: number) => estDeLaPopulation[f.compteNum[i]!] === 1;
   const cles = clesTiers(ctx);
   const soldes = soldesPar(ctx, cles, retenir);
   const details = new Map<number, { comptes: Set<number>; libelle: number; aux: boolean; agee: number[]; nonLettre: number }>();
+  const ages = new Map<number, number>();
   for (let i = 0; i < f.nbLignes; i++) {
     if (!retenir(i)) continue;
     const k = cles[i]!;
@@ -75,8 +76,9 @@ export function calculerBalanceAuxiliaire(ctx: ContexteAnalyse, population: Popu
     const date = f.ecritureDate[i]!;
     if (date <= 0 || date > ctx.finN || !ouverteALaCloture(ctx, i)) continue;
     const reference = f.pieceDate[i]! > 0 && f.pieceDate[i]! <= date ? f.pieceDate[i]! : date;
-    const age = ecartJours(dateIso(reference), ctx.fin);
-    const tranche = TRANCHES.findIndex((tr) => age <= tr.max);
+    let age = ages.get(reference);
+    if (age === undefined) ages.set(reference, (age = ecartJours(dateIso(reference), ctx.fin)));
+    const tranche = TRANCHES.findIndex((tr) => age! <= tr.max);
     const montant = f.debit[i]! - f.credit[i]!;
     d.agee[tranche]! += montant;
     d.nonLettre += montant;

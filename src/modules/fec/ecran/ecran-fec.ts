@@ -5,6 +5,7 @@
  */
 import { h } from '../../../app/dom.ts';
 import { lirePreference, ecrirePreference } from '../../../core/stockage.ts';
+import { compterParGravite } from '../conformite/constats.ts';
 import { controlerColonnes } from '../conformite/controles.ts';
 import { chargerExcelJS, octetsClasseur } from '../export/xlsx.ts';
 import { classeurRapport } from '../export/rapport-conformite.ts';
@@ -27,6 +28,7 @@ import {
   type Role,
 } from '../stockage/base-fec.ts';
 import { LIBELLES_REGIME, type Regime } from '../zones.ts';
+import { creerSectionAnalyses, type SectionAnalyses } from './analyses.ts';
 import { rendreAssistant } from './assistant.ts';
 import { bouton, dateFr, nombreFr, octetsFr, telecharger, TYPE_XLSX } from './commun.ts';
 import { rendreRapport } from './rapport.ts';
@@ -377,6 +379,35 @@ export function rendreEcranFec(conteneur: HTMLElement): () => void {
     return h('section', { class: 'carte emplacement', 'aria-labelledby': `titre-${role}` }, h('h2', { id: `titre-${role}` }, LIBELLES_ROLE[role]), contenu);
   }
 
+  // ---- Analyses (conservées entre deux rendus tant que le FEC et ses réglages ne changent pas) ------
+  let analyses: { cle: string; section: SectionAnalyses } | null = null;
+
+  function fermerAnalyses(): void {
+    analyses?.section.detruire();
+    analyses = null;
+  }
+
+  function sectionAnalyses(impN: ImportEnregistre): HTMLElement {
+    const nonConformes = compterParGravite(tousLesConstats(impN))['non-conforme'];
+    if (nonConformes > 0 && !impN.reglages.nonConformitesAcceptees) {
+      fermerAnalyses();
+      return h(
+        'section',
+        { class: 'carte' },
+        h('h2', {}, 'Analyses'),
+        h('p', { class: 'texte-secondaire' }, 'Prenez connaissance des non-conformités du FEC de l’exercice (bandeau ci-dessus) pour accéder aux balances, au grand-livre et aux statistiques.'),
+      );
+    }
+    const n1 = emplacements['N-1'];
+    const impN1 = n1.type === 'importe' ? n1.imp : null;
+    const cle = JSON.stringify([impN.id, impN.reglages.debut, impN.reglages.fin, impN.reglages.journalAN, impN1?.id, impN1?.reglages]);
+    if (!analyses || analyses.cle !== cle) {
+      fermerAnalyses();
+      analyses = { cle, section: creerSectionAnalyses(impN, impN1, actif!, dire) };
+    }
+    return analyses.section.element;
+  }
+
   function rendre(): void {
     if (detruit) return;
     if (rapport) {
@@ -399,16 +430,8 @@ export function rendreEcranFec(conteneur: HTMLElement): () => void {
     if (actif) {
       enfants.push(emplacement('N'), emplacement('N-1'));
       const n = emplacements.N;
-      if (n.type === 'importe') {
-        enfants.push(
-          h(
-            'section',
-            { class: 'carte' },
-            h('h2', {}, 'Analyses'),
-            h('p', { class: 'texte-secondaire' }, 'Balances, grand-livre et statistiques d’écritures : étape 6.'),
-          ),
-        );
-      }
+      if (n.type === 'importe') enfants.push(sectionAnalyses(n.imp));
+      else fermerAnalyses();
     }
     principal.replaceChildren(...enfants);
     for (const role of ['N', 'N-1'] as Role[]) majProgression(role);
@@ -418,5 +441,6 @@ export function rendreEcranFec(conteneur: HTMLElement): () => void {
   return () => {
     detruit = true;
     for (const e of Object.values(emplacements)) if (e.type === 'import') e.en.annuler();
+    fermerAnalyses();
   };
 }

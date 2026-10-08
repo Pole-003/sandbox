@@ -111,6 +111,22 @@ Export du rapport de conformité en `.xlsx` (onglet synthèse + un onglet par co
 - Statistiques : nombre d'écritures par journal et par mois, écritures le week-end ou un jour férié, montants ronds, écritures passées après la clôture, écritures manuelles d'OD sur comptes sensibles (trésorerie, chiffre d'affaires). Ces indicateurs servent de base aux tests sur les écritures de journal ; ils sont présentés comme des pistes, pas des conclusions.
 - Exports `.xlsx` de chaque vue.
 
+Règles précisées à l'étape 6 (08/10/2026) :
+- **Soldes** : « ouverture » = lignes du journal d'à-nouveaux confirmé ; « mouvements » = toutes les autres lignes ; « clôture » = ouverture + débit − crédit. Montants en centimes, soldes signés débit − crédit, affichés avec le sens D / C.
+- **Balance générale** : classe = 1er chiffre du compte, sous-classe = 2 premiers chiffres ; contrôle d'équilibre des à-nouveaux, des mouvements et du solde global ; comparaison N / N-1 par compte (variation en valeur et en % du solde N-1, union des comptes des deux exercices).
+- **Balance auxiliaire** : clients = comptes 41, fournisseurs = comptes 40 ; clé du tiers = CompAuxNum, sinon CompteNum ; soldes anormaux = clients créditeurs, fournisseurs débiteurs.
+- **Balance âgée** : lignes non lettrées à la clôture (EcritureLet vide, ou DateLet postérieure à la clôture), datées au plus tard à la clôture ; ancienneté = clôture − PieceDate (EcritureDate si la pièce est absente ou postérieure) ; tranches 0-30, 31-60, 61-90, 91-180, 181-365 jours, plus d'un an. Pour les à-nouveaux, l'ancienneté part de la date portée par la ligne.
+- **Grand-livre** : tri compte, à-nouveaux, date, ordre du fichier ; solde progressif par compte ; filtres compte (début du numéro), auxiliaire, journal, période, montant (débit ou crédit de la ligne), texte (libellé, pièce, libellés de compte et de tiers, sans casse ni accents), lettrage ; affichage virtualisé ; un clic ouvre l'écriture complète. Export limité à 200 000 lignes (au-delà, affiner les filtres).
+- **Statistiques** (hors à-nouveaux) : week-end ; jours fériés légaux français (Pâques, Ascension, Pentecôte calculées) ; datées et validées après la clôture ; montants ronds = ligne multiple de 1 000 € et d'au moins 1 000 € ; OD sensibles = journal d'OD (code OD, DIV… ou libellé « opérations diverses ») mouvementant un compte 51, 53, 54, 58 (trésorerie) ou 70 (chiffre d'affaires) ; libellés vides ou génériques (« divers », « régul », « OD »…, moins de 3 caractères) ; doublons probables = même journal, même pièce et même montant, ou même date, même tiers et même montant ; loi de Benford sur le premier chiffre des lignes d'au moins 10 €, écart absolu moyen et seuils de Nigrini (0,006 / 0,012 / 0,015), au moins 300 lignes ; fin de période = écritures datées dans les 5 jours avant ou après la clôture, d'un total au moins égal au 99e centile des écritures de l'exercice.
+
+### 3.4 Interface avec le module Circularisations
+`src/modules/fec/interface-circularisations.ts` (version `VERSION_INTERFACE_FEC`) expose, sans relire le FEC :
+- `chargerDonneesFec(dossierId, role = 'N')` → `DonneesFec | null` ;
+- `metadonnees` : dossier, SIREN, exercice, date de clôture, journal d'à-nouveaux (et s'il est confirmé), empreinte SHA-256, nom du fichier, nombres de lignes et d'écritures ;
+- `soldesParCompte()` et `soldesParTiers(prefixes = ['40', '41'])` : ouverture, mouvements débit et crédit hors à-nouveaux, clôture, sens ;
+- `comptesBancaires(prefixes = ['512', '514', '517', '519', '5186', '164'])` : comptes présents dans le FEC, même soldés à la clôture, avec l'indicateur `mouvemente` ;
+- `ecrituresDuTiers(cle)` et `ecrituresDuCompte(compteNum)` : écritures complètes, pour les procédures alternatives.
+
 ## 4. Circularisations
 
 ### 4.1 Paramètres du dossier

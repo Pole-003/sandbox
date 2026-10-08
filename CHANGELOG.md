@@ -2,6 +2,16 @@
 
 Toutes les évolutions notables de la Sandbox Pôle 003. Format inspiré de « Keep a Changelog », numéros de version au format semver.
 
+## [0.8.0] - 2026-10-08
+
+### Ajouté
+- Analyses du FEC, après l'import : balance générale par classe et sous-classe (repliable), avec contrôle d'équilibre et comparaison avec l'exercice précédent si son FEC est chargé.
+- Balances auxiliaires clients et fournisseurs, soldes anormaux mis en évidence, balance âgée des montants non lettrés à la clôture.
+- Grand-livre filtrable (compte, auxiliaire, journal, période, montant, texte, lettrage) avec solde progressif, fluide même pour plusieurs millions de lignes ; un clic sur un compte de la balance ouvre son grand-livre, un clic sur une ligne affiche l'écriture complète.
+- Statistiques et tests d'écritures : écritures par journal et par mois, week-ends et jours fériés, après clôture, montants ronds, OD sur la trésorerie ou le chiffre d'affaires, libellés génériques, doublons probables, loi de Benford, fin de période. Chaque indicateur ouvre la liste des écritures concernées.
+- Export Excel de chaque vue (montants numériques, en-têtes figés, filtres, totaux, onglet « Paramètres » avec l'empreinte du FEC).
+- Données du FEC mises à disposition du futur module Circularisations (soldes par tiers et par compte, banques, écritures).
+
 ## [0.7.0] - 2026-10-08
 
 ### Ajouté

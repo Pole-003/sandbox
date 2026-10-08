@@ -92,6 +92,8 @@ function normaliser(texte: string): string {
 }
 
 export function libelleGenerique(texte: string): boolean {
+  // Les libellés génériques sont courts : inutile de normaliser les libellés longs.
+  if (texte.length > 24) return false;
   const n = normaliser(texte);
   return n.length <= 2 || LIBELLES_GENERIQUES.has(n);
 }
@@ -132,6 +134,7 @@ export function calculerStatistiques(ctx: ContexteAnalyse, p: ParametresStatisti
   const sensible = new Uint8Array(E); // 1 trésorerie, 2 CA, 3 les deux
   const vue = new Uint8Array(E);
   const benford = new Array<number>(9).fill(0);
+  const natureCompte = new Uint8Array(f.textes.length);
   for (let i = 0; i < f.nbLignes; i++) {
     const e = f.ecriture[i]!;
     if (!vue[e]) {
@@ -146,9 +149,16 @@ export function calculerStatistiques(ctx: ContexteAnalyse, p: ParametresStatisti
     const m = f.debit[i]! || f.credit[i]!;
     totalDebit[e] = totalDebit[e]! + f.debit[i]!;
     if (m >= p.minimumRond && m % p.multipleRond === 0) rond[e] = 1;
-    const s = compteSensible(f.textes[f.compteNum[i]!]!);
-    if (s) sensible[e]! |= s === 'tresorerie' ? 1 : 2;
-    if (!tiers[e] && /^4[01]/.test(f.textes[f.compteNum[i]!]!)) tiers[e] = f.compAuxNum[i] || f.compteNum[i]!;
+    const c = f.compteNum[i]!;
+    // Nature du compte, calculée une fois par compte : 1 trésorerie, 2 CA, 4 tiers 40/41, 8 autre.
+    let nature = natureCompte[c]!;
+    if (nature === 0) {
+      const num = f.textes[c]!;
+      const s = compteSensible(num);
+      natureCompte[c] = nature = s === 'tresorerie' ? 1 : s === 'chiffre-affaires' ? 2 : /^4[01]/.test(num) ? 4 : 8;
+    }
+    if (nature <= 2) sensible[e]! |= nature;
+    if (nature === 4 && !tiers[e]) tiers[e] = f.compAuxNum[i] || c;
     if (!ctx.an[i] && m >= 1_000) benford[premierChiffre(m) - 1]!++;
   }
 
@@ -175,25 +185,65 @@ export function calculerStatistiques(ctx: ContexteAnalyse, p: ParametresStatisti
     return r;
   };
   const ouvert = (e: number) => !an[e] && date[e]! > 0;
+  // Caches par date et par libellé (quelques centaines de dates, libellés répétés).
+  const parDate = new Map<number, { weekEnd: boolean; ferie: boolean }>();
+  const infoDate = (d: number) => {
+    let x = parDate.get(d);
+    if (!x) {
+      const iso = dateIso(d);
+      parDate.set(d, (x = { weekEnd: [0, 6].includes(jourSemaine(iso)), ferie: jourFerie(iso) !== undefined }));
+    }
+    return x;
+  };
+  const generique = new Int8Array(f.textes.length).fill(-1);
+  const estGenerique = (k: number) => {
+    if (generique[k] === -1) generique[k] = libelleGenerique(f.textes[k]!) ? 1 : 0;
+    return generique[k] === 1;
+  };
   const libelleJournal = new Map<number, number>();
   for (let i = 0; i < f.nbLignes; i++) if (!libelleJournal.has(f.journalCode[i]!)) libelleJournal.set(f.journalCode[i]!, f.journalLib[i]!);
   const journalOD = new Uint8Array(f.textes.length);
   for (const j of codesJournaux) if (estJournalOD(f.textes[j]!, f.textes[libelleJournal.get(j)!]!)) journalOD[j] = 1;
 
   // Doublons probables : même journal, même pièce et même montant ; ou même date, même tiers et même montant.
-  const groupes = new Map<string, number[]>();
-  const ajouterGroupe = (cle: string, e: number) => {
+  // Clés numériques (indices de dictionnaire) ; le montant est vérifié à l'intérieur de chaque groupe.
+  const groupes = new Map<number, number | number[]>();
+  const doublons = new Set<number>();
+  const ajouterGroupe = (cle: number, e: number) => {
     const g = groupes.get(cle);
-    if (g) g.push(e);
-    else groupes.set(cle, [e]);
+    if (g === undefined) {
+      groupes.set(cle, e);
+      return;
+    }
+    const membres = typeof g === 'number' ? [g] : g;
+    for (const autre of membres) {
+      if (totalDebit[autre] === totalDebit[e] && autre !== e) {
+        doublons.add(autre);
+        doublons.add(e);
+      }
+    }
+    membres.push(e);
+    if (typeof g === 'number') groupes.set(cle, membres);
   };
+  const jourDe = (d: number) => Math.floor(d / 10000) * 372 + (Math.floor(d / 100) % 100) * 31 + (d % 100);
   for (let e = 0; e < E; e++) {
     if (!ouvert(e) || totalDebit[e] === 0) continue;
-    if (piece[e]) ajouterGroupe(`p${journal[e]}|${piece[e]}|${totalDebit[e]}`, e);
-    if (tiers[e]) ajouterGroupe(`t${date[e]}|${tiers[e]}|${totalDebit[e]}`, e);
+    // Pièce : clé positive ; tiers et date : clé négative (deux familles de groupes disjointes).
+    if (piece[e]) ajouterGroupe(piece[e]! * 65_536 + (journal[e]! % 65_536), e);
+    if (tiers[e]) ajouterGroupe(-(tiers[e]! * 1_048_576 + (jourDe(date[e]!) % 1_048_576)) - 1, e);
   }
-  const doublons = new Set<number>();
-  for (const g of groupes.values()) if (g.length > 1) for (const e of g) doublons.add(e);
+  // Les clés tronquées peuvent réunir deux journaux ou deux dates : on ne garde que les vrais doublons.
+  for (const e of [...doublons]) {
+    let confirme = false;
+    for (const autre of doublons) {
+      if (autre === e || totalDebit[autre] !== totalDebit[e]) continue;
+      if ((piece[e] && piece[autre] === piece[e] && journal[autre] === journal[e]) || (tiers[e] && tiers[autre] === tiers[e] && date[autre] === date[e])) {
+        confirme = true;
+        break;
+      }
+    }
+    if (!confirme) doublons.delete(e);
+  }
 
   // Fin de période : seuil = 99e centile des totaux d'écriture (hors à-nouveaux), sauf seuil imposé.
   const totaux: number[] = [];
@@ -213,13 +263,13 @@ export function calculerStatistiques(ctx: ContexteAnalyse, p: ParametresStatisti
       id: 'week-end',
       libelle: 'Écritures datées un samedi ou un dimanche',
       description: 'Date de comptabilisation un jour de week-end (hors à-nouveaux).',
-      ecritures: liste((e) => ouvert(e) && [0, 6].includes(jourSemaine(dateIso(date[e]!)))),
+      ecritures: liste((e) => ouvert(e) && infoDate(date[e]!).weekEnd),
     },
     {
       id: 'jour-ferie',
       libelle: 'Écritures datées un jour férié',
       description: 'Jours fériés légaux français, fêtes mobiles (Pâques, Ascension, Pentecôte) comprises.',
-      ecritures: liste((e) => ouvert(e) && jourFerie(dateIso(date[e]!)) !== undefined),
+      ecritures: liste((e) => ouvert(e) && infoDate(date[e]!).ferie),
     },
     {
       id: 'datee-apres-cloture',
@@ -255,7 +305,7 @@ export function calculerStatistiques(ctx: ContexteAnalyse, p: ParametresStatisti
       id: 'libelle-generique',
       libelle: 'Libellés vides ou génériques',
       description: '« Divers », « Régul », « OD », libellé vide ou de moins de trois caractères…',
-      ecritures: liste((e) => ouvert(e) && libelleGenerique(f.textes[libelle[e]!]!)),
+      ecritures: liste((e) => ouvert(e) && estGenerique(libelle[e]!)),
     },
     {
       id: 'doublon-probable',
