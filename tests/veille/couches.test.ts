@@ -240,7 +240,7 @@ const REGLAGES: Reglages = {
 const reponseNotation = (ids: string[]): Message => ({
   ...reponseIA('reponse-ia-rennes.json'),
   model: 'claude-haiku-5-5',
-  content: [{ type: 'text', text: JSON.stringify({ notes: ids.map((id, i) => ({ id, importance: i === 0 ? 1 : 4, public: ['Expertise comptable'], type: 'texte_officiel', resume: `Résumé ${i}.` })) }), citations: null }],
+  content: [{ type: 'text', text: JSON.stringify({ notes: ids.map((id, i) => ({ id, theme: 'Fiscal et comptable', importance: i === 0 ? 1 : 4, public: ['Expertise comptable'], type: 'texte_officiel', resume: `Résumé ${i}.` })) }), citations: null }],
   usage: { input_tokens: 3_000, output_tokens: 800, cache_read_input_tokens: 0, cache_creation_input_tokens: 0, server_tool_use: null, iterations: null } as never,
 });
 
@@ -275,6 +275,7 @@ describe('veille · collecte complète', () => {
     const flux = news.articles.filter((a) => a.origine === 'flux');
     expect(flux.map((a) => a.importance).sort()).toEqual([1, 4, 4, 4, 4]);
     expect(flux.every((a) => a.resume?.startsWith('Résumé'))).toBe(true);
+    expect(flux.every((a) => a.theme === 'Fiscal et comptable')).toBe(true);
     const couts = JSON.parse(depot.fichiers.get(CHEMINS.couts)!) as { mois: Record<string, { total_usd: number }> };
     expect(couts.mois['2026-10']?.total_usd).toBeCloseTo(premiere.coutExecutionUsd, 6);
     expect(premiere.etat.couts.jour_usd).toBeCloseTo(premiere.coutExecutionUsd, 6);

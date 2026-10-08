@@ -3,7 +3,7 @@
  * pour tous les nouveaux titres du jour, sans recherche web, avec le barème de la couche C.
  * L'appel rédige aussi le résumé publié (avec nos mots), à partir du titre et de l'extrait du flux.
  */
-import { PUBLICS, TYPES_ARTICLE, type Importance, type Public, type TypeArticle } from '../../src/modules/veille/modele.ts';
+import { PUBLICS, THEMES, TYPES_ARTICLE, type Importance, type Public, type Theme, type TypeArticle } from '../../src/modules/veille/modele.ts';
 import { coutReponse, type Budget } from './couts.ts';
 import { accepteRepliServeur, BETA_REPLI, extraireJson, texteFinal, type ClientIA, type Parametres } from './ia.ts';
 
@@ -19,6 +19,8 @@ export interface ArticleANoter {
 
 export interface Note {
   id: string;
+  /** Thème corrigé : le thème du catalogue est celui de la source, pas forcément celui de l'article. */
+  theme: Theme;
   importance: Importance;
   public: Public[];
   type: TypeArticle;
@@ -43,9 +45,10 @@ export function consigneNotation(promptSysteme: string): string {
     '',
     'Tâche particulière : tu ne fais aucune recherche. Tu reçois une liste de publications officielles (titre, émetteur, date, extrait).',
     'Pour chacune, attribue « importance » de 1 à 5 selon le barème ci-dessus (1 compris, pour ce qui est marginal), « public » et « type ».',
+    `Indique aussi « theme », le plus juste parmi : ${THEMES.join(', ')} (le thème reçu est celui de la source et peut être faux).`,
     'Rédige « resume » en français, avec tes propres mots, en 2 phrases maximum, uniquement à partir du titre et de l’extrait fournis ;',
     'si l’extrait ne suffit pas pour résumer sans rien inventer, mets « resume » à null.',
-    'Réponds uniquement par un objet JSON {"notes": [{"id", "importance", "public", "type", "resume"}]} reprenant chaque « id » reçu.',
+    'Réponds uniquement par un objet JSON {"notes": [{"id", "theme", "importance", "public", "type", "resume"}]} reprenant chaque « id » reçu.',
   ].join('\n');
 }
 
@@ -59,9 +62,10 @@ const SCHEMA_NOTES = {
       items: {
         type: 'object',
         additionalProperties: false,
-        required: ['id', 'importance', 'public', 'type', 'resume'],
+        required: ['id', 'theme', 'importance', 'public', 'type', 'resume'],
         properties: {
           id: { type: 'string' },
+          theme: { type: 'string', enum: [...THEMES] },
           importance: { type: 'integer', enum: [1, 2, 3, 4, 5] },
           public: { type: 'array', items: { type: 'string', enum: [...PUBLICS] } },
           type: { type: 'string', enum: [...TYPES_ARTICLE] },
@@ -76,11 +80,12 @@ export function controlerNote(brut: unknown, ids: ReadonlySet<string>): Note | n
   if (typeof brut !== 'object' || brut === null) return null;
   const n = brut as Record<string, unknown>;
   if (typeof n.id !== 'string' || !ids.has(n.id)) return null;
+  if (!(THEMES as readonly unknown[]).includes(n.theme)) return null;
   if (!Number.isInteger(n.importance) || (n.importance as number) < 1 || (n.importance as number) > 5) return null;
   if (!Array.isArray(n.public) || !n.public.every((p) => (PUBLICS as readonly unknown[]).includes(p))) return null;
   if (!(TYPES_ARTICLE as readonly unknown[]).includes(n.type)) return null;
   const resume = typeof n.resume === 'string' && n.resume.trim() !== '' && n.resume.length <= 600 ? n.resume.trim() : null;
-  return { id: n.id, importance: n.importance as Importance, public: [...new Set(n.public as Public[])], type: n.type as TypeArticle, resume };
+  return { id: n.id, theme: n.theme as Theme, importance: n.importance as Importance, public: [...new Set(n.public as Public[])], type: n.type as TypeArticle, resume };
 }
 
 export interface OptionsNotation {

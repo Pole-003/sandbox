@@ -63,7 +63,7 @@ export function appliquerNotes(articles: readonly Article[], notes: ReadonlyMap<
     const note = notes.get(a.id);
     if (!note) return a;
     if (note.importance === 1) marginaux++;
-    return { ...a, importance: note.importance, public: note.public, type: note.type, resume: a.resume ?? note.resume };
+    return { ...a, theme: note.theme, importance: note.importance, public: note.public, type: note.type, resume: a.resume ?? note.resume };
   });
   return { articles: resultat, marginaux };
 }

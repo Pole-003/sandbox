@@ -105,12 +105,13 @@ describe('veille · fusion', () => {
 
   it('notes : appliquées ; importance 1 conservée (pour ne pas renoter) et comptée', () => {
     const notes = new Map([
-      ['a', { id: 'a', importance: 4 as const, public: ['Expertise comptable' as const], type: 'doctrine' as const, resume: 'Résumé.' }],
-      ['b', { id: 'b', importance: 1 as const, public: [], type: 'presse' as const, resume: null }],
+      ['a', { id: 'a', theme: 'Sécurité sociale' as const, importance: 4 as const, public: ['Expertise comptable' as const], type: 'doctrine' as const, resume: 'Résumé.' }],
+      ['b', { id: 'b', theme: 'Fiscal et comptable' as const, importance: 1 as const, public: [], type: 'presse' as const, resume: null }],
     ]);
     const r = appliquerNotes([article({ id: 'a' }), article({ id: 'b' }), article({ id: 'c' })], notes);
     expect(r.marginaux).toBe(1);
     expect(r.articles.map((x) => [x.id, x.importance, x.resume])).toEqual([['a', 4, 'Résumé.'], ['b', 1, null], ['c', null, null]]);
+    expect(r.articles[0]?.theme).toBe('Sécurité sociale'); // thème corrigé par la notation
   });
 
   it('conservation : 60 jours en ligne, le reste archivé par mois', () => {
