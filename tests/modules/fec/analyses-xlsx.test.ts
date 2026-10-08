@@ -1,0 +1,70 @@
+import ExcelJS from 'exceljs';
+import { beforeAll, describe, expect, it } from 'vitest';
+import { calculerBalanceAuxiliaire } from '../../../src/modules/fec/analyses/auxiliaire.ts';
+import { calculerBalance, comparerBalances } from '../../../src/modules/fec/analyses/balance.ts';
+import { creerContexte, type ContexteAnalyse } from '../../../src/modules/fec/analyses/contexte.ts';
+import { filtrerGrandLivre } from '../../../src/modules/fec/analyses/grand-livre.ts';
+import { calculerStatistiques } from '../../../src/modules/fec/analyses/statistiques.ts';
+import {
+  classeurBalanceGenerale,
+  classeurBalancesAuxiliaires,
+  classeurGrandLivre,
+  classeurStatistiques,
+} from '../../../src/modules/fec/export/analyses-xlsx.ts';
+import { octetsClasseur, type Parametres } from '../../../src/modules/fec/export/xlsx.ts';
+import { importerFichier } from './aides.ts';
+
+let ctx: ContexteAnalyse;
+const parametres: Parametres = {
+  dossier: 'Petit Comptoir',
+  siren: '000987651',
+  exercice: 'du 01/01/2025 au 31/12/2025',
+  fichier: '000987651FEC20251231.txt',
+  empreinte: 'e'.repeat(64),
+  version: '0.0.0',
+};
+
+async function relire(wb: ExcelJS.Workbook): Promise<ExcelJS.Workbook> {
+  const r = new ExcelJS.Workbook();
+  await r.xlsx.load((await octetsClasseur(wb)).buffer as ArrayBuffer);
+  return r;
+}
+
+beforeAll(async () => {
+  const r = await importerFichier('variantes/000987651FEC20251231_standard.txt');
+  if (r.statut !== 'termine') throw new Error();
+  ctx = creerContexte(r.fec.colonnes, r.fec.meta.exercice!, r.fec.meta.journalAN);
+});
+
+describe('exports Excel des analyses', () => {
+  it('balance générale : montants numériques, en-tête figé, filtre, total SOUS.TOTAL, onglet Paramètres', async () => {
+    const b = calculerBalance(ctx);
+    const wb = await relire(classeurBalanceGenerale(ExcelJS, b, comparerBalances(b, b), parametres));
+    expect(wb.worksheets.map((w) => w.name)).toEqual(['Balance générale', 'Par classe', 'Comparaison N-1', 'Paramètres']);
+    const ws = wb.getWorksheet('Balance générale')!;
+    expect(ws.getRow(4).getCell(3).value).toBe('Compte');
+    expect(ws.views[0]).toMatchObject({ state: 'frozen', ySplit: 4 });
+    expect(ws.autoFilter).toBeTruthy();
+    expect(typeof ws.getRow(5).getCell(8).value).toBe('number');
+    const total = ws.getRow(5 + b.comptes.length);
+    expect(total.getCell(1).value).toBe('Total');
+    expect((total.getCell(8).value as { formula: string }).formula).toBe(`SUBTOTAL(9,H5:H${4 + b.comptes.length})`);
+    expect(wb.getWorksheet('Paramètres')!.getCell('B5').value).toBe('e'.repeat(64));
+  });
+
+  it('balances auxiliaires et âgées, grand-livre, statistiques', async () => {
+    const aux = await relire(classeurBalancesAuxiliaires(ExcelJS, [calculerBalanceAuxiliaire(ctx, 'clients'), calculerBalanceAuxiliaire(ctx, 'fournisseurs')], parametres));
+    expect(aux.worksheets.map((w) => w.name)).toEqual(['Clients', 'Fournisseurs', 'Paramètres']);
+    expect(typeof aux.getWorksheet('Clients')!.getRow(5).getCell(10).value).toBe('number');
+
+    const gl = filtrerGrandLivre(ctx, { compte: '512' });
+    const wgl = await relire(classeurGrandLivre(ExcelJS, ctx, gl, 'compte 512', parametres));
+    const feuille = wgl.getWorksheet('Grand-livre')!;
+    expect(feuille.getRow(5).getCell(3).value).toBeInstanceOf(Date);
+    expect(typeof feuille.getRow(5).getCell(14).value).toBe('number');
+
+    const stats = await relire(classeurStatistiques(ExcelJS, ctx, calculerStatistiques(ctx), parametres));
+    expect(stats.worksheets.map((w) => w.name).slice(0, 3)).toEqual(['Écritures par journal et mois', 'Indicateurs', 'Benford']);
+    expect(stats.worksheets.at(-1)!.name).toBe('Paramètres');
+  });
+});

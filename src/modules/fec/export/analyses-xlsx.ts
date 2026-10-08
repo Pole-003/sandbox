@@ -1,0 +1,220 @@
+/**
+ * Exports .xlsx des analyses : balance générale (avec comparaison N-1), balances auxiliaires et âgées,
+ * grand-livre filtré, statistiques. Montants numériques en euros, formats français, en-têtes figés,
+ * filtres, totaux par formule SOUS.TOTAL (insensibles aux filtres), onglet « Paramètres ».
+ */
+import type { Workbook, Worksheet } from 'exceljs';
+import type { BalanceAuxiliaire, LigneAuxiliaire } from '../analyses/auxiliaire.ts';
+import { TRANCHES } from '../analyses/auxiliaire.ts';
+import type { Balance, LigneBalance, LigneComparaison } from '../analyses/balance.ts';
+import { type ContexteAnalyse, t } from '../analyses/contexte.ts';
+import type { GrandLivre } from '../analyses/grand-livre.ts';
+import { lignesEcriture } from '../analyses/grand-livre.ts';
+import type { Statistiques } from '../analyses/statistiques.ts';
+import { dateExcel, euros, feuilleParametres, feuilleTableau, nomOnglet, type ColonneXlsx, type ExcelJSModule, type Parametres } from './xlsx.ts';
+
+/** Au-delà, l'export du grand-livre est tronqué (limite pratique d'un classeur généré dans le navigateur). */
+export const LIGNES_MAX_EXPORT = 200_000;
+
+function lettre(colonne: number): string {
+  let s = '';
+  for (let n = colonne; n > 0; n = Math.floor((n - 1) / 26)) s = String.fromCharCode(65 + ((n - 1) % 26)) + s;
+  return s;
+}
+
+/** Ligne de total en SOUS.TOTAL(9 ; …) sous un tableau créé par feuilleTableau. */
+function ligneTotal(ws: Worksheet, premiere: number, derniere: number, colonnesSommees: number[], libelle = 'Total'): void {
+  const r = ws.getRow(derniere + 1);
+  r.getCell(1).value = libelle;
+  r.font = { bold: true };
+  for (const c of colonnesSommees) {
+    const l = lettre(c);
+    r.getCell(c).value = { formula: `SUBTOTAL(9,${l}${premiere}:${l}${derniere})` };
+    r.getCell(c).numFmt = ws.getColumn(c).numFmt ?? "";
+  }
+}
+
+function nouveauClasseur(ExcelJS: ExcelJSModule): Workbook {
+  const wb = new ExcelJS.Workbook();
+  wb.creator = 'Sandbox Pôle 003';
+  wb.created = new Date();
+  return wb;
+}
+
+const colonnesSoldes = <T extends { ouverture: number; debit: number; credit: number; cloture: number }>(): ColonneXlsx<T>[] => [
+  { titre: 'Solde d’ouverture', type: 'montant', valeur: (l) => euros(l.ouverture) },
+  { titre: 'Mouvements débit', type: 'montant', valeur: (l) => euros(l.debit) },
+  { titre: 'Mouvements crédit', type: 'montant', valeur: (l) => euros(l.credit) },
+  { titre: 'Solde de clôture', type: 'montant', valeur: (l) => euros(l.cloture) },
+  { titre: 'Sens', largeur: 6, valeur: (l) => (l.cloture > 0 ? 'D' : l.cloture < 0 ? 'C' : '') },
+];
+
+export function classeurBalanceGenerale(
+  ExcelJS: ExcelJSModule,
+  balance: Balance,
+  comparaison: LigneComparaison[] | null,
+  parametres: Parametres,
+): Workbook {
+  const wb = nouveauClasseur(ExcelJS);
+  const colonnes: ColonneXlsx<LigneBalance>[] = [
+    { titre: 'Classe', largeur: 7, valeur: (l) => l.compteNum[0] ?? '' },
+    { titre: 'Sous-classe', largeur: 9, valeur: (l) => l.compteNum.slice(0, 2) },
+    { titre: 'Compte', largeur: 12, valeur: (l) => l.compteNum },
+    { titre: 'Libellé', largeur: 40, valeur: (l) => l.compteLib },
+    ...colonnesSoldes<LigneBalance>(),
+  ];
+  const titre = [`Balance générale — ${parametres.dossier}`, `Exercice ${parametres.exercice}`];
+  const ws = feuilleTableau(wb, 'Balance générale', colonnes, balance.comptes, { titre });
+  const premiere = titre.length + 3;
+  ligneTotal(ws, premiere, premiere + balance.comptes.length - 1, [5, 6, 7, 8]);
+
+  const classes = feuilleTableau(
+    wb,
+    'Par classe',
+    [
+      { titre: 'Classe / sous-classe', largeur: 12, valeur: (g: { code: string }) => g.code },
+      { titre: 'Libellé', largeur: 40, valeur: (g: { libelle: string }) => g.libelle },
+      ...colonnesSoldes(),
+    ] as ColonneXlsx<Balance['classes'][number]>[],
+    balance.classes.flatMap((c) => [c, ...c.sousGroupes]),
+    { titre },
+  );
+  classes.eachRow((row, n) => {
+    const v = String(row.getCell(1).value ?? '');
+    if (n > titre.length + 2 && v.length === 1) row.font = { bold: true };
+  });
+
+  if (comparaison) {
+    feuilleTableau(
+      wb,
+      'Comparaison N-1',
+      [
+        { titre: 'Compte', largeur: 12, valeur: (l: LigneComparaison) => l.compteNum },
+        { titre: 'Libellé', largeur: 40, valeur: (l) => l.compteLib },
+        { titre: 'Solde N', type: 'montant', valeur: (l) => euros(l.clotureN) },
+        { titre: 'Solde N-1', type: 'montant', valeur: (l) => (l.clotureN1 === null ? null : euros(l.clotureN1)) },
+        { titre: 'Variation', type: 'montant', valeur: (l) => euros(l.variation) },
+        { titre: 'Variation %', type: 'pourcentage', valeur: (l) => (l.variationPct === null ? null : l.variationPct / 100) },
+      ],
+      comparaison,
+      { titre },
+    );
+  }
+  feuilleParametres(wb, parametres);
+  return wb;
+}
+
+export function classeurBalancesAuxiliaires(ExcelJS: ExcelJSModule, balances: BalanceAuxiliaire[], parametres: Parametres): Workbook {
+  const wb = nouveauClasseur(ExcelJS);
+  for (const b of balances) {
+    const nom = b.population === 'clients' ? 'Clients' : 'Fournisseurs';
+    const titre = [`Balance auxiliaire ${nom.toLowerCase()} — ${parametres.dossier}`, `Exercice ${parametres.exercice} ; balance âgée des montants non lettrés à la clôture`];
+    const colonnes: ColonneXlsx<LigneAuxiliaire>[] = [
+      { titre: 'Code tiers', largeur: 14, valeur: (l) => l.cle },
+      { titre: 'Tiers', largeur: 34, valeur: (l) => l.libelle },
+      { titre: 'Compte(s)', largeur: 14, valeur: (l) => l.comptes.join(', ') },
+      ...colonnesSoldes<LigneAuxiliaire>(),
+      { titre: 'Non lettré', type: 'montant', valeur: (l) => euros(l.nonLettre) },
+      ...TRANCHES.map((tr, k): ColonneXlsx<LigneAuxiliaire> => ({ titre: tr.libelle, type: 'montant', valeur: (l) => euros(l.agee[k]!) })),
+    ];
+    const ws = feuilleTableau(wb, nom, colonnes, b.tiers, { titre });
+    const premiere = titre.length + 3;
+    ligneTotal(ws, premiere, premiere + b.tiers.length - 1, [4, 5, 6, 7, 9, ...TRANCHES.map((_, k) => 10 + k)]);
+  }
+  feuilleParametres(wb, parametres);
+  return wb;
+}
+
+function colonnesLignes(ctx: ContexteAnalyse): ColonneXlsx<number>[] {
+  const { f } = ctx;
+  return [
+    { titre: 'Compte', largeur: 12, valeur: (i) => t(f, 'compteNum', i) },
+    { titre: 'Libellé du compte', largeur: 28, valeur: (i) => t(f, 'compteLib', i) },
+    { titre: 'Date', type: 'date', valeur: (i) => dateExcel(f.ecritureDate[i]!) },
+    { titre: 'Journal', largeur: 8, valeur: (i) => t(f, 'journalCode', i) },
+    { titre: 'N° écriture', largeur: 11, valeur: (i) => t(f, 'ecritureNum', i) },
+    { titre: 'Pièce', largeur: 14, valeur: (i) => t(f, 'pieceRef', i) },
+    { titre: 'Auxiliaire', largeur: 12, valeur: (i) => t(f, 'compAuxNum', i) },
+    { titre: 'Libellé', largeur: 40, valeur: (i) => t(f, 'ecritureLib', i) },
+    { titre: 'Débit', type: 'montant', valeur: (i) => euros(f.debit[i]!) },
+    { titre: 'Crédit', type: 'montant', valeur: (i) => euros(f.credit[i]!) },
+    { titre: 'Lettrage', largeur: 9, valeur: (i) => t(f, 'ecritureLet', i) },
+    { titre: 'À-nouveau', largeur: 9, valeur: (i) => (ctx.an[i] ? 'oui' : '') },
+    { titre: 'Ligne du fichier', type: 'entier', largeur: 10, valeur: (i) => f.ligneOrigine[i]! },
+  ];
+}
+
+export function classeurGrandLivre(ExcelJS: ExcelJSModule, ctx: ContexteAnalyse, gl: GrandLivre, filtres: string, parametres: Parametres): Workbook {
+  const wb = nouveauClasseur(ExcelJS);
+  const n = Math.min(gl.lignes.length, LIGNES_MAX_EXPORT);
+  const titre = [
+    `Grand-livre — ${parametres.dossier}`,
+    `Filtres : ${filtres || 'aucun'}${gl.lignes.length > n ? ` — ${n.toLocaleString('fr-FR')} premières lignes sur ${gl.lignes.length.toLocaleString('fr-FR')} : affinez les filtres pour un export complet` : ''}`,
+  ];
+  const colonnes = colonnesLignes(ctx);
+  const indices = Array.from({ length: n }, (_, k) => k);
+  const ws = feuilleTableau(
+    wb,
+    'Grand-livre',
+    [
+      ...colonnes.map((c): ColonneXlsx<number> => ({ ...c, valeur: (k) => c.valeur(gl.lignes[k]!) })),
+      { titre: 'Solde progressif', type: 'montant', valeur: (k) => euros(gl.soldes[k]!) },
+    ],
+    indices,
+    { titre },
+  );
+  const premiere = titre.length + 3;
+  ligneTotal(ws, premiere, premiere + n - 1, [9, 10]);
+  feuilleParametres(wb, parametres, [['Filtres du grand-livre', filtres || 'aucun']]);
+  return wb;
+}
+
+export function classeurStatistiques(ExcelJS: ExcelJSModule, ctx: ContexteAnalyse, s: Statistiques, parametres: Parametres): Workbook {
+  const wb = nouveauClasseur(ExcelJS);
+  const noms = new Set(['paramètres']);
+  const titre = [`Statistiques d’écritures — ${parametres.dossier}`, 'Pistes d’investigation, pas des conclusions.'];
+  const lignesJM = s.journaux.map((j, r) => ({ j, nb: s.ecrituresParJournalMois[r]! }));
+  feuilleTableau(
+    wb,
+    nomOnglet('Écritures par journal et mois', noms),
+    [
+      { titre: 'Journal', largeur: 10, valeur: (l: (typeof lignesJM)[number]) => l.j },
+      ...s.mois.map((m, c): ColonneXlsx<(typeof lignesJM)[number]> => ({ titre: `${m.slice(5)}/${m.slice(0, 4)}`, type: 'entier', largeur: 9, valeur: (l) => l.nb[c]! })),
+      { titre: 'Total', type: 'entier', largeur: 9, valeur: (l) => l.nb.reduce((a, b) => a + b, 0) },
+    ],
+    lignesJM,
+    { titre },
+  );
+  feuilleTableau(
+    wb,
+    nomOnglet('Indicateurs', noms),
+    [
+      { titre: 'Indicateur', largeur: 50, valeur: (i: Statistiques['indicateurs'][number]) => i.libelle },
+      { titre: 'Écritures', type: 'entier', largeur: 11, valeur: (i) => i.ecritures.length },
+      { titre: 'Critère', largeur: 80, valeur: (i) => i.description },
+    ],
+    s.indicateurs,
+    { titre },
+  );
+  feuilleTableau(
+    wb,
+    nomOnglet('Benford', noms),
+    [
+      { titre: 'Premier chiffre', type: 'entier', largeur: 10, valeur: (d: number) => d + 1 },
+      { titre: 'Observé', type: 'entier', valeur: (d) => s.benford.observes[d]! },
+      { titre: 'Observé %', type: 'pourcentage', valeur: (d) => (s.benford.total ? s.benford.observes[d]! / s.benford.total : 0) },
+      { titre: 'Attendu %', type: 'pourcentage', valeur: (d) => s.benford.attendues[d]! },
+    ],
+    [0, 1, 2, 3, 4, 5, 6, 7, 8],
+    { titre: [...titre, `Écart absolu moyen : ${s.benford.mad.toFixed(4)} — conformité ${s.benford.conformite}`] },
+  );
+  for (const ind of s.indicateurs) {
+    if (ind.ecritures.length === 0) continue;
+    const lignes = ind.ecritures.slice(0, 20_000).flatMap((e) => Array.from(lignesEcriture(ctx, e)));
+    feuilleTableau(wb, nomOnglet(ind.libelle, noms), colonnesLignes(ctx), lignes, {
+      titre: [ind.libelle, ind.description, `${ind.ecritures.length} écriture(s)`],
+    });
+  }
+  feuilleParametres(wb, parametres);
+  return wb;
+}
