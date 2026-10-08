@@ -104,8 +104,8 @@ export async function collecter(d: DependancesCollecte): Promise<Bilan> {
   journal(`Recherche IA : ${RAISON_IA}`);
 
   // --- Suivi PLF / PLFSS : dossiers législatifs de l'Assemblée nationale ---
-  const dossiers = await collecterDossiers(sources, { client: d.http, maintenant: d.maintenant, etatPrecedent: sourcesPrecedentes });
-  for (const e of dossiers.etats) journal(`  ${e.etat === 'ok' ? 'OK    ' : 'ÉCHEC '} ${e.id} : ${e.erreur ?? `${e.nb_elements} étape(s)`}`);
+  const dossiers = await collecterDossiers(sources, { client: d.http, maintenant: d.maintenant, etatPrecedent: sourcesPrecedentes, motsCles });
+  for (const e of dossiers.etats) journal(`  ${e.etat === 'ok' ? 'OK    ' : 'ÉCHEC '} ${e.id} : ${e.nb_elements ?? 0} étape(s)${e.erreur ? ` — ${e.erreur}` : ''}`);
   // Priorité : suivi lu aujourd'hui, sinon celui déjà publié, sinon la saisie manuelle (veille/suivi.json).
   const suiviPublie = {
     plf: dossiers.suivi.plf ?? newsPrecedent?.suivi?.plf ?? suivi.plf,

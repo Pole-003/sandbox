@@ -19,6 +19,8 @@ import { dateIsoParis, extraireDateDuTexte } from './dates.ts';
 import { decoderOctets, lireEncodageDeclare } from './encodage.ts';
 import { decoderEntites } from './flux.ts';
 import type { ClientHttp } from './http.ts';
+import type { MotsCles } from './classement.ts';
+import { construireMesures, lireArticles, texteDepuisDossier } from './projet-loi.ts';
 
 export interface EtapeLue {
   libelle: string;
@@ -139,7 +141,7 @@ const THEMES_SUIVI: Record<'plf' | 'plfss', Theme> = { plf: 'Loi de finances', p
 
 export async function collecterDossiers(
   sources: readonly SourceCatalogue[],
-  options: { client: ClientHttp; maintenant: Date; etatPrecedent: EtatSource[] },
+  options: { client: ClientHttp; maintenant: Date; etatPrecedent: EtatSource[]; motsCles: MotsCles },
 ): Promise<ResultatDossiers> {
   const resultat: ResultatDossiers = { suivi: { plf: null, plfss: null }, articles: [], etats: [] };
   const aujourdhui = dateIsoParis(options.maintenant);
@@ -158,7 +160,7 @@ export async function collecterDossiers(
       continue;
     }
     try {
-      let trouve: { url: string; annee: number; etapes: EtapeLue[] } | null = null;
+      let trouve: { url: string; annee: number; etapes: EtapeLue[]; html: string } | null = null;
       let derniereErreur = 'dossier introuvable';
       // Une page trouvée mais illisible est plus grave qu'une année absente : ce message est prioritaire.
       let erreurStructure: string | null = null;
@@ -175,14 +177,33 @@ export async function collecterDossiers(
           erreurStructure ??= `${SIGLES[type]} ${annee} : bloc « Étapes de lecture » introuvable (structure de la page modifiée ?)`;
           continue;
         }
-        trouve = { url, annee, etapes };
+        trouve = { url, annee, etapes, html };
         etat.duree_ms = r.dureeMs;
         break;
       }
       if (!trouve) throw new Error(erreurStructure ?? derniereErreur);
 
       const intitule = `${SIGLES[type]} ${trouve.annee}`;
-      resultat.suivi[type] = construireSuivi(type, intitule, trouve.etapes, aujourdhui, trouve.url);
+      const suivi = construireSuivi(type, intitule, trouve.etapes, aujourdhui, trouve.url);
+
+      // Articles du projet de loi déposé (texte open data) : une panne ici n'empêche pas le suivi des étapes.
+      const texteProjet = texteDepuisDossier(trouve.html);
+      let remarque: string | null = texteProjet ? null : 'lien vers le projet de loi introuvable dans le dossier';
+      if (texteProjet) {
+        try {
+          const r = await options.client.recuperer(texteProjet.opendata);
+          if (r.statut !== 200) throw new Error(`HTTP ${r.statut}`);
+          const articles = lireArticles(decoderOctets(r.octets, lireEncodageDeclare(r.octets, r.contentType)).texte);
+          if (articles.length === 0) throw new Error('aucun article reconnu (présentation du texte modifiée ?)');
+          suivi.mesures = construireMesures(
+            articles, options.motsCles, THEMES_SUIVI[type],
+            `Projet de loi n° ${texteProjet.numero} (texte déposé par le Gouvernement)`, texteProjet.page, texteProjet.opendata,
+          );
+        } catch (e) {
+          remarque = `articles du projet de loi non lus : ${e instanceof Error ? e.message : String(e)}`;
+        }
+      }
+      resultat.suivi[type] = suivi;
       const empreinte = empreinteEtapes(trouve.etapes);
       // Nouvelle étape : seulement par rapport à un relevé précédent du même type (pas l'ancienne empreinte de page).
       if (precedent?.type === 'dossier' && precedent.empreinte && precedent.empreinte !== empreinte) {
@@ -198,7 +219,11 @@ export async function collecterDossiers(
           type: 'texte_officiel',
         });
       }
-      Object.assign(etat, { etat: 'ok', derniere_reussite: options.maintenant.toISOString(), empreinte, nb_elements: trouve.etapes.length, nb_articles: resultat.articles.filter((a) => a.source_id === source.id).length });
+      Object.assign(etat, {
+        etat: 'ok', derniere_reussite: options.maintenant.toISOString(), empreinte, nb_elements: trouve.etapes.length,
+        nb_articles: resultat.articles.filter((a) => a.source_id === source.id).length,
+        erreur: remarque,
+      });
     } catch (e) {
       Object.assign(etat, { etat: 'erreur', erreur: e instanceof Error ? e.message : String(e) });
     }

@@ -37,6 +37,14 @@ const NEWS: NewsJson = {
       prochaine_echeance: { libelle: 'Vote solennel', date: '2026-10-20' }, mis_a_jour_le: '2026-10-08',
       delais: [{ libelle: 'Fin du délai de 1re lecture à l’Assemblée (40 jours, art. 47 de la Constitution)', date: '2026-11-10', indicative: true }],
       source: 'Assemblée nationale — dossier législatif', url: 'https://exemple.invalid/PLF_2027',
+      mesures: {
+        libelle: 'Projet de loi n° 3210 (texte déposé par le Gouvernement)', url: 'https://exemple.invalid/texte-3210',
+        articles: [
+          { numero: '1', intitule: 'Autorisation de percevoir les impôts existants', partie: 'Première partie', groupe: 'A – Autorisation', theme: 'Loi de finances', importance: 2, public: [], url: null },
+          { numero: '4', intitule: 'Report de la facturation électronique', partie: 'Première partie', groupe: 'B – Mesures fiscales', theme: 'Fiscal et comptable', importance: 4, public: ['Expertise comptable'], url: 'https://exemple.invalid/texte-3210#_Toc4' },
+          { numero: '3', intitule: 'Crédit d’impôt recherche des PME', partie: 'Première partie', groupe: 'B – Mesures fiscales', theme: 'Fiscal et comptable', importance: 3, public: ['Conseil aux dirigeants'], url: null },
+        ],
+      },
     },
     plfss: null,
   },
@@ -162,6 +170,13 @@ describe('veille · écran', () => {
     expect(conteneur.querySelector('.delais')?.textContent).toContain('10/11/2026 (délai indicatif)');
     expect(conteneur.querySelector<HTMLAnchorElement>('.suivi a[href="https://exemple.invalid/PLF_2027"]')?.rel).toBe('noopener noreferrer');
     expect(conteneur.querySelector('.actualites-suivi')?.textContent).toContain('Le Sénat adopte la première partie du PLF');
+    const mesures = conteneur.querySelector('.mesures')!;
+    expect([...mesures.querySelectorAll(':scope > .liste-mesures > li')].map((li) => li.textContent?.split(' Importance')[0])).toEqual([
+      'Art. 4 — Report de la facturation électronique (nouvel onglet)',
+      'Art. 3 — Crédit d’impôt recherche des PME',
+    ]);
+    expect(mesures.querySelector('summary')?.textContent).toBe('Tous les articles du projet (3)');
+    expect(mesures.querySelector<HTMLAnchorElement>('a[href="https://exemple.invalid/texte-3210#_Toc4"]')?.rel).toBe('noopener noreferrer');
 
     onglet('indicateurs').click();
     expect(conteneur.querySelector('.tuile')?.textContent).toContain('1,8 %');

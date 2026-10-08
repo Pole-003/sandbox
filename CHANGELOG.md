@@ -2,6 +2,12 @@
 
 Toutes les évolutions notables de la Sandbox Pôle 003. Format inspiré de « Keep a Changelog », numéros de version au format semver.
 
+## [0.5.0] - 2026-10-08
+
+### Ajouté
+- Onglet « Suivi PLF / PLFSS » : principales mesures du projet de loi de finances et du projet de loi de financement de la sécurité sociale, reprises du texte officiel déposé (numéro et intitulé de chaque article), sélectionnées par les mots-clés de la veille (impôt sur les sociétés, TVA, cotisations…).
+- Liste complète des articles, groupés par partie, avec lien vers le texte officiel. Relue chaque jour, toujours à 0 €.
+
 ## [0.4.0] - 2026-10-08
 
 ### Ajouté
