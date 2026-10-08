@@ -27,6 +27,22 @@ function texteLigne(html: string): string {
   return decoderEntites(html.replace(/<[^>]+>/g, ' ')).replace(/\s+/g, ' ').trim();
 }
 
+/** Extrait le HTML simplifié (balises gardées, attributs réduits à class) autour d'un repère, pour étudier la structure. */
+export function extraitAutour(html: string, repere: RegExp, longueur = 6000): string | null {
+  const corps = html.replace(/<(script|style|noscript|svg)[\s\S]*?<\/\1>/gi, '');
+  const i = corps.search(repere);
+  if (i < 0) return null;
+  return corps
+    .slice(i, i + longueur)
+    .replace(/<([a-z0-9]+)\b([^>]*)>/gi, (_t, b: string, attrs: string) => {
+      const classe = /class=["']([^"']*)["']/i.exec(attrs)?.[1];
+      const lien = /href=["']([^"']*)["']/i.exec(attrs)?.[1];
+      const date = /datetime=["']([^"']*)["']/i.exec(attrs)?.[1];
+      return `<${b}${classe ? ` .${classe.trim().replace(/\s+/g, '.')}` : ''}${lien ? ` href=${lien}` : ''}${date ? ` datetime=${date}` : ''}>`;
+    })
+    .replace(/\s+/g, ' ');
+}
+
 export function analyserDossier(html: string): { titre: string | null; flux: string[]; plan: string[]; etapes: string[] } {
   const titre = /<title[^>]*>([\s\S]*?)<\/title>/i.exec(html)?.[1]?.replace(/\s+/g, ' ').trim() ?? null;
   const flux = [...html.matchAll(/<link[^>]+type=["']application\/(?:rss|atom)\+xml["'][^>]*>/gi)].map((m) => /href=["']([^"']+)["']/i.exec(m[0])?.[1] ?? m[0]);
@@ -54,6 +70,10 @@ async function principal(): Promise<void> {
         rapport.push(...a.plan.slice(0, 40).map((l) => `  - ${l}`));
         rapport.push(`- Lignes évoquant une étape (${a.etapes.length}) :`);
         rapport.push(...a.etapes.slice(0, 60).map((l) => `  - ${l}`));
+        const dates = [...new Set(texte.replace(/<[^>]+>/g, ' ').match(/\b\d{1,2}(?:er)?\s+(?:janvier|février|mars|avril|mai|juin|juillet|août|septembre|octobre|novembre|décembre)\s+\d{4}\b|\b\d{2}\/\d{2}\/\d{4}\b/gi) ?? [])];
+        rapport.push(`- Dates trouvées dans la page : ${dates.slice(0, 30).join(' · ') || 'aucune'}`);
+        const extrait = extraitAutour(texte, /[ÉE]tapes de lecture/);
+        rapport.push('- Structure HTML autour de « Étapes de lecture » :', '```', extrait ?? '(repère absent)', '```');
       }
     } catch (e) {
       rapport.push(`- Échec : ${e instanceof Error ? e.message : String(e)}`);
