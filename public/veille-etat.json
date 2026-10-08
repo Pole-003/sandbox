@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "genere_le": "2026-10-08T12:34:19.058Z",
+  "genere_le": "2026-10-08T12:50:08.281Z",
   "sources": [
     {
       "id": "bofip-actualites",
@@ -9,12 +9,12 @@
       "theme": "Fiscal et comptable",
       "statut_catalogue": "verifie",
       "etat": "ok",
-      "derniere_tentative": "2026-10-08T12:34:19.058Z",
-      "derniere_reussite": "2026-10-08T12:34:19.058Z",
+      "derniere_tentative": "2026-10-08T12:50:08.281Z",
+      "derniere_reussite": "2026-10-08T12:50:08.281Z",
       "erreur": null,
       "nb_articles": 1,
       "nb_elements": 3,
-      "duree_ms": 414
+      "duree_ms": 396
     },
     {
       "id": "senat-textes",
@@ -22,13 +22,13 @@
       "type": "rss",
       "theme": "Loi de finances",
       "statut_catalogue": "verifie",
-      "etat": "ok",
-      "derniere_tentative": "2026-10-08T12:34:19.058Z",
+      "etat": "erreur",
+      "derniere_tentative": "2026-10-08T12:50:08.281Z",
       "derniere_reussite": "2026-10-08T12:34:19.058Z",
-      "erreur": null,
-      "nb_articles": 16,
-      "nb_elements": 27,
-      "duree_ms": 132
+      "erreur": "robots.txt injoignable : erreur réseau : ETIMEDOUT (www.senat.fr)",
+      "nb_articles": 0,
+      "nb_elements": null,
+      "duree_ms": null
     },
     {
       "id": "senat-rapports",
@@ -36,13 +36,13 @@
       "type": "rss",
       "theme": "Loi de finances",
       "statut_catalogue": "verifie",
-      "etat": "ok",
-      "derniere_tentative": "2026-10-08T12:34:19.058Z",
+      "etat": "erreur",
+      "derniere_tentative": "2026-10-08T12:50:08.281Z",
       "derniere_reussite": "2026-10-08T12:34:19.058Z",
-      "erreur": null,
-      "nb_articles": 10,
-      "nb_elements": 18,
-      "duree_ms": 131
+      "erreur": "robots.txt injoignable : erreur réseau : ETIMEDOUT (www.senat.fr)",
+      "nb_articles": 0,
+      "nb_elements": null,
+      "duree_ms": null
     },
     {
       "id": "senat-budget",
@@ -50,13 +50,13 @@
       "type": "rss",
       "theme": "Loi de finances",
       "statut_catalogue": "verifie",
-      "etat": "ok",
-      "derniere_tentative": "2026-10-08T12:34:19.058Z",
+      "etat": "erreur",
+      "derniere_tentative": "2026-10-08T12:50:08.281Z",
       "derniere_reussite": "2026-10-08T12:34:19.058Z",
-      "erreur": null,
+      "erreur": "robots.txt injoignable : erreur réseau : ETIMEDOUT (www.senat.fr)",
       "nb_articles": 0,
-      "nb_elements": 173,
-      "duree_ms": 258
+      "nb_elements": null,
+      "duree_ms": null
     },
     {
       "id": "senat-fiscalite",
@@ -64,13 +64,13 @@
       "type": "rss",
       "theme": "Fiscal et comptable",
       "statut_catalogue": "verifie",
-      "etat": "ok",
-      "derniere_tentative": "2026-10-08T12:34:19.058Z",
+      "etat": "erreur",
+      "derniere_tentative": "2026-10-08T12:50:08.281Z",
       "derniere_reussite": "2026-10-08T12:34:19.058Z",
-      "erreur": null,
-      "nb_articles": 1,
-      "nb_elements": 322,
-      "duree_ms": 382
+      "erreur": "robots.txt injoignable : erreur réseau : ETIMEDOUT (www.senat.fr)",
+      "nb_articles": 0,
+      "nb_elements": null,
+      "duree_ms": null
     },
     {
       "id": "senat-entreprises",
@@ -78,13 +78,13 @@
       "type": "rss",
       "theme": "Économie et statistiques",
       "statut_catalogue": "verifie",
-      "etat": "ok",
-      "derniere_tentative": "2026-10-08T12:34:19.058Z",
+      "etat": "erreur",
+      "derniere_tentative": "2026-10-08T12:50:08.281Z",
       "derniere_reussite": "2026-10-08T12:34:19.058Z",
-      "erreur": null,
+      "erreur": "robots.txt injoignable : erreur réseau : ETIMEDOUT (www.senat.fr)",
       "nb_articles": 0,
-      "nb_elements": 42,
-      "duree_ms": 131
+      "nb_elements": null,
+      "duree_ms": null
     },
     {
       "id": "senat-pme",
@@ -92,13 +92,13 @@
       "type": "rss",
       "theme": "Économie et statistiques",
       "statut_catalogue": "verifie",
-      "etat": "ok",
-      "derniere_tentative": "2026-10-08T12:34:19.058Z",
+      "etat": "erreur",
+      "derniere_tentative": "2026-10-08T12:50:08.281Z",
       "derniere_reussite": "2026-10-08T12:34:19.058Z",
-      "erreur": null,
+      "erreur": "robots.txt injoignable : erreur réseau : ETIMEDOUT (www.senat.fr)",
       "nb_articles": 0,
-      "nb_elements": 25,
-      "duree_ms": 132
+      "nb_elements": null,
+      "duree_ms": null
     },
     {
       "id": "senat-secu",
@@ -106,13 +106,13 @@
       "type": "rss",
       "theme": "Sécurité sociale",
       "statut_catalogue": "verifie",
-      "etat": "ok",
-      "derniere_tentative": "2026-10-08T12:34:19.058Z",
+      "etat": "erreur",
+      "derniere_tentative": "2026-10-08T12:50:08.281Z",
       "derniere_reussite": "2026-10-08T12:34:19.058Z",
-      "erreur": null,
-      "nb_articles": 1,
-      "nb_elements": 25,
-      "duree_ms": 131
+      "erreur": "robots.txt injoignable : erreur réseau : ETIMEDOUT (www.senat.fr)",
+      "nb_articles": 0,
+      "nb_elements": null,
+      "duree_ms": null
     },
     {
       "id": "an-documents",
@@ -121,12 +121,12 @@
       "theme": "Loi de finances",
       "statut_catalogue": "verifie",
       "etat": "ok",
-      "derniere_tentative": "2026-10-08T12:34:19.058Z",
-      "derniere_reussite": "2026-10-08T12:34:19.058Z",
+      "derniere_tentative": "2026-10-08T12:50:08.281Z",
+      "derniere_reussite": "2026-10-08T12:50:08.281Z",
       "erreur": null,
       "nb_articles": 0,
       "nb_elements": 10,
-      "duree_ms": 304
+      "duree_ms": 255
     },
     {
       "id": "an-commission-finances",
@@ -135,12 +135,12 @@
       "theme": "Loi de finances",
       "statut_catalogue": "verifie",
       "etat": "ok",
-      "derniere_tentative": "2026-10-08T12:34:19.058Z",
-      "derniere_reussite": "2026-10-08T12:34:19.058Z",
+      "derniere_tentative": "2026-10-08T12:50:08.281Z",
+      "derniere_reussite": "2026-10-08T12:50:08.281Z",
       "erreur": null,
       "nb_articles": 10,
       "nb_elements": 10,
-      "duree_ms": 478
+      "duree_ms": 156
     },
     {
       "id": "an-commission-affaires-sociales",
@@ -149,12 +149,12 @@
       "theme": "Sécurité sociale",
       "statut_catalogue": "verifie",
       "etat": "ok",
-      "derniere_tentative": "2026-10-08T12:34:19.058Z",
-      "derniere_reussite": "2026-10-08T12:34:19.058Z",
+      "derniere_tentative": "2026-10-08T12:50:08.281Z",
+      "derniere_reussite": "2026-10-08T12:50:08.281Z",
       "erreur": null,
       "nb_articles": 10,
       "nb_elements": 10,
-      "duree_ms": 176
+      "duree_ms": 180
     },
     {
       "id": "an-commission-affaires-economiques",
@@ -163,12 +163,12 @@
       "theme": "Économie et statistiques",
       "statut_catalogue": "verifie",
       "etat": "ok",
-      "derniere_tentative": "2026-10-08T12:34:19.058Z",
-      "derniere_reussite": "2026-10-08T12:34:19.058Z",
+      "derniere_tentative": "2026-10-08T12:50:08.281Z",
+      "derniere_reussite": "2026-10-08T12:50:08.281Z",
       "erreur": null,
       "nb_articles": 10,
       "nb_elements": 10,
-      "duree_ms": 221
+      "duree_ms": 172
     },
     {
       "id": "an-presse",
@@ -191,12 +191,12 @@
       "theme": "Fiscal et comptable",
       "statut_catalogue": "verifie",
       "etat": "ok",
-      "derniere_tentative": "2026-10-08T12:34:19.058Z",
-      "derniere_reussite": "2026-10-08T12:34:19.058Z",
+      "derniere_tentative": "2026-10-08T12:50:08.281Z",
+      "derniere_reussite": "2026-10-08T12:50:08.281Z",
       "erreur": null,
       "nb_articles": 0,
       "nb_elements": 20,
-      "duree_ms": 149
+      "duree_ms": 129
     },
     {
       "id": "ce-actualites",
@@ -205,12 +205,12 @@
       "theme": "Fiscal et comptable",
       "statut_catalogue": "verifie",
       "etat": "ok",
-      "derniere_tentative": "2026-10-08T12:34:19.058Z",
-      "derniere_reussite": "2026-10-08T12:34:19.058Z",
+      "derniere_tentative": "2026-10-08T12:50:08.281Z",
+      "derniere_reussite": "2026-10-08T12:50:08.281Z",
       "erreur": null,
       "nb_articles": 1,
       "nb_elements": 20,
-      "duree_ms": 145
+      "duree_ms": 128
     },
     {
       "id": "ce-avis",
@@ -219,27 +219,42 @@
       "theme": "Loi de finances",
       "statut_catalogue": "verifie",
       "etat": "ok",
-      "derniere_tentative": "2026-10-08T12:34:19.058Z",
-      "derniere_reussite": "2026-10-08T12:34:19.058Z",
+      "derniere_tentative": "2026-10-08T12:50:08.281Z",
+      "derniere_reussite": "2026-10-08T12:50:08.281Z",
       "erreur": null,
       "nb_articles": 0,
       "nb_elements": 20,
-      "duree_ms": 145
+      "duree_ms": 129
     },
     {
       "id": "an-dossier-plf",
-      "nom": "Assemblée nationale — Dossier législatif PLF 2027",
-      "type": "page",
+      "nom": "Assemblée nationale — Dossier législatif du PLF",
+      "type": "dossier",
       "theme": "Loi de finances",
       "statut_catalogue": "verifie",
       "etat": "ok",
-      "derniere_tentative": "2026-10-08T12:34:19.058Z",
-      "derniere_reussite": "2026-10-08T12:34:19.058Z",
+      "derniere_tentative": "2026-10-08T12:50:08.281Z",
+      "derniere_reussite": "2026-10-08T12:50:08.281Z",
       "erreur": null,
       "nb_articles": 0,
-      "nb_elements": null,
-      "duree_ms": 1046,
-      "empreinte": "8025ca3b9345fc04"
+      "nb_elements": 2,
+      "duree_ms": 430,
+      "empreinte": "66199c507c9f9f30"
+    },
+    {
+      "id": "an-dossier-plfss",
+      "nom": "Assemblée nationale — Dossier législatif du PLFSS",
+      "type": "dossier",
+      "theme": "Sécurité sociale",
+      "statut_catalogue": "verifie",
+      "etat": "ok",
+      "derniere_tentative": "2026-10-08T12:50:08.281Z",
+      "derniere_reussite": "2026-10-08T12:50:08.281Z",
+      "erreur": null,
+      "nb_articles": 0,
+      "nb_elements": 2,
+      "duree_ms": 347,
+      "empreinte": "66199c507c9f9f30"
     },
     {
       "id": "piste-legifrance",

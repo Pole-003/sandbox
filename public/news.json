@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "genere_le": "2026-10-08T12:34:19.058Z",
+  "genere_le": "2026-10-08T12:50:08.281Z",
   "articles": [
     {
       "id": "b069aa48d1f16264",
@@ -953,8 +953,118 @@
   ],
   "indicateurs": [],
   "suivi": {
-    "plf": null,
-    "plfss": null
+    "plf": {
+      "texte": "PLF 2027",
+      "etape_actuelle": "Première lecture à l'Assemblée nationale",
+      "etapes": [
+        {
+          "libelle": "Dépôt à l'Assemblée nationale",
+          "date": "2026-10-01",
+          "statut": "fait"
+        },
+        {
+          "libelle": "Première lecture à l'Assemblée nationale",
+          "date": "2026-10-01",
+          "statut": "en_cours"
+        },
+        {
+          "libelle": "Première lecture au Sénat",
+          "date": null,
+          "statut": "a_venir"
+        },
+        {
+          "libelle": "Commission mixte paritaire",
+          "date": null,
+          "statut": "a_venir"
+        },
+        {
+          "libelle": "Conseil constitutionnel",
+          "date": null,
+          "statut": "a_venir"
+        },
+        {
+          "libelle": "Promulgation",
+          "date": null,
+          "statut": "a_venir"
+        }
+      ],
+      "prochaine_echeance": {
+        "libelle": "Fin du délai de 1re lecture à l’Assemblée (40 jours, art. 47 de la Constitution)",
+        "date": "2026-11-10",
+        "indicative": true
+      },
+      "delais": [
+        {
+          "libelle": "Fin du délai de 1re lecture à l’Assemblée (40 jours, art. 47 de la Constitution)",
+          "date": "2026-11-10",
+          "indicative": true
+        },
+        {
+          "libelle": "Fin du délai d’examen par le Parlement (70 jours, art. 47 de la Constitution)",
+          "date": "2026-12-10",
+          "indicative": true
+        }
+      ],
+      "source": "Assemblée nationale — dossier législatif",
+      "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/PLF_2027",
+      "mis_a_jour_le": "2026-10-08"
+    },
+    "plfss": {
+      "texte": "PLFSS 2027",
+      "etape_actuelle": "Première lecture à l'Assemblée nationale",
+      "etapes": [
+        {
+          "libelle": "Dépôt à l'Assemblée nationale",
+          "date": "2026-10-01",
+          "statut": "fait"
+        },
+        {
+          "libelle": "Première lecture à l'Assemblée nationale",
+          "date": "2026-10-01",
+          "statut": "en_cours"
+        },
+        {
+          "libelle": "Première lecture au Sénat",
+          "date": null,
+          "statut": "a_venir"
+        },
+        {
+          "libelle": "Commission mixte paritaire",
+          "date": null,
+          "statut": "a_venir"
+        },
+        {
+          "libelle": "Conseil constitutionnel",
+          "date": null,
+          "statut": "a_venir"
+        },
+        {
+          "libelle": "Promulgation",
+          "date": null,
+          "statut": "a_venir"
+        }
+      ],
+      "prochaine_echeance": {
+        "libelle": "Fin du délai de 1re lecture à l’Assemblée (20 jours, art. 47-1 de la Constitution)",
+        "date": "2026-10-21",
+        "indicative": true
+      },
+      "delais": [
+        {
+          "libelle": "Fin du délai de 1re lecture à l’Assemblée (20 jours, art. 47-1 de la Constitution)",
+          "date": "2026-10-21",
+          "indicative": true
+        },
+        {
+          "libelle": "Fin du délai d’examen par le Parlement (50 jours, art. 47-1 de la Constitution)",
+          "date": "2026-11-20",
+          "indicative": true
+        }
+      ],
+      "source": "Assemblée nationale — dossier législatif",
+      "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/PLFSS_2027",
+      "mis_a_jour_le": "2026-10-08"
+    }
   },
   "sources": [
     {
@@ -1034,7 +1144,12 @@
     },
     {
       "id": "an-dossier-plf",
-      "nom": "Assemblée nationale — Dossier législatif PLF 2027",
+      "nom": "Assemblée nationale — Dossier législatif du PLF",
+      "url": "https://www.assemblee-nationale.fr"
+    },
+    {
+      "id": "an-dossier-plfss",
+      "nom": "Assemblée nationale — Dossier législatif du PLFSS",
       "url": "https://www.assemblee-nationale.fr"
     }
   ]
