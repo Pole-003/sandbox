@@ -2,6 +2,15 @@
 
 Toutes les évolutions notables de la Sandbox Pôle 003. Format inspiré de « Keep a Changelog », numéros de version au format semver.
 
+## [0.13.0] - 2026-10-08
+
+### Ajouté
+- Module FEC : nouvel onglet « Flux de trésorerie ». C'est un tableau des flux au format anglo-saxon (IAS 7, méthode indirecte), en trois parties : activités opérationnelles (résultat net, capacité d'autofinancement, variation du BFR), activités d'investissement et activités de financement.
+- La somme des flux est égale à la variation de trésorerie entre l'ouverture et la clôture de l'exercice. Ce contrôle est affiché, et un écart n'apparaît que si la balance du FEC est déséquilibrée.
+- Comparaison avec l'exercice précédent quand son FEC est chargé, avec une alerte si la trésorerie de clôture N-1 ne correspond pas à la trésorerie d'ouverture N.
+- Export Excel du tableau des flux : tableau croisé dynamique par section, rubrique et compte (le total général est la variation de trésorerie), puis tableau présenté N / N-1.
+- Soldes intermédiaires de gestion : colonne de variation en % en plus de N-1 et de la variation en valeur, à l'écran et dans l'export.
+
 ## [0.12.0] - 2026-10-08
 
 ### Ajouté

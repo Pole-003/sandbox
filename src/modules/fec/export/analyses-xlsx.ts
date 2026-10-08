@@ -12,8 +12,9 @@ import { type ContexteAnalyse, t } from '../analyses/contexte.ts';
 import type { GrandLivre } from '../analyses/grand-livre.ts';
 import { lignesEcriture } from '../analyses/grand-livre.ts';
 import type { Statistiques } from '../analyses/statistiques.ts';
+import { LIBELLES_SECTIONS, LIGNES_TFT, presentationTft, type Tft } from '../analyses/tft.ts';
 import { ajouterTcd, type ChampTcd } from './tcd.ts';
-import { dateExcel, euros, feuilleParametres, feuilleTableau, nomOnglet, type ColonneXlsx, type ExcelJSModule, type Parametres } from './xlsx.ts';
+import { dateExcel, euros, FORMAT_MONTANT, feuilleParametres, feuilleTableau, nomOnglet, type ColonneXlsx, type ExcelJSModule, type Parametres } from './xlsx.ts';
 
 /** Au-delà, l'export du grand-livre est tronqué (limite pratique d'un classeur généré dans le navigateur). */
 export const LIGNES_MAX_EXPORT = 200_000;
@@ -202,6 +203,7 @@ export function classeurChiffresCles(
       ? ([
           { titre: 'Exercice N-1', type: 'montant', valeur: (l) => (avant.has(l.code) ? euros(avant.get(l.code)!) : null) },
           { titre: 'Variation', type: 'montant', valeur: (l) => (avant.has(l.code) ? euros(l.montant - avant.get(l.code)!) : null) },
+          { titre: 'Variation %', type: 'pourcentage', valeur: (l) => (avant.get(l.code) ? (l.montant - avant.get(l.code)!) / Math.abs(avant.get(l.code)!) : null) },
         ] satisfies ColonneXlsx<LigneSig>[])
       : []),
   ];
@@ -228,6 +230,98 @@ export function classeurChiffresCles(
     { titre },
   );
   feuilleParametres(wb, parametres, c.gestionSoldee ? [['Remarque', 'Comptes de gestion soldés dans le FEC : résultat lu au compte 12.']] : []);
+  return wb;
+}
+
+/**
+ * Tableau des flux de trésorerie : TCD (section → rubrique → compte, total général = variation de
+ * trésorerie), tableau présenté (N, N-1, variation) et paramètres.
+ */
+export function classeurTft(ExcelJS: ExcelJSModule, t: Tft, n1: Tft | null, parametres: Parametres): Workbook {
+  const wb = nouveauClasseur(ExcelJS);
+  const ordreSection = { operationnel: 1, investissement: 2, financement: 3 } as const;
+  const rubrique = new Map(LIGNES_TFT.map((l, k) => [l.code, { section: l.section, libelle: `${String(k + 1).padStart(2, '0')} ${l.libelle}` }]));
+  const lignes = new Map<string, (string | number)[]>();
+  for (const [colonne, x] of [[3, t], [4, n1]] as const) {
+    for (const c of x?.contributions ?? []) {
+      const r = rubrique.get(c.code)!;
+      const cle = `${c.code}|${c.compteNum}`;
+      const l = lignes.get(cle) ?? [
+        `${ordreSection[r.section]} ${LIBELLES_SECTIONS[r.section].titre} (${LIBELLES_SECTIONS[r.section].anglais})`,
+        r.libelle,
+        `${c.compteNum} – ${c.compteLib}`,
+        0,
+        ...(n1 ? [0] : []),
+      ];
+      l[colonne] = Number(l[colonne]) + c.montant;
+      lignes.set(cle, l);
+    }
+  }
+  ajouterTcd(wb, {
+    nom: 'TCD_TFT',
+    feuilleCible: 'TCD TFT',
+    feuilleSource: 'Données TCD',
+    titre: [
+      `Tableau des flux de trésorerie par compte — ${parametres.dossier}`,
+      `Exercice ${parametres.exercice} ; encaissements en positif, décaissements en négatif : le total général est la variation de trésorerie`,
+      NOTE_TCD,
+    ],
+    champs: [
+      { nom: 'Section', type: 'texte', largeur: 48 },
+      { nom: 'Rubrique', type: 'texte', largeur: 60 },
+      { nom: 'Compte', type: 'texte', largeur: 44 },
+      { nom: 'Exercice N', type: 'montant' },
+      ...(n1 ? ([{ nom: 'Exercice N-1', type: 'montant' }] satisfies ChampTcd[]) : []),
+    ],
+    lignes: [...lignes.values()],
+    axes: [0, 1, 2],
+    valeurs: n1 ? [3, 4] : [3],
+  });
+
+  const ws = wb.addWorksheet('TFT');
+  ws.getCell('A1').value = `Tableau des flux de trésorerie (méthode indirecte, IAS 7) — ${parametres.dossier}`;
+  ws.getCell('A1').font = { bold: true, size: 13 };
+  ws.getCell('A2').value = `Exercice ${parametres.exercice}`;
+  const titres = ['Rubrique', 'Comptes', 'Exercice N', ...(n1 ? ['Exercice N-1', 'Variation'] : [])];
+  const entete = ws.getRow(4);
+  titres.forEach((x, k) => {
+    entete.getCell(k + 1).value = x;
+    entete.getCell(k + 1).font = { bold: true };
+    entete.getCell(k + 1).fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: 'FFE7EEF8' } };
+  });
+  let r = 5;
+  for (const l of presentationTft()) {
+    if (l.nature === 'ecart' && t.ecart === 0 && (n1?.ecart ?? 0) === 0) continue;
+    const row = ws.getRow(r++);
+    row.getCell(1).value = l.libelle;
+    if (l.nature === 'section') {
+      row.font = { bold: true };
+      row.getCell(1).fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: 'FFF2F4F7' } };
+      continue;
+    }
+    row.getCell(2).value = l.comptes;
+    const v = l.montant(t) ?? 0;
+    row.getCell(3).value = euros(v);
+    if (n1) {
+      const a = l.montant(n1) ?? 0;
+      row.getCell(4).value = euros(a);
+      row.getCell(5).value = euros(v - a);
+    }
+    if (l.nature !== 'detail') row.font = { bold: true };
+    if (l.nature === 'detail') row.getCell(1).alignment = { indent: 1 };
+  }
+  ws.getColumn(1).width = 64;
+  ws.getColumn(2).width = 30;
+  for (let k = 3; k <= titres.length; k++) {
+    ws.getColumn(k).width = 18;
+    ws.getColumn(k).numFmt = FORMAT_MONTANT;
+  }
+  ws.views = [{ state: 'frozen', ySplit: 4 }];
+  feuilleParametres(wb, parametres, [
+    ['Trésorerie', 'Comptes de classe 5 hors 59 (disponibilités, VMP, concours bancaires courants)'],
+    ['Méthode', 'Indirecte (IAS 7) : chaque compte de bilan hors trésorerie est rattaché à une rubrique ; la somme des flux est égale à la variation de trésorerie'],
+    ['Contrôle', t.ecart === 0 ? 'Somme des flux = variation de trésorerie' : `Écart de ${euros(t.ecart)} € : balance déséquilibrée`],
+  ]);
   return wb;
 }
 

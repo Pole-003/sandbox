@@ -619,3 +619,10 @@ input[type='file']:focus-visible + .zone-depot {
   font-size: 1.125rem;
   white-space: nowrap;
 }
+
+.tableau-sig .ligne-section th {
+  padding-top: 0.75rem;
+  background: var(--c-primaire-fond);
+  color: var(--c-primaire);
+  text-align: left;
+}

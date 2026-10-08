@@ -3,6 +3,7 @@ import { beforeAll, describe, expect, it } from 'vitest';
 import { calculerBalanceAuxiliaire } from '../../../src/modules/fec/analyses/auxiliaire.ts';
 import { calculerBalance, comparerBalances } from '../../../src/modules/fec/analyses/balance.ts';
 import { calculerChiffresCles } from '../../../src/modules/fec/analyses/chiffres-cles.ts';
+import { calculerTft } from '../../../src/modules/fec/analyses/tft.ts';
 import { creerContexte, type ContexteAnalyse } from '../../../src/modules/fec/analyses/contexte.ts';
 import { filtrerGrandLivre } from '../../../src/modules/fec/analyses/grand-livre.ts';
 import { calculerStatistiques } from '../../../src/modules/fec/analyses/statistiques.ts';
@@ -12,6 +13,7 @@ import {
   classeurChiffresCles,
   classeurGrandLivre,
   classeurStatistiques,
+  classeurTft,
 } from '../../../src/modules/fec/export/analyses-xlsx.ts';
 import { octetsClasseur, type Parametres } from '../../../src/modules/fec/export/xlsx.ts';
 import { importerFichier } from './aides.ts';
@@ -39,12 +41,34 @@ beforeAll(async () => {
 });
 
 describe('exports Excel des analyses', () => {
+  it('flux de trésorerie : TCD (total = variation de trésorerie), tableau N / N-1, paramètres', async () => {
+    const t = calculerTft(calculerBalance(ctx));
+    const wb = await relire(classeurTft(ExcelJS, t, t, parametres));
+    expect(wb.worksheets.map((w) => w.name)).toEqual(['TCD TFT', 'Données TCD', 'TFT', 'Paramètres']);
+    const tcd = wb.getWorksheet('TCD TFT')!;
+    expect(tcd.getCell('A5').value).toBe('1 Activités opérationnelles (Operating activities)');
+    const total = tcd.getRow(tcd.actualRowCount);
+    expect(total.getCell(1).value).toBe('Total général');
+    expect(total.getCell(2).value).toBeCloseTo(t.variationTresorerie / 100, 2);
+    expect(total.getCell(3).value).toBeCloseTo(t.variationTresorerie / 100, 2);
+    const tft = wb.getWorksheet('TFT')!;
+    expect(tft.getRow(4).values).toEqual([undefined, 'Rubrique', 'Comptes', 'Exercice N', 'Exercice N-1', 'Variation']);
+    const parLibelle = new Map<string, number>();
+    tft.eachRow((row) => {
+      if (typeof row.getCell(3).value === 'number') parLibelle.set(String(row.getCell(1).value), row.getCell(3).value as number);
+    });
+    expect(parLibelle.get('Variation de trésorerie (flux de l’exercice)')).toBeCloseTo(t.variationTresorerie / 100, 2);
+    expect(parLibelle.get('Variation de trésorerie (clôture − ouverture)')).toBeCloseTo(t.variationTresorerie / 100, 2);
+    expect(parLibelle.has('Écart (balance déséquilibrée)')).toBe(false);
+  });
+
+
   it('chiffres clés : SIG en montants numériques, soldes en gras, comparaison N-1, Paramètres', async () => {
     const c = calculerChiffresCles(calculerBalance(ctx));
     const wb = await relire(classeurChiffresCles(ExcelJS, c, c, parametres, { n: calculerBalance(ctx), n1: calculerBalance(ctx) }));
     expect(wb.worksheets.map((w) => w.name)).toEqual(['TCD SIG', 'Données TCD', 'SIG', 'Chiffres clés', 'Paramètres']);
     const sig = wb.getWorksheet('SIG')!;
-    expect(sig.getRow(4).values).toEqual([undefined, 'Rubrique', 'Comptes', 'Exercice N', 'Exercice N-1', 'Variation']);
+    expect(sig.getRow(4).values).toEqual([undefined, 'Rubrique', 'Comptes', 'Exercice N', 'Exercice N-1', 'Variation', 'Variation %']);
     const derniere = sig.getRow(4 + c.sig.length);
     expect(derniere.getCell(1).value).toBe('= Résultat de l’exercice');
     expect(derniere.getCell(3).value).toBe(c.resultat / 100);

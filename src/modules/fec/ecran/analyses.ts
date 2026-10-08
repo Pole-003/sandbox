@@ -8,6 +8,7 @@ import { formaterMontant } from '../../../core/format.ts';
 import { calculerBalanceAuxiliaire, TRANCHES, type BalanceAuxiliaire, type Population } from '../analyses/auxiliaire.ts';
 import { calculerBalance, comparerBalances, type Balance, type GroupeBalance, type LigneComparaison } from '../analyses/balance.ts';
 import { calculerChiffresCles, type ChiffresCles } from '../analyses/chiffres-cles.ts';
+import { calculerTft, presentationTft, type Tft } from '../analyses/tft.ts';
 import { creerContexte, t, type ContexteAnalyse } from '../analyses/contexte.ts';
 import { filtrerGrandLivre, lignesEcriture, type FiltresGrandLivre, type GrandLivre } from '../analyses/grand-livre.ts';
 import { calculerStatistiques, ecrituresDuChiffre, type Statistiques } from '../analyses/statistiques.ts';
@@ -15,6 +16,7 @@ import {
   classeurBalanceGenerale,
   classeurBalancesAuxiliaires,
   classeurChiffresCles,
+  classeurTft,
   classeurGrandLivre,
   classeurStatistiques,
 } from '../export/analyses-xlsx.ts';
@@ -28,6 +30,7 @@ import { creerListeVirtuelle } from './liste-virtuelle.ts';
 
 const ONGLETS = [
   { id: 'chiffres', libelle: 'Chiffres clés' },
+  { id: 'tft', libelle: 'Flux de trésorerie' },
   { id: 'balance', libelle: 'Balance générale' },
   { id: 'auxiliaire', libelle: 'Balances auxiliaires' },
   { id: 'grand-livre', libelle: 'Grand-livre' },
@@ -35,6 +38,10 @@ const ONGLETS = [
 ] as const;
 type Onglet = (typeof ONGLETS)[number]['id'];
 
+/** Montant signé (perte, décaissement) : « −1 234,56 ». */
+const signe = (x: number) => (x < 0 ? `−${formaterMontant(-x)}` : formaterMontant(x));
+/** Variation en % de la valeur N-1 (en valeur absolue au dénominateur), ou « — ». */
+const variationPct = (n: number, avant: number) => (avant ? `${(((n - avant) / Math.abs(avant)) * 100).toLocaleString('fr-FR', { maximumFractionDigits: 1, signDisplay: 'always' })} %` : '—');
 const montant = (c: number) => (c === 0 ? '' : formaterMontant(c));
 const solde = (c: number) => (c === 0 ? '0,00' : `${formaterMontant(Math.abs(c))} ${c > 0 ? 'D' : 'C'}`);
 const dateLigne = (d: number) => (d > 0 ? dateFr(dateIso(d)) : d === -1 ? 'invalide' : '—');
@@ -76,7 +83,7 @@ export function creerSectionAnalyses(impN: ImportEnregistre, impN1: ImportEnregi
   let ctxN1: ContexteAnalyse | null = null;
   let actif: Onglet = 'chiffres';
   let filtresGL: FiltresGrandLivre = {};
-  const cache: { chiffres?: ChiffresCles; chiffresN1?: ChiffresCles | null; balance?: Balance; balanceN1?: Balance | null; comparaison?: LigneComparaison[] | null; aux?: Partial<Record<Population, BalanceAuxiliaire>>; stats?: Statistiques } = {};
+  const cache: { tft?: Tft; tftN1?: Tft | null; chiffres?: ChiffresCles; chiffresN1?: ChiffresCles | null; balance?: Balance; balanceN1?: Balance | null; comparaison?: LigneComparaison[] | null; aux?: Partial<Record<Population, BalanceAuxiliaire>>; stats?: Statistiques } = {};
 
   const r = impN.reglages;
   const parametres = (): Parametres => ({
@@ -189,7 +196,6 @@ export function creerSectionAnalyses(impN: ImportEnregistre, impN1: ImportEnregi
     const c = (cache.chiffres ??= calculerChiffresCles(b));
     if (cache.chiffresN1 === undefined) cache.chiffresN1 = cache.balanceN1 ? calculerChiffresCles(cache.balanceN1) : null;
     const n1 = cache.chiffresN1;
-    const signe = (x: number) => (x < 0 ? `−${formaterMontant(-x)}` : formaterMontant(x));
     const variation = (n: number, avant: number | undefined) => {
       if (avant === undefined) return '';
       const pct = avant ? ((n - avant) / Math.abs(avant)) * 100 : null;
@@ -237,7 +243,7 @@ export function creerSectionAnalyses(impN: ImportEnregistre, impN1: ImportEnregi
         h(
           'table',
           { class: 'tableau tableau-sig' },
-          h('thead', {}, h('tr', {}, ...['Rubrique', 'Comptes', 'Exercice N', ...(n1 ? ['Exercice N-1', 'Variation'] : [])].map((x, k) => h('th', { scope: 'col', class: k >= 2 ? 'nombre' : undefined }, x)))),
+          h('thead', {}, h('tr', {}, ...['Rubrique', 'Comptes', 'Exercice N', ...(n1 ? ['Exercice N-1', 'Variation', 'Var. %'] : [])].map((x, k) => h('th', { scope: 'col', class: k >= 2 ? 'nombre' : undefined }, x)))),
           h(
             'tbody',
             {},
@@ -249,9 +255,85 @@ export function creerSectionAnalyses(impN: ImportEnregistre, impN1: ImportEnregi
                 h(l.nature === 'solde' ? 'th' : 'td', l.nature === 'solde' ? { scope: 'row' } : {}, l.nature === 'produit' ? `+ ${l.libelle}` : l.nature === 'charge' ? `− ${l.libelle}` : `= ${l.libelle}`),
                 h('td', { class: 'mono note' }, l.comptes),
                 h('td', { class: 'nombre montant' }, signe(l.montant)),
-                ...(n1 ? [h('td', { class: 'nombre montant' }, avant === undefined ? '—' : signe(avant)), h('td', { class: 'nombre montant' }, avant === undefined ? '' : signe(l.montant - avant))] : []),
+                ...(n1 ? [h('td', { class: 'nombre montant' }, avant === undefined ? '—' : signe(avant)), h('td', { class: 'nombre montant' }, avant === undefined ? '' : signe(l.montant - avant)), h('td', { class: 'nombre' }, avant === undefined ? '' : variationPct(l.montant, avant))] : []),
               );
             }),
+          ),
+        ),
+      ),
+    );
+  }
+
+  function vueTft(): HTMLElement {
+    const b = (cache.balance ??= calculerBalance(ctx));
+    if (cache.balanceN1 === undefined) cache.balanceN1 = ctxN1 ? calculerBalance(ctxN1) : null;
+    const t = (cache.tft ??= calculerTft(b));
+    if (cache.tftN1 === undefined) cache.tftN1 = cache.balanceN1 ? calculerTft(cache.balanceN1) : null;
+    const n1 = cache.tftN1;
+    const tuile = (valeur: number, libelle: string, avant: number | undefined) =>
+      h(
+        'div',
+        { class: 'tuile' },
+        h('span', { class: `tuile-valeur${valeur < 0 ? ' valeur-negative' : ''}` }, `${signe(valeur)} €`),
+        h('span', { class: 'tuile-libelle' }, libelle),
+        avant === undefined ? null : h('span', { class: 'tuile-libelle' }, `N-1 : ${signe(avant)} €`),
+      );
+    const controles: HTMLElement[] = [
+      t.ecart === 0
+        ? h('p', { class: 'bandeau bandeau-succes', role: 'status' }, `Contrôle : la somme des flux (${signe(t.variationTresorerie)} €) est égale à la variation de la trésorerie entre l’ouverture (${signe(t.tresorerieOuverture)} €) et la clôture (${signe(t.tresorerieCloture)} €).`)
+        : h('p', { class: 'bandeau bandeau-alerte', role: 'status' }, `Écart de ${signe(t.ecart)} € entre la somme des flux et la variation de trésorerie : la balance du FEC n’est pas équilibrée (voir la balance générale).`),
+    ];
+    if (t.gestionSoldee) controles.push(h('p', { class: 'note texte-secondaire' }, 'Comptes de gestion soldés dans le FEC : le résultat net est repris du compte 12.'));
+    if (n1 && n1.tresorerieCloture !== t.tresorerieOuverture) {
+      controles.push(h('p', { class: 'bandeau bandeau-alerte' }, `La trésorerie de clôture du FEC N-1 (${signe(n1.tresorerieCloture)} €) diffère de la trésorerie d’ouverture de l’exercice (${signe(t.tresorerieOuverture)} €) : vérifiez les à-nouveaux.`));
+    }
+    if (!r.journalANConfirme) controles.push(h('p', { class: 'note texte-secondaire' }, 'La trésorerie d’ouverture repose sur le journal d’à-nouveaux, à confirmer dans le résumé du FEC.'));
+    return h(
+      'div',
+      {},
+      h(
+        'div',
+        { class: 'tuiles tuiles-montants', role: 'group', 'aria-label': 'Flux de trésorerie' },
+        tuile(t.flux.operationnel, 'Flux opérationnels', n1?.flux.operationnel),
+        tuile(t.flux.investissement, 'Flux d’investissement', n1?.flux.investissement),
+        tuile(t.flux.financement, 'Flux de financement', n1?.flux.financement),
+        tuile(t.variationTresorerie, 'Variation de trésorerie', n1?.variationTresorerie),
+        tuile(t.tresorerieCloture, 'Trésorerie à la clôture', n1?.tresorerieCloture),
+      ),
+      ...controles,
+      h(
+        'div',
+        { class: 'actions' },
+        bouton('Exporter (.xlsx)', () => void exporter('Flux_de_tresorerie', (X) => classeurTft(X, t, n1, parametres()))),
+        h('span', { class: 'texte-secondaire note' }, n1 ? `Comparaison avec ${impN1!.meta.nomFichier}` : 'Chargez le FEC N-1 pour la comparaison.'),
+      ),
+      h('h3', {}, 'Tableau des flux de trésorerie (méthode indirecte, IAS 7)'),
+      h(
+        'div',
+        { class: 'tableau-defilant', tabindex: '0', role: 'region', 'aria-label': 'Tableau des flux de trésorerie' },
+        h(
+          'table',
+          { class: 'tableau tableau-sig' },
+          h('thead', {}, h('tr', {}, ...['Rubrique', 'Comptes', 'Exercice N', ...(n1 ? ['Exercice N-1', 'Variation'] : [])].map((x, k) => h('th', { scope: 'col', class: k >= 2 ? 'nombre' : undefined }, x)))),
+          h(
+            'tbody',
+            {},
+            ...presentationTft()
+              .filter((l) => l.nature !== 'ecart' || t.ecart !== 0 || (n1?.ecart ?? 0) !== 0)
+              .map((l) => {
+                const v = l.montant(t);
+                const avant = n1 ? l.montant(n1) : null;
+                if (l.nature === 'section') return h('tr', { class: 'ligne-section' }, h('th', { scope: 'rowgroup', colspan: String(n1 ? 5 : 3) }, l.libelle));
+                const fort = l.nature !== 'detail';
+                return h(
+                  'tr',
+                  { class: fort ? 'ligne-solde' : undefined },
+                  h(fort ? 'th' : 'td', fort ? { scope: 'row' } : {}, l.libelle),
+                  h('td', { class: 'mono note' }, l.comptes),
+                  h('td', { class: 'nombre montant' }, signe(v ?? 0)),
+                  ...(n1 ? [h('td', { class: 'nombre montant' }, signe(avant ?? 0)), h('td', { class: 'nombre montant' }, signe((v ?? 0) - (avant ?? 0)))] : []),
+                );
+              }),
           ),
         ),
       ),
@@ -741,7 +823,7 @@ export function creerSectionAnalyses(impN: ImportEnregistre, impN1: ImportEnregi
     // Laisse le navigateur afficher « Calcul en cours… » avant un calcul éventuellement long.
     setTimeout(() => {
       if (detruit) return;
-      const vue = { chiffres: vueChiffres, balance: vueBalance, auxiliaire: vueAuxiliaire, 'grand-livre': vueGrandLivre, statistiques: vueStatistiques }[o];
+      const vue = { chiffres: vueChiffres, tft: vueTft, balance: vueBalance, auxiliaire: vueAuxiliaire, 'grand-livre': vueGrandLivre, statistiques: vueStatistiques }[o];
       panneau.replaceChildren(vue());
     }, 20);
   }
