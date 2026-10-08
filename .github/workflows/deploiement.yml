@@ -1,0 +1,118 @@
+# Déploiement GitHub Pages
+#   main → https://pole-003.github.io/sandbox/
+#   beta → https://pole-003.github.io/sandbox/beta/
+#
+# GitHub Pages ne publie qu'un seul site par dépôt : chaque exécution reconstruit donc
+# les DEUX branches et les assemble en un seul artefact.
+#  - main doit toujours réussir (sinon rien n'est publié : la production n'est jamais effacée).
+#  - beta est facultative lors d'un push sur main : en cas d'échec, /beta est omis et un avertissement est affiché.
+#
+# Réglage requis une fois : Settings > Environments > github-pages > Deployment branches
+# doit autoriser « main » ET « beta ».
+
+name: Déploiement GitHub Pages
+
+on:
+  push:
+    branches: [main, beta]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  construire:
+    name: Tests, sécurité et build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Récupérer main
+        uses: actions/checkout@v7
+        with:
+          ref: main
+          path: main
+          persist-credentials: false
+
+      - name: Installer Node.js
+        uses: actions/setup-node@v7
+        with:
+          node-version-file: main/.nvmrc
+          cache: npm
+          cache-dependency-path: main/package-lock.json
+
+      - name: main · installation, tests, contrôle de sécurité, build
+        working-directory: main
+        run: |
+          npm ci
+          npm test
+          npm run check:securite
+          npm run build
+
+      - name: Rechercher la branche beta
+        id: beta
+        run: |
+          if git ls-remote --exit-code --heads "https://github.com/${GITHUB_REPOSITORY}.git" beta >/dev/null; then
+            echo "existe=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "existe=false" >> "$GITHUB_OUTPUT"
+            echo "::notice::Pas de branche beta : seul main est publié."
+          fi
+
+      - name: Récupérer beta
+        if: steps.beta.outputs.existe == 'true'
+        uses: actions/checkout@v7
+        with:
+          ref: beta
+          path: beta
+          persist-credentials: false
+
+      - name: beta · installation, tests, contrôle de sécurité, build
+        id: build_beta
+        if: steps.beta.outputs.existe == 'true'
+        # Bloquant si le push concerne beta ; facultatif si le push concerne main.
+        continue-on-error: ${{ github.ref_name != 'beta' }}
+        working-directory: beta
+        run: |
+          npm ci
+          npm test
+          npm run check:securite
+          npm run build:beta
+
+      - name: Assembler le site
+        env:
+          BETA_OK: ${{ steps.build_beta.outcome == 'success' }}
+          BETA_EXISTE: ${{ steps.beta.outputs.existe }}
+        run: |
+          mkdir site
+          cp -R main/dist/. site/
+          if [ "$BETA_OK" = "true" ]; then
+            mkdir site/beta
+            cp -R beta/dist/. site/beta/
+          elif [ "$BETA_EXISTE" = "true" ]; then
+            echo "::warning::Le build de beta a échoué : /beta n'est pas publié cette fois-ci."
+          fi
+          # Désactive le traitement Jekyll de GitHub Pages.
+          touch site/.nojekyll
+
+      - name: Téléverser l'artefact
+        uses: actions/upload-pages-artifact@v5
+        with:
+          path: site
+
+  deployer:
+    name: Publication
+    needs: construire
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deploiement.outputs.page_url }}
+    steps:
+      - name: Déployer sur GitHub Pages
+        id: deploiement
+        uses: actions/deploy-pages@v5

@@ -1,0 +1,47 @@
+# --- Dépendances et sorties de build ---
+node_modules/
+dist/
+coverage/
+*.tsbuildinfo
+.vite/
+
+# --- Secrets ---
+.env
+.env.*
+!.env.example
+
+# --- Protection des données clients (CLAUDE.md, règle n° 4) ---
+# Le dépôt est PUBLIC : aucun vrai FEC, stock ou déclaration ne doit y entrer.
+# Les seuls fichiers de données autorisés sont les FEC fictifs de tests/fixtures/.
+data-reelles/
+/*.txt
+/*.xml
+/*.csv
+/*.tsv
+/*.dat
+/*.xls
+/*.xlsx
+/*.xlsm
+/*.ods
+/*.zip
+/*.7z
+/*.pdf
+/*.docx
+# Tout fichier ressemblant à un FEC ({SIREN}FEC{AAAAMMJJ}), où qu'il soit…
+*FEC2[0-9][0-9][0-9]*
+*fec2[0-9][0-9][0-9]*
+# … sauf les FEC fictifs générés par scripts/generer-fec-fictifs.ts
+!tests/fixtures/**
+
+# --- Système et éditeurs ---
+.DS_Store
+Thumbs.db
+desktop.ini
+.idea/
+.vscode/*
+!.vscode/extensions.json
+*.swp
+*.log
+
+# --- Configuration locale Claude Code (chemins propres au poste) ---
+.claude/launch.json
