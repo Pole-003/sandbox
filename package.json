@@ -15,9 +15,12 @@
     "test": "vitest run",
     "test:watch": "vitest",
     "check:securite": "node scripts/check-securite.ts",
-    "veille:test": "node scripts/veille/diagnostic.ts"
+    "veille:test": "node scripts/veille/diagnostic.ts",
+    "veille:collecte": "node scripts/veille/collecte.ts",
+    "veille:essai": "node scripts/veille/essai.ts"
   },
   "devDependencies": {
+    "@anthropic-ai/sdk": "^0.132.1",
     "@types/node": "^26.6.4",
     "happy-dom": "^20.14.5",
     "typescript": "^7.0.2",

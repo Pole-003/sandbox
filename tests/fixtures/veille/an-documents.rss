@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>Assemblée nationale — Publications parlementaires (exemple fictif)</title>
+    <link>http://www2.assemblee-nationale.fr/</link>
+    <item>
+      <title>Projet de loi de finances pour 2027 &#8211; rapport g&eacute;n&eacute;ral (fictif)</title>
+      <link>http://www.assemblee-nationale.fr/exemple/rapport-plf.html</link>
+      <pubDate>Wed, 07 Oct 2026 17:00:00 +0200</pubDate>
+      <description>Rapport fictif sur les recettes et la fiscalit&#233; des entreprises.</description>
+    </item>
+    <item>
+      <title>Proposition de r&eacute;solution sur la p&ecirc;che (fictive)</title>
+      <link>http://www.assemblee-nationale.fr/exemple/peche.html</link>
+      <pubDate>Wed, 07 Oct 2026 16:00:00 +0200</pubDate>
+      <description>Sans rapport avec nos dossiers.</description>
+    </item>
+    <item>
+      <title>Taux de TVA applicable aux travaux (fictif)</title>
+      <link>http://www.assemblee-nationale.fr/exemple/tva.html?utm_source=rss&amp;id=3</link>
+      <pubDate>Tue, 06 Oct 2026 10:00:00 +0200</pubDate>
+      <description>Question écrite fictive.</description>
+    </item>
+    <item>
+      <title>Ancien rapport fiscal hors fenêtre (fictif)</title>
+      <link>http://www.assemblee-nationale.fr/exemple/ancien.html</link>
+      <pubDate>Mon, 03 Aug 2026 10:00:00 +0200</pubDate>
+      <description>Fiscalité, mais trop ancien.</description>
+    </item>
+  </channel>
+</rss>

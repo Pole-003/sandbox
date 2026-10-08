@@ -1,0 +1,29 @@
+{
+  "_commentaire": "Consignes de la couche C (recherche IA), une requête par thème. Modifiables librement ; le schéma JSON de réponse et la fenêtre de dates sont ajoutés automatiquement par le script. Les noms de thème doivent rester ceux de la liste officielle.",
+  "themes": [
+    {
+      "theme": "Loi de finances",
+      "consigne": "Où en est le projet de loi de finances pour l'année prochaine ? Étape parlementaire actuelle, prochaines échéances, mesures fiscales votées, adoptées ou supprimées cette semaine qui concernent les entreprises, les dirigeants et les particuliers (IS, TVA, CVAE, IR, plus-values, transmission, crédits d'impôt). Inclure les éventuelles lois de finances rectificatives et la saisine du Conseil constitutionnel. Renseigne aussi le champ `suivi_texte`."
+    },
+    {
+      "theme": "Sécurité sociale",
+      "consigne": "Même consigne pour le projet de loi de financement de la sécurité sociale : cotisations, exonérations, allègements généraux, indépendants, épargne salariale, avantages en nature. Ajoute les actualités du BOSS et de l'URSSAF. Renseigne `suivi_texte`."
+    },
+    {
+      "theme": "Fiscal et comptable",
+      "consigne": "Nouveautés de doctrine (BOFiP, rescrits), décrets et arrêtés au Journal officiel, règlements et avis de l'ANC, facturation électronique et e-reporting (calendrier, plateformes agréées), obligations déclaratives et échéances à venir."
+    },
+    {
+      "theme": "Audit et profession",
+      "consigne": "Actualité des commissaires aux comptes et des experts-comptables : CNCC, Haute autorité de l'audit (H2A, ex-H3C), Ordre des experts-comptables, normes d'exercice professionnel, rapport de durabilité (CSRD et ses reports), contrôles qualité, décisions et sanctions publiées."
+    },
+    {
+      "theme": "Économie et statistiques",
+      "consigne": "Derniers chiffres publiés en France : inflation, PIB et prévisions, chômage, climat des affaires, défaillances et créations d'entreprises, taux directeurs de la BCE, taux d'emprunt des entreprises, taux de l'intérêt légal et taux d'usure s'ils ont changé. Pour chaque chiffre : valeur, période, émetteur, date de publication. Remplis le tableau `indicateurs`."
+    },
+    {
+      "theme": "Rennes et Bretagne",
+      "consigne": "Vie économique de Rennes, de la métropole et de l'Ille-et-Vilaine : implantations et extensions d'entreprises, levées de fonds, reprises et cessions, plans sociaux et procédures collectives notables, grands projets d'aménagement, aides régionales et appels à projets, événements pour les dirigeants (CCI, French Tech Rennes, réseaux d'entreprises), chiffres de conjoncture régionaux (INSEE Bretagne, Banque de France)."
+    }
+  ]
+}
