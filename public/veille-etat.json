@@ -1,6 +1,6 @@
 {
-  "version": 1,
-  "genere_le": "2026-10-08T12:19:50.880Z",
+  "version": 2,
+  "genere_le": "2026-10-08T12:34:19.058Z",
   "sources": [
     {
       "id": "bofip-actualites",
@@ -9,12 +9,12 @@
       "theme": "Fiscal et comptable",
       "statut_catalogue": "verifie",
       "etat": "ok",
-      "derniere_tentative": "2026-10-08T12:19:50.880Z",
-      "derniere_reussite": "2026-10-08T12:19:50.880Z",
+      "derniere_tentative": "2026-10-08T12:34:19.058Z",
+      "derniere_reussite": "2026-10-08T12:34:19.058Z",
       "erreur": null,
       "nb_articles": 1,
       "nb_elements": 3,
-      "duree_ms": 420
+      "duree_ms": 414
     },
     {
       "id": "senat-textes",
@@ -23,12 +23,12 @@
       "theme": "Loi de finances",
       "statut_catalogue": "verifie",
       "etat": "ok",
-      "derniere_tentative": "2026-10-08T12:19:50.880Z",
-      "derniere_reussite": "2026-10-08T12:19:50.880Z",
+      "derniere_tentative": "2026-10-08T12:34:19.058Z",
+      "derniere_reussite": "2026-10-08T12:34:19.058Z",
       "erreur": null,
       "nb_articles": 16,
       "nb_elements": 27,
-      "duree_ms": 138
+      "duree_ms": 132
     },
     {
       "id": "senat-rapports",
@@ -37,12 +37,12 @@
       "theme": "Loi de finances",
       "statut_catalogue": "verifie",
       "etat": "ok",
-      "derniere_tentative": "2026-10-08T12:19:50.880Z",
-      "derniere_reussite": "2026-10-08T12:19:50.880Z",
+      "derniere_tentative": "2026-10-08T12:34:19.058Z",
+      "derniere_reussite": "2026-10-08T12:34:19.058Z",
       "erreur": null,
       "nb_articles": 10,
       "nb_elements": 18,
-      "duree_ms": 157
+      "duree_ms": 131
     },
     {
       "id": "senat-budget",
@@ -51,12 +51,12 @@
       "theme": "Loi de finances",
       "statut_catalogue": "verifie",
       "etat": "ok",
-      "derniere_tentative": "2026-10-08T12:19:50.880Z",
-      "derniere_reussite": "2026-10-08T12:19:50.880Z",
+      "derniere_tentative": "2026-10-08T12:34:19.058Z",
+      "derniere_reussite": "2026-10-08T12:34:19.058Z",
       "erreur": null,
       "nb_articles": 0,
       "nb_elements": 173,
-      "duree_ms": 269
+      "duree_ms": 258
     },
     {
       "id": "senat-fiscalite",
@@ -65,12 +65,12 @@
       "theme": "Fiscal et comptable",
       "statut_catalogue": "verifie",
       "etat": "ok",
-      "derniere_tentative": "2026-10-08T12:19:50.880Z",
-      "derniere_reussite": "2026-10-08T12:19:50.880Z",
+      "derniere_tentative": "2026-10-08T12:34:19.058Z",
+      "derniere_reussite": "2026-10-08T12:34:19.058Z",
       "erreur": null,
       "nb_articles": 1,
       "nb_elements": 322,
-      "duree_ms": 400
+      "duree_ms": 382
     },
     {
       "id": "senat-entreprises",
@@ -79,12 +79,12 @@
       "theme": "Économie et statistiques",
       "statut_catalogue": "verifie",
       "etat": "ok",
-      "derniere_tentative": "2026-10-08T12:19:50.880Z",
-      "derniere_reussite": "2026-10-08T12:19:50.880Z",
+      "derniere_tentative": "2026-10-08T12:34:19.058Z",
+      "derniere_reussite": "2026-10-08T12:34:19.058Z",
       "erreur": null,
       "nb_articles": 0,
       "nb_elements": 42,
-      "duree_ms": 138
+      "duree_ms": 131
     },
     {
       "id": "senat-pme",
@@ -93,12 +93,12 @@
       "theme": "Économie et statistiques",
       "statut_catalogue": "verifie",
       "etat": "ok",
-      "derniere_tentative": "2026-10-08T12:19:50.880Z",
-      "derniere_reussite": "2026-10-08T12:19:50.880Z",
+      "derniere_tentative": "2026-10-08T12:34:19.058Z",
+      "derniere_reussite": "2026-10-08T12:34:19.058Z",
       "erreur": null,
       "nb_articles": 0,
       "nb_elements": 25,
-      "duree_ms": 137
+      "duree_ms": 132
     },
     {
       "id": "senat-secu",
@@ -107,12 +107,12 @@
       "theme": "Sécurité sociale",
       "statut_catalogue": "verifie",
       "etat": "ok",
-      "derniere_tentative": "2026-10-08T12:19:50.880Z",
-      "derniere_reussite": "2026-10-08T12:19:50.880Z",
+      "derniere_tentative": "2026-10-08T12:34:19.058Z",
+      "derniere_reussite": "2026-10-08T12:34:19.058Z",
       "erreur": null,
       "nb_articles": 1,
       "nb_elements": 25,
-      "duree_ms": 137
+      "duree_ms": 131
     },
     {
       "id": "an-documents",
@@ -121,12 +121,12 @@
       "theme": "Loi de finances",
       "statut_catalogue": "verifie",
       "etat": "ok",
-      "derniere_tentative": "2026-10-08T12:19:50.880Z",
-      "derniere_reussite": "2026-10-08T12:19:50.880Z",
+      "derniere_tentative": "2026-10-08T12:34:19.058Z",
+      "derniere_reussite": "2026-10-08T12:34:19.058Z",
       "erreur": null,
       "nb_articles": 0,
       "nb_elements": 10,
-      "duree_ms": 525
+      "duree_ms": 304
     },
     {
       "id": "an-commission-finances",
@@ -135,12 +135,12 @@
       "theme": "Loi de finances",
       "statut_catalogue": "verifie",
       "etat": "ok",
-      "derniere_tentative": "2026-10-08T12:19:50.880Z",
-      "derniere_reussite": "2026-10-08T12:19:50.880Z",
+      "derniere_tentative": "2026-10-08T12:34:19.058Z",
+      "derniere_reussite": "2026-10-08T12:34:19.058Z",
       "erreur": null,
       "nb_articles": 10,
       "nb_elements": 10,
-      "duree_ms": 726
+      "duree_ms": 478
     },
     {
       "id": "an-commission-affaires-sociales",
@@ -149,12 +149,12 @@
       "theme": "Sécurité sociale",
       "statut_catalogue": "verifie",
       "etat": "ok",
-      "derniere_tentative": "2026-10-08T12:19:50.880Z",
-      "derniere_reussite": "2026-10-08T12:19:50.880Z",
+      "derniere_tentative": "2026-10-08T12:34:19.058Z",
+      "derniere_reussite": "2026-10-08T12:34:19.058Z",
       "erreur": null,
       "nb_articles": 10,
       "nb_elements": 10,
-      "duree_ms": 647
+      "duree_ms": 176
     },
     {
       "id": "an-commission-affaires-economiques",
@@ -163,12 +163,12 @@
       "theme": "Économie et statistiques",
       "statut_catalogue": "verifie",
       "etat": "ok",
-      "derniere_tentative": "2026-10-08T12:19:50.880Z",
-      "derniere_reussite": "2026-10-08T12:19:50.880Z",
+      "derniere_tentative": "2026-10-08T12:34:19.058Z",
+      "derniere_reussite": "2026-10-08T12:34:19.058Z",
       "erreur": null,
       "nb_articles": 10,
       "nb_elements": 10,
-      "duree_ms": 1254
+      "duree_ms": 221
     },
     {
       "id": "an-presse",
@@ -191,12 +191,12 @@
       "theme": "Fiscal et comptable",
       "statut_catalogue": "verifie",
       "etat": "ok",
-      "derniere_tentative": "2026-10-08T12:19:50.880Z",
-      "derniere_reussite": "2026-10-08T12:19:50.880Z",
+      "derniere_tentative": "2026-10-08T12:34:19.058Z",
+      "derniere_reussite": "2026-10-08T12:34:19.058Z",
       "erreur": null,
       "nb_articles": 0,
       "nb_elements": 20,
-      "duree_ms": 166
+      "duree_ms": 149
     },
     {
       "id": "ce-actualites",
@@ -205,12 +205,12 @@
       "theme": "Fiscal et comptable",
       "statut_catalogue": "verifie",
       "etat": "ok",
-      "derniere_tentative": "2026-10-08T12:19:50.880Z",
-      "derniere_reussite": "2026-10-08T12:19:50.880Z",
+      "derniere_tentative": "2026-10-08T12:34:19.058Z",
+      "derniere_reussite": "2026-10-08T12:34:19.058Z",
       "erreur": null,
       "nb_articles": 1,
       "nb_elements": 20,
-      "duree_ms": 167
+      "duree_ms": 145
     },
     {
       "id": "ce-avis",
@@ -219,12 +219,12 @@
       "theme": "Loi de finances",
       "statut_catalogue": "verifie",
       "etat": "ok",
-      "derniere_tentative": "2026-10-08T12:19:50.880Z",
-      "derniere_reussite": "2026-10-08T12:19:50.880Z",
+      "derniere_tentative": "2026-10-08T12:34:19.058Z",
+      "derniere_reussite": "2026-10-08T12:34:19.058Z",
       "erreur": null,
       "nb_articles": 0,
       "nb_elements": 20,
-      "duree_ms": 166
+      "duree_ms": 145
     },
     {
       "id": "an-dossier-plf",
@@ -233,12 +233,12 @@
       "theme": "Loi de finances",
       "statut_catalogue": "verifie",
       "etat": "ok",
-      "derniere_tentative": "2026-10-08T12:19:50.880Z",
-      "derniere_reussite": "2026-10-08T12:19:50.880Z",
+      "derniere_tentative": "2026-10-08T12:34:19.058Z",
+      "derniere_reussite": "2026-10-08T12:34:19.058Z",
       "erreur": null,
       "nb_articles": 0,
       "nb_elements": null,
-      "duree_ms": 826,
+      "duree_ms": 1046,
       "empreinte": "8025ca3b9345fc04"
     },
     {
@@ -250,7 +250,7 @@
       "etat": "non_configuree",
       "derniere_tentative": null,
       "derniere_reussite": null,
-      "erreur": "couche B à venir (secret PISTE_CLIENT_ID / PISTE_CLIENT_SECRET)",
+      "erreur": "non configurée : identifiants absents (PISTE_CLIENT_ID, PISTE_CLIENT_SECRET)",
       "nb_articles": 0,
       "nb_elements": null,
       "duree_ms": null
@@ -264,7 +264,7 @@
       "etat": "non_configuree",
       "derniere_tentative": null,
       "derniere_reussite": null,
-      "erreur": "couche B à venir (secret PISTE_CLIENT_ID / PISTE_CLIENT_SECRET)",
+      "erreur": "non configurée : identifiants absents (PISTE_CLIENT_ID, PISTE_CLIENT_SECRET)",
       "nb_articles": 0,
       "nb_elements": null,
       "duree_ms": null
@@ -278,7 +278,7 @@
       "etat": "non_configuree",
       "derniere_tentative": null,
       "derniere_reussite": null,
-      "erreur": "couche B à venir (secret INSEE_API_KEY)",
+      "erreur": "non configurée : identifiants absents (INSEE_API_KEY)",
       "nb_articles": 0,
       "nb_elements": null,
       "duree_ms": null
@@ -292,7 +292,7 @@
       "etat": "non_configuree",
       "derniere_tentative": null,
       "derniere_reussite": null,
-      "erreur": "couche B à venir (secret BDF_API_KEY)",
+      "erreur": "non configurée : identifiants absents (BDF_API_KEY)",
       "nb_articles": 0,
       "nb_elements": null,
       "duree_ms": null
@@ -306,29 +306,19 @@
       "etat": "non_configuree",
       "derniere_tentative": null,
       "derniere_reussite": null,
-      "erreur": "couche B à venir",
+      "erreur": "non configurée : connecteur à développer",
       "nb_articles": 0,
       "nb_elements": null,
       "duree_ms": null
     }
   ],
-  "couche_c": {
-    "statut": "sautee",
-    "raison": "clé ANTHROPIC_API_KEY absente : recherche IA non exécutée",
-    "modele": "claude-sonnet-5-5",
-    "outil": null,
-    "themes": []
+  "recherche_ia": {
+    "active": false,
+    "raison": "désactivée : la veille fonctionne à 0 €, sans appel à un service d’IA"
   },
-  "notation": {
-    "statut": "sautee",
-    "raison": "clé ANTHROPIC_API_KEY absente : articles publiés sans note ni résumé",
-    "notes": 0,
-    "cout_usd": 0
-  },
-  "couts": {
-    "mois": "2026-10",
-    "jour_usd": 0,
-    "mois_usd": 0,
-    "budget_mensuel_usd": 20
+  "classement": {
+    "articles": 54,
+    "exclus": 3,
+    "marginaux": 45
   }
 }

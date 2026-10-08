@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "genere_le": "2026-10-08T12:19:50.880Z",
+  "genere_le": "2026-10-08T12:34:19.058Z",
   "articles": [
     {
       "id": "b069aa48d1f16264",
@@ -10,10 +10,13 @@
       "url": "https://www.senat.fr/leg/ppl26-017.html",
       "date": "2026-10-08",
       "theme": "Loi de finances",
-      "resume": null,
-      "importance": null,
-      "public": [],
-      "type": null,
+      "resume": "Proposition de loi visant à accélérer le développement de la médecine nucléaire thérapeutique en oncologie : texte de la commission N° 17 déposé le 7 octobre 2026",
+      "importance": 1,
+      "public": [
+        "Expertise comptable",
+        "Conseil aux dirigeants"
+      ],
+      "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-08"
     },
@@ -25,10 +28,13 @@
       "url": "https://www.senat.fr/leg/ppl26-014.html",
       "date": "2026-10-08",
       "theme": "Loi de finances",
-      "resume": null,
-      "importance": null,
-      "public": [],
-      "type": null,
+      "resume": "Proposition de loi révisant le dispositif des stocks de sécurité des médicaments : texte de la commission N° 14 déposé le 7 octobre 2026",
+      "importance": 1,
+      "public": [
+        "Expertise comptable",
+        "Conseil aux dirigeants"
+      ],
+      "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-08"
     },
@@ -40,10 +46,30 @@
       "url": "https://www.senat.fr/leg/ppl26-019.html",
       "date": "2026-10-08",
       "theme": "Loi de finances",
-      "resume": null,
-      "importance": null,
-      "public": [],
-      "type": null,
+      "resume": "Proposition de loi relative à la modernisation de la radio : texte de la commission N° 19 déposé le 7 octobre 2026",
+      "importance": 1,
+      "public": [
+        "Expertise comptable",
+        "Conseil aux dirigeants"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-10-08"
+    },
+    {
+      "id": "9ccc3b875c14899a",
+      "titre": "TVA - Évolutions liées à l’entrée en vigueur de l’ordonnance n° 2026-671 du 27 juillet 2026 portant divers ajustements du code des impositions sur les biens et services - Mise à jour suite à consultation publique - Rescrit",
+      "source": "BOFiP-Impôts — Actualités",
+      "source_id": "bofip-actualites",
+      "url": "https://bofip.impots.gouv.fr/bofip/15140-PGP.html/ACTU-2026-00126",
+      "date": "2026-10-07",
+      "theme": "Fiscal et comptable",
+      "resume": "TVA - Évolutions liées à l’entrée en vigueur de l’ordonnance n° 2026-671 du 27 juillet 2026 portant divers ajustements du code des impositions sur les biens et services - Mise à jour suite à consultation publique - Rescrit (identifiant juridique ACTU-2026-00126; publié le 07/10/2026)",
+      "importance": 4,
+      "public": [
+        "Expertise comptable"
+      ],
+      "type": "doctrine",
       "origine": "flux",
       "collecte_le": "2026-10-08"
     },
@@ -55,25 +81,13 @@
       "url": "https://www.senat.fr/notice-rapport/2025/r25-845-notice.html",
       "date": "2026-10-07",
       "theme": "Loi de finances",
-      "resume": null,
-      "importance": null,
-      "public": [],
-      "type": null,
-      "origine": "flux",
-      "collecte_le": "2026-10-08"
-    },
-    {
-      "id": "ba4df372c8491662",
-      "titre": "Compte rendu de réunion n° 5 - Commission des affaires économiques",
-      "source": "Assemblée nationale — Commission des affaires économiques",
-      "source_id": "an-commission-affaires-economiques",
-      "url": "https://www.assemblee-nationale.fr/17/cr-eco/26-27/c2627005.asp",
-      "date": "2026-10-07",
-      "theme": "Économie et statistiques",
-      "resume": null,
-      "importance": null,
-      "public": [],
-      "type": null,
+      "resume": "Rapport d'information n° 845 de M. Jean-François RAPIN, Mme Marta de CIDRAC, M. Louis-Jean de NICOLAY, Mme Amel GACQUERRE, MM. Didier MARIE et Michaël WEBER, fait au nom de la commission des affaires européennes : Albanie et Monténégro : un état des lieux des négociations d'adhésion à l'Union…",
+      "importance": 1,
+      "public": [
+        "Expertise comptable",
+        "Conseil aux dirigeants"
+      ],
+      "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-08"
     },
@@ -85,10 +99,13 @@
       "url": "https://www.senat.fr/leg/ppl26-010.html",
       "date": "2026-10-07",
       "theme": "Loi de finances",
-      "resume": null,
-      "importance": null,
-      "public": [],
-      "type": null,
+      "resume": "Proposition de loi visant à dématérialiser l'état civil des bénéficiaires de la protection internationale : texte de la commission N° 10 déposé le 7 octobre 2026",
+      "importance": 1,
+      "public": [
+        "Expertise comptable",
+        "Conseil aux dirigeants"
+      ],
+      "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-08"
     },
@@ -100,10 +117,13 @@
       "url": "https://www.senat.fr/notice-rapport/2025/r25-349-notice.html",
       "date": "2026-10-07",
       "theme": "Loi de finances",
-      "resume": null,
-      "importance": null,
-      "public": [],
-      "type": null,
+      "resume": "Rapport d'information n° 349 de M. Emmanuel CAPUS et Mme Ghislaine SENÉE, fait au nom de la commission des finances : La politique de l'emploi et les territoires : des spécificités à mieux appréhender (4 février 2026)",
+      "importance": 1,
+      "public": [
+        "Expertise comptable",
+        "Conseil aux dirigeants"
+      ],
+      "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-08"
     },
@@ -115,10 +135,13 @@
       "url": "https://www.senat.fr/leg/ppl26-008.html",
       "date": "2026-10-07",
       "theme": "Loi de finances",
-      "resume": null,
-      "importance": null,
-      "public": [],
-      "type": null,
+      "resume": "Proposition de loi créant une dérogation à la participation minimale pour la maîtrise d'ouvrage pour les communes rurales : texte de la commission N° 8 déposé le 7 octobre 2026",
+      "importance": 1,
+      "public": [
+        "Expertise comptable",
+        "Conseil aux dirigeants"
+      ],
+      "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-08"
     },
@@ -131,9 +154,11 @@
       "date": "2026-10-07",
       "theme": "Sécurité sociale",
       "resume": null,
-      "importance": null,
-      "public": [],
-      "type": null,
+      "importance": 1,
+      "public": [
+        "Social / paie"
+      ],
+      "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-08"
     },
@@ -146,9 +171,11 @@
       "date": "2026-10-07",
       "theme": "Sécurité sociale",
       "resume": null,
-      "importance": null,
-      "public": [],
-      "type": null,
+      "importance": 1,
+      "public": [
+        "Social / paie"
+      ],
+      "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-08"
     },
@@ -161,9 +188,11 @@
       "date": "2026-10-07",
       "theme": "Économie et statistiques",
       "resume": null,
-      "importance": null,
-      "public": [],
-      "type": null,
+      "importance": 1,
+      "public": [
+        "Conseil aux dirigeants"
+      ],
+      "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-08"
     },
@@ -176,8 +205,10 @@
       "date": "2026-10-07",
       "theme": "Fiscal et comptable",
       "resume": null,
-      "importance": null,
-      "public": [],
+      "importance": 1,
+      "public": [
+        "Expertise comptable"
+      ],
       "type": null,
       "origine": "flux",
       "collecte_le": "2026-10-08"
@@ -190,25 +221,30 @@
       "url": "https://www.senat.fr/leg/ppl26-012.html",
       "date": "2026-10-07",
       "theme": "Loi de finances",
-      "resume": null,
-      "importance": null,
-      "public": [],
-      "type": null,
+      "resume": "Proposition de loi réformant la prescription de l'action publique en matière criminelle et actualisant la notion d'obstacle insurmontable : texte de la commission N° 12 déposé le 7 octobre 2026",
+      "importance": 1,
+      "public": [
+        "Expertise comptable",
+        "Conseil aux dirigeants"
+      ],
+      "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-08"
     },
     {
-      "id": "9ccc3b875c14899a",
-      "titre": "TVA - Évolutions liées à l’entrée en vigueur de l’ordonnance n° 2026-671 du 27 juillet 2026 portant divers ajustements du code des impositions sur les biens et services - Mise à jour suite à consultation publique - Rescrit",
-      "source": "BOFiP-Impôts — Actualités",
-      "source_id": "bofip-actualites",
-      "url": "https://bofip.impots.gouv.fr/bofip/15140-PGP.html/ACTU-2026-00126",
-      "date": "2026-10-07",
+      "id": "aebd3f9a77b9c576",
+      "titre": "N° 3271 - Proposition de loi de M. Gérard Leseul visant à instaurer un barème progressif de l'impôt sur les sociétés",
+      "source": "Assemblée nationale — Commission des finances",
+      "source_id": "an-commission-finances",
+      "url": "https://www.assemblee-nationale.fr/17/propositions/pion3271.asp",
+      "date": "2026-10-06",
       "theme": "Fiscal et comptable",
       "resume": null,
-      "importance": null,
-      "public": [],
-      "type": null,
+      "importance": 4,
+      "public": [
+        "Expertise comptable"
+      ],
+      "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-08"
     },
@@ -220,55 +256,12 @@
       "url": "https://www.senat.fr/leg/pjl26-005.html",
       "date": "2026-10-06",
       "theme": "Sécurité sociale",
-      "resume": null,
-      "importance": null,
-      "public": [],
-      "type": null,
-      "origine": "flux",
-      "collecte_le": "2026-10-08"
-    },
-    {
-      "id": "571b03de2c9e2deb",
-      "titre": "Compte rendu de réunion n° 2 - Commission des affaires sociales",
-      "source": "Assemblée nationale — Commission des affaires sociales",
-      "source_id": "an-commission-affaires-sociales",
-      "url": "https://www.assemblee-nationale.fr/17/cr-soc/26-27/c2627002.asp",
-      "date": "2026-10-06",
-      "theme": "Sécurité sociale",
-      "resume": null,
-      "importance": null,
-      "public": [],
-      "type": null,
-      "origine": "flux",
-      "collecte_le": "2026-10-08"
-    },
-    {
-      "id": "203306c654a76ba7",
-      "titre": "Contre la fraude en ligne - texte N° 965",
-      "source": "Sénat — Derniers textes",
-      "source_id": "senat-textes",
-      "url": "https://www.senat.fr/leg/ppl25-965.html",
-      "date": "2026-10-06",
-      "theme": "Loi de finances",
-      "resume": null,
-      "importance": null,
-      "public": [],
-      "type": null,
-      "origine": "flux",
-      "collecte_le": "2026-10-08"
-    },
-    {
-      "id": "e978b499b1324148",
-      "titre": "N° 3197 rapport - Rapport de M. Lionel Tivoli sur la proposition de loi de M. Lionel Tivoli et plusieurs de ses collègues renforçant la responsabilité des locataires et des bailleurs dans le logement social (3109).",
-      "source": "Assemblée nationale — Commission des affaires économiques",
-      "source_id": "an-commission-affaires-economiques",
-      "url": "https://www.assemblee-nationale.fr/17/rapports/r3197.asp",
-      "date": "2026-10-06",
-      "theme": "Économie et statistiques",
-      "resume": null,
-      "importance": null,
-      "public": [],
-      "type": null,
+      "resume": "Texte",
+      "importance": 2,
+      "public": [
+        "Social / paie"
+      ],
+      "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-08"
     },
@@ -279,11 +272,13 @@
       "source_id": "an-commission-finances",
       "url": "https://www.assemblee-nationale.fr/17/propositions/pion3224.asp",
       "date": "2026-10-06",
-      "theme": "Loi de finances",
+      "theme": "Fiscal et comptable",
       "resume": null,
-      "importance": null,
-      "public": [],
-      "type": null,
+      "importance": 2,
+      "public": [
+        "Expertise comptable"
+      ],
+      "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-08"
     },
@@ -294,146 +289,14 @@
       "source_id": "an-commission-finances",
       "url": "https://www.assemblee-nationale.fr/17/propositions/pion3225.asp",
       "date": "2026-10-06",
-      "theme": "Loi de finances",
+      "theme": "Fiscal et comptable",
       "resume": null,
-      "importance": null,
-      "public": [],
-      "type": null,
-      "origine": "flux",
-      "collecte_le": "2026-10-08"
-    },
-    {
-      "id": "100d093cbf5f5e5f",
-      "titre": "N° 3226 - Proposition de loi de Mme Pascale Got portant création d'un fonds national d'adaptation des territoires littoraux au recul du trait de côte",
-      "source": "Assemblée nationale — Commission des finances",
-      "source_id": "an-commission-finances",
-      "url": "https://www.assemblee-nationale.fr/17/propositions/pion3226.asp",
-      "date": "2026-10-06",
-      "theme": "Loi de finances",
-      "resume": null,
-      "importance": null,
-      "public": [],
-      "type": null,
-      "origine": "flux",
-      "collecte_le": "2026-10-08"
-    },
-    {
-      "id": "accfbb7b3960e06a",
-      "titre": "N° 3230 - Proposition de loi de M. Éric Pauget visant à réformer le droit des successions et des donations",
-      "source": "Assemblée nationale — Commission des finances",
-      "source_id": "an-commission-finances",
-      "url": "https://www.assemblee-nationale.fr/17/propositions/pion3230.asp",
-      "date": "2026-10-06",
-      "theme": "Loi de finances",
-      "resume": null,
-      "importance": null,
-      "public": [],
-      "type": null,
-      "origine": "flux",
-      "collecte_le": "2026-10-08"
-    },
-    {
-      "id": "e609f4a5598ab977",
-      "titre": "N° 3232 - Proposition de loi de M. Hadrien Clouet abolissant les frais commerciaux des plateformes de téléconsultation",
-      "source": "Assemblée nationale — Commission des affaires sociales",
-      "source_id": "an-commission-affaires-sociales",
-      "url": "https://www.assemblee-nationale.fr/17/propositions/pion3232.asp",
-      "date": "2026-10-06",
-      "theme": "Sécurité sociale",
-      "resume": null,
-      "importance": null,
-      "public": [],
-      "type": null,
-      "origine": "flux",
-      "collecte_le": "2026-10-08"
-    },
-    {
-      "id": "90c169bc45e045e3",
-      "titre": "N° 3233 - Proposition de loi de Mme Sandra Marsaud visant à accompagner le développement de l'oenotourisme et du spiritourisme",
-      "source": "Assemblée nationale — Commission des affaires sociales",
-      "source_id": "an-commission-affaires-sociales",
-      "url": "https://www.assemblee-nationale.fr/17/propositions/pion3233.asp",
-      "date": "2026-10-06",
-      "theme": "Sécurité sociale",
-      "resume": null,
-      "importance": null,
-      "public": [],
-      "type": null,
-      "origine": "flux",
-      "collecte_le": "2026-10-08"
-    },
-    {
-      "id": "eb5068c03b85dec2",
-      "titre": "N° 3238 - Proposition de loi de M. François Jolivet visant à garantir l'accès effectif à la formation professionnelle des bénéficiaires du congé parental d'éducation et à sécuriser leur retour à l'emploi",
-      "source": "Assemblée nationale — Commission des affaires sociales",
-      "source_id": "an-commission-affaires-sociales",
-      "url": "https://www.assemblee-nationale.fr/17/propositions/pion3238.asp",
-      "date": "2026-10-06",
-      "theme": "Sécurité sociale",
-      "resume": null,
-      "importance": null,
-      "public": [],
-      "type": null,
-      "origine": "flux",
-      "collecte_le": "2026-10-08"
-    },
-    {
-      "id": "e2b9efcbca848617",
-      "titre": "N° 3239 - Proposition de loi de M. Pierrick Courbon visant à garantir la transparence, la neutralité et l'indépendance des comparateurs en ligne",
-      "source": "Assemblée nationale — Commission des affaires économiques",
-      "source_id": "an-commission-affaires-economiques",
-      "url": "https://www.assemblee-nationale.fr/17/propositions/pion3239.asp",
-      "date": "2026-10-06",
-      "theme": "Économie et statistiques",
-      "resume": null,
-      "importance": null,
-      "public": [],
-      "type": null,
-      "origine": "flux",
-      "collecte_le": "2026-10-08"
-    },
-    {
-      "id": "08356ae6b074184f",
-      "titre": "N° 3245 - Proposition de loi de M. Raphaël Schellenberger visant à réduire le coût de raccordement électrique des sites industriels et à accélérer l'électrification de l'industrie",
-      "source": "Assemblée nationale — Commission des affaires économiques",
-      "source_id": "an-commission-affaires-economiques",
-      "url": "https://www.assemblee-nationale.fr/17/propositions/pion3245.asp",
-      "date": "2026-10-06",
-      "theme": "Économie et statistiques",
-      "resume": null,
-      "importance": null,
-      "public": [],
-      "type": null,
-      "origine": "flux",
-      "collecte_le": "2026-10-08"
-    },
-    {
-      "id": "5ad6576cc6e801b8",
-      "titre": "N° 3247 - Proposition de loi de Mme Marie-José Allemand visant à supprimer la clause de conscience spécifique en matière d'interruption volontaire de grossesse",
-      "source": "Assemblée nationale — Commission des affaires sociales",
-      "source_id": "an-commission-affaires-sociales",
-      "url": "https://www.assemblee-nationale.fr/17/propositions/pion3247.asp",
-      "date": "2026-10-06",
-      "theme": "Sécurité sociale",
-      "resume": null,
-      "importance": null,
-      "public": [],
-      "type": null,
-      "origine": "flux",
-      "collecte_le": "2026-10-08"
-    },
-    {
-      "id": "01153218211e9ecd",
-      "titre": "N° 3249 - Proposition de loi de M. Pierrick Courbon visant à mieux reconnaître et à valoriser les aidants actifs",
-      "source": "Assemblée nationale — Commission des affaires sociales",
-      "source_id": "an-commission-affaires-sociales",
-      "url": "https://www.assemblee-nationale.fr/17/propositions/pion3249.asp",
-      "date": "2026-10-06",
-      "theme": "Sécurité sociale",
-      "resume": null,
-      "importance": null,
-      "public": [],
-      "type": null,
+      "importance": 2,
+      "public": [
+        "Expertise comptable",
+        "Conseil aux dirigeants"
+      ],
+      "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-08"
     },
@@ -444,86 +307,13 @@
       "source_id": "an-commission-finances",
       "url": "https://www.assemblee-nationale.fr/17/propositions/pion3250.asp",
       "date": "2026-10-06",
-      "theme": "Loi de finances",
+      "theme": "Économie et statistiques",
       "resume": null,
-      "importance": null,
-      "public": [],
-      "type": null,
-      "origine": "flux",
-      "collecte_le": "2026-10-08"
-    },
-    {
-      "id": "b3dbad2b5f11999c",
-      "titre": "N° 3251 - Proposition de loi de Mme Sandrine Runel visant à garantir l'accès à une mutuelle publique gratuite pour tous les jeunes de 18 à 25 ans",
-      "source": "Assemblée nationale — Commission des affaires sociales",
-      "source_id": "an-commission-affaires-sociales",
-      "url": "https://www.assemblee-nationale.fr/17/propositions/pion3251.asp",
-      "date": "2026-10-06",
-      "theme": "Sécurité sociale",
-      "resume": null,
-      "importance": null,
-      "public": [],
-      "type": null,
-      "origine": "flux",
-      "collecte_le": "2026-10-08"
-    },
-    {
-      "id": "e4fd50629983ebcb",
-      "titre": "N° 3254 - Proposition de loi de Mme Fanny Dombre Coste visant à intégrer certains phénomènes atmosphériques d'intensité exceptionnelle dans le régime des catastrophes naturelles",
-      "source": "Assemblée nationale — Commission des finances",
-      "source_id": "an-commission-finances",
-      "url": "https://www.assemblee-nationale.fr/17/propositions/pion3254.asp",
-      "date": "2026-10-06",
-      "theme": "Loi de finances",
-      "resume": null,
-      "importance": null,
-      "public": [],
-      "type": null,
-      "origine": "flux",
-      "collecte_le": "2026-10-08"
-    },
-    {
-      "id": "97c8a4bf3a71b922",
-      "titre": "N° 3255 - Proposition de loi de M. Thierry Sother visant à instituer un mécanisme de confiscation des avoirs étrangers souverains et privés gelés en réponse aux violations du droit international",
-      "source": "Assemblée nationale — Commission des finances",
-      "source_id": "an-commission-finances",
-      "url": "https://www.assemblee-nationale.fr/17/propositions/pion3255.asp",
-      "date": "2026-10-06",
-      "theme": "Loi de finances",
-      "resume": null,
-      "importance": null,
-      "public": [],
-      "type": null,
-      "origine": "flux",
-      "collecte_le": "2026-10-08"
-    },
-    {
-      "id": "b16e9249c2176b4c",
-      "titre": "N° 3262 - Proposition de loi de M. Jacques Oberti visant à créer un mécanisme de double guichet garantissant une indemnisation juste, graduée et durable des sinistres liés au retrait-gonflement des argiles et à sécuriser le modèle de prévention du bâti existant",
-      "source": "Assemblée nationale — Commission des finances",
-      "source_id": "an-commission-finances",
-      "url": "https://www.assemblee-nationale.fr/17/propositions/pion3262.asp",
-      "date": "2026-10-06",
-      "theme": "Loi de finances",
-      "resume": null,
-      "importance": null,
-      "public": [],
-      "type": null,
-      "origine": "flux",
-      "collecte_le": "2026-10-08"
-    },
-    {
-      "id": "610a1101361697e6",
-      "titre": "N° 3267 - Proposition de loi de M. Gérard Leseul visant à revaloriser l'allocation de solidarité aux personnes âgées au niveau du seuil de pauvreté et instaurer l'automaticité du versement",
-      "source": "Assemblée nationale — Commission des affaires sociales",
-      "source_id": "an-commission-affaires-sociales",
-      "url": "https://www.assemblee-nationale.fr/17/propositions/pion3267.asp",
-      "date": "2026-10-06",
-      "theme": "Sécurité sociale",
-      "resume": null,
-      "importance": null,
-      "public": [],
-      "type": null,
+      "importance": 2,
+      "public": [
+        "Conseil aux dirigeants"
+      ],
+      "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-08"
     },
@@ -536,9 +326,288 @@
       "date": "2026-10-06",
       "theme": "Économie et statistiques",
       "resume": null,
-      "importance": null,
-      "public": [],
-      "type": null,
+      "importance": 2,
+      "public": [
+        "Conseil aux dirigeants"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-10-08"
+    },
+    {
+      "id": "203306c654a76ba7",
+      "titre": "Contre la fraude en ligne - texte N° 965",
+      "source": "Sénat — Derniers textes",
+      "source_id": "senat-textes",
+      "url": "https://www.senat.fr/leg/ppl25-965.html",
+      "date": "2026-10-06",
+      "theme": "Loi de finances",
+      "resume": "Proposition de loi contre la fraude en ligne visant à instaurer des obligations de contrôle des plateformes numériques à l'égard des annonceurs : texte N° 965 de Mme Nathalie GOULET et plusieurs de ses collègues, déposé au Sénat le 25 septembre 2026",
+      "importance": 1,
+      "public": [
+        "Expertise comptable",
+        "Conseil aux dirigeants"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-10-08"
+    },
+    {
+      "id": "e978b499b1324148",
+      "titre": "N° 3197 rapport - Rapport de M. Lionel Tivoli sur la proposition de loi de M. Lionel Tivoli et plusieurs de ses collègues renforçant la responsabilité des locataires et des bailleurs dans le logement social (3109).",
+      "source": "Assemblée nationale — Commission des affaires économiques",
+      "source_id": "an-commission-affaires-economiques",
+      "url": "https://www.assemblee-nationale.fr/17/rapports/r3197.asp",
+      "date": "2026-10-06",
+      "theme": "Économie et statistiques",
+      "resume": null,
+      "importance": 1,
+      "public": [
+        "Conseil aux dirigeants"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-10-08"
+    },
+    {
+      "id": "100d093cbf5f5e5f",
+      "titre": "N° 3226 - Proposition de loi de Mme Pascale Got portant création d'un fonds national d'adaptation des territoires littoraux au recul du trait de côte",
+      "source": "Assemblée nationale — Commission des finances",
+      "source_id": "an-commission-finances",
+      "url": "https://www.assemblee-nationale.fr/17/propositions/pion3226.asp",
+      "date": "2026-10-06",
+      "theme": "Loi de finances",
+      "resume": null,
+      "importance": 1,
+      "public": [
+        "Conseil aux dirigeants"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-10-08"
+    },
+    {
+      "id": "accfbb7b3960e06a",
+      "titre": "N° 3230 - Proposition de loi de M. Éric Pauget visant à réformer le droit des successions et des donations",
+      "source": "Assemblée nationale — Commission des finances",
+      "source_id": "an-commission-finances",
+      "url": "https://www.assemblee-nationale.fr/17/propositions/pion3230.asp",
+      "date": "2026-10-06",
+      "theme": "Loi de finances",
+      "resume": null,
+      "importance": 1,
+      "public": [
+        "Expertise comptable",
+        "Conseil aux dirigeants"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-10-08"
+    },
+    {
+      "id": "e609f4a5598ab977",
+      "titre": "N° 3232 - Proposition de loi de M. Hadrien Clouet abolissant les frais commerciaux des plateformes de téléconsultation",
+      "source": "Assemblée nationale — Commission des affaires sociales",
+      "source_id": "an-commission-affaires-sociales",
+      "url": "https://www.assemblee-nationale.fr/17/propositions/pion3232.asp",
+      "date": "2026-10-06",
+      "theme": "Sécurité sociale",
+      "resume": null,
+      "importance": 1,
+      "public": [
+        "Social / paie"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-10-08"
+    },
+    {
+      "id": "90c169bc45e045e3",
+      "titre": "N° 3233 - Proposition de loi de Mme Sandra Marsaud visant à accompagner le développement de l'oenotourisme et du spiritourisme",
+      "source": "Assemblée nationale — Commission des affaires sociales",
+      "source_id": "an-commission-affaires-sociales",
+      "url": "https://www.assemblee-nationale.fr/17/propositions/pion3233.asp",
+      "date": "2026-10-06",
+      "theme": "Sécurité sociale",
+      "resume": null,
+      "importance": 1,
+      "public": [
+        "Social / paie"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-10-08"
+    },
+    {
+      "id": "eb5068c03b85dec2",
+      "titre": "N° 3238 - Proposition de loi de M. François Jolivet visant à garantir l'accès effectif à la formation professionnelle des bénéficiaires du congé parental d'éducation et à sécuriser leur retour à l'emploi",
+      "source": "Assemblée nationale — Commission des affaires sociales",
+      "source_id": "an-commission-affaires-sociales",
+      "url": "https://www.assemblee-nationale.fr/17/propositions/pion3238.asp",
+      "date": "2026-10-06",
+      "theme": "Sécurité sociale",
+      "resume": null,
+      "importance": 1,
+      "public": [
+        "Social / paie"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-10-08"
+    },
+    {
+      "id": "e2b9efcbca848617",
+      "titre": "N° 3239 - Proposition de loi de M. Pierrick Courbon visant à garantir la transparence, la neutralité et l'indépendance des comparateurs en ligne",
+      "source": "Assemblée nationale — Commission des affaires économiques",
+      "source_id": "an-commission-affaires-economiques",
+      "url": "https://www.assemblee-nationale.fr/17/propositions/pion3239.asp",
+      "date": "2026-10-06",
+      "theme": "Économie et statistiques",
+      "resume": null,
+      "importance": 1,
+      "public": [
+        "Conseil aux dirigeants"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-10-08"
+    },
+    {
+      "id": "08356ae6b074184f",
+      "titre": "N° 3245 - Proposition de loi de M. Raphaël Schellenberger visant à réduire le coût de raccordement électrique des sites industriels et à accélérer l'électrification de l'industrie",
+      "source": "Assemblée nationale — Commission des affaires économiques",
+      "source_id": "an-commission-affaires-economiques",
+      "url": "https://www.assemblee-nationale.fr/17/propositions/pion3245.asp",
+      "date": "2026-10-06",
+      "theme": "Économie et statistiques",
+      "resume": null,
+      "importance": 1,
+      "public": [
+        "Conseil aux dirigeants"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-10-08"
+    },
+    {
+      "id": "5ad6576cc6e801b8",
+      "titre": "N° 3247 - Proposition de loi de Mme Marie-José Allemand visant à supprimer la clause de conscience spécifique en matière d'interruption volontaire de grossesse",
+      "source": "Assemblée nationale — Commission des affaires sociales",
+      "source_id": "an-commission-affaires-sociales",
+      "url": "https://www.assemblee-nationale.fr/17/propositions/pion3247.asp",
+      "date": "2026-10-06",
+      "theme": "Sécurité sociale",
+      "resume": null,
+      "importance": 1,
+      "public": [
+        "Social / paie"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-10-08"
+    },
+    {
+      "id": "01153218211e9ecd",
+      "titre": "N° 3249 - Proposition de loi de M. Pierrick Courbon visant à mieux reconnaître et à valoriser les aidants actifs",
+      "source": "Assemblée nationale — Commission des affaires sociales",
+      "source_id": "an-commission-affaires-sociales",
+      "url": "https://www.assemblee-nationale.fr/17/propositions/pion3249.asp",
+      "date": "2026-10-06",
+      "theme": "Sécurité sociale",
+      "resume": null,
+      "importance": 1,
+      "public": [
+        "Social / paie"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-10-08"
+    },
+    {
+      "id": "b3dbad2b5f11999c",
+      "titre": "N° 3251 - Proposition de loi de Mme Sandrine Runel visant à garantir l'accès à une mutuelle publique gratuite pour tous les jeunes de 18 à 25 ans",
+      "source": "Assemblée nationale — Commission des affaires sociales",
+      "source_id": "an-commission-affaires-sociales",
+      "url": "https://www.assemblee-nationale.fr/17/propositions/pion3251.asp",
+      "date": "2026-10-06",
+      "theme": "Sécurité sociale",
+      "resume": null,
+      "importance": 1,
+      "public": [
+        "Social / paie"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-10-08"
+    },
+    {
+      "id": "e4fd50629983ebcb",
+      "titre": "N° 3254 - Proposition de loi de Mme Fanny Dombre Coste visant à intégrer certains phénomènes atmosphériques d'intensité exceptionnelle dans le régime des catastrophes naturelles",
+      "source": "Assemblée nationale — Commission des finances",
+      "source_id": "an-commission-finances",
+      "url": "https://www.assemblee-nationale.fr/17/propositions/pion3254.asp",
+      "date": "2026-10-06",
+      "theme": "Loi de finances",
+      "resume": null,
+      "importance": 1,
+      "public": [
+        "Expertise comptable",
+        "Conseil aux dirigeants"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-10-08"
+    },
+    {
+      "id": "97c8a4bf3a71b922",
+      "titre": "N° 3255 - Proposition de loi de M. Thierry Sother visant à instituer un mécanisme de confiscation des avoirs étrangers souverains et privés gelés en réponse aux violations du droit international",
+      "source": "Assemblée nationale — Commission des finances",
+      "source_id": "an-commission-finances",
+      "url": "https://www.assemblee-nationale.fr/17/propositions/pion3255.asp",
+      "date": "2026-10-06",
+      "theme": "Loi de finances",
+      "resume": null,
+      "importance": 1,
+      "public": [
+        "Expertise comptable",
+        "Conseil aux dirigeants"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-10-08"
+    },
+    {
+      "id": "b16e9249c2176b4c",
+      "titre": "N° 3262 - Proposition de loi de M. Jacques Oberti visant à créer un mécanisme de double guichet garantissant une indemnisation juste, graduée et durable des sinistres liés au retrait-gonflement des argiles et à sécuriser le modèle de prévention du bâti existant",
+      "source": "Assemblée nationale — Commission des finances",
+      "source_id": "an-commission-finances",
+      "url": "https://www.assemblee-nationale.fr/17/propositions/pion3262.asp",
+      "date": "2026-10-06",
+      "theme": "Loi de finances",
+      "resume": null,
+      "importance": 1,
+      "public": [
+        "Expertise comptable",
+        "Conseil aux dirigeants"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-10-08"
+    },
+    {
+      "id": "610a1101361697e6",
+      "titre": "N° 3267 - Proposition de loi de M. Gérard Leseul visant à revaloriser l'allocation de solidarité aux personnes âgées au niveau du seuil de pauvreté et instaurer l'automaticité du versement",
+      "source": "Assemblée nationale — Commission des affaires sociales",
+      "source_id": "an-commission-affaires-sociales",
+      "url": "https://www.assemblee-nationale.fr/17/propositions/pion3267.asp",
+      "date": "2026-10-06",
+      "theme": "Sécurité sociale",
+      "resume": null,
+      "importance": 1,
+      "public": [
+        "Social / paie"
+      ],
+      "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-08"
     },
@@ -551,9 +620,11 @@
       "date": "2026-10-06",
       "theme": "Économie et statistiques",
       "resume": null,
-      "importance": null,
-      "public": [],
-      "type": null,
+      "importance": 1,
+      "public": [
+        "Conseil aux dirigeants"
+      ],
+      "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-08"
     },
@@ -566,24 +637,11 @@
       "date": "2026-10-06",
       "theme": "Économie et statistiques",
       "resume": null,
-      "importance": null,
-      "public": [],
-      "type": null,
-      "origine": "flux",
-      "collecte_le": "2026-10-08"
-    },
-    {
-      "id": "aebd3f9a77b9c576",
-      "titre": "N° 3271 - Proposition de loi de M. Gérard Leseul visant à instaurer un barème progressif de l'impôt sur les sociétés",
-      "source": "Assemblée nationale — Commission des finances",
-      "source_id": "an-commission-finances",
-      "url": "https://www.assemblee-nationale.fr/17/propositions/pion3271.asp",
-      "date": "2026-10-06",
-      "theme": "Loi de finances",
-      "resume": null,
-      "importance": null,
-      "public": [],
-      "type": null,
+      "importance": 1,
+      "public": [
+        "Conseil aux dirigeants"
+      ],
+      "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-08"
     },
@@ -595,10 +653,13 @@
       "url": "https://www.senat.fr/leg/ppl25-955.html",
       "date": "2026-10-06",
       "theme": "Loi de finances",
-      "resume": null,
-      "importance": null,
-      "public": [],
-      "type": null,
+      "resume": "Proposition de loi visant à pérenniser les structures d'exercice coordonné participatives : texte N° 955 de Mme Anne SOUYRIS et plusieurs de ses collègues, déposé au Sénat le 17 septembre 2026",
+      "importance": 1,
+      "public": [
+        "Expertise comptable",
+        "Conseil aux dirigeants"
+      ],
+      "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-08"
     },
@@ -610,25 +671,13 @@
       "url": "https://www.senat.fr/leg/ppr26-004.html",
       "date": "2026-10-06",
       "theme": "Loi de finances",
-      "resume": null,
-      "importance": null,
-      "public": [],
-      "type": null,
-      "origine": "flux",
-      "collecte_le": "2026-10-08"
-    },
-    {
-      "id": "a58d0f2ca06b29bb",
-      "titre": "Compte rendu de réunion n° 4 - Commission des finances, de l'économie générale et du contrôle budgétaire",
-      "source": "Assemblée nationale — Commission des finances",
-      "source_id": "an-commission-finances",
-      "url": "https://www.assemblee-nationale.fr/17/cr-cfiab/26-27/c2627004.asp",
-      "date": "2026-10-05",
-      "theme": "Loi de finances",
-      "resume": null,
-      "importance": null,
-      "public": [],
-      "type": null,
+      "resume": "Proposition de résolution en application de l'article 34-1 de la Constitution, visant à sécuriser le ciel de l'Ukraine en construisant un bouclier européen de protection des populations civiles : texte N° 4 de M. Claude MALHURET, déposé au Sénat le 2 octobre 2026",
+      "importance": 1,
+      "public": [
+        "Expertise comptable",
+        "Conseil aux dirigeants"
+      ],
+      "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-08"
     },
@@ -640,10 +689,13 @@
       "url": "https://www.senat.fr/leg/ppr25-958.html",
       "date": "2026-10-05",
       "theme": "Loi de finances",
-      "resume": null,
-      "importance": null,
-      "public": [],
-      "type": null,
+      "resume": "Proposition de résolution en application de l'article 34-1 de la Constitution, visant à préserver le modèle français du financement du logement et le crédit immobilier à taux fixe : texte N° 958 de Mme Marie-Claire CARRÈRE-GÉE, déposé au Sénat le 21 septembre 2026",
+      "importance": 1,
+      "public": [
+        "Expertise comptable",
+        "Conseil aux dirigeants"
+      ],
+      "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-08"
     },
@@ -655,70 +707,13 @@
       "url": "https://www.senat.fr/leg/ppl26-002.html",
       "date": "2026-10-05",
       "theme": "Loi de finances",
-      "resume": null,
-      "importance": null,
-      "public": [],
-      "type": null,
-      "origine": "flux",
-      "collecte_le": "2026-10-08"
-    },
-    {
-      "id": "54f84207325e4742",
-      "titre": "Déplacement d'une délégation de la commission des affaires européennes à Londres les 27 et 28 octobre 2025 - rapport d'information n° 247",
-      "source": "Sénat — Derniers rapports",
-      "source_id": "senat-rapports",
-      "url": "https://www.senat.fr/notice-rapport/2025/r25-247-notice.html",
-      "date": "2026-10-03",
-      "theme": "Loi de finances",
-      "resume": null,
-      "importance": null,
-      "public": [],
-      "type": null,
-      "origine": "flux",
-      "collecte_le": "2026-10-08"
-    },
-    {
-      "id": "4decba5abdbc7e33",
-      "titre": "Les enjeux de mise en oeuvre des fonds européens pour les collectivités territoriales - rapport d'information n° 732",
-      "source": "Sénat — Derniers rapports",
-      "source_id": "senat-rapports",
-      "url": "https://www.senat.fr/notice-rapport/2025/r25-732-notice.html",
-      "date": "2026-10-03",
-      "theme": "Loi de finances",
-      "resume": null,
-      "importance": null,
-      "public": [],
-      "type": null,
-      "origine": "flux",
-      "collecte_le": "2026-10-08"
-    },
-    {
-      "id": "9803108075bbb198",
-      "titre": "Les travaux de la délégation française à l'Assemblée parlementaire du Conseil de l'Europe - Deuxième partie de la session ordinaire 2025 - rapport d'information n° 760",
-      "source": "Sénat — Derniers rapports",
-      "source_id": "senat-rapports",
-      "url": "https://www.senat.fr/notice-rapport/2024/r24-760-notice.html",
-      "date": "2026-10-03",
-      "theme": "Loi de finances",
-      "resume": null,
-      "importance": null,
-      "public": [],
-      "type": null,
-      "origine": "flux",
-      "collecte_le": "2026-10-08"
-    },
-    {
-      "id": "6255e8ee8d88d3fc",
-      "titre": "Les travaux de la délégation française à l'Assemblée parlementaire du Conseil de l'Europe - Deuxième partie de la session ordinaire 2026 - rapport d'information n° 737",
-      "source": "Sénat — Derniers rapports",
-      "source_id": "senat-rapports",
-      "url": "https://www.senat.fr/notice-rapport/2025/r25-737-notice.html",
-      "date": "2026-10-03",
-      "theme": "Loi de finances",
-      "resume": null,
-      "importance": null,
-      "public": [],
-      "type": null,
+      "resume": "Proposition de loi constitutionnelle visant à refonder le statut constitutionnel des outre-mer en substituant aux articles 73 et 74 un article 73 unique instituant un régime « à la carte », fondé sur la libre administration et la différenciation : texte N° 2 de M. Dominique THÉOPHILE, déposé au…",
+      "importance": 1,
+      "public": [
+        "Expertise comptable",
+        "Conseil aux dirigeants"
+      ],
+      "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-08"
     },
@@ -730,10 +725,13 @@
       "url": "https://www.senat.fr/notice-rapport/2024/r24-541-notice.html",
       "date": "2026-10-03",
       "theme": "Loi de finances",
-      "resume": null,
-      "importance": null,
-      "public": [],
-      "type": null,
+      "resume": "Rapport d'information n° 541 de M. Alain MILON, fait au nom de la délégation française à l'Assemblée parlementaire du Conseil de l'Europe : Les travaux de la délégation française à l'Assemblée parlementaire du Conseil de l'Europe - Première partie de la session ordinaire 2025 (17 avril 2025)",
+      "importance": 2,
+      "public": [
+        "Expertise comptable",
+        "Conseil aux dirigeants"
+      ],
+      "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-08"
     },
@@ -745,10 +743,85 @@
       "url": "https://www.senat.fr/notice-rapport/2025/r25-333-notice.html",
       "date": "2026-10-03",
       "theme": "Loi de finances",
-      "resume": null,
-      "importance": null,
-      "public": [],
-      "type": null,
+      "resume": "Rapport d'information n° 333 de M. Alain MILON, fait au nom de la délégation française à l'Assemblée parlementaire du Conseil de l'Europe : Les travaux de la délégation française à l'Assemblée parlementaire du Conseil de l'Europe - Première partie de la session ordinaire 2026 (2 février 2026)",
+      "importance": 2,
+      "public": [
+        "Expertise comptable",
+        "Conseil aux dirigeants"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-10-08"
+    },
+    {
+      "id": "54f84207325e4742",
+      "titre": "Déplacement d'une délégation de la commission des affaires européennes à Londres les 27 et 28 octobre 2025 - rapport d'information n° 247",
+      "source": "Sénat — Derniers rapports",
+      "source_id": "senat-rapports",
+      "url": "https://www.senat.fr/notice-rapport/2025/r25-247-notice.html",
+      "date": "2026-10-03",
+      "theme": "Loi de finances",
+      "resume": "Rapport d'information n° 247 de MM. Jean-François RAPIN, Ronan LE GLEUT, Didier MARIE, Mme Catherine MORIN-DESAILLY et M. Jacques FERNIQUE, fait au nom de la commission des affaires européennes : Déplacement d'une délégation de la commission des affaires européennes à Londres les 27 et 28 octobre…",
+      "importance": 1,
+      "public": [
+        "Expertise comptable",
+        "Conseil aux dirigeants"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-10-08"
+    },
+    {
+      "id": "4decba5abdbc7e33",
+      "titre": "Les enjeux de mise en oeuvre des fonds européens pour les collectivités territoriales - rapport d'information n° 732",
+      "source": "Sénat — Derniers rapports",
+      "source_id": "senat-rapports",
+      "url": "https://www.senat.fr/notice-rapport/2025/r25-732-notice.html",
+      "date": "2026-10-03",
+      "theme": "Loi de finances",
+      "resume": "Rapport d'information n° 732 de MM. Louis-Jean de NICOLAY et Michaël WEBER, fait au nom de la commission des affaires européennes : Les enjeux de mise en oeuvre des fonds européens pour les collectivités territoriales (10 juin 2026)",
+      "importance": 1,
+      "public": [
+        "Expertise comptable",
+        "Conseil aux dirigeants"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-10-08"
+    },
+    {
+      "id": "9803108075bbb198",
+      "titre": "Les travaux de la délégation française à l'Assemblée parlementaire du Conseil de l'Europe - Deuxième partie de la session ordinaire 2025 - rapport d'information n° 760",
+      "source": "Sénat — Derniers rapports",
+      "source_id": "senat-rapports",
+      "url": "https://www.senat.fr/notice-rapport/2024/r24-760-notice.html",
+      "date": "2026-10-03",
+      "theme": "Loi de finances",
+      "resume": "Rapport d'information n° 760 de M. Alain MILON, fait au nom de la délégation française à l'Assemblée parlementaire du Conseil de l'Europe : Les travaux de la délégation française à l'Assemblée parlementaire du Conseil de l'Europe - Deuxième partie de la session ordinaire 2025 (19 juin 2025)",
+      "importance": 1,
+      "public": [
+        "Expertise comptable",
+        "Conseil aux dirigeants"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-10-08"
+    },
+    {
+      "id": "6255e8ee8d88d3fc",
+      "titre": "Les travaux de la délégation française à l'Assemblée parlementaire du Conseil de l'Europe - Deuxième partie de la session ordinaire 2026 - rapport d'information n° 737",
+      "source": "Sénat — Derniers rapports",
+      "source_id": "senat-rapports",
+      "url": "https://www.senat.fr/notice-rapport/2025/r25-737-notice.html",
+      "date": "2026-10-03",
+      "theme": "Loi de finances",
+      "resume": "Rapport d'information n° 737 de M. Alain MILON, fait au nom de la délégation française à l'Assemblée parlementaire du Conseil de l'Europe : Les travaux de la délégation française à l'Assemblée parlementaire du Conseil de l'Europe - Deuxième partie de la session ordinaire 2026 (11 juin 2026)",
+      "importance": 1,
+      "public": [
+        "Expertise comptable",
+        "Conseil aux dirigeants"
+      ],
+      "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-08"
     },
@@ -760,10 +833,13 @@
       "url": "https://www.senat.fr/notice-rapport/2025/r25-302-notice.html",
       "date": "2026-10-03",
       "theme": "Loi de finances",
-      "resume": null,
-      "importance": null,
-      "public": [],
-      "type": null,
+      "resume": "Rapport d'information n° 302 de M. Alain MILON, fait au nom de la délégation française à l'Assemblée parlementaire du Conseil de l'Europe : Les travaux de la délégation française à l'Assemblée parlementaire du Conseil de l'Europe - Quatrième partie de la session ordinaire 2025 (23 janvier 2026)",
+      "importance": 1,
+      "public": [
+        "Expertise comptable",
+        "Conseil aux dirigeants"
+      ],
+      "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-08"
     },
@@ -775,10 +851,13 @@
       "url": "https://www.senat.fr/notice-rapport/2025/r25-327-notice.html",
       "date": "2026-10-03",
       "theme": "Loi de finances",
-      "resume": null,
-      "importance": null,
-      "public": [],
-      "type": null,
+      "resume": "Rapport d'information n° 327 de M. Alain MILON, fait au nom de la délégation française à l'Assemblée parlementaire du Conseil de l'Europe : Les travaux de la délégation française à l'Assemblée parlementaire du Conseil de l'Europe - Troisième partie de la session ordinaire 2025 (29 janvier 2026)",
+      "importance": 1,
+      "public": [
+        "Expertise comptable",
+        "Conseil aux dirigeants"
+      ],
+      "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-08"
     },
@@ -790,10 +869,13 @@
       "url": "https://www.senat.fr/leg/ppl25-963.html",
       "date": "2026-10-03",
       "theme": "Loi de finances",
-      "resume": null,
-      "importance": null,
-      "public": [],
-      "type": null,
+      "resume": "Proposition de loi visant à faciliter la vie démocratique et l'exercice de la citoyenneté dans les communes : texte N° 963 de Mme Else JOSEPH, déposé au Sénat le 23 septembre 2026",
+      "importance": 1,
+      "public": [
+        "Expertise comptable",
+        "Conseil aux dirigeants"
+      ],
+      "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-08"
     },
@@ -805,10 +887,13 @@
       "url": "https://www.senat.fr/leg/ppl25-966.html",
       "date": "2026-10-02",
       "theme": "Loi de finances",
-      "resume": null,
-      "importance": null,
-      "public": [],
-      "type": null,
+      "resume": "Proposition de loi visant à garantir un service public de proximité dans chaque communevisant à garantir un service public de proximité dans chaque commune : texte N° 966 de Mme Alexandra BORCHIO FONTIMP, déposé au Sénat le 28 septembre 2026",
+      "importance": 1,
+      "public": [
+        "Expertise comptable",
+        "Conseil aux dirigeants"
+      ],
+      "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-08"
     },
@@ -820,10 +905,12 @@
       "url": "https://www.senat.fr/leg/ppl25-962.html",
       "date": "2026-10-02",
       "theme": "Loi de finances",
-      "resume": null,
-      "importance": null,
-      "public": [],
-      "type": null,
+      "resume": "Proposition de loi visant à supprimer les indemnités de licenciement en cas de retrait de la carte professionnelle délivrée par le Conseil national des activités privées de sécurité : texte N° 962 de M. Hugues SAURY, déposé au Sénat le 23 septembre 2026",
+      "importance": 1,
+      "public": [
+        "Social / paie"
+      ],
+      "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-08"
     },
@@ -835,10 +922,13 @@
       "url": "https://www.senat.fr/leg/ppl25-961.html",
       "date": "2026-10-02",
       "theme": "Loi de finances",
-      "resume": null,
-      "importance": null,
-      "public": [],
-      "type": null,
+      "resume": "Proposition de loi visant à permettre un rétablissement des anciennes régions : texte N° 961 de M. Alain JOYANDET et plusieurs de ses collègues, déposé au Sénat le 22 septembre 2026",
+      "importance": 1,
+      "public": [
+        "Expertise comptable",
+        "Conseil aux dirigeants"
+      ],
+      "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-08"
     },
@@ -850,10 +940,13 @@
       "url": "https://www.senat.fr/leg/ppl25-957.html",
       "date": "2026-10-01",
       "theme": "Loi de finances",
-      "resume": null,
-      "importance": null,
-      "public": [],
-      "type": null,
+      "resume": "Proposition de loi visant à renforcer la lutte contre la précarité énergétique : texte N° 957 de M. Fabien GAY et plusieurs de ses collègues, déposé au Sénat le 18 septembre 2026",
+      "importance": 1,
+      "public": [
+        "Expertise comptable",
+        "Conseil aux dirigeants"
+      ],
+      "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-08"
     }
