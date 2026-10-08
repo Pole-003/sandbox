@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "genere_le": "2026-10-08T13:21:15.700Z",
+  "genere_le": "2026-10-08T13:26:46.915Z",
   "articles": [
     {
       "id": "b069aa48d1f16264",
@@ -1018,12 +1018,13 @@
             "partie": null,
             "groupe": null,
             "theme": "Loi de finances",
-            "importance": 1,
+            "importance": 3,
             "public": [
               "Expertise comptable",
               "Conseil aux dirigeants"
             ],
-            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710665"
+            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710665",
+            "rubrique": "Finances publiques"
           },
           {
             "numero": "1",
@@ -1035,7 +1036,8 @@
             "public": [
               "Expertise comptable"
             ],
-            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710670"
+            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710670",
+            "rubrique": null
           },
           {
             "numero": "2",
@@ -1043,11 +1045,12 @@
             "partie": "Première partie : conditions générales de l’équilibre financier",
             "groupe": "B – Mesures fiscales",
             "theme": "Fiscal et comptable",
-            "importance": 3,
+            "importance": 5,
             "public": [
               "Expertise comptable"
             ],
-            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710672"
+            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710672",
+            "rubrique": "Impôt sur le revenu"
           },
           {
             "numero": "3",
@@ -1055,12 +1058,13 @@
             "partie": "Première partie : conditions générales de l’équilibre financier",
             "groupe": "B – Mesures fiscales",
             "theme": "Fiscal et comptable",
-            "importance": 3,
+            "importance": 4,
             "public": [
               "Expertise comptable",
               "Social / paie"
             ],
-            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710673"
+            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710673",
+            "rubrique": "Impôt sur le revenu"
           },
           {
             "numero": "4",
@@ -1068,12 +1072,13 @@
             "partie": "Première partie : conditions générales de l’équilibre financier",
             "groupe": "B – Mesures fiscales",
             "theme": "Sécurité sociale",
-            "importance": 2,
+            "importance": 4,
             "public": [
               "Expertise comptable",
               "Conseil aux dirigeants"
             ],
-            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710674"
+            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710674",
+            "rubrique": "Transmission et patrimoine"
           },
           {
             "numero": "5",
@@ -1081,12 +1086,13 @@
             "partie": "Première partie : conditions générales de l’équilibre financier",
             "groupe": "B – Mesures fiscales",
             "theme": "Fiscal et comptable",
-            "importance": 2,
+            "importance": 5,
             "public": [
               "Expertise comptable",
               "Conseil aux dirigeants"
             ],
-            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710675"
+            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710675",
+            "rubrique": "Transmission et patrimoine"
           },
           {
             "numero": "6",
@@ -1094,11 +1100,12 @@
             "partie": "Première partie : conditions générales de l’équilibre financier",
             "groupe": "B – Mesures fiscales",
             "theme": "Fiscal et comptable",
-            "importance": 2,
+            "importance": 4,
             "public": [
               "Expertise comptable"
             ],
-            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710676"
+            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710676",
+            "rubrique": "Transmission et patrimoine"
           },
           {
             "numero": "7",
@@ -1106,11 +1113,12 @@
             "partie": "Première partie : conditions générales de l’équilibre financier",
             "groupe": "B – Mesures fiscales",
             "theme": "Fiscal et comptable",
-            "importance": 2,
+            "importance": 4,
             "public": [
               "Expertise comptable"
             ],
-            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710677"
+            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710677",
+            "rubrique": "Transmission et patrimoine"
           },
           {
             "numero": "8",
@@ -1122,7 +1130,8 @@
             "public": [
               "Expertise comptable"
             ],
-            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710678"
+            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710678",
+            "rubrique": null
           },
           {
             "numero": "9",
@@ -1130,11 +1139,12 @@
             "partie": "Première partie : conditions générales de l’équilibre financier",
             "groupe": "B – Mesures fiscales",
             "theme": "Fiscal et comptable",
-            "importance": 2,
+            "importance": 4,
             "public": [
               "Expertise comptable"
             ],
-            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710679"
+            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710679",
+            "rubrique": "Fiscalité des entreprises"
           },
           {
             "numero": "10",
@@ -1142,12 +1152,13 @@
             "partie": "Première partie : conditions générales de l’équilibre financier",
             "groupe": "B – Mesures fiscales",
             "theme": "Fiscal et comptable",
-            "importance": 2,
+            "importance": 5,
             "public": [
               "Expertise comptable",
               "Conseil aux dirigeants"
             ],
-            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710680"
+            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710680",
+            "rubrique": "Transmission et patrimoine"
           },
           {
             "numero": "11",
@@ -1159,7 +1170,8 @@
             "public": [
               "Expertise comptable"
             ],
-            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710681"
+            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710681",
+            "rubrique": "Fiscalité des entreprises"
           },
           {
             "numero": "12",
@@ -1171,7 +1183,8 @@
             "public": [
               "Expertise comptable"
             ],
-            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710682"
+            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710682",
+            "rubrique": null
           },
           {
             "numero": "13",
@@ -1179,11 +1192,12 @@
             "partie": "Première partie : conditions générales de l’équilibre financier",
             "groupe": "B – Mesures fiscales",
             "theme": "Fiscal et comptable",
-            "importance": 2,
+            "importance": 4,
             "public": [
               "Expertise comptable"
             ],
-            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710683"
+            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710683",
+            "rubrique": "Secteurs d’activité"
           },
           {
             "numero": "14",
@@ -1191,12 +1205,13 @@
             "partie": "Première partie : conditions générales de l’équilibre financier",
             "groupe": "B – Mesures fiscales",
             "theme": "Fiscal et comptable",
-            "importance": 2,
+            "importance": 3,
             "public": [
               "Expertise comptable",
               "Conseil aux dirigeants"
             ],
-            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710684"
+            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710684",
+            "rubrique": "Secteurs d’activité"
           },
           {
             "numero": "15",
@@ -1204,12 +1219,13 @@
             "partie": "Première partie : conditions générales de l’équilibre financier",
             "groupe": "B – Mesures fiscales",
             "theme": "Fiscal et comptable",
-            "importance": 2,
+            "importance": 5,
             "public": [
               "Expertise comptable",
               "Conseil aux dirigeants"
             ],
-            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710685"
+            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710685",
+            "rubrique": "Fiscalité des entreprises"
           },
           {
             "numero": "16",
@@ -1217,11 +1233,12 @@
             "partie": "Première partie : conditions générales de l’équilibre financier",
             "groupe": "B – Mesures fiscales",
             "theme": "Fiscal et comptable",
-            "importance": 3,
+            "importance": 2,
             "public": [
               "Expertise comptable"
             ],
-            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710686"
+            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710686",
+            "rubrique": null
           },
           {
             "numero": "17",
@@ -1229,11 +1246,12 @@
             "partie": "Première partie : conditions générales de l’équilibre financier",
             "groupe": "B – Mesures fiscales",
             "theme": "Fiscal et comptable",
-            "importance": 2,
+            "importance": 3,
             "public": [
               "Expertise comptable"
             ],
-            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710687"
+            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710687",
+            "rubrique": "Fiscalité des entreprises"
           },
           {
             "numero": "18",
@@ -1241,11 +1259,12 @@
             "partie": "Première partie : conditions générales de l’équilibre financier",
             "groupe": "B – Mesures fiscales",
             "theme": "Fiscal et comptable",
-            "importance": 2,
+            "importance": 3,
             "public": [
               "Expertise comptable"
             ],
-            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710688"
+            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710688",
+            "rubrique": "Secteurs d’activité"
           },
           {
             "numero": "19",
@@ -1253,11 +1272,12 @@
             "partie": "Première partie : conditions générales de l’équilibre financier",
             "groupe": "B – Mesures fiscales",
             "theme": "Fiscal et comptable",
-            "importance": 2,
+            "importance": 4,
             "public": [
               "Expertise comptable"
             ],
-            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710689"
+            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710689",
+            "rubrique": "TVA et autres taxes"
           },
           {
             "numero": "20",
@@ -1270,7 +1290,8 @@
               "Expertise comptable",
               "Conseil aux dirigeants"
             ],
-            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710690"
+            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710690",
+            "rubrique": null
           },
           {
             "numero": "21",
@@ -1282,7 +1303,8 @@
             "public": [
               "Expertise comptable"
             ],
-            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710691"
+            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710691",
+            "rubrique": null
           },
           {
             "numero": "22",
@@ -1294,7 +1316,8 @@
             "public": [
               "Expertise comptable"
             ],
-            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710692"
+            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710692",
+            "rubrique": null
           },
           {
             "numero": "23",
@@ -1306,7 +1329,8 @@
             "public": [
               "Expertise comptable"
             ],
-            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710693"
+            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710693",
+            "rubrique": null
           },
           {
             "numero": "24",
@@ -1314,11 +1338,12 @@
             "partie": "Première partie : conditions générales de l’équilibre financier",
             "groupe": "B – Mesures fiscales",
             "theme": "Fiscal et comptable",
-            "importance": 2,
+            "importance": 3,
             "public": [
               "Expertise comptable"
             ],
-            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710694"
+            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710694",
+            "rubrique": "TVA et autres taxes"
           },
           {
             "numero": "25",
@@ -1326,11 +1351,12 @@
             "partie": "Première partie : conditions générales de l’équilibre financier",
             "groupe": "B – Mesures fiscales",
             "theme": "Fiscal et comptable",
-            "importance": 2,
+            "importance": 4,
             "public": [
               "Expertise comptable"
             ],
-            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710695"
+            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710695",
+            "rubrique": "TVA et autres taxes"
           },
           {
             "numero": "26",
@@ -1338,11 +1364,12 @@
             "partie": "Première partie : conditions générales de l’équilibre financier",
             "groupe": "B – Mesures fiscales",
             "theme": "Fiscal et comptable",
-            "importance": 2,
+            "importance": 4,
             "public": [
               "Expertise comptable"
             ],
-            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710696"
+            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710696",
+            "rubrique": "Fiscalité locale"
           },
           {
             "numero": "27",
@@ -1354,7 +1381,8 @@
             "public": [
               "Expertise comptable"
             ],
-            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710697"
+            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710697",
+            "rubrique": null
           },
           {
             "numero": "28",
@@ -1366,7 +1394,8 @@
             "public": [
               "Expertise comptable"
             ],
-            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710698"
+            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710698",
+            "rubrique": null
           },
           {
             "numero": "29",
@@ -1374,11 +1403,12 @@
             "partie": "Première partie : conditions générales de l’équilibre financier",
             "groupe": "B – Mesures fiscales",
             "theme": "Fiscal et comptable",
-            "importance": 2,
+            "importance": 5,
             "public": [
               "Expertise comptable"
             ],
-            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710699"
+            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710699",
+            "rubrique": "Contrôle et procédures fiscales"
           },
           {
             "numero": "30",
@@ -1386,11 +1416,12 @@
             "partie": "Première partie : conditions générales de l’équilibre financier",
             "groupe": "B – Mesures fiscales",
             "theme": "Fiscal et comptable",
-            "importance": 2,
+            "importance": 5,
             "public": [
               "Expertise comptable"
             ],
-            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710700"
+            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710700",
+            "rubrique": "Contrôle et procédures fiscales"
           },
           {
             "numero": "31",
@@ -1398,11 +1429,12 @@
             "partie": "Première partie : conditions générales de l’équilibre financier",
             "groupe": "B – Mesures fiscales",
             "theme": "Fiscal et comptable",
-            "importance": 2,
+            "importance": 5,
             "public": [
               "Expertise comptable"
             ],
-            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710701"
+            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710701",
+            "rubrique": "Contrôle et procédures fiscales"
           },
           {
             "numero": "32",
@@ -1410,11 +1442,12 @@
             "partie": "Première partie : conditions générales de l’équilibre financier",
             "groupe": "B – Mesures fiscales",
             "theme": "Fiscal et comptable",
-            "importance": 2,
+            "importance": 3,
             "public": [
               "Expertise comptable"
             ],
-            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710702"
+            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710702",
+            "rubrique": "Contrôle et procédures fiscales"
           },
           {
             "numero": "33",
@@ -1422,11 +1455,12 @@
             "partie": "Première partie : conditions générales de l’équilibre financier",
             "groupe": "B – Mesures fiscales",
             "theme": "Fiscal et comptable",
-            "importance": 2,
+            "importance": 4,
             "public": [
               "Expertise comptable"
             ],
-            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710703"
+            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710703",
+            "rubrique": "Entrée en vigueur"
           },
           {
             "numero": "34",
@@ -1439,7 +1473,8 @@
               "Expertise comptable",
               "Conseil aux dirigeants"
             ],
-            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710706"
+            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710706",
+            "rubrique": null
           },
           {
             "numero": "35",
@@ -1447,11 +1482,12 @@
             "partie": "Première partie : conditions générales de l’équilibre financier",
             "groupe": "A – Dispositions relatives aux collectivités territoriales",
             "theme": "Fiscal et comptable",
-            "importance": 3,
+            "importance": 2,
             "public": [
               "Expertise comptable"
             ],
-            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710707"
+            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710707",
+            "rubrique": null
           },
           {
             "numero": "36",
@@ -1459,11 +1495,12 @@
             "partie": "Première partie : conditions générales de l’équilibre financier",
             "groupe": "A – Dispositions relatives aux collectivités territoriales",
             "theme": "Fiscal et comptable",
-            "importance": 4,
+            "importance": 2,
             "public": [
               "Expertise comptable"
             ],
-            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710708"
+            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710708",
+            "rubrique": null
           },
           {
             "numero": "37",
@@ -1476,7 +1513,8 @@
               "Expertise comptable",
               "Conseil aux dirigeants"
             ],
-            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710709"
+            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710709",
+            "rubrique": null
           },
           {
             "numero": "38",
@@ -1489,7 +1527,8 @@
               "Expertise comptable",
               "Conseil aux dirigeants"
             ],
-            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710710"
+            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710710",
+            "rubrique": null
           },
           {
             "numero": "39",
@@ -1502,7 +1541,8 @@
               "Expertise comptable",
               "Conseil aux dirigeants"
             ],
-            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710711"
+            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710711",
+            "rubrique": null
           },
           {
             "numero": "40",
@@ -1515,7 +1555,8 @@
               "Expertise comptable",
               "Conseil aux dirigeants"
             ],
-            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710712"
+            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710712",
+            "rubrique": null
           },
           {
             "numero": "41",
@@ -1528,7 +1569,8 @@
               "Expertise comptable",
               "Conseil aux dirigeants"
             ],
-            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710713"
+            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710713",
+            "rubrique": null
           },
           {
             "numero": "42",
@@ -1541,7 +1583,8 @@
               "Expertise comptable",
               "Conseil aux dirigeants"
             ],
-            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710715"
+            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710715",
+            "rubrique": null
           },
           {
             "numero": "43",
@@ -1554,7 +1597,8 @@
               "Expertise comptable",
               "Conseil aux dirigeants"
             ],
-            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710717"
+            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710717",
+            "rubrique": null
           },
           {
             "numero": "44",
@@ -1567,7 +1611,8 @@
               "Expertise comptable",
               "Conseil aux dirigeants"
             ],
-            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710718"
+            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710718",
+            "rubrique": null
           },
           {
             "numero": "45",
@@ -1580,7 +1625,8 @@
               "Expertise comptable",
               "Conseil aux dirigeants"
             ],
-            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710719"
+            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710719",
+            "rubrique": null
           },
           {
             "numero": "46",
@@ -1593,7 +1639,8 @@
               "Expertise comptable",
               "Conseil aux dirigeants"
             ],
-            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710720"
+            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710720",
+            "rubrique": null
           },
           {
             "numero": "47",
@@ -1606,7 +1653,8 @@
               "Expertise comptable",
               "Conseil aux dirigeants"
             ],
-            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710721"
+            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710721",
+            "rubrique": null
           },
           {
             "numero": "48",
@@ -1618,7 +1666,8 @@
             "public": [
               "Conseil aux dirigeants"
             ],
-            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710722"
+            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710722",
+            "rubrique": null
           },
           {
             "numero": "49",
@@ -1630,7 +1679,8 @@
             "public": [
               "Social / paie"
             ],
-            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710724"
+            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710724",
+            "rubrique": null
           },
           {
             "numero": "50",
@@ -1643,7 +1693,8 @@
               "Expertise comptable",
               "Conseil aux dirigeants"
             ],
-            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710725"
+            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710725",
+            "rubrique": null
           },
           {
             "numero": "51",
@@ -1656,7 +1707,8 @@
               "Expertise comptable",
               "Conseil aux dirigeants"
             ],
-            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710726"
+            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710726",
+            "rubrique": null
           },
           {
             "numero": "52",
@@ -1669,7 +1721,8 @@
               "Expertise comptable",
               "Conseil aux dirigeants"
             ],
-            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710727"
+            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710727",
+            "rubrique": null
           },
           {
             "numero": "53",
@@ -1682,7 +1735,8 @@
               "Expertise comptable",
               "Conseil aux dirigeants"
             ],
-            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710728"
+            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710728",
+            "rubrique": null
           },
           {
             "numero": "54",
@@ -1695,7 +1749,8 @@
               "Expertise comptable",
               "Conseil aux dirigeants"
             ],
-            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710729"
+            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710729",
+            "rubrique": null
           },
           {
             "numero": "55",
@@ -1708,7 +1763,8 @@
               "Expertise comptable",
               "Conseil aux dirigeants"
             ],
-            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710730"
+            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710730",
+            "rubrique": null
           },
           {
             "numero": "56",
@@ -1721,7 +1777,8 @@
               "Expertise comptable",
               "Conseil aux dirigeants"
             ],
-            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710731"
+            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710731",
+            "rubrique": null
           },
           {
             "numero": "57",
@@ -1734,7 +1791,8 @@
               "Expertise comptable",
               "Conseil aux dirigeants"
             ],
-            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710733"
+            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710733",
+            "rubrique": null
           },
           {
             "numero": "58",
@@ -1747,7 +1805,8 @@
               "Expertise comptable",
               "Conseil aux dirigeants"
             ],
-            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710738"
+            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710738",
+            "rubrique": null
           },
           {
             "numero": "59",
@@ -1760,7 +1819,8 @@
               "Expertise comptable",
               "Conseil aux dirigeants"
             ],
-            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710739"
+            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710739",
+            "rubrique": null
           },
           {
             "numero": "60",
@@ -1773,7 +1833,8 @@
               "Expertise comptable",
               "Conseil aux dirigeants"
             ],
-            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710740"
+            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710740",
+            "rubrique": null
           },
           {
             "numero": "61",
@@ -1786,7 +1847,8 @@
               "Expertise comptable",
               "Conseil aux dirigeants"
             ],
-            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710742"
+            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710742",
+            "rubrique": null
           },
           {
             "numero": "62",
@@ -1799,7 +1861,8 @@
               "Expertise comptable",
               "Conseil aux dirigeants"
             ],
-            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710744"
+            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710744",
+            "rubrique": null
           },
           {
             "numero": "63",
@@ -1812,7 +1875,8 @@
               "Expertise comptable",
               "Conseil aux dirigeants"
             ],
-            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710746"
+            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710746",
+            "rubrique": null
           },
           {
             "numero": "64",
@@ -1825,7 +1889,8 @@
               "Expertise comptable",
               "Conseil aux dirigeants"
             ],
-            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710747"
+            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710747",
+            "rubrique": null
           },
           {
             "numero": "65",
@@ -1838,7 +1903,8 @@
               "Expertise comptable",
               "Conseil aux dirigeants"
             ],
-            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710748"
+            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710748",
+            "rubrique": null
           },
           {
             "numero": "66",
@@ -1851,7 +1917,8 @@
               "Expertise comptable",
               "Conseil aux dirigeants"
             ],
-            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710749"
+            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710749",
+            "rubrique": null
           },
           {
             "numero": "67",
@@ -1863,7 +1930,8 @@
             "public": [
               "Social / paie"
             ],
-            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710751"
+            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710751",
+            "rubrique": null
           },
           {
             "numero": "68",
@@ -1876,7 +1944,8 @@
               "Expertise comptable",
               "Conseil aux dirigeants"
             ],
-            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710754"
+            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710754",
+            "rubrique": null
           },
           {
             "numero": "69",
@@ -1889,7 +1958,8 @@
               "Expertise comptable",
               "Conseil aux dirigeants"
             ],
-            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710755"
+            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710755",
+            "rubrique": null
           },
           {
             "numero": "70",
@@ -1901,7 +1971,8 @@
             "public": [
               "Conseil aux dirigeants"
             ],
-            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710756"
+            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710756",
+            "rubrique": null
           },
           {
             "numero": "71",
@@ -1914,7 +1985,8 @@
               "Expertise comptable",
               "Conseil aux dirigeants"
             ],
-            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710757"
+            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710757",
+            "rubrique": null
           },
           {
             "numero": "72",
@@ -1927,7 +1999,8 @@
               "Expertise comptable",
               "Conseil aux dirigeants"
             ],
-            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710758"
+            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710758",
+            "rubrique": null
           },
           {
             "numero": "73",
@@ -1940,7 +2013,8 @@
               "Expertise comptable",
               "Conseil aux dirigeants"
             ],
-            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710759"
+            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710759",
+            "rubrique": null
           },
           {
             "numero": "74",
@@ -1948,12 +2022,13 @@
             "partie": "Seconde partie : moyens des politiques publiques et dispositions spéciales",
             "groupe": "I – Mesures budgétaires non rattachées",
             "theme": "Loi de finances",
-            "importance": 2,
+            "importance": 3,
             "public": [
               "Expertise comptable",
               "Conseil aux dirigeants"
             ],
-            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710760"
+            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710760",
+            "rubrique": "Social et paie"
           },
           {
             "numero": "75",
@@ -1966,7 +2041,8 @@
               "Expertise comptable",
               "Conseil aux dirigeants"
             ],
-            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710761"
+            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710761",
+            "rubrique": null
           },
           {
             "numero": "76",
@@ -1979,7 +2055,8 @@
               "Expertise comptable",
               "Conseil aux dirigeants"
             ],
-            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710764"
+            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710764",
+            "rubrique": null
           },
           {
             "numero": "77",
@@ -1992,7 +2069,8 @@
               "Expertise comptable",
               "Conseil aux dirigeants"
             ],
-            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710766"
+            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710766",
+            "rubrique": null
           },
           {
             "numero": "78",
@@ -2000,11 +2078,12 @@
             "partie": "Seconde partie : moyens des politiques publiques et dispositions spéciales",
             "groupe": "Cohésion des territoires",
             "theme": "Fiscal et comptable",
-            "importance": 2,
+            "importance": 3,
             "public": [
               "Expertise comptable"
             ],
-            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710768"
+            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710768",
+            "rubrique": "Impôt sur le revenu"
           },
           {
             "numero": "79",
@@ -2017,7 +2096,8 @@
               "Social / paie",
               "Conseil aux dirigeants"
             ],
-            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710770"
+            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710770",
+            "rubrique": null
           },
           {
             "numero": "80",
@@ -2030,7 +2110,8 @@
               "Expertise comptable",
               "Conseil aux dirigeants"
             ],
-            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710771"
+            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710771",
+            "rubrique": null
           },
           {
             "numero": "81",
@@ -2043,7 +2124,8 @@
               "Expertise comptable",
               "Conseil aux dirigeants"
             ],
-            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710773"
+            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710773",
+            "rubrique": null
           },
           {
             "numero": "82",
@@ -2056,7 +2138,8 @@
               "Expertise comptable",
               "Conseil aux dirigeants"
             ],
-            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710774"
+            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710774",
+            "rubrique": null
           },
           {
             "numero": "83",
@@ -2069,7 +2152,8 @@
               "Expertise comptable",
               "Conseil aux dirigeants"
             ],
-            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710776"
+            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710776",
+            "rubrique": null
           },
           {
             "numero": "84",
@@ -2077,11 +2161,12 @@
             "partie": "Seconde partie : moyens des politiques publiques et dispositions spéciales",
             "groupe": "Relations avec les collectivités territoriales",
             "theme": "Économie et statistiques",
-            "importance": 3,
+            "importance": 2,
             "public": [
               "Expertise comptable"
             ],
-            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710777"
+            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710777",
+            "rubrique": null
           },
           {
             "numero": "85",
@@ -2094,7 +2179,8 @@
               "Expertise comptable",
               "Conseil aux dirigeants"
             ],
-            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710778"
+            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710778",
+            "rubrique": null
           },
           {
             "numero": "86",
@@ -2107,7 +2193,8 @@
               "Expertise comptable",
               "Conseil aux dirigeants"
             ],
-            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710779"
+            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710779",
+            "rubrique": null
           },
           {
             "numero": "87",
@@ -2120,7 +2207,8 @@
               "Expertise comptable",
               "Conseil aux dirigeants"
             ],
-            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710780"
+            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710780",
+            "rubrique": null
           },
           {
             "numero": "88",
@@ -2128,11 +2216,12 @@
             "partie": "Seconde partie : moyens des politiques publiques et dispositions spéciales",
             "groupe": "Travail, emploi et administration des ministères sociaux",
             "theme": "Loi de finances",
-            "importance": 1,
+            "importance": 3,
             "public": [
               "Conseil aux dirigeants"
             ],
-            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710782"
+            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710782",
+            "rubrique": "Social et paie"
           },
           {
             "numero": "89",
@@ -2140,14 +2229,19 @@
             "partie": "Seconde partie : moyens des politiques publiques et dispositions spéciales",
             "groupe": "Travail, emploi et administration des ministères sociaux",
             "theme": "Loi de finances",
-            "importance": 1,
+            "importance": 3,
             "public": [
               "Expertise comptable",
               "Conseil aux dirigeants"
             ],
-            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710783"
+            "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html#_Toc241710783",
+            "rubrique": "Social et paie"
           }
-        ]
+        ],
+        "hierarchie": {
+          "origine": "pole",
+          "etablie_le": "2026-10-08"
+        }
       }
     },
     "plfss": {
@@ -2219,7 +2313,8 @@
             "public": [
               "Social / paie"
             ],
-            "url": null
+            "url": null,
+            "rubrique": null
           },
           {
             "numero": "2",
@@ -2231,7 +2326,8 @@
             "public": [
               "Social / paie"
             ],
-            "url": null
+            "url": null,
+            "rubrique": null
           },
           {
             "numero": "3",
@@ -2243,7 +2339,8 @@
             "public": [
               "Social / paie"
             ],
-            "url": null
+            "url": null,
+            "rubrique": null
           },
           {
             "numero": "4",
@@ -2251,11 +2348,12 @@
             "partie": "Dispositions relatives aux recettes et à l’équilibre financier de la sécurité sociale pour l’exercice 2027",
             "groupe": "DISPOSITIONS RELATIVES AUX RECETTES, AU RECOUVREMENT ET À LA TRÉSORERIE",
             "theme": "Sécurité sociale",
-            "importance": 1,
+            "importance": 3,
             "public": [
               "Social / paie"
             ],
-            "url": null
+            "url": null,
+            "rubrique": "Social et paie"
           },
           {
             "numero": "5",
@@ -2267,7 +2365,8 @@
             "public": [
               "Social / paie"
             ],
-            "url": null
+            "url": null,
+            "rubrique": null
           },
           {
             "numero": "6",
@@ -2275,11 +2374,12 @@
             "partie": "Dispositions relatives aux recettes et à l’équilibre financier de la sécurité sociale pour l’exercice 2027",
             "groupe": "DISPOSITIONS RELATIVES AUX RECETTES, AU RECOUVREMENT ET À LA TRÉSORERIE",
             "theme": "Sécurité sociale",
-            "importance": 1,
+            "importance": 5,
             "public": [
               "Social / paie"
             ],
-            "url": null
+            "url": null,
+            "rubrique": "Social et paie"
           },
           {
             "numero": "7",
@@ -2287,11 +2387,12 @@
             "partie": "Dispositions relatives aux recettes et à l’équilibre financier de la sécurité sociale pour l’exercice 2027",
             "groupe": "DISPOSITIONS RELATIVES AUX RECETTES, AU RECOUVREMENT ET À LA TRÉSORERIE",
             "theme": "Sécurité sociale",
-            "importance": 3,
+            "importance": 5,
             "public": [
               "Social / paie"
             ],
-            "url": null
+            "url": null,
+            "rubrique": "Social et paie"
           },
           {
             "numero": "8",
@@ -2299,11 +2400,12 @@
             "partie": "Dispositions relatives aux recettes et à l’équilibre financier de la sécurité sociale pour l’exercice 2027",
             "groupe": "DISPOSITIONS RELATIVES AUX RECETTES, AU RECOUVREMENT ET À LA TRÉSORERIE",
             "theme": "Sécurité sociale",
-            "importance": 1,
+            "importance": 3,
             "public": [
               "Social / paie"
             ],
-            "url": null
+            "url": null,
+            "rubrique": "Secteurs d’activité"
           },
           {
             "numero": "9",
@@ -2315,7 +2417,8 @@
             "public": [
               "Social / paie"
             ],
-            "url": null
+            "url": null,
+            "rubrique": null
           },
           {
             "numero": "10",
@@ -2327,7 +2430,8 @@
             "public": [
               "Social / paie"
             ],
-            "url": null
+            "url": null,
+            "rubrique": null
           },
           {
             "numero": "11",
@@ -2339,7 +2443,8 @@
             "public": [
               "Social / paie"
             ],
-            "url": null
+            "url": null,
+            "rubrique": null
           },
           {
             "numero": "12",
@@ -2347,11 +2452,12 @@
             "partie": "Dispositions relatives aux recettes et à l’équilibre financier de la sécurité sociale pour l’exercice 2027",
             "groupe": "« Contribution à la charge des groupements de pharmacies d’officine »",
             "theme": "Sécurité sociale",
-            "importance": 1,
+            "importance": 3,
             "public": [
               "Social / paie"
             ],
-            "url": null
+            "url": null,
+            "rubrique": "Secteurs d’activité"
           },
           {
             "numero": "13",
@@ -2363,7 +2469,8 @@
             "public": [
               "Social / paie"
             ],
-            "url": null
+            "url": null,
+            "rubrique": null
           },
           {
             "numero": "14",
@@ -2375,7 +2482,8 @@
             "public": [
               "Social / paie"
             ],
-            "url": null
+            "url": null,
+            "rubrique": null
           },
           {
             "numero": "15",
@@ -2387,7 +2495,8 @@
             "public": [
               "Social / paie"
             ],
-            "url": null
+            "url": null,
+            "rubrique": null
           },
           {
             "numero": "16",
@@ -2395,11 +2504,12 @@
             "partie": "Dispositions relatives aux recettes et à l’équilibre financier de la sécurité sociale pour l’exercice 2027",
             "groupe": "CONDITIONS GÉNÉRALES DE L’ÉQUILIBRE FINANCIER DE LA SÉCURITE SOCIALE",
             "theme": "Sécurité sociale",
-            "importance": 2,
+            "importance": 3,
             "public": [
               "Social / paie"
             ],
-            "url": null
+            "url": null,
+            "rubrique": "Finances publiques"
           },
           {
             "numero": "17",
@@ -2411,7 +2521,8 @@
             "public": [
               "Social / paie"
             ],
-            "url": null
+            "url": null,
+            "rubrique": null
           },
           {
             "numero": "18",
@@ -2423,7 +2534,8 @@
             "public": [
               "Social / paie"
             ],
-            "url": null
+            "url": null,
+            "rubrique": null
           },
           {
             "numero": "19",
@@ -2431,11 +2543,12 @@
             "partie": "Dispositions relatives aux recettes et à l’équilibre financier de la sécurité sociale pour l’exercice 2027",
             "groupe": "CONDITIONS GÉNÉRALES DE L’ÉQUILIBRE FINANCIER DE LA SÉCURITE SOCIALE",
             "theme": "Sécurité sociale",
-            "importance": 4,
+            "importance": 2,
             "public": [
               "Social / paie"
             ],
-            "url": null
+            "url": null,
+            "rubrique": null
           },
           {
             "numero": "20",
@@ -2443,11 +2556,12 @@
             "partie": "Dispositions relatives aux dépenses pour l’exercice 2027",
             "groupe": "RENFORCER L’ACCÈS AUX SOINS",
             "theme": "Sécurité sociale",
-            "importance": 1,
+            "importance": 4,
             "public": [
               "Social / paie"
             ],
-            "url": null
+            "url": null,
+            "rubrique": "Social et paie"
           },
           {
             "numero": "21",
@@ -2459,7 +2573,8 @@
             "public": [
               "Social / paie"
             ],
-            "url": null
+            "url": null,
+            "rubrique": null
           },
           {
             "numero": "22",
@@ -2471,7 +2586,8 @@
             "public": [
               "Social / paie"
             ],
-            "url": null
+            "url": null,
+            "rubrique": null
           },
           {
             "numero": "23",
@@ -2483,7 +2599,8 @@
             "public": [
               "Social / paie"
             ],
-            "url": null
+            "url": null,
+            "rubrique": null
           },
           {
             "numero": "24",
@@ -2495,7 +2612,8 @@
             "public": [
               "Social / paie"
             ],
-            "url": null
+            "url": null,
+            "rubrique": null
           },
           {
             "numero": "25",
@@ -2507,7 +2625,8 @@
             "public": [
               "Social / paie"
             ],
-            "url": null
+            "url": null,
+            "rubrique": null
           },
           {
             "numero": "26",
@@ -2519,7 +2638,8 @@
             "public": [
               "Social / paie"
             ],
-            "url": null
+            "url": null,
+            "rubrique": null
           },
           {
             "numero": "27",
@@ -2531,7 +2651,8 @@
             "public": [
               "Social / paie"
             ],
-            "url": null
+            "url": null,
+            "rubrique": null
           },
           {
             "numero": "28",
@@ -2543,7 +2664,8 @@
             "public": [
               "Social / paie"
             ],
-            "url": null
+            "url": null,
+            "rubrique": null
           },
           {
             "numero": "29",
@@ -2555,7 +2677,8 @@
             "public": [
               "Social / paie"
             ],
-            "url": null
+            "url": null,
+            "rubrique": null
           },
           {
             "numero": "30",
@@ -2567,7 +2690,8 @@
             "public": [
               "Social / paie"
             ],
-            "url": null
+            "url": null,
+            "rubrique": null
           },
           {
             "numero": "31",
@@ -2579,7 +2703,8 @@
             "public": [
               "Social / paie"
             ],
-            "url": null
+            "url": null,
+            "rubrique": null
           },
           {
             "numero": "32",
@@ -2591,7 +2716,8 @@
             "public": [
               "Social / paie"
             ],
-            "url": null
+            "url": null,
+            "rubrique": null
           },
           {
             "numero": "33",
@@ -2603,7 +2729,8 @@
             "public": [
               "Audit / CAC"
             ],
-            "url": null
+            "url": null,
+            "rubrique": null
           },
           {
             "numero": "34",
@@ -2611,11 +2738,12 @@
             "partie": "Dispositions relatives aux dépenses pour l’exercice 2027",
             "groupe": "PÉRENNISER LE SYSTÈME DE RETRAITES ET LE RENDRE PLUS ÉQUITABLE",
             "theme": "Sécurité sociale",
-            "importance": 2,
+            "importance": 4,
             "public": [
               "Social / paie"
             ],
-            "url": null
+            "url": null,
+            "rubrique": "Retraite"
           },
           {
             "numero": "35",
@@ -2623,11 +2751,12 @@
             "partie": "Dispositions relatives aux dépenses pour l’exercice 2027",
             "groupe": "PÉRENNISER LE SYSTÈME DE RETRAITES ET LE RENDRE PLUS ÉQUITABLE",
             "theme": "Sécurité sociale",
-            "importance": 2,
+            "importance": 4,
             "public": [
               "Social / paie"
             ],
-            "url": null
+            "url": null,
+            "rubrique": "Retraite"
           },
           {
             "numero": "36",
@@ -2635,11 +2764,12 @@
             "partie": "Dispositions relatives aux dépenses pour l’exercice 2027",
             "groupe": "GARANTIR L’EQUITE DES PRESTATIONS FAMILIALES",
             "theme": "Sécurité sociale",
-            "importance": 1,
+            "importance": 3,
             "public": [
               "Social / paie"
             ],
-            "url": null
+            "url": null,
+            "rubrique": "Secteurs d’activité"
           },
           {
             "numero": "37",
@@ -2651,7 +2781,8 @@
             "public": [
               "Social / paie"
             ],
-            "url": null
+            "url": null,
+            "rubrique": null
           },
           {
             "numero": "38",
@@ -2663,7 +2794,8 @@
             "public": [
               "Social / paie"
             ],
-            "url": null
+            "url": null,
+            "rubrique": null
           },
           {
             "numero": "39",
@@ -2675,7 +2807,8 @@
             "public": [
               "Social / paie"
             ],
-            "url": null
+            "url": null,
+            "rubrique": "Secteurs d’activité"
           },
           {
             "numero": "40",
@@ -2687,7 +2820,8 @@
             "public": [
               "Social / paie"
             ],
-            "url": null
+            "url": null,
+            "rubrique": null
           },
           {
             "numero": "41",
@@ -2699,7 +2833,8 @@
             "public": [
               "Social / paie"
             ],
-            "url": null
+            "url": null,
+            "rubrique": null
           },
           {
             "numero": "42",
@@ -2711,7 +2846,8 @@
             "public": [
               "Social / paie"
             ],
-            "url": null
+            "url": null,
+            "rubrique": null
           },
           {
             "numero": "43",
@@ -2723,7 +2859,8 @@
             "public": [
               "Social / paie"
             ],
-            "url": null
+            "url": null,
+            "rubrique": null
           },
           {
             "numero": "44",
@@ -2735,7 +2872,8 @@
             "public": [
               "Expertise comptable"
             ],
-            "url": null
+            "url": null,
+            "rubrique": null
           },
           {
             "numero": "45",
@@ -2747,7 +2885,8 @@
             "public": [
               "Social / paie"
             ],
-            "url": null
+            "url": null,
+            "rubrique": null
           },
           {
             "numero": "46",
@@ -2759,7 +2898,8 @@
             "public": [
               "Social / paie"
             ],
-            "url": null
+            "url": null,
+            "rubrique": null
           },
           {
             "numero": "47",
@@ -2771,7 +2911,8 @@
             "public": [
               "Social / paie"
             ],
-            "url": null
+            "url": null,
+            "rubrique": null
           },
           {
             "numero": "48",
@@ -2783,9 +2924,14 @@
             "public": [
               "Social / paie"
             ],
-            "url": null
+            "url": null,
+            "rubrique": null
           }
-        ]
+        ],
+        "hierarchie": {
+          "origine": "pole",
+          "etablie_le": "2026-10-08"
+        }
       }
     }
   },
