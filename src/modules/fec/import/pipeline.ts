@@ -145,11 +145,14 @@ async function importer(source: Source, options: OptionsImport): Promise<Resulta
   const detection = detecterEncodage(echantillon);
   const encodage = options.encodage ?? detection.encodage;
   const decodeur = new Decodeur(encodage);
-  const constructeur = new ConstructeurColonnes(Math.max(65_536, Math.ceil(options.taille / 110)));
   const nomFichier = lireNomFichier(options.nomFichier);
 
   // Détection du format sur le début du texte.
-  const texteDebut = new Decodeur(encodage).decoder(echantillon, false).replace(/^﻿/, '');
+  const texteDebut = new Decodeur(encodage).decoder(echantillon, false).replace(/^\ufeff/, '');
+  // Capacité initiale estimée d'après la longueur moyenne des lignes de l'échantillon (+10 %).
+  const lignesEchantillon = Math.max(1, (texteDebut.match(/\n|\r(?!\n)/g) ?? []).length);
+  const octetsParLigne = Math.max(40, echantillon.length / lignesEchantillon);
+  const constructeur = new ConstructeurColonnes(Math.max(1024, Math.ceil((options.taille / octetsParLigne) * 1.1)));
   const xml = /^\s*<\?xml|^\s*<comptabilite[\s>]/.test(texteDebut);
   let octetsLus = 0;
   let lignesLues = 0;
@@ -224,7 +227,7 @@ async function importer(source: Source, options: OptionsImport): Promise<Resulta
     }
     separateur = structure.separateur;
     guillemets = structure.guillemets;
-    const premiere = decouper(premieresLignes[0]!.replace(/^﻿/, ''), separateur, guillemets);
+    const premiere = decouper(premieresLignes[0]!.replace(/^\ufeff/, ''), separateur, guillemets);
     const avecEntete = options.sansEntete ? false : estEntete(premiere);
     const entetes = avecEntete ? premiere : premiere.map((_, i) => `Colonne ${i + 1}`);
     signature = avecEntete ? signatureEntete(premiere) : null;

@@ -30,6 +30,26 @@ function centimesDecimales(decimales: string): number {
  * notation scientifique. `xml` : le point décimal est la norme.
  */
 export function lireMontant(texte: string, xml = false): Montant {
+  // Chemin rapide : format conforme « 1234,56 » (ou « 1234.56 » en XML), sans signe.
+  const sep = xml ? 46 : 44;
+  const n = texte.length;
+  if (n >= 4 && n <= 17 && texte.charCodeAt(n - 3) === sep) {
+    let entiers = 0;
+    let ok = true;
+    for (let i = 0; i < n - 3; i++) {
+      const c = texte.charCodeAt(i) - 48;
+      if (c < 0 || c > 9) {
+        ok = false;
+        break;
+      }
+      entiers = entiers * 10 + c;
+    }
+    const d1 = texte.charCodeAt(n - 2) - 48;
+    const d2 = texte.charCodeAt(n - 1) - 48;
+    if (ok && d1 >= 0 && d1 <= 9 && d2 >= 0 && d2 <= 9) {
+      return { centimes: entiers * 100 + d1 * 10 + d2, vide: false, invalide: false, pointDecimal: false, milliers: false, signe: false };
+    }
+  }
   let t = texte.trim();
   if (t === '') return MONTANT_VIDE;
   let negatif = false;
@@ -123,6 +143,24 @@ const JMA = new RegExp(String.raw`^(\d{2})[-/.](\d{2})[-/.](\d{4})${HEURE}$`);
 
 /** Lit une date FEC (AAAAMMJJ), en tolérant AAAA-MM-JJ, JJ/MM/AAAA et une heure accolée. `xml` : AAAA-MM-JJ est la norme. */
 export function lireDate(texte: string, xml = false): DateLue {
+  // Chemin rapide : AAAAMMJJ (à plat) ou AAAA-MM-JJ (XML).
+  if (!xml && texte.length === 8) {
+    let v = 0;
+    for (let i = 0; i < 8; i++) {
+      const c = texte.charCodeAt(i) - 48;
+      if (c < 0 || c > 9) {
+        v = -1;
+        break;
+      }
+      v = v * 10 + c;
+    }
+    if (v > 0) {
+      const a = Math.floor(v / 10000);
+      const m = Math.floor(v / 100) % 100;
+      const j = v % 100;
+      return dateExiste(a, m, j) ? { valeur: v, horsFormat: false, zeros: false } : { valeur: -1, horsFormat: false, zeros: false };
+    }
+  }
   const t = texte.trim();
   if (t === '') return { valeur: 0, horsFormat: false, zeros: false };
   if (/^[0\-/. :T]+$/.test(t)) return { valeur: 0, horsFormat: false, zeros: true };

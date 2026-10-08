@@ -80,7 +80,7 @@ export class ConstructeurColonnes {
   private n = 0;
   private readonly dictionnaire = new Map<string, number>([['', 0]]);
   private readonly textes: string[] = [''];
-  private readonly ecritures = new Map<string, number>();
+  private readonly ecritures = new Map<number, number>();
   private colonnes: Record<string, Tableau>;
 
   constructor(capaciteInitiale = 65_536) {
@@ -107,9 +107,25 @@ export class ConstructeurColonnes {
     let i = this.dictionnaire.get(valeur);
     if (i === undefined) {
       i = this.textes.length;
-      this.textes.push(valeur);
-      this.dictionnaire.set(valeur, i);
+      // Copie à plat : une sous-chaîne V8 retiendrait en mémoire tout le morceau de fichier dont elle est issue.
+      const copie = valeur.length > 12 ? (valeur + ' ').slice(0, -1) : valeur;
+      this.textes.push(copie);
+      this.dictionnaire.set(copie, i);
     }
+    return i;
+  }
+
+  /** Dernière valeur vue par colonne : les zones d'écriture se répètent d'une ligne à la suivante. */
+  private readonly derniers = new Map<string, [string, number]>();
+
+  private texteColonne(colonne: string, valeur: string): number {
+    const d = this.derniers.get(colonne);
+    if (d && d[0] === valeur) return d[1];
+    const i = this.texte(valeur);
+    if (d) {
+      d[0] = valeur;
+      d[1] = i;
+    } else this.derniers.set(colonne, [valeur, i]);
     return i;
   }
 
@@ -122,19 +138,42 @@ export class ConstructeurColonnes {
       this.capacite *= 2;
     }
     const i = this.n++;
-    const c = this.colonnes;
-    for (const nom of COLONNES_TEXTE) c[nom]![i] = this.texte(l[nom]);
-    for (const nom of COLONNES_DATE) c[nom]![i] = l[nom];
-    for (const nom of COLONNES_MONTANT) c[nom]![i] = l[nom];
-    c.ligneOrigine![i] = l.ligneOrigine;
-    const cle = `${c.journalCode![i]}\u0000${c.ecritureNum![i]}`;
+    const c = this.colonnes as Record<'ligneOrigine' | 'ecriture' | ColonneTexte, Uint32Array> &
+      Record<ColonneDate, Int32Array> &
+      Record<ColonneMontant, Float64Array>;
+    // Affectations déroulées : nettement plus rapides qu'une boucle sur les noms de colonnes.
+    c.journalCode[i] = this.texteColonne('journalCode', l.journalCode);
+    c.journalLib[i] = this.texteColonne('journalLib', l.journalLib);
+    c.ecritureNum[i] = this.texteColonne('ecritureNum', l.ecritureNum);
+    c.compteNum[i] = this.texteColonne('compteNum', l.compteNum);
+    c.compteLib[i] = this.texteColonne('compteLib', l.compteLib);
+    c.compAuxNum[i] = this.texteColonne('compAuxNum', l.compAuxNum);
+    c.compAuxLib[i] = this.texteColonne('compAuxLib', l.compAuxLib);
+    c.pieceRef[i] = this.texteColonne('pieceRef', l.pieceRef);
+    c.ecritureLib[i] = this.texteColonne('ecritureLib', l.ecritureLib);
+    c.ecritureLet[i] = this.texteColonne('ecritureLet', l.ecritureLet);
+    c.idevise[i] = this.texteColonne('idevise', l.idevise);
+    c.modeRglt[i] = this.texteColonne('modeRglt', l.modeRglt);
+    c.natOp[i] = this.texteColonne('natOp', l.natOp);
+    c.idClient[i] = this.texteColonne('idClient', l.idClient);
+    c.ecritureDate[i] = l.ecritureDate;
+    c.pieceDate[i] = l.pieceDate;
+    c.validDate[i] = l.validDate;
+    c.dateLet[i] = l.dateLet;
+    c.dateRglt[i] = l.dateRglt;
+    c.debit[i] = l.debit;
+    c.credit[i] = l.credit;
+    c.montantDevise[i] = l.montantDevise;
+    c.ligneOrigine[i] = l.ligneOrigine;
+    // Clé numérique JournalCode × 2^32 + EcritureNum (indices du dictionnaire, < 2^53).
+    const cle = c.journalCode[i]! * 4294967296 + c.ecritureNum[i]!;
     let e = this.ecritures.get(cle);
     const nouvelle = e === undefined;
     if (e === undefined) {
       e = this.ecritures.size;
       this.ecritures.set(cle, e);
     }
-    c.ecriture![i] = e;
+    c.ecriture[i] = e;
     return { ecriture: e, nouvelle };
   }
 

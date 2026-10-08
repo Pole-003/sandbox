@@ -205,7 +205,7 @@ const WINDOWS_1252: Record<string, number> = {
 
 export function encoder(texte: string, encodage: Encodage): Uint8Array {
   if (encodage === 'utf-8') return new TextEncoder().encode(texte);
-  if (encodage === 'utf-8-bom') return new TextEncoder().encode(`﻿${texte}`);
+  if (encodage === 'utf-8-bom') return new TextEncoder().encode(`\ufeff${texte}`);
   const table = encodage === 'iso-8859-15' ? ISO_8859_15 : WINDOWS_1252;
   const octets = new Uint8Array(texte.length);
   let i = 0;
