@@ -33,7 +33,7 @@ export function estNews(v: unknown): v is NewsJson {
 }
 
 export function estEtat(v: unknown): v is EtatVeille {
-  return estObjet(v) && v.version === 1 && Array.isArray(v.sources) && estObjet(v.couche_c) && estObjet(v.couts);
+  return estObjet(v) && v.version === 2 && Array.isArray(v.sources) && estObjet(v.recherche_ia) && estObjet(v.classement);
 }
 
 let enCours: Promise<Chargement<NewsJson>> | null = null;

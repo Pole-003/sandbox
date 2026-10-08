@@ -2,10 +2,10 @@ import { readFileSync } from 'node:fs';
 import { describe, expect, it } from 'vitest';
 import type { Article } from '../../src/modules/veille/modele.ts';
 import { correspondMotsCles } from '../../scripts/veille/couche-a.ts';
-import { Budget, NANO_PAR_RECHERCHE, ajouterDepense, coutReponse, depuisDollars, enDollars } from '../../scripts/veille/couts.ts';
+import { classer, contientMot, importanceDepuisScore, type MotsCles } from '../../scripts/veille/classement.ts';
 import { decoderOctets, lireEncodageDeclare } from '../../scripts/veille/encodage.ts';
-import { decoderEntites, lireFlux } from '../../scripts/veille/flux.ts';
-import { appliquerNotes, empreinteNews, fusionnerArticles, repartirConservation, reunir } from '../../scripts/veille/fusion.ts';
+import { decoderEntites, lireFlux, resumeDepuisDescription } from '../../scripts/veille/flux.ts';
+import { appliquerClassement, empreinteNews, fusionnerArticles, repartirConservation } from '../../scripts/veille/fusion.ts';
 import { dedoublonner, idArticle, normaliserUrl, similariteTitres } from '../../scripts/veille/normalisation.ts';
 
 const texteFixture = (nom: string) => {
@@ -89,29 +89,10 @@ const article = (champs: Partial<Article>): Article => ({
 });
 
 describe('veille · fusion', () => {
-  it('A et C : métadonnées de A, résumé et notation de C, quel que soit l’ordre', () => {
-    const a = article({ titre: 'Titre officiel', source: 'Sénat', source_id: 'senat-textes', date: '2026-10-07', collecte_le: '2026-10-07' });
-    const c = article({ titre: 'Titre reformulé', source: 'Presse', origine: 'recherche_ia', resume: 'Résumé IA.', importance: 4, public: ['Audit / CAC'], type: 'texte_officiel', date: '2026-10-08' });
-    for (const r of [reunir(a, c), reunir(c, a)]) {
-      expect(r).toMatchObject({ titre: 'Titre officiel', source: 'Sénat', source_id: 'senat-textes', date: '2026-10-07', resume: 'Résumé IA.', importance: 4, origine: 'flux_et_ia', collecte_le: '2026-10-07' });
-    }
-  });
-
-  it('un article déjà publié garde sa date de première collecte et sa note', () => {
-    const ancien = article({ importance: 3, resume: 'Ancien résumé.', collecte_le: '2026-10-05' });
-    const [r] = fusionnerArticles([ancien], [article({ collecte_le: '2026-10-08' })]);
-    expect(r).toMatchObject({ importance: 3, resume: 'Ancien résumé.', collecte_le: '2026-10-05' });
-  });
-
-  it('notes : appliquées ; importance 1 conservée (pour ne pas renoter) et comptée', () => {
-    const notes = new Map([
-      ['a', { id: 'a', theme: 'Sécurité sociale' as const, importance: 4 as const, public: ['Expertise comptable' as const], type: 'doctrine' as const, resume: 'Résumé.' }],
-      ['b', { id: 'b', theme: 'Fiscal et comptable' as const, importance: 1 as const, public: [], type: 'presse' as const, resume: null }],
-    ]);
-    const r = appliquerNotes([article({ id: 'a' }), article({ id: 'b' }), article({ id: 'c' })], notes);
-    expect(r.marginaux).toBe(1);
-    expect(r.articles.map((x) => [x.id, x.importance, x.resume])).toEqual([['a', 4, 'Résumé.'], ['b', 1, null], ['c', null, null]]);
-    expect(r.articles[0]?.theme).toBe('Sécurité sociale'); // thème corrigé par la notation
+  it('un article déjà publié garde sa date de première collecte ; un résumé manquant est complété', () => {
+    const ancien = article({ resume: null, collecte_le: '2026-10-05' });
+    const [r] = fusionnerArticles([ancien], [article({ resume: 'Extrait du flux.', collecte_le: '2026-10-08' })]);
+    expect(r).toMatchObject({ resume: 'Extrait du flux.', collecte_le: '2026-10-05' });
   });
 
   it('conservation : 60 jours en ligne, le reste archivé par mois', () => {
@@ -129,37 +110,86 @@ describe('veille · fusion', () => {
   });
 });
 
-describe('veille · coûts', () => {
-  it('jetons et recherches au tarif du modèle (Claude Sonnet 5.5 : 2 $ / 10 $ par million)', () => {
-    const c = coutReponse({ input_tokens: 12_000, output_tokens: 1_500, server_tool_use: { web_search_requests: 3 } }, 'claude-sonnet-5-5');
-    // 12 000 × 2 µ$ + 1 500 × 10 µ$ = 0,039 $ ; 3 recherches = 0,03 $
-    expect(enDollars(c.nano)).toBe(0.069);
-    expect(c).toMatchObject({ recherches: 3, tarifConnu: true });
+describe('veille · résumé repris du flux', () => {
+  it('nettoie le HTML et tronque à 300 caractères entre deux mots, sans reformuler', () => {
+    const long = `<p>Le <b>Sénat</b> a adopté&nbsp;le texte.</p> ${'Mot '.repeat(120)}`;
+    const r = resumeDepuisDescription(long, 'Titre', 300)!;
+    expect(r.startsWith('Le Sénat a adopté le texte. Mot Mot')).toBe(true); // espaces (y compris insécables) normalisées
+    expect(r.length).toBeLessThanOrEqual(300);
+    expect(r.endsWith('Mot…')).toBe(true);
+    expect(resumeDepuisDescription('Court texte.', 'Titre', 300)).toBe('Court texte.');
   });
 
-  it('cache : écriture 1,25 ×, lecture 0,1 × ; Haiku au tarif long au-delà de 100 000 jetons', () => {
-    expect(enDollars(coutReponse({ input_tokens: 0, output_tokens: 0, cache_creation_input_tokens: 1_000_000, cache_read_input_tokens: 1_000_000 }, 'claude-sonnet-5-5').nano)).toBe(2.7);
-    expect(enDollars(coutReponse({ input_tokens: 200_000, output_tokens: 0 }, 'claude-haiku-5-5').nano)).toBe(0.1);
+  it('description vide ou identique au titre : pas de résumé', () => {
+    expect(resumeDepuisDescription('', 'Titre', 300)).toBeNull();
+    expect(resumeDepuisDescription('<p>Mon titre</p>', 'Mon Titre', 300)).toBeNull();
+  });
+});
+
+const REGLES: MotsCles = {
+  seuils_importance: { '5': 9, '4': 6, '3': 3, '2': 1 },
+  bonus_sources: { 'bofip-actualites': 2 },
+  exclusions: ['compte rendu de réunion'],
+  themes: {
+    'Loi de finances': { public_par_defaut: ['Expertise comptable', 'Conseil aux dirigeants'], mots_cles: { 'projet de loi de finances': 6, plf: 5, budget: 1 }, exclusions: [] },
+    'Fiscal et comptable': { public_par_defaut: ['Expertise comptable'], mots_cles: { tva: 3, 'impôt': 2, comptab: 3 }, exclusions: ['taxe de séjour'] },
+    'Rennes et Bretagne': { public_par_defaut: ['Conseil aux dirigeants'], mots_cles: { rennes: 5, bretagne: 4 }, exclusions: [] },
+  },
+  publics: { 'Audit / CAC': ['commissaire aux comptes'], 'Social / paie': ['cotisation'] },
+};
+const aClasser = (titre: string, resume: string | null = null, source_id: string | null = 'senat-textes', theme: Article['theme'] = 'Loi de finances') => ({ titre, resume, source_id, theme });
+
+describe('veille · classement par mots-clés', () => {
+  it('début de mot, sans accents ni majuscules', () => {
+    expect(contientMot('regles comptables', 'comptab')).toBe(true);
+    expect(contientMot('la tva intracommunautaire', 'TVA')).toBe(true);
+    expect(contientMot('activite ovine', 'tva')).toBe(false);
+    expect(contientMot('impot sur le revenu', 'impôt')).toBe(true);
   });
 
-  it('détail par tentative prioritaire, modèle inconnu au tarif le plus élevé', () => {
-    const c = coutReponse(
-      { input_tokens: 1, output_tokens: 1, iterations: [{ type: 'message', model: 'claude-sonnet-5-5', input_tokens: 1_000_000, output_tokens: 0 }, { type: 'fallback_message', model: 'modele-futur', input_tokens: 1_000_000, output_tokens: 0 }] },
-      'claude-sonnet-5-5',
-    );
-    expect(enDollars(c.nano)).toBe(12);
-    expect(c.tarifConnu).toBe(false);
-    expect(NANO_PAR_RECHERCHE).toBe(10_000_000);
+  it('thème au score le plus élevé, importance selon les seuils, public par défaut du thème', () => {
+    const c = classer(aClasser('Projet de loi de finances pour 2027 : le PLF adopté', 'Budget de l’État.'), REGLES);
+    expect(c).toMatchObject({ exclu: false, theme: 'Loi de finances', score: 12, importance: 5, public: ['Expertise comptable', 'Conseil aux dirigeants'] });
+    const tva = classer(aClasser('TVA : nouvelles règles comptables', null, 'senat-textes', 'Loi de finances'), REGLES);
+    expect(tva).toMatchObject({ theme: 'Fiscal et comptable', score: 6, importance: 4 });
   });
 
-  it('cumul mensuel et plafond', () => {
-    let couts = ajouterDepense({ mois: {} }, '2026-10-07', depuisDollars(1.5));
-    couts = ajouterDepense(couts, '2026-10-08', depuisDollars(0.25));
-    expect(couts.mois['2026-10']).toEqual({ total_usd: 1.75, jours: { '2026-10-07': 1.5, '2026-10-08': 0.25 } });
-    const budget = new Budget(couts, '2026-10-08', depuisDollars(2));
-    expect(budget.depasse()).toBe(false);
-    budget.imputer(depuisDollars(0.25));
-    expect(budget.depasse()).toBe(true);
-    expect(new Budget(couts, '2026-11-02', depuisDollars(2)).depasse()).toBe(false); // nouveau mois
+  it('aucun mot-clé : thème de la source et importance 1 (marginal)', () => {
+    expect(classer(aClasser('Accélérer la médecine nucléaire'), REGLES)).toMatchObject({ theme: 'Loi de finances', importance: 1, score: 0 });
+  });
+
+  it('bonus de source ajouté au score', () => {
+    expect(classer(aClasser('Précisions sur la TVA', null, 'bofip-actualites', 'Fiscal et comptable'), REGLES)).toMatchObject({ score: 5, importance: 3 });
+  });
+
+  it('public : déduit des mots-clés de public, sinon celui du thème', () => {
+    expect(classer(aClasser('Cotisations : le rôle du commissaire aux comptes en Bretagne'), REGLES).public).toEqual(['Audit / CAC', 'Social / paie']);
+  });
+
+  it('exclusions : générale (non publié) et de thème (thème interdit)', () => {
+    expect(classer(aClasser('Compte rendu de réunion n° 5'), REGLES).exclu).toBe(true);
+    expect(classer(aClasser('TVA et taxe de séjour à Rennes'), REGLES)).toMatchObject({ exclu: false, theme: 'Rennes et Bretagne' });
+  });
+
+  it('seuils : premier seuil atteint en partant du plus haut', () => {
+    expect([0, 1, 3, 6, 9, 20].map((s) => importanceDepuisScore(s, REGLES.seuils_importance))).toEqual([1, 2, 3, 4, 5, 5]);
+  });
+
+  it('appliqué à la publication : exclus retirés, thème de départ = thème de la source', () => {
+    const articles = [
+      article({ id: '1', titre: 'Compte rendu de réunion', source_id: 'senat-textes' }),
+      article({ id: '2', titre: 'Le PLF adopté', theme: 'Fiscal et comptable', source_id: 'senat-textes' }),
+      article({ id: '3', titre: 'Sans mot-clé', source_id: 'senat-textes', theme: 'Fiscal et comptable' }),
+    ];
+    const r = appliquerClassement(articles, REGLES, () => 'Loi de finances');
+    expect(r).toMatchObject({ exclus: 1, marginaux: 1 });
+    expect(r.articles.map((a) => [a.id, a.theme, a.importance])).toEqual([['2', 'Loi de finances', 3], ['3', 'Loi de finances', 1]]);
+  });
+
+  it('le fichier veille/mots-cles.json du dépôt est valide', async () => {
+    const { verifierMotsCles } = await import('../../scripts/veille/classement.ts');
+    const regles = JSON.parse(readFileSync(new URL('../../veille/mots-cles.json', import.meta.url), 'utf8')) as MotsCles;
+    expect(() => verifierMotsCles(regles)).not.toThrow();
+    expect(Object.keys(regles.themes)).toHaveLength(6);
   });
 });

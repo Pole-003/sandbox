@@ -5,10 +5,12 @@ Toutes les évolutions notables de la Sandbox Pôle 003. Format inspiré de « K
 ## [0.3.0] - 2026-10-08
 
 ### Ajouté
-- Veille : collecte automatique chaque jour ouvré à 6 h 30 (et à la demande) par GitHub Actions. Le navigateur ne contacte jamais les sites sources : il ne charge que les fichiers publiés avec le site.
+- Veille, gratuite (0 €) : collecte automatique chaque jour ouvré à 6 h 30 (et à la demande) par GitHub Actions, sans aucun service d'IA. Le navigateur ne contacte jamais les sites sources : il ne charge que les fichiers publiés avec le site.
 - Flux officiels vérifiés : BOFiP, Sénat (textes, rapports, thèmes budget, fiscalité, entreprises, PME, sécurité sociale), Assemblée nationale (publications filtrées par mots-clés, commissions des finances, des affaires sociales et économiques), Conseil d'État, et suivi du dossier législatif du PLF 2027.
-- Recherche IA quotidienne par thème (loi de finances, sécurité sociale, fiscal et comptable, audit et profession, économie et statistiques, Rennes et Bretagne), avec contrôles automatiques : URL obligatoirement issues des résultats de recherche, dates dans la fenêtre de veille, plafond de dépense mensuel.
-- Écran Veille : fil filtrable par thème, source, importance et public, recherche locale, marques « lu » et « important pour nos dossiers » conservées dans le navigateur ; suivi PLF / PLFSS ; indicateurs (badge « Source IA, à vérifier ») ; Rennes et Bretagne ; état des sources et coûts.
+- API officielles gratuites (PISTE, INSEE, Banque de France, BODACC) prévues et facultatives : sans identifiants, elles sont signalées « non configurées » sans bloquer la collecte.
+- Classement par mots-clés modifiable (`veille/mots-cles.json`) : thème, importance de 1 à 5, public concerné, mots d'exclusion. Les informations marginales sont masquées par défaut.
+- Extraits repris tels quels des flux officiels, nettoyés et limités à 300 caractères.
+- Écran Veille : fil filtrable par thème, source, importance et public, recherche locale, marques « lu » et « important pour nos dossiers » conservées dans le navigateur ; suivi PLF / PLFSS (saisi à la main) ; indicateurs ; Rennes et Bretagne ; état des sources.
 - Accueil : brief du jour (5 informations d'importance 4 ou 5) et prochaines échéances PLF et PLFSS.
 
 ## [0.2.0] - 2026-10-08

@@ -2,6 +2,8 @@
 
 Ce document remplace la section 2 de `docs/SPEC.md` pour tout ce qui concerne la collecte. Le catalogue des sources est dans `veille/sources.json`.
 
+**Veille à 0 € (décision du 08/10/2026)** : aucun appel à l'API Claude ni à un autre service d'IA, ni automatique ni manuel. La recherche IA est décrite plus bas pour mémoire, dans « Plus tard : recherche IA (désactivée) ». Le paramètre `"recherche_ia": false` de `veille/config.json` le rappelle ; la collecte refuse de démarrer s'il vaut `true`, puisque le code correspondant n'existe pas.
+
 ## Pourquoi les tentatives précédentes échouaient
 
 Constats faits le 08/10/2026 en testant les sources une par une :
@@ -9,18 +11,18 @@ Constats faits le 08/10/2026 en testant les sources une par une :
 | Problème | Exemples | Parade |
 |---|---|---|
 | La liste des flux est générée en JavaScript : on ne trouve pas l'URL du flux en lisant la page | BOFiP, INSEE, CNCC | Utiliser les URL de flux directes du catalogue (déjà trouvées) |
-| Le site bloque les robots par un défi JavaScript ou cookies | vie-publique.fr, cncc.fr | Couche C (recherche IA côté serveur) |
+| Le site bloque les robots par un défi JavaScript ou cookies | vie-publique.fr, cncc.fr | Pas de parade gratuite pour l'instant : source écartée (la recherche IA, qui la contournait, est désactivée) |
 | Le flux annonce un encodage faux | Sénat : déclare `iso-8859-15` mais contient de l'UTF-8 | Décoder les octets soi-même : essayer UTF-8 strict, sinon l'encodage déclaré |
 | Dates absentes ou mal formées | BOFiP : pas de `pubDate` (date dans la description) ; Sénat : `Wed,07 Oct` sans espace | Parseur de date tolérant + extraction par expression régulière dans la description |
 | Liens en `http://` | Assemblée nationale, BOFiP (canal) | Réécrire en `https://` |
 | Pages qui n'existent plus (404) | anciennes pages « flux RSS » de plusieurs sites | Health-check quotidien, la source est marquée « en panne » sans faire échouer le reste |
-| `robots.txt` interdit l'accès | Google News RSS, certaines API publiques | Ne jamais contourner ; passer par une API officielle ou par la couche C |
+| `robots.txt` interdit l'accès | Google News RSS, certaines API publiques | Ne jamais contourner ; passer par une API officielle (couche B) |
 
 Règle d'or : **une source en échec ne doit jamais faire échouer la collecte.** Chaque source est isolée (try/catch, délai maximal de 20 s, 2 nouvelles tentatives espacées), et son état est consigné dans `public/veille-etat.json`.
 
-## Architecture en trois couches
+## Architecture : couches A et B (0 €)
 
-Le workflow GitHub Actions `veille.yml` tourne chaque jour ouvré à 6 h 30 (heure de Paris) et sur déclenchement manuel. Il exécute les trois couches dans l'ordre, fusionne, déduplique, puis publie `public/news.json`.
+Le workflow GitHub Actions `veille.yml` tourne chaque jour ouvré à 6 h 30 (heure de Paris) et sur déclenchement manuel. Il exécute les couches A et B, fusionne, déduplique, classe par mots-clés, puis publie `public/news.json` et `public/veille-etat.json`. Coût : 0 € (sources publiques gratuites, minutes GitHub Actions d'un dépôt public).
 
 ### Couche A — Flux RSS/Atom vérifiés (gratuit, fiable)
 Lecture directe des flux listés dans `veille/sources.json` avec `"type": "rss"`. En-tête `User-Agent` explicite (`Pole003-Veille/1.0 (+https://pole-003.github.io/sandbox)`), respect du `robots.txt`, au plus 1 requête par seconde et par domaine.
@@ -32,9 +34,59 @@ Sources structurées, beaucoup plus fiables que le scraping. Clés stockées en 
 - **Banque de France Webstat** (compte gratuit) : taux, défaillances d'entreprises.
 - **BODACC** (open data DILA) : annonces commerciales filtrées sur le département 35 (créations, ventes de fonds, procédures collectives) pour la rubrique Rennes. Vérifier l'URL d'API et les conditions d'utilisation.
 
-Chaque API est optionnelle : si le secret n'est pas configuré, la couche saute cette source et le signale dans l'état.
+Chaque API est optionnelle. Les noms des secrets attendus figurent dans le champ `secret` du catalogue (`PISTE_CLIENT_ID` et `PISTE_CLIENT_SECRET`, `INSEE_API_KEY`, `BDF_API_KEY`) ; le workflow les transmet à la seule étape de collecte. Sans identifiants, l'API est sautée et signalée « non configurée » dans `veille-etat.json`, sans bloquer la collecte. Les messages ne citent que le nom des variables manquantes, jamais leur valeur.
 
-### Couche C — Recherche IA quotidienne (payant, la parade universelle)
+Chaque API a besoin d'un connecteur (`scripts/veille/couche-b.ts`). Un connecteur n'est ajouté qu'après validation de l'API par du code exécuté dans GitHub Actions, comme pour les flux ; tant qu'il manque, l'API est signalée « non configurée (connecteur à développer) ».
+
+## Fusion, déduplication et classement
+
+- Clé de déduplication : URL normalisée (https, sans paramètres de suivi `utm_*`, sans `#`), puis similarité de titre. Un article déjà publié garde sa date de première collecte ; un résumé manquant est complété.
+- **Résumé** : la description fournie par le flux, nettoyée du HTML et tronquée à 300 caractères (`longueur_resume` de `config.json`), coupée entre deux mots. Aucune reformulation. Pas de description (ou description identique au titre) : pas de résumé.
+- **Classement par mots-clés** (`veille/mots-cles.json`, sans IA), recalculé à chaque exécution pour que toute modification des règles s'applique aussi aux articles déjà publiés :
+  - texte examiné : titre et résumé, sans accents ni majuscules ; un mot-clé reconnaît le début d'un mot (« comptab » trouve « comptabilité ») ;
+  - score d'un thème : somme des poids des mots-clés trouvés (chacun une fois), plus le bonus éventuel de la source (`bonus_sources`) ;
+  - thème : celui au score le plus élevé, à défaut celui de la source dans le catalogue ;
+  - importance de 1 à 5 : premier seuil atteint dans `seuils_importance` ; en dessous du seuil 2, importance 1 (marginal, conservé mais masqué par défaut à l'écran) ;
+  - public : publics dont un mot-clé (`publics`) est trouvé, à défaut le public par défaut du thème ;
+  - exclusions : un mot de la liste générale retire l'article de la publication ; une exclusion propre à un thème empêche seulement d'attribuer ce thème.
+- Type de publication (texte officiel, doctrine, jurisprudence…) : celui de la source (`type_article` du catalogue).
+- Conservation : 60 jours glissants dans `public/news.json` ; au-delà, archivage mensuel dans `public/archives/AAAA-MM.json`.
+
+## Droits et citation
+
+- On publie uniquement : titre, émetteur, date, lien, et l'extrait fourni par la source dans son flux, tronqué à 300 caractères. Jamais le texte intégral. Les sources de la couche A sont des publications officielles, pas de la presse.
+- Mention visible de la source sous chaque article (exigée notamment par le BOFiP).
+- Respect du `robots.txt` et des conditions d'utilisation de chaque site et API.
+
+## Écrans
+
+- **Brief du jour** (accueil) : les 5 articles d'importance 4 ou 5 les plus récents, tous thèmes confondus, plus la prochaine échéance du PLF et du PLFSS.
+- **Veille** : fil filtrable par thème, source, importance et public ; recherche locale ; marquage « lu » et « important pour nos dossiers » en local.
+- **Suivi PLF / PLFSS** : frise des étapes saisie à la main dans `veille/suivi.json` (faute de source automatique gratuite et fiable), complétée par les changements détectés sur la page du dossier législatif du PLF.
+- **Indicateurs** : tuiles (valeur, période, source, date) alimentées par la couche B (INSEE, Banque de France) une fois configurée.
+- **Rennes et Bretagne** : fil dédié et, si la couche B BODACC est active, compteurs hebdomadaires des créations et procédures collectives en Ille-et-Vilaine.
+- **État des sources** : tableaux de `veille-etat.json` pour les flux (couche A) et les API (couche B, dont « non configurée ») : dernière réussite, erreurs, nombre d'articles ; bilan du classement ; recherche IA désactivée ; coût 0 €.
+
+## État de réalisation (08/10/2026)
+
+| Élément | État |
+|---|---|
+| Diagnostic des sources (`npm run veille:test`, workflow `veille-diagnostic.yml`) | Fait |
+| Couche A (flux RSS/Atom, page du dossier PLF) | Fait |
+| Couche B (API PISTE, INSEE, Banque de France, BODACC) | Cadre fait (API optionnelles, « non configurée » sans identifiants) ; connecteurs à développer et valider un par un |
+| Classement par mots-clés (`veille/mots-cles.json`) | Fait |
+| Résumés repris des flux (300 caractères) | Fait |
+| Fusion, 60 jours glissants, archives mensuelles | Fait |
+| Workflow `veille.yml` (couches A et B, 0 €) | Fait |
+| Suivi PLF / PLFSS (`veille/suivi.json`, saisie manuelle) | Fait |
+| Écrans (brief, veille, suivi, indicateurs, Rennes, état des sources) | Fait. Indicateurs et compteurs BODACC en attente de la couche B |
+| Recherche IA (couche C) et notation IA | Désactivées : code retiré, description conservée ci-dessous |
+
+## Plus tard : recherche IA (désactivée)
+
+> **Désactivée le 08/10/2026 : la veille doit fonctionner à 0 €.** Le code correspondant a été retiré (scripts, dépendance au SDK, secret `ANTHROPIC_API_KEY` dans les workflows). Ce qui suit est conservé pour mémoire, au cas où la décision serait revue ; il faudrait alors repasser par une validation explicite du budget.
+
+### Principe
 Pour tout ce que A et B ne couvrent pas (sites protégés, presse économique, actualité de Rennes, analyses du PLF), le workflow appelle l'API Claude avec l'**outil de recherche web côté serveur**. C'est Anthropic qui effectue les recherches : les blocages JavaScript et anti-robots qui gênent un script ne s'appliquent pas de la même façon, et chaque fait est accompagné de sa citation.
 
 - Outil : `web_search` (type `web_search_20250305` ou version plus récente compatible avec le modèle choisi), avec `user_location` = Rennes, Bretagne, FR, fuseau `Europe/Paris`.
@@ -44,7 +96,7 @@ Pour tout ce que A et B ne couvrent pas (sites protégés, presse économique, a
 - Plafond dur : si le coût cumulé du mois (suivi dans `veille/couts.json`) dépasse `budget_mensuel_usd` de `config.json`, la couche C est sautée jusqu'au mois suivant.
 - Clé `ANTHROPIC_API_KEY` en secret GitHub, sur une clé dédiée à la veille avec sa propre limite de dépense dans la Console.
 
-## Prompt de la couche C
+### Prompt de la recherche IA
 
 Prompt système (fichier `veille/prompt-systeme.md`) :
 
@@ -114,37 +166,4 @@ Contrôles automatiques après chaque appel (le script, pas l'IA) :
 - Date de publication dans la fenêtre demandée, sinon rejet.
 - Indicateurs : affichés avec leur source et leur date, et un badge « Source IA, à vérifier » tant qu'aucune API de la couche B ne fournit la même série.
 
-## Fusion, déduplication et classement
-
-- Clé de déduplication : URL normalisée (https, sans paramètres de suivi `utm_*`, sans `#`), puis similarité de titre.
-- Un article trouvé à la fois par la couche A et la couche C garde les métadonnées de la couche A (plus fiables) et le résumé de la couche C.
-- Les articles des couches A et B sans score sont notés par un appel IA léger groupé (un seul appel pour tous les nouveaux titres du jour, sans recherche web), avec le même barème.
-- Conservation : 60 jours glissants dans `public/news.json` ; au-delà, archivage mensuel dans `public/archives/AAAA-MM.json`.
-
-## Droits et citation
-
-- On publie uniquement : titre, émetteur, date, lien, résumé rédigé avec nos mots. Jamais le texte intégral ni de longs extraits d'un article de presse.
-- Mention visible de la source sous chaque article (exigée notamment par le BOFiP).
-- Respect du `robots.txt` et des conditions d'utilisation de chaque site et API.
-
-## Écrans
-
-- **Brief du jour** (accueil) : les 5 articles d'importance 4 ou 5 les plus récents, tous thèmes confondus, plus la prochaine échéance du PLF et du PLFSS.
-- **Veille** : fil filtrable par thème, source, importance et public ; recherche locale ; marquage « lu » et « important pour nos dossiers » en local.
-- **Suivi PLF / PLFSS** : frise des étapes alimentée par `suivi_texte`, avec liens vers les dossiers législatifs.
-- **Indicateurs** : tuiles (valeur, variation, période, source, date) pour les indicateurs clés.
-- **Rennes et Bretagne** : fil dédié et, si la couche B BODACC est active, compteurs hebdomadaires des créations et procédures collectives en Ille-et-Vilaine.
-- **État des sources** : tableau de `veille-etat.json` (dernière réussite, erreurs, nombre d'articles, coût de la couche C du jour et du mois).
-
-## État de réalisation (08/10/2026)
-
-| Élément | État |
-|---|---|
-| Diagnostic des sources (`npm run veille:test`, workflow `veille-diagnostic.yml`) | Fait |
-| Couche A (flux RSS/Atom, page du dossier PLF) | Fait |
-| Couche B (API PISTE, INSEE, Banque de France, BODACC) | À faire : les sources sont listées dans le catalogue et signalées « non configurées » |
-| Couche C (recherche IA), contrôles, coûts et plafond | Fait |
-| Notation groupée des articles de flux | Fait. Les articles notés 1 restent dans `news.json` (pour ne pas être renotés chaque jour) et sont masqués par défaut à l'écran |
-| Fusion, 60 jours glissants, archives mensuelles | Fait |
-| Workflow `veille.yml` | Fait |
-| Écrans (brief, veille, suivi, indicateurs, Rennes, état des sources) | Fait. Compteurs BODACC en attente de la couche B |
+Notation des articles de flux (également désactivée) : un appel IA léger groupé, sans recherche web, notait les articles sans score avec le même barème ; il est remplacé par le classement par mots-clés.

@@ -27,9 +27,9 @@ const NEWS: NewsJson = {
     article('b', { importance: 4, theme: 'Fiscal et comptable', source: 'BOFiP-Impôts — Actualités', titre: 'TVA : taux réduit', public: ['Audit / CAC'] }),
     article('c', { importance: 1, titre: 'Information marginale' }),
     article('d', { importance: null, resume: null, titre: 'Non noté' }),
-    article('e', { importance: 4, theme: 'Rennes et Bretagne', source: 'Ouest-France', origine: 'recherche_ia', source_id: null, titre: 'Usine à Rennes', date: '2026-10-05' }),
+    article('e', { importance: 4, theme: 'Rennes et Bretagne', source: 'Ouest-France', origine: 'api', source_id: 'bodacc-35', titre: 'Usine à Rennes', date: '2026-10-05' }),
   ],
-  indicateurs: [{ libelle: 'Inflation sur un an', valeur: '1,8 %', periode: 'septembre 2026', source: 'INSEE', url: 'https://exemple.invalid/ipc', date_publication: '2026-09-30', verifie_par_api: false, collecte_le: '2026-10-08' }],
+  indicateurs: [{ libelle: 'Inflation sur un an', valeur: '1,8 %', periode: 'septembre 2026', source: 'INSEE', url: 'https://exemple.invalid/ipc', date_publication: '2026-09-30', collecte_le: '2026-10-08' }],
   suivi: {
     plf: {
       texte: 'PLF 2027', etape_actuelle: '1re lecture au Sénat',
@@ -42,12 +42,14 @@ const NEWS: NewsJson = {
 };
 
 const ETAT: EtatVeille = {
-  version: 1,
+  version: 2,
   genere_le: '2026-10-08T04:31:00Z',
-  sources: [{ id: 'senat-textes', nom: 'Sénat — Derniers textes', type: 'rss', theme: 'Loi de finances', statut_catalogue: 'verifie', etat: 'ok', derniere_tentative: null, derniere_reussite: '2026-10-08T04:30:10Z', erreur: null, nb_articles: 2, nb_elements: 27, duree_ms: 120 }],
-  couche_c: { statut: 'sautee', raison: 'clé ANTHROPIC_API_KEY absente : recherche IA non exécutée', modele: 'claude-sonnet-5-5', outil: null, themes: [] },
-  notation: { statut: 'sautee', raison: 'aucun nouvel article à noter', notes: 0, cout_usd: 0 },
-  couts: { mois: '2026-10', jour_usd: 0, mois_usd: 1.25, budget_mensuel_usd: 20 },
+  sources: [
+    { id: 'senat-textes', nom: 'Sénat — Derniers textes', type: 'rss', theme: 'Loi de finances', statut_catalogue: 'verifie', etat: 'ok', derniere_tentative: null, derniere_reussite: '2026-10-08T04:30:10Z', erreur: null, nb_articles: 2, nb_elements: 27, duree_ms: 120 },
+    { id: 'insee-bdm', nom: 'INSEE — Séries BDM', type: 'api', theme: 'Économie et statistiques', statut_catalogue: 'a_verifier', etat: 'non_configuree', derniere_tentative: null, derniere_reussite: null, erreur: 'non configurée : identifiants absents (INSEE_API_KEY)', nb_articles: 0, nb_elements: null, duree_ms: null },
+  ],
+  recherche_ia: { active: false, raison: 'désactivée : la veille fonctionne à 0 €, sans appel à un service d’IA' },
+  classement: { articles: 5, exclus: 2, marginaux: 1 },
 };
 
 describe('veille · logique de l’écran', () => {
@@ -126,6 +128,8 @@ describe('veille · écran', () => {
     }
     expect(cartes[0]?.textContent).toContain('Source : Sénat');
     expect(cartes[0]?.textContent).toContain('Importance 5/5');
+    expect(conteneur.querySelector('[data-id="e"] .badge-api')?.textContent).toBe('API officielle');
+    expect(conteneur.textContent).not.toMatch(/Recherche IA|Source IA/);
     expect(conteneur.querySelector('.mention-sources')?.textContent).toContain('Sénat — Derniers textes');
     expect(conteneur.querySelector('[role="status"]')?.textContent).toContain('Collecte du 08/10/2026');
   });
@@ -144,7 +148,7 @@ describe('veille · écran', () => {
     expect(conteneur.querySelector('.compteur')?.textContent).toBe('3 articles sur 5');
   });
 
-  it('onglets : suivi PLF, indicateurs (badge « Source IA, à vérifier »), Rennes, état des sources', async () => {
+  it('onglets : suivi PLF, indicateurs, Rennes, état des sources (flux, API, classement, coût 0 €)', async () => {
     servir({ 'news.json': NEWS, 'veille-etat.json': ETAT });
     await rendreVeille(conteneur, { magasin: magasinMemoire() });
     const onglet = (id: string) => conteneur.querySelector<HTMLButtonElement>(`#onglet-${id}`)!;
@@ -156,16 +160,21 @@ describe('veille · écran', () => {
 
     onglet('indicateurs').click();
     expect(conteneur.querySelector('.tuile')?.textContent).toContain('1,8 %');
-    expect(conteneur.querySelector('.tuile .badge-alerte')?.textContent).toBe('Source IA, à vérifier');
+    expect(conteneur.querySelector('.tuile')?.textContent).not.toContain('IA');
 
     onglet('rennes').click();
     expect([...conteneur.querySelectorAll('article.article')].map((c) => c.getAttribute('data-id'))).toEqual(['e']);
 
     onglet('sources').click();
-    expect(conteneur.querySelector('table')?.textContent).toContain('Sénat — Derniers textes');
-    expect(conteneur.querySelector('.panneau')?.textContent).toContain('clé ANTHROPIC_API_KEY absente');
-    expect(conteneur.querySelector('.panneau')?.textContent).toContain('mois 1,25 $ sur un budget de 20,00 $');
-    expect(conteneur.querySelector('.panneau')?.textContent).toContain('Notation des flux : sautée');
+    const tableaux = [...conteneur.querySelectorAll('.bloc-sources')];
+    expect(tableaux.map((t) => t.querySelector('h2')?.textContent)).toEqual(['Flux officiels (couche A)', 'API officielles (couche B)']);
+    expect(tableaux[0]?.textContent).toContain('Sénat — Derniers textes');
+    expect(tableaux[1]?.textContent).toContain('Non configurée');
+    expect(tableaux[1]?.textContent).toContain('identifiants absents (INSEE_API_KEY)');
+    const panneau = conteneur.querySelector('.panneau')?.textContent ?? '';
+    expect(panneau).toContain('Recherche IA : désactivée : la veille fonctionne à 0 €');
+    expect(panneau).toContain('dont 1 marginal(aux) masqué(s) par défaut ; 2 exclu(s)');
+    expect(panneau).toContain('Coût : 0 €');
   });
 
   it('navigation au clavier entre les onglets (flèches, Début, Fin)', async () => {

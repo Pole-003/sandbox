@@ -1,0 +1,5 @@
+{
+  "_commentaire": "Suivi du PLF et du PLFSS, saisi à la main (la recherche IA qui l'alimentait est désactivée). Laisser null tant qu'aucune information n'est saisie. Format d'un suivi : {\"texte\": \"PLF 2027\", \"etape_actuelle\": \"1re lecture à l'Assemblée nationale\", \"etapes\": [{\"libelle\": \"Dépôt à l'Assemblée nationale\", \"date\": \"AAAA-MM-JJ\" ou null, \"statut\": \"fait\" | \"en_cours\" | \"a_venir\"}], \"prochaine_echeance\": {\"libelle\": \"…\", \"date\": \"AAAA-MM-JJ\" ou null} ou null, \"mis_a_jour_le\": \"AAAA-MM-JJ\"}.",
+  "plf": null,
+  "plfss": null
+}

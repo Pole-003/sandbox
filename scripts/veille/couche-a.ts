@@ -4,12 +4,12 @@
  * Règle d'or : une source en échec ne fait jamais échouer la collecte. Chaque source est isolée
  * (try/catch, 2 nouvelles tentatives espacées) et son état est consigné pour veille-etat.json.
  */
-import type { EtatSource, Theme } from '../../src/modules/veille/modele.ts';
+import type { EtatSource, Theme, TypeArticle } from '../../src/modules/veille/modele.ts';
 import { analyserFlux, analyserPage } from './analyse.ts';
 import { fenetreJours, themeConnu, type ConfigVeille, type SourceCatalogue } from './config.ts';
 import { dateIsoParis } from './dates.ts';
 import { decoderOctets, lireEncodageDeclare } from './encodage.ts';
-import { lireFlux } from './flux.ts';
+import { lireFlux, resumeDepuisDescription } from './flux.ts';
 import { ClientHttp, ErreurCollecte, type Reponse } from './http.ts';
 
 /** Article de la couche A, avant notation et fusion. */
@@ -20,8 +20,9 @@ export interface ArticleFlux {
   theme: Theme;
   source: string;
   source_id: string;
-  /** Texte de la source : sert uniquement à la notation, jamais publié. */
-  description: string;
+  /** Description du flux nettoyée et tronquée (config.longueur_resume), sans reformulation. */
+  resume: string | null;
+  type: TypeArticle | null;
 }
 
 export interface ResultatCoucheA {
@@ -109,10 +110,6 @@ async function collecterSource(
   const horodatage = options.maintenant.toISOString();
   const aujourdhui = dateIsoParis(options.maintenant);
 
-  if (source.type === 'api') {
-    // Couche B : pas encore développée ; la source est signalée sans être appelée.
-    return { etat: { ...etat, etat: 'non_configuree', erreur: source.secret ? `couche B à venir (secret ${source.secret})` : 'couche B à venir' }, articles: [] };
-  }
   if (!sourceActive(source) || !source.url) {
     return { etat: { ...etat, erreur: source.statut === 'en_panne' ? 'source en panne dans le catalogue' : 'source à vérifier (non collectée)' }, articles: [] };
   }
@@ -133,7 +130,10 @@ async function collecterSource(
       const ancienne = precedent?.empreinte ?? null;
       const articles: ArticleFlux[] =
         ancienne && ancienne !== page.empreinte
-          ? [{ titre: `${source.nom} : page mise à jour`, url: source.url, date: aujourdhui, theme, source: source.nom, source_id: source.id, description: page.titre ?? '' }]
+          ? [{
+              titre: `${source.nom} : page mise à jour`, url: source.url, date: aujourdhui, theme, source: source.nom, source_id: source.id,
+              resume: 'Changement détecté sur la page depuis la collecte précédente : consultez la source.', type: source.type_article ?? null,
+            }]
           : [];
       return {
         etat: { ...etat, etat: 'ok', derniere_reussite: horodatage, empreinte: page.empreinte, nb_articles: articles.length, nb_elements: null },
@@ -156,7 +156,8 @@ async function collecterSource(
         theme,
         source: source.nom,
         source_id: source.id,
-        description: e.description.slice(0, 1_000),
+        resume: resumeDepuisDescription(e.description, e.titre, options.config.longueur_resume),
+        type: source.type_article ?? null,
       }));
     return { etat: { ...etat, etat: 'ok', derniere_reussite: horodatage, nb_elements: elements.length, nb_articles: articles.length }, articles };
   } catch (e) {
@@ -168,8 +169,9 @@ async function collecterSource(
 export async function collecterCoucheA(sources: readonly SourceCatalogue[], options: OptionsCoucheA): Promise<ResultatCoucheA> {
   const precedents = new Map(options.etatPrecedent.map((e) => [e.id, e]));
   // Domaines différents en parallèle ; le client HTTP limite à 1 requête par seconde et par domaine.
+  // Les API (couche B) sont traitées par couche-b.ts.
   const resultats = await Promise.all(
-    sources.map((s) =>
+    sources.filter((s) => s.type !== 'api').map((s) =>
       collecterSource(s, options, precedents.get(s.id)).catch((e: unknown) => ({
         // Filet de sécurité : même une erreur de programmation reste confinée à la source.
         etat: { ...etatInitial(s, precedents.get(s.id)), etat: 'erreur' as const, erreur: `erreur inattendue : ${e instanceof Error ? e.message : String(e)}` },

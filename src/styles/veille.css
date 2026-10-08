@@ -28,14 +28,9 @@
 }
 
 .badge-importance-faible,
-.badge-ia {
+.badge-api {
   background: var(--c-primaire-fond);
   color: var(--c-primaire);
-}
-
-.badge-alerte {
-  background: var(--c-alerte-fond);
-  color: var(--c-alerte-texte);
 }
 
 .badge-etat-ok {
@@ -349,6 +344,10 @@
 }
 
 /* --- État des sources --- */
+.bloc-sources h2 {
+  margin-top: 1rem;
+}
+
 .tableau-defilant {
   overflow-x: auto;
   margin-bottom: 1rem;

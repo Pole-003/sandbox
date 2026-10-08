@@ -1,0 +1,169 @@
+{
+  "_commentaire": "Classement de la veille par mots-clés (sans IA). Chaque mot-clé est cherché dans le titre et le résumé, sans tenir compte des accents ni des majuscules ; il reconnaît le début d'un mot (« comptab » trouve « comptable » et « comptabilité »). Score d'un thème = somme des poids des mots-clés trouvés (chacun compté une fois) + bonus de la source. L'article reçoit le thème au score le plus élevé (à défaut, celui de sa source) et l'importance correspondant au premier seuil atteint. Un mot d'exclusion général retire l'article de la publication ; une exclusion de thème empêche seulement d'attribuer ce thème.",
+  "seuils_importance": {
+    "5": 9,
+    "4": 6,
+    "3": 3,
+    "2": 1
+  },
+  "bonus_sources": {
+    "bofip-actualites": 2,
+    "ce-analyses-jurisprudence": 1,
+    "an-dossier-plf": 4
+  },
+  "exclusions": [
+    "compte rendu de réunion",
+    "ordre du jour"
+  ],
+  "themes": {
+    "Loi de finances": {
+      "public_par_defaut": ["Expertise comptable", "Conseil aux dirigeants"],
+      "mots_cles": {
+        "projet de loi de finances": 6,
+        "loi de finances": 5,
+        "loi de finances rectificative": 5,
+        "plf": 5,
+        "plfr": 5,
+        "budget": 1,
+        "budgétaire": 1,
+        "finances publiques": 2,
+        "article d'équilibre": 3,
+        "première partie": 1,
+        "seconde partie": 1,
+        "commission mixte paritaire": 2,
+        "lecture définitive": 2,
+        "conseil constitutionnel": 2,
+        "49.3": 2
+      },
+      "exclusions": []
+    },
+    "Sécurité sociale": {
+      "public_par_defaut": ["Social / paie"],
+      "mots_cles": {
+        "financement de la sécurité sociale": 6,
+        "plfss": 6,
+        "lfss": 5,
+        "sécurité sociale": 2,
+        "cotisation": 3,
+        "urssaf": 3,
+        "allègement": 2,
+        "exonération de cotisations": 4,
+        "épargne salariale": 3,
+        "intéressement": 3,
+        "participation des salariés": 3,
+        "avantages en nature": 3,
+        "travailleurs indépendants": 3,
+        "retraite": 2,
+        "assurance maladie": 2,
+        "protection sociale": 2
+      },
+      "exclusions": []
+    },
+    "Fiscal et comptable": {
+      "public_par_defaut": ["Expertise comptable"],
+      "mots_cles": {
+        "impôt": 2,
+        "fiscal": 2,
+        "tva": 3,
+        "taxe sur la valeur ajoutée": 3,
+        "impôt sur les sociétés": 4,
+        "cvae": 4,
+        "cfe": 3,
+        "crédit d'impôt": 3,
+        "plus-value": 2,
+        "droits d'enregistrement": 3,
+        "pacte dutreil": 4,
+        "transmission d'entreprise": 3,
+        "prix de transfert": 3,
+        "bofip": 3,
+        "rescrit": 3,
+        "doctrine": 2,
+        "procédure fiscale": 4,
+        "contribuable": 2,
+        "facturation électronique": 5,
+        "e-reporting": 5,
+        "plateforme agréée": 4,
+        "comptab": 3,
+        "normes comptables": 4,
+        "autorité des normes comptables": 5,
+        "liasse": 3,
+        "obligations déclaratives": 3
+      },
+      "exclusions": []
+    },
+    "Audit et profession": {
+      "public_par_defaut": ["Audit / CAC"],
+      "mots_cles": {
+        "commissaire aux comptes": 5,
+        "commissaires aux comptes": 5,
+        "cncc": 5,
+        "haute autorité de l'audit": 5,
+        "h2a": 5,
+        "h3c": 4,
+        "expert-comptable": 4,
+        "experts-comptables": 4,
+        "ordre des experts": 4,
+        "audit": 3,
+        "certification des comptes": 4,
+        "durabilité": 3,
+        "csrd": 5,
+        "rapport de durabilité": 5,
+        "contrôle qualité": 3,
+        "normes d'exercice professionnel": 5,
+        "blanchiment": 3,
+        "lcb-ft": 4
+      },
+      "exclusions": []
+    },
+    "Économie et statistiques": {
+      "public_par_defaut": ["Conseil aux dirigeants"],
+      "mots_cles": {
+        "inflation": 3,
+        "indice des prix": 3,
+        "pib": 3,
+        "croissance": 2,
+        "chômage": 3,
+        "insee": 3,
+        "conjoncture": 3,
+        "défaillances": 4,
+        "créations d'entreprises": 4,
+        "taux d'intérêt": 3,
+        "bce": 3,
+        "taux d'usure": 4,
+        "intérêt légal": 4,
+        "pme": 2,
+        "entreprises": 1,
+        "investissement": 1,
+        "commerce": 1,
+        "artisanat": 1
+      },
+      "exclusions": []
+    },
+    "Rennes et Bretagne": {
+      "public_par_defaut": ["Conseil aux dirigeants"],
+      "mots_cles": {
+        "rennes": 5,
+        "ille-et-vilaine": 5,
+        "bretagne": 4,
+        "breton": 3,
+        "bretonne": 3,
+        "saint-malo": 3,
+        "vitré": 3,
+        "fougères": 3,
+        "redon": 2,
+        "brest": 2,
+        "lorient": 2,
+        "vannes": 2,
+        "quimper": 2,
+        "saint-brieuc": 2
+      },
+      "exclusions": []
+    }
+  },
+  "publics": {
+    "Expertise comptable": ["comptab", "fiscal", "impôt", "tva", "liasse", "facturation électronique", "déclarati"],
+    "Audit / CAC": ["commissaire aux comptes", "commissaires aux comptes", "audit", "cncc", "h2a", "certification", "durabilité", "csrd"],
+    "Social / paie": ["cotisation", "urssaf", "salari", "paie", "sécurité sociale", "retraite", "épargne salariale", "intéressement"],
+    "Conseil aux dirigeants": ["entreprise", "dirigeant", "transmission", "pme", "investissement", "création", "défaillance"]
+  }
+}

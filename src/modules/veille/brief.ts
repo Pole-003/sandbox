@@ -54,7 +54,7 @@ export function sectionBrief(annulation: Annulation): HTMLElement {
             h('a', { href: '#/veille/plf' }, 'Voir le suivi PLF / PLFSS'),
           )
         : '',
-      h('p', { class: 'note texte-secondaire' }, `Collecte du ${dateFr(news.genere_le)}. Résumés rédigés par nos soins : seule la source fait foi.`),
+      h('p', { class: 'note texte-secondaire' }, `Collecte du ${dateFr(news.genere_le)}. Extraits publiés par les sources : seul le texte officiel fait foi.`),
     );
   });
   return section;

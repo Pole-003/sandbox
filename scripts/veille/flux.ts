@@ -101,3 +101,17 @@ export function lireFlux(texte: string, urlFlux: string): ElementFlux[] {
   }
   return elements;
 }
+
+/**
+ * Résumé publié : la description du flux, nettoyée du HTML, tronquée à `longueur` caractères
+ * (points de suspension compris), coupée entre deux mots. Aucune reformulation.
+ * Null si la description est vide ou ne fait que répéter le titre.
+ */
+export function resumeDepuisDescription(description: string, titre: string, longueur: number): string | null {
+  const texte = texteBrut(description);
+  if (!texte || texte.toLowerCase() === titre.trim().toLowerCase()) return null;
+  if (texte.length <= longueur) return texte;
+  const coupe = texte.slice(0, longueur - 1);
+  const espace = coupe.lastIndexOf(' ');
+  return `${(espace > longueur * 0.6 ? coupe.slice(0, espace) : coupe).replace(/[\s,;:.\-–—]+$/, '')}…`;
+}

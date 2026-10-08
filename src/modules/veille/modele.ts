@@ -33,8 +33,8 @@ export const LIBELLES_TYPE: Record<TypeArticle, string> = {
 
 export type Importance = 1 | 2 | 3 | 4 | 5;
 
-/** D'où vient l'article : flux officiel (couche A), recherche IA (couche C), ou les deux. */
-export type Origine = 'flux' | 'recherche_ia' | 'flux_et_ia';
+/** D'où vient l'article : flux officiel (couche A) ou API officielle (couche B). */
+export type Origine = 'flux' | 'api';
 
 export interface Article {
   /** Empreinte de l'URL normalisée. */
@@ -42,13 +42,13 @@ export interface Article {
   titre: string;
   /** Émetteur affiché (mention obligatoire de la source). */
   source: string;
-  /** Identifiant dans veille/sources.json (couche A), null pour la recherche IA. */
+  /** Identifiant dans veille/sources.json. */
   source_id: string | null;
   url: string;
   /** Date de publication, AAAA-MM-JJ. */
   date: string;
   theme: Theme;
-  /** Résumé rédigé avec nos mots (jamais le texte de la source). */
+  /** Description fournie par la source, nettoyée du HTML et tronquée à 300 caractères (sans reformulation). */
   resume: string | null;
   importance: Importance | null;
   public: Public[];
@@ -65,8 +65,6 @@ export interface Indicateur {
   source: string;
   url: string;
   date_publication: string;
-  /** Faux tant qu'aucune API officielle (couche B) ne fournit la même série : badge « Source IA, à vérifier ». */
-  verifie_par_api: boolean;
   collecte_le: string;
 }
 
@@ -77,7 +75,7 @@ export interface SuiviTexte {
   etape_actuelle: string;
   etapes: { libelle: string; date: string | null; statut: StatutEtape }[];
   prochaine_echeance: { libelle: string; date: string | null } | null;
-  /** Date de la recherche qui a produit ce suivi, AAAA-MM-JJ. */
+  /** Date de la dernière mise à jour (saisie manuelle dans veille/suivi.json), AAAA-MM-JJ. */
   mis_a_jour_le: string;
 }
 
@@ -118,29 +116,13 @@ export interface EtatSource {
   empreinte?: string | null;
 }
 
-export type StatutCoucheC = 'executee' | 'partielle' | 'sautee';
-
-export interface EtatTheme {
-  theme: Theme;
-  statut: 'ok' | 'abandonne';
-  retenus: number;
-  rejetes: number;
-  recherches: number;
-  cout_usd: number;
-  erreur: string | null;
-}
-
 export interface EtatVeille {
-  version: 1;
+  version: 2;
   genere_le: string;
+  /** Sources des couches A (flux) et B (API officielles). */
   sources: EtatSource[];
-  couche_c: {
-    statut: StatutCoucheC;
-    raison: string | null;
-    modele: string | null;
-    outil: string | null;
-    themes: EtatTheme[];
-  };
-  notation: { statut: 'executee' | 'sautee' | 'echec'; raison: string | null; notes: number; cout_usd: number };
-  couts: { mois: string; jour_usd: number; mois_usd: number; budget_mensuel_usd: number };
+  /** Recherche IA : désactivée (veille à 0 €). */
+  recherche_ia: { active: false; raison: string };
+  /** Classement par mots-clés (veille/mots-cles.json). */
+  classement: { articles: number; exclus: number; marginaux: number };
 }

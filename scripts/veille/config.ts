@@ -1,21 +1,21 @@
 /**
  * Lecture des réglages de la veille (modifiables sans toucher au code) :
- *  - veille/config.json : modèles, budget, fenêtres, localisation, User-Agent ;
+ *  - veille/config.json : fenêtres, conservation, longueur des résumés, User-Agent ;
  *  - veille/sources.json : catalogue des sources ;
- *  - veille/themes.json : consignes par thème de la couche C ;
- *  - veille/prompt-systeme.md : prompt système de la couche C.
+ *  - veille/mots-cles.json : classement par mots-clés (thème, importance, public, exclusions) ;
+ *  - veille/suivi.json : suivi PLF / PLFSS saisi à la main.
  */
 import { readFileSync } from 'node:fs';
-import { THEMES, type Theme } from '../../src/modules/veille/modele.ts';
+import { THEMES, type SuiviTexte, type Theme, type TypeArticle } from '../../src/modules/veille/modele.ts';
+import { verifierMotsCles, type MotsCles } from './classement.ts';
 
 export interface ConfigVeille {
-  modele_recherche: string;
-  modele_notation: string;
-  recherches_max_par_theme: number;
-  budget_mensuel_usd: number;
+  /** Toujours false : la recherche IA (couche C) est désactivée, la veille fonctionne à 0 €. */
+  recherche_ia: boolean;
   fenetre_jours: Record<string, number> & { defaut: number };
-  localisation: { type: 'approximate'; city?: string; region?: string; country?: string; timezone?: string };
   conservation_jours: number;
+  /** Longueur maximale du résumé repris de la description du flux. */
+  longueur_resume: number;
   user_agent: string;
 }
 
@@ -30,18 +30,16 @@ export interface SourceCatalogue {
   secret?: string;
   /** Flux volumineux : ne garder que les éléments dont le titre ou la description contient l'un de ces mots. */
   mots_cles?: string[];
-}
-
-export interface ConsigneTheme {
-  theme: Theme;
-  consigne: string;
+  /** Nature des publications de la source (texte officiel, doctrine, jurisprudence…). */
+  type_article?: TypeArticle;
 }
 
 export interface Reglages {
   config: ConfigVeille;
   sources: SourceCatalogue[];
-  themes: ConsigneTheme[];
-  promptSysteme: string;
+  motsCles: MotsCles;
+  /** Suivi PLF / PLFSS saisi à la main (veille/suivi.json). */
+  suivi: { plf: SuiviTexte | null; plfss: SuiviTexte | null };
 }
 
 const RACINE = new URL('../../', import.meta.url);
@@ -52,32 +50,22 @@ function lireJson<T>(chemin: string): T {
 
 export function verifierConfig(config: ConfigVeille): void {
   const erreurs: string[] = [];
-  if (!config.modele_recherche) erreurs.push('modele_recherche manquant');
-  if (!config.modele_notation) erreurs.push('modele_notation manquant');
-  if (!(config.budget_mensuel_usd >= 0)) erreurs.push('budget_mensuel_usd doit être un nombre positif');
-  if (!Number.isInteger(config.recherches_max_par_theme) || config.recherches_max_par_theme < 1) erreurs.push('recherches_max_par_theme doit être un entier ≥ 1');
+  if (config.recherche_ia !== false) erreurs.push('recherche_ia doit valoir false (recherche IA désactivée : veille à 0 €)');
   if (!(config.fenetre_jours?.defaut > 0)) erreurs.push('fenetre_jours.defaut manquant');
   if (!(config.conservation_jours > 0)) erreurs.push('conservation_jours manquant');
+  if (!(config.longueur_resume >= 50)) erreurs.push('longueur_resume doit être d’au moins 50 caractères');
   if (!config.user_agent) erreurs.push('user_agent manquant');
   if (erreurs.length) throw new Error(`veille/config.json invalide : ${erreurs.join(' ; ')}`);
-}
-
-export function verifierThemes(themes: ConsigneTheme[]): void {
-  for (const t of themes) {
-    if (!(THEMES as readonly string[]).includes(t.theme)) throw new Error(`veille/themes.json : thème inconnu « ${t.theme} » (attendus : ${THEMES.join(', ')})`);
-    if (!t.consigne?.trim()) throw new Error(`veille/themes.json : consigne vide pour « ${t.theme} »`);
-  }
 }
 
 export function chargerReglages(): Reglages {
   const config = lireJson<ConfigVeille>('veille/config.json');
   verifierConfig(config);
   const { sources } = lireJson<{ sources: SourceCatalogue[] }>('veille/sources.json');
-  const { themes } = lireJson<{ themes: ConsigneTheme[] }>('veille/themes.json');
-  verifierThemes(themes);
-  const promptSysteme = readFileSync(new URL('veille/prompt-systeme.md', RACINE), 'utf8').trim();
-  if (!promptSysteme) throw new Error('veille/prompt-systeme.md est vide');
-  return { config, sources, themes, promptSysteme };
+  const motsCles = lireJson<MotsCles>('veille/mots-cles.json');
+  verifierMotsCles(motsCles);
+  const suivi = lireJson<{ plf?: SuiviTexte | null; plfss?: SuiviTexte | null }>('veille/suivi.json');
+  return { config, sources, motsCles, suivi: { plf: suivi.plf ?? null, plfss: suivi.plfss ?? null } };
 }
 
 /** Fenêtre de veille (en jours) d'un thème. */

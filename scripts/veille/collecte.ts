@@ -1,38 +1,32 @@
 /**
- * Collecte quotidienne de la veille : npm run veille:collecte (workflow veille.yml).
+ * Collecte quotidienne de la veille : npm run veille:collecte (workflow veille.yml). Coût : 0 €.
  *
- * Couche A (flux) → couche C (recherche IA) → fusion et déduplication → notation des articles
- * de la couche A sans score → publication de public/news.json, public/veille-etat.json,
- * public/archives/AAAA-MM.json, et cumul des coûts dans veille/couts.json.
+ * Couche A (flux) + couche B (API officielles gratuites, optionnelles) → fusion et déduplication →
+ * classement par mots-clés → publication de public/news.json, public/veille-etat.json et
+ * public/archives/AAAA-MM.json. Aucun appel à un service d'IA.
  *
- * Une source en panne, une clé absente ou un budget épuisé ne font jamais échouer la collecte :
- * ils sont signalés dans veille-etat.json.
+ * Une source en panne ou une API non configurée ne font jamais échouer la collecte :
+ * elles sont signalées dans veille-etat.json.
  */
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
-import type { Article, EtatSource, EtatVeille, NewsJson } from '../../src/modules/veille/modele.ts';
-import { chargerReglages, type Reglages } from './config.ts';
-import { collecterCoucheA, type ArticleFlux } from './couche-a.ts';
-import { executerCoucheC, type ResultatTheme } from './couche-c.ts';
-import { Budget, depuisDollars, enDollars, totalJourNano, type Couts } from './couts.ts';
+import type { Article, EtatVeille, NewsJson } from '../../src/modules/veille/modele.ts';
+import { chargerReglages, themeConnu, type Reglages } from './config.ts';
+import { collecterCoucheA } from './couche-a.ts';
+import { collecterCoucheB, type ConnecteurApi } from './couche-b.ts';
 import { dateIsoParis } from './dates.ts';
 import {
-  appliquerNotes,
+  appliquerClassement,
   completerArchive,
   depuisFlux,
-  depuisRecherche,
   empreinteNews,
   fusionnerArticles,
   indicateursDuJour,
   repartirConservation,
   sourcesCitees,
-  suiviDuJour,
   trierArticles,
 } from './fusion.ts';
 import { ClientHttp } from './http.ts';
-import { ErreurModele, creerClientIA, verifierModeleNotation, verifierModeleRecherche, type ClientIA } from './ia.ts';
-import { idArticle } from './normalisation.ts';
-import { noterArticles, type ResultatNotation } from './notation.ts';
 
 /** Accès aux fichiers du dépôt (remplaçable dans les tests). Chemins relatifs à la racine. */
 export interface Depot {
@@ -44,15 +38,16 @@ export const CHEMINS = {
   news: 'public/news.json',
   etat: 'public/veille-etat.json',
   archives: (mois: string) => `public/archives/${mois}.json`,
-  couts: 'veille/couts.json',
 } as const;
 
 export interface DependancesCollecte {
   reglages: Reglages;
   http: ClientHttp;
-  ia: ClientIA | null;
   depot: Depot;
   maintenant: Date;
+  /** Variables d'environnement (identifiants des API de la couche B). */
+  env: Readonly<Record<string, string | undefined>>;
+  connecteurs?: Readonly<Record<string, ConnecteurApi>>;
   journal?: (message: string) => void;
   /** Délais avant les 2 nouvelles tentatives d'une source (par défaut 5 s puis 15 s). */
   delaisNouvellesTentatives?: number[];
@@ -62,7 +57,6 @@ export interface Bilan {
   news: NewsJson;
   etat: EtatVeille;
   newsModifie: boolean;
-  coutExecutionUsd: number;
 }
 
 function lireJson<T>(depot: Depot, chemin: string): T | null {
@@ -77,146 +71,81 @@ function lireJson<T>(depot: Depot, chemin: string): T | null {
 
 const json = (valeur: unknown) => `${JSON.stringify(valeur, null, 2)}\n`;
 
+export const RAISON_IA = 'désactivée : la veille fonctionne à 0 €, sans appel à un service d’IA';
+
 export async function collecter(d: DependancesCollecte): Promise<Bilan> {
-  const { config, sources, themes, promptSysteme } = d.reglages;
+  const { config, sources, motsCles, suivi } = d.reglages;
   const journal = d.journal ?? (() => {});
   const aujourdhui = dateIsoParis(d.maintenant);
-  const mois = aujourdhui.slice(0, 7);
 
   const newsPrecedent = lireJson<NewsJson>(d.depot, CHEMINS.news);
-  const etatPrecedent = lireJson<EtatVeille>(d.depot, CHEMINS.etat);
-  const coutsInitiaux: Couts = (() => {
-    const t = d.depot.lire(CHEMINS.couts);
-    try {
-      return t ? { mois: (JSON.parse(t) as Couts).mois ?? {} } : { mois: {} };
-    } catch {
-      return { mois: {} };
-    }
-  })();
-  const budget = new Budget(coutsInitiaux, aujourdhui, depuisDollars(config.budget_mensuel_usd));
+  const etatPrecedent = lireJson<{ sources?: EtatVeille['sources'] }>(d.depot, CHEMINS.etat);
+  const sourcesPrecedentes = etatPrecedent?.sources ?? [];
 
-  // --- Couche A ---
+  // --- Couche A : flux ---
   journal(`Couche A : ${sources.filter((s) => s.type !== 'api').length} sources…`);
   const coucheA = await collecterCoucheA(sources, {
-    config, client: d.http, maintenant: d.maintenant, etatPrecedent: etatPrecedent?.sources ?? [],
+    config, client: d.http, maintenant: d.maintenant, etatPrecedent: sourcesPrecedentes,
     ...(d.delaisNouvellesTentatives ? { delaisNouvellesTentatives: d.delaisNouvellesTentatives } : {}),
   });
   for (const e of coucheA.etats.filter((e) => e.etat === 'ok' || e.etat === 'erreur')) {
     journal(`  ${e.etat === 'ok' ? 'OK    ' : 'ÉCHEC '} ${e.id} : ${e.etat === 'ok' ? `${e.nb_articles} article(s) retenu(s)` : e.erreur}`);
   }
 
-  // --- Couche C ---
-  let resultatsC: ResultatTheme[] = [];
-  const coucheC: EtatVeille['couche_c'] = { statut: 'sautee', raison: null, modele: config.modele_recherche, outil: null, themes: [] };
-  if (!d.ia) {
-    coucheC.raison = 'clé ANTHROPIC_API_KEY absente : recherche IA non exécutée';
-  } else if (budget.depasse()) {
-    coucheC.raison = `budget mensuel atteint (${enDollars(budget.moisNano).toFixed(2)} $ sur ${config.budget_mensuel_usd} $) : reprise le mois prochain`;
-  } else {
-    try {
-      const outil = await verifierModeleRecherche(d.ia, config.modele_recherche);
-      coucheC.outil = outil;
-      journal(`Couche C : modèle ${config.modele_recherche}, outil ${outil}`);
-      resultatsC = await executerCoucheC(
-        { client: d.ia, config, promptSysteme, outil, budget, maintenant: d.maintenant, journal },
-        themes,
-      );
-      const abandons = resultatsC.filter((r) => r.statut !== 'ok');
-      coucheC.statut = abandons.length === 0 ? 'executee' : 'partielle';
-      coucheC.raison = abandons.length ? `${abandons.length} thème(s) abandonné(s) pour la journée` : null;
-    } catch (e) {
-      coucheC.raison = e instanceof ErreurModele ? e.message : `erreur : ${e instanceof Error ? e.message : String(e)}`;
-    }
-  }
-  coucheC.themes = resultatsC.map((r) => ({
-    theme: r.theme, statut: r.statut, retenus: r.articles.length + r.indicateurs.length, rejetes: r.rejetes.length,
-    recherches: r.recherches, cout_usd: enDollars(r.coutNano), erreur: r.erreur,
-  }));
-  for (const r of resultatsC) {
-    journal(`  ${r.theme} : ${r.statut}, ${r.articles.length} article(s), ${r.rejetes.length} rejet(s), ${enDollars(r.coutNano).toFixed(4)} $${r.erreur ? ` (${r.erreur})` : ''}`);
-  }
-  if (coucheC.statut === 'sautee') journal(`Couche C sautée : ${coucheC.raison}`);
+  // --- Couche B : API officielles (optionnelles) ---
+  const coucheB = await collecterCoucheB(sources, {
+    client: d.http, config, maintenant: d.maintenant, env: d.env, etatPrecedent: sourcesPrecedentes,
+    ...(d.connecteurs ? { connecteurs: d.connecteurs } : {}),
+  });
+  journal('Couche B :');
+  for (const e of coucheB.etats) journal(`  ${e.etat === 'ok' ? 'OK    ' : e.etat === 'erreur' ? 'ÉCHEC ' : '—     '} ${e.id} : ${e.erreur ?? `${e.nb_articles} élément(s)`}`);
+  journal(`Recherche IA : ${RAISON_IA}`);
 
-  // --- Fusion ---
+  // --- Fusion et classement ---
   const nouveaux: Article[] = [
     ...coucheA.articles.map((a) => depuisFlux(a, aujourdhui)),
-    ...resultatsC.flatMap((r) => depuisRecherche(r, aujourdhui)),
+    ...coucheB.articles.map((a) => depuisFlux(a, aujourdhui, 'api')),
   ];
-  let articles = fusionnerArticles(newsPrecedent?.articles ?? [], nouveaux);
-
-  // --- Notation des articles de la couche A sans score ---
-  const extraits = new Map<string, ArticleFlux>(coucheA.articles.map((a) => [idArticle(a.url), a]));
-  const aNoter = articles.filter((a) => a.importance === null && a.origine === 'flux' && extraits.has(a.id));
-  let notation: ResultatNotation | null = null;
-  const etatNotation: EtatVeille['notation'] = { statut: 'sautee', raison: null, notes: 0, cout_usd: 0 };
-  if (aNoter.length === 0) {
-    etatNotation.raison = 'aucun nouvel article à noter';
-  } else if (!d.ia) {
-    etatNotation.raison = 'clé ANTHROPIC_API_KEY absente : articles publiés sans note ni résumé';
-  } else if (budget.depasse()) {
-    etatNotation.raison = 'budget mensuel atteint';
-  } else {
-    try {
-      const { sortiesStructurees } = await verifierModeleNotation(d.ia, config.modele_notation);
-      notation = await noterArticles(
-        { client: d.ia, modele: config.modele_notation, promptSysteme, sortiesStructurees, budget },
-        aNoter.map((a) => ({ id: a.id, titre: a.titre, source: a.source, theme: a.theme, date: a.date, extrait: extraits.get(a.id)?.description ?? '' })),
-      );
-      const { articles: notes, marginaux } = appliquerNotes(articles, notation.notes);
-      articles = notes;
-      etatNotation.statut = notation.erreur ? 'echec' : 'executee';
-      etatNotation.notes = notation.notes.size;
-      etatNotation.cout_usd = enDollars(notation.coutNano);
-      const remarques = [marginaux ? `${marginaux} article(s) marginal(aux), masqué(s) par défaut` : '', notation.nonNotes ? `${notation.nonNotes} non noté(s)` : ''];
-      etatNotation.raison = notation.erreur ?? (remarques.filter(Boolean).join(' ; ') || null);
-    } catch (e) {
-      etatNotation.statut = 'echec';
-      etatNotation.raison = e instanceof Error ? e.message : String(e);
-    }
-  }
-  journal(`Notation : ${etatNotation.statut}${etatNotation.raison ? ` (${etatNotation.raison})` : ''}`);
+  const themes = new Map(sources.map((s) => [s.id, themeConnu(s.theme)]));
+  const classement = appliquerClassement(
+    fusionnerArticles(newsPrecedent?.articles ?? [], nouveaux),
+    motsCles,
+    (id) => (id ? (themes.get(id) ?? null) : null),
+  );
+  journal(`Classement : ${classement.articles.length} article(s), ${classement.exclus} exclu(s), ${classement.marginaux} marginal(aux)`);
 
   // --- Conservation et archives ---
   const limite = dateIsoParis(new Date(d.maintenant.getTime() - config.conservation_jours * 86_400_000));
-  const { gardes, archives } = repartirConservation(articles, limite);
-  for (const [moisArchive, ajouts] of archives) {
-    const existante = lireJson<{ articles: Article[] }>(d.depot, CHEMINS.archives(moisArchive))?.articles ?? [];
-    d.depot.ecrire(CHEMINS.archives(moisArchive), json({ mois: moisArchive, articles: completerArchive(existante, ajouts) }));
+  const { gardes, archives } = repartirConservation(classement.articles, limite);
+  for (const [mois, ajouts] of archives) {
+    const existante = lireJson<{ articles: Article[] }>(d.depot, CHEMINS.archives(mois))?.articles ?? [];
+    d.depot.ecrire(CHEMINS.archives(mois), json({ mois, articles: completerArchive(existante, ajouts) }));
   }
 
   const news: NewsJson = {
     version: 1,
     genere_le: d.maintenant.toISOString(),
     articles: trierArticles(gardes),
-    indicateurs: indicateursDuJour(resultatsC, newsPrecedent?.indicateurs ?? [], aujourdhui),
-    suivi: {
-      plf: suiviDuJour(resultatsC, 'Loi de finances', newsPrecedent?.suivi?.plf ?? null, aujourdhui),
-      plfss: suiviDuJour(resultatsC, 'Sécurité sociale', newsPrecedent?.suivi?.plfss ?? null, aujourdhui),
-    },
+    indicateurs: indicateursDuJour(coucheB.indicateurs, newsPrecedent?.indicateurs ?? []),
+    suivi,
     sources: sourcesCitees(sources),
   };
   const newsModifie = !newsPrecedent || empreinteNews(newsPrecedent) !== empreinteNews(news);
   if (newsModifie) d.depot.ecrire(CHEMINS.news, json(news));
 
+  // Ordre du catalogue pour l'écran « État des sources ».
+  const parId = new Map([...coucheA.etats, ...coucheB.etats].map((e) => [e.id, e]));
   const etat: EtatVeille = {
-    version: 1,
+    version: 2,
     genere_le: d.maintenant.toISOString(),
-    sources: coucheA.etats satisfies EtatSource[],
-    couche_c: coucheC,
-    notation: etatNotation,
-    couts: {
-      mois,
-      jour_usd: enDollars(totalJourNano(budget.etat, aujourdhui)),
-      mois_usd: enDollars(budget.moisNano),
-      budget_mensuel_usd: config.budget_mensuel_usd,
-    },
+    sources: sources.flatMap((s) => parId.get(s.id) ?? []),
+    recherche_ia: { active: false, raison: RAISON_IA },
+    classement: { articles: news.articles.length, exclus: classement.exclus, marginaux: classement.marginaux },
   };
   d.depot.ecrire(CHEMINS.etat, json(etat));
-  if (budget.executionNano > 0) d.depot.ecrire(CHEMINS.couts, json({ ...budget.etat }));
 
-  const coutExecutionUsd = enDollars(budget.executionNano);
-  journal(`Publication : ${news.articles.length} article(s) en ligne${newsModifie ? '' : ' (inchangé)'} ; coût de l'exécution ${coutExecutionUsd.toFixed(4)} $, mois ${etat.couts.mois_usd.toFixed(4)} $ / ${config.budget_mensuel_usd} $`);
-  return { news, etat, newsModifie, coutExecutionUsd };
+  journal(`Publication : ${news.articles.length} article(s) en ligne${newsModifie ? '' : ' (inchangé)'}.`);
+  return { news, etat, newsModifie };
 }
 
 /** Dépôt réel : fichiers sous la racine du projet. */
@@ -235,14 +164,13 @@ export function depotFichiers(racine: URL): Depot {
 }
 
 async function principal(): Promise<void> {
-  const racine = new URL('../../', import.meta.url);
   const reglages = chargerReglages();
   const bilan = await collecter({
     reglages,
     http: new ClientHttp({ userAgent: reglages.config.user_agent, delaiMaxMs: 20_000, intervalleParDomaineMs: 1_000 }),
-    ia: creerClientIA(),
-    depot: depotFichiers(racine),
+    depot: depotFichiers(new URL('../../', import.meta.url)),
     maintenant: new Date(),
+    env: process.env,
     journal: (m) => console.log(m),
   });
   if (process.env.GITHUB_STEP_SUMMARY) {
@@ -251,9 +179,9 @@ async function principal(): Promise<void> {
       '',
       `- Articles en ligne : ${bilan.news.articles.length}${bilan.newsModifie ? '' : ' (inchangé)'}`,
       `- Sources en échec : ${bilan.etat.sources.filter((s) => s.etat === 'erreur').map((s) => s.id).join(', ') || 'aucune'}`,
-      `- Recherche IA : ${bilan.etat.couche_c.statut}${bilan.etat.couche_c.raison ? ` (${bilan.etat.couche_c.raison})` : ''}`,
-      `- Notation : ${bilan.etat.notation.statut}${bilan.etat.notation.raison ? ` (${bilan.etat.notation.raison})` : ''}`,
-      `- Coût de l'exécution : ${bilan.coutExecutionUsd.toFixed(4)} $ ; mois : ${bilan.etat.couts.mois_usd.toFixed(4)} $ / ${bilan.etat.couts.budget_mensuel_usd} $`,
+      `- API non configurées : ${bilan.etat.sources.filter((s) => s.etat === 'non_configuree').map((s) => s.id).join(', ') || 'aucune'}`,
+      `- Classement : ${bilan.etat.classement.exclus} exclu(s), ${bilan.etat.classement.marginaux} marginal(aux)`,
+      `- Recherche IA : ${RAISON_IA}`,
       '',
     ];
     writeFileSync(process.env.GITHUB_STEP_SUMMARY, lignes.join('\n'), { flag: 'a' });

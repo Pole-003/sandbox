@@ -9,12 +9,6 @@ décrites dans `docs/VEILLE.md`. Les titres et contenus sont fictifs. Aucun text
   Le lien du canal est en `http://`.
 - `atom-exemple.xml` : flux Atom minimal (dates `updated` en ISO 8601).
 - `page-html.html` : page HTML renvoyée à la place d'un flux.
-- `reponse-ia-rennes.json` : réponse simulée de l'API Claude (couche C, thème « Rennes et Bretagne »), avec
-  un article valide, un article à l'URL inventée (absente des résultats de recherche) et un article hors fenêtre.
-- `reponse-ia-json-invalide.json` : réponse simulée tronquée (`max_tokens`), au JSON invalide.
-
-Les réponses simulées permettent de tester les contrôles automatiques sans appeler l'API ni consommer de crédit.
-Les domaines en `.invalid` sont réservés et n'existent pas.
 - `an-documents.rss` : flux volumineux de l'Assemblée (fictif) : liens en `http://`, entités HTML, éléments hors sujet
   et hors fenêtre, pour tester le filtre par mots-clés.
 - `senat-iso-8859-15.rss` : flux réellement encodé en iso-8859-15 (cas constaté au diagnostic du 08/10/2026), avec « € » et « Œ ».

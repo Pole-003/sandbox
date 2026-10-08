@@ -86,10 +86,10 @@ function carteArticle(a: Article, marque: Marque | undefined, basculer: (champ: 
   const carte = h(
     'article',
     { class: `carte article${marque?.lu ? ' article-lu' : ''}${marque?.important ? ' article-important' : ''}`, 'data-id': a.id },
-    h('div', { class: 'article-badges' }, badgeImportance(a.importance), a.origine !== 'flux' ? h('span', { class: 'badge badge-ia', title: 'Repéré par la recherche IA quotidienne' }, a.origine === 'recherche_ia' ? 'Recherche IA' : 'Flux + IA') : null),
+    h('div', { class: 'article-badges' }, badgeImportance(a.importance), a.origine === 'api' ? h('span', { class: 'badge badge-api', title: 'Publié par une API officielle' }, 'API officielle') : null),
     h('h3', { class: 'article-titre' }, lienExterne(a.url, a.titre)),
     ligneMeta(a),
-    a.resume ? h('p', { class: 'article-resume' }, a.resume) : h('p', { class: 'article-resume texte-secondaire' }, 'Pas de résumé disponible : consultez la source.'),
+    a.resume ? h('p', { class: 'article-resume' }, a.resume) : h('p', { class: 'article-resume texte-secondaire' }, 'Pas d’extrait fourni par la source : consultez-la.'),
     a.public.length ? h('p', { class: 'article-public' }, h('span', { class: 'visuellement-masque' }, 'Public concerné : '), ...a.public.map((p) => h('span', { class: 'puce' }, p))) : null,
     h('div', { class: 'article-actions' }, bouton('lu', 'Lu'), bouton('important', 'Important pour nos dossiers')),
   );
@@ -206,7 +206,7 @@ const LIBELLES_STATUT = { fait: 'Fait', en_cours: 'En cours', a_venir: 'À venir
 
 function frise(suivi: SuiviTexte | null, nom: string): HTMLElement {
   if (!suivi) {
-    return h('section', { class: 'carte suivi' }, h('h2', {}, nom), h('p', { class: 'texte-secondaire' }, 'Pas encore de suivi : il est alimenté par la recherche IA quotidienne.'));
+    return h('section', { class: 'carte suivi' }, h('h2', {}, nom), h('p', { class: 'texte-secondaire' }, 'Pas encore de suivi : il se renseigne à la main dans veille/suivi.json.'));
   }
   return h(
     'section',
@@ -228,7 +228,7 @@ function frise(suivi: SuiviTexte | null, nom: string): HTMLElement {
         ),
       ),
     ),
-    h('p', { class: 'texte-secondaire note' }, `Mis à jour le ${dateFr(suivi.mis_a_jour_le)} par la recherche IA : à recouper avec les dossiers législatifs officiels.`),
+    h('p', { class: 'texte-secondaire note' }, `Saisi à la main, mis à jour le ${dateFr(suivi.mis_a_jour_le)} : à recouper avec les dossiers législatifs officiels.`),
   );
 }
 
@@ -246,7 +246,7 @@ function rendreSuivi(conteneur: HTMLElement, news: NewsJson): void {
 
 function rendreIndicateurs(conteneur: HTMLElement, news: NewsJson): void {
   if (news.indicateurs.length === 0) {
-    conteneur.append(h('p', { class: 'texte-secondaire' }, 'Aucun indicateur publié pour l’instant : ils sont relevés par la recherche IA quotidienne (thème « Économie et statistiques »).'));
+    conteneur.append(h('p', { class: 'texte-secondaire' }, 'Aucun indicateur publié pour l’instant : ils seront fournis par les API officielles (INSEE, Banque de France) une fois configurées.'));
     return;
   }
   conteneur.append(
@@ -261,7 +261,6 @@ function rendreIndicateurs(conteneur: HTMLElement, news: NewsJson): void {
           h('p', { class: 'tuile-valeur' }, i.valeur),
           h('p', { class: 'tuile-periode' }, i.periode),
           h('p', { class: 'tuile-source' }, 'Source : ', lienExterne(i.url, i.source), ` · publié le ${dateFr(i.date_publication)}`),
-          i.verifie_par_api ? null : h('span', { class: 'badge badge-alerte' }, 'Source IA, à vérifier'),
         ),
       ),
     ),
@@ -270,35 +269,29 @@ function rendreIndicateurs(conteneur: HTMLElement, news: NewsJson): void {
 
 // --- État des sources ---
 
-const LIBELLES_NOTATION = { executee: 'exécutée', sautee: 'sautée', echec: 'en échec' } as const;
 const LIBELLES_ETAT = { ok: 'OK', erreur: 'En échec', inactive: 'Inactive', non_configuree: 'Non configurée' } as const;
 
-function rendreEtat(conteneur: HTMLElement, etat: EtatVeille | null): void {
-  if (!etat) {
-    conteneur.append(h('p', { class: 'texte-secondaire' }, 'L’état des sources n’est pas encore disponible.'));
-    return;
-  }
-  const usd = (n: number) => `${n.toLocaleString('fr-FR', { minimumFractionDigits: 2, maximumFractionDigits: 4 })} $`;
-  const c = etat.couche_c;
-  conteneur.append(
-    h('p', {}, `Dernière collecte : ${dateFr(etat.genere_le)} à ${heureFr(etat.genere_le)}.`),
+function tableauSources(titre: string, sources: EtatVeille['sources'], colonneNombre: string): HTMLElement {
+  return h(
+    'section',
+    { class: 'bloc-sources' },
+    h('h2', {}, titre),
     h(
       'div',
       { class: 'tableau-defilant' },
       h(
         'table',
         { class: 'tableau' },
-        h('caption', { class: 'visuellement-masque' }, 'État des sources de la couche A (flux officiels)'),
-        h('thead', {}, h('tr', {}, ...['Source', 'Type', 'État', 'Dernière réussite', 'Articles', 'Détail'].map((t) => h('th', { scope: 'col' }, t)))),
+        h('caption', { class: 'visuellement-masque' }, titre),
+        h('thead', {}, h('tr', {}, ...['Source', 'État', 'Dernière réussite', colonneNombre, 'Détail'].map((t) => h('th', { scope: 'col' }, t)))),
         h(
           'tbody',
           {},
-          ...etat.sources.map((s) =>
+          ...sources.map((s) =>
             h(
               'tr',
               {},
               h('th', { scope: 'row' }, s.nom),
-              h('td', {}, s.type),
               h('td', {}, h('span', { class: `badge badge-etat-${s.etat}` }, LIBELLES_ETAT[s.etat])),
               h('td', {}, s.derniere_reussite ? `${dateFr(s.derniere_reussite)} ${heureFr(s.derniere_reussite)}` : '—'),
               h('td', { class: 'nombre' }, String(s.nb_articles)),
@@ -308,20 +301,30 @@ function rendreEtat(conteneur: HTMLElement, etat: EtatVeille | null): void {
         ),
       ),
     ),
+  );
+}
+
+function rendreEtat(conteneur: HTMLElement, etat: EtatVeille | null): void {
+  if (!etat) {
+    conteneur.append(h('p', { class: 'texte-secondaire' }, 'L’état des sources n’est pas encore disponible.'));
+    return;
+  }
+  const flux = etat.sources.filter((s) => s.type !== 'api');
+  const api = etat.sources.filter((s) => s.type === 'api');
+  conteneur.append(
+    h('p', {}, `Dernière collecte : ${dateFr(etat.genere_le)} à ${heureFr(etat.genere_le)}.`),
+    tableauSources('Flux officiels (couche A)', flux, 'Articles'),
+    tableauSources('API officielles (couche B)', api, 'Éléments'),
+    api.some((s) => s.etat === 'non_configuree')
+      ? h('p', { class: 'note texte-secondaire' }, 'Une API « non configurée » est sautée sans bloquer la collecte : il lui manque ses identifiants (secrets GitHub) ou son connecteur.')
+      : '',
     h(
       'section',
       { class: 'carte' },
-      h('h2', {}, 'Recherche IA (couche C)'),
-      h('p', {}, `Statut : ${c.statut === 'executee' ? 'exécutée' : c.statut === 'partielle' ? 'partielle' : 'sautée'}${c.raison ? ` — ${c.raison}` : ''}.`),
-      c.themes.length
-        ? h(
-            'ul',
-            {},
-            ...c.themes.map((t) => h('li', {}, `${t.theme} : ${t.statut === 'ok' ? `${t.retenus} retenu(s), ${t.rejetes} rejeté(s)` : `abandonné (${t.erreur ?? 'erreur'})`}, ${t.recherches} recherche(s), ${usd(t.cout_usd)}`)),
-          )
-        : null,
-      h('p', {}, `Notation des flux : ${LIBELLES_NOTATION[etat.notation.statut]}${etat.notation.raison ? ` — ${etat.notation.raison}` : ''}.`),
-      h('p', {}, h('strong', {}, 'Coût : '), `aujourd’hui ${usd(etat.couts.jour_usd)} · mois ${usd(etat.couts.mois_usd)} sur un budget de ${usd(etat.couts.budget_mensuel_usd)}`),
+      h('h2', {}, 'Classement et coût'),
+      h('p', {}, `Classement par mots-clés : ${etat.classement.articles} article(s) en ligne, dont ${etat.classement.marginaux} marginal(aux) masqué(s) par défaut ; ${etat.classement.exclus} exclu(s).`),
+      h('p', {}, `Recherche IA : ${etat.recherche_ia.raison}.`),
+      h('p', {}, h('strong', {}, 'Coût : '), '0 € (flux et API publics gratuits, exécution sur GitHub Actions).'),
     ),
   );
 }
@@ -338,7 +341,7 @@ function mentionSources(news: NewsJson): HTMLElement {
       {},
       'Flux officiels consultés : ',
       ...news.sources.flatMap((s, i) => [i ? ', ' : '', s.url ? lienExterne(s.url, s.nom) : s.nom]),
-      '. Recherche IA : la source de chaque information est indiquée sous l’article. Les résumés sont rédigés par nos soins ; seul le texte officiel fait foi.',
+      '. Les extraits sont ceux publiés par chaque source, tronqués à 300 caractères ; seul le texte officiel fait foi.',
     ),
   );
 }

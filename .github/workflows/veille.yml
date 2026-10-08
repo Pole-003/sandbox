@@ -1,11 +1,13 @@
 # Collecte quotidienne de la veille (docs/VEILLE.md) : npm run veille:collecte
 #
 # Jours ouvrés (lundi à vendredi) à 6 h 30 heure de Paris, et déclenchement manuel (« Run workflow »).
-# Publie public/news.json, public/veille-etat.json, public/archives/ et veille/couts.json,
-# les commit seulement s'ils ont changé, puis déclenche le déploiement GitHub Pages.
+# Couches A (flux) et B (API officielles gratuites) uniquement : coût 0 €, aucun service d'IA.
+# Publie public/news.json, public/veille-etat.json et public/archives/, les commit seulement
+# s'ils ont changé, puis déclenche le déploiement GitHub Pages.
 #
-# Secret facultatif : ANTHROPIC_API_KEY (Settings > Secrets and variables > Actions).
-# Sans lui, la recherche IA et la notation sont sautées et signalées dans veille-etat.json.
+# Secrets facultatifs (Settings > Secrets and variables > Actions), un jeu par API de la couche B :
+# PISTE_CLIENT_ID et PISTE_CLIENT_SECRET, INSEE_API_KEY, BDF_API_KEY. Une API sans identifiants
+# est sautée et signalée « non configurée » dans veille-etat.json.
 
 name: Veille · collecte quotidienne
 
@@ -77,17 +79,20 @@ jobs:
 
       - name: Collecter
         if: steps.heure.outputs.lancer == 'true'
-        # La clé n'est transmise qu'à cette étape ; GitHub la masque dans les journaux,
-        # et le script ne l'affiche jamais.
+        # Identifiants des API de la couche B, transmis à cette seule étape. GitHub les masque dans
+        # les journaux et le script ne cite que leurs noms. Un secret absent donne une valeur vide.
         env:
-          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          PISTE_CLIENT_ID: ${{ secrets.PISTE_CLIENT_ID }}
+          PISTE_CLIENT_SECRET: ${{ secrets.PISTE_CLIENT_SECRET }}
+          INSEE_API_KEY: ${{ secrets.INSEE_API_KEY }}
+          BDF_API_KEY: ${{ secrets.BDF_API_KEY }}
         run: npm run veille:collecte
 
       - name: Publier si les fichiers ont changé
         id: publication
         if: steps.heure.outputs.lancer == 'true'
         run: |
-          for chemin in public/news.json public/veille-etat.json public/archives veille/couts.json; do
+          for chemin in public/news.json public/veille-etat.json public/archives; do
             if [ -e "$chemin" ]; then git add "$chemin"; fi
           done
           if git diff --cached --quiet; then
