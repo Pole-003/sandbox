@@ -1,6 +1,6 @@
 import { readFileSync } from 'node:fs';
 import { describe, expect, it } from 'vitest';
-import { analyserFlux, analyserPage } from '../../scripts/veille/analyse.ts';
+import { analyserFlux, analyserPage, compterAccentsAbimes } from '../../scripts/veille/analyse.ts';
 import { dateIsoParis, extraireDateDuTexte, lireDate } from '../../scripts/veille/dates.ts';
 import { decoderOctets, lireEncodageDeclare } from '../../scripts/veille/encodage.ts';
 import { analyserRobots, estAutorise } from '../../scripts/veille/robots.ts';
@@ -106,6 +106,13 @@ describe('veille · analyse des flux', () => {
     const r = analyserFlux(decoder(fixture('atom-exemple.xml')).texte);
     expect(r).toMatchObject({ format: 'atom', elements: 2, sansDate: 0 });
     expect(r.plusRecent?.toISOString()).toBe('2026-10-07T08:00:00.000Z');
+  });
+
+  it('repère les accents abîmés (UTF-8 décodé en latin), pas les accents corrects', () => {
+    expect(compterAccentsAbimes('Sénat, déjà, à l’été, Âge, Œuvre')).toBe(0);
+    expect(compterAccentsAbimes('SÃ©nat â€™ dÃ©jÃ ')).toBe(3);
+    const r = analyserFlux(decoderOctets(fixture('senat-encodage-trompeur.rss'), { entete: null, document: 'iso-8859-15' }).texte);
+    expect(r.exempleTitre).toBe('Projet de loi de finances pour 2027 — texte adopté en séance');
   });
 
   it('signale une page HTML reçue à la place d’un flux', () => {

@@ -45,6 +45,8 @@ export interface ResultatDiagnostic {
   plusRecent: string | null;
   dureeMs: number | null;
   empreinte: string | null;
+  accentsAbimes: number | null;
+  exempleTitre: string | null;
   message: string | null;
 }
 
@@ -55,7 +57,8 @@ export async function diagnostiquerSource(client: ClientHttp, source: Source, ma
   const base: ResultatDiagnostic = {
     id: source.id, nom: source.nom, type: source.type, url: source.url ?? '', urlFinale: null,
     verdict: 'echec', http: null, contentType: null, encodageDeclare: null, encodageReel: null, ascii: false,
-    elements: null, sansDate: null, dateDansDescription: null, plusRecent: null, dureeMs: null, empreinte: null, message: null,
+    elements: null, sansDate: null, dateDansDescription: null, plusRecent: null, dureeMs: null, empreinte: null,
+    accentsAbimes: null, exempleTitre: null, message: null,
   };
   if (!source.url) return { ...base, message: 'aucune URL dans le catalogue' };
 
@@ -87,18 +90,21 @@ export async function diagnostiquerSource(client: ClientHttp, source: Source, ma
       sansDate: flux.format ? flux.sansDate : null,
       dateDansDescription: flux.format ? flux.dateDansDescription : null,
       plusRecent: flux.plusRecent ? dateIsoParis(flux.plusRecent) : null,
+      accentsAbimes: flux.format ? flux.accentsAbimes : null,
+      exempleTitre: flux.exempleTitre,
     };
     if (!flux.format) return { ...avecFlux, message: flux.remarque };
     if (flux.elements === 0) return { ...avecFlux, message: 'flux valide mais vide' };
 
     const remarques: string[] = [];
+    if (flux.accentsAbimes > 0) remarques.push(`${flux.accentsAbimes} accent(s) abîmé(s) (encodage mélangé ?)`);
     if (flux.sansDate === flux.elements) remarques.push('aucune date lisible');
     else if (flux.sansDate > 0) remarques.push(`${flux.sansDate} élément(s) sans date`);
     if (flux.dateDansDescription > 0) remarques.push(`${flux.dateDansDescription} date(s) lue(s) dans la description`);
     const ageJours = flux.plusRecent ? (maintenant.getTime() - flux.plusRecent.getTime()) / 86_400_000 : null;
     if (ageJours !== null && ageJours > JOURS_SANS_PUBLICATION) remarques.push(`rien de publié depuis ${Math.floor(ageJours)} jours`);
 
-    const aSurveiller = flux.sansDate === flux.elements || (ageJours !== null && ageJours > JOURS_SANS_PUBLICATION);
+    const aSurveiller = flux.accentsAbimes > 0 || flux.sansDate === flux.elements || (ageJours !== null && ageJours > JOURS_SANS_PUBLICATION);
     return { ...avecFlux, verdict: aSurveiller ? 'a_surveiller' : 'ok', message: remarques.join(' ; ') || null };
   } catch (e) {
     const message = e instanceof ErreurCollecte ? e.message : `erreur inattendue : ${e instanceof Error ? e.message : String(e)}`;
@@ -136,7 +142,7 @@ export function rapportMarkdown(resultats: ResultatDiagnostic[], horodatage: Dat
   for (const r of resultats) {
     const temps = r.dureeMs === null ? null : `${(r.dureeMs / 1000).toFixed(1).replace('.', ',')} s`;
     const plusRecent = r.plusRecent ? r.plusRecent.split('-').reverse().join('/') : null;
-    const detail = [r.message, r.urlFinale ? `redirigé vers ${r.urlFinale}` : null, r.empreinte ? `empreinte ${r.empreinte}` : null]
+    const detail = [r.message, r.exempleTitre ? `ex. « ${r.exempleTitre} »` : null, r.urlFinale ? `redirigé vers ${r.urlFinale}` : null, r.empreinte ? `empreinte ${r.empreinte}` : null]
       .filter(Boolean)
       .join(' ; ');
     lignes.push(

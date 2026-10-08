@@ -17,6 +17,15 @@ export interface AnalyseFlux {
   /** Éléments datés seulement grâce à la description (cas du BOFiP). */
   dateDansDescription: number;
   plusRecent: Date | null;
+  /** Titre du premier élément, pour contrôler à l'œil le décodage des accents. */
+  exempleTitre: string | null;
+  /** Séquences typiques d'UTF-8 décodé à tort en latin (« Ã© » pour « é »). */
+  accentsAbimes: number;
+}
+
+/** « Ã© », « Ã¨ », « â€™ »… : signature d'un texte UTF-8 décodé comme du latin-1 ou du windows-1252. */
+export function compterAccentsAbimes(texte: string): number {
+  return (texte.match(/[ÃÂ][\u0080-\u00bf]|â€[\u0080-\u00bf\u2018-\u203a\u02dc\u2122\u0153\u0161\u017e]/g) ?? []).length;
 }
 
 const BALISES_DATE = ['pubDate', 'dc:date', 'published', 'updated', 'a10:updated', 'dcterms:modified', 'dcterms:created'];
@@ -44,11 +53,16 @@ function detecterFormat(texte: string): { format: FormatFlux | null; remarque: s
 
 export function analyserFlux(texte: string): AnalyseFlux {
   const { format, remarque } = detecterFormat(texte);
-  const resultat: AnalyseFlux = { format, remarque, elements: 0, sansDate: 0, dateDansDescription: 0, plusRecent: null };
+  const resultat: AnalyseFlux = {
+    format, remarque, elements: 0, sansDate: 0, dateDansDescription: 0, plusRecent: null,
+    exempleTitre: null, accentsAbimes: compterAccentsAbimes(texte),
+  };
   if (!format) return resultat;
 
   const blocs = texte.match(format === 'atom' ? /<entry[\s>][\s\S]*?<\/entry>/gi : /<item[\s>][\s\S]*?<\/item>/gi) ?? [];
   resultat.elements = blocs.length;
+  const titre = blocs[0] ? texteBalise(blocs[0], 'title') : null;
+  resultat.exempleTitre = titre ? titre.replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').slice(0, 90) : null;
 
   for (const bloc of blocs) {
     let date: Date | null = null;
