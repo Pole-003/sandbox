@@ -2,6 +2,15 @@
 
 Toutes les évolutions notables de la Sandbox Pôle 003. Format inspiré de « Keep a Changelog », numéros de version au format semver.
 
+## [0.9.0] - 2026-10-08
+
+### Ajouté
+- Module Circularisations : à partir du FEC d'un dossier, sélection des banques (toutes, y compris les comptes soldés en cours d'année, regroupées par établissement), des clients et des fournisseurs selon les critères du cabinet (soldes, facturation ou achats de l'exercice, soldes anormaux, tirage aléatoire, ajouts et exclusions justifiés).
+- Réglage des seuils (SS, SP, SAI, seuils en euros ou en % du SP) avec recalcul instantané ; indicateurs de couverture des soldes et des mouvements par population.
+- Tirage aléatoire reproductible : la graine est affichée, modifiable et exportée ; même FEC, mêmes paramètres et même graine donnent exactement la même sélection.
+- Tableau de suivi Excel : un onglet par population, listes déroulantes (statut, mode de réponse, sens, nature de la justification), écarts calculés par formule, écarts non justifiés supérieurs au SAI et demandes sans réponse mis en évidence, synthèse en formules vivantes, décisions manuelles et paramètres (graine, seuils, empreinte du FEC).
+- Paramètres et décisions enregistrés avec le dossier, sur ce poste ; « Purger ce dossier » les supprime aussi.
+
 ## [0.8.0] - 2026-10-08
 
 ### Ajouté

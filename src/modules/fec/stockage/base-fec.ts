@@ -5,7 +5,8 @@
  *  - dossiers : { id, nom, siren, creeLe, modifieLe, fec: { N?, 'N-1'? } } (identifiants d'import) ;
  *  - imports  : métadonnées, constats et réglages d'un FEC importé (index dossierId) ;
  *  - colonnes : FEC normalisé en colonnes typées (séparé pour ne pas le charger en listant les dossiers) ;
- *  - profils  : correspondances de colonnes mémorisées, par signature d'en-tête.
+ *  - profils  : correspondances de colonnes mémorisées, par signature d'en-tête ;
+ *  - circularisations : paramètres et décisions de sélection des circularisations, par dossier (v2).
  *
  * Toute évolution de structure incrémente VERSION_BASE et ajoute une migration dans MIGRATIONS,
  * qui convertit l'ancien format (CLAUDE.md, conventions).
@@ -18,7 +19,7 @@ import type { MetaImport } from '../import/pipeline.ts';
 import type { Regime } from '../zones.ts';
 
 export const NOM_BASE = cleStockage('fec');
-export const VERSION_BASE = 1;
+export const VERSION_BASE = 2;
 
 export type Role = 'N' | 'N-1';
 
@@ -70,6 +71,11 @@ const MIGRATIONS: Record<number, (db: IDBDatabase) => void> = {
     db.createObjectStore('imports', { keyPath: 'id' }).createIndex('dossierId', 'dossierId');
     db.createObjectStore('colonnes', { keyPath: 'id' });
     db.createObjectStore('profils', { keyPath: 'signature' });
+  },
+  // Version 2 (étape 7) : paramètres et décisions de circularisation, un enregistrement par dossier.
+  // Aucune donnée existante à convertir : les dossiers et FEC de la version 1 sont conservés tels quels.
+  2: (db) => {
+    db.createObjectStore('circularisations', { keyPath: 'dossierId' });
   },
 };
 
@@ -250,7 +256,8 @@ export async function mettreAJourImport(id: string, changements: { reglages?: Re
 /** « Purger ce dossier » : supprime le dossier, ses FEC et leurs données. */
 export async function purgerDossier(id: string): Promise<void> {
   const db = await ouvrirBase();
-  const tx = db.transaction(['dossiers', 'imports', 'colonnes'], 'readwrite');
+  const tx = db.transaction(['dossiers', 'imports', 'colonnes', 'circularisations'], 'readwrite');
+  tx.objectStore('circularisations').delete(id);
   const imports = await requete(tx.objectStore('imports').index('dossierId').getAllKeys(id));
   for (const cle of imports) {
     tx.objectStore('imports').delete(cle);
@@ -270,6 +277,19 @@ export async function toutPurger(): Promise<void> {
     r.onerror = () => reject(r.error);
     r.onblocked = () => reject(new Error('Suppression bloquée par un autre onglet de la sandbox.'));
   });
+}
+
+/** Lecture et écriture d'un enregistrement d'un magasin secondaire (utilisé par le module Circularisations). */
+export async function lireEnregistrement<T>(magasin: 'circularisations', cle: string): Promise<T | null> {
+  const db = await ouvrirBase();
+  return ((await requete(db.transaction(magasin).objectStore(magasin).get(cle))) as T | undefined) ?? null;
+}
+
+export async function ecrireEnregistrement(magasin: 'circularisations', valeur: unknown): Promise<void> {
+  const db = await ouvrirBase();
+  const tx = db.transaction(magasin, 'readwrite');
+  tx.objectStore(magasin).put(valeur);
+  await fin(tx);
 }
 
 export async function enregistrerProfil(p: Omit<ProfilImport, 'creeLe' | 'utiliseLe'>): Promise<void> {

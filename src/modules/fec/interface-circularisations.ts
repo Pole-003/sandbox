@@ -97,8 +97,8 @@ export interface DonneesFec {
   readonly version: typeof VERSION_INTERFACE_FEC;
   readonly metadonnees: MetadonneesDossierFec;
   soldesParCompte(): SoldeCompteFec[];
-  /** Tiers des comptes commençant par l'un des préfixes (par défaut 40 et 41). */
-  soldesParTiers(prefixes?: string[]): SoldeTiersFec[];
+  /** Tiers des comptes commençant par l'un des préfixes (par défaut 40 et 41), hors préfixes exclus. */
+  soldesParTiers(prefixes?: string[], exclus?: string[]): SoldeTiersFec[];
   /** Comptes bancaires présents dans le FEC (à-nouveaux ou mouvements), même soldés à la clôture. */
   comptesBancaires(prefixes?: string[]): CompteBancaireFec[];
   ecrituresDuTiers(cle: string): EcritureFec[];
@@ -179,9 +179,12 @@ export function construireDonneesFec(colonnes: FecColonnes, imp: ImportEnregistr
       importeLe: imp.importeLe,
     },
     soldesParCompte: () => balance.comptes.map((c) => ({ compteNum: c.compteNum, compteLib: c.compteLib, ...solde(c) })),
-    soldesParTiers(prefixes = ['40', '41']) {
+    soldesParTiers(prefixes = ['40', '41'], exclus = []) {
       const retenus = new Uint8Array(f.textes.length);
-      for (const c of new Set(f.compteNum)) if (prefixes.some((p) => f.textes[c]!.startsWith(p))) retenus[c] = 1;
+      for (const c of new Set(f.compteNum)) {
+        const num = f.textes[c]!;
+        if (prefixes.some((p) => num.startsWith(p)) && !exclus.some((p) => num.startsWith(p))) retenus[c] = 1;
+      }
       const retenir = (i: number) => retenus[f.compteNum[i]!] === 1;
       const cles = clesTiers(ctx);
       const infos = new Map<number, { comptes: Set<number>; libelle: number; aux: boolean }>();

@@ -164,6 +164,14 @@ Clé du tiers : `CompAuxNum` s'il est renseigné, sinon `CompteNum`. Solde de cl
   - F4 Sélection aléatoire parmi les non retenus.
   - F5 Ajout ou exclusion manuelle, justification obligatoire.
 
+**Règles précisées à l'étape 7 (08/10/2026)**
+- Seuils par défaut : C1 / F1 = 50 % du SP, C2 / F2 = 100 % du SP (modifiables, en euros ou en % du SP ; un critère en % du SP reste inopérant tant que le SP n'est pas saisi).
+- C3 / F3 : le test du solde anormal porte sur le solde du tiers **hors comptes d'avances** (4191, 4091) ; le solde présenté et circularisé reste le solde total.
+- C4 / F4 : tirage **uniforme sans remise** (mulberry32, mélange de Fisher-Yates) parmi les tiers non retenus par les critères 1 à 3 et à solde non nul, triés par clé ; graine propre à chaque population dérivée de la graine du dossier. Les décisions manuelles s'appliquent après le tirage et ne le modifient pas.
+- C5 / F5 : une décision par tiers (la dernière l'emporte), justification obligatoire ; une exclusion conserve les motifs pour la traçabilité (onglet « Décisions manuelles » de l'export).
+- Banques : comptes des préfixes bancaires présents dans le FEC (à-nouveaux ou mouvements), même soldés ; établissement proposé d'après le libellé du compte (« À préciser » sinon), modifiable ; une ligne de suivi par établissement.
+- Toute modification des paramètres remet la sélection à l'état « non arrêtée » ; « Arrêter la sélection » fixe la date et l'heure reprises dans l'export.
+
 ### 4.3 Écran de sélection
 - Réglage des seuils avec recalcul instantané.
 - Indicateurs par population : nombre de tiers sélectionnés / total, couverture en valeur absolue des soldes (%), couverture des mouvements (%), nombre de soldes anormaux.
@@ -195,15 +203,17 @@ Colonnes :
 | Date de réponse | à compléter |
 | Mode de réponse | Courrier / E-mail / Plateforme / Aucune |
 | Statut | liste déroulante : À envoyer, Envoyé, Relancé, Réponse reçue, Sans réponse – procédure alternative |
-| Solde confirmé par le tiers | à compléter |
-| Écart | formule : solde confirmé − solde comptable (avec gestion du sens) |
+| Solde confirmé par le tiers | à compléter, en valeur absolue |
+| Sens confirmé | liste D / C, prérempli avec le sens comptable (décision du 08/10/2026) |
+| Écart | formule : solde confirmé signé (C = négatif) − solde comptable signé |
 | Écart justifié | à compléter |
 | Nature de la justification | liste : Décalage de règlement, Cut-off facturation, Litige, Erreur du tiers, Erreur comptable, Autre |
 | Écart non justifié | formule : écart − écart justifié |
 | Procédure alternative | description (règlements postérieurs, factures, bons de livraison) |
 | Réf. feuille de travail | à compléter |
 | Commentaire | libre |
-| Préparé par / Revu par | initiales |
+| Préparé par | initiales |
+| Revu par | initiales |
 
 Mises en forme : en-têtes figés, filtres, listes déroulantes de validation, mise en évidence conditionnelle des écarts non justifiés supérieurs au SAI et des demandes sans réponse.
 

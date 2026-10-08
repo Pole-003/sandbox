@@ -5,6 +5,7 @@ import './styles/coque.css';
 import './styles/intro.css';
 import './styles/veille.css';
 import './styles/fec.css';
+import './styles/circularisations.css';
 import { monterCoque } from './app/coque.ts';
 import { lancerIntro } from './app/intro/intro.ts';
 import { MODULES } from './modules/index.ts';

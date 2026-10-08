@@ -77,3 +77,32 @@ describe('stockage local IndexedDB des dossiers FEC', () => {
     expect(await trouverProfil('autre')).toBeNull();
   });
 });
+
+describe('migration de la base (version 1 → 2)', () => {
+  it('conserve les dossiers existants et ajoute le magasin des circularisations', async () => {
+    await toutPurger();
+    // Base au format de la version 1, créée sans passer par le code applicatif.
+    await new Promise<void>((resolve, reject) => {
+      const r = indexedDB.open(NOM_BASE, 1);
+      r.onupgradeneeded = () => {
+        const db = r.result;
+        db.createObjectStore('dossiers', { keyPath: 'id' }).put({ id: 'ancien', nom: 'Dossier v1', siren: null, creeLe: '2026-10-01', modifieLe: '2026-10-01', fec: {} });
+        db.createObjectStore('imports', { keyPath: 'id' }).createIndex('dossierId', 'dossierId');
+        db.createObjectStore('colonnes', { keyPath: 'id' });
+        db.createObjectStore('profils', { keyPath: 'signature' });
+      };
+      r.onsuccess = () => {
+        r.result.close();
+        resolve();
+      };
+      r.onerror = () => reject(r.error);
+    });
+    expect((await listerDossiers()).map((d) => d.nom)).toEqual(['Dossier v1']);
+    const { enregistrerParametres, lireParametres } = await import('../../../src/modules/circularisations/stockage.ts');
+    const { parametresParDefaut } = await import('../../../src/modules/circularisations/parametres.ts');
+    await enregistrerParametres('ancien', parametresParDefaut('2025-12-31', 7));
+    expect((await lireParametres('ancien'))?.graine).toBe(7);
+    await purgerDossier('ancien');
+    expect(await lireParametres('ancien')).toBeNull();
+  });
+});
