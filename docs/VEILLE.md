@@ -135,3 +135,16 @@ Contrôles automatiques après chaque appel (le script, pas l'IA) :
 - **Indicateurs** : tuiles (valeur, variation, période, source, date) pour les indicateurs clés.
 - **Rennes et Bretagne** : fil dédié et, si la couche B BODACC est active, compteurs hebdomadaires des créations et procédures collectives en Ille-et-Vilaine.
 - **État des sources** : tableau de `veille-etat.json` (dernière réussite, erreurs, nombre d'articles, coût de la couche C du jour et du mois).
+
+## État de réalisation (08/10/2026)
+
+| Élément | État |
+|---|---|
+| Diagnostic des sources (`npm run veille:test`, workflow `veille-diagnostic.yml`) | Fait |
+| Couche A (flux RSS/Atom, page du dossier PLF) | Fait |
+| Couche B (API PISTE, INSEE, Banque de France, BODACC) | À faire : les sources sont listées dans le catalogue et signalées « non configurées » |
+| Couche C (recherche IA), contrôles, coûts et plafond | Fait |
+| Notation groupée des articles de flux | Fait. Les articles notés 1 restent dans `news.json` (pour ne pas être renotés chaque jour) et sont masqués par défaut à l'écran |
+| Fusion, 60 jours glissants, archives mensuelles | Fait |
+| Workflow `veille.yml` | Fait |
+| Écrans (brief, veille, suivi, indicateurs, Rennes, état des sources) | Fait. Compteurs BODACC en attente de la couche B |

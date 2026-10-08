@@ -46,8 +46,18 @@ describe('check:securite', () => {
 
   it("n'autorise fetch que dans les fichiers de la liste blanche", () => {
     const liste: ListeBlanche = { urls: [], fichiersFetch: ['src/modules/veille/news.ts'] };
-    expect(regles("fetch('news.json')", liste, 'src/modules/veille/news.ts')).toEqual([]);
-    expect(regles("fetch('news.json')", liste, 'src/modules/fec/x.ts')).toHaveLength(1);
+    const appel = 'fetch(`${import.meta.env.BASE_URL}${nom}`)';
+    expect(regles(appel, liste, 'src/modules/veille/news.ts')).toEqual([]);
+    expect(regles(appel, liste, 'src/modules/fec/x.ts')).toHaveLength(1);
+  });
+
+  it('dans un fichier autorisé : base du site, sans paramètre, news.json et veille-etat.json seulement', () => {
+    const liste: ListeBlanche = { urls: [], fichiersFetch: ['src/modules/veille/news.ts'] };
+    const f = 'src/modules/veille/news.ts';
+    expect(regles("const F = { news: 'news.json', etat: 'veille-etat.json' };", liste, f)).toEqual([]);
+    expect(regles("fetch('/autre/news.json')", liste, f)).toHaveLength(1);
+    expect(regles('fetch(`${import.meta.env.BASE_URL}news.json?dossier=${id}`)', liste, f)).toHaveLength(1);
+    expect(regles("const F = 'dossiers.json';", liste, f)).toEqual(['fichier dossiers.json non autorisé (seuls news.json et veille-etat.json)']);
   });
 
   it("n'autorise que les URL exactes de la liste blanche", () => {

@@ -2,6 +2,15 @@
 
 Toutes les évolutions notables de la Sandbox Pôle 003. Format inspiré de « Keep a Changelog », numéros de version au format semver.
 
+## [0.3.0] - 2026-10-08
+
+### Ajouté
+- Veille : collecte automatique chaque jour ouvré à 6 h 30 (et à la demande) par GitHub Actions. Le navigateur ne contacte jamais les sites sources : il ne charge que les fichiers publiés avec le site.
+- Flux officiels vérifiés : BOFiP, Sénat (textes, rapports, thèmes budget, fiscalité, entreprises, PME, sécurité sociale), Assemblée nationale (publications filtrées par mots-clés, commissions des finances, des affaires sociales et économiques), Conseil d'État, et suivi du dossier législatif du PLF 2027.
+- Recherche IA quotidienne par thème (loi de finances, sécurité sociale, fiscal et comptable, audit et profession, économie et statistiques, Rennes et Bretagne), avec contrôles automatiques : URL obligatoirement issues des résultats de recherche, dates dans la fenêtre de veille, plafond de dépense mensuel.
+- Écran Veille : fil filtrable par thème, source, importance et public, recherche locale, marques « lu » et « important pour nos dossiers » conservées dans le navigateur ; suivi PLF / PLFSS ; indicateurs (badge « Source IA, à vérifier ») ; Rennes et Bretagne ; état des sources et coûts.
+- Accueil : brief du jour (5 informations d'importance 4 ou 5) et prochaines échéances PLF et PLFSS.
+
 ## [0.2.0] - 2026-10-08
 
 ### Ajouté

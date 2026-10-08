@@ -1,6 +1,7 @@
 import { h } from '../../app/dom.ts';
 import { House, ShieldCheck, icone } from '../../app/icones.ts';
 import type { DescripteurModule } from '../../app/module.ts';
+import { sectionBrief } from '../veille/brief.ts';
 
 export const moduleAccueil: DescripteurModule = {
   id: 'accueil',
@@ -8,13 +9,15 @@ export const moduleAccueil: DescripteurModule = {
   icone: House,
   statut: 'actif',
   rendre(conteneur) {
+    const annulation = { annule: false };
     conteneur.append(
       h('h1', { tabindex: '-1' }, 'Bienvenue dans la Sandbox du Pôle 003'),
       h(
         'p',
         { class: 'texte-secondaire' },
-        "Le tableau de bord personnalisé (salutation, accès aux modules, actualités à la une, dossiers en cache) arrive à l'étape 2.",
+        'Le tableau de bord personnalisé (salutation, accès aux modules, dossiers en cache) arrivera avec l’écran d’accueil complet.',
       ),
+      sectionBrief(annulation),
       h(
         'section',
         { class: 'carte carte-confidentialite', 'aria-labelledby': 'titre-confidentialite' },
@@ -28,5 +31,8 @@ export const moduleAccueil: DescripteurModule = {
         ),
       ),
     );
+    return () => {
+      annulation.annule = true;
+    };
   },
 };

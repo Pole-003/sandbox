@@ -1,0 +1,118 @@
+# Collecte quotidienne de la veille (docs/VEILLE.md) : npm run veille:collecte
+#
+# Jours ouvrés (lundi à vendredi) à 6 h 30 heure de Paris, et déclenchement manuel (« Run workflow »).
+# Publie public/news.json, public/veille-etat.json, public/archives/ et veille/couts.json,
+# les commit seulement s'ils ont changé, puis déclenche le déploiement GitHub Pages.
+#
+# Secret facultatif : ANTHROPIC_API_KEY (Settings > Secrets and variables > Actions).
+# Sans lui, la recherche IA et la notation sont sautées et signalées dans veille-etat.json.
+
+name: Veille · collecte quotidienne
+
+on:
+  schedule:
+    # Le cron de GitHub est en UTC. 6 h 30 à Paris = 04:30 UTC en heure d'été (UTC+2),
+    # 05:30 UTC en heure d'hiver (UTC+1). Les deux sont programmés ; l'étape « Heure de Paris »
+    # ne laisse passer que celui qui correspond à l'heure légale du jour.
+    - cron: '30 4 * * 1-5'
+    - cron: '30 5 * * 1-5'
+  workflow_dispatch:
+  # Branche de travail : une exécution à chaque modification de ce workflow, en attendant
+  # qu'il soit sur main (le bouton « Run workflow » n'existe que pour la branche par défaut).
+  push:
+    branches: [beta-8flzza]
+    paths:
+      - '.github/workflows/veille.yml'
+
+permissions:
+  contents: write # commit des fichiers publiés
+  actions: write # déclenchement du workflow de déploiement
+
+concurrency:
+  group: veille-collecte
+  cancel-in-progress: false
+
+jobs:
+  collecte:
+    name: Collecter et publier
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: Heure de Paris
+        id: heure
+        env:
+          EVENEMENT: ${{ github.event_name }}
+          CRON: ${{ github.event.schedule }}
+        run: |
+          if [ "$EVENEMENT" != "schedule" ]; then
+            echo "lancer=true" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          # +0200 en heure d'été, +0100 en heure d'hiver.
+          if [ "$(TZ=Europe/Paris date +%z)" = "+0200" ]; then attendu='30 4 * * 1-5'; else attendu='30 5 * * 1-5'; fi
+          if [ "$CRON" = "$attendu" ]; then
+            echo "lancer=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "lancer=false" >> "$GITHUB_OUTPUT"
+            echo "::notice::Déclenchement « $CRON » ignoré : il n'est pas 6 h 30 à Paris aujourd'hui."
+          fi
+
+      - name: Récupérer le dépôt
+        if: steps.heure.outputs.lancer == 'true'
+        uses: actions/checkout@v7
+        with:
+          # Historique complet : le recalage avant l'envoi (git pull --rebase) en a besoin.
+          fetch-depth: 0
+
+      - name: Installer Node.js
+        if: steps.heure.outputs.lancer == 'true'
+        uses: actions/setup-node@v7
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+
+      - name: Installer les dépendances
+        if: steps.heure.outputs.lancer == 'true'
+        run: npm ci
+
+      - name: Collecter
+        if: steps.heure.outputs.lancer == 'true'
+        # La clé n'est transmise qu'à cette étape ; GitHub la masque dans les journaux,
+        # et le script ne l'affiche jamais.
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: npm run veille:collecte
+
+      - name: Publier si les fichiers ont changé
+        id: publication
+        if: steps.heure.outputs.lancer == 'true'
+        run: |
+          for chemin in public/news.json public/veille-etat.json public/archives veille/couts.json; do
+            if [ -e "$chemin" ]; then git add "$chemin"; fi
+          done
+          if git diff --cached --quiet; then
+            echo "publie=false" >> "$GITHUB_OUTPUT"
+            echo "::notice::Aucun changement à publier."
+            exit 0
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git commit -m "Veille : collecte du $(TZ=Europe/Paris date +%d/%m/%Y)"
+          # Une autre modification a pu arriver pendant la collecte : on se recale avant d'envoyer.
+          for essai in 1 2 3; do
+            if git pull --rebase --quiet origin "$GITHUB_REF_NAME" && git push --quiet origin "HEAD:$GITHUB_REF_NAME"; then
+              echo "publie=true" >> "$GITHUB_OUTPUT"
+              exit 0
+            fi
+            sleep $((essai * 5))
+          done
+          echo "::error::Envoi des fichiers de veille impossible après 3 essais."
+          exit 1
+
+      - name: Déclencher le déploiement
+        # Un commit fait avec le jeton du workflow ne relance pas les autres workflows :
+        # on déclenche donc explicitement le déploiement (main et beta sont publiés ensemble).
+        if: steps.publication.outputs.publie == 'true' && (github.ref_name == 'main' || github.ref_name == 'beta')
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run deploiement.yml --ref main

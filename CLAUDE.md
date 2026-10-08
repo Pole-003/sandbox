@@ -38,6 +38,9 @@ Avant chaque fin de tâche, vérifie avec `npm run check:securite` qu'aucune URL
 - `npm test` : tests unitaires
 - `npm run check:securite` : recherche d'URL externes et d'API réseau interdites dans `src/`
 - `npm run fec:fictifs` : régénère le jeu de FEC fictifs dans `tests/fixtures/`
+- `npm run veille:test` : diagnostic des sources de veille (statut HTTP, encodage, nombre d'éléments, date du plus récent)
+- `npm run veille:collecte` : collecte complète de la veille (exécutée par le workflow `veille.yml`)
+- `npm run veille:essai -- --theme "<thème>"` : essai de la recherche IA sur un seul thème (nécessite `ANTHROPIC_API_KEY`)
 
 ## Conventions
 

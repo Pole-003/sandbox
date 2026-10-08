@@ -1,7 +1,7 @@
 {
   "name": "pole003-sandbox",
   "private": true,
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Boîte à outils interne du Pôle 003 - Innovation (100 % local)",
   "type": "module",
   "engines": {
@@ -22,6 +22,7 @@
   "devDependencies": {
     "@anthropic-ai/sdk": "^0.132.1",
     "@types/node": "^26.6.4",
+    "fake-indexeddb": "^6.2.5",
     "happy-dom": "^20.14.5",
     "typescript": "^7.0.2",
     "vite": "^8.3.3",

@@ -47,6 +47,9 @@ const MOTIF_URL = /\b(?:https?|wss?|ftp):\/\/[^\s'"`<>)\]]+/gi;
 /** URL relative au protocole dans une chaîne ou un url() CSS : '//cdn.exemple.com/…' */
 const MOTIF_URL_SANS_PROTOCOLE = /(?<=['"`(]|=\s*)\/\/[a-z0-9-]+(?:\.[a-z0-9-]+)+(?:[/:?#][^\s'"`)]*)?/gi;
 const MOTIF_FETCH = /\bfetch\s*\(/;
+/** Seuls fichiers que le code applicatif peut charger (CLAUDE.md, règle n° 1). */
+const FICHIERS_CHARGEABLES = new Set(['news.json', 'veille-etat.json']);
+const MOTIF_NOM_JSON = /['"`]([\w.-]+\.json)['"`]/g;
 
 const EXTENSIONS = new Set(['.ts', '.tsx', '.js', '.mjs', '.cjs', '.css', '.html', '.json', '.svg']);
 
@@ -79,6 +82,16 @@ export function analyserContenu(fichier: string, contenu: string, listeBlanche: 
     }
     if (MOTIF_FETCH.test(texte) && !fetchAutorise) {
       signaler('fetch() interdit hors des fichiers autorisés (seuls news.json et veille-etat.json peuvent être chargés)');
+    }
+    if (fetchAutorise) {
+      // Même dans un fichier autorisé : même origine (base du site), sans paramètre de requête.
+      const appel = texte.slice(texte.search(MOTIF_FETCH));
+      if (MOTIF_FETCH.test(texte) && (!appel.includes('import.meta.env.BASE_URL') || appel.includes('?'))) {
+        signaler('fetch() doit viser la base du site (import.meta.env.BASE_URL), sans paramètre de requête');
+      }
+      for (const [, nom] of texte.matchAll(MOTIF_NOM_JSON)) {
+        if (nom && !FICHIERS_CHARGEABLES.has(nom)) signaler(`fichier ${nom} non autorisé (seuls news.json et veille-etat.json)`);
+      }
     }
   });
   return violations;

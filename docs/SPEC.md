@@ -19,6 +19,8 @@
 
 ## 2. Veille comptable, fiscale et économique
 
+> **Remplacée par `docs/VEILLE.md`** (architecture en couches, sources, prompt, écrans), qui fait foi pour tout ce qui concerne la veille. Le texte ci-dessous est conservé pour mémoire.
+
 > **Remplacée par `docs/VEILLE.md`**, qui fait foi (architecture en trois couches, catalogue de sources vérifiées, prompt de recherche IA, écrans). La suite de cette section est conservée pour mémoire.
 
 ### Principe

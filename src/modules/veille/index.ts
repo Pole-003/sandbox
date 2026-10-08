@@ -1,6 +1,6 @@
-import { ecranProvisoire } from '../../app/ecran-provisoire.ts';
 import { Newspaper } from '../../app/icones.ts';
 import type { DescripteurModule } from '../../app/module.ts';
+import { rendreVeille } from './ecran.ts';
 
 export const moduleVeille: DescripteurModule = {
   id: 'veille',
@@ -8,11 +8,10 @@ export const moduleVeille: DescripteurModule = {
   icone: Newspaper,
   statut: 'actif',
   rendre(conteneur) {
-    ecranProvisoire(
-      conteneur,
-      'Veille',
-      'Actualités comptables, fiscales et économiques, suivi du projet de loi de finances.',
-      "Ce module arrive à l'étape 3.",
-    );
+    const annulation = { annule: false };
+    void rendreVeille(conteneur, { annulation });
+    return () => {
+      annulation.annule = true;
+    };
   },
 };

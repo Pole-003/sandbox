@@ -1,5 +1,7 @@
 {
   "$commentaire": "Exceptions au contrôle check:securite. Chaque entrée doit être justifiée et validée par l'utilisateur. 'urls' : liens sortants (ouverts avec rel=\"noopener noreferrer\", sans aucune donnée de dossier). 'fichiersFetch' : seuls fichiers autorisés à appeler fetch(), uniquement pour charger news.json et veille-etat.json (même origine, GET, sans paramètre).",
   "urls": [],
-  "fichiersFetch": []
+  "fichiersFetch": [
+    "src/modules/veille/donnees.ts"
+  ]
 }

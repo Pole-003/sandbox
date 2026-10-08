@@ -91,6 +91,14 @@ jobs:
           if [ "$BETA_OK" = "true" ]; then
             mkdir site/beta
             cp -R beta/dist/. site/beta/
+            # La veille n'est collectée que sur main : la bêta affiche les mêmes actualités.
+            for fichier in news.json veille-etat.json; do
+              if [ -f "main/dist/$fichier" ]; then cp "main/dist/$fichier" "site/beta/$fichier"; fi
+            done
+            if [ -d main/dist/archives ]; then
+              rm -rf site/beta/archives
+              cp -R main/dist/archives site/beta/archives
+            fi
           elif [ "$BETA_EXISTE" = "true" ]; then
             echo "::warning::Le build de beta a échoué : /beta n'est pas publié cette fois-ci."
           fi
