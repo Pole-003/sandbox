@@ -1,6 +1,8 @@
 {
-  "$commentaire": "Exceptions au contrôle check:securite. Chaque entrée doit être justifiée et validée par l'utilisateur. 'urls' : liens sortants (ouverts avec rel=\"noopener noreferrer\", sans aucune donnée de dossier). 'fichiersFetch' : seuls fichiers autorisés à appeler fetch(), uniquement pour charger news.json et veille-etat.json (même origine, GET, sans paramètre).",
-  "urls": [],
+  "$commentaire": "Exceptions au contrôle check:securite. Chaque entrée doit être justifiée et validée par l'utilisateur. 'urls' : liens sortants (ouverts avec rel=\"noopener noreferrer\", sans aucune donnée de dossier). 'fichiersFetch' : seuls fichiers autorisés à appeler fetch(), uniquement pour charger news.json et veille-etat.json (même origine, GET, sans paramètre). Lien Test Compta Demat : exigé par docs/SPEC.md 3.2 (en-tête du rapport de conformité FEC).",
+  "urls": [
+    "https://www.economie.gouv.fr/dgfip/outil-test-des-fichiers-des-ecritures-comptables-fec"
+  ],
   "fichiersFetch": [
     "src/modules/veille/donnees.ts"
   ]
