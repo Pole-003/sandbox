@@ -2,6 +2,23 @@
 
 Toutes les évolutions notables de la Sandbox Pôle 003. Format inspiré de « Keep a Changelog », numéros de version au format semver.
 
+## [0.14.0] - 2026-10-08
+
+### Ajouté
+- **Module Cadrage de TVA (TVA collectée, prestations de services au régime des encaissements).**
+- **Lecture des CA3 :** les PDF des déclarations téléchargés depuis l'espace professionnel se déposent en lot, dans n'importe quel ordre, et sont lus dans votre navigateur, sans envoi.
+  - Contrôles de chaque déclaration (totaux 16, 23, TD ou 25, 27, 28, 32, base × taux) et de la série (SIREN, périodes manquantes ou en double, report du crédit, dépôt tardif).
+  - Correction d'une valeur avec motif obligatoire, tracée ; saisie manuelle d'une déclaration illisible (PDF scanné).
+- **Récapitulatif annuel des montants déclarés (G300)**, limité aux cases servies dans l'année.
+- **TVA collectée théorique reconstituée à partir du FEC (G340) :**
+  - chiffre d'affaires par compte, avec le taux observé dans les écritures de vente, à défaut deviné d'après le libellé, ou saisi ;
+  - régularisations des encaissements : clients N-1 et N, clients douteux, avances, factures à établir, produits constatés d'avance, pertes sur créances irrécouvrables, TVA autoliquidée sur achats ;
+  - soldes N-1 pré-remplis et modifiables, ventilation des encours au prorata ou saisie par taux ;
+  - rapprochement des bases et des taxes avec la CA3.
+- **Écart et justification :** écart annuel comparé au seuil du dossier, tableau de justification, écart résiduel mis en évidence.
+- **Cadrage par période et contrôles :** TVA déclarée, TVA comptabilisée et chiffre d'affaires par période ; contrôles de la TVA à décaisser (4455), du crédit de TVA (44567) et de la TVA des encours. Chaque montant ouvre le détail des écritures du FEC.
+- **Feuille de travail Excel avec formules vivantes :** G300, G340, cadrage mensuel, anomalies et paramètres, avec les empreintes du FEC et des PDF.
+
 ## [0.13.0] - 2026-10-08
 
 ### Ajouté

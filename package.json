@@ -1,7 +1,7 @@
 {
   "name": "pole003-sandbox",
   "private": true,
-  "version": "0.13.0",
+  "version": "0.14.0",
   "description": "Boîte à outils interne du Pôle 003 - Innovation (100 % local)",
   "type": "module",
   "engines": {

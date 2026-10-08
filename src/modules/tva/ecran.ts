@@ -8,11 +8,13 @@ import { formaterMontant } from '../../core/format.ts';
 import { ecrirePreference, lirePreference } from '../../core/stockage.ts';
 import { bouton, dateFr, nombreFr } from '../fec/ecran/commun.ts';
 import { listerDossiers, type Dossier } from '../fec/stockage/base-fec.ts';
-import { CASES_PAR_CODE, ORDRE_CASES } from './ca3-cases.ts';
+import { CASES_PAR_CODE } from './ca3-cases.ts';
 import type { Gravite, IdentificationCa3, ValeurCase } from './ca3/analyse.ts';
-import { controlerDeclaration, controlerSerie, periodicite, trierParPeriode, tvaCollecteeDeclaree, type MessageControle } from './ca3/controles.ts';
+import { controlerDeclaration, controlerSerie, periodicite, trierParPeriode, type MessageControle } from './ca3/controles.ts';
+import { recapitulatifG300, TITRES_BLOCS } from './cadrage/g300.ts';
 import { libellePeriode, valeursRetenues, type Colonne, type DeclarationCa3 } from './ca3/declaration.ts';
 import { CASES_SAISIE, declarationSaisie, identificationVide, lireFichierCa3 } from './ca3/import-ca3.ts';
+import { rendreCadrage, type EcranCadrage } from './ecran-cadrage.ts';
 import { enregistrerTva, lireTva, type DonneesTva } from './stockage.ts';
 
 const PREF_DOSSIER = 'tva-dossier';
@@ -38,12 +40,14 @@ export function rendreEcranTva(conteneur: HTMLElement): () => void {
   let dossiers: Dossier[] = [];
   let dossier: Dossier | null = null;
   let donnees: DonneesTva | null = null;
+  let cadrage: EcranCadrage | null = null;
 
   const annonce = h('p', { class: 'visuellement-masque', role: 'status', 'aria-live': 'polite' });
   const entete = h('div');
   const zoneDepot = h('div');
   const zoneSerie = h('div');
   const zoneTableau = h('div');
+  const zoneCadrage = h('div');
   const zoneDeclarations = h('div');
   const zoneAnomalies = h('div');
   const dialogue = h('dialog', { class: 'dialogue-ecriture dialogue-tva', 'aria-labelledby': 'titre-dialogue-tva' }) as HTMLDialogElement;
@@ -52,12 +56,13 @@ export function rendreEcranTva(conteneur: HTMLElement): () => void {
       'div',
       { class: 'ecran ecran-fec ecran-tva' },
       h('h1', {}, 'Cadrage de TVA'),
-      h('p', { class: 'texte-secondaire' }, 'Lecture des déclarations CA3 de l’exercice et vérification case par case. Les PDF sont lus dans votre navigateur ; ils ne sont ni envoyés ni conservés (seules les valeurs lues et l’empreinte de chaque fichier sont enregistrées sur ce poste).'),
+      h('p', { class: 'texte-secondaire' }, 'Lecture des déclarations CA3 de l’exercice, récapitulatif des montants déclarés (G300), reconstitution de la TVA collectée à partir du FEC (G340), cadrage par période et justification de l’écart. Les PDF sont lus dans votre navigateur ; ils ne sont ni envoyés ni conservés (seules les valeurs lues et l’empreinte de chaque fichier sont enregistrées sur ce poste).'),
       annonce,
       entete,
       zoneDepot,
       zoneSerie,
       zoneTableau,
+      zoneCadrage,
       zoneAnomalies,
       zoneDeclarations,
       dialogue,
@@ -79,6 +84,7 @@ export function rendreEcranTva(conteneur: HTMLElement): () => void {
     rendreTableau();
     rendreAnomalies();
     rendreDeclarations();
+    cadrage?.maj();
   }
 
   // ---- Dossier -----------------------------------------------------------------------------------
@@ -86,13 +92,16 @@ export function rendreEcranTva(conteneur: HTMLElement): () => void {
     dossier = dossiers.find((d) => d.id === id) ?? null;
     ecrirePreference(PREF_DOSSIER, dossier?.id ?? null);
     donnees = null;
+    cadrage?.detruire();
+    cadrage = null;
     rendreEntete();
-    for (const z of [zoneDepot, zoneSerie, zoneTableau, zoneAnomalies, zoneDeclarations]) z.replaceChildren();
+    for (const z of [zoneDepot, zoneSerie, zoneTableau, zoneCadrage, zoneAnomalies, zoneDeclarations]) z.replaceChildren();
     if (!dossier) return;
     const d = dossier;
     const lu = await lireTva(d.id);
     if (detruit || dossier !== d) return;
     donnees = lu;
+    cadrage = rendreCadrage(zoneCadrage, d, () => donnees, sauver, dire);
     rendreTout();
   }
 
@@ -216,7 +225,6 @@ export function rendreEcranTva(conteneur: HTMLElement): () => void {
       return;
     }
     const retenues = liste.map((d) => valeursRetenues(d));
-    const codes = [...new Set(retenues.flatMap((v) => Object.keys(v)))].sort((a, b) => (ORDRE_CASES.get(a) ?? 999) - (ORDRE_CASES.get(b) ?? 999) || a.localeCompare(b));
     const corps = h('tbody');
     const cellule = (d: DeclarationCa3, v: Record<string, ValeurCase>, code: string, colonne: Colonne) => {
       const x = v[code]?.[colonne];
@@ -229,43 +237,46 @@ export function rendreEcranTva(conteneur: HTMLElement): () => void {
           'aria-label': `${code} ${colonne === 'montant' ? '' : colonne === 'base' ? 'base' : 'taxe'} ${libellePeriode(d.identification.debut, d.identification.fin)} : ${x === undefined ? 'vide' : euros(x)}${corrections.length ? ', corrigé' : ''}. Corriger`,
           title: corrections.length ? corrections.map((c) => `${c.avant === null ? 'vide' : euros(c.avant)} → ${c.apres === null ? 'vide' : euros(c.apres)} le ${new Date(c.le).toLocaleString('fr-FR')} : ${c.motif}`).join('\n') : 'Cliquer pour corriger',
         },
-        x === undefined ? '' : euros(x),
+        x === undefined ? '' : CASES_PAR_CODE.get(code)?.pourcentage ? `${(x / 100).toLocaleString('fr-FR')} %` : euros(x),
       );
       b.addEventListener('click', () => ouvrirCorrection(d, code, colonne));
       return h('td', { class: 'nombre montant' }, b);
     };
-    const total = (code: string, colonne: Colonne) => retenues.reduce((s, v) => s + (v[code]?.[colonne] ?? 0), 0);
-    for (const code of codes) {
-      const def = CASES_PAR_CODE.get(code);
-      const colonnes: Colonne[] = def?.colonnes === 2 ? ['base', 'taxe'] : ['montant'];
-      colonnes.forEach((col, k) => {
+    // Disposition du récapitulatif G300 : opérations, taux (base puis taxe), TVA collectée déclarée, 15 et 5B à part, 16, déductible, solde.
+    let bloc = '';
+    for (const l of recapitulatifG300(retenues)) {
+      if (l.bloc !== bloc && l.bloc !== 'collectee') {
+        bloc = l.bloc;
+        corps.append(h('tr', { class: 'ligne-section' }, h('th', { scope: 'rowgroup', colspan: String(liste.length + 3) }, TITRES_BLOCS[l.bloc])));
+      }
+      if (l.code === 'COLLECTEE') {
         corps.append(
           h(
             'tr',
-            { class: k === 0 ? 'debut-case' : undefined },
-            k === 0 ? h('th', { scope: 'row', rowspan: String(colonnes.length), class: 'mono' }, code) : null,
-            h('td', { class: 'libelle-case' }, k === 0 ? (def?.libelle ?? 'Case inconnue de la table') : '', col === 'montant' ? '' : h('span', { class: 'note texte-secondaire' }, k === 0 ? ' — base HT' : 'taxe due')),
-            ...liste.map((d, i) => cellule(d, retenues[i]!, code, col)),
-            h('td', { class: 'nombre montant total' }, def?.pourcentage ? '' : euros(total(code, col))),
+            { class: 'ligne-solde' },
+            h('th', { scope: 'row', colspan: '2' }, l.libelle),
+            ...l.valeurs.map((c) => h('td', { class: 'nombre montant' }, euros(c ?? 0))),
+            h('td', { class: 'nombre montant total' }, euros(l.total ?? 0)),
           ),
         );
-      });
+        continue;
+      }
+      corps.append(
+        h(
+          'tr',
+          { class: l.colonne === 'taxe' ? undefined : 'debut-case' },
+          h('th', { scope: 'row', class: 'mono' }, l.colonne === 'taxe' ? '' : l.code),
+          h('td', { class: 'libelle-case' }, l.colonne === 'taxe' ? h('span', { class: 'note texte-secondaire' }, 'taxe due') : l.libelle.replace(' — base hors taxe', ''), l.colonne === 'base' ? h('span', { class: 'note texte-secondaire' }, ' — base HT') : ''),
+          ...liste.map((d, i) => cellule(d, retenues[i]!, l.code, l.colonne ?? 'montant')),
+          h('td', { class: 'nombre montant total' }, l.total === null ? '' : euros(l.total)),
+        ),
+      );
     }
-    const collectee = retenues.map(tvaCollecteeDeclaree);
-    corps.append(
-      h(
-        'tr',
-        { class: 'ligne-solde' },
-        h('th', { scope: 'row', colspan: '2' }, 'TVA collectée déclarée (taxes des lignes 08 à 13, T1 à TC, P1, P2, I1 à I6)'),
-        ...collectee.map((c) => h('td', { class: 'nombre montant' }, euros(c))),
-        h('td', { class: 'nombre montant total' }, euros(collectee.reduce((a, b) => a + b, 0))),
-      ),
-    );
     zoneTableau.replaceChildren(
       h(
         'section',
         { class: 'carte', 'aria-labelledby': 'titre-tableau-tva' },
-        h('h2', { id: 'titre-tableau-tva' }, 'Vérification case par période'),
+        h('h2', { id: 'titre-tableau-tva' }, 'Récapitulatif des déclarations (G300) et vérification case par période'),
         h('p', { class: 'note texte-secondaire' }, 'Seules les cases servies au moins une fois sont affichées. Cliquez sur une valeur pour la corriger : la correction est tracée (valeur lue, nouvelle valeur, date, motif) et signalée en couleur.'),
         h(
           'div',
@@ -532,6 +543,7 @@ export function rendreEcranTva(conteneur: HTMLElement): () => void {
 
   return () => {
     detruit = true;
+    cadrage?.detruire();
     if (dialogue.open) dialogue.close();
   };
 }

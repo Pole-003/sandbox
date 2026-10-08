@@ -284,3 +284,98 @@ Périmètre prioritaire : TVA collectée des sociétés de prestations de servic
   - correction d'une valeur avec motif obligatoire, tracée (valeur lue, nouvelle valeur, date, motif), affichée en couleur et annulable ;
   - liste des contrôles et des fichiers, avec leur empreinte.
 - **CA3 fictives** : `npm run ca3:fictives` (pdf-lib en dépendance de développement), décrites dans `tests/fixtures/ca3/README.md`.
+- **Robustesse** (08/10/2026) :
+  - la lecture est aussi éprouvée sur des CA3 fictives imprimées par Chromium (« Imprimer en PDF », avec les en-têtes et pieds de page du navigateur) et par LibreOffice (`npm run ca3:navigateurs`) ;
+  - elle est testée sur des pages déformées : en-têtes de colonnes absents (colonnes alors déduites des lignes de taux à deux montants) ou renommés (« Base HT », « Montant de la taxe »), montants suivis de « € », texte découpé caractère par caractère, autre échelle, numéros de page isolés ;
+  - l'identification tolère les libellés coupés sur deux lignes ;
+  - une ligne sans code n'est rattachée à la case précédente que si elle en est proche (au plus trois lignes), jamais un pied de page.
+
+### 5.2 Récapitulatif déclaré (G300)
+Le tableau croise les cases et les CA3 de l'exercice, avec un total annuel. Seules les cases servies au moins une fois sont affichées, dans l'ordre suivant :
+1. opérations (A1, A2, E1, E2, F2, puis les autres cases servies) ;
+2. base puis taxe de chaque taux servi ;
+3. ligne « TVA collectée déclarée » = somme des taxes des lignes 08 à 13, T1 à TC, P1, P2, I1 à I6 ;
+4. lignes 15, 5B et 16, présentées à part ;
+5. TVA déductible (19, 20, 21, 22, 2C, 23) ;
+6. 25, TD, 27, 28, 32, puis les autres cases servies.
+
+Le même tableau sert à la vérification : un clic sur une valeur la corrige, avec traçabilité. Les déclarations retenues sont celles dont la période est comprise dans l'exercice du FEC ; les autres sont signalées, de même que les mois de l'exercice non couverts.
+
+### 5.3 TVA collectée théorique (G340)
+Interface FEC dédiée : `src/modules/fec/interface-tva.ts`. Elle fournit la balance, les mouvements mensuels, l'observation des écritures de vente et les lignes de détail.
+
+**Paramètres du dossier** (IndexedDB, avec les déclarations) :
+- régime d'exigibilité : encaissements par défaut, débits, ou mixte avec un régime par compte ;
+- seuil d'écart : par défaut le SAI saisi dans le module Circularisations, sinon 1 000 € ;
+- collaborateur ;
+- préfixes : produits (70 ; 75, 77 ou comptes précis sélectionnables), TVA collectée observée (4457, 44587), encours (clients 411 et 413, douteux 416, avances 4191, FAE 418, PCA 487), pertes (654), TVA autoliquidée sur achats (4452) ;
+- réglages par compte, ventilation et justifications.
+
+**1. Chiffre d'affaires par compte.** Il correspond aux mouvements de l'exercice hors à-nouveaux. Le taux est proposé dans l'ordre suivant :
+- **(a) taux observé :** dans chaque écriture qui mouvemente le compte, la TVA des comptes 4457 et 44587 est rapprochée du HT, avec une tolérance de 2 centimes par ligne ou 0,1 % ;
+- **(b) indice dans le libellé :** « 20 % », « 5,5 », « AUTO LIQ », « EXO », « EXPORT », « UE » ;
+- **(c) saisie.**
+
+Règles complémentaires :
+- un compte vendu à plusieurs taux est réparti au prorata des montants observés ;
+- les ventes sans TVA, c'est-à-dire avec un compte 41 mouvementé, forment le CA exonéré ;
+- les écritures sans client ni TVA (extournes, PCA) ne sont pas prises pour des ventes exonérées ;
+- colonnes : N° de compte, libellé, CA HT, CA exonéré, % du CA soumis, CA imposable, taux, montant de TVA, case CA3 (20 % : 08, 10 % : 9B, 5,5 % : 09, 2,1 % : T6, 8,5 % : 10, 13 % : TC ; autoliquidation et exonérée : E2, exportation : E1, livraison intracommunautaire : F2).
+
+**2. Régularisations au régime des encaissements.** Pour chaque catégorie d'encours, la régularisation vaut la TVA comprise dans les soldes N-1 moins celle comprise dans les soldes N, ventilée par taux. Les soldes sont signés, débit positif.
+- **Calcul de la TVA comprise :** TTC / (1 + taux) × taux pour les clients, les clients douteux, les avances et les factures à établir ; HT × taux pour les produits constatés d'avance.
+- **Soldes N :** lus dans le FEC.
+- **Soldes N-1 :** pré-remplis depuis le FEC N-1 s'il est chargé, sinon depuis les à-nouveaux ; ils restent modifiables, et la source est affichée.
+- **Ventilation par taux :**
+  - par défaut, au prorata du chiffre d'affaires TTC de chaque taux, non imposable compris (HT pour les PCA et les pertes) ;
+  - sinon saisie en montants, pour chaque solde (N-1 et N), par exemple d'après les factures ouvertes. Le mélange des taux diffère en effet souvent entre N-1 et N ;
+  - un écart avec le solde est porté au taux principal et signalé, et la méthode est affichée.
+- **Pertes sur créances irrécouvrables (654) :** la TVA est retranchée, sur une ligne dédiée.
+- **TVA autoliquidée sur achats (crédits 4452) :** elle est ajoutée, car elle est comprise dans la TVA collectée déclarée (ligne 08 et suivantes).
+- **Régime des débits :** pas de régularisation des encours.
+- **Régime mixte :** les régularisations portent sur la part du chiffre d'affaires des comptes au régime des encaissements ; c'est une approximation affichée.
+
+**3. Résultat.** TVA théorique = TVA sur le CA imposable + régularisations ; écart = théorique − déclarée.
+
+**4. Synthèse par taux.** Elle reprend les colonnes Ventes, TVA, Régularisations et Montant à déclarer, puis les rapproche de la CA3 :
+- pour un taux imposable, la base théorique encaissée (montant à déclarer / taux) est comparée à la base déclarée, et la taxe à la taxe déclarée ;
+- pour la principale nature non imposable, la base théorique est égale aux ventes + encours N-1 − encours N.
+
+### 5.4 Cadrage et justification
+- **Vue par période de déclaration**, mensuelle ou trimestrielle. Pour chaque période :
+  - TVA collectée déclarée ;
+  - TVA comptabilisée au crédit des 4457 sur les mêmes mois, et TVA autoliquidée au crédit de 4452 ;
+  - écart ;
+  - CA déclaré (A1, A2, E1, E2, E3, F2, F3) et CA comptabilisé, avec leur écart.
+- **Décalage déclaratif :** la CA3 d'une période, déposée le mois suivant, est rapprochée des écritures de la période elle-même (date de dépôt affichée). Les mois sans déclaration sont présentés à part.
+- **Contrôles complémentaires :**
+  - crédits de 4455 = somme des lignes 28 ;
+  - solde de 4455 à la clôture = ligne 28 de la déclaration qui se termine à la clôture ;
+  - solde de 44567 = ligne 27 de cette déclaration ;
+  - au régime des encaissements, solde des comptes de TVA collectée (4457, 44587) = TVA comprise dans les encours N.
+- **Justification :** lignes libres (libellé avec exemples proposés, montant, commentaire, référence de pièce). L'écart résiduel est mis en évidence s'il dépasse le seuil.
+- **Détail des écritures :** chaque montant calculé (CA par compte, soldes N, TVA du mois, CA du mois, contrôles) ouvre les lignes du FEC qui le composent, dans la limite de 2 000 lignes affichées, avec le total.
+
+### 5.5 Export Excel
+Classeur ExcelJS avec des formules vivantes. Chaque formule porte son résultat pour l'aperçu, et le recalcul complet à l'ouverture est demandé.
+- **« G300 Récap TVA » :** totaux en formules ; la TVA collectée déclarée est la somme des lignes de taxe (nom défini `TVA_DECLAREE`).
+- **« G340 Contrôle TVA collectée » :**
+  - en-tête : Entreprise, Exercice, Date, Collaborateur, Chap. G 340 ;
+  - ventes par compte : CA imposable = CA − exonéré, TVA = ROUND(imposable × taux) ;
+  - régularisations par catégorie et par taux, avec les formules TTC / (1 + taux) × taux ;
+  - synthèse par taux (SUMIFS) ;
+  - TOTAL, TVA déclarée liée par formule à la feuille G300, ÉCART, seuil ;
+  - tableau de justification, et écart résiduel mis en évidence au-delà du seuil (mise en forme conditionnelle).
+- **« Cadrage mensuel » :** écarts en formules, plus les contrôles complémentaires.
+- **« Anomalies CA3 » :** anomalies, puis corrections tracées.
+- **« Paramètres » :** régime, seuil, méthode de ventilation, préfixes, empreintes SHA-256 du FEC et de chaque PDF, date, version de l'outil.
+
+Les formules sont vérifiées par un recalcul réel avec LibreOffice, après modification de saisies dans le classeur.
+
+### 5.6 Données de test
+- **CA3 fictives :** voir 5.1.
+- **FEC fictifs de la même société** (`npm run tva:fictifs`, `tests/fixtures/tva/README.md`). Ils sont cohérents avec les CA3, et la TVA théorique est connue d'avance :
+  - cas sans écart (0 € avec février corrigé) ;
+  - écart de déclaration (+50 €, taxe 9B de février) ;
+  - cut-off (−1 950 € : encaissement du 30/06 comptabilisé en N+1) ;
+  - dans les deux FEC : autoliquidation des ventes (E2) et des achats (A3), FAE, PCA, perte sur créance.

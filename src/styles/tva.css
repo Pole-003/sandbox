@@ -87,3 +87,58 @@
   min-width: 18rem;
   max-width: 26rem;
 }
+
+.tableau-ca3 .ligne-section th,
+.tableau-cadrage .ligne-section th {
+  padding-top: 0.75rem;
+  background: var(--c-primaire-fond);
+  color: var(--c-primaire);
+  text-align: left;
+}
+
+.tableau-ca3 .ligne-solde th,
+.tableau-ca3 .ligne-solde td,
+.tableau-cadrage .ligne-solde th,
+.tableau-cadrage .ligne-solde td {
+  border-top: 1px solid var(--c-bordure);
+  font-weight: 600;
+}
+
+.lien-montant {
+  padding: 0;
+  border: none;
+  background: none;
+  color: var(--c-primaire);
+  font: inherit;
+  font-variant-numeric: tabular-nums;
+  text-decoration: underline dotted;
+  cursor: pointer;
+}
+
+.lien-montant:focus-visible {
+  outline: 2px solid var(--c-focus);
+  outline-offset: 1px;
+}
+
+.ecart-hors-seuil {
+  color: var(--c-danger);
+  font-weight: 700;
+}
+
+.tableau-cadrage input[type='text'],
+.tableau-cadrage select {
+  min-height: 1.875rem;
+  padding: 0.125rem 0.375rem;
+}
+
+.tableau-cadrage .champ-montant {
+  width: 8.5rem;
+  text-align: right;
+}
+
+.badge-source {
+  margin-left: 0.25rem;
+  background: var(--c-primaire-fond);
+  color: var(--c-primaire);
+  font-size: 0.75rem;
+}

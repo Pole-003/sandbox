@@ -122,6 +122,8 @@ describe('TVA théorique (régime des encaissements)', () => {
     const e2 = g.syntheseParTaux.find((s) => s.caseCa3 === 'E2')!;
     expect(e2.ventes).toBe(a.caParTaux['0']);
     expect(e2.baseDeclaree).toBe(6_150_000);
+    // Base encaissée non imposable = ventes 56 500 + clients N-1 12 000 − clients N 7 000 = base déclarée en E2.
+    expect(e2.baseTheorique).toBe(e2.baseDeclaree);
   });
 
   it('ventilation au prorata par défaut : méthode affichée, écart d’approximation limité et expliqué', () => {

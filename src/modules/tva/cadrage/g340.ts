@@ -301,18 +301,25 @@ export function calculerG340(e: EntreeG340): G340 {
     s.ventes += l.nature === 'imposable' ? l.imposable : l.ca;
     s.tvaVentes += l.tva;
   }
+  // Encours non imposables (taux 0) : la base encaissée = ventes + encours N-1 − encours N, portée sur la
+  // principale ligne non imposable (E2 en général).
+  let encoursNonImposables = 0;
   for (const r of regularisations) {
     for (const x of r.parTaux) {
-      if (!x.taux) continue;
+      if (!x.taux) {
+        if (r.cle !== 'pertes' && r.cle !== 'autoliquidation') encoursNonImposables += x.n1 - x.n;
+        continue;
+      }
       const k = `t${x.taux}`;
       let s = synthese.get(k);
       if (!s) synthese.set(k, (s = { taux: x.taux, nature: 'imposable', caseCa3: caseParDefaut(x.taux, 'imposable'), ventes: 0, tvaVentes: 0, regularisations: 0, aDeclarer: 0, baseTheorique: 0, baseDeclaree: null, taxeDeclaree: null }));
       s.regularisations += r.cle === 'pertes' ? -x.tvaN : r.cle === 'autoliquidation' ? x.tvaN : x.tvaN1 - x.tvaN;
     }
   }
+  const principaleNonImposable = [...synthese.values()].filter((s) => s.nature !== 'imposable').sort((a, b) => Math.abs(b.ventes) - Math.abs(a.ventes))[0];
   for (const s of synthese.values()) {
     s.aDeclarer = s.tvaVentes + s.regularisations;
-    s.baseTheorique = s.nature === 'imposable' && s.taux ? Math.round((s.aDeclarer * 10000) / s.taux) : s.ventes;
+    s.baseTheorique = s.nature === 'imposable' && s.taux ? Math.round((s.aDeclarer * 10000) / s.taux) : s.ventes + (s === principaleNonImposable ? encoursNonImposables : 0);
     if (s.caseCa3 && e.declarations.length) {
       const def = CASES_PAR_CODE.get(s.caseCa3);
       s.baseDeclaree = e.declarations.reduce((t, v) => t + valeur(v, s.caseCa3!, def?.colonnes === 2 ? 'base' : 'montant'), 0);
