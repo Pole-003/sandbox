@@ -78,7 +78,7 @@ export function analyserContenu(fichier: string, contenu: string, listeBlanche: 
       if (motif.test(texte)) signaler(regle);
     }
     if (MOTIF_FETCH.test(texte) && !fetchAutorise) {
-      signaler('fetch() interdit hors des fichiers autorisés (seul news.json peut être chargé)');
+      signaler('fetch() interdit hors des fichiers autorisés (seuls news.json et veille-etat.json peuvent être chargés)');
     }
   });
   return violations;
