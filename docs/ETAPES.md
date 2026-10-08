@@ -67,13 +67,45 @@ Au premier lancement de `claude`, choisis la connexion avec ton compte **Console
 
 ## Étape 3 — Veille
 
+La veille se construit en trois sessions. La référence est `docs/VEILLE.md`, le catalogue `veille/sources.json`, les réglages `veille/config.json`.
+
+### Étape 3a — Collecte par flux (couche A) et écrans
+
 **Prompt :**
-> Implémente la section 2 de docs/SPEC.md. Commence par vérifier, source par source, l'existence d'un flux RSS/Atom ou d'une API publique et ses conditions de réutilisation, et présente-moi un tableau récapitulatif avant de coder. Ensuite : script de collecte, workflow GitHub Actions planifié (jours ouvrés, tôt le matin, plus déclenchement manuel), génération de `public/news.json`, écran Veille et bloc « À la une » sur l'accueil. Pas de résumé par IA pour l'instant.
+> Lis docs/VEILLE.md, veille/sources.json et veille/config.json : ils font foi pour la veille et remplacent la section 2 de docs/SPEC.md.
+>
+> Important : n'essaie pas de valider les sources avec tes propres outils de navigation web. Plusieurs sites officiels bloquent ce type d'accès ou génèrent leurs liens en JavaScript, et c'est ce qui faisait échouer les tentatives précédentes. Les URL du catalogue ont déjà été trouvées. À la place, écris un script `npm run veille:test` qui interroge chaque source du catalogue depuis la machine (et plus tard depuis GitHub Actions) et produit un rapport : statut HTTP, type de contenu, encodage détecté, nombre d'éléments, date du plus récent, erreurs. Lance-le, montre-moi le rapport, et mets à jour le champ `statut` du catalogue en conséquence.
+>
+> Ensuite, implémente la couche A : parseur RSS/Atom tolérant (encodage déclaré faux, dates mal formées ou absentes, liens http), isolation stricte de chaque source (délai maximal, nouvelles tentatives, aucune source ne fait échouer l'ensemble), filtrage par mots-clés pour les flux volumineux, déduplication, `public/news.json` et `public/veille-etat.json`. Crée le workflow GitHub Actions `veille.yml` (jours ouvrés à 6 h 30 heure de Paris, plus déclenchement manuel) qui exécute la collecte et publie le résultat. Enfin, les écrans décrits en fin de docs/VEILLE.md : Brief du jour sur l'accueil, Veille, Suivi PLF/PLFSS, Indicateurs (vides pour l'instant), Rennes et Bretagne, État des sources. Tests unitaires sur des flux d'exemple enregistrés dans `tests/fixtures/veille/` (y compris un flux du Sénat avec son encodage trompeur).
 
 **À vérifier :**
-- Le workflow tourne (onglet Actions de GitHub) et met à jour `news.json`.
-- L'écran Veille charge uniquement `news.json` (onglet Réseau).
-- Les sources sont mentionnées.
+- Le rapport `veille:test` liste les sources qui fonctionnent et celles en panne, avec la raison.
+- Le workflow tourne (onglet Actions de GitHub) et met à jour `news.json`, même si une source est en panne.
+- L'écran Veille charge uniquement `news.json` et `veille-etat.json` (onglet Réseau) ; les accents du Sénat s'affichent correctement.
+
+### Étape 3b — Recherche IA quotidienne (couche C)
+
+Prérequis : crée dans la Console Claude une clé API dédiée à la veille, avec sa propre limite de dépense mensuelle, puis ajoute-la dans GitHub : dépôt > Settings > Secrets and variables > Actions > New repository secret, nom `ANTHROPIC_API_KEY`.
+
+**Prompt :**
+> Implémente la couche C de docs/VEILLE.md : un appel à l'API Claude par thème avec l'outil de recherche web côté serveur, le prompt système et les consignes par thème décrits dans le document (à placer dans `veille/prompt-systeme.md` et `veille/themes.json` pour que je puisse les modifier sans toucher au code), le schéma JSON de réponse, les contrôles automatiques (validation du schéma, URL obligatoirement présentes dans les citations de l'outil, fenêtre de dates), le calcul du coût réel à partir du champ `usage`, le plafond `budget_mensuel_usd` suivi dans `veille/couts.json`, puis la fusion avec la couche A et la notation groupée des articles sans score. Vérifie dans la documentation officielle de l'API la version de l'outil `web_search` compatible avec les modèles de `veille/config.json`. La clé est lue depuis le secret `ANTHROPIC_API_KEY` ; si elle est absente, la couche C est sautée proprement. Ajoute un mode `npm run veille:essai -- --theme "Rennes et Bretagne"` qui exécute un seul thème et affiche le résultat et son coût, pour que je règle les consignes.
+
+**À vérifier :**
+- `veille:essai` sur chaque thème donne des articles récents, pertinents, avec des liens qui fonctionnent.
+- Ouvre 5 liens au hasard : la source et la date correspondent au résumé.
+- Le coût d'une journée complète, visible dans l'écran État des sources, reste cohérent avec ton budget.
+- Le Suivi PLF/PLFSS affiche l'étape en cours et la prochaine échéance.
+
+### Étape 3c — API officielles (couche B, optionnelle)
+
+Prérequis : crée les comptes gratuits dont tu as besoin (PISTE pour Légifrance et Judilibre, portail des API de l'INSEE, Banque de France Webstat) et ajoute leurs identifiants en secrets GitHub, avec les noms indiqués dans `veille/sources.json`.
+
+**Prompt :**
+> Implémente la couche B de docs/VEILLE.md pour les sources de type `api` de veille/sources.json dont le secret est configuré : Légifrance (Journal officiel du jour, filtré), Judilibre (chambres commerciale et sociale), INSEE et Banque de France pour alimenter l'écran Indicateurs (propose-moi d'abord la liste des séries avec leur identifiant officiel dans `veille/indicateurs.json`), et BODACC pour l'Ille-et-Vilaine. Vérifie pour chacune l'URL officielle de l'API et ses conditions d'utilisation avant de coder. Quand une série officielle existe, elle remplace l'indicateur fourni par la couche C et le badge « à vérifier » disparaît.
+
+**À vérifier :**
+- Les tuiles Indicateurs affichent la bonne valeur, la bonne période et la source officielle.
+- Une source dont le secret est absent apparaît « non configurée » dans État des sources, sans erreur.
 
 ---
 

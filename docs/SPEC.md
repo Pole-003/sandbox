@@ -19,6 +19,8 @@
 
 ## 2. Veille comptable, fiscale et économique
 
+> **Remplacée par `docs/VEILLE.md`**, qui fait foi (architecture en trois couches, catalogue de sources vérifiées, prompt de recherche IA, écrans). La suite de cette section est conservée pour mémoire.
+
 ### Principe
 Information publique uniquement. Le navigateur ne contacte jamais les sites sources (règle CORS et règle de confidentialité). Un workflow GitHub Actions planifié collecte les flux, produit `public/news.json`, le commit, ce qui redéploie le site.
 

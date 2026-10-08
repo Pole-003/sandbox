@@ -1,0 +1,10 @@
+{
+  "modele_recherche": "claude-sonnet-5-5",
+  "modele_notation": "claude-haiku-5-5",
+  "recherches_max_par_theme": 5,
+  "budget_mensuel_usd": 20,
+  "fenetre_jours": { "defaut": 7, "Économie et statistiques": 14, "Rennes et Bretagne": 14 },
+  "localisation": { "type": "approximate", "city": "Rennes", "region": "Bretagne", "country": "FR", "timezone": "Europe/Paris" },
+  "conservation_jours": 60,
+  "user_agent": "Pole003-Veille/1.0 (+https://pole-003.github.io/sandbox)"
+}

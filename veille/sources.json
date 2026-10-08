@@ -1,0 +1,193 @@
+{
+  "_commentaire": "Catalogue des sources de veille. statut : 'verifie' = flux testé et fonctionnel le 2026-10-08 ; 'a_verifier' = existence ou URL à confirmer avant activation. Couche A = rss, couche B = api.",
+  "sources": [
+    {
+      "id": "bofip-actualites",
+      "nom": "BOFiP-Impôts — Actualités",
+      "type": "rss",
+      "url": "https://bofip.impots.gouv.fr/bofip/ext/rss.xml?actualites=1",
+      "theme": "Fiscal et comptable",
+      "statut": "verifie",
+      "notes": "Pas de pubDate : extraire la date « publié le JJ/MM/AAAA » de la description. Mention de la source obligatoire."
+    },
+    {
+      "id": "senat-textes",
+      "nom": "Sénat — Derniers textes",
+      "type": "rss",
+      "url": "https://www.senat.fr/rss/textes.rss",
+      "theme": "Loi de finances",
+      "statut": "verifie",
+      "notes": "Déclare iso-8859-15 mais contient de l'UTF-8 ; dates sans espace après la virgule."
+    },
+    {
+      "id": "senat-rapports",
+      "nom": "Sénat — Derniers rapports",
+      "type": "rss",
+      "url": "https://www.senat.fr/rss/rapports.rss",
+      "theme": "Loi de finances",
+      "statut": "verifie",
+      "notes": "Même particularités d'encodage que senat-textes (même plateforme)."
+    },
+    {
+      "id": "senat-budget",
+      "nom": "Sénat — Thème Budget",
+      "type": "rss",
+      "url": "https://www.senat.fr/themes/rss/therss10.rss",
+      "theme": "Loi de finances",
+      "statut": "a_verifier"
+    },
+    {
+      "id": "senat-fiscalite",
+      "nom": "Sénat — Économie et finances, fiscalité",
+      "type": "rss",
+      "url": "https://www.senat.fr/themes/rss/therss17.rss",
+      "theme": "Fiscal et comptable",
+      "statut": "a_verifier"
+    },
+    {
+      "id": "senat-entreprises",
+      "nom": "Sénat — Entreprises",
+      "type": "rss",
+      "url": "https://www.senat.fr/themes/rss/therss33.rss",
+      "theme": "Économie et statistiques",
+      "statut": "a_verifier"
+    },
+    {
+      "id": "senat-pme",
+      "nom": "Sénat — PME, commerce et artisanat",
+      "type": "rss",
+      "url": "https://www.senat.fr/themes/rss/therss28.rss",
+      "theme": "Économie et statistiques",
+      "statut": "a_verifier"
+    },
+    {
+      "id": "senat-secu",
+      "nom": "Sénat — Sécurité sociale",
+      "type": "rss",
+      "url": "https://www.senat.fr/themes/rss/therss25.rss",
+      "theme": "Sécurité sociale",
+      "statut": "a_verifier"
+    },
+    {
+      "id": "an-documents",
+      "nom": "Assemblée nationale — Publications parlementaires",
+      "type": "rss",
+      "url": "https://www2.assemblee-nationale.fr/feeds/detail/documents-parlementaires",
+      "theme": "Loi de finances",
+      "statut": "verifie",
+      "notes": "Volumineux : filtrer par mots-clés (finances, fiscal, sécurité sociale, entreprise, comptable, TVA, impôt)."
+    },
+    {
+      "id": "an-commission-finances",
+      "nom": "Assemblée nationale — Commission des finances",
+      "type": "rss",
+      "url": "https://www2.assemblee-nationale.fr/feeds/detail/ID_59048/(type)/instance",
+      "theme": "Loi de finances",
+      "statut": "a_verifier",
+      "notes": "URL publiée en http sur la page officielle des flux ; tester en https."
+    },
+    {
+      "id": "an-commission-affaires-sociales",
+      "nom": "Assemblée nationale — Commission des affaires sociales",
+      "type": "rss",
+      "url": "https://www2.assemblee-nationale.fr/feeds/detail/ID_420120/(type)/instance",
+      "theme": "Sécurité sociale",
+      "statut": "a_verifier"
+    },
+    {
+      "id": "an-commission-affaires-economiques",
+      "nom": "Assemblée nationale — Commission des affaires économiques",
+      "type": "rss",
+      "url": "https://www2.assemblee-nationale.fr/feeds/detail/ID_419610/(type)/instance",
+      "theme": "Économie et statistiques",
+      "statut": "a_verifier"
+    },
+    {
+      "id": "an-presse",
+      "nom": "Assemblée nationale — Communiqués de presse",
+      "type": "rss",
+      "url": "https://www.assemblee-nationale.fr/rss/communiques-de-presse.xml",
+      "theme": "Loi de finances",
+      "statut": "a_verifier"
+    },
+    {
+      "id": "ce-analyses-jurisprudence",
+      "nom": "Conseil d'État — Analyses de jurisprudence",
+      "type": "rss",
+      "url": "https://www.conseil-etat.fr/rss/analyses-de-jurisprudence-rss",
+      "theme": "Fiscal et comptable",
+      "statut": "a_verifier",
+      "notes": "URL issue de la page officielle des flux du Conseil d'État ; filtrer sur fiscalité, TVA, impôt, procédure fiscale."
+    },
+    {
+      "id": "ce-actualites",
+      "nom": "Conseil d'État — Actualités",
+      "type": "rss",
+      "url": "https://www.conseil-etat.fr/rss/actualites-rss",
+      "theme": "Fiscal et comptable",
+      "statut": "a_verifier"
+    },
+    {
+      "id": "ce-avis",
+      "nom": "Conseil d'État — Avis au Gouvernement et au Parlement",
+      "type": "rss",
+      "url": "https://www.conseil-etat.fr/rss/avis-rss",
+      "theme": "Loi de finances",
+      "statut": "a_verifier",
+      "notes": "Contient l'avis sur le PLF et le PLFSS chaque automne."
+    },
+    {
+      "id": "an-dossier-plf",
+      "nom": "Assemblée nationale — Dossier législatif PLF 2027",
+      "type": "page",
+      "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/PLF_2027",
+      "theme": "Loi de finances",
+      "statut": "a_verifier",
+      "notes": "Page de suivi : détecter les changements (nouvelle étape, nouveau texte) par comparaison avec la veille. Mettre à jour l'année chaque automne."
+    },
+    {
+      "id": "piste-legifrance",
+      "nom": "Légifrance — Journal officiel (API PISTE)",
+      "type": "api",
+      "secret": "PISTE_CLIENT_ID / PISTE_CLIENT_SECRET",
+      "theme": "Fiscal et comptable",
+      "statut": "a_verifier",
+      "notes": "Compte gratuit sur piste.gouv.fr. Récupérer les textes du JO du jour, filtrer par ministère (Économie, Comptes publics, Travail) et mots-clés."
+    },
+    {
+      "id": "piste-judilibre",
+      "nom": "Cour de cassation — Judilibre (API PISTE)",
+      "type": "api",
+      "secret": "PISTE_CLIENT_ID / PISTE_CLIENT_SECRET",
+      "theme": "Fiscal et comptable",
+      "statut": "a_verifier",
+      "notes": "Décisions publiées de la chambre commerciale (fiscal, droit des sociétés, procédures collectives) et de la chambre sociale."
+    },
+    {
+      "id": "insee-bdm",
+      "nom": "INSEE — Séries BDM",
+      "type": "api",
+      "secret": "INSEE_API_KEY",
+      "theme": "Économie et statistiques",
+      "statut": "a_verifier",
+      "notes": "Indicateurs : inflation (IPC), taux de chômage, PIB, climat des affaires, créations d'entreprises. Identifiants de séries à choisir et documenter dans veille/indicateurs.json."
+    },
+    {
+      "id": "bdf-webstat",
+      "nom": "Banque de France — Webstat",
+      "type": "api",
+      "secret": "BDF_API_KEY",
+      "theme": "Économie et statistiques",
+      "statut": "a_verifier",
+      "notes": "Défaillances d'entreprises, taux des crédits aux entreprises."
+    },
+    {
+      "id": "bodacc-35",
+      "nom": "BODACC — Annonces Ille-et-Vilaine",
+      "type": "api",
+      "theme": "Rennes et Bretagne",
+      "statut": "a_verifier",
+      "notes": "Open data DILA. Filtrer département 35 : créations, ventes et cessions, procédures collectives. Vérifier l'URL officielle de l'API et ses conditions d'utilisation."
+    }
+  ]
+}
