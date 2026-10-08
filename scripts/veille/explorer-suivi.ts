@@ -69,6 +69,9 @@ async function explorerTexte(client: ClientHttp, url: string, rapport: string[])
     rapport.push(`- HTTP ${r.statut}, ${r.contentType ?? '?'}, ${r.octets.length} octets${r.urlFinale !== url ? `, redirigé vers ${r.urlFinale}` : ''}`);
     if (r.statut !== 200 || !/html/i.test(r.contentType ?? '')) return;
     const html = decoderOctets(r.octets, lireEncodageDeclare(r.octets, r.contentType)).texte;
+    const sources = [...html.matchAll(/(?:href|src|data-src)=["']([^"']*(?:opendata|\.pdf|iframe|\/textes\/)[^"']*)["']/gi)].map((m) => decoderEntites(m[1] ?? ''));
+    rapport.push(`- Liens et cadres vers le contenu (${sources.length}) : ${[...new Set(sources)].slice(0, 15).join(' · ') || 'aucun'}`);
+    rapport.push(`- Cadres (iframe) : ${(html.match(/<iframe[^>]*>/gi) ?? []).slice(0, 5).join(' ') || 'aucun'}`);
     const a = analyserDossier(html);
     rapport.push(`- Titre : ${a.titre ?? '—'}`, '- Plan (60 premiers titres) :');
     rapport.push(...a.plan.slice(0, 60).map((l) => `  - ${l}`));
@@ -97,7 +100,11 @@ async function principal(): Promise<void> {
       const extrait = extraitAutour(html, /acte-legislatif-bloc/, 5000);
       rapport.push('- Structure du premier acte législatif :', '```', extrait ?? '(absent)', '```');
       const texte = liens.find((l) => /\/textes\//.test(l) && !/\.pdf$/i.test(l));
-      if (texte) await explorerTexte(client, texte, rapport);
+      if (texte) {
+        await explorerTexte(client, texte, rapport);
+        const numero = /l17b(\d+)/.exec(texte)?.[1];
+        if (numero) await explorerTexte(client, `https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B${numero}.html`, rapport);
+      }
     } catch (e) {
       rapport.push(`- Échec : ${e instanceof Error ? e.message : String(e)}`);
     }
