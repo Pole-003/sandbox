@@ -1,0 +1,251 @@
+/*
+ * Animation d'ouverture (docs/SPEC.md § 1) — 2,5 s au total.
+ *   0    → 0,6 s : titre « Pôle 003 - Innovation »
+ *   0,4  → 1,4 s : décollage de la fusée, le télescope la suit
+ *   1,4  → 1,9 s : le capot du télescope se referme
+ *   2,1  → 2,5 s : fondu vers l'application
+ * Sans animation (version statique), chaque élément est dans sa position de repos :
+ * fusée sur le pas de tir, capot fermé, flamme et fumée invisibles.
+ * La scène est toujours nocturne, quel que soit le thème.
+ */
+.intro {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.25rem;
+  padding: 1rem;
+  background: #0b1628;
+  color: #f2f5fa;
+  cursor: pointer;
+}
+
+.intro-animee {
+  animation: intro-disparition 0.4s ease-in 2.1s forwards;
+}
+
+.intro.intro-passee {
+  animation: intro-disparition 0.15s ease-in forwards;
+}
+
+.intro-statique,
+.intro-statique * {
+  animation: none !important;
+}
+
+.intro-scene {
+  width: min(32rem, 90vw);
+  height: auto;
+  overflow: visible;
+}
+
+.intro-titre {
+  margin: 0;
+  font-size: clamp(1.5rem, 4.5vw, 2.25rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  text-align: center;
+  animation: intro-titre 0.6s ease-out both;
+}
+
+.intro-titre-suite {
+  font-weight: 500;
+  color: #9fb6d9;
+}
+
+.intro-passer {
+  position: absolute;
+  right: 1.25rem;
+  bottom: 1.25rem;
+  padding: 0.375rem 0.875rem;
+  border: 1px solid #3a4c69;
+  border-radius: var(--rayon);
+  background: transparent;
+  color: #c9d3e3;
+  font-size: 0.8125rem;
+  cursor: pointer;
+}
+
+.intro-passer:hover {
+  border-color: #9fb6d9;
+  color: #f2f5fa;
+}
+
+.intro-passer:focus-visible {
+  outline: 2px solid #86aee6;
+  outline-offset: 2px;
+}
+
+/* --- Décor --- */
+.intro-etoile {
+  fill: #e8eef8;
+  animation: intro-scintille 1.2s ease-in-out infinite alternate;
+}
+
+.intro-etoile-1 {
+  animation-delay: 0.4s;
+}
+
+.intro-etoile-2 {
+  animation-delay: 0.8s;
+}
+
+.intro-sol {
+  fill: #142339;
+}
+
+.intro-metal {
+  fill: #c9d3e3;
+}
+
+.intro-metal-sombre {
+  fill: #7e8da6;
+}
+
+.intro-pied {
+  stroke: #7e8da6;
+  stroke-width: 3;
+  stroke-linecap: round;
+}
+
+/* --- Télescope --- */
+.intro-tube {
+  transform-box: view-box;
+  transform-origin: 90px 150px;
+  transform: rotate(-25deg);
+  animation: intro-suivi 1s ease-in-out 0.4s both;
+}
+
+.intro-lentille {
+  fill: #86aee6;
+}
+
+.intro-capot {
+  fill: #f0b44c;
+  transform-box: fill-box;
+  transform-origin: 0 0;
+  animation: intro-capot 0.5s cubic-bezier(0.5, 0, 0.75, 0) 1.4s both;
+}
+
+/* --- Fusée --- */
+.intro-fusee {
+  animation: intro-decollage 1s cubic-bezier(0.55, 0, 0.85, 0.4) 0.4s both;
+}
+
+.intro-carlingue {
+  fill: #f2f4f8;
+}
+
+.intro-ogive,
+.intro-aileron {
+  fill: #f38b82;
+}
+
+.intro-hublot {
+  fill: #86aee6;
+  stroke: #1f4e8c;
+  stroke-width: 1.5;
+}
+
+.intro-flamme {
+  fill: #f0b44c;
+  opacity: 0;
+  transform-box: fill-box;
+  transform-origin: 50% 0;
+  animation:
+    intro-allumage 0.15s ease-out 0.3s both,
+    intro-flamme 0.08s linear 0.3s infinite alternate;
+}
+
+.intro-bouffee {
+  fill: #9aa4b3;
+  opacity: 0;
+  transform-box: fill-box;
+  transform-origin: 50% 50%;
+  animation: intro-bouffee 0.9s ease-out 0.4s both;
+}
+
+.intro-bouffee-2 {
+  animation-delay: 0.45s;
+}
+
+.intro-bouffee-3 {
+  animation-delay: 0.5s;
+}
+
+/* --- Images clés --- */
+@keyframes intro-titre {
+  from {
+    opacity: 0;
+    transform: translateY(0.5rem);
+  }
+}
+
+@keyframes intro-scintille {
+  to {
+    opacity: 0.35;
+  }
+}
+
+@keyframes intro-suivi {
+  from {
+    transform: rotate(-6deg);
+  }
+  to {
+    transform: rotate(-48deg);
+  }
+}
+
+@keyframes intro-capot {
+  from {
+    transform: rotate(-110deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes intro-decollage {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-900px);
+  }
+}
+
+@keyframes intro-allumage {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes intro-flamme {
+  from {
+    transform: scaleY(0.8);
+  }
+  to {
+    transform: scaleY(1.3);
+  }
+}
+
+@keyframes intro-bouffee {
+  from {
+    opacity: 0.85;
+    transform: scale(0.3);
+  }
+  to {
+    opacity: 0;
+    transform: scale(2.4);
+  }
+}
+
+@keyframes intro-disparition {
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}

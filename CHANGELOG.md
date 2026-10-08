@@ -2,6 +2,11 @@
 
 Toutes les évolutions notables de la Sandbox Pôle 003. Format inspiré de « Keep a Changelog », numéros de version au format semver.
 
+## [0.2.0] - 2026-10-08
+
+### Ajouté
+- Animation d'ouverture « Pôle 003 - Innovation » : une fusée décolle, un télescope la suit puis referme son capot. Jouée une fois par jour, passable d'un clic, d'une touche ou du bouton « Passer », version immobile si le système demande de réduire les animations.
+
 ## [0.1.0] - 2026-10-08
 
 ### Ajouté

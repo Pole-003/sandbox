@@ -3,15 +3,15 @@
 ## 1. Accueil et animation « Pôle 003 - Bienvenue »
 
 ### Animation d'ouverture
-- Durée totale 2,5 s maximum, passable d'un clic ou d'une touche.
+- Durée totale 2,5 s maximum, passable d'un clic, d'une touche ou du bouton « Passer ».
 - Jouée une fois par jour et par navigateur (date mémorisée en `localStorage`), désactivable dans les paramètres.
-- Version statique si `prefers-reduced-motion` est actif.
-- Idée de mise en scène retenue par défaut (à affiner avec l'utilisateur) :
-  1. Deux colonnes « Débit » et « Crédit » défilent des montants qui convergent vers un total identique.
-  2. La ligne d'écart passe à `0,00` et se colore en vert : « Balance équilibrée ».
-  3. Les chiffres se dissolvent et laissent apparaître « Pôle 003 » puis « Bienvenue ».
-  4. Transition vers le tableau de bord.
-- Variantes possibles à proposer : écriture lettre par lettre façon machine à écrire de grand-livre, ou cachet « Certifié » qui se pose.
+- Version statique (aucun mouvement, affichée environ 1 s) si `prefers-reduced-motion` est actif.
+- Mise en scène retenue (validée par l'utilisateur le 08/10/2026), sur un ciel nocturne étoilé :
+  1. Le titre « Pôle 003 - Innovation » apparaît (0 à 0,6 s).
+  2. Une petite fusée décolle de son pas de tir, avec flamme et fumée, et sort par le haut de l'écran (0,4 à 1,4 s). Un télescope sur trépied suit sa trajectoire.
+  3. Le capot du télescope se referme (1,4 à 2,1 s).
+  4. Fondu vers le tableau de bord (2,1 à 2,5 s).
+- Dessin en SVG intégré au code et animations en CSS : aucune ressource externe, compatible avec la CSP sans la modifier.
 
 ### Tableau de bord d'accueil
 - Salutation personnalisée : « Bonjour {prénom} · jeudi 8 octobre 2026 » (prénom saisi au premier lancement, stocké en local).
