@@ -14,7 +14,8 @@
     "preview": "vite preview",
     "test": "vitest run",
     "test:watch": "vitest",
-    "check:securite": "node scripts/check-securite.ts"
+    "check:securite": "node scripts/check-securite.ts",
+    "veille:test": "node scripts/veille/diagnostic.ts"
   },
   "devDependencies": {
     "@types/node": "^26.6.4",

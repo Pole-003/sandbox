@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Exemple Atom (fictif)</title>
+  <updated>2026-10-07T08:00:00Z</updated>
+  <entry>
+    <title>Premier article fictif</title>
+    <link href="https://exemple.invalid/a"/>
+    <updated>2026-10-07T08:00:00Z</updated>
+  </entry>
+  <entry>
+    <title>Second article fictif</title>
+    <link href="https://exemple.invalid/b"/>
+    <published>2026-09-30T10:00:00+02:00</published>
+  </entry>
+</feed>

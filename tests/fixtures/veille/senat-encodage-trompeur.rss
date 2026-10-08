@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="iso-8859-15"?>
+<rss version="2.0">
+  <channel>
+    <title>Sénat — Derniers textes (exemple fictif)</title>
+    <link>https://www.senat.fr/</link>
+    <item>
+      <title>Projet de loi de finances pour 2027 — texte adopté en séance</title>
+      <link>https://www.senat.fr/exemple/texte-1.html</link>
+      <pubDate>Wed,07 Oct 2026 18:30:00 +0200</pubDate>
+      <description>Texte n° 1 (exemple fictif) : répartition des crédits, fiscalité des entreprises.</description>
+    </item>
+    <item>
+      <title>Rapport d'information sur la TVA à l'importation</title>
+      <link>https://www.senat.fr/exemple/rapport-2.html</link>
+      <pubDate>Mon,05 Oct 2026 09:00:00 +0200</pubDate>
+      <description>Rapport fictif de la commission des finances, élaboré à partir d'auditions.</description>
+    </item>
+  </channel>
+</rss>

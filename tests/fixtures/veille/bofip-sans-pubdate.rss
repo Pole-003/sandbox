@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>BOFiP-Impôts — Actualités (exemple fictif)</title>
+    <link>http://bofip.impots.gouv.fr/bofip/</link>
+    <item>
+      <title>IS — Crédit d'impôt fictif : précisions sur l'assiette</title>
+      <link>https://bofip.impots.gouv.fr/exemple/actualite-1</link>
+      <description><![CDATA[Série IS, publié le 06/10/2026. Actualité fictive utilisée pour les tests.]]></description>
+    </item>
+    <item>
+      <title>TVA — Taux applicables : mise à jour fictive</title>
+      <link>https://bofip.impots.gouv.fr/exemple/actualite-2</link>
+      <description>Série TVA, publié le 01/10/2026. Actualité fictive.</description>
+    </item>
+    <item>
+      <title>BIC — Actualité fictive sans date</title>
+      <link>https://bofip.impots.gouv.fr/exemple/actualite-3</link>
+      <description>Aucune date dans cette description.</description>
+    </item>
+  </channel>
+</rss>

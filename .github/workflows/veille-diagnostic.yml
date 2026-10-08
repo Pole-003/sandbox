@@ -1,0 +1,51 @@
+# Diagnostic des sources de veille (docs/VEILLE.md) : npm run veille:test
+#
+# Lecture seule : ne commit rien, ne publie rien, n'utilise aucun secret.
+# Le rapport s'affiche dans le résumé de l'exécution (onglet Actions > exécution > Summary).
+#
+# Déclenchement :
+#  - manuel (bouton « Run workflow ») : GitHub ne le propose que pour les workflows présents
+#    sur la branche par défaut (main) ;
+#  - en attendant, à chaque push sur la branche de travail qui modifie la veille.
+
+name: Veille · diagnostic des sources
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [beta-8flzza]
+    paths:
+      - 'scripts/veille/**'
+      - 'veille/sources.json'
+      - 'veille/config.json'
+      - '.github/workflows/veille-diagnostic.yml'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: veille-diagnostic
+  cancel-in-progress: true
+
+jobs:
+  diagnostic:
+    name: Tester les sources
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Récupérer le dépôt
+        uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+
+      - name: Installer Node.js
+        uses: actions/setup-node@v7
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+
+      - name: Installer les dépendances
+        run: npm ci
+
+      - name: Diagnostic des sources
+        run: npm run veille:test
