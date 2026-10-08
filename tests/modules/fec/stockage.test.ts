@@ -155,3 +155,38 @@ describe('migration de la base (version 2 → 3)', () => {
     expect((await s.lireModeles()).cabinet.nom).toBe('Cabinet fictif');
   });
 });
+
+describe('migration de la base (version 3 → 4)', () => {
+  it('conserve les données et ajoute le magasin du cadrage de TVA, purgé avec le dossier', async () => {
+    await toutPurger();
+    await new Promise<void>((resolve, reject) => {
+      const r = indexedDB.open(NOM_BASE, 3);
+      r.onupgradeneeded = () => {
+        const db = r.result;
+        db.createObjectStore('dossiers', { keyPath: 'id' }).put({ id: 'v3', nom: 'Dossier v3', siren: null, creeLe: '2026-10-01', modifieLe: '2026-10-01', fec: {} });
+        db.createObjectStore('imports', { keyPath: 'id' }).createIndex('dossierId', 'dossierId');
+        db.createObjectStore('colonnes', { keyPath: 'id' });
+        db.createObjectStore('profils', { keyPath: 'signature' });
+        db.createObjectStore('circularisations', { keyPath: 'dossierId' });
+        db.createObjectStore('courriers', { keyPath: 'dossierId' });
+        db.createObjectStore('modeles-courriers', { keyPath: 'id' }).put({ id: 'poste', modeles: { cabinet: { nom: 'Cabinet v3' } } });
+      };
+      r.onsuccess = () => {
+        r.result.close();
+        resolve();
+      };
+      r.onerror = () => reject(r.error);
+    });
+    expect((await listerDossiers()).map((d) => d.nom)).toEqual(['Dossier v3']);
+    const { lireModeles } = await import('../../../src/modules/circularisations/courriers/stockage.ts');
+    expect((await lireModeles()).cabinet.nom).toBe('Cabinet v3');
+    const { enregistrerTva, lireTva } = await import('../../../src/modules/tva/stockage.ts');
+    expect((await lireTva('v3')).declarations).toEqual([]);
+    const tva = await lireTva('v3');
+    tva.declarations.push({ id: 'd1', source: 'saisie', nomFichier: null, empreinte: null, identification: { denomination: null, siren: null, debut: '2026-01-01', fin: '2026-01-31', dateLimite: null, dateDepot: null, dateCreation: null, millesime: null }, lues: { A1: { montant: 100 } }, corrections: [], messagesLecture: [], casesInconnues: [], importeLe: '' });
+    await enregistrerTva(tva);
+    expect((await lireTva('v3')).declarations).toHaveLength(1);
+    await purgerDossier('v3');
+    expect((await lireTva('v3')).declarations).toEqual([]);
+  });
+});

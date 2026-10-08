@@ -31,13 +31,13 @@ export function verifierIndex(html: string): string[] {
   return erreurs;
 }
 
-/** Les URL tolérées dans le code tiers compilé : espaces de noms XML (identifiants, jamais chargés). */
+/** Les URL tolérées dans le code tiers compilé : espaces de noms XML OOXML, XFA et Adobe (identifiants, jamais chargés). */
 const URL_TOLEREES = /^https?:\/\/www\.w3\.org\//;
 /**
- * Espaces de noms du format Office Open XML (.xlsx) écrits dans les fichiers générés par ExcelJS :
- * de simples identifiants, jamais chargés.
+ * Espaces de noms XML : Office Open XML (.xlsx, .docx écrits par ExcelJS et docx), XFA et Adobe (lus par
+ * pdfjs dans les PDF) : de simples identifiants, jamais chargés.
  */
-const ESPACES_DE_NOMS_OOXML = /^http:\/\/(schemas\.openxmlformats\.org|schemas\.microsoft\.com\/office|purl\.org\/dc)\//;
+const ESPACES_DE_NOMS_OOXML = /^http:\/\/(schemas\.openxmlformats\.org|schemas\.microsoft\.com\/office|purl\.org\/dc|ns\.adobe\.com|www\.xfa\.org\/schema)\//;
 
 export function verifierUrls(fichier: string, contenu: string, urlsAutorisees: string[]): string[] {
   return [...contenu.matchAll(/\b(?:https?|wss?):\/\/[^\s'"`<>)\\]+/gi)]
@@ -68,7 +68,7 @@ if (process.argv[1] && fileURLToPath(import.meta.url) === process.argv[1]) {
   };
   const erreurs = verifierIndex(readFileSync(join(dist, 'index.html'), 'utf8'));
   for (const chemin of lister(dist)) {
-    if (!/\.(html|js|css|json|svg)$/.test(chemin) || estDonneeVeille(relative(dist, chemin))) continue;
+    if (!/\.(html|m?js|css|json|svg)$/.test(chemin) || estDonneeVeille(relative(dist, chemin))) continue;
     erreurs.push(...verifierUrls(relative(racine, chemin), readFileSync(chemin, 'utf8'), [...urls, ...(urlsCodeTiers ?? [])]));
   }
   if (erreurs.length > 0) {

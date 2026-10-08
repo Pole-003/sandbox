@@ -19,12 +19,14 @@
     "veille:collecte": "node scripts/veille/collecte.ts",
     "veille:explorer-suivi": "node scripts/veille/explorer-suivi.ts",
     "fec:fictifs": "node scripts/generer-fec-fictifs.ts",
-    "fec:gros": "node scripts/generer-fec-fictifs.ts --gros"
+    "fec:gros": "node scripts/generer-fec-fictifs.ts --gros",
+    "ca3:fictives": "node scripts/generer-ca3-fictives.ts"
   },
   "devDependencies": {
     "@types/node": "^26.6.4",
     "fake-indexeddb": "^6.2.5",
     "happy-dom": "^20.14.5",
+    "pdf-lib": "^1.17.1",
     "typescript": "^7.0.2",
     "vite": "^8.3.3",
     "vitest": "^5.0.3"
@@ -34,6 +36,7 @@
     "docx": "^9.9.0",
     "exceljs": "^4.4.0",
     "jszip": "^3.10.2",
-    "lucide": "^1.53.0"
+    "lucide": "^1.53.0",
+    "pdfjs-dist": "^6.3.289"
   }
 }

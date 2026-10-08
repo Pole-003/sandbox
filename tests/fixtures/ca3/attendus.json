@@ -1,0 +1,836 @@
+{
+ "$commentaire": "Généré par scripts/generer-ca3-fictives.ts : montants en centimes, données fictives.",
+ "services": [
+  {
+   "fichier": "CA3_000777128_202507.pdf",
+   "description": "Mensuelle 07/2025",
+   "variante": 1,
+   "illisible": false,
+   "identification": {
+    "denomination": "CONSEIL FICTIF SERVICES SAS",
+    "siren": "000777128",
+    "debut": "2025-07-01",
+    "fin": "2025-07-31",
+    "dateLimite": "2025-08-19",
+    "dateDepot": "2025-08-15",
+    "dateCreation": "2025-08-15",
+    "millesime": "2025"
+   },
+   "cases": {
+    "16": {
+     "montant": 1740000
+    },
+    "20": {
+     "montant": 310000
+    },
+    "23": {
+     "montant": 310000
+    },
+    "28": {
+     "montant": 1430000
+    },
+    "32": {
+     "montant": 1430000
+    },
+    "A1": {
+     "montant": 9000000
+    },
+    "E2": {
+     "montant": 1200000
+    },
+    "08": {
+     "base": 8400000,
+     "taxe": 1680000
+    },
+    "9B": {
+     "base": 600000,
+     "taxe": 60000
+    },
+    "TD": {
+     "montant": 1430000
+    }
+   },
+   "controlesAttendus": []
+  },
+  {
+   "fichier": "CA3_000777128_202508.pdf",
+   "description": "Mensuelle 08/2025",
+   "variante": 2,
+   "illisible": false,
+   "identification": {
+    "denomination": "CONSEIL FICTIF SERVICES SAS",
+    "siren": "000777128",
+    "debut": "2025-08-01",
+    "fin": "2025-08-31",
+    "dateLimite": "2025-09-19",
+    "dateDepot": "2025-09-15",
+    "dateCreation": "2025-09-15",
+    "millesime": "2025"
+   },
+   "cases": {
+    "16": {
+     "montant": 1830000
+    },
+    "20": {
+     "montant": 285000
+    },
+    "23": {
+     "montant": 285000
+    },
+    "28": {
+     "montant": 1545000
+    },
+    "32": {
+     "montant": 1545000
+    },
+    "A1": {
+     "montant": 9150000
+    },
+    "08": {
+     "base": 9150000,
+     "taxe": 1830000
+    },
+    "TD": {
+     "montant": 1545000
+    }
+   },
+   "controlesAttendus": []
+  },
+  {
+   "fichier": "CA3_000777128_202509.pdf",
+   "description": "Mensuelle 09/2025 : achat d’immobilisation, crédit de TVA reporté (ligne 27)",
+   "variante": 1,
+   "illisible": false,
+   "identification": {
+    "denomination": "CONSEIL FICTIF SERVICES SAS",
+    "siren": "000777128",
+    "debut": "2025-09-01",
+    "fin": "2025-09-30",
+    "dateLimite": "2025-10-19",
+    "dateDepot": "2025-10-15",
+    "dateCreation": "2025-10-15",
+    "millesime": "2025"
+   },
+   "cases": {
+    "16": {
+     "montant": 1565000
+    },
+    "19": {
+     "montant": 3000000
+    },
+    "20": {
+     "montant": 302000
+    },
+    "23": {
+     "montant": 3302000
+    },
+    "25": {
+     "montant": 1737000
+    },
+    "27": {
+     "montant": 1737000
+    },
+    "A1": {
+     "montant": 8050000
+    },
+    "E2": {
+     "montant": 950000
+    },
+    "08": {
+     "base": 7600000,
+     "taxe": 1520000
+    },
+    "9B": {
+     "base": 450000,
+     "taxe": 45000
+    }
+   },
+   "controlesAttendus": []
+  },
+  {
+   "fichier": "CA3_000777128_202510.pdf",
+   "description": "Mensuelle 10/2025 : crédit reporté partiellement imputé, nouveau crédit : achat de prestation autoliquidé (A3)",
+   "variante": 2,
+   "illisible": false,
+   "identification": {
+    "denomination": "CONSEIL FICTIF SERVICES SAS",
+    "siren": "000777128",
+    "debut": "2025-10-01",
+    "fin": "2025-10-31",
+    "dateLimite": "2025-11-19",
+    "dateDepot": "2025-11-15",
+    "dateCreation": "2025-11-15",
+    "millesime": "2025"
+   },
+   "cases": {
+    "16": {
+     "montant": 2096000
+    },
+    "20": {
+     "montant": 390000
+    },
+    "22": {
+     "montant": 1737000
+    },
+    "23": {
+     "montant": 2127000
+    },
+    "25": {
+     "montant": 31000
+    },
+    "27": {
+     "montant": 31000
+    },
+    "A1": {
+     "montant": 10230000
+    },
+    "A3": {
+     "montant": 250000
+    },
+    "08": {
+     "base": 10480000,
+     "taxe": 2096000
+    }
+   },
+   "controlesAttendus": []
+  },
+  {
+   "fichier": "CA3_000777128_202511.pdf",
+   "description": "Mensuelle 11/2025 : imputation du crédit reporté (ligne 22) : ligne « dont » sans code avec montant sous la ligne 21",
+   "variante": 1,
+   "illisible": false,
+   "identification": {
+    "denomination": "CONSEIL FICTIF SERVICES SAS",
+    "siren": "000777128",
+    "debut": "2025-11-01",
+    "fin": "2025-11-30",
+    "dateLimite": "2025-12-19",
+    "dateDepot": "2025-12-15",
+    "dateCreation": "2025-12-15",
+    "millesime": "2025"
+   },
+   "cases": {
+    "16": {
+     "montant": 1856000
+    },
+    "20": {
+     "montant": 321000
+    },
+    "21": {
+     "montant": 30000
+    },
+    "22": {
+     "montant": 31000
+    },
+    "23": {
+     "montant": 382000
+    },
+    "28": {
+     "montant": 1474000
+    },
+    "32": {
+     "montant": 1474000
+    },
+    "A1": {
+     "montant": 9680000
+    },
+    "08": {
+     "base": 8880000,
+     "taxe": 1776000
+    },
+    "9B": {
+     "base": 800000,
+     "taxe": 80000
+    },
+    "TD": {
+     "montant": 1474000
+    }
+   },
+   "controlesAttendus": []
+  },
+  {
+   "fichier": "CA3_000777128_202512.pdf",
+   "description": "Mensuelle 12/2025 : déposée après la date limite",
+   "variante": 2,
+   "illisible": false,
+   "identification": {
+    "denomination": "CONSEIL FICTIF SERVICES SAS",
+    "siren": "000777128",
+    "debut": "2025-12-01",
+    "fin": "2025-12-31",
+    "dateLimite": "2026-01-19",
+    "dateDepot": "2026-01-22",
+    "dateCreation": "2026-01-22",
+    "millesime": "2025"
+   },
+   "cases": {
+    "16": {
+     "montant": 1930000
+    },
+    "20": {
+     "montant": 365000
+    },
+    "23": {
+     "montant": 365000
+    },
+    "28": {
+     "montant": 1565000
+    },
+    "32": {
+     "montant": 1565000
+    },
+    "A1": {
+     "montant": 9800000
+    },
+    "E2": {
+     "montant": 1500000
+    },
+    "08": {
+     "base": 9500000,
+     "taxe": 1900000
+    },
+    "9B": {
+     "base": 300000,
+     "taxe": 30000
+    },
+    "TD": {
+     "montant": 1565000
+    }
+   },
+   "controlesAttendus": [
+    "DEPOT_TARDIF"
+   ]
+  },
+  {
+   "fichier": "CA3_000777128_202601.pdf",
+   "description": "Mensuelle 01/2026",
+   "variante": 1,
+   "illisible": false,
+   "identification": {
+    "denomination": "CONSEIL FICTIF SERVICES SAS",
+    "siren": "000777128",
+    "debut": "2026-01-01",
+    "fin": "2026-01-31",
+    "dateLimite": "2026-02-19",
+    "dateDepot": "2026-02-15",
+    "dateCreation": "2026-02-15",
+    "millesime": "2026"
+   },
+   "cases": {
+    "16": {
+     "montant": 1590000
+    },
+    "20": {
+     "montant": 298000
+    },
+    "23": {
+     "montant": 298000
+    },
+    "28": {
+     "montant": 1292000
+    },
+    "32": {
+     "montant": 1292000
+    },
+    "A1": {
+     "montant": 7950000
+    },
+    "08": {
+     "base": 7950000,
+     "taxe": 1590000
+    },
+    "TD": {
+     "montant": 1292000
+    }
+   },
+   "controlesAttendus": []
+  },
+  {
+   "fichier": "CA3_000777128_202602.pdf",
+   "description": "Mensuelle 02/2026 : incohérences volontaires (taxe 9B ≠ base × 10 %, ligne 16 ≠ somme des taxes)",
+   "variante": 2,
+   "illisible": false,
+   "identification": {
+    "denomination": "CONSEIL FICTIF SERVICES SAS",
+    "siren": "000777128",
+    "debut": "2026-02-01",
+    "fin": "2026-02-28",
+    "dateLimite": "2026-03-19",
+    "dateDepot": "2026-03-15",
+    "dateCreation": "2026-03-15",
+    "millesime": "2026"
+   },
+   "cases": {
+    "16": {
+     "montant": 1815000
+    },
+    "20": {
+     "montant": 312000
+    },
+    "23": {
+     "montant": 312000
+    },
+    "28": {
+     "montant": 1503000
+    },
+    "32": {
+     "montant": 1503000
+    },
+    "A1": {
+     "montant": 8875000
+    },
+    "E2": {
+     "montant": 800000
+    },
+    "08": {
+     "base": 8325000,
+     "taxe": 1665000
+    },
+    "9B": {
+     "base": 550000,
+     "taxe": 50000
+    },
+    "TD": {
+     "montant": 1503000
+    }
+   },
+   "controlesAttendus": [
+    "T9B",
+    "L16"
+   ]
+  },
+  {
+   "fichier": "CA3_000777128_202603.pdf",
+   "description": "Mensuelle 03/2026 : achat de prestation autoliquidé (A3)",
+   "variante": 1,
+   "illisible": false,
+   "identification": {
+    "denomination": "CONSEIL FICTIF SERVICES SAS",
+    "siren": "000777128",
+    "debut": "2026-03-01",
+    "fin": "2026-03-31",
+    "dateLimite": "2026-04-19",
+    "dateDepot": "2026-04-15",
+    "dateCreation": "2026-04-15",
+    "millesime": "2026"
+   },
+   "cases": {
+    "16": {
+     "montant": 2029000
+    },
+    "20": {
+     "montant": 394000
+    },
+    "23": {
+     "montant": 394000
+    },
+    "28": {
+     "montant": 1635000
+    },
+    "32": {
+     "montant": 1635000
+    },
+    "A1": {
+     "montant": 9950000
+    },
+    "A3": {
+     "montant": 320000
+    },
+    "08": {
+     "base": 10020000,
+     "taxe": 2004000
+    },
+    "9B": {
+     "base": 250000,
+     "taxe": 25000
+    },
+    "TD": {
+     "montant": 1635000
+    }
+   },
+   "controlesAttendus": []
+  },
+  {
+   "fichier": "CA3_000777128_202604.pdf",
+   "description": "Mensuelle 04/2026",
+   "variante": 2,
+   "illisible": false,
+   "identification": {
+    "denomination": "CONSEIL FICTIF SERVICES SAS",
+    "siren": "000777128",
+    "debut": "2026-04-01",
+    "fin": "2026-04-30",
+    "dateLimite": "2026-05-19",
+    "dateDepot": "2026-05-15",
+    "dateCreation": "2026-05-15",
+    "millesime": "2026"
+   },
+   "cases": {
+    "16": {
+     "montant": 2020000
+    },
+    "20": {
+     "montant": 356000
+    },
+    "23": {
+     "montant": 356000
+    },
+    "28": {
+     "montant": 1664000
+    },
+    "32": {
+     "montant": 1664000
+    },
+    "A1": {
+     "montant": 10100000
+    },
+    "E2": {
+     "montant": 1100000
+    },
+    "08": {
+     "base": 10100000,
+     "taxe": 2020000
+    },
+    "TD": {
+     "montant": 1664000
+    }
+   },
+   "controlesAttendus": []
+  },
+  {
+   "fichier": "CA3_000777128_202605.pdf",
+   "description": "Mensuelle 05/2026",
+   "variante": 1,
+   "illisible": false,
+   "identification": {
+    "denomination": "CONSEIL FICTIF SERVICES SAS",
+    "siren": "000777128",
+    "debut": "2026-05-01",
+    "fin": "2026-05-31",
+    "dateLimite": "2026-06-19",
+    "dateDepot": "2026-06-15",
+    "dateCreation": "2026-06-15",
+    "millesime": "2026"
+   },
+   "cases": {
+    "16": {
+     "montant": 1860000
+    },
+    "20": {
+     "montant": 309000
+    },
+    "23": {
+     "montant": 309000
+    },
+    "28": {
+     "montant": 1551000
+    },
+    "32": {
+     "montant": 1551000
+    },
+    "A1": {
+     "montant": 9650000
+    },
+    "08": {
+     "base": 8950000,
+     "taxe": 1790000
+    },
+    "9B": {
+     "base": 700000,
+     "taxe": 70000
+    },
+    "TD": {
+     "montant": 1551000
+    }
+   },
+   "controlesAttendus": []
+  },
+  {
+   "fichier": "CA3_000777128_202606.pdf",
+   "description": "Mensuelle 06/2026",
+   "variante": 2,
+   "illisible": false,
+   "identification": {
+    "denomination": "CONSEIL FICTIF SERVICES SAS",
+    "siren": "000777128",
+    "debut": "2026-06-01",
+    "fin": "2026-06-30",
+    "dateLimite": "2026-07-19",
+    "dateDepot": "2026-07-15",
+    "dateCreation": "2026-07-15",
+    "millesime": "2026"
+   },
+   "cases": {
+    "16": {
+     "montant": 2288000
+    },
+    "20": {
+     "montant": 387000
+    },
+    "23": {
+     "montant": 387000
+    },
+    "28": {
+     "montant": 1901000
+    },
+    "32": {
+     "montant": 1901000
+    },
+    "A1": {
+     "montant": 11640000
+    },
+    "E2": {
+     "montant": 600000
+    },
+    "08": {
+     "base": 11240000,
+     "taxe": 2248000
+    },
+    "9B": {
+     "base": 400000,
+     "taxe": 40000
+    },
+    "TD": {
+     "montant": 1901000
+    }
+   },
+   "controlesAttendus": []
+  }
+ ],
+ "trimestrielle": [
+  {
+   "fichier": "CA3_000888230_2025T1.pdf",
+   "description": "Trimestrielle T1 2025",
+   "variante": 1,
+   "illisible": false,
+   "identification": {
+    "denomination": "ATELIER TRIMESTRIEL SARL",
+    "siren": "000888230",
+    "debut": "2025-01-01",
+    "fin": "2025-03-31",
+    "dateLimite": "2025-04-24",
+    "dateDepot": "2025-04-20",
+    "dateCreation": "2025-04-20",
+    "millesime": "2025"
+   },
+   "cases": {
+    "16": {
+     "montant": 84000
+    },
+    "20": {
+     "montant": 31000
+    },
+    "23": {
+     "montant": 31000
+    },
+    "28": {
+     "montant": 53000
+    },
+    "32": {
+     "montant": 53000
+    },
+    "A1": {
+     "montant": 420000
+    },
+    "08": {
+     "base": 420000,
+     "taxe": 84000
+    },
+    "TD": {
+     "montant": 53000
+    }
+   },
+   "controlesAttendus": []
+  },
+  {
+   "fichier": "CA3_000888230_2025T2.pdf",
+   "description": "Trimestrielle T2 2025",
+   "variante": 2,
+   "illisible": false,
+   "identification": {
+    "denomination": "ATELIER TRIMESTRIEL SARL",
+    "siren": "000888230",
+    "debut": "2025-04-01",
+    "fin": "2025-06-30",
+    "dateLimite": "2025-07-24",
+    "dateDepot": "2025-07-20",
+    "dateCreation": "2025-07-20",
+    "millesime": "2025"
+   },
+   "cases": {
+    "16": {
+     "montant": 78000
+    },
+    "20": {
+     "montant": 28000
+    },
+    "23": {
+     "montant": 28000
+    },
+    "28": {
+     "montant": 50000
+    },
+    "32": {
+     "montant": 50000
+    },
+    "A1": {
+     "montant": 390000
+    },
+    "08": {
+     "base": 390000,
+     "taxe": 78000
+    },
+    "TD": {
+     "montant": 50000
+    }
+   },
+   "controlesAttendus": []
+  },
+  {
+   "fichier": "CA3_000888230_2025T3.pdf",
+   "description": "Trimestrielle T3 2025",
+   "variante": 1,
+   "illisible": false,
+   "identification": {
+    "denomination": "ATELIER TRIMESTRIEL SARL",
+    "siren": "000888230",
+    "debut": "2025-07-01",
+    "fin": "2025-09-30",
+    "dateLimite": "2025-10-24",
+    "dateDepot": "2025-10-20",
+    "dateCreation": "2025-10-20",
+    "millesime": "2025"
+   },
+   "cases": {
+    "16": {
+     "montant": 55000
+    },
+    "20": {
+     "montant": 42000
+    },
+    "23": {
+     "montant": 42000
+    },
+    "28": {
+     "montant": 13000
+    },
+    "32": {
+     "montant": 13000
+    },
+    "A1": {
+     "montant": 275000
+    },
+    "08": {
+     "base": 275000,
+     "taxe": 55000
+    },
+    "TD": {
+     "montant": 13000
+    }
+   },
+   "controlesAttendus": []
+  },
+  {
+   "fichier": "CA3_000888230_2025T4.pdf",
+   "description": "Trimestrielle T4 2025",
+   "variante": 2,
+   "illisible": false,
+   "identification": {
+    "denomination": "ATELIER TRIMESTRIEL SARL",
+    "siren": "000888230",
+    "debut": "2025-10-01",
+    "fin": "2025-12-31",
+    "dateLimite": "2026-01-24",
+    "dateDepot": "2026-01-20",
+    "dateCreation": "2026-01-20",
+    "millesime": "2025"
+   },
+   "cases": {
+    "16": {
+     "montant": 92000
+    },
+    "20": {
+     "montant": 35000
+    },
+    "23": {
+     "montant": 35000
+    },
+    "28": {
+     "montant": 57000
+    },
+    "32": {
+     "montant": 57000
+    },
+    "A1": {
+     "montant": 460000
+    },
+    "08": {
+     "base": 460000,
+     "taxe": 92000
+    },
+    "TD": {
+     "montant": 57000
+    }
+   },
+   "controlesAttendus": []
+  }
+ ],
+ "autres": [
+  {
+   "fichier": "CA3_000888230_millesime_inconnu.pdf",
+   "description": "Formulaire d’un millésime inconnu (2027, fictif) avec une case inconnue W1",
+   "variante": 1,
+   "illisible": false,
+   "identification": {
+    "denomination": "ATELIER TRIMESTRIEL SARL",
+    "siren": "000888230",
+    "debut": "2025-01-01",
+    "fin": "2025-03-31",
+    "dateLimite": "2025-04-24",
+    "dateDepot": "2025-04-20",
+    "dateCreation": "2025-04-20",
+    "millesime": "2027"
+   },
+   "cases": {
+    "16": {
+     "montant": 84000
+    },
+    "20": {
+     "montant": 31000
+    },
+    "23": {
+     "montant": 31000
+    },
+    "28": {
+     "montant": 53000
+    },
+    "32": {
+     "montant": 53000
+    },
+    "A1": {
+     "montant": 420000
+    },
+    "08": {
+     "base": 420000,
+     "taxe": 84000
+    },
+    "TD": {
+     "montant": 53000
+    },
+    "W1": {
+     "montant": 123400
+    }
+   },
+   "controlesAttendus": []
+  },
+  {
+   "fichier": "CA3_scan_illisible.pdf",
+   "description": "PDF image sans texte (déclaration scannée) : saisie manuelle",
+   "variante": 2,
+   "illisible": true,
+   "identification": null,
+   "cases": {},
+   "controlesAttendus": []
+  }
+ ]
+}

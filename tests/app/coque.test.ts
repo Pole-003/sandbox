@@ -18,7 +18,7 @@ describe('coque', () => {
   });
   afterEach(() => demonter());
 
-  it('affiche les six modules, Stocks et TVA grisés « bientôt » et non cliquables', () => {
+  it('affiche les six modules, Stocks grisé « bientôt » et non cliquable', () => {
     monter();
     const nav = racine.querySelector('nav[aria-label="Modules"]');
     expect([...nav!.querySelectorAll('.nav-libelle')].map((e) => e.textContent)).toEqual([
@@ -30,13 +30,13 @@ describe('coque', () => {
       'TVA',
     ]);
     const bientot = [...nav!.querySelectorAll('.nav-bientot')];
-    expect(bientot.map((e) => e.querySelector('.nav-libelle')?.textContent)).toEqual(['Stocks', 'TVA']);
+    expect(bientot.map((e) => e.querySelector('.nav-libelle')?.textContent)).toEqual(['Stocks']);
     for (const e of bientot) {
       expect(e.tagName).toBe('SPAN');
       expect(e.getAttribute('aria-disabled')).toBe('true');
       expect(e.textContent).toContain('bientôt');
     }
-    expect(nav!.querySelectorAll('a')).toHaveLength(4);
+    expect(nav!.querySelectorAll('a')).toHaveLength(5);
   });
 
   it('affiche le badge « 100 % local » et la version', () => {

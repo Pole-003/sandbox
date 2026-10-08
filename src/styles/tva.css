@@ -1,0 +1,89 @@
+/*
+ * Module Cadrage de TVA : tableau des CA3 par période, corrections, saisie.
+ * Couleurs : uniquement les paires de jetons vérifiées par tests/app/contrastes.test.ts.
+ */
+
+.ecran-tva input[type='text'],
+.ecran-tva input[type='date'],
+.ecran-tva select,
+.ecran-tva textarea {
+  min-height: 2.25rem;
+  padding: 0.375rem 0.5rem;
+  border: 1px solid var(--c-bordure);
+  border-radius: var(--rayon);
+  background: var(--c-surface);
+  color: var(--c-texte);
+  font: inherit;
+}
+
+.ecran-tva textarea {
+  width: 100%;
+}
+
+.tableau-ca3 th[scope='row'] {
+  vertical-align: top;
+}
+
+.tableau-ca3 .debut-case td,
+.tableau-ca3 .debut-case th {
+  border-top: 1px solid var(--c-bordure);
+}
+
+.tableau-ca3 td.total {
+  font-weight: 600;
+}
+
+.cellule-ca3 {
+  min-width: 4.5rem;
+  min-height: 1.75rem;
+  padding: 0.125rem 0.375rem;
+  border: 1px solid transparent;
+  border-radius: var(--rayon);
+  background: transparent;
+  color: var(--c-texte);
+  font: inherit;
+  font-variant-numeric: tabular-nums;
+  text-align: right;
+  cursor: pointer;
+}
+
+.cellule-ca3:hover {
+  border-color: var(--c-bordure);
+}
+
+.cellule-ca3:focus-visible {
+  outline: 2px solid var(--c-focus);
+  outline-offset: 1px;
+}
+
+.cellule-corrigee {
+  border-color: var(--c-alerte);
+  background: var(--c-alerte-fond);
+  color: var(--c-alerte-texte);
+  font-weight: 600;
+}
+
+.liste-anomalies {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.liste-anomalies li {
+  padding: 0.375rem 0;
+  border-bottom: 1px solid var(--c-bordure);
+}
+
+.dialogue-tva {
+  width: min(56rem, 96vw);
+}
+
+.dialogue-tva .champ-montant {
+  width: 9rem;
+  text-align: right;
+}
+
+.tableau-ca3 .libelle-case {
+  min-width: 18rem;
+  max-width: 26rem;
+}

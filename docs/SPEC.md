@@ -244,3 +244,43 @@ Règles retenues à l'étape 8 (décisions du 08/10/2026) :
 - Modèles et coordonnées du cabinet communs à tous les dossiers du poste ; en-tête, signataire, date des lettres (par défaut : jour de l'export) et date limite de réponse (par défaut : « dans les meilleurs délais ») propres au dossier. Stockage IndexedDB (base version 3) ; « Purger ce dossier » efface les réglages du dossier, « Tout purger » efface aussi les modèles.
 - Texte des modèles : texte simple, paragraphes séparés par une ligne vide, « - » pour une puce, variables entre accolades (`{societe}`, `{tiers}`, `{code_tiers}`, `{reference}`, `{date_cloture}`, `{cabinet}`, `{contact_reponse}`, `{delai_reponse}`, `{phrase_solde}`, `{phrase_demande}`, `{solde}`, `{sens_solde}`, `{comptes_banque}`) ; un paragraphe vide après remplacement est supprimé ; une variable inconnue reste visible. Bouton « Rétablir le texte par défaut ».
 - Export : archive `.zip` d'un `.docx` par lettre, nommé `{Réf.} - {tiers}.docx`, ou document unique (une section par lettre, coupon sur page séparée). Lettres choisies par population ou une à une.
+
+## 5. Cadrage de TVA
+
+Module `src/modules/tva/`. Il consomme les données normalisées du module FEC (jamais le fichier) et les déclarations CA3 déposées par le collaborateur. Tout le traitement se fait dans le navigateur ; les PDF ne sont ni envoyés ni conservés (seules les valeurs lues, les corrections et l'empreinte SHA-256 de chaque PDF sont enregistrées dans IndexedDB, magasin `tva`, base version 4).
+
+Périmètre prioritaire : TVA collectée des sociétés de prestations de services et de travaux, au régime des encaissements. Les livraisons de biens (régime des débits), les régimes mixtes et la TVA déductible viendront ensuite.
+
+### 5.1 Lecture des CA3 (partie 1, 08/10/2026)
+- **Extraction** : pdfjs-dist 6.3 (Apache-2.0), chargé à la demande, analyse du PDF dans son worker servi depuis la même origine. Les options désactivent WebAssembly, les polices système, XFA et les scripts du document, et aucune ressource n'est téléchargée : la CSP est inchangée. La version 5.x a été écartée à cause d'une faille d'exécution de code à l'ouverture d'un PDF malveillant (GHSA-hq66-cqwq-w95j, corrigée en 6.2.108).
+- **Lecture par position** (`ca3/analyse.ts`), jamais par l'ordre du texte :
+  - les éléments de texte sont découpés en mots, avec une abscisse estimée pour chaque mot ;
+  - les mots sont regroupés en lignes visuelles (ordonnée proche), puis en cellules (un écart supérieur à 1,2 fois la taille de police sépare deux cellules) ;
+  - le code de case est le premier mot de la ligne, dans la colonne des codes de la page ;
+  - un montant est une cellule purement numérique (euros entiers ; espace, espace insécable ou espace fine comme séparateur de milliers) située dans la zone des montants ;
+  - après les en-têtes « Base hors taxe » et « Taxe due », reportés d'une page à l'autre, un montant est affecté à la colonne dont l'en-tête est le plus proche ; avant ces en-têtes (section A), la zone des montants est la moitié droite de la page ;
+  - les montants d'une ligne sans code (libellé sur plusieurs lignes) vont à la case précédente si elle n'en a pas encore ; une ligne « dont … » sans code n'est jamais rattachée, et son montant est signalé en information.
+- **Identification** : dénomination, SIREN, période déclarée, date limite de dépôt, date de dépôt, date de création du document, millésime (année de la mention « 3310-CA3 … applicable à compter du … »).
+- **Table des cases** (`ca3-cases.ts`) : code, libellé, section, nombre de colonnes, taux, millésimes. Elle est établie d'après les formulaires officiels 2025 (cerfa 10963*30) et 2026 (10963*31), qui comportent les mêmes cases. Un millésime absent de la table, comme une case inconnue, est accepté avec un avertissement ; les montants d'une case inconnue sont conservés sans être contrôlés.
+- **Contrôles de chaque déclaration** (anomalies non bloquantes) :
+  - 16 = somme des taxes de 08 à I6 + 15 + 5B ;
+  - 23 = 19 + 20 + 21 + 22 + 2C ;
+  - TD = 16 − 23 sans crédit, ou 25 = 23 − 16 sans TVA due ;
+  - 27 = 25 − 26 ;
+  - 28 = TD − X5 ;
+  - 32 = 28 + 29 + Z5 − AB ;
+  - base × taux ≈ taxe pour chaque taux connu, à 1 € près ;
+  - opérations taxées (A1 à A5, B1 à B5) = somme des bases des lignes de taux, à 1 € près (avertissement).
+- **Contrôles de la série** :
+  - même SIREN dans toutes les déclarations ;
+  - périodicité détectée (mensuelle, trimestrielle ou mixte) ;
+  - périodes consécutives, sans trou, chevauchement ni doublon ;
+  - report du crédit : ligne 22 = ligne 27 de la période précédente ;
+  - dépôt après la date limite signalé.
+- **PDF illisible** (scanné, image, PDF invalide) : saisie manuelle dans une grille des cases utiles. Pas d'OCR.
+- **Écran** :
+  - dépôt en lot dans n'importe quel ordre, tri par période ; un PDF déjà déposé (même empreinte) est ignoré ;
+  - tableau « case par période » des cases servies au moins une fois, avec total et ligne « TVA collectée déclarée » ;
+  - correction d'une valeur avec motif obligatoire, tracée (valeur lue, nouvelle valeur, date, motif), affichée en couleur et annulable ;
+  - liste des contrôles et des fichiers, avec leur empreinte.
+- **CA3 fictives** : `npm run ca3:fictives` (pdf-lib en dépendance de développement), décrites dans `tests/fixtures/ca3/README.md`.
