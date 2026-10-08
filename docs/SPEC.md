@@ -3,15 +3,12 @@
 ## 1. Accueil et animation « Pôle 003 - Bienvenue »
 
 ### Animation d'ouverture
-- Durée totale 2,5 s maximum, passable d'un clic, d'une touche ou du bouton « Passer ».
+- Une petite fusée traverse l'écran au lancement du site, par-dessus l'interface qui reste visible et utilisable (l'animation ne capte ni les clics ni le clavier).
+- Trajectoire : entrée en bas à gauche, léger arc, sortie en haut à droite, nez orienté dans le sens du vol, flamme et traînée. Durée environ 1,6 s (2,5 s maximum).
 - Jouée une fois par jour et par navigateur (date mémorisée en `localStorage`), désactivable dans les paramètres.
-- Version statique (aucun mouvement, affichée environ 1 s) si `prefers-reduced-motion` est actif.
-- Mise en scène retenue (validée par l'utilisateur le 08/10/2026), sur un ciel nocturne étoilé :
-  1. Le titre « Pôle 003 - Innovation » apparaît (0 à 0,6 s).
-  2. Une petite fusée décolle de son pas de tir, avec flamme et fumée, et sort par le haut de l'écran (0,4 à 1,4 s). Un télescope sur trépied suit sa trajectoire.
-  3. Le capot du télescope se referme (1,4 à 2,1 s).
-  4. Fondu vers le tableau de bord (2,1 à 2,5 s).
-- Dessin en SVG intégré au code et animations en CSS : aucune ressource externe, compatible avec la CSP sans la modifier.
+- Aucune animation si `prefers-reduced-motion` est actif.
+- Dessin en SVG intégré au code, mouvement par la Web Animations API : aucune ressource externe, compatible avec la CSP sans la modifier.
+- Historique : une première version plein écran (titre « Pôle 003 - Innovation », fusée et télescope) a été jugée trop chargée par l'utilisateur le 08/10/2026.
 
 ### Tableau de bord d'accueil
 - Salutation personnalisée : « Bonjour {prénom} · jeudi 8 octobre 2026 » (prénom saisi au premier lancement, stocké en local).

@@ -11,4 +11,4 @@ const racine = document.getElementById('app');
 if (!racine) throw new Error('Élément #app introuvable.');
 
 monterCoque(racine, { modules: MODULES, version: __APP_VERSION__, canal: __CANAL__ });
-lancerIntro({ application: racine });
+lancerIntro();

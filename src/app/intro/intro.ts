@@ -1,75 +1,74 @@
 import { ecrirePreference, lirePreference } from '../../core/stockage.ts';
-import { h } from '../dom.ts';
-import { dateLocaleIso, deciderIntro, type ModeIntro } from './decision.ts';
-import { construireScene } from './scene.ts';
+import { calculerTrajectoire, dateLocaleIso, doitJouerIntro } from './decision.ts';
 
-/** Durée d'affichage de la version statique (prefers-reduced-motion). */
-const DUREE_STATIQUE_MS = 1000;
-/** Filet de sécurité si l'événement de fin d'animation n'arrive pas (onglet en arrière-plan, etc.). */
-const DUREE_MAX_MS = 3000;
+const NS = 'http://www.w3.org/2000/svg';
+const DUREE_MS = 1600;
+const TAILLE_FUSEE = 44;
+
+function s(balise: string, attributs: Record<string, string | number>): SVGElement {
+  const element = document.createElementNS(NS, balise);
+  for (const [nom, valeur] of Object.entries(attributs)) element.setAttribute(nom, String(valeur));
+  return element;
+}
+
+/** Fusée dessinée nez vers le haut, centrée dans un carré de 48 × 48. */
+function construireFusee(): SVGElement {
+  const svg = s('svg', {
+    viewBox: '0 0 48 48',
+    width: TAILLE_FUSEE,
+    height: TAILLE_FUSEE,
+    class: 'fusee-vol-dessin',
+    'aria-hidden': 'true',
+    focusable: 'false',
+  });
+  svg.append(
+    s('path', { d: 'M20 34 L24 46 L28 34 Z', class: 'fusee-vol-flamme' }),
+    s('path', { d: 'M17 26 L11 36 L18 34 Z', class: 'fusee-vol-aileron' }),
+    s('path', { d: 'M31 26 L37 36 L30 34 Z', class: 'fusee-vol-aileron' }),
+    s('path', { d: 'M24 2 C31 10 32 22 30 35 L18 35 C16 22 17 10 24 2 Z', class: 'fusee-vol-carlingue' }),
+    s('path', { d: 'M24 2 C27.5 6 29.5 10 30.3 14 L17.7 14 C18.5 10 20.5 6 24 2 Z', class: 'fusee-vol-ogive' }),
+    s('circle', { cx: 24, cy: 21, r: 3.5, class: 'fusee-vol-hublot' }),
+  );
+  return svg;
+}
 
 export interface OptionsIntro {
-  /** Contenu de l'application, rendu inerte pendant l'animation. */
-  application: HTMLElement;
   maintenant?: Date;
   reduireMouvement?: boolean;
 }
 
-/** Joue l'animation d'ouverture si nécessaire ; renvoie le mode retenu. */
-export function lancerIntro({ application, maintenant = new Date(), reduireMouvement }: OptionsIntro): ModeIntro {
+/**
+ * Fait traverser l'écran à une fusée, par-dessus l'interface (une fois par jour).
+ * L'animation est purement décorative : elle ne bloque ni les clics ni le clavier.
+ * Renvoie true si la fusée a été lancée.
+ */
+export function lancerIntro({ maintenant = new Date(), reduireMouvement }: OptionsIntro = {}): boolean {
   const aujourdhui = dateLocaleIso(maintenant);
-  const mode = deciderIntro({
+  const jouer = doitJouerIntro({
     aujourdhui,
     derniereLecture: lirePreference('intro-derniere-lecture'),
     desactivee: lirePreference('intro-desactivee') === 'oui',
     reduireMouvement: reduireMouvement ?? window.matchMedia('(prefers-reduced-motion: reduce)').matches,
   });
-  if (mode === 'aucune') return mode;
+  if (!jouer) return false;
 
-  // Mémorisée dès le début : un rechargement de page ne la rejoue pas.
+  // Mémorisée dès le départ : un rechargement de page ne la rejoue pas.
   ecrirePreference('intro-derniere-lecture', aujourdhui);
 
-  const boutonPasser = h('button', { type: 'button', class: 'intro-passer' }, 'Passer');
-  const voile = h(
-    'div',
-    { class: `intro intro-${mode}`, role: 'presentation' },
-    construireScene(),
-    h(
-      'p',
-      { class: 'intro-titre' },
-      h('span', { class: 'intro-titre-pole' }, 'Pôle 003'),
-      h('span', { class: 'intro-titre-suite' }, ' - Innovation'),
-    ),
-    boutonPasser,
-  );
+  const fusee = document.createElement('div');
+  fusee.className = 'fusee-vol';
+  fusee.setAttribute('aria-hidden', 'true');
+  fusee.append(construireFusee());
+  document.body.append(fusee);
 
-  const focusPrecedent = document.activeElement instanceof HTMLElement ? document.activeElement : null;
-  application.inert = true;
-  document.body.append(voile);
-  boutonPasser.focus({ preventScroll: true });
-
-  let termine = false;
-  const terminer = () => {
-    if (termine) return;
-    termine = true;
-    clearTimeout(minuterie);
-    document.removeEventListener('keydown', passer, true);
-    voile.remove();
-    application.inert = false;
-    if (focusPrecedent?.isConnected && focusPrecedent !== document.body) focusPrecedent.focus();
-  };
-  const passer = (evenement: Event) => {
-    evenement.preventDefault();
-    if (mode === 'statique') terminer();
-    else voile.classList.add('intro-passee');
-  };
-
-  voile.addEventListener('animationend', (e) => {
-    if (e.target === voile && e.animationName === 'intro-disparition') terminer();
-  });
-  voile.addEventListener('click', passer);
-  document.addEventListener('keydown', passer, true);
-  const minuterie = setTimeout(terminer, mode === 'statique' ? DUREE_STATIQUE_MS : DUREE_MAX_MS);
-
-  return mode;
+  const demi = TAILLE_FUSEE / 2;
+  const images = calculerTrajectoire(window.innerWidth, window.innerHeight).map(({ x, y, angle }) => ({
+    transform: `translate(${x - demi}px, ${y - demi}px) rotate(${angle}deg)`,
+  }));
+  // Web Animations API : aucun style en ligne, compatible avec la CSP « style-src 'self' ».
+  const animation = fusee.animate(images, { duration: DUREE_MS, easing: 'cubic-bezier(0.4, 0, 0.7, 1)', fill: 'both' });
+  const retirer = () => fusee.remove();
+  animation.addEventListener('finish', retirer);
+  animation.addEventListener('cancel', retirer);
+  return true;
 }
