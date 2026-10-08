@@ -7,12 +7,14 @@ import { h } from '../../../app/dom.ts';
 import { formaterMontant } from '../../../core/format.ts';
 import { calculerBalanceAuxiliaire, TRANCHES, type BalanceAuxiliaire, type Population } from '../analyses/auxiliaire.ts';
 import { calculerBalance, comparerBalances, type Balance, type GroupeBalance, type LigneComparaison } from '../analyses/balance.ts';
+import { calculerChiffresCles, type ChiffresCles } from '../analyses/chiffres-cles.ts';
 import { creerContexte, t, type ContexteAnalyse } from '../analyses/contexte.ts';
 import { filtrerGrandLivre, lignesEcriture, type FiltresGrandLivre, type GrandLivre } from '../analyses/grand-livre.ts';
 import { calculerStatistiques, ecrituresDuChiffre, type Statistiques } from '../analyses/statistiques.ts';
 import {
   classeurBalanceGenerale,
   classeurBalancesAuxiliaires,
+  classeurChiffresCles,
   classeurGrandLivre,
   classeurStatistiques,
 } from '../export/analyses-xlsx.ts';
@@ -25,6 +27,7 @@ import { bouton, dateFr, nombreFr, telecharger, TYPE_XLSX } from './commun.ts';
 import { creerListeVirtuelle } from './liste-virtuelle.ts';
 
 const ONGLETS = [
+  { id: 'chiffres', libelle: 'Chiffres clés' },
   { id: 'balance', libelle: 'Balance générale' },
   { id: 'auxiliaire', libelle: 'Balances auxiliaires' },
   { id: 'grand-livre', libelle: 'Grand-livre' },
@@ -71,9 +74,9 @@ export function creerSectionAnalyses(impN: ImportEnregistre, impN1: ImportEnregi
   let detruit = false;
   let ctx: ContexteAnalyse;
   let ctxN1: ContexteAnalyse | null = null;
-  let actif: Onglet = 'balance';
+  let actif: Onglet = 'chiffres';
   let filtresGL: FiltresGrandLivre = {};
-  const cache: { balance?: Balance; balanceN1?: Balance | null; comparaison?: LigneComparaison[] | null; aux?: Partial<Record<Population, BalanceAuxiliaire>>; stats?: Statistiques } = {};
+  const cache: { chiffres?: ChiffresCles; chiffresN1?: ChiffresCles | null; balance?: Balance; balanceN1?: Balance | null; comparaison?: LigneComparaison[] | null; aux?: Partial<Record<Population, BalanceAuxiliaire>>; stats?: Statistiques } = {};
 
   const r = impN.reglages;
   const parametres = (): Parametres => ({
@@ -180,13 +183,89 @@ export function creerSectionAnalyses(impN: ImportEnregistre, impN1: ImportEnregi
   }
 
   // ---- Balance générale --------------------------------------------------------------------------
+  function vueChiffres(): HTMLElement {
+    const b = (cache.balance ??= calculerBalance(ctx));
+    if (cache.balanceN1 === undefined) cache.balanceN1 = ctxN1 ? calculerBalance(ctxN1) : null;
+    const c = (cache.chiffres ??= calculerChiffresCles(b));
+    if (cache.chiffresN1 === undefined) cache.chiffresN1 = cache.balanceN1 ? calculerChiffresCles(cache.balanceN1) : null;
+    const n1 = cache.chiffresN1;
+    const signe = (x: number) => (x < 0 ? `−${formaterMontant(-x)}` : formaterMontant(x));
+    const variation = (n: number, avant: number | undefined) => {
+      if (avant === undefined) return '';
+      const pct = avant ? ((n - avant) / Math.abs(avant)) * 100 : null;
+      return `${n - avant >= 0 ? '+' : '−'}${formaterMontant(Math.abs(n - avant))}${pct === null ? '' : ` (${pct.toLocaleString('fr-FR', { maximumFractionDigits: 1, signDisplay: 'always' })} %)`}`;
+    };
+    const tuile = (valeur: number, libelle: string, avant: number | undefined) =>
+      h(
+        'div',
+        { class: 'tuile' },
+        h('span', { class: `tuile-valeur${valeur < 0 ? ' valeur-negative' : ''}` }, `${signe(valeur)} €`),
+        h('span', { class: 'tuile-libelle' }, libelle),
+        avant === undefined ? null : h('span', { class: 'tuile-libelle' }, `N-1 : ${signe(avant)} € · ${variation(valeur, avant)}`),
+      );
+    const ebe = (x: ChiffresCles) => x.sig.find((l) => l.code === 'EBE')!.montant;
+    const parCodeN1 = new Map((n1?.sig ?? []).map((l) => [l.code, l.montant]));
+    const verif: HTMLElement[] = [];
+    if (c.gestionSoldee) {
+      verif.push(h('p', { class: 'bandeau bandeau-alerte' }, `Les comptes de charges et de produits sont soldés dans ce FEC (écriture de détermination du résultat) : le résultat est lu au compte 12, soit ${signe(c.resultat)} €. Les soldes intermédiaires ci-dessous sont nuls.`));
+    } else if (c.resultatCompte12 !== null) {
+      verif.push(h('p', { class: 'note texte-secondaire' }, `Le compte 12 présente un solde de ${signe(c.resultatCompte12)} € à la clôture (résultat de l’exercice précédent non encore affecté, ou résultat déjà comptabilisé) : à rapprocher du résultat ci-dessus.`));
+    }
+    return h(
+      'div',
+      {},
+      h(
+        'div',
+        { class: 'tuiles tuiles-montants', role: 'group', 'aria-label': 'Chiffres clés' },
+        tuile(c.chiffreAffaires, 'Chiffre d’affaires (comptes 70)', n1?.chiffreAffaires),
+        tuile(c.resultat, c.resultat >= 0 ? 'Résultat de l’exercice (bénéfice)' : 'Résultat de l’exercice (perte)', n1?.resultat),
+        tuile(ebe(c), 'Excédent brut d’exploitation', n1 ? ebe(n1) : undefined),
+        tuile(c.totalProduits, 'Total des produits (classe 7)', n1?.totalProduits),
+        tuile(c.totalCharges, 'Total des charges (classe 6)', n1?.totalCharges),
+      ),
+      ...verif,
+      h(
+        'div',
+        { class: 'actions' },
+        bouton('Exporter (.xlsx)', () => void exporter('Chiffres_cles', (X) => classeurChiffresCles(X, c, n1, parametres()))),
+        h('span', { class: 'texte-secondaire note' }, n1 ? `Comparaison avec ${impN1!.meta.nomFichier}` : 'Chargez le FEC N-1 pour la comparaison.'),
+      ),
+      h('h3', {}, 'Soldes intermédiaires de gestion'),
+      h(
+        'div',
+        { class: 'tableau-defilant', tabindex: '0', role: 'region', 'aria-label': 'Soldes intermédiaires de gestion' },
+        h(
+          'table',
+          { class: 'tableau tableau-sig' },
+          h('thead', {}, h('tr', {}, ...['Rubrique', 'Comptes', 'Exercice N', ...(n1 ? ['Exercice N-1', 'Variation'] : [])].map((x, k) => h('th', { scope: 'col', class: k >= 2 ? 'nombre' : undefined }, x)))),
+          h(
+            'tbody',
+            {},
+            ...c.sig.map((l) => {
+              const avant = parCodeN1.get(l.code);
+              return h(
+                'tr',
+                { class: l.nature === 'solde' ? 'ligne-solde' : undefined },
+                h(l.nature === 'solde' ? 'th' : 'td', l.nature === 'solde' ? { scope: 'row' } : {}, l.nature === 'produit' ? `+ ${l.libelle}` : l.nature === 'charge' ? `− ${l.libelle}` : `= ${l.libelle}`),
+                h('td', { class: 'mono note' }, l.comptes),
+                h('td', { class: 'nombre montant' }, signe(l.montant)),
+                ...(n1 ? [h('td', { class: 'nombre montant' }, avant === undefined ? '—' : signe(avant)), h('td', { class: 'nombre montant' }, avant === undefined ? '' : signe(l.montant - avant))] : []),
+              );
+            }),
+          ),
+        ),
+      ),
+    );
+  }
+
   function vueBalance(): HTMLElement {
     const b = (cache.balance ??= calculerBalance(ctx));
     if (cache.balanceN1 === undefined) cache.balanceN1 = ctxN1 ? calculerBalance(ctxN1) : null;
     if (cache.comparaison === undefined) cache.comparaison = cache.balanceN1 ? comparerBalances(b, cache.balanceN1) : null;
     const comparaison = new Map((cache.comparaison ?? []).map((c) => [c.compteNum, c]));
     const avecN1 = comparaison.size > 0;
-    const replies = new Set<string>();
+    // Balance repliée à l'ouverture : seules les classes sont affichées.
+    const replies = new Set<string>(b.classes.map((c) => c.code));
     const corps = h('tbody', {});
     const cellulesN1 = (compteNum: string | null, soldeN: number, soldeN1: number | null) => {
       if (!avecN1) return [];
@@ -662,7 +741,7 @@ export function creerSectionAnalyses(impN: ImportEnregistre, impN1: ImportEnregi
     // Laisse le navigateur afficher « Calcul en cours… » avant un calcul éventuellement long.
     setTimeout(() => {
       if (detruit) return;
-      const vue = { balance: vueBalance, auxiliaire: vueAuxiliaire, 'grand-livre': vueGrandLivre, statistiques: vueStatistiques }[o];
+      const vue = { chiffres: vueChiffres, balance: vueBalance, auxiliaire: vueAuxiliaire, 'grand-livre': vueGrandLivre, statistiques: vueStatistiques }[o];
       panneau.replaceChildren(vue());
     }, 20);
   }

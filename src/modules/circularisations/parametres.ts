@@ -41,7 +41,7 @@ export interface DecisionManuelle {
 }
 
 export interface ParametresCircularisation {
-  version: 1;
+  version: 2;
   dateCloture: string;
   /** Seuils en centimes (null = non saisi). */
   ss: number | null;
@@ -62,7 +62,21 @@ export interface ParametresCircularisation {
   selectionArreteeLe: string | null;
 }
 
-export const PREFIXES_BANQUES = ['512', '514', '517', '519', '5186', '164'];
+/** Préfixes bancaires (décision du 08/10/2026 : les emprunts 164 ne font pas partie de la population des banques). */
+export const PREFIXES_BANQUES = ['512', '514', '517', '519', '5186'];
+
+/**
+ * Conversion des paramètres enregistrés vers la version courante.
+ *  - v1 → v2 : retrait du préfixe 164 (emprunts) des banques.
+ */
+export function migrerParametres(p: Omit<ParametresCircularisation, 'version'> & { version: number }): ParametresCircularisation {
+  const r = structuredClone(p);
+  if (r.version < 2) {
+    r.banques.prefixes = r.banques.prefixes.filter((x) => x !== '164');
+    r.version = 2;
+  }
+  return r as ParametresCircularisation;
+}
 
 /** Valeurs par défaut validées le 08/10/2026 : C1/F1 = 50 % du SP, C2/F2 = 100 % du SP, tirage uniforme. */
 export function parametresParDefaut(dateCloture: string, graine = nouvelleGraine()): ParametresCircularisation {
@@ -76,7 +90,7 @@ export function parametresParDefaut(dateCloture: string, graine = nouvelleGraine
     aleatoire: { actif: true, nombre: 5 },
   });
   return {
-    version: 1,
+    version: 2,
     dateCloture,
     ss: null,
     sp: null,

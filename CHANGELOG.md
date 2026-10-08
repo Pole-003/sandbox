@@ -2,6 +2,17 @@
 
 Toutes les évolutions notables de la Sandbox Pôle 003. Format inspiré de « Keep a Changelog », numéros de version au format semver.
 
+## [0.11.0] - 2026-10-08
+
+### Ajouté
+- Module FEC : nouvel onglet « Chiffres clés », ouvert par défaut. Il affiche le chiffre d'affaires, le résultat de l'exercice, l'excédent brut d'exploitation, le total des produits et le total des charges, avec la comparaison N-1 si le FEC de l'exercice précédent est chargé. Il présente aussi les soldes intermédiaires de gestion, de la marge commerciale jusqu'au résultat, et propose un export Excel. Si les comptes de gestion sont soldés dans le FEC, le résultat est lu au compte 12.
+
+### Modifié
+- Accueil : le brief du jour s'affiche sous l'encart « Vos fichiers restent sur votre poste ».
+- Balance générale : repliée par classe à l'ouverture (boutons « Tout déplier » et « Tout replier »).
+- Circularisations : les critères C2 et F2 s'appellent désormais « Mouvements débiteurs » et « Mouvements créditeurs » de l'exercice, à l'écran comme dans le tableau de suivi.
+- Circularisations : les emprunts (comptes 164) ne font plus partie des banques. Les sélections déjà enregistrées sont converties automatiquement. La lettre aux banques demande toujours les emprunts et concours.
+
 ## [0.10.0] - 2026-10-08
 
 ### Ajouté

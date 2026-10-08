@@ -17,7 +17,6 @@ export const moduleAccueil: DescripteurModule = {
         { class: 'texte-secondaire' },
         'Le tableau de bord personnalisé (salutation, accès aux modules, dossiers en cache) arrivera avec l’écran d’accueil complet.',
       ),
-      sectionBrief(annulation),
       h(
         'section',
         { class: 'carte carte-confidentialite', 'aria-labelledby': 'titre-confidentialite' },
@@ -30,6 +29,7 @@ export const moduleAccueil: DescripteurModule = {
           h('li', {}, 'Le site ne charge aucune ressource externe : ni police, ni statistique de visite, ni traceur.'),
         ),
       ),
+      sectionBrief(annulation),
     );
     return () => {
       annulation.annule = true;

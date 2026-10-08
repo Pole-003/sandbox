@@ -284,7 +284,7 @@ export function rendreEcranCircularisations(conteneur: HTMLElement): () => void 
       { class: 'reglages' },
       h('legend', {}, c ? 'Clients' : 'Fournisseurs'),
       ligneCritere(`${pop}-solde`, `${k}1`, c ? 'Solde débiteur' : 'Solde créditeur', q.solde),
-      ligneCritere(`${pop}-mvt`, `${k}2`, c ? 'Facturation de l’exercice' : 'Achats de l’exercice', q.mouvements),
+      ligneCritere(`${pop}-mvt`, `${k}2`, c ? 'Mouvements débiteurs de l’exercice' : 'Mouvements créditeurs de l’exercice', q.mouvements),
       h('div', { class: 'ligne-critere' }, anormal, h('label', { for: anormal.id }, h('span', { class: 'badge badge-motif' }, `${k}3`), ` Solde anormal (${c ? 'créditeur' : 'débiteur'}, hors ${q.avances.join(', ')})`)),
       h('div', { class: 'ligne-critere' }, alea, h('label', { for: alea.id }, h('span', { class: 'badge badge-motif' }, `${k}4`), ' Tirage aléatoire uniforme : '), nombre, h('span', { class: 'note texte-secondaire' }, 'tiers parmi les non retenus à solde non nul')),
       h(
@@ -354,7 +354,7 @@ export function rendreEcranCircularisations(conteneur: HTMLElement): () => void 
       { class: 'tuiles', role: 'group', 'aria-label': 'Indicateurs' },
       tuile(`${nombreFr(i.nbSelectionnes)} / ${nombreFr(i.nbTotal)}`, 'tiers sélectionnés'),
       tuile(pourcentage(i.couvertureSoldes), 'couverture des soldes (valeur absolue)'),
-      tuile(pourcentage(i.couvertureMouvements), `couverture des ${r.population === 'clients' ? 'ventes (débits)' : 'achats (crédits)'}`),
+      tuile(pourcentage(i.couvertureMouvements), `couverture des ${r.population === 'clients' ? 'mouvements débiteurs' : 'mouvements créditeurs'}`),
       tuile(nombreFr(i.nbAnormaux), 'soldes anormaux'),
     );
   }
@@ -398,7 +398,7 @@ export function rendreEcranCircularisations(conteneur: HTMLElement): () => void 
         [
           ['cle', 'Code tiers'],
           ['solde', 'Solde (valeur absolue)'],
-          ['mouvements', pop === 'clients' ? 'Facturation' : 'Achats'],
+          ['mouvements', pop === 'clients' ? 'Mouvements débiteurs' : 'Mouvements créditeurs'],
         ] as const
       ).map(([v, l]) => h('option', { value: v, selected: f.tri === v }, l)),
     );
@@ -485,7 +485,7 @@ export function rendreEcranCircularisations(conteneur: HTMLElement): () => void 
           h(
             'thead',
             {},
-            h('tr', {}, ...['Retenu', 'Code', 'Tiers', 'Solde', pop === 'clients' ? 'Facturation' : 'Achats', 'Motifs', 'Méthode'].map((x, k) => h('th', { scope: 'col', class: k === 3 || k === 4 ? 'nombre' : undefined }, x))),
+            h('tr', {}, ...['Retenu', 'Code', 'Tiers', 'Solde', pop === 'clients' ? 'Mouvements débiteurs' : 'Mouvements créditeurs', 'Motifs', 'Méthode'].map((x, k) => h('th', { scope: 'col', class: k === 3 || k === 4 ? 'nombre' : undefined }, x))),
           ),
           corps,
         ),

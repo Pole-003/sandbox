@@ -3,6 +3,7 @@
  * grand-livre filtré, statistiques. Montants numériques en euros, formats français, en-têtes figés,
  * filtres, totaux par formule SOUS.TOTAL (insensibles aux filtres), onglet « Paramètres ».
  */
+import type { ChiffresCles, LigneSig } from '../analyses/chiffres-cles.ts';
 import type { Workbook, Worksheet } from 'exceljs';
 import type { BalanceAuxiliaire, LigneAuxiliaire } from '../analyses/auxiliaire.ts';
 import { TRANCHES } from '../analyses/auxiliaire.ts';
@@ -101,6 +102,47 @@ export function classeurBalanceGenerale(
     );
   }
   feuilleParametres(wb, parametres);
+  return wb;
+}
+
+export function classeurChiffresCles(ExcelJS: ExcelJSModule, c: ChiffresCles, n1: ChiffresCles | null, parametres: Parametres): Workbook {
+  const wb = nouveauClasseur(ExcelJS);
+  const titre = [`Chiffres clés et soldes intermédiaires de gestion — ${parametres.dossier}`, `Exercice ${parametres.exercice}`];
+  const avant = new Map((n1?.sig ?? []).map((l) => [l.code, l.montant]));
+  const colonnes: ColonneXlsx<LigneSig>[] = [
+    { titre: 'Rubrique', largeur: 62, valeur: (l) => `${l.nature === 'produit' ? '+' : l.nature === 'charge' ? '−' : '='} ${l.libelle}` },
+    { titre: 'Comptes', largeur: 26, valeur: (l) => l.comptes },
+    { titre: 'Exercice N', type: 'montant', valeur: (l) => euros(l.montant) },
+    ...(n1
+      ? ([
+          { titre: 'Exercice N-1', type: 'montant', valeur: (l) => (avant.has(l.code) ? euros(avant.get(l.code)!) : null) },
+          { titre: 'Variation', type: 'montant', valeur: (l) => (avant.has(l.code) ? euros(l.montant - avant.get(l.code)!) : null) },
+        ] satisfies ColonneXlsx<LigneSig>[])
+      : []),
+  ];
+  const ws = feuilleTableau(wb, 'SIG', colonnes, c.sig, { titre });
+  ws.eachRow((row, n) => {
+    if (n > titre.length + 2 && String(row.getCell(1).value ?? '').startsWith('=')) row.font = { bold: true };
+  });
+  const cles: [string, (x: ChiffresCles) => number | null][] = [
+    ['Chiffre d’affaires (comptes 70)', (x) => x.chiffreAffaires],
+    ['Total des produits (classe 7)', (x) => x.totalProduits],
+    ['Total des charges (classe 6)', (x) => x.totalCharges],
+    ['Résultat de l’exercice', (x) => x.resultat],
+    ['Solde créditeur du compte 12 à la clôture', (x) => x.resultatCompte12],
+  ];
+  feuilleTableau(
+    wb,
+    'Chiffres clés',
+    [
+      { titre: 'Indicateur', largeur: 44, valeur: (l: (typeof cles)[number]) => l[0] },
+      { titre: 'Exercice N', type: 'montant', valeur: (l) => { const v = l[1](c); return v === null ? null : euros(v); } },
+      ...(n1 ? ([{ titre: 'Exercice N-1', type: 'montant', valeur: (l) => { const v = l[1](n1); return v === null ? null : euros(v); } }] satisfies ColonneXlsx<(typeof cles)[number]>[]) : []),
+    ],
+    cles,
+    { titre },
+  );
+  feuilleParametres(wb, parametres, c.gestionSoldee ? [['Remarque', 'Comptes de gestion soldés dans le FEC : résultat lu au compte 12.']] : []);
   return wb;
 }
 

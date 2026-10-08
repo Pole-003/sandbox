@@ -105,6 +105,7 @@ Le rapport affiche en tête : « Contrôle indicatif. Seul l'outil officiel Test
 Export du rapport de conformité en `.xlsx` (onglet synthèse + un onglet par contrôle en anomalie).
 
 ### 3.3 Analyses
+- Chiffres clés (onglet ouvert par défaut) : chiffre d'affaires, résultat de l'exercice, excédent brut d'exploitation, totaux des produits et des charges, soldes intermédiaires de gestion, comparaison N-1 ; pour rapprocher le FEC de la liasse.
 - Balance générale (soldes d'ouverture, mouvements débit/crédit, solde de clôture) avec regroupement par classe et sous-classe, comparaison N-1 si un second FEC est chargé.
 - Balance auxiliaire clients et fournisseurs.
 - Grand-livre filtrable (compte, période, journal, montant, libellé).
@@ -113,7 +114,8 @@ Export du rapport de conformité en `.xlsx` (onglet synthèse + un onglet par co
 
 Règles précisées à l'étape 6 (08/10/2026) :
 - **Soldes** : « ouverture » = lignes du journal d'à-nouveaux confirmé ; « mouvements » = toutes les autres lignes ; « clôture » = ouverture + débit − crédit. Montants en centimes, soldes signés débit − crédit, affichés avec le sens D / C.
-- **Balance générale** : classe = 1er chiffre du compte, sous-classe = 2 premiers chiffres ; contrôle d'équilibre des à-nouveaux, des mouvements et du solde global ; comparaison N / N-1 par compte (variation en valeur et en % du solde N-1, union des comptes des deux exercices).
+- **Chiffres clés** (décision du 08/10/2026) : calculés sur les soldes de clôture. Chiffre d'affaires = solde créditeur des comptes 70. SIG du PCG : ventes de marchandises (707, 7097) − coût d'achat des marchandises vendues (607, 6087, 6097, 6037) = marge commerciale ; production vendue (70 hors 707, 7097) + stockée (71) + immobilisée (72, 73) = production de l'exercice ; − consommations en provenance des tiers (60 hors marchandises, 61, 62) = valeur ajoutée ; + subventions (74) − impôts et taxes (63) − personnel (64) = EBE ; + autres produits et reprises (75, 781, 791) − autres charges et dotations (65, 681) = résultat d'exploitation ; financier (76, 786, 796 − 66, 686) ; exceptionnel (77, 787, 797 − 67, 687) ; − participation et IS (69). Le résultat de l'exercice est toujours classe 7 − classe 6 ; les comptes de gestion non couverts apparaissent sur une ligne « non classés ». Si tous les comptes 6 et 7 sont soldés et le compte 12 ne l'est pas, le résultat est lu au compte 12 ; sinon un solde du compte 12 est signalé pour rapprochement.
+- **Balance générale** : repliée par classe à l'ouverture ; classe = 1er chiffre du compte, sous-classe = 2 premiers chiffres ; contrôle d'équilibre des à-nouveaux, des mouvements et du solde global ; comparaison N / N-1 par compte (variation en valeur et en % du solde N-1, union des comptes des deux exercices).
 - **Balance auxiliaire** : clients = comptes 41, fournisseurs = comptes 40 ; clé du tiers = CompAuxNum, sinon CompteNum ; soldes anormaux = clients créditeurs, fournisseurs débiteurs.
 - **Balance âgée** : lignes non lettrées à la clôture (EcritureLet vide, ou DateLet postérieure à la clôture), datées au plus tard à la clôture ; ancienneté = clôture − PieceDate (EcritureDate si la pièce est absente ou postérieure) ; tranches 0-30, 31-60, 61-90, 91-180, 181-365 jours, plus d'un an. Pour les à-nouveaux, l'ancienneté part de la date portée par la ligne.
 - **Grand-livre** : tri compte, à-nouveaux, date, ordre du fichier ; solde progressif par compte ; filtres compte (début du numéro), auxiliaire, journal, période, montant (débit ou crédit de la ligne), texte (libellé, pièce, libellés de compte et de tiers, sans casse ni accents), lettrage ; affichage virtualisé ; un clic ouvre l'écriture complète. Export limité à 200 000 lignes (au-delà, affiner les filtres).
@@ -124,7 +126,7 @@ Règles précisées à l'étape 6 (08/10/2026) :
 - `chargerDonneesFec(dossierId, role = 'N')` → `DonneesFec | null` ;
 - `metadonnees` : dossier, SIREN, exercice, date de clôture, journal d'à-nouveaux (et s'il est confirmé), empreinte SHA-256, nom du fichier, nombres de lignes et d'écritures ;
 - `soldesParCompte()` et `soldesParTiers(prefixes = ['40', '41'])` : ouverture, mouvements débit et crédit hors à-nouveaux, clôture, sens ;
-- `comptesBancaires(prefixes = ['512', '514', '517', '519', '5186', '164'])` : comptes présents dans le FEC, même soldés à la clôture, avec l'indicateur `mouvemente` ;
+- `comptesBancaires(prefixes = ['512', '514', '517', '519', '5186'])` : comptes présents dans le FEC, même soldés à la clôture, avec l'indicateur `mouvemente` ;
 - `ecrituresDuTiers(cle)` et `ecrituresDuCompte(compteNum)` : écritures complètes, pour les procédures alternatives.
 
 ## 4. Circularisations
@@ -142,7 +144,7 @@ Saisis par l'utilisateur et sauvegardés avec le dossier :
 Clé du tiers : `CompAuxNum` s'il est renseigné, sinon `CompteNum`. Solde de clôture = à-nouveaux + mouvements de l'exercice. Les mouvements de l'exercice excluent le journal d'à-nouveaux.
 
 **Banques (sélection exhaustive)**
-- Préfixes par défaut : 512, 514, 517, 519, 5186 (intérêts courus), 164 (emprunts auprès des établissements de crédit), 50 (valeurs mobilières, optionnel).
+- Préfixes par défaut : 512, 514, 517, 519, 5186 (intérêts courus), 50 (valeurs mobilières, optionnel). Les emprunts auprès des établissements de crédit (164) ne sont pas retenus (décision du 08/10/2026) ; la lettre aux banques demande néanmoins les emprunts et concours.
 - Tous les comptes sont sélectionnés, y compris ceux dont le solde est nul à la clôture mais qui ont enregistré des mouvements dans l'exercice (compte clôturé en cours d'année).
 - Regroupement par établissement : table de correspondance compte → établissement, proposée à partir du libellé et éditable. Une ligne de suivi par établissement, avec le détail des comptes.
 
@@ -150,7 +152,7 @@ Clé du tiers : `CompAuxNum` s'il est renseigné, sinon `CompteNum`. Solde de cl
 - Préfixes par défaut : 411, 413, 416, 4191. Exclus par défaut : 418 (factures à établir).
 - Critères combinables (un tiers peut cumuler plusieurs motifs) :
   - C1 Solde débiteur ≥ seuil.
-  - C2 Mouvements débiteurs de l'exercice (facturation) ≥ seuil.
+  - C2 Mouvements débiteurs de l'exercice ≥ seuil.
   - C3 Solde anormal : solde créditeur (hors avances 4191 identifiées).
   - C4 Sélection aléatoire parmi les tiers non retenus par C1 à C3 et dont le solde n'est pas nul, nombre de tirages paramétrable.
   - C5 Ajout ou exclusion manuelle, justification obligatoire.
@@ -159,7 +161,7 @@ Clé du tiers : `CompAuxNum` s'il est renseigné, sinon `CompteNum`. Solde de cl
 - Préfixes par défaut : 401, 403, 404, 405, 4091. Exclus par défaut : 408 (factures non parvenues).
 - Critères :
   - F1 Solde créditeur ≥ seuil.
-  - F2 Mouvements créditeurs de l'exercice (achats) ≥ seuil. Critère clé pour la recherche de passifs non comptabilisés : il retient aussi les fournisseurs à solde faible ou nul mais à fort volume.
+  - F2 Mouvements créditeurs de l'exercice ≥ seuil. Critère clé pour la recherche de passifs non comptabilisés : il retient aussi les fournisseurs à solde faible ou nul mais à fort volume.
   - F3 Solde anormal : solde débiteur (hors avances 4091 identifiées).
   - F4 Sélection aléatoire parmi les non retenus.
   - F5 Ajout ou exclusion manuelle, justification obligatoire.

@@ -13,12 +13,12 @@ export type Motif = 'C1' | 'C2' | 'C3' | 'C4' | 'C5' | 'F1' | 'F2' | 'F3' | 'F4'
 
 export const LIBELLES_MOTIFS: Record<Motif, string> = {
   C1: 'Solde débiteur ≥ seuil',
-  C2: 'Facturation de l’exercice ≥ seuil',
+  C2: 'Mouvements débiteurs de l’exercice ≥ seuil',
   C3: 'Solde anormal (client créditeur)',
   C4: 'Tirage aléatoire',
   C5: 'Ajout manuel',
   F1: 'Solde créditeur ≥ seuil',
-  F2: 'Achats de l’exercice ≥ seuil',
+  F2: 'Mouvements créditeurs de l’exercice ≥ seuil',
   F3: 'Solde anormal (fournisseur débiteur)',
   F4: 'Tirage aléatoire',
   F5: 'Ajout manuel',

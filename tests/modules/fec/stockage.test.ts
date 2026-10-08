@@ -102,6 +102,14 @@ describe('migration de la base (version 1 → 2)', () => {
     const { parametresParDefaut } = await import('../../../src/modules/circularisations/parametres.ts');
     await enregistrerParametres('ancien', parametresParDefaut('2025-12-31', 7));
     expect((await lireParametres('ancien'))?.graine).toBe(7);
+    // Paramètres enregistrés en version 1 (avec le préfixe 164) : convertis à la lecture.
+    const v1 = { ...parametresParDefaut('2025-12-31', 8), version: 1 } as unknown as Parameters<typeof enregistrerParametres>[1];
+    v1.banques.prefixes = ['512', '514', '517', '519', '5186', '164'];
+    await enregistrerParametres('ancien', v1);
+    const migres = await lireParametres('ancien');
+    expect(migres?.version).toBe(2);
+    expect(migres?.banques.prefixes).toEqual(['512', '514', '517', '519', '5186']);
+    expect(migres?.graine).toBe(8);
     await purgerDossier('ancien');
     expect(await lireParametres('ancien')).toBeNull();
   });

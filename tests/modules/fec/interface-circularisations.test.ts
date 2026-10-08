@@ -60,7 +60,7 @@ describe('interface Circularisations sur le FEC propre (import → IndexedDB →
     const banques = donnees.comptesBancaires();
     expect(banques.filter((b) => b.compteNum.startsWith('512')).map((b) => b.compteNum)).toEqual(ATTENDUS.totaux.propre.banques);
     expect(banques.find((b) => b.compteNum === '512300')).toMatchObject({ cloture: 0, sens: '', mouvemente: true });
-    expect(banques.map((b) => b.compteNum)).toContain('164000');
+    expect(banques.map((b) => b.compteNum)).not.toContain('164000');
   });
 
   it('écritures d’un tiers et d’un compte (procédures alternatives)', () => {

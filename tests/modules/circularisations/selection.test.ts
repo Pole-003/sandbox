@@ -64,11 +64,11 @@ describe('paramètres', () => {
 describe('sélection sur le FEC propre', () => {
   it('banques : sélection exhaustive, y compris le compte soldé en cours d’année', () => {
     const s = selectionner(donnees, parametres());
-    expect(s.banques.comptes.map((c) => c.compteNum)).toEqual(['164000', '512100', '512200', '512300']);
+    expect(s.banques.comptes.map((c) => c.compteNum)).toEqual(['512100', '512200', '512300']);
     expect(s.banques.comptes.find((c) => c.compteNum === '512300')).toMatchObject({ cloture: 0, mouvemente: true });
-    expect(s.banques.etablissements.map((e) => e.etablissement)).toEqual(['À préciser (164000)', 'Banque Alpha', 'Banque Bêta', 'Banque Gamma']);
-    const regroupe = selectionner(donnees, parametres((p) => (p.banques.etablissements = { '164000': 'Banque Alpha' })));
-    expect(regroupe.banques.etablissements.find((e) => e.etablissement === 'Banque Alpha')!.comptes.map((c) => c.compteNum)).toEqual(['164000', '512100']);
+    expect(s.banques.etablissements.map((e) => e.etablissement)).toEqual(['Banque Alpha', 'Banque Bêta', 'Banque Gamma']);
+    const regroupe = selectionner(donnees, parametres((p) => (p.banques.etablissements = { '512200': 'Banque Alpha' })));
+    expect(regroupe.banques.etablissements.find((e) => e.etablissement === 'Banque Alpha')!.comptes.map((c) => c.compteNum)).toEqual(['512100', '512200']);
   });
 
   it('fournisseur à fort volume et solde nul retenu en F2', () => {

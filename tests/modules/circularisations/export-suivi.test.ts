@@ -44,14 +44,14 @@ describe('tableau de suivi des circularisations (.xlsx)', () => {
     const bq = wb.getWorksheet('Banques')!;
     expect(bq.getCell('A4').value).toBe('Réf.');
     expect(bq.getCell('F4').value).toBe('Solde comptable au 30/06/2026');
-    const etablissements = [5, 6, 7, 8].map((r) => [bq.getCell(`A${r}`).value, bq.getCell(`E${r}`).value]);
+    const etablissements = [5, 6, 7, 8].map((r) => [bq.getCell(`A${r}`).value ?? null, bq.getCell(`E${r}`).value ?? null]);
     expect(etablissements).toEqual([
-      ['BQ-001', 'À préciser (164000)'],
-      ['BQ-002', 'Banque Alpha'],
-      ['BQ-003', 'Banque Bêta'],
-      ['BQ-004', 'Banque Gamma'],
+      ['BQ-001', 'Banque Alpha'],
+      ['BQ-002', 'Banque Bêta'],
+      ['BQ-003', 'Banque Gamma'],
+      [null, null],
     ]);
-    expect(String(bq.getCell('C8').value)).toBe('512300 (soldé)');
+    expect(String(bq.getCell('C7').value)).toBe('512300 (soldé)');
     const fo = wb.getWorksheet('Fournisseurs')!;
     const lignes = fo.getSheetValues().filter((r) => Array.isArray(r) && r[4] === 'F0001') as unknown[][];
     expect(lignes).toHaveLength(1);
@@ -109,7 +109,7 @@ describe('tableau de suivi des circularisations (.xlsx)', () => {
       expect(r('C6')).toBe(1);
       expect(r('F6')).toBeCloseTo(ecart, 2);
       expect(r('H6')).toBe('Inférieur ou égal au SAI');
-      expect(r('B5')).toBe(4);
+      expect(r('B5')).toBe(3);
     } finally {
       rmSync(dossier, { recursive: true, force: true });
     }

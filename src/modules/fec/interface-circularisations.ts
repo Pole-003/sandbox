@@ -90,8 +90,8 @@ export interface EcritureFec {
   lignes: LigneEcritureFec[];
 }
 
-/** Préfixes bancaires par défaut (SPEC 4.2) : banques, intérêts courus, emprunts auprès des établissements de crédit. */
-export const PREFIXES_BANQUES_DEFAUT = ['512', '514', '517', '519', '5186', '164'];
+/** Préfixes bancaires par défaut (SPEC 4.2) : banques et intérêts courus (les emprunts 164 sont exclus). */
+export const PREFIXES_BANQUES_DEFAUT = ['512', '514', '517', '519', '5186'];
 
 export interface DonneesFec {
   readonly version: typeof VERSION_INTERFACE_FEC;

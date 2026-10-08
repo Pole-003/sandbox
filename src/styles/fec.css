@@ -595,3 +595,27 @@ input[type='file']:focus-visible + .zone-depot {
 .detail-indicateur {
   margin-top: 1rem;
 }
+
+/* --- Chiffres clés et SIG --- */
+.valeur-negative {
+  color: var(--c-danger);
+}
+
+.tableau-sig .ligne-solde th,
+.tableau-sig .ligne-solde td {
+  border-top: 1px solid var(--c-bordure);
+  font-weight: 600;
+}
+
+.tableau-sig .ligne-solde th {
+  text-align: left;
+}
+
+.tuiles-montants {
+  grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
+}
+
+.tuiles-montants .tuile-valeur {
+  font-size: 1.125rem;
+  white-space: nowrap;
+}

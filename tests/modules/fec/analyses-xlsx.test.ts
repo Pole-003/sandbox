@@ -2,12 +2,14 @@ import ExcelJS from 'exceljs';
 import { beforeAll, describe, expect, it } from 'vitest';
 import { calculerBalanceAuxiliaire } from '../../../src/modules/fec/analyses/auxiliaire.ts';
 import { calculerBalance, comparerBalances } from '../../../src/modules/fec/analyses/balance.ts';
+import { calculerChiffresCles } from '../../../src/modules/fec/analyses/chiffres-cles.ts';
 import { creerContexte, type ContexteAnalyse } from '../../../src/modules/fec/analyses/contexte.ts';
 import { filtrerGrandLivre } from '../../../src/modules/fec/analyses/grand-livre.ts';
 import { calculerStatistiques } from '../../../src/modules/fec/analyses/statistiques.ts';
 import {
   classeurBalanceGenerale,
   classeurBalancesAuxiliaires,
+  classeurChiffresCles,
   classeurGrandLivre,
   classeurStatistiques,
 } from '../../../src/modules/fec/export/analyses-xlsx.ts';
@@ -37,6 +39,23 @@ beforeAll(async () => {
 });
 
 describe('exports Excel des analyses', () => {
+  it('chiffres clés : SIG en montants numériques, soldes en gras, comparaison N-1, Paramètres', async () => {
+    const c = calculerChiffresCles(calculerBalance(ctx));
+    const wb = await relire(classeurChiffresCles(ExcelJS, c, c, parametres));
+    expect(wb.worksheets.map((w) => w.name)).toEqual(['SIG', 'Chiffres clés', 'Paramètres']);
+    const sig = wb.getWorksheet('SIG')!;
+    expect(sig.getRow(4).values).toEqual([undefined, 'Rubrique', 'Comptes', 'Exercice N', 'Exercice N-1', 'Variation']);
+    const derniere = sig.getRow(4 + c.sig.length);
+    expect(derniere.getCell(1).value).toBe('= Résultat de l’exercice');
+    expect(derniere.getCell(3).value).toBe(c.resultat / 100);
+    expect(derniere.getCell(5).value).toBe(0);
+    expect(derniere.font?.bold).toBe(true);
+    const cles = wb.getWorksheet('Chiffres clés')!;
+    expect(cles.getCell('A5').value).toBe('Chiffre d’affaires (comptes 70)');
+    expect(cles.getCell('B5').value).toBe(c.chiffreAffaires / 100);
+  });
+
+
   it('balance générale : montants numériques, en-tête figé, filtre, total SOUS.TOTAL, onglet Paramètres', async () => {
     const b = calculerBalance(ctx);
     const wb = await relire(classeurBalanceGenerale(ExcelJS, b, comparerBalances(b, b), parametres));

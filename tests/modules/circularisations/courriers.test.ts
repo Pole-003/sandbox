@@ -95,7 +95,7 @@ describe('outils de composition', () => {
 
 describe('lettres par population (FEC fictif propre)', () => {
   it('références identiques au tableau de suivi', () => {
-    expect(liste.banques.map((d) => d.ref)).toEqual(['BQ-001', 'BQ-002', 'BQ-003', 'BQ-004']);
+    expect(liste.banques.map((d) => d.ref)).toEqual(['BQ-001', 'BQ-002', 'BQ-003']);
     expect(liste.clients).toHaveLength(selection.clients.indicateurs.nbSelectionnes);
     expect(liste.fournisseurs.at(-1)!.ref).toBe(`FO-${String(selection.fournisseurs.indicateurs.nbSelectionnes).padStart(3, '0')}`);
   });
@@ -111,7 +111,7 @@ describe('lettres par population (FEC fictif propre)', () => {
     expect(t).toContain('(soldé à la clôture)');
     expect(t).toContain('y compris ceux clôturés au cours de l’exercice');
     expect(t).toContain('Nous vous autorisons expressément à communiquer ces informations à Cabinet Fictif Audit.');
-    expect(t).toContain('Votre réponse est à adresser directement à Cabinet Fictif Audit, 10 rue de l’Exemple, 75000 Paris, ou par courriel à circularisations@exemple.invalid, en rappelant la référence BQ-004, si possible avant le 31/07/2026.');
+    expect(t).toContain('Votre réponse est à adresser directement à Cabinet Fictif Audit, 10 rue de l’Exemple, 75000 Paris, ou par courriel à circularisations@exemple.invalid, en rappelant la référence BQ-003, si possible avant le 31/07/2026.');
     expect(t).not.toMatch(/€/);
     expect(l.corps.filter((b) => b.type === 'puce')).toHaveLength(6);
     expect(l.lieuDate).toBe('Lyon, le 10/07/2026');
