@@ -1,0 +1,340 @@
+JournalCode	JournalLib	EcritureNum	EcritureDate	CompteNum	CompteLib	CompAuxNum	CompAuxLib	PieceRef	PieceDate	EcritureLib	Debit	Credit	EcritureLet	DateLet	ValidDate	Montantdevise	Idevise
+AN	A-nouveaux	1	20250701	411000	Clients	C001	ALPHA CONSEIL SA	AN2025	20250701	Reprise des soldes au 01/07/2025	100800,00	0,00	AA	20250710	20250701		
+AN	A-nouveaux	1	20250701	411000	Clients	C002	BETA HABITAT SARL	AN2025	20250701	Reprise des soldes au 01/07/2025	6600,00	0,00	AB	20250710	20250701		
+AN	A-nouveaux	1	20250701	411000	Clients	C003	GAMMA BERATUNG GMBH	AN2025	20250701	Reprise des soldes au 01/07/2025	12000,00	0,00	AC	20250710	20250701		
+AN	A-nouveaux	1	20250701	416000	Clients douteux ou litigieux	C004	DELTA LITIGES SARL	AN2025	20250701	Reprise des soldes au 01/07/2025	1200,00	0,00	AD	20260331	20250701		
+AN	A-nouveaux	1	20250701	418100	Clients – Factures à établir			AN2025	20250701	Reprise des soldes au 01/07/2025	3600,00	0,00			20250701		
+AN	A-nouveaux	1	20250701	512000	Banque			AN2025	20250701	Reprise des soldes au 01/07/2025	80000,00	0,00			20250701		
+AN	A-nouveaux	1	20250701	445870	TVA sur factures non encaissées			AN2025	20250701	Reprise des soldes au 01/07/2025	0,00	18200,00			20250701		
+AN	A-nouveaux	1	20250701	445510	TVA à décaisser			AN2025	20250701	Reprise des soldes au 01/07/2025	0,00	13000,00			20250701		
+AN	A-nouveaux	1	20250701	401000	Fournisseurs			AN2025	20250701	Reprise des soldes au 01/07/2025	0,00	9000,00			20250701		
+AN	A-nouveaux	1	20250701	101300	Capital souscrit appelé versé			AN2025	20250701	Reprise des soldes au 01/07/2025	0,00	10000,00			20250701		
+AN	A-nouveaux	1	20250701	110000	Report à nouveau (solde créditeur)			AN2025	20250701	Reprise des soldes au 01/07/2025	0,00	154000,00			20250701		
+OD	Opérations diverses	2	20250701	706100	Prestations de services 20 %			EXT-FAE	20250701	Extourne factures à établir au 30/06/2025	3000,00	0,00			20250701		
+OD	Opérations diverses	2	20250701	445870	TVA sur factures non encaissées			EXT-FAE	20250701	Extourne factures à établir au 30/06/2025	600,00	0,00			20250701		
+OD	Opérations diverses	2	20250701	418100	Clients – Factures à établir			EXT-FAE	20250701	Extourne factures à établir au 30/06/2025	0,00	3600,00			20250701		
+AC	Journal des achats	3	20250705	604000	Achats d’études et prestations de services			A202507	20250705	Achats d’études et prestations	15500,00	0,00			20250705		
+AC	Journal des achats	3	20250705	445660	TVA déductible sur autres biens et services			A202507	20250705	Achats d’études et prestations	3100,00	0,00			20250705		
+AC	Journal des achats	3	20250705	401000	Fournisseurs			A202507	20250705	Achats d’études et prestations	0,00	18600,00			20250705		
+BQ	Banque	4	20250710	512000	Banque			ENC202507ca20	20250710	Encaissement ALPHA CONSEIL SA	100800,00	0,00			20250710		
+BQ	Banque	4	20250710	411000	Clients	C001	ALPHA CONSEIL SA	ENC202507ca20	20250710	Encaissement ALPHA CONSEIL SA	0,00	100800,00	AA	20250710	20250710		
+OD	Opérations diverses	5	20250710	445870	TVA sur factures non encaissées			TVAENC202507ca20	20250710	TVA exigible sur encaissements	16800,00	0,00			20250710		
+OD	Opérations diverses	5	20250710	445710	TVA collectée 20 %			TVAENC202507ca20	20250710	TVA exigible sur encaissements	0,00	16800,00			20250710		
+BQ	Banque	6	20250710	512000	Banque			ENC202507ca10	20250710	Encaissement BETA HABITAT SARL	6600,00	0,00			20250710		
+BQ	Banque	6	20250710	411000	Clients	C002	BETA HABITAT SARL	ENC202507ca10	20250710	Encaissement BETA HABITAT SARL	0,00	6600,00	AB	20250710	20250710		
+OD	Opérations diverses	7	20250710	445870	TVA sur factures non encaissées			TVAENC202507ca10	20250710	TVA exigible sur encaissements	600,00	0,00			20250710		
+OD	Opérations diverses	7	20250710	445712	TVA collectée 10 %			TVAENC202507ca10	20250710	TVA exigible sur encaissements	0,00	600,00			20250710		
+BQ	Banque	8	20250710	512000	Banque			ENC202507caUe	20250710	Encaissement GAMMA BERATUNG GMBH	12000,00	0,00			20250710		
+BQ	Banque	8	20250710	411000	Clients	C003	GAMMA BERATUNG GMBH	ENC202507caUe	20250710	Encaissement GAMMA BERATUNG GMBH	0,00	12000,00	AC	20250710	20250710		
+BQ	Banque	9	20250715	445510	TVA à décaisser			TVA2506	20250715	Paiement TVA juin 2025	13000,00	0,00			20250715		
+BQ	Banque	9	20250715	512000	Banque			TVA2506	20250715	Paiement TVA juin 2025	0,00	13000,00			20250715		
+BQ	Banque	10	20250720	401000	Fournisseurs			FRN2506	20250720	Règlement fournisseurs juin 2025	9000,00	0,00			20250720		
+BQ	Banque	10	20250720	512000	Banque			FRN2506	20250720	Règlement fournisseurs juin 2025	0,00	9000,00			20250720		
+VT	Journal des ventes	11	20250725	411000	Clients	C001	ALPHA CONSEIL SA	F202507ca20	20250725	Prestations de conseil ALPHA CONSEIL SA	109800,00	0,00	AE	20250810	20250725		
+VT	Journal des ventes	11	20250725	706100	Prestations de services 20 %			F202507ca20	20250725	Prestations de conseil ALPHA CONSEIL SA	0,00	91500,00			20250725		
+VT	Journal des ventes	11	20250725	445870	TVA sur factures non encaissées			F202507ca20	20250725	Prestations de conseil ALPHA CONSEIL SA	0,00	18300,00			20250725		
+BQ	Banque	12	20250728	401000	Fournisseurs			REG202507	20250728	Règlement fournisseurs	18600,00	0,00			20250728		
+BQ	Banque	12	20250728	512000	Banque			REG202507	20250728	Règlement fournisseurs	0,00	18600,00			20250728		
+OD	Opérations diverses	13	20250731	445710	TVA collectée 20 %			CA3202507	20250731	Liquidation TVA 07/2025	16800,00	0,00			20250731		
+OD	Opérations diverses	13	20250731	445712	TVA collectée 10 %			CA3202507	20250731	Liquidation TVA 07/2025	600,00	0,00			20250731		
+OD	Opérations diverses	13	20250731	445660	TVA déductible sur autres biens et services			CA3202507	20250731	Liquidation TVA 07/2025	0,00	3100,00			20250731		
+OD	Opérations diverses	13	20250731	445510	TVA à décaisser			CA3202507	20250731	Liquidation TVA 07/2025	0,00	14300,00			20250731		
+AC	Journal des achats	14	20250805	604000	Achats d’études et prestations de services			A202508	20250805	Achats d’études et prestations	14250,00	0,00			20250805		
+AC	Journal des achats	14	20250805	445660	TVA déductible sur autres biens et services			A202508	20250805	Achats d’études et prestations	2850,00	0,00			20250805		
+AC	Journal des achats	14	20250805	401000	Fournisseurs			A202508	20250805	Achats d’études et prestations	0,00	17100,00			20250805		
+BQ	Banque	15	20250810	512000	Banque			ENC202508ca20	20250810	Encaissement ALPHA CONSEIL SA	109800,00	0,00			20250810		
+BQ	Banque	15	20250810	411000	Clients	C001	ALPHA CONSEIL SA	ENC202508ca20	20250810	Encaissement ALPHA CONSEIL SA	0,00	109800,00	AE	20250810	20250810		
+OD	Opérations diverses	16	20250810	445870	TVA sur factures non encaissées			TVAENC202508ca20	20250810	TVA exigible sur encaissements	18300,00	0,00			20250810		
+OD	Opérations diverses	16	20250810	445710	TVA collectée 20 %			TVAENC202508ca20	20250810	TVA exigible sur encaissements	0,00	18300,00			20250810		
+BQ	Banque	17	20250815	445510	TVA à décaisser			PTVA202508	20250815	Paiement TVA	14300,00	0,00			20250815		
+BQ	Banque	17	20250815	512000	Banque			PTVA202508	20250815	Paiement TVA	0,00	14300,00			20250815		
+VT	Journal des ventes	18	20250825	411000	Clients	C001	ALPHA CONSEIL SA	F202508ca20	20250825	Prestations de conseil ALPHA CONSEIL SA	91200,00	0,00	AF	20250910	20250825		
+VT	Journal des ventes	18	20250825	706100	Prestations de services 20 %			F202508ca20	20250825	Prestations de conseil ALPHA CONSEIL SA	0,00	76000,00			20250825		
+VT	Journal des ventes	18	20250825	445870	TVA sur factures non encaissées			F202508ca20	20250825	Prestations de conseil ALPHA CONSEIL SA	0,00	15200,00			20250825		
+VT	Journal des ventes	19	20250825	411000	Clients	C002	BETA HABITAT SARL	F202508ca10	20250825	Travaux de rénovation BETA HABITAT SARL	4950,00	0,00	AG	20250910	20250825		
+VT	Journal des ventes	19	20250825	706200	Travaux de rénovation 10 %			F202508ca10	20250825	Travaux de rénovation BETA HABITAT SARL	0,00	4500,00			20250825		
+VT	Journal des ventes	19	20250825	445870	TVA sur factures non encaissées			F202508ca10	20250825	Travaux de rénovation BETA HABITAT SARL	0,00	450,00			20250825		
+VT	Journal des ventes	20	20250825	411000	Clients	C003	GAMMA BERATUNG GMBH	F202508caUe	20250825	Prestations intracommunautaires – autoliquidation GAMMA BERATUNG GMBH	9500,00	0,00	AH	20250910	20250825		
+VT	Journal des ventes	20	20250825	706300	Prestations UE AUTO LIQ			F202508caUe	20250825	Prestations intracommunautaires – autoliquidation GAMMA BERATUNG GMBH	0,00	9500,00			20250825		
+BQ	Banque	21	20250828	401000	Fournisseurs			REG202508	20250828	Règlement fournisseurs	17100,00	0,00			20250828		
+BQ	Banque	21	20250828	512000	Banque			REG202508	20250828	Règlement fournisseurs	0,00	17100,00			20250828		
+OD	Opérations diverses	22	20250831	445710	TVA collectée 20 %			CA3202508	20250831	Liquidation TVA 08/2025	18300,00	0,00			20250831		
+OD	Opérations diverses	22	20250831	445660	TVA déductible sur autres biens et services			CA3202508	20250831	Liquidation TVA 08/2025	0,00	2850,00			20250831		
+OD	Opérations diverses	22	20250831	445510	TVA à décaisser			CA3202508	20250831	Liquidation TVA 08/2025	0,00	15450,00			20250831		
+AC	Journal des achats	23	20250905	604000	Achats d’études et prestations de services			A202509	20250905	Achats d’études et prestations	15100,00	0,00			20250905		
+AC	Journal des achats	23	20250905	445660	TVA déductible sur autres biens et services			A202509	20250905	Achats d’études et prestations	3020,00	0,00			20250905		
+AC	Journal des achats	23	20250905	401000	Fournisseurs			A202509	20250905	Achats d’études et prestations	0,00	18120,00			20250905		
+AC	Journal des achats	24	20250908	218300	Matériel de bureau et informatique			IMM202509	20250908	Acquisition matériel informatique	150000,00	0,00			20250908		
+AC	Journal des achats	24	20250908	445620	TVA sur immobilisations			IMM202509	20250908	Acquisition matériel informatique	30000,00	0,00			20250908		
+AC	Journal des achats	24	20250908	404000	Fournisseurs d’immobilisations			IMM202509	20250908	Acquisition matériel informatique	0,00	180000,00			20250908		
+BQ	Banque	25	20250910	512000	Banque			ENC202509ca20	20250910	Encaissement ALPHA CONSEIL SA	91200,00	0,00			20250910		
+BQ	Banque	25	20250910	411000	Clients	C001	ALPHA CONSEIL SA	ENC202509ca20	20250910	Encaissement ALPHA CONSEIL SA	0,00	91200,00	AF	20250910	20250910		
+OD	Opérations diverses	26	20250910	445870	TVA sur factures non encaissées			TVAENC202509ca20	20250910	TVA exigible sur encaissements	15200,00	0,00			20250910		
+OD	Opérations diverses	26	20250910	445710	TVA collectée 20 %			TVAENC202509ca20	20250910	TVA exigible sur encaissements	0,00	15200,00			20250910		
+BQ	Banque	27	20250910	512000	Banque			ENC202509ca10	20250910	Encaissement BETA HABITAT SARL	4950,00	0,00			20250910		
+BQ	Banque	27	20250910	411000	Clients	C002	BETA HABITAT SARL	ENC202509ca10	20250910	Encaissement BETA HABITAT SARL	0,00	4950,00	AG	20250910	20250910		
+OD	Opérations diverses	28	20250910	445870	TVA sur factures non encaissées			TVAENC202509ca10	20250910	TVA exigible sur encaissements	450,00	0,00			20250910		
+OD	Opérations diverses	28	20250910	445712	TVA collectée 10 %			TVAENC202509ca10	20250910	TVA exigible sur encaissements	0,00	450,00			20250910		
+BQ	Banque	29	20250910	512000	Banque			ENC202509caUe	20250910	Encaissement GAMMA BERATUNG GMBH	9500,00	0,00			20250910		
+BQ	Banque	29	20250910	411000	Clients	C003	GAMMA BERATUNG GMBH	ENC202509caUe	20250910	Encaissement GAMMA BERATUNG GMBH	0,00	9500,00	AH	20250910	20250910		
+BQ	Banque	30	20250915	445510	TVA à décaisser			PTVA202509	20250915	Paiement TVA	15450,00	0,00			20250915		
+BQ	Banque	30	20250915	512000	Banque			PTVA202509	20250915	Paiement TVA	0,00	15450,00			20250915		
+VT	Journal des ventes	31	20250925	411000	Clients	C001	ALPHA CONSEIL SA	F202509ca20	20250925	Prestations de conseil ALPHA CONSEIL SA	122760,00	0,00	AI	20251010	20250925		
+VT	Journal des ventes	31	20250925	706100	Prestations de services 20 %			F202509ca20	20250925	Prestations de conseil ALPHA CONSEIL SA	0,00	102300,00			20250925		
+VT	Journal des ventes	31	20250925	445870	TVA sur factures non encaissées			F202509ca20	20250925	Prestations de conseil ALPHA CONSEIL SA	0,00	20460,00			20250925		
+BQ	Banque	32	20250928	401000	Fournisseurs			REG202509	20250928	Règlement fournisseurs	18120,00	0,00			20250928		
+BQ	Banque	32	20250928	512000	Banque			REG202509	20250928	Règlement fournisseurs	0,00	18120,00			20250928		
+OD	Opérations diverses	33	20250930	445710	TVA collectée 20 %			CA3202509	20250930	Liquidation TVA 09/2025	15200,00	0,00			20250930		
+OD	Opérations diverses	33	20250930	445712	TVA collectée 10 %			CA3202509	20250930	Liquidation TVA 09/2025	450,00	0,00			20250930		
+OD	Opérations diverses	33	20250930	445660	TVA déductible sur autres biens et services			CA3202509	20250930	Liquidation TVA 09/2025	0,00	3020,00			20250930		
+OD	Opérations diverses	33	20250930	445620	TVA sur immobilisations			CA3202509	20250930	Liquidation TVA 09/2025	0,00	30000,00			20250930		
+OD	Opérations diverses	33	20250930	445670	Crédit de TVA à reporter			CA3202509	20250930	Liquidation TVA 09/2025	17370,00	0,00			20250930		
+BQ	Banque	34	20251005	404000	Fournisseurs d’immobilisations			REGIMM202509	20251005	Règlement fournisseur d’immobilisation	180000,00	0,00			20251005		
+BQ	Banque	34	20251005	512000	Banque			REGIMM202509	20251005	Règlement fournisseur d’immobilisation	0,00	180000,00			20251005		
+AC	Journal des achats	35	20251005	604000	Achats d’études et prestations de services			A202510	20251005	Achats d’études et prestations	17000,00	0,00			20251005		
+AC	Journal des achats	35	20251005	445660	TVA déductible sur autres biens et services			A202510	20251005	Achats d’études et prestations	3400,00	0,00			20251005		
+AC	Journal des achats	35	20251005	401000	Fournisseurs			A202510	20251005	Achats d’études et prestations	0,00	20400,00			20251005		
+BQ	Banque	36	20251010	512000	Banque			ENC202510ca20	20251010	Encaissement ALPHA CONSEIL SA	122760,00	0,00			20251010		
+BQ	Banque	36	20251010	411000	Clients	C001	ALPHA CONSEIL SA	ENC202510ca20	20251010	Encaissement ALPHA CONSEIL SA	0,00	122760,00	AI	20251010	20251010		
+OD	Opérations diverses	37	20251010	445870	TVA sur factures non encaissées			TVAENC202510ca20	20251010	TVA exigible sur encaissements	20460,00	0,00			20251010		
+OD	Opérations diverses	37	20251010	445710	TVA collectée 20 %			TVAENC202510ca20	20251010	TVA exigible sur encaissements	0,00	20460,00			20251010		
+AC	Journal des achats	38	20251012	622600	Honoraires prestataire non établi (autoliquidation)			A3202510	20251012	Honoraires prestataire non établi – autoliquidation	2500,00	0,00			20251012		
+AC	Journal des achats	38	20251012	445660	TVA déductible sur autres biens et services			A3202510	20251012	Honoraires prestataire non établi – autoliquidation	500,00	0,00			20251012		
+AC	Journal des achats	38	20251012	445200	TVA due intracommunautaire			A3202510	20251012	Honoraires prestataire non établi – autoliquidation	0,00	500,00			20251012		
+AC	Journal des achats	38	20251012	401000	Fournisseurs			A3202510	20251012	Honoraires prestataire non établi – autoliquidation	0,00	2500,00			20251012		
+VT	Journal des ventes	39	20251025	411000	Clients	C001	ALPHA CONSEIL SA	F202510ca20	20251025	Prestations de conseil ALPHA CONSEIL SA	106560,00	0,00	AJ	20251110	20251025		
+VT	Journal des ventes	39	20251025	706100	Prestations de services 20 %			F202510ca20	20251025	Prestations de conseil ALPHA CONSEIL SA	0,00	88800,00			20251025		
+VT	Journal des ventes	39	20251025	445870	TVA sur factures non encaissées			F202510ca20	20251025	Prestations de conseil ALPHA CONSEIL SA	0,00	17760,00			20251025		
+VT	Journal des ventes	40	20251025	411000	Clients	C002	BETA HABITAT SARL	F202510ca10	20251025	Travaux de rénovation BETA HABITAT SARL	8800,00	0,00	AK	20251110	20251025		
+VT	Journal des ventes	40	20251025	706200	Travaux de rénovation 10 %			F202510ca10	20251025	Travaux de rénovation BETA HABITAT SARL	0,00	8000,00			20251025		
+VT	Journal des ventes	40	20251025	445870	TVA sur factures non encaissées			F202510ca10	20251025	Travaux de rénovation BETA HABITAT SARL	0,00	800,00			20251025		
+BQ	Banque	41	20251028	401000	Fournisseurs			REG202510	20251028	Règlement fournisseurs	20400,00	0,00			20251028		
+BQ	Banque	41	20251028	512000	Banque			REG202510	20251028	Règlement fournisseurs	0,00	20400,00			20251028		
+BQ	Banque	42	20251028	401000	Fournisseurs			REGA3202510	20251028	Règlement prestataire non établi	2500,00	0,00			20251028		
+BQ	Banque	42	20251028	512000	Banque			REGA3202510	20251028	Règlement prestataire non établi	0,00	2500,00			20251028		
+OD	Opérations diverses	43	20251031	445710	TVA collectée 20 %			CA3202510	20251031	Liquidation TVA 10/2025	20460,00	0,00			20251031		
+OD	Opérations diverses	43	20251031	445200	TVA due intracommunautaire			CA3202510	20251031	Liquidation TVA 10/2025	500,00	0,00			20251031		
+OD	Opérations diverses	43	20251031	445660	TVA déductible sur autres biens et services			CA3202510	20251031	Liquidation TVA 10/2025	0,00	3900,00			20251031		
+OD	Opérations diverses	43	20251031	445670	Crédit de TVA à reporter			CA3202510	20251031	Liquidation TVA 10/2025	0,00	17370,00			20251031		
+OD	Opérations diverses	43	20251031	445670	Crédit de TVA à reporter			CA3202510	20251031	Liquidation TVA 10/2025	310,00	0,00			20251031		
+AC	Journal des achats	44	20251105	604000	Achats d’études et prestations de services			A202511	20251105	Achats d’études et prestations	16050,00	0,00			20251105		
+AC	Journal des achats	44	20251105	445660	TVA déductible sur autres biens et services			A202511	20251105	Achats d’études et prestations	3210,00	0,00			20251105		
+AC	Journal des achats	44	20251105	401000	Fournisseurs			A202511	20251105	Achats d’études et prestations	0,00	19260,00			20251105		
+BQ	Banque	45	20251110	512000	Banque			ENC202511ca20	20251110	Encaissement ALPHA CONSEIL SA	106560,00	0,00			20251110		
+BQ	Banque	45	20251110	411000	Clients	C001	ALPHA CONSEIL SA	ENC202511ca20	20251110	Encaissement ALPHA CONSEIL SA	0,00	106560,00	AJ	20251110	20251110		
+OD	Opérations diverses	46	20251110	445870	TVA sur factures non encaissées			TVAENC202511ca20	20251110	TVA exigible sur encaissements	17760,00	0,00			20251110		
+OD	Opérations diverses	46	20251110	445710	TVA collectée 20 %			TVAENC202511ca20	20251110	TVA exigible sur encaissements	0,00	17760,00			20251110		
+BQ	Banque	47	20251110	512000	Banque			ENC202511ca10	20251110	Encaissement BETA HABITAT SARL	8800,00	0,00			20251110		
+BQ	Banque	47	20251110	411000	Clients	C002	BETA HABITAT SARL	ENC202511ca10	20251110	Encaissement BETA HABITAT SARL	0,00	8800,00	AK	20251110	20251110		
+OD	Opérations diverses	48	20251110	445870	TVA sur factures non encaissées			TVAENC202511ca10	20251110	TVA exigible sur encaissements	800,00	0,00			20251110		
+OD	Opérations diverses	48	20251110	445712	TVA collectée 10 %			TVAENC202511ca10	20251110	TVA exigible sur encaissements	0,00	800,00			20251110		
+AC	Journal des achats	49	20251118	445660	TVA déductible sur autres biens et services			R21202511	20251118	TVA sur facture fournisseur omise	300,00	0,00			20251118		
+AC	Journal des achats	49	20251118	401000	Fournisseurs			R21202511	20251118	TVA sur facture fournisseur omise	0,00	300,00			20251118		
+VT	Journal des ventes	50	20251125	411000	Clients	C001	ALPHA CONSEIL SA	F202511ca20	20251125	Prestations de conseil ALPHA CONSEIL SA	114000,00	0,00	AL	20251210	20251125		
+VT	Journal des ventes	50	20251125	706100	Prestations de services 20 %			F202511ca20	20251125	Prestations de conseil ALPHA CONSEIL SA	0,00	95000,00			20251125		
+VT	Journal des ventes	50	20251125	445870	TVA sur factures non encaissées			F202511ca20	20251125	Prestations de conseil ALPHA CONSEIL SA	0,00	19000,00			20251125		
+VT	Journal des ventes	51	20251125	411000	Clients	C002	BETA HABITAT SARL	F202511ca10	20251125	Travaux de rénovation BETA HABITAT SARL	3300,00	0,00	AM	20251210	20251125		
+VT	Journal des ventes	51	20251125	706200	Travaux de rénovation 10 %			F202511ca10	20251125	Travaux de rénovation BETA HABITAT SARL	0,00	3000,00			20251125		
+VT	Journal des ventes	51	20251125	445870	TVA sur factures non encaissées			F202511ca10	20251125	Travaux de rénovation BETA HABITAT SARL	0,00	300,00			20251125		
+VT	Journal des ventes	52	20251125	411000	Clients	C003	GAMMA BERATUNG GMBH	F202511caUe	20251125	Prestations intracommunautaires – autoliquidation GAMMA BERATUNG GMBH	15000,00	0,00	AN	20251210	20251125		
+VT	Journal des ventes	52	20251125	706300	Prestations UE AUTO LIQ			F202511caUe	20251125	Prestations intracommunautaires – autoliquidation GAMMA BERATUNG GMBH	0,00	15000,00			20251125		
+BQ	Banque	53	20251128	401000	Fournisseurs			REG202511	20251128	Règlement fournisseurs	19260,00	0,00			20251128		
+BQ	Banque	53	20251128	512000	Banque			REG202511	20251128	Règlement fournisseurs	0,00	19260,00			20251128		
+BQ	Banque	54	20251128	401000	Fournisseurs			REGR21202511	20251128	Règlement complément de TVA	300,00	0,00			20251128		
+BQ	Banque	54	20251128	512000	Banque			REGR21202511	20251128	Règlement complément de TVA	0,00	300,00			20251128		
+OD	Opérations diverses	55	20251130	445710	TVA collectée 20 %			CA3202511	20251130	Liquidation TVA 11/2025	17760,00	0,00			20251130		
+OD	Opérations diverses	55	20251130	445712	TVA collectée 10 %			CA3202511	20251130	Liquidation TVA 11/2025	800,00	0,00			20251130		
+OD	Opérations diverses	55	20251130	445660	TVA déductible sur autres biens et services			CA3202511	20251130	Liquidation TVA 11/2025	0,00	3510,00			20251130		
+OD	Opérations diverses	55	20251130	445670	Crédit de TVA à reporter			CA3202511	20251130	Liquidation TVA 11/2025	0,00	310,00			20251130		
+OD	Opérations diverses	55	20251130	445510	TVA à décaisser			CA3202511	20251130	Liquidation TVA 11/2025	0,00	14740,00			20251130		
+AC	Journal des achats	56	20251205	604000	Achats d’études et prestations de services			A202512	20251205	Achats d’études et prestations	18250,00	0,00			20251205		
+AC	Journal des achats	56	20251205	445660	TVA déductible sur autres biens et services			A202512	20251205	Achats d’études et prestations	3650,00	0,00			20251205		
+AC	Journal des achats	56	20251205	401000	Fournisseurs			A202512	20251205	Achats d’études et prestations	0,00	21900,00			20251205		
+BQ	Banque	57	20251210	512000	Banque			ENC202512ca20	20251210	Encaissement ALPHA CONSEIL SA	114000,00	0,00			20251210		
+BQ	Banque	57	20251210	411000	Clients	C001	ALPHA CONSEIL SA	ENC202512ca20	20251210	Encaissement ALPHA CONSEIL SA	0,00	114000,00	AL	20251210	20251210		
+OD	Opérations diverses	58	20251210	445870	TVA sur factures non encaissées			TVAENC202512ca20	20251210	TVA exigible sur encaissements	19000,00	0,00			20251210		
+OD	Opérations diverses	58	20251210	445710	TVA collectée 20 %			TVAENC202512ca20	20251210	TVA exigible sur encaissements	0,00	19000,00			20251210		
+BQ	Banque	59	20251210	512000	Banque			ENC202512ca10	20251210	Encaissement BETA HABITAT SARL	3300,00	0,00			20251210		
+BQ	Banque	59	20251210	411000	Clients	C002	BETA HABITAT SARL	ENC202512ca10	20251210	Encaissement BETA HABITAT SARL	0,00	3300,00	AM	20251210	20251210		
+OD	Opérations diverses	60	20251210	445870	TVA sur factures non encaissées			TVAENC202512ca10	20251210	TVA exigible sur encaissements	300,00	0,00			20251210		
+OD	Opérations diverses	60	20251210	445712	TVA collectée 10 %			TVAENC202512ca10	20251210	TVA exigible sur encaissements	0,00	300,00			20251210		
+BQ	Banque	61	20251210	512000	Banque			ENC202512caUe	20251210	Encaissement GAMMA BERATUNG GMBH	15000,00	0,00			20251210		
+BQ	Banque	61	20251210	411000	Clients	C003	GAMMA BERATUNG GMBH	ENC202512caUe	20251210	Encaissement GAMMA BERATUNG GMBH	0,00	15000,00	AN	20251210	20251210		
+BQ	Banque	62	20251215	445510	TVA à décaisser			PTVA202512	20251215	Paiement TVA	14740,00	0,00			20251215		
+BQ	Banque	62	20251215	512000	Banque			PTVA202512	20251215	Paiement TVA	0,00	14740,00			20251215		
+VT	Journal des ventes	63	20251225	411000	Clients	C001	ALPHA CONSEIL SA	F202512ca20	20251225	Prestations de conseil ALPHA CONSEIL SA	95400,00	0,00	AO	20260110	20251225		
+VT	Journal des ventes	63	20251225	706100	Prestations de services 20 %			F202512ca20	20251225	Prestations de conseil ALPHA CONSEIL SA	0,00	79500,00			20251225		
+VT	Journal des ventes	63	20251225	445870	TVA sur factures non encaissées			F202512ca20	20251225	Prestations de conseil ALPHA CONSEIL SA	0,00	15900,00			20251225		
+BQ	Banque	64	20251228	401000	Fournisseurs			REG202512	20251228	Règlement fournisseurs	21900,00	0,00			20251228		
+BQ	Banque	64	20251228	512000	Banque			REG202512	20251228	Règlement fournisseurs	0,00	21900,00			20251228		
+OD	Opérations diverses	65	20251231	445710	TVA collectée 20 %			CA3202512	20251231	Liquidation TVA 12/2025	19000,00	0,00			20251231		
+OD	Opérations diverses	65	20251231	445712	TVA collectée 10 %			CA3202512	20251231	Liquidation TVA 12/2025	300,00	0,00			20251231		
+OD	Opérations diverses	65	20251231	445660	TVA déductible sur autres biens et services			CA3202512	20251231	Liquidation TVA 12/2025	0,00	3650,00			20251231		
+OD	Opérations diverses	65	20251231	445510	TVA à décaisser			CA3202512	20251231	Liquidation TVA 12/2025	0,00	15650,00			20251231		
+AC	Journal des achats	66	20260105	604000	Achats d’études et prestations de services			A202601	20260105	Achats d’études et prestations	14900,00	0,00			20260105		
+AC	Journal des achats	66	20260105	445660	TVA déductible sur autres biens et services			A202601	20260105	Achats d’études et prestations	2980,00	0,00			20260105		
+AC	Journal des achats	66	20260105	401000	Fournisseurs			A202601	20260105	Achats d’études et prestations	0,00	17880,00			20260105		
+BQ	Banque	67	20260110	512000	Banque			ENC202601ca20	20260110	Encaissement ALPHA CONSEIL SA	95400,00	0,00			20260110		
+BQ	Banque	67	20260110	411000	Clients	C001	ALPHA CONSEIL SA	ENC202601ca20	20260110	Encaissement ALPHA CONSEIL SA	0,00	95400,00	AO	20260110	20260110		
+OD	Opérations diverses	68	20260110	445870	TVA sur factures non encaissées			TVAENC202601ca20	20260110	TVA exigible sur encaissements	15900,00	0,00			20260110		
+OD	Opérations diverses	68	20260110	445710	TVA collectée 20 %			TVAENC202601ca20	20260110	TVA exigible sur encaissements	0,00	15900,00			20260110		
+BQ	Banque	69	20260115	445510	TVA à décaisser			PTVA202601	20260115	Paiement TVA	15650,00	0,00			20260115		
+BQ	Banque	69	20260115	512000	Banque			PTVA202601	20260115	Paiement TVA	0,00	15650,00			20260115		
+VT	Journal des ventes	70	20260125	411000	Clients	C001	ALPHA CONSEIL SA	F202601ca20	20260125	Prestations de conseil ALPHA CONSEIL SA	99900,00	0,00	AP	20260210	20260125		
+VT	Journal des ventes	70	20260125	706100	Prestations de services 20 %			F202601ca20	20260125	Prestations de conseil ALPHA CONSEIL SA	0,00	83250,00			20260125		
+VT	Journal des ventes	70	20260125	445870	TVA sur factures non encaissées			F202601ca20	20260125	Prestations de conseil ALPHA CONSEIL SA	0,00	16650,00			20260125		
+VT	Journal des ventes	71	20260125	411000	Clients	C002	BETA HABITAT SARL	F202601ca10	20260125	Travaux de rénovation BETA HABITAT SARL	6050,00	0,00	AQ	20260210	20260125		
+VT	Journal des ventes	71	20260125	706200	Travaux de rénovation 10 %			F202601ca10	20260125	Travaux de rénovation BETA HABITAT SARL	0,00	5500,00			20260125		
+VT	Journal des ventes	71	20260125	445870	TVA sur factures non encaissées			F202601ca10	20260125	Travaux de rénovation BETA HABITAT SARL	0,00	550,00			20260125		
+VT	Journal des ventes	72	20260125	411000	Clients	C003	GAMMA BERATUNG GMBH	F202601caUe	20260125	Prestations intracommunautaires – autoliquidation GAMMA BERATUNG GMBH	8000,00	0,00	AR	20260210	20260125		
+VT	Journal des ventes	72	20260125	706300	Prestations UE AUTO LIQ			F202601caUe	20260125	Prestations intracommunautaires – autoliquidation GAMMA BERATUNG GMBH	0,00	8000,00			20260125		
+BQ	Banque	73	20260128	401000	Fournisseurs			REG202601	20260128	Règlement fournisseurs	17880,00	0,00			20260128		
+BQ	Banque	73	20260128	512000	Banque			REG202601	20260128	Règlement fournisseurs	0,00	17880,00			20260128		
+OD	Opérations diverses	74	20260131	445710	TVA collectée 20 %			CA3202601	20260131	Liquidation TVA 01/2026	15900,00	0,00			20260131		
+OD	Opérations diverses	74	20260131	445660	TVA déductible sur autres biens et services			CA3202601	20260131	Liquidation TVA 01/2026	0,00	2980,00			20260131		
+OD	Opérations diverses	74	20260131	445510	TVA à décaisser			CA3202601	20260131	Liquidation TVA 01/2026	0,00	12920,00			20260131		
+AC	Journal des achats	75	20260205	604000	Achats d’études et prestations de services			A202602	20260205	Achats d’études et prestations	15600,00	0,00			20260205		
+AC	Journal des achats	75	20260205	445660	TVA déductible sur autres biens et services			A202602	20260205	Achats d’études et prestations	3120,00	0,00			20260205		
+AC	Journal des achats	75	20260205	401000	Fournisseurs			A202602	20260205	Achats d’études et prestations	0,00	18720,00			20260205		
+BQ	Banque	76	20260210	512000	Banque			ENC202602ca20	20260210	Encaissement ALPHA CONSEIL SA	99900,00	0,00			20260210		
+BQ	Banque	76	20260210	411000	Clients	C001	ALPHA CONSEIL SA	ENC202602ca20	20260210	Encaissement ALPHA CONSEIL SA	0,00	99900,00	AP	20260210	20260210		
+OD	Opérations diverses	77	20260210	445870	TVA sur factures non encaissées			TVAENC202602ca20	20260210	TVA exigible sur encaissements	16650,00	0,00			20260210		
+OD	Opérations diverses	77	20260210	445710	TVA collectée 20 %			TVAENC202602ca20	20260210	TVA exigible sur encaissements	0,00	16650,00			20260210		
+BQ	Banque	78	20260210	512000	Banque			ENC202602ca10	20260210	Encaissement BETA HABITAT SARL	6050,00	0,00			20260210		
+BQ	Banque	78	20260210	411000	Clients	C002	BETA HABITAT SARL	ENC202602ca10	20260210	Encaissement BETA HABITAT SARL	0,00	6050,00	AQ	20260210	20260210		
+OD	Opérations diverses	79	20260210	445870	TVA sur factures non encaissées			TVAENC202602ca10	20260210	TVA exigible sur encaissements	550,00	0,00			20260210		
+OD	Opérations diverses	79	20260210	445712	TVA collectée 10 %			TVAENC202602ca10	20260210	TVA exigible sur encaissements	0,00	550,00			20260210		
+BQ	Banque	80	20260210	512000	Banque			ENC202602caUe	20260210	Encaissement GAMMA BERATUNG GMBH	8000,00	0,00			20260210		
+BQ	Banque	80	20260210	411000	Clients	C003	GAMMA BERATUNG GMBH	ENC202602caUe	20260210	Encaissement GAMMA BERATUNG GMBH	0,00	8000,00	AR	20260210	20260210		
+BQ	Banque	81	20260215	445510	TVA à décaisser			PTVA202602	20260215	Paiement TVA	12920,00	0,00			20260215		
+BQ	Banque	81	20260215	512000	Banque			PTVA202602	20260215	Paiement TVA	0,00	12920,00			20260215		
+VT	Journal des ventes	82	20260225	411000	Clients	C001	ALPHA CONSEIL SA	F202602ca20	20260225	Prestations de conseil ALPHA CONSEIL SA	116400,00	0,00	AS	20260310	20260225		
+VT	Journal des ventes	82	20260225	706100	Prestations de services 20 %			F202602ca20	20260225	Prestations de conseil ALPHA CONSEIL SA	0,00	97000,00			20260225		
+VT	Journal des ventes	82	20260225	445870	TVA sur factures non encaissées			F202602ca20	20260225	Prestations de conseil ALPHA CONSEIL SA	0,00	19400,00			20260225		
+VT	Journal des ventes	83	20260225	411000	Clients	C002	BETA HABITAT SARL	F202602ca10	20260225	Travaux de rénovation BETA HABITAT SARL	2750,00	0,00	AT	20260310	20260225		
+VT	Journal des ventes	83	20260225	706200	Travaux de rénovation 10 %			F202602ca10	20260225	Travaux de rénovation BETA HABITAT SARL	0,00	2500,00			20260225		
+VT	Journal des ventes	83	20260225	445870	TVA sur factures non encaissées			F202602ca10	20260225	Travaux de rénovation BETA HABITAT SARL	0,00	250,00			20260225		
+BQ	Banque	84	20260228	401000	Fournisseurs			REG202602	20260228	Règlement fournisseurs	18720,00	0,00			20260228		
+BQ	Banque	84	20260228	512000	Banque			REG202602	20260228	Règlement fournisseurs	0,00	18720,00			20260228		
+OD	Opérations diverses	85	20260228	445710	TVA collectée 20 %			CA3202602	20260228	Liquidation TVA 02/2026	16650,00	0,00			20260228		
+OD	Opérations diverses	85	20260228	445712	TVA collectée 10 %			CA3202602	20260228	Liquidation TVA 02/2026	500,00	0,00			20260228		
+OD	Opérations diverses	85	20260228	658000	Charges diverses de gestion courante			CA3202602	20260228	Liquidation TVA 02/2026	1000,00	0,00			20260228		
+OD	Opérations diverses	85	20260228	445660	TVA déductible sur autres biens et services			CA3202602	20260228	Liquidation TVA 02/2026	0,00	3120,00			20260228		
+OD	Opérations diverses	85	20260228	445510	TVA à décaisser			CA3202602	20260228	Liquidation TVA 02/2026	0,00	15030,00			20260228		
+AC	Journal des achats	86	20260305	604000	Achats d’études et prestations de services			A202603	20260305	Achats d’études et prestations	16500,00	0,00			20260305		
+AC	Journal des achats	86	20260305	445660	TVA déductible sur autres biens et services			A202603	20260305	Achats d’études et prestations	3300,00	0,00			20260305		
+AC	Journal des achats	86	20260305	401000	Fournisseurs			A202603	20260305	Achats d’études et prestations	0,00	19800,00			20260305		
+BQ	Banque	87	20260310	512000	Banque			ENC202603ca20	20260310	Encaissement ALPHA CONSEIL SA	116400,00	0,00			20260310		
+BQ	Banque	87	20260310	411000	Clients	C001	ALPHA CONSEIL SA	ENC202603ca20	20260310	Encaissement ALPHA CONSEIL SA	0,00	116400,00	AS	20260310	20260310		
+OD	Opérations diverses	88	20260310	445870	TVA sur factures non encaissées			TVAENC202603ca20	20260310	TVA exigible sur encaissements	19400,00	0,00			20260310		
+OD	Opérations diverses	88	20260310	445710	TVA collectée 20 %			TVAENC202603ca20	20260310	TVA exigible sur encaissements	0,00	19400,00			20260310		
+BQ	Banque	89	20260310	512000	Banque			ENC202603ca10	20260310	Encaissement BETA HABITAT SARL	2750,00	0,00			20260310		
+BQ	Banque	89	20260310	411000	Clients	C002	BETA HABITAT SARL	ENC202603ca10	20260310	Encaissement BETA HABITAT SARL	0,00	2750,00	AT	20260310	20260310		
+OD	Opérations diverses	90	20260310	445870	TVA sur factures non encaissées			TVAENC202603ca10	20260310	TVA exigible sur encaissements	250,00	0,00			20260310		
+OD	Opérations diverses	90	20260310	445712	TVA collectée 10 %			TVAENC202603ca10	20260310	TVA exigible sur encaissements	0,00	250,00			20260310		
+AC	Journal des achats	91	20260312	622600	Honoraires prestataire non établi (autoliquidation)			A3202603	20260312	Honoraires prestataire non établi – autoliquidation	3200,00	0,00			20260312		
+AC	Journal des achats	91	20260312	445660	TVA déductible sur autres biens et services			A3202603	20260312	Honoraires prestataire non établi – autoliquidation	640,00	0,00			20260312		
+AC	Journal des achats	91	20260312	445200	TVA due intracommunautaire			A3202603	20260312	Honoraires prestataire non établi – autoliquidation	0,00	640,00			20260312		
+AC	Journal des achats	91	20260312	401000	Fournisseurs			A3202603	20260312	Honoraires prestataire non établi – autoliquidation	0,00	3200,00			20260312		
+BQ	Banque	92	20260315	445510	TVA à décaisser			PTVA202603	20260315	Paiement TVA	15030,00	0,00			20260315		
+BQ	Banque	92	20260315	512000	Banque			PTVA202603	20260315	Paiement TVA	0,00	15030,00			20260315		
+VT	Journal des ventes	93	20260325	411000	Clients	C001	ALPHA CONSEIL SA	F202603ca20	20260325	Prestations de conseil ALPHA CONSEIL SA	121200,00	0,00	AU	20260410	20260325		
+VT	Journal des ventes	93	20260325	706100	Prestations de services 20 %			F202603ca20	20260325	Prestations de conseil ALPHA CONSEIL SA	0,00	101000,00			20260325		
+VT	Journal des ventes	93	20260325	445870	TVA sur factures non encaissées			F202603ca20	20260325	Prestations de conseil ALPHA CONSEIL SA	0,00	20200,00			20260325		
+VT	Journal des ventes	94	20260325	411000	Clients	C003	GAMMA BERATUNG GMBH	F202603caUe	20260325	Prestations intracommunautaires – autoliquidation GAMMA BERATUNG GMBH	11000,00	0,00	AV	20260410	20260325		
+VT	Journal des ventes	94	20260325	706300	Prestations UE AUTO LIQ			F202603caUe	20260325	Prestations intracommunautaires – autoliquidation GAMMA BERATUNG GMBH	0,00	11000,00			20260325		
+BQ	Banque	95	20260328	401000	Fournisseurs			REG202603	20260328	Règlement fournisseurs	19800,00	0,00			20260328		
+BQ	Banque	95	20260328	512000	Banque			REG202603	20260328	Règlement fournisseurs	0,00	19800,00			20260328		
+BQ	Banque	96	20260328	401000	Fournisseurs			REGA3202603	20260328	Règlement prestataire non établi	3200,00	0,00			20260328		
+BQ	Banque	96	20260328	512000	Banque			REGA3202603	20260328	Règlement prestataire non établi	0,00	3200,00			20260328		
+OD	Opérations diverses	97	20260331	445710	TVA collectée 20 %			CA3202603	20260331	Liquidation TVA 03/2026	19400,00	0,00			20260331		
+OD	Opérations diverses	97	20260331	445712	TVA collectée 10 %			CA3202603	20260331	Liquidation TVA 03/2026	250,00	0,00			20260331		
+OD	Opérations diverses	97	20260331	445200	TVA due intracommunautaire			CA3202603	20260331	Liquidation TVA 03/2026	640,00	0,00			20260331		
+OD	Opérations diverses	97	20260331	445660	TVA déductible sur autres biens et services			CA3202603	20260331	Liquidation TVA 03/2026	0,00	3940,00			20260331		
+OD	Opérations diverses	97	20260331	445510	TVA à décaisser			CA3202603	20260331	Liquidation TVA 03/2026	0,00	16350,00			20260331		
+OD	Opérations diverses	98	20260331	654000	Pertes sur créances irrécouvrables			PERTE2603	20260331	Créance irrécouvrable DELTA LITIGES	1000,00	0,00			20260331		
+OD	Opérations diverses	98	20260331	445870	TVA sur factures non encaissées			PERTE2603	20260331	Créance irrécouvrable DELTA LITIGES	200,00	0,00			20260331		
+OD	Opérations diverses	98	20260331	416000	Clients douteux ou litigieux	C004	DELTA LITIGES SARL	PERTE2603	20260331	Créance irrécouvrable DELTA LITIGES	0,00	1200,00	AD	20260331	20260331		
+AC	Journal des achats	99	20260405	604000	Achats d’études et prestations de services			A202604	20260405	Achats d’études et prestations	17800,00	0,00			20260405		
+AC	Journal des achats	99	20260405	445660	TVA déductible sur autres biens et services			A202604	20260405	Achats d’études et prestations	3560,00	0,00			20260405		
+AC	Journal des achats	99	20260405	401000	Fournisseurs			A202604	20260405	Achats d’études et prestations	0,00	21360,00			20260405		
+BQ	Banque	100	20260410	512000	Banque			ENC202604ca20	20260410	Encaissement ALPHA CONSEIL SA	121200,00	0,00			20260410		
+BQ	Banque	100	20260410	411000	Clients	C001	ALPHA CONSEIL SA	ENC202604ca20	20260410	Encaissement ALPHA CONSEIL SA	0,00	121200,00	AU	20260410	20260410		
+OD	Opérations diverses	101	20260410	445870	TVA sur factures non encaissées			TVAENC202604ca20	20260410	TVA exigible sur encaissements	20200,00	0,00			20260410		
+OD	Opérations diverses	101	20260410	445710	TVA collectée 20 %			TVAENC202604ca20	20260410	TVA exigible sur encaissements	0,00	20200,00			20260410		
+BQ	Banque	102	20260410	512000	Banque			ENC202604caUe	20260410	Encaissement GAMMA BERATUNG GMBH	11000,00	0,00			20260410		
+BQ	Banque	102	20260410	411000	Clients	C003	GAMMA BERATUNG GMBH	ENC202604caUe	20260410	Encaissement GAMMA BERATUNG GMBH	0,00	11000,00	AV	20260410	20260410		
+BQ	Banque	103	20260415	445510	TVA à décaisser			PTVA202604	20260415	Paiement TVA	16350,00	0,00			20260415		
+BQ	Banque	103	20260415	512000	Banque			PTVA202604	20260415	Paiement TVA	0,00	16350,00			20260415		
+VT	Journal des ventes	104	20260425	411000	Clients	C001	ALPHA CONSEIL SA	F202604ca20	20260425	Prestations de conseil ALPHA CONSEIL SA	107400,00	0,00	AW	20260510	20260425		
+VT	Journal des ventes	104	20260425	706100	Prestations de services 20 %			F202604ca20	20260425	Prestations de conseil ALPHA CONSEIL SA	0,00	89500,00			20260425		
+VT	Journal des ventes	104	20260425	445870	TVA sur factures non encaissées			F202604ca20	20260425	Prestations de conseil ALPHA CONSEIL SA	0,00	17900,00			20260425		
+VT	Journal des ventes	105	20260425	411000	Clients	C002	BETA HABITAT SARL	F202604ca10	20260425	Travaux de rénovation BETA HABITAT SARL	7700,00	0,00	AX	20260510	20260425		
+VT	Journal des ventes	105	20260425	706200	Travaux de rénovation 10 %			F202604ca10	20260425	Travaux de rénovation BETA HABITAT SARL	0,00	7000,00			20260425		
+VT	Journal des ventes	105	20260425	445870	TVA sur factures non encaissées			F202604ca10	20260425	Travaux de rénovation BETA HABITAT SARL	0,00	700,00			20260425		
+BQ	Banque	106	20260428	401000	Fournisseurs			REG202604	20260428	Règlement fournisseurs	21360,00	0,00			20260428		
+BQ	Banque	106	20260428	512000	Banque			REG202604	20260428	Règlement fournisseurs	0,00	21360,00			20260428		
+OD	Opérations diverses	107	20260430	445710	TVA collectée 20 %			CA3202604	20260430	Liquidation TVA 04/2026	20200,00	0,00			20260430		
+OD	Opérations diverses	107	20260430	445660	TVA déductible sur autres biens et services			CA3202604	20260430	Liquidation TVA 04/2026	0,00	3560,00			20260430		
+OD	Opérations diverses	107	20260430	445510	TVA à décaisser			CA3202604	20260430	Liquidation TVA 04/2026	0,00	16640,00			20260430		
+AC	Journal des achats	108	20260505	604000	Achats d’études et prestations de services			A202605	20260505	Achats d’études et prestations	15450,00	0,00			20260505		
+AC	Journal des achats	108	20260505	445660	TVA déductible sur autres biens et services			A202605	20260505	Achats d’études et prestations	3090,00	0,00			20260505		
+AC	Journal des achats	108	20260505	401000	Fournisseurs			A202605	20260505	Achats d’études et prestations	0,00	18540,00			20260505		
+BQ	Banque	109	20260510	512000	Banque			ENC202605ca20	20260510	Encaissement ALPHA CONSEIL SA	107400,00	0,00			20260510		
+BQ	Banque	109	20260510	411000	Clients	C001	ALPHA CONSEIL SA	ENC202605ca20	20260510	Encaissement ALPHA CONSEIL SA	0,00	107400,00	AW	20260510	20260510		
+OD	Opérations diverses	110	20260510	445870	TVA sur factures non encaissées			TVAENC202605ca20	20260510	TVA exigible sur encaissements	17900,00	0,00			20260510		
+OD	Opérations diverses	110	20260510	445710	TVA collectée 20 %			TVAENC202605ca20	20260510	TVA exigible sur encaissements	0,00	17900,00			20260510		
+BQ	Banque	111	20260510	512000	Banque			ENC202605ca10	20260510	Encaissement BETA HABITAT SARL	7700,00	0,00			20260510		
+BQ	Banque	111	20260510	411000	Clients	C002	BETA HABITAT SARL	ENC202605ca10	20260510	Encaissement BETA HABITAT SARL	0,00	7700,00	AX	20260510	20260510		
+OD	Opérations diverses	112	20260510	445870	TVA sur factures non encaissées			TVAENC202605ca10	20260510	TVA exigible sur encaissements	700,00	0,00			20260510		
+OD	Opérations diverses	112	20260510	445712	TVA collectée 10 %			TVAENC202605ca10	20260510	TVA exigible sur encaissements	0,00	700,00			20260510		
+BQ	Banque	113	20260515	445510	TVA à décaisser			PTVA202605	20260515	Paiement TVA	16640,00	0,00			20260515		
+BQ	Banque	113	20260515	512000	Banque			PTVA202605	20260515	Paiement TVA	0,00	16640,00			20260515		
+VT	Journal des ventes	114	20260525	411000	Clients	C001	ALPHA CONSEIL SA	F202605ca20	20260525	Prestations de conseil ALPHA CONSEIL SA	134880,00	0,00	AY	20260610	20260525		
+VT	Journal des ventes	114	20260525	706100	Prestations de services 20 %			F202605ca20	20260525	Prestations de conseil ALPHA CONSEIL SA	0,00	112400,00			20260525		
+VT	Journal des ventes	114	20260525	445870	TVA sur factures non encaissées			F202605ca20	20260525	Prestations de conseil ALPHA CONSEIL SA	0,00	22480,00			20260525		
+VT	Journal des ventes	115	20260525	411000	Clients	C002	BETA HABITAT SARL	F202605ca10	20260525	Travaux de rénovation BETA HABITAT SARL	4400,00	0,00	AZ	20260610	20260525		
+VT	Journal des ventes	115	20260525	706200	Travaux de rénovation 10 %			F202605ca10	20260525	Travaux de rénovation BETA HABITAT SARL	0,00	4000,00			20260525		
+VT	Journal des ventes	115	20260525	445870	TVA sur factures non encaissées			F202605ca10	20260525	Travaux de rénovation BETA HABITAT SARL	0,00	400,00			20260525		
+VT	Journal des ventes	116	20260525	411000	Clients	C003	GAMMA BERATUNG GMBH	F202605caUe	20260525	Prestations intracommunautaires – autoliquidation GAMMA BERATUNG GMBH	6000,00	0,00	BA	20260610	20260525		
+VT	Journal des ventes	116	20260525	706300	Prestations UE AUTO LIQ			F202605caUe	20260525	Prestations intracommunautaires – autoliquidation GAMMA BERATUNG GMBH	0,00	6000,00			20260525		
+BQ	Banque	117	20260528	401000	Fournisseurs			REG202605	20260528	Règlement fournisseurs	18540,00	0,00			20260528		
+BQ	Banque	117	20260528	512000	Banque			REG202605	20260528	Règlement fournisseurs	0,00	18540,00			20260528		
+OD	Opérations diverses	118	20260531	445710	TVA collectée 20 %			CA3202605	20260531	Liquidation TVA 05/2026	17900,00	0,00			20260531		
+OD	Opérations diverses	118	20260531	445712	TVA collectée 10 %			CA3202605	20260531	Liquidation TVA 05/2026	700,00	0,00			20260531		
+OD	Opérations diverses	118	20260531	445660	TVA déductible sur autres biens et services			CA3202605	20260531	Liquidation TVA 05/2026	0,00	3090,00			20260531		
+OD	Opérations diverses	118	20260531	445510	TVA à décaisser			CA3202605	20260531	Liquidation TVA 05/2026	0,00	15510,00			20260531		
+AC	Journal des achats	119	20260605	604000	Achats d’études et prestations de services			A202606	20260605	Achats d’études et prestations	19350,00	0,00			20260605		
+AC	Journal des achats	119	20260605	445660	TVA déductible sur autres biens et services			A202606	20260605	Achats d’études et prestations	3870,00	0,00			20260605		
+AC	Journal des achats	119	20260605	401000	Fournisseurs			A202606	20260605	Achats d’études et prestations	0,00	23220,00			20260605		
+BQ	Banque	120	20260610	512000	Banque			ENC202606A	20260610	Encaissement ALPHA CONSEIL SA (partiel)	122880,00	0,00			20260610		
+BQ	Banque	120	20260610	411000	Clients	C001	ALPHA CONSEIL SA	ENC202606A	20260610	Encaissement ALPHA CONSEIL SA (partiel)	0,00	122880,00			20260610		
+OD	Opérations diverses	121	20260610	445870	TVA sur factures non encaissées			TVAENC202606A	20260610	TVA exigible sur encaissements	20480,00	0,00			20260610		
+OD	Opérations diverses	121	20260610	445710	TVA collectée 20 %			TVAENC202606A	20260610	TVA exigible sur encaissements	0,00	20480,00			20260610		
+BQ	Banque	122	20260610	512000	Banque			ENC202606ca10	20260610	Encaissement BETA HABITAT SARL	4400,00	0,00			20260610		
+BQ	Banque	122	20260610	411000	Clients	C002	BETA HABITAT SARL	ENC202606ca10	20260610	Encaissement BETA HABITAT SARL	0,00	4400,00	AZ	20260610	20260610		
+OD	Opérations diverses	123	20260610	445870	TVA sur factures non encaissées			TVAENC202606ca10	20260610	TVA exigible sur encaissements	400,00	0,00			20260610		
+OD	Opérations diverses	123	20260610	445712	TVA collectée 10 %			TVAENC202606ca10	20260610	TVA exigible sur encaissements	0,00	400,00			20260610		
+BQ	Banque	124	20260610	512000	Banque			ENC202606caUe	20260610	Encaissement GAMMA BERATUNG GMBH	6000,00	0,00			20260610		
+BQ	Banque	124	20260610	411000	Clients	C003	GAMMA BERATUNG GMBH	ENC202606caUe	20260610	Encaissement GAMMA BERATUNG GMBH	0,00	6000,00	BA	20260610	20260610		
+BQ	Banque	125	20260615	445510	TVA à décaisser			PTVA202606	20260615	Paiement TVA	15510,00	0,00			20260615		
+BQ	Banque	125	20260615	512000	Banque			PTVA202606	20260615	Paiement TVA	0,00	15510,00			20260615		
+VT	Journal des ventes	126	20260625	411000	Clients	C001	ALPHA CONSEIL SA	F202606ca20	20260625	Prestations de conseil ALPHA CONSEIL SA	114000,00	0,00			20260625		
+VT	Journal des ventes	126	20260625	706100	Prestations de services 20 %			F202606ca20	20260625	Prestations de conseil ALPHA CONSEIL SA	0,00	95000,00			20260625		
+VT	Journal des ventes	126	20260625	445870	TVA sur factures non encaissées			F202606ca20	20260625	Prestations de conseil ALPHA CONSEIL SA	0,00	19000,00			20260625		
+VT	Journal des ventes	127	20260625	411000	Clients	C002	BETA HABITAT SARL	F202606ca10	20260625	Travaux de rénovation BETA HABITAT SARL	5500,00	0,00			20260625		
+VT	Journal des ventes	127	20260625	706200	Travaux de rénovation 10 %			F202606ca10	20260625	Travaux de rénovation BETA HABITAT SARL	0,00	5000,00			20260625		
+VT	Journal des ventes	127	20260625	445870	TVA sur factures non encaissées			F202606ca10	20260625	Travaux de rénovation BETA HABITAT SARL	0,00	500,00			20260625		
+VT	Journal des ventes	128	20260625	411000	Clients	C003	GAMMA BERATUNG GMBH	F202606caUe	20260625	Prestations intracommunautaires – autoliquidation GAMMA BERATUNG GMBH	7000,00	0,00			20260625		
+VT	Journal des ventes	128	20260625	706300	Prestations UE AUTO LIQ			F202606caUe	20260625	Prestations intracommunautaires – autoliquidation GAMMA BERATUNG GMBH	0,00	7000,00			20260625		
+BQ	Banque	129	20260628	401000	Fournisseurs			REG202606	20260628	Règlement fournisseurs	23220,00	0,00			20260628		
+BQ	Banque	129	20260628	512000	Banque			REG202606	20260628	Règlement fournisseurs	0,00	23220,00			20260628		
+OD	Opérations diverses	130	20260630	445710	TVA collectée 20 %			CA3202606	20260630	Liquidation TVA 06/2026	22480,00	0,00			20260630		
+OD	Opérations diverses	130	20260630	445712	TVA collectée 10 %			CA3202606	20260630	Liquidation TVA 06/2026	400,00	0,00			20260630		
+OD	Opérations diverses	130	20260630	445660	TVA déductible sur autres biens et services			CA3202606	20260630	Liquidation TVA 06/2026	0,00	3870,00			20260630		
+OD	Opérations diverses	130	20260630	445510	TVA à décaisser			CA3202606	20260630	Liquidation TVA 06/2026	0,00	19010,00			20260630		
+OD	Opérations diverses	131	20260630	418100	Clients – Factures à établir			FAE2606	20260630	Factures à établir au 30/06/2026	6000,00	0,00			20260630		
+OD	Opérations diverses	131	20260630	706100	Prestations de services 20 %			FAE2606	20260630	Factures à établir au 30/06/2026	0,00	5000,00			20260630		
+OD	Opérations diverses	131	20260630	445870	TVA sur factures non encaissées			FAE2606	20260630	Factures à établir au 30/06/2026	0,00	1000,00			20260630		
+OD	Opérations diverses	132	20260630	706100	Prestations de services 20 %			PCA2606	20260630	Produits constatés d’avance au 30/06/2026	2000,00	0,00			20260630		
+OD	Opérations diverses	132	20260630	487000	Produits constatés d’avance			PCA2606	20260630	Produits constatés d’avance au 30/06/2026	0,00	2000,00			20260630		

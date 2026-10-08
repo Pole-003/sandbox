@@ -55,7 +55,7 @@ const taxe = (base: number, bp: number) => Math.round((base * bp) / 10000);
 export const SIREN_SERVICES = sirenFictif('00077712');
 export const SIREN_ATELIER = sirenFictif('00088823');
 
-interface Mois {
+export interface Mois {
   annee: number;
   mois: number;
   ca20: number;
@@ -69,7 +69,7 @@ interface Mois {
   autre21?: number;
 }
 
-const MOIS: Mois[] = [
+export const MOIS: Mois[] = [
   { annee: 2025, mois: 7, ca20: 84_000, ca10: 6_000, e2: 12_000, a3: 0, ded20: 3_100, imm19: 0 },
   { annee: 2025, mois: 8, ca20: 91_500, ca10: 0, e2: 0, a3: 0, ded20: 2_850, imm19: 0 },
   { annee: 2025, mois: 9, ca20: 76_000, ca10: 4_500, e2: 9_500, a3: 0, ded20: 3_020, imm19: 30_000 },

@@ -21,7 +21,8 @@
     "fec:fictifs": "node scripts/generer-fec-fictifs.ts",
     "fec:gros": "node scripts/generer-fec-fictifs.ts --gros",
     "ca3:fictives": "node scripts/generer-ca3-fictives.ts",
-    "ca3:navigateurs": "node scripts/generer-ca3-navigateurs.ts"
+    "ca3:navigateurs": "node scripts/generer-ca3-navigateurs.ts",
+    "tva:fictifs": "node scripts/generer-tva-fictif.ts"
   },
   "devDependencies": {
     "@types/node": "^26.6.4",
