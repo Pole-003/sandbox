@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "genere_le": "2026-10-08T13:06:27.999Z",
+  "genere_le": "2026-10-08T13:07:55.646Z",
   "sources": [
     {
       "id": "bofip-actualites",
@@ -9,12 +9,12 @@
       "theme": "Fiscal et comptable",
       "statut_catalogue": "verifie",
       "etat": "ok",
-      "derniere_tentative": "2026-10-08T13:06:27.999Z",
-      "derniere_reussite": "2026-10-08T13:06:27.999Z",
+      "derniere_tentative": "2026-10-08T13:07:55.646Z",
+      "derniere_reussite": "2026-10-08T13:07:55.646Z",
       "erreur": null,
       "nb_articles": 1,
       "nb_elements": 3,
-      "duree_ms": 447
+      "duree_ms": 381
     },
     {
       "id": "senat-textes",
@@ -23,12 +23,12 @@
       "theme": "Loi de finances",
       "statut_catalogue": "verifie",
       "etat": "ok",
-      "derniere_tentative": "2026-10-08T13:06:27.999Z",
-      "derniere_reussite": "2026-10-08T13:06:27.999Z",
+      "derniere_tentative": "2026-10-08T13:07:55.646Z",
+      "derniere_reussite": "2026-10-08T13:07:55.646Z",
       "erreur": null,
       "nb_articles": 16,
       "nb_elements": 27,
-      "duree_ms": 154
+      "duree_ms": 91
     },
     {
       "id": "senat-rapports",
@@ -37,12 +37,12 @@
       "theme": "Loi de finances",
       "statut_catalogue": "verifie",
       "etat": "ok",
-      "derniere_tentative": "2026-10-08T13:06:27.999Z",
-      "derniere_reussite": "2026-10-08T13:06:27.999Z",
+      "derniere_tentative": "2026-10-08T13:07:55.646Z",
+      "derniere_reussite": "2026-10-08T13:07:55.646Z",
       "erreur": null,
       "nb_articles": 10,
       "nb_elements": 18,
-      "duree_ms": 153
+      "duree_ms": 91
     },
     {
       "id": "senat-budget",
@@ -51,12 +51,12 @@
       "theme": "Loi de finances",
       "statut_catalogue": "verifie",
       "etat": "ok",
-      "derniere_tentative": "2026-10-08T13:06:27.999Z",
-      "derniere_reussite": "2026-10-08T13:06:27.999Z",
+      "derniere_tentative": "2026-10-08T13:07:55.646Z",
+      "derniere_reussite": "2026-10-08T13:07:55.646Z",
       "erreur": null,
       "nb_articles": 0,
       "nb_elements": 173,
-      "duree_ms": 343
+      "duree_ms": 261
     },
     {
       "id": "senat-fiscalite",
@@ -65,12 +65,12 @@
       "theme": "Fiscal et comptable",
       "statut_catalogue": "verifie",
       "etat": "ok",
-      "derniere_tentative": "2026-10-08T13:06:27.999Z",
-      "derniere_reussite": "2026-10-08T13:06:27.999Z",
+      "derniere_tentative": "2026-10-08T13:07:55.646Z",
+      "derniere_reussite": "2026-10-08T13:07:55.646Z",
       "erreur": null,
       "nb_articles": 1,
       "nb_elements": 322,
-      "duree_ms": 448
+      "duree_ms": 263
     },
     {
       "id": "senat-entreprises",
@@ -79,12 +79,12 @@
       "theme": "Économie et statistiques",
       "statut_catalogue": "verifie",
       "etat": "ok",
-      "derniere_tentative": "2026-10-08T13:06:27.999Z",
-      "derniere_reussite": "2026-10-08T13:06:27.999Z",
+      "derniere_tentative": "2026-10-08T13:07:55.646Z",
+      "derniere_reussite": "2026-10-08T13:07:55.646Z",
       "erreur": null,
       "nb_articles": 0,
       "nb_elements": 42,
-      "duree_ms": 155
+      "duree_ms": 91
     },
     {
       "id": "senat-pme",
@@ -93,12 +93,12 @@
       "theme": "Économie et statistiques",
       "statut_catalogue": "verifie",
       "etat": "ok",
-      "derniere_tentative": "2026-10-08T13:06:27.999Z",
-      "derniere_reussite": "2026-10-08T13:06:27.999Z",
+      "derniere_tentative": "2026-10-08T13:07:55.646Z",
+      "derniere_reussite": "2026-10-08T13:07:55.646Z",
       "erreur": null,
       "nb_articles": 0,
       "nb_elements": 25,
-      "duree_ms": 153
+      "duree_ms": 90
     },
     {
       "id": "senat-secu",
@@ -107,12 +107,12 @@
       "theme": "Sécurité sociale",
       "statut_catalogue": "verifie",
       "etat": "ok",
-      "derniere_tentative": "2026-10-08T13:06:27.999Z",
-      "derniere_reussite": "2026-10-08T13:06:27.999Z",
+      "derniere_tentative": "2026-10-08T13:07:55.646Z",
+      "derniere_reussite": "2026-10-08T13:07:55.646Z",
       "erreur": null,
       "nb_articles": 1,
       "nb_elements": 25,
-      "duree_ms": 153
+      "duree_ms": 92
     },
     {
       "id": "an-documents",
@@ -121,9 +121,9 @@
       "theme": "Loi de finances",
       "statut_catalogue": "verifie",
       "etat": "erreur",
-      "derniere_tentative": "2026-10-08T13:06:27.999Z",
+      "derniere_tentative": "2026-10-08T13:07:55.646Z",
       "derniere_reussite": "2026-10-08T12:50:08.281Z",
-      "erreur": "robots.txt injoignable : délai dépassé (20 s) (www2.assemblee-nationale.fr)",
+      "erreur": "robots.txt injoignable (502) (www2.assemblee-nationale.fr)",
       "nb_articles": 0,
       "nb_elements": null,
       "duree_ms": null
@@ -135,9 +135,9 @@
       "theme": "Loi de finances",
       "statut_catalogue": "verifie",
       "etat": "erreur",
-      "derniere_tentative": "2026-10-08T13:06:27.999Z",
+      "derniere_tentative": "2026-10-08T13:07:55.646Z",
       "derniere_reussite": "2026-10-08T12:50:08.281Z",
-      "erreur": "robots.txt injoignable : délai dépassé (20 s) (www2.assemblee-nationale.fr)",
+      "erreur": "robots.txt injoignable (502) (www2.assemblee-nationale.fr)",
       "nb_articles": 0,
       "nb_elements": null,
       "duree_ms": null
@@ -149,9 +149,9 @@
       "theme": "Sécurité sociale",
       "statut_catalogue": "verifie",
       "etat": "erreur",
-      "derniere_tentative": "2026-10-08T13:06:27.999Z",
+      "derniere_tentative": "2026-10-08T13:07:55.646Z",
       "derniere_reussite": "2026-10-08T12:50:08.281Z",
-      "erreur": "robots.txt injoignable : délai dépassé (20 s) (www2.assemblee-nationale.fr)",
+      "erreur": "robots.txt injoignable (502) (www2.assemblee-nationale.fr)",
       "nb_articles": 0,
       "nb_elements": null,
       "duree_ms": null
@@ -163,9 +163,9 @@
       "theme": "Économie et statistiques",
       "statut_catalogue": "verifie",
       "etat": "erreur",
-      "derniere_tentative": "2026-10-08T13:06:27.999Z",
+      "derniere_tentative": "2026-10-08T13:07:55.646Z",
       "derniere_reussite": "2026-10-08T12:50:08.281Z",
-      "erreur": "robots.txt injoignable : délai dépassé (20 s) (www2.assemblee-nationale.fr)",
+      "erreur": "robots.txt injoignable (502) (www2.assemblee-nationale.fr)",
       "nb_articles": 0,
       "nb_elements": null,
       "duree_ms": null
@@ -191,12 +191,12 @@
       "theme": "Fiscal et comptable",
       "statut_catalogue": "verifie",
       "etat": "ok",
-      "derniere_tentative": "2026-10-08T13:06:27.999Z",
-      "derniere_reussite": "2026-10-08T13:06:27.999Z",
+      "derniere_tentative": "2026-10-08T13:07:55.646Z",
+      "derniere_reussite": "2026-10-08T13:07:55.646Z",
       "erreur": null,
       "nb_articles": 0,
       "nb_elements": 20,
-      "duree_ms": 516
+      "duree_ms": 115
     },
     {
       "id": "ce-actualites",
@@ -205,12 +205,12 @@
       "theme": "Fiscal et comptable",
       "statut_catalogue": "verifie",
       "etat": "ok",
-      "derniere_tentative": "2026-10-08T13:06:27.999Z",
-      "derniere_reussite": "2026-10-08T13:06:27.999Z",
+      "derniere_tentative": "2026-10-08T13:07:55.646Z",
+      "derniere_reussite": "2026-10-08T13:07:55.646Z",
       "erreur": null,
       "nb_articles": 1,
       "nb_elements": 20,
-      "duree_ms": 173
+      "duree_ms": 115
     },
     {
       "id": "ce-avis",
@@ -219,12 +219,12 @@
       "theme": "Loi de finances",
       "statut_catalogue": "verifie",
       "etat": "ok",
-      "derniere_tentative": "2026-10-08T13:06:27.999Z",
-      "derniere_reussite": "2026-10-08T13:06:27.999Z",
+      "derniere_tentative": "2026-10-08T13:07:55.646Z",
+      "derniere_reussite": "2026-10-08T13:07:55.646Z",
       "erreur": null,
       "nb_articles": 0,
       "nb_elements": 20,
-      "duree_ms": 173
+      "duree_ms": 115
     },
     {
       "id": "an-dossier-plf",
@@ -233,9 +233,9 @@
       "theme": "Loi de finances",
       "statut_catalogue": "verifie",
       "etat": "erreur",
-      "derniere_tentative": "2026-10-08T13:06:27.999Z",
+      "derniere_tentative": "2026-10-08T13:07:55.646Z",
       "derniere_reussite": "2026-10-08T12:50:08.281Z",
-      "erreur": "robots.txt injoignable : délai dépassé (20 s) (www.assemblee-nationale.fr)",
+      "erreur": "robots.txt injoignable (502) (www.assemblee-nationale.fr)",
       "nb_articles": 0,
       "nb_elements": null,
       "duree_ms": null,
@@ -248,9 +248,9 @@
       "theme": "Sécurité sociale",
       "statut_catalogue": "verifie",
       "etat": "erreur",
-      "derniere_tentative": "2026-10-08T13:06:27.999Z",
+      "derniere_tentative": "2026-10-08T13:07:55.646Z",
       "derniere_reussite": "2026-10-08T12:50:08.281Z",
-      "erreur": "robots.txt injoignable : délai dépassé (20 s) (www.assemblee-nationale.fr)",
+      "erreur": "robots.txt injoignable (502) (www.assemblee-nationale.fr)",
       "nb_articles": 0,
       "nb_elements": null,
       "duree_ms": null,
