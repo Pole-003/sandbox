@@ -1,6 +1,6 @@
-import { ecranProvisoire } from '../../app/ecran-provisoire.ts';
 import { FileSpreadsheet } from '../../app/icones.ts';
 import type { DescripteurModule } from '../../app/module.ts';
+import { rendreEcranFec } from './ecran/ecran-fec.ts';
 
 export const moduleFec: DescripteurModule = {
   id: 'fec',
@@ -8,11 +8,6 @@ export const moduleFec: DescripteurModule = {
   icone: FileSpreadsheet,
   statut: 'actif',
   rendre(conteneur) {
-    ecranProvisoire(
-      conteneur,
-      'Analyse de FEC',
-      'Import, contrôle de conformité, balances, grand-livre et statistiques.',
-      'Ce module arrive aux étapes 4 à 6.',
-    );
+    return rendreEcranFec(conteneur);
   },
 };

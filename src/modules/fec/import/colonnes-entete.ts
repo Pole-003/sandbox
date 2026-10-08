@@ -71,8 +71,10 @@ export function identifierColonnes(
 }
 
 /** Constats d'en-tête (ligne 1). */
-export function controlerEntete(id: Identification, k: Constats): void {
+export function controlerEntete(id: Identification, k: Constats, sansEntete = false): void {
   for (const c of id.colonnes) {
+    // Sans en-tête, toutes les colonnes sont attribuées à la main : S05 suffit.
+    if (sansEntete && c.reconnaissance === 'manuelle') continue;
     if (c.reconnaissance === 'casse' || c.reconnaissance === 'variante-officielle') {
       k.global('S07', `« ${c.nom} » → ${c.zone}`);
     } else if (c.reconnaissance === 'alias' || c.reconnaissance === 'manuelle') {

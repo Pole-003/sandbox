@@ -1,0 +1,280 @@
+/*
+ * Module FEC : dossiers, dépôt, progression, assistant, résumé, rapport de conformité.
+ * Couleurs : uniquement les paires de jetons vérifiées par tests/app/contrastes.test.ts.
+ */
+
+.ecran-fec {
+  max-width: 72rem;
+}
+
+.fec-principal {
+  display: grid;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.ecran-fec h2 {
+  margin-top: 0;
+}
+
+/* --- Boutons --- */
+.bouton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  min-height: 2.25rem;
+  padding: 0.375rem 0.875rem;
+  border: 1px solid var(--c-bordure);
+  border-radius: var(--rayon);
+  background: var(--c-surface);
+  color: var(--c-texte);
+  font: inherit;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color var(--duree), border-color var(--duree);
+}
+
+.bouton:hover {
+  background: var(--c-surface-2);
+}
+
+.bouton-primaire {
+  border-color: var(--c-primaire);
+  background: var(--c-primaire);
+  color: var(--c-sur-primaire);
+}
+
+.bouton-primaire:hover {
+  background: var(--c-primaire);
+  filter: brightness(1.08);
+}
+
+.bouton-danger {
+  border-color: var(--c-danger);
+  color: var(--c-danger-texte);
+  background: var(--c-surface);
+}
+
+.bouton-danger:hover {
+  background: var(--c-danger-fond);
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 0.75rem 0;
+}
+
+.actions-purge {
+  margin-left: auto;
+}
+
+/* --- Champs --- */
+.ligne-champs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 1rem;
+  align-items: flex-end;
+}
+
+.ecran-fec .champ input[type='text'],
+.ecran-fec .champ input[type='date'],
+.ecran-fec .champ select {
+  min-height: 2.25rem;
+  padding: 0.375rem 0.5rem;
+  border: 1px solid var(--c-bordure);
+  border-radius: var(--rayon);
+  background: var(--c-surface);
+  color: var(--c-texte);
+  font: inherit;
+}
+
+.champ-case {
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.groupe {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.barre-dossiers {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: flex-end;
+}
+
+.message-erreur {
+  color: var(--c-danger-texte);
+}
+
+.message-erreur:empty {
+  display: none;
+}
+
+/* --- Dépôt et progression --- */
+.zone-depot {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 2rem 1rem;
+  border: 2px dashed var(--c-bordure);
+  border-radius: var(--rayon-carte);
+  background: var(--c-surface-2);
+  text-align: center;
+  cursor: pointer;
+  transition: border-color var(--duree), background-color var(--duree);
+}
+
+.zone-depot:hover,
+.zone-depot.survol,
+input[type='file']:focus-visible + .zone-depot {
+  border-color: var(--c-primaire);
+  background: var(--c-primaire-fond);
+}
+
+.zone-depot-titre {
+  font-weight: 600;
+  color: var(--c-primaire);
+}
+
+.options-avancees {
+  margin-top: 0.75rem;
+}
+
+.options-avancees summary {
+  cursor: pointer;
+  color: var(--c-texte-2);
+}
+
+.progression progress {
+  width: 100%;
+  height: 0.75rem;
+  accent-color: var(--c-primaire);
+}
+
+/* --- Résumé --- */
+.grille-resume {
+  display: grid;
+  grid-template-columns: minmax(10rem, max-content) 1fr;
+  gap: 0.375rem 1rem;
+  margin: 0 0 1rem;
+}
+
+.grille-resume dt {
+  color: var(--c-texte-2);
+}
+
+.grille-resume dd {
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+
+.empreinte {
+  font-size: 0.75rem;
+}
+
+.reglages {
+  margin: 0 0 1rem;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--c-bordure);
+  border-radius: var(--rayon);
+}
+
+.reglages legend {
+  padding: 0 0.25rem;
+  font-weight: 600;
+}
+
+/* --- Conformité --- */
+.indicateur-conformite {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.badge-gravite-non-conforme {
+  background: var(--c-danger-fond);
+  color: var(--c-danger-texte);
+}
+
+.badge-gravite-anomalie {
+  background: var(--c-alerte-fond);
+  color: var(--c-alerte-texte);
+}
+
+.badge-gravite-information {
+  background: var(--c-primaire-fond);
+  color: var(--c-primaire);
+}
+
+.bandeau {
+  margin: 0.75rem 0;
+  padding: 0.75rem 1rem;
+  border-radius: var(--rayon);
+}
+
+.bandeau-alerte {
+  border: 1px solid var(--c-danger);
+  background: var(--c-danger-fond);
+  color: var(--c-danger-texte);
+}
+
+.bandeau-alerte p {
+  margin: 0 0 0.5rem;
+}
+
+.avertissement-officiel {
+  padding: 0.5rem 0.75rem;
+  border-left: 3px solid var(--c-alerte);
+  background: var(--c-alerte-fond);
+  color: var(--c-alerte-texte);
+}
+
+.avertissement-officiel a {
+  color: inherit;
+  font-weight: 600;
+}
+
+.tableau-rapport summary {
+  cursor: pointer;
+}
+
+.lignes-constat {
+  overflow-wrap: anywhere;
+}
+
+.details-constat {
+  margin: 0.25rem 0;
+  padding-left: 1.25rem;
+  font-size: 0.8125rem;
+}
+
+/* --- Assistant --- */
+.tableau-apercu th {
+  min-width: 9rem;
+}
+
+.tableau-apercu select {
+  width: 100%;
+  margin-top: 0.25rem;
+}
+
+.entete-colonne {
+  display: block;
+  font-family: var(--police-mono);
+  font-size: 0.75rem;
+}
+
+.apercu-brut {
+  max-height: 16rem;
+  overflow: auto;
+  padding: 0.5rem;
+  background: var(--c-surface-2);
+  font-size: 0.75rem;
+}

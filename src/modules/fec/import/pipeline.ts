@@ -64,6 +64,8 @@ export interface MetaImport {
   exercice: Exercice | null;
   journalAN: JournalAN | null;
   modeNumerotation: ModeNumerotation;
+  /** Journaux du fichier (pour confirmer le journal d'à-nouveaux sans recharger les colonnes). */
+  journaux: { code: string; libelle: string; lignes: number }[];
   periode: { premiere: string; derniere: string } | null;
   dureeMs: number;
 }
@@ -253,7 +255,7 @@ async function importer(source: Source, options: OptionsImport): Promise<Resulta
     regime = id.regime;
     presentation = id.presentation;
     colonnes = id.colonnes;
-    controlerEntete(id, constats);
+    controlerEntete(id, constats, !avecEntete);
     if (separateur !== '\t' && separateur !== '|') constats.global('S02', `séparateur ${separateur === ';' ? 'point-virgule' : 'virgule'}`);
     if (guillemets) constats.global('S14');
     const ctx: ContexteNormalisation = {
@@ -305,6 +307,13 @@ async function importer(source: Source, options: OptionsImport): Promise<Resulta
       if (d > derniere) derniere = d;
     }
   }
+  const parJournal = new Map<number, { libelle: number; lignes: number }>();
+  for (let i = 0; i < fec.nbLignes; i++) {
+    const j = parJournal.get(fec.journalCode[i]!);
+    if (j) j.lignes++;
+    else parJournal.set(fec.journalCode[i]!, { libelle: fec.journalLib[i]!, lignes: 1 });
+  }
+  const journaux = [...parJournal].map(([code, j]) => ({ code: fec.textes[code]!, libelle: fec.textes[j.libelle]!, lignes: j.lignes }));
   const iso = (d: number) => `${String(d).slice(0, 4)}-${String(d).slice(4, 6)}-${String(d).slice(6)}`;
   const constatsEcritures = exercice ? controlerColonnes(fec, { debut: exercice.debut, fin: exercice.fin, journalAN, xml }) : [];
 
@@ -337,6 +346,7 @@ async function importer(source: Source, options: OptionsImport): Promise<Resulta
         exercice,
         journalAN,
         modeNumerotation: modeNumerotation(fec),
+        journaux,
         periode: derniere > 0 ? { premiere: iso(premiere), derniere: iso(derniere) } : null,
         dureeMs: performance.now() - t0,
       },

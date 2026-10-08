@@ -68,7 +68,7 @@ export const REGLES: readonly Regle[] = [
   r('D14', AN, 'Montantdevise sans Idevise, ou l’inverse', `${AUDIT} ; BOFiP § 260-270`, 'Une zone du couple vide, l’autre renseignée.'),
   r('D15', AN, 'EcritureLet sans DateLet, ou l’inverse', AUDIT, 'Une zone du couple vide, l’autre renseignée.'),
   r('D16', IN, 'Tiers intégré au numéro de compte (auxiliaire reconstruit)', AUDIT, 'Comptes 40/41 de forme 4xx + lettres sans CompAuxNum.'),
-  r('D17', IN, 'Zone facultative remplie de zéros ou d’espaces au lieu d’être vide', 'BOFiP § 70', 'Montantdevise nul sans devise, date 00000000, espaces seuls.'),
+  r('D17', IN, 'Zone facultative remplie de zéros ou d’espaces au lieu d’être vide', 'BOFiP § 70', 'Montantdevise nul sans devise, date 00000000.'),
   r('D18', AN, 'Debit ou Credit vide au lieu de 0', 'BOFiP § 210', 'Zone Debit ou Credit vide.'),
   r('D19', AN, 'JournalCode, JournalLib ou CompteNum vide (BNC/BA)', 'A47 A-1 VIII ; BOFiP § 70 et 130', 'Zone « à blanc si non utilisé » vide.'),
   r('L01', AN, 'Libellés différents pour un même CompteNum', AUDIT, 'Lignes dont le libellé diffère du libellé majoritaire du compte.'),

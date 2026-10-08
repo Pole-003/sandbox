@@ -71,7 +71,7 @@ describe('règles de structure', () => {
     expect(r.apercu).toHaveLength(4);
     const correspondance = Object.fromEntries(ENTETE_BIC.split('\t').map((z, i) => [i, z])) as never;
     const r2 = await importerTexte([...AN, ...ecriture('2')].join('\n'), { correspondance, sansEntete: true });
-    expect(codes(r2)).toMatchObject({ S05: 1, S08: 18 });
+    expect(codes(r2)).toEqual({ S05: 1 });
   });
 
   it('S15 : fichier sans écriture', async () => {

@@ -33,11 +33,16 @@ export function verifierIndex(html: string): string[] {
 
 /** Les URL tolérées dans le code tiers compilé : espaces de noms XML (identifiants, jamais chargés). */
 const URL_TOLEREES = /^https?:\/\/www\.w3\.org\//;
+/**
+ * Espaces de noms du format Office Open XML (.xlsx) écrits dans les fichiers générés par ExcelJS :
+ * de simples identifiants, jamais chargés.
+ */
+const ESPACES_DE_NOMS_OOXML = /^http:\/\/(schemas\.openxmlformats\.org|schemas\.microsoft\.com\/office|purl\.org\/dc)\//;
 
 export function verifierUrls(fichier: string, contenu: string, urlsAutorisees: string[]): string[] {
   return [...contenu.matchAll(/\b(?:https?|wss?):\/\/[^\s'"`<>)\\]+/gi)]
     .map((m) => m[0])
-    .filter((url) => !URL_TOLEREES.test(url) && !urlsAutorisees.includes(url))
+    .filter((url) => !URL_TOLEREES.test(url) && !ESPACES_DE_NOMS_OOXML.test(url) && !urlsAutorisees.includes(url))
     .map((url) => `${fichier} : URL externe ${url}`);
 }
 
@@ -57,13 +62,14 @@ function lister(dossier: string): string[] {
 if (process.argv[1] && fileURLToPath(import.meta.url) === process.argv[1]) {
   const racine = fileURLToPath(new URL('..', import.meta.url));
   const dist = join(racine, 'dist');
-  const { urls } = JSON.parse(readFileSync(join(racine, 'scripts/securite-liste-blanche.json'), 'utf8')) as {
+  const { urls, urlsCodeTiers } = JSON.parse(readFileSync(join(racine, 'scripts/securite-liste-blanche.json'), 'utf8')) as {
     urls: string[];
+    urlsCodeTiers?: string[];
   };
   const erreurs = verifierIndex(readFileSync(join(dist, 'index.html'), 'utf8'));
   for (const chemin of lister(dist)) {
     if (!/\.(html|js|css|json|svg)$/.test(chemin) || estDonneeVeille(relative(dist, chemin))) continue;
-    erreurs.push(...verifierUrls(relative(racine, chemin), readFileSync(chemin, 'utf8'), urls));
+    erreurs.push(...verifierUrls(relative(racine, chemin), readFileSync(chemin, 'utf8'), [...urls, ...(urlsCodeTiers ?? [])]));
   }
   if (erreurs.length > 0) {
     console.error(`Vérification du build ÉCHEC :\n  ${erreurs.join('\n  ')}`);

@@ -5,5 +5,17 @@
   ],
   "fichiersFetch": [
     "src/modules/veille/donnees.ts"
+  ],
+  "$commentaire_urlsCodeTiers": "'urlsCodeTiers' : URL figurant dans le code des librairies compilé dans dist/ (contrôle verifier-build uniquement), dans des messages d'erreur ou des mentions de licence ; jamais chargées (et bloquées par la CSP connect-src 'self'). Ajoutées avec ExcelJS (export .xlsx du module FEC) ; la dernière provient de l'aide à l'import CommonJS du bundler.",
+  "urlsCodeTiers": [
+    "https://github.com/exceljs/exceljs/blob/master/UPGRADE-4.0.md",
+    "https://stuk.github.io/jszip/documentation/howto/read_zip.html",
+    "https://github.com/zloirock/core-js/blob/v3.33.0/LICENSE",
+    "https://github.com/zloirock/core-js",
+    "https://github.com/uuidjs/uuid#getrandomvalues-not-supported",
+    "https://github.com/indutny/elliptic/issues",
+    "https://github.com/indutny/elliptic",
+    "https://github.com/crypto-browserify/crypto-browserify",
+    "https://rolldown.rs/in-depth/bundling-cjs#require-external-modules"
   ]
 }

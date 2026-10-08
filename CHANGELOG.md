@@ -2,6 +2,15 @@
 
 Toutes les évolutions notables de la Sandbox Pôle 003. Format inspiré de « Keep a Changelog », numéros de version au format semver.
 
+## [0.7.0] - 2026-10-08
+
+### Ajouté
+- Module FEC, import et contrôle de conformité : déposez un FEC de n'importe quel logiciel (fichier texte ou XML, BIC/IS, BNC, BA, Montant/Sens, tous encodages et séparateurs courants). Il est lu dans votre navigateur, en arrière-plan, avec une barre de progression et un bouton d'annulation ; rien n'est envoyé.
+- Assistant de correspondance des colonnes quand le fichier n'a pas d'en-tête ou utilise des noms inhabituels ; la correspondance peut être mémorisée comme profil d'import pour les FEC suivants du même logiciel.
+- Carte de résumé (format, encodage, variante, lignes, écritures, période, SIREN, empreinte SHA-256), exercice et journal d'à-nouveaux modifiables et à confirmer.
+- Contrôle de conformité indicatif (56 contrôles inspirés de l'article A47 A-1 du LPF, de Test Compta Demat, du BOFiP et de contrôles d'audit) classés « Non conforme », « Anomalie », « Information », avec les lignes concernées et un export Excel. Les non-conformités n'empêchent jamais l'analyse.
+- Dossiers enregistrés sur ce poste (FEC de l'exercice et de l'exercice précédent), avec « Purger ce dossier » et « Tout purger ».
+
 ## [0.6.0] - 2026-10-08
 
 ### Ajouté

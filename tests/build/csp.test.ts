@@ -35,6 +35,8 @@ describe('CSP de production', () => {
   it('la vérification du build détecte les URL externes', () => {
     expect(verifierUrls('a.js', 'x="https://evil.exemple.com/p"', [])).toHaveLength(1);
     expect(verifierUrls('a.js', 'createElementNS("http://www.w3.org/2000/svg")', [])).toEqual([]);
+    expect(verifierUrls('a.js', 'ns="http://schemas.openxmlformats.org/spreadsheetml/2006/main"', [])).toEqual([]);
+    expect(verifierUrls('a.js', 'x="http://schemas.openxmlformats.org.evil.exemple/p"', [])).toHaveLength(1);
   });
 
   it('données de veille seulement exemptées du contrôle des URL (liens vers les sources)', () => {
