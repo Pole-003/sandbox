@@ -3,6 +3,10 @@
  *  - dist/index.html contient exactement la CSP de config/csp.ts, en tête de <head> ;
  *  - aucun script ni style en ligne (interdits par la CSP) ;
  *  - aucune URL absolue vers une autre origine dans les fichiers produits.
+ *
+ * Exception : les données de veille (news.json, veille-etat.json, archives/) contiennent par nature
+ * les liens vers les sources. Ce sont des données, jamais exécutées ni chargées par le navigateur :
+ * ces liens ne s'ouvrent que sur clic, dans un nouvel onglet (rel="noopener noreferrer").
  */
 import { readFileSync, readdirSync, statSync } from 'node:fs';
 import { join, relative } from 'node:path';
@@ -37,6 +41,12 @@ export function verifierUrls(fichier: string, contenu: string, urlsAutorisees: s
     .map((url) => `${fichier} : URL externe ${url}`);
 }
 
+/** Fichiers de données de veille publiés avec le site (chemin relatif à dist/). */
+export function estDonneeVeille(cheminDansDist: string): boolean {
+  const chemin = cheminDansDist.split('\\').join('/');
+  return chemin === 'news.json' || chemin === 'veille-etat.json' || /^archives\/\d{4}-\d{2}\.json$/.test(chemin);
+}
+
 function lister(dossier: string): string[] {
   return readdirSync(dossier).flatMap((nom) => {
     const chemin = join(dossier, nom);
@@ -52,7 +62,7 @@ if (process.argv[1] && fileURLToPath(import.meta.url) === process.argv[1]) {
   };
   const erreurs = verifierIndex(readFileSync(join(dist, 'index.html'), 'utf8'));
   for (const chemin of lister(dist)) {
-    if (!/\.(html|js|css|json|svg)$/.test(chemin)) continue;
+    if (!/\.(html|js|css|json|svg)$/.test(chemin) || estDonneeVeille(relative(dist, chemin))) continue;
     erreurs.push(...verifierUrls(relative(racine, chemin), readFileSync(chemin, 'utf8'), urls));
   }
   if (erreurs.length > 0) {

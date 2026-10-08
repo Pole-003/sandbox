@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import { BALISE_CSP, CSP, injecterCsp } from '../../config/csp.ts';
-import { verifierIndex, verifierUrls } from '../../scripts/verifier-build.ts';
+import { estDonneeVeille, verifierIndex, verifierUrls } from '../../scripts/verifier-build.ts';
 
 const HTML = '<!doctype html><html><head><meta charset="UTF-8" /><script type="module" src="/a.js"></script></head><body></body></html>';
 
@@ -35,5 +35,10 @@ describe('CSP de production', () => {
   it('la vérification du build détecte les URL externes', () => {
     expect(verifierUrls('a.js', 'x="https://evil.exemple.com/p"', [])).toHaveLength(1);
     expect(verifierUrls('a.js', 'createElementNS("http://www.w3.org/2000/svg")', [])).toEqual([]);
+  });
+
+  it('données de veille seulement exemptées du contrôle des URL (liens vers les sources)', () => {
+    expect(['news.json', 'veille-etat.json', 'archives/2026-08.json'].every(estDonneeVeille)).toBe(true);
+    expect(['assets/index.js', 'autre.json', 'archives/x.js', 'sous/news.json'].some(estDonneeVeille)).toBe(false);
   });
 });
