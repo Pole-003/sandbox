@@ -32,3 +32,17 @@ contiennent donc les pièges attendus : « 20 % », « 1,75 % », « art 283-2 �
 
 `attendus.json` donne, pour chaque fichier, l'identification, les valeurs des cases en centimes et les
 contrôles attendus, calculés par le générateur indépendamment du code de lecture.
+
+## Moteurs de rendu réels (`navigateurs/`)
+
+`npm run ca3:navigateurs` imprime quatre déclarations de la série `services` (09/2025, 11/2025, 02/2026,
+06/2026) avec de vrais producteurs de PDF, pour éprouver la lecture au-delà de pdf-lib :
+
+- **Chromium** (« Imprimer en PDF » d'une page HTML, avec les en-têtes et pieds de page du navigateur :
+  date, titre, adresse du fichier, « 3/5 »), en disposition « tableau » (cellules centrées verticalement,
+  en-têtes de colonnes répétés) ou « blocs » (lignes en flexbox, montants en haut) ;
+- **LibreOffice** (export PDF d'un document Word à tableaux, interlignes serrés).
+
+Les PDF produits sont versionnés ; leur régénération demande Chromium et LibreOffice. Les tests de
+`tests/modules/tva/ca3-robustesse.test.ts` déforment en outre les pages lues (en-têtes absents ou
+renommés, montants suivis de « € », texte découpé caractère par caractère, échelle, pieds de page).

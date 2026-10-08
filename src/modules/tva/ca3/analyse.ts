@@ -148,9 +148,13 @@ export function lignesVisuelles(pages: PageTexte[]): Ligne[] {
 
 const MOTIF_MONTANT = /^(-?)(\d{1,3}(?: \d{3})+|\d+)(?:,(\d{1,2}))?$/;
 
-/** « 120 000 » → 12 000 000 centimes ; null si la cellule n'est pas un montant. */
+/** « 120 000 », « 120 000 € », « −1 000 » → centimes ; null si la cellule n'est pas un montant. */
 export function lireMontantCa3(texte: string): number | null {
-  const m = MOTIF_MONTANT.exec(normaliser(texte));
+  const t = normaliser(texte)
+    .replace(/[\u2212\u2013]/g, '-')
+    .replace(/\s*(?:€|EUR|euros?)$/i, '')
+    .replace(/^- /, '-');
+  const m = MOTIF_MONTANT.exec(t);
   if (!m) return null;
   const euros = Number(m[2]!.replace(/ /g, ''));
   const centimes = euros * 100 + Number((m[3] ?? '').padEnd(2, '0'));
@@ -162,21 +166,28 @@ const dateIso = (jjmmaaaa: string | undefined) => {
   return m ? `${m[3]}-${m[2]}-${m[1]}` : null;
 };
 
+/**
+ * Identification : les libellés peuvent être coupés sur deux lignes et la valeur s'intercaler entre les
+ * deux morceaux (tableau centré verticalement) : la date est cherchée dans une courte fenêtre de texte,
+ * sans chiffre, qui suit le début du libellé.
+ */
 function lireIdentification(texte: string): IdentificationCa3 {
-  const t = texte.replace(/[   ]/g, ' ');
+  const lignes = texte.replace(/[\u00a0\u202f\u2007]/g, ' ');
+  const plat = lignes.replace(/\s+/g, ' ');
   const date = '(\\d{2}/\\d{2}/\\d{4})';
-  const premier = (motif: RegExp) => motif.exec(t)?.[1];
-  const periode = new RegExp(`P[ée]riode d[ée]clar[ée]e\\s*:?\\s*(?:du\\s*)?${date}\\s*(?:au|-)\\s*${date}`, 'i').exec(t);
-  const siren = premier(/SIREN\s*:?\s*(\d{3}\s?\d{3}\s?\d{3})\b/i);
-  const millesime = new RegExp(`3310-?CA3[^\\n]*?(?:compter du|à partir du)\\s*${date}`, 'i').exec(t)?.[1]?.slice(6) ?? null;
+  const apres = (libelle: string) => dateIso(new RegExp(`${libelle}[^0-9]{0,45}?${date}`, 'i').exec(plat)?.[1]);
+  const periode = new RegExp(`P[ée]riode d[ée]clar[ée]e[^0-9]{0,45}?${date}[^0-9]{0,12}?${date}`, 'i').exec(plat);
+  const siren = /SIREN[^0-9]{0,25}?(\d{3} ?\d{3} ?\d{3})(?!\d)/i.exec(plat)?.[1];
+  const millesime = new RegExp(`3310-?CA3(?!G)[^0-9]{0,8}(?:\\([^)]{0,60}?|[^0-9]{0,60}?)(?:compter du|partir du)[^0-9]{0,10}${date}`, 'i').exec(plat)?.[1]?.slice(6) ?? null;
+  const denomination = /D[ée]nomination\s*:?[ \t]*([^\n]+)/i.exec(lignes)?.[1]?.trim() || null;
   return {
-    denomination: premier(/D[ée]nomination\s*:\s*([^\n]+)/i)?.trim() ?? null,
+    denomination,
     siren: siren ? siren.replace(/\s/g, '') : null,
     debut: dateIso(periode?.[1]),
     fin: dateIso(periode?.[2]),
-    dateLimite: dateIso(premier(new RegExp(`Date limite de d[ée]p[ôo]t\\s*:?\\s*${date}`, 'i'))),
-    dateDepot: dateIso(premier(new RegExp(`Date de d[ée]p[ôo]t\\s*:?\\s*${date}`, 'i'))),
-    dateCreation: dateIso(premier(new RegExp(`Date de cr[ée]ation du document\\s*:?\\s*${date}`, 'i'))),
+    dateLimite: apres('Date limite de d[ée]p[ôo]t'),
+    dateDepot: apres('Date de d[ée]p[ôo]t'),
+    dateCreation: apres('Date de cr[ée]ation'),
     millesime,
   };
 }
@@ -188,15 +199,34 @@ interface Colonnes {
   debut: number;
 }
 
-/** En-têtes « Base hors taxe » et « Taxe due » sur la ligne, s'ils y figurent. */
+/** En-têtes « Base hors taxe » et « Taxe due » (ou variantes) sur la même ligne, s'ils y figurent. */
 function colonnesDeLigne(l: Ligne): Colonnes | null {
-  const base = l.cellules.find((c) => /base hors taxe/.test(sansAccents(c.texte)));
-  const taxe = l.cellules.find((c) => /^taxe due$/.test(sansAccents(normaliser(c.texte))) || /(^|\s)taxe due$/.test(sansAccents(c.texte)));
+  const base = l.cellules.find((c) => /(^|\s)base (hors taxe|ht|imposable)$/.test(sansAccents(normaliser(c.texte))));
+  const taxe = l.cellules.find((c) => /(^|\s)(taxe due|montant de (la )?taxe|tva due|taxe)$/.test(sansAccents(normaliser(c.texte))) && !/base/.test(sansAccents(c.texte)));
   if (!base || !taxe || base === taxe) return null;
   const cb = (base.x0 + base.x1) / 2;
   const ct = (taxe.x0 + taxe.x1) / 2;
   if (ct <= cb) return null;
   return { base: cb, taxe: ct, debut: cb - 0.75 * (ct - cb) };
+}
+
+/** Colonnes base / taxe déduites des lignes de taux portant deux montants (document sans en-têtes). */
+function colonnesDeduites(lignes: Ligne[], pages: PageTexte[]): Colonnes | null {
+  const bases: number[] = [];
+  const taxes: number[] = [];
+  for (const l of lignes) {
+    const code = l.cellules[0]?.texte.split(' ')[0] ?? '';
+    if (CASES_PAR_CODE.get(code)?.colonnes !== 2) continue;
+    const montants = l.cellules.filter((c) => lireMontantCa3(c.texte) !== null && (c.x0 + c.x1) / 2 >= pages[l.page]!.largeur * 0.5);
+    if (montants.length !== 2) continue;
+    bases.push((montants[0]!.x0 + montants[0]!.x1) / 2);
+    taxes.push((montants[1]!.x0 + montants[1]!.x1) / 2);
+  }
+  if (bases.length === 0) return null;
+  const moyenne = (t: number[]) => t.reduce((a, b) => a + b, 0) / t.length;
+  const base = moyenne(bases);
+  const taxe = moyenne(taxes);
+  return taxe > base ? { base, taxe, debut: base - 0.75 * (taxe - base) } : null;
 }
 
 export function analyserCa3(pages: PageTexte[]): LectureCa3 {
@@ -227,7 +257,9 @@ export function analyserCa3(pages: PageTexte[]): LectureCa3 {
   }
 
   let colonnes: Colonnes | null = null;
-  let courant: { code: string; aMontants: boolean } | null = null;
+  let courant: { code: string; aMontants: boolean; page: number; yHaut: number } | null = null;
+  // Sans en-têtes de colonnes dans tout le document : colonnes déduites des lignes de taux à deux montants.
+  const deduites = lignes.some((l) => colonnesDeLigne(l)) ? null : colonnesDeduites(lignes, pages);
   const largeurPage = (p: number) => pages[p]!.largeur;
 
   for (const l of lignes) {
@@ -254,14 +286,16 @@ export function analyserCa3(pages: PageTexte[]): LectureCa3 {
     if (estCode) {
       const code = premierMot;
       if (!CASES_PAR_CODE.has(code) && !casesInconnues.includes(code)) casesInconnues.push(code);
-      courant = { code, aMontants: montantsUtiles.length > 0 };
+      courant = { code, aMontants: montantsUtiles.length > 0, page: l.page, yHaut: l.yHaut };
       if (montantsUtiles.length) affecter(code, montantsUtiles);
       continue;
     }
     if (!montantsUtiles.length) continue;
     const texteLigne = sansAccents(l.cellules.map((c) => c.texte).join(' '));
     const ligneDont = /^\(?\s*dont\b/.test(texteLigne);
-    if (courant && !courant.aMontants && !ligneDont) {
+    // Suite d'un libellé : même page, au plus trois lignes sous le code (jamais un pied de page).
+    const proche = courant !== null && courant.page === l.page && l.yHaut - courant.yHaut <= 3.5 * l.taille;
+    if (courant && !courant.aMontants && !ligneDont && proche) {
       courant.aMontants = true;
       affecter(courant.code, montantsUtiles);
     } else {
@@ -279,9 +313,10 @@ export function analyserCa3(pages: PageTexte[]): LectureCa3 {
     if (def?.colonnes === 2) {
       for (const m of montants) {
         let colonne: 'base' | 'taxe';
-        if (colonnes) {
+        const reference = colonnes ?? deduites;
+        if (reference) {
           const centre = (m.c.x0 + m.c.x1) / 2;
-          colonne = Math.abs(centre - colonnes.base) < Math.abs(centre - colonnes.taxe) ? 'base' : 'taxe';
+          colonne = Math.abs(centre - reference.base) < Math.abs(centre - reference.taxe) ? 'base' : 'taxe';
         } else {
           colonne = montants.length === 2 && m === montants[0] ? 'base' : 'taxe';
           if (montants.length === 1) messages.push({ gravite: 'avertissement', code: 'COLONNE', message: `Case ${code} : en-têtes de colonnes absents, montant affecté à la taxe due.` });

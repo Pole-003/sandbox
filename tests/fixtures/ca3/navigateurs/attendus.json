@@ -1,0 +1,422 @@
+[
+ {
+  "fichier": "CA3_000777128_202509_chromium_tableau.pdf",
+  "producteur": "chromium",
+  "disposition": "tableau",
+  "description": "Mensuelle 09/2025 : achat d’immobilisation, crédit de TVA reporté (ligne 27)",
+  "identification": {
+   "denomination": "CONSEIL FICTIF SERVICES SAS",
+   "siren": "000777128",
+   "debut": "2025-09-01",
+   "fin": "2025-09-30",
+   "dateLimite": "2025-10-19",
+   "dateDepot": "2025-10-15",
+   "dateCreation": "2025-10-15",
+   "millesime": "2025"
+  },
+  "cases": {
+   "16": {
+    "montant": 1565000
+   },
+   "19": {
+    "montant": 3000000
+   },
+   "20": {
+    "montant": 302000
+   },
+   "23": {
+    "montant": 3302000
+   },
+   "25": {
+    "montant": 1737000
+   },
+   "27": {
+    "montant": 1737000
+   },
+   "A1": {
+    "montant": 8050000
+   },
+   "E2": {
+    "montant": 950000
+   },
+   "08": {
+    "base": 7600000,
+    "taxe": 1520000
+   },
+   "9B": {
+    "base": 450000,
+    "taxe": 45000
+   }
+  },
+  "controlesAttendus": []
+ },
+ {
+  "fichier": "CA3_000777128_202509_libreoffice_tableau.pdf",
+  "producteur": "libreoffice",
+  "disposition": "tableau",
+  "description": "Mensuelle 09/2025 : achat d’immobilisation, crédit de TVA reporté (ligne 27)",
+  "identification": {
+   "denomination": "CONSEIL FICTIF SERVICES SAS",
+   "siren": "000777128",
+   "debut": "2025-09-01",
+   "fin": "2025-09-30",
+   "dateLimite": "2025-10-19",
+   "dateDepot": "2025-10-15",
+   "dateCreation": "2025-10-15",
+   "millesime": "2025"
+  },
+  "cases": {
+   "16": {
+    "montant": 1565000
+   },
+   "19": {
+    "montant": 3000000
+   },
+   "20": {
+    "montant": 302000
+   },
+   "23": {
+    "montant": 3302000
+   },
+   "25": {
+    "montant": 1737000
+   },
+   "27": {
+    "montant": 1737000
+   },
+   "A1": {
+    "montant": 8050000
+   },
+   "E2": {
+    "montant": 950000
+   },
+   "08": {
+    "base": 7600000,
+    "taxe": 1520000
+   },
+   "9B": {
+    "base": 450000,
+    "taxe": 45000
+   }
+  },
+  "controlesAttendus": []
+ },
+ {
+  "fichier": "CA3_000777128_202511_chromium_blocs.pdf",
+  "producteur": "chromium",
+  "disposition": "blocs",
+  "description": "Mensuelle 11/2025 : imputation du crédit reporté (ligne 22) : ligne « dont » sans code avec montant sous la ligne 21",
+  "identification": {
+   "denomination": "CONSEIL FICTIF SERVICES SAS",
+   "siren": "000777128",
+   "debut": "2025-11-01",
+   "fin": "2025-11-30",
+   "dateLimite": "2025-12-19",
+   "dateDepot": "2025-12-15",
+   "dateCreation": "2025-12-15",
+   "millesime": "2025"
+  },
+  "cases": {
+   "16": {
+    "montant": 1856000
+   },
+   "20": {
+    "montant": 321000
+   },
+   "21": {
+    "montant": 30000
+   },
+   "22": {
+    "montant": 31000
+   },
+   "23": {
+    "montant": 382000
+   },
+   "28": {
+    "montant": 1474000
+   },
+   "32": {
+    "montant": 1474000
+   },
+   "A1": {
+    "montant": 9680000
+   },
+   "08": {
+    "base": 8880000,
+    "taxe": 1776000
+   },
+   "9B": {
+    "base": 800000,
+    "taxe": 80000
+   },
+   "TD": {
+    "montant": 1474000
+   }
+  },
+  "controlesAttendus": []
+ },
+ {
+  "fichier": "CA3_000777128_202511_libreoffice_tableau.pdf",
+  "producteur": "libreoffice",
+  "disposition": "tableau",
+  "description": "Mensuelle 11/2025 : imputation du crédit reporté (ligne 22) : ligne « dont » sans code avec montant sous la ligne 21",
+  "identification": {
+   "denomination": "CONSEIL FICTIF SERVICES SAS",
+   "siren": "000777128",
+   "debut": "2025-11-01",
+   "fin": "2025-11-30",
+   "dateLimite": "2025-12-19",
+   "dateDepot": "2025-12-15",
+   "dateCreation": "2025-12-15",
+   "millesime": "2025"
+  },
+  "cases": {
+   "16": {
+    "montant": 1856000
+   },
+   "20": {
+    "montant": 321000
+   },
+   "21": {
+    "montant": 30000
+   },
+   "22": {
+    "montant": 31000
+   },
+   "23": {
+    "montant": 382000
+   },
+   "28": {
+    "montant": 1474000
+   },
+   "32": {
+    "montant": 1474000
+   },
+   "A1": {
+    "montant": 9680000
+   },
+   "08": {
+    "base": 8880000,
+    "taxe": 1776000
+   },
+   "9B": {
+    "base": 800000,
+    "taxe": 80000
+   },
+   "TD": {
+    "montant": 1474000
+   }
+  },
+  "controlesAttendus": []
+ },
+ {
+  "fichier": "CA3_000777128_202602_chromium_tableau.pdf",
+  "producteur": "chromium",
+  "disposition": "tableau",
+  "description": "Mensuelle 02/2026 : incohérences volontaires (taxe 9B ≠ base × 10 %, ligne 16 ≠ somme des taxes)",
+  "identification": {
+   "denomination": "CONSEIL FICTIF SERVICES SAS",
+   "siren": "000777128",
+   "debut": "2026-02-01",
+   "fin": "2026-02-28",
+   "dateLimite": "2026-03-19",
+   "dateDepot": "2026-03-15",
+   "dateCreation": "2026-03-15",
+   "millesime": "2026"
+  },
+  "cases": {
+   "16": {
+    "montant": 1815000
+   },
+   "20": {
+    "montant": 312000
+   },
+   "23": {
+    "montant": 312000
+   },
+   "28": {
+    "montant": 1503000
+   },
+   "32": {
+    "montant": 1503000
+   },
+   "A1": {
+    "montant": 8875000
+   },
+   "E2": {
+    "montant": 800000
+   },
+   "08": {
+    "base": 8325000,
+    "taxe": 1665000
+   },
+   "9B": {
+    "base": 550000,
+    "taxe": 50000
+   },
+   "TD": {
+    "montant": 1503000
+   }
+  },
+  "controlesAttendus": [
+   "T9B",
+   "L16"
+  ]
+ },
+ {
+  "fichier": "CA3_000777128_202602_libreoffice_tableau.pdf",
+  "producteur": "libreoffice",
+  "disposition": "tableau",
+  "description": "Mensuelle 02/2026 : incohérences volontaires (taxe 9B ≠ base × 10 %, ligne 16 ≠ somme des taxes)",
+  "identification": {
+   "denomination": "CONSEIL FICTIF SERVICES SAS",
+   "siren": "000777128",
+   "debut": "2026-02-01",
+   "fin": "2026-02-28",
+   "dateLimite": "2026-03-19",
+   "dateDepot": "2026-03-15",
+   "dateCreation": "2026-03-15",
+   "millesime": "2026"
+  },
+  "cases": {
+   "16": {
+    "montant": 1815000
+   },
+   "20": {
+    "montant": 312000
+   },
+   "23": {
+    "montant": 312000
+   },
+   "28": {
+    "montant": 1503000
+   },
+   "32": {
+    "montant": 1503000
+   },
+   "A1": {
+    "montant": 8875000
+   },
+   "E2": {
+    "montant": 800000
+   },
+   "08": {
+    "base": 8325000,
+    "taxe": 1665000
+   },
+   "9B": {
+    "base": 550000,
+    "taxe": 50000
+   },
+   "TD": {
+    "montant": 1503000
+   }
+  },
+  "controlesAttendus": [
+   "T9B",
+   "L16"
+  ]
+ },
+ {
+  "fichier": "CA3_000777128_202606_chromium_blocs.pdf",
+  "producteur": "chromium",
+  "disposition": "blocs",
+  "description": "Mensuelle 06/2026",
+  "identification": {
+   "denomination": "CONSEIL FICTIF SERVICES SAS",
+   "siren": "000777128",
+   "debut": "2026-06-01",
+   "fin": "2026-06-30",
+   "dateLimite": "2026-07-19",
+   "dateDepot": "2026-07-15",
+   "dateCreation": "2026-07-15",
+   "millesime": "2026"
+  },
+  "cases": {
+   "16": {
+    "montant": 2288000
+   },
+   "20": {
+    "montant": 387000
+   },
+   "23": {
+    "montant": 387000
+   },
+   "28": {
+    "montant": 1901000
+   },
+   "32": {
+    "montant": 1901000
+   },
+   "A1": {
+    "montant": 11640000
+   },
+   "E2": {
+    "montant": 600000
+   },
+   "08": {
+    "base": 11240000,
+    "taxe": 2248000
+   },
+   "9B": {
+    "base": 400000,
+    "taxe": 40000
+   },
+   "TD": {
+    "montant": 1901000
+   }
+  },
+  "controlesAttendus": []
+ },
+ {
+  "fichier": "CA3_000777128_202606_libreoffice_tableau.pdf",
+  "producteur": "libreoffice",
+  "disposition": "tableau",
+  "description": "Mensuelle 06/2026",
+  "identification": {
+   "denomination": "CONSEIL FICTIF SERVICES SAS",
+   "siren": "000777128",
+   "debut": "2026-06-01",
+   "fin": "2026-06-30",
+   "dateLimite": "2026-07-19",
+   "dateDepot": "2026-07-15",
+   "dateCreation": "2026-07-15",
+   "millesime": "2026"
+  },
+  "cases": {
+   "16": {
+    "montant": 2288000
+   },
+   "20": {
+    "montant": 387000
+   },
+   "23": {
+    "montant": 387000
+   },
+   "28": {
+    "montant": 1901000
+   },
+   "32": {
+    "montant": 1901000
+   },
+   "A1": {
+    "montant": 11640000
+   },
+   "E2": {
+    "montant": 600000
+   },
+   "08": {
+    "base": 11240000,
+    "taxe": 2248000
+   },
+   "9B": {
+    "base": 400000,
+    "taxe": 40000
+   },
+   "TD": {
+    "montant": 1901000
+   }
+  },
+  "controlesAttendus": []
+ }
+]
