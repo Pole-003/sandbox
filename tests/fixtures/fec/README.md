@@ -18,7 +18,7 @@ Séparateur tabulation, utf-8, fins de ligne CRLF, debit-credit — 20546 lignes
 
 | Code | Constat attendu | Occurrences | Lignes |
 |---|---|---|---|
-| E09 | ValidDate postérieure à la clôture | 18 | 20530, 20531, 20532, 20533, 20534… (18 lignes) |
+| E09 | ValidDate postérieure à la clôture (Information) | 18 | 20530, 20531, 20532, 20533, 20534… (18 lignes) |
 
 ## Variantes de format
 
@@ -62,7 +62,7 @@ Séparateur tabulation, utf-8-bom, fins de ligne CRLF, debit-credit — 860 lign
 
 | Code | Constat attendu | Occurrences | Lignes |
 |---|---|---|---|
-| S04 | Marque d'ordre des octets (BOM) UTF-8 | 1 | — |
+| S04 | Marque d'ordre des octets (BOM) UTF-8 en tête de fichier (Information) | 1 | — |
 
 ### `variantes/000987651FEC20251231_iso-8859-15.txt`
 
@@ -80,7 +80,7 @@ Séparateur tabulation, windows-1252, fins de ligne CRLF, debit-credit — 860 l
 
 | Code | Constat attendu | Occurrences | Lignes |
 |---|---|---|---|
-| S03 | Jeu de caractères non prévu (ni ASCII, ni ISO-8859-15, ni UTF-8) | 1 | — |
+| S03 | Jeu de caractères non prévu (ni ASCII, ni ISO-8859-15, ni UTF-8) (Anomalie) | 1 | — |
 
 ### `variantes/000987651FEC20251231_excel-point-virgule.txt`
 
@@ -90,9 +90,9 @@ Séparateur point-virgule, windows-1252, fins de ligne CRLF, debit-credit — 86
 
 | Code | Constat attendu | Occurrences | Lignes |
 |---|---|---|---|
-| S02 | Séparateur de zones autre que tabulation ou « | » | 1 | — |
-| S03 | Jeu de caractères non prévu (ni ASCII, ni ISO-8859-15, ni UTF-8) | 1 | — |
-| S14 | Zones entre guillemets | 1 | — |
+| S02 | Séparateur de zones autre que la tabulation ou « | » (Non conforme) | 1 | — |
+| S03 | Jeu de caractères non prévu (ni ASCII, ni ISO-8859-15, ni UTF-8) (Anomalie) | 1 | — |
+| S14 | Zones entre guillemets (Anomalie) | 1 | — |
 
 ### `variantes/000987651FEC20251231_point-decimal.txt`
 
@@ -102,7 +102,7 @@ Séparateur tabulation, utf-8, fins de ligne CRLF, debit-credit — 860 lignes, 
 
 | Code | Constat attendu | Occurrences | Lignes |
 |---|---|---|---|
-| D06 | Montant au point décimal | 860 | 2, 3, 4, 5, 6… (860 lignes) |
+| D06 | Montant au point décimal (Non conforme) | 860 | 2, 3, 4, 5, 6… (860 lignes) |
 
 ### `variantes/000987651FEC20251231_milliers.txt`
 
@@ -112,7 +112,7 @@ Séparateur tabulation, utf-8, fins de ligne CRLF, debit-credit — 860 lignes, 
 
 | Code | Constat attendu | Occurrences | Lignes |
 |---|---|---|---|
-| D07 | Montant avec séparateur de milliers | 467 | 2, 3, 4, 7, 8… (467 lignes) |
+| D07 | Montant avec séparateur de milliers (Non conforme) | 467 | 2, 3, 4, 7, 8… (467 lignes) |
 
 ### `variantes/000987651FEC20251231_montants-signes.txt`
 
@@ -122,7 +122,7 @@ Séparateur tabulation, utf-8, fins de ligne CRLF, debit-credit — 860 lignes, 
 
 | Code | Constat attendu | Occurrences | Lignes |
 |---|---|---|---|
-| D08 | Montant signé | 3 | 768, 769, 770 |
+| D08 | Montant signé (Information) | 3 | 768, 769, 770 |
 
 ### `variantes/000987651FEC20251231_colonnes-casse-accents.txt`
 
@@ -132,7 +132,7 @@ Séparateur tabulation, utf-8, fins de ligne CRLF, debit-credit — 860 lignes, 
 
 | Code | Constat attendu | Occurrences | Lignes |
 |---|---|---|---|
-| S07 | Nom de zone reconnu malgré une casse ou des accents différents | 7 | 1 |
+| S07 | Nom de zone reconnu malgré une casse, des accents ou une variante officielle (Information) | 7 | — |
 
 ### `variantes/000987651FEC20251231_colonnes-en-trop.txt`
 
@@ -142,7 +142,7 @@ Séparateur tabulation, utf-8, fins de ligne CRLF, debit-credit — 860 lignes, 
 
 | Code | Constat attendu | Occurrences | Lignes |
 |---|---|---|---|
-| S10 | Zones supplémentaires | 2 | 1 |
+| S10 | Zones supplémentaires (Information) | 2 | — |
 
 ### `variantes/000987651FEC20251231_colonnes-ordre.txt`
 
@@ -152,7 +152,7 @@ Séparateur tabulation, utf-8, fins de ligne CRLF, debit-credit — 860 lignes, 
 
 | Code | Constat attendu | Occurrences | Lignes |
 |---|---|---|---|
-| S09 | Ordre des zones différent de l'arrêté | 1 | 1 |
+| S09 | Ordre des zones différent de l'arrêté (Anomalie) | 1 | — |
 
 ### `variantes/000987651FEC20251231_tiers-integre.txt`
 
@@ -162,7 +162,7 @@ Séparateur tabulation, utf-8, fins de ligne CRLF, debit-credit — 860 lignes, 
 
 | Code | Constat attendu | Occurrences | Lignes |
 |---|---|---|---|
-| D16 | Tiers intégré au numéro de compte (auxiliaire reconstruit) | 246 | 2, 3, 4, 5, 6… (246 lignes) |
+| D16 | Tiers intégré au numéro de compte (auxiliaire reconstruit) (Information) | 246 | 2, 3, 4, 5, 6… (246 lignes) |
 
 ### `variantes/000987651FEC20251231_fin-ligne-lf.txt`
 
@@ -222,10 +222,10 @@ Séparateur tabulation, utf-8, fins de ligne CRLF, debit-credit — 860 lignes, 
 
 | Code | Constat attendu | Occurrences | Lignes |
 |---|---|---|---|
-| E01 | Écriture déséquilibrée | 3 | 196, 197, 198 |
-| E02 | Déséquilibre global | 1 | — |
-| E03 | Déséquilibre d'un journal | 1 | — |
-| E04 | Déséquilibre d'un mois | 1 | — |
+| E01 | Écriture déséquilibrée (Non conforme) | 3 | 196, 197, 198 |
+| E02 | Déséquilibre global (Non conforme) | 1 | — |
+| E03 | Déséquilibre d'un journal (Anomalie) | 1 | — |
+| E04 | Déséquilibre d'un mois (Anomalie) | 1 | — |
 
 ### `pieges/000987651FEC20251231_piege-dates-invalides.txt`
 
@@ -235,8 +235,8 @@ Séparateur tabulation, utf-8, fins de ligne CRLF, debit-credit — 860 lignes, 
 
 | Code | Constat attendu | Occurrences | Lignes |
 |---|---|---|---|
-| D03 | Date inexistante ou illisible | 6 | 104, 105, 106, 358, 359, 360 |
-| D04 | Date valide mais pas au format AAAAMMJJ | 3 | 484, 485, 486 |
+| D03 | Date inexistante ou illisible (Non conforme) | 6 | 104, 105, 106, 358, 359, 360 |
+| D04 | Date valide mais pas au format AAAAMMJJ (Anomalie) | 3 | 484, 485, 486 |
 
 ### `pieges/000987651FEC20251231_piege-hors-exercice.txt`
 
@@ -246,8 +246,8 @@ Séparateur tabulation, utf-8, fins de ligne CRLF, debit-credit — 860 lignes, 
 
 | Code | Constat attendu | Occurrences | Lignes |
 |---|---|---|---|
-| E07 | EcritureDate hors exercice | 4 | 31, 32, 860, 861 |
-| E09 | ValidDate postérieure à la clôture | 2 | 860, 861 |
+| E07 | EcritureDate hors exercice (Anomalie) | 4 | 31, 32, 860, 861 |
+| E09 | ValidDate postérieure à la clôture (Information) | 2 | 860, 861 |
 
 ### `pieges/000987651FEC20251231_piege-validdate-anterieure.txt`
 
@@ -257,7 +257,7 @@ Séparateur tabulation, utf-8, fins de ligne CRLF, debit-credit — 860 lignes, 
 
 | Code | Constat attendu | Occurrences | Lignes |
 |---|---|---|---|
-| E08 | ValidDate antérieure à EcritureDate | 6 | 148, 149, 150, 279, 280, 281 |
+| E08 | ValidDate antérieure à EcritureDate (Anomalie) | 6 | 148, 149, 150, 279, 280, 281 |
 
 ### `pieges/000987651FEC20251231_piege-numerotation.txt`
 
@@ -267,8 +267,8 @@ Séparateur tabulation, utf-8, fins de ligne CRLF, debit-credit — 860 lignes, 
 
 | Code | Constat attendu | Occurrences | Lignes |
 |---|---|---|---|
-| E10 | Trou dans la numérotation | 1 | 126 |
-| E11 | Numéro d'écriture en double | 5 | 227, 228, 229, 230, 231 |
+| E10 | Trou dans la numérotation (Anomalie) | 1 | 126 |
+| E11 | Numéro d'écriture en double (Anomalie) | 5 | 227, 228, 229, 230, 231 |
 
 ### `pieges/000987651FEC20251231_piege-libelle-compte.txt`
 
@@ -278,7 +278,7 @@ Séparateur tabulation, utf-8, fins de ligne CRLF, debit-credit — 860 lignes, 
 
 | Code | Constat attendu | Occurrences | Lignes |
 |---|---|---|---|
-| L01 | Libellés différents pour un même CompteNum | 1 | 167 |
+| L01 | Libellés différents pour un même CompteNum (Anomalie) | 1 | 167 |
 
 ### `pieges/000987651FEC20251231_piege-debit-credit-meme-ligne.txt`
 
@@ -288,7 +288,7 @@ Séparateur tabulation, utf-8, fins de ligne CRLF, debit-credit — 860 lignes, 
 
 | Code | Constat attendu | Occurrences | Lignes |
 |---|---|---|---|
-| D11 | Débit et crédit non nuls sur la même ligne | 2 | 261, 262 |
+| D11 | Débit et crédit non nuls sur la même ligne (Anomalie) | 2 | 261, 262 |
 
 ### `pieges/000987651FEC20251231_piege-zone-obligatoire-vide.txt`
 
@@ -298,7 +298,7 @@ Séparateur tabulation, utf-8, fins de ligne CRLF, debit-credit — 860 lignes, 
 
 | Code | Constat attendu | Occurrences | Lignes |
 |---|---|---|---|
-| D01 | Zone obligatoire non renseignée | 3 | 51, 115, 396 |
+| D01 | Zone obligatoire non renseignée (Non conforme) | 3 | 51, 115, 396 |
 
 ### `pieges/000987651FEC20251231_piege-auxiliaire-sans-libelle.txt`
 
@@ -308,7 +308,7 @@ Séparateur tabulation, utf-8, fins de ligne CRLF, debit-credit — 860 lignes, 
 
 | Code | Constat attendu | Occurrences | Lignes |
 |---|---|---|---|
-| D13 | CompAuxNum sans CompAuxLib (ou l'inverse) | 2 | 71, 161 |
+| D13 | CompAuxNum sans CompAuxLib, ou l’inverse (Anomalie) | 2 | 71, 161 |
 
 ### `pieges/000987651FEC20251231_piege-devise-incomplete.txt`
 
@@ -318,7 +318,7 @@ Séparateur tabulation, utf-8, fins de ligne CRLF, debit-credit — 860 lignes, 
 
 | Code | Constat attendu | Occurrences | Lignes |
 |---|---|---|---|
-| D14 | Montantdevise sans Idevise (ou l'inverse) | 2 | 109, 173 |
+| D14 | Montantdevise sans Idevise, ou l’inverse (Anomalie) | 2 | 109, 173 |
 
 ### `pieges/000987651FEC20251231_piege-sans-a-nouveaux.txt`
 
@@ -328,7 +328,7 @@ Séparateur tabulation, utf-8, fins de ligne CRLF, debit-credit — 831 lignes, 
 
 | Code | Constat attendu | Occurrences | Lignes |
 |---|---|---|---|
-| E13 | À-nouveaux absents | 1 | — |
+| E13 | À-nouveaux absents (Anomalie) | 1 | — |
 
 ### `pieges/000987651FEC20251231_piege-structure.txt`
 
@@ -338,10 +338,10 @@ Séparateur tabulation, utf-8, fins de ligne CRLF, debit-credit — 860 lignes, 
 
 | Code | Constat attendu | Occurrences | Lignes |
 |---|---|---|---|
-| S11 | Nombre de zones de la ligne différent de l'en-tête | 1 | 45 |
-| D10 | CompteNum ne commençant pas par trois chiffres | 1 | 136 |
-| D05 | Montant non numérique | 1 | 173 |
-| S12 | Ligne vide | 1 | 531 |
+| S11 | Nombre de zones d'une ligne différent de l'en-tête (Non conforme) | 1 | 45 |
+| D10 | CompteNum ne commençant pas par trois chiffres (Anomalie) | 1 | 136 |
+| D05 | Montant non numérique (Non conforme) | 1 | 173 |
+| S12 | Ligne vide (Information) | 1 | 531 |
 
 ### `pieges/000987651FEC20251231_piege-sens-invalide.txt`
 
@@ -351,7 +351,7 @@ Séparateur tabulation, utf-8, fins de ligne CRLF, montant-sens-pm — 860 ligne
 
 | Code | Constat attendu | Occurrences | Lignes |
 |---|---|---|---|
-| D09 | Sens hors D, C, +1, -1 | 1 | 232 |
+| D09 | Sens hors D, C, +1, -1 (Non conforme) | 1 | 232 |
 
 ## Faits remarquables du FEC propre
 

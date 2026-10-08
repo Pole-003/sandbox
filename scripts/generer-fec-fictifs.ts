@@ -25,6 +25,7 @@ import { simulerNegoce, type ParamsNegoce } from './fec-fictifs/negoce.ts';
 import { fabriqueCodesTiers } from './fec-fictifs/noms.ts';
 import { construirePieges, type ConstatAttendu } from './fec-fictifs/pieges.ts';
 import { genererTresorerie } from './fec-fictifs/tresorerie.ts';
+import { LIBELLES_GRAVITE, regle } from '../src/modules/fec/conformite/regles.ts';
 import { totaliser, type Totaux } from './fec-fictifs/totaux.ts';
 
 export const SOCIETES = {
@@ -228,7 +229,7 @@ const VARIANTES: Variante[] = [
   {
     nom: 'milliers',
     description: 'Montants avec séparateur de milliers (espace insécable : « 1 234,56 »).',
-    options: { milliers: ' ' },
+    options: { milliers: '\u00a0' },
     constats: (e) => [parLignes('D07', lignesOu(e, (m) => m.some((x) => Math.abs(x) >= 100_000)))],
   },
   {
@@ -241,7 +242,7 @@ const VARIANTES: Variante[] = [
     nom: 'colonnes-casse-accents',
     description: `En-têtes en casse et accents différents : ${Object.values(ENTETES_CASSE).join(', ')}.`,
     options: { enTetes: ENTETES_CASSE },
-    constats: () => [{ code: 'S07', lignes: [1], occurrences: Object.keys(ENTETES_CASSE).length }],
+    constats: () => [global('S07', Object.keys(ENTETES_CASSE).length)],
   },
   {
     nom: 'colonnes-en-trop',
@@ -252,13 +253,13 @@ const VARIANTES: Variante[] = [
         { nom: 'Utilisateur', valeur: (e) => (e.journalCode === 'OD' ? 'COMPTA' : 'AUTO') },
       ],
     },
-    constats: () => [{ code: 'S10', lignes: [1], occurrences: 2 }],
+    constats: () => [global('S10', 2)],
   },
   {
     nom: 'colonnes-ordre',
     description: 'Zones dans un ordre différent de l\'arrêté (CompteNum et CompteLib en tête, Debit et Credit inversés).',
     options: { ordre: [4, 5, 0, 1, 2, 3, 6, 7, 8, 9, 10, 12, 11, 13, 14, 15, 16, 17] },
-    constats: () => [{ code: 'S09', lignes: [1], occurrences: 1 }],
+    constats: () => [global('S09')],
   },
   {
     nom: 'tiers-integre',
@@ -541,41 +542,6 @@ export function genererJeu(dossier = DOSSIER): Attendus {
 
 // ---- README ----------------------------------------------------------------------------------------
 
-const LIBELLES_CODES: Record<string, string> = {
-  S02: 'Séparateur de zones autre que tabulation ou « | »',
-  S03: 'Jeu de caractères non prévu (ni ASCII, ni ISO-8859-15, ni UTF-8)',
-  S04: 'Marque d\'ordre des octets (BOM) UTF-8',
-  S07: 'Nom de zone reconnu malgré une casse ou des accents différents',
-  S09: 'Ordre des zones différent de l\'arrêté',
-  S10: 'Zones supplémentaires',
-  S11: 'Nombre de zones de la ligne différent de l\'en-tête',
-  S12: 'Ligne vide',
-  S14: 'Zones entre guillemets',
-  D01: 'Zone obligatoire non renseignée',
-  D03: 'Date inexistante ou illisible',
-  D04: 'Date valide mais pas au format AAAAMMJJ',
-  D05: 'Montant non numérique',
-  D06: 'Montant au point décimal',
-  D07: 'Montant avec séparateur de milliers',
-  D08: 'Montant signé',
-  D09: 'Sens hors D, C, +1, -1',
-  D10: 'CompteNum ne commençant pas par trois chiffres',
-  D11: 'Débit et crédit non nuls sur la même ligne',
-  D13: 'CompAuxNum sans CompAuxLib (ou l\'inverse)',
-  D14: 'Montantdevise sans Idevise (ou l\'inverse)',
-  D16: 'Tiers intégré au numéro de compte (auxiliaire reconstruit)',
-  L01: 'Libellés différents pour un même CompteNum',
-  E01: 'Écriture déséquilibrée',
-  E02: 'Déséquilibre global',
-  E03: 'Déséquilibre d\'un journal',
-  E04: 'Déséquilibre d\'un mois',
-  E07: 'EcritureDate hors exercice',
-  E08: 'ValidDate antérieure à EcritureDate',
-  E09: 'ValidDate postérieure à la clôture',
-  E10: 'Trou dans la numérotation',
-  E11: 'Numéro d\'écriture en double',
-  E13: 'À-nouveaux absents',
-};
 
 function lignesResumees(lignes: number[]): string {
   if (lignes.length === 0) return '—';
@@ -619,7 +585,7 @@ function readme(a: Attendus): string {
         t.push('| Code | Constat attendu | Occurrences | Lignes |');
         t.push('|---|---|---|---|');
         for (const c of f.constats) {
-          t.push(`| ${c.code} | ${LIBELLES_CODES[c.code] ?? ''} | ${c.occurrences} | ${lignesResumees(c.lignes)} |`);
+          t.push(`| ${c.code} | ${regle(c.code).libelle} (${LIBELLES_GRAVITE[regle(c.code).gravite]}) | ${c.occurrences} | ${lignesResumees(c.lignes)} |`);
         }
       }
       t.push('');

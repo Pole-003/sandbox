@@ -44,7 +44,7 @@ export interface OptionsPlat {
   montant: 'debit-credit' | 'montant-sens-dc' | 'montant-sens-pm';
   decimal: ',' | '.';
   /** Séparateur de milliers ('' = aucun, conforme). */
-  milliers: '' | ' ' | ' ';
+  milliers: '' | '\u00a0' | ' ';
   /** Avoirs exprimés en montants négatifs (signe en tête ou en fin, en alternance). */
   signes: boolean;
   guillemets: boolean;

@@ -1,6 +1,6 @@
 # Contrôle de conformité des FEC : règles et variantes de format
 
-> **Proposition soumise à validation (point d'arrêt 1).** Une fois validé, ce document est la référence des codes de règles utilisés par `src/modules/fec/` et par `tests/fixtures/fec/attendus.json`. Il complète la section 3.2 de `docs/SPEC.md`.
+> **Validé au point d'arrêt 1 (08/10/2026).** Ce document est la référence des codes de règles utilisés par `src/modules/fec/` et par `tests/fixtures/fec/attendus.json`. Il complète la section 3.2 de `docs/SPEC.md`.
 
 ## Sources
 
@@ -15,7 +15,7 @@ Calquées sur le verdict de Test Compta Demat, pour que l'indicateur de l'outil 
 
 | Gravité | Signification | Correspondance Test Compta Demat |
 |---|---|---|
-| **Bloquant** | Test Compta Demat déclarerait le fichier non conforme, ou l'anomalie fausse les balances. L'analyse reste possible après avertissement. | erreurs `E` (structure, format), `O` (zone absente), `V` (données absentes) |
+| **Non conforme** | Test Compta Demat déclarerait le fichier non conforme, ou l'anomalie fausse les balances. **N'empêche jamais l'import ni l'exploitation du FEC** : l'utilisateur est averti et continue. | erreurs `E` (structure, format), `O` (zone absente), `V` (données absentes) |
 | **Anomalie** | Non-conformité au texte ou incohérence à examiner, sans rejet par l'outil officiel. | anomalies `A`, règles du texte non contrôlées par l'outil |
 | **Information** | Constat utile, toléré par le texte ou par l'outil officiel. | informations `I`, champs supplémentaires `S` |
 
@@ -30,35 +30,35 @@ Chaque constat liste les lignes concernées (numéro de ligne d'origine du fichi
 | Code | Libellé | Gravité | Source | Méthode de détection |
 |---|---|---|---|---|
 | S01 | Nom de fichier non conforme à `{SIREN}FEC{AAAAMMJJ}` | Anomalie | A47 A-1 IX ; BOFiP § 370 | Expression `^\d{9}FEC\d{8}` en début de nom (suffixe toléré : `_01`, `_1T` pour un exercice découpé, BOFiP § 370) ; SIREN à 9 chiffres avec clé de Luhn ; date existante. |
-| S02 | Séparateur de zones autre que tabulation ou « \| » | Bloquant | A47 A-1 VI 1° c ; Test Compta Demat (virgule et point-virgule refusés depuis 2013) | Séparateur détecté par comptage sur les 50 premières lignes (constance du nombre de zones). |
+| S02 | Séparateur de zones autre que tabulation ou « \| » | Non conforme | A47 A-1 VI 1° c ; Test Compta Demat (virgule et point-virgule refusés depuis 2013) | Séparateur détecté par comptage sur les 50 premières lignes (constance du nombre de zones). |
 | S03 | Jeu de caractères non prévu (ni ASCII, ni ISO-8859-15, ni UTF-8) | Anomalie | A47 A-1 XII 1° | UTF-8 strict refusé et présence d'octets 0x80–0x9F (propres à Windows-1252). |
 | S04 | Marque d'ordre des octets (BOM) UTF-8 en tête | Information | Test Compta Demat (BOM retiré silencieusement) | Octets `EF BB BF` en tête. |
-| S05 | Première ligne sans nom des zones | Bloquant | A47 A-1 VII 4° / VIII 9° | Aucune cellule de la première ligne ne correspond à un nom de zone connu ; ouverture de l'assistant de correspondance. |
-| S06 | Zone réglementaire absente de l'en-tête | Bloquant | A47 A-1 VII 1°, VIII 3° à 8° ; Test Compta Demat (`O`) | Zones attendues selon le régime (18, 21 ou 22) non trouvées, même après normalisation. Une zone fournie par l'assistant de correspondance reste signalée. |
+| S05 | Première ligne sans nom des zones | Non conforme | A47 A-1 VII 4° / VIII 9° | Aucune cellule de la première ligne ne correspond à un nom de zone connu ; ouverture de l'assistant de correspondance. |
+| S06 | Zone réglementaire absente de l'en-tête | Non conforme | A47 A-1 VII 1°, VIII 3° à 8° ; Test Compta Demat (`O`) | Zones attendues selon le régime (18, 21 ou 22) non trouvées, même après normalisation. Une zone fournie par l'assistant de correspondance reste signalée. |
 | S07 | Nom de zone reconnu malgré une casse ou des accents différents, ou variante officielle | Information | Test Compta Demat (comparaison insensible à la casse, « é/è » remplacés) ; XSD et BOFiP pour `CompteAuxNum` / `CompteAuxLib` | Nom différent de l'officiel, identique après mise en majuscules et suppression des accents, ou variante `CompteAuxNum` / `CompteAuxLib`. |
-| S08 | Nom de zone reconnu par un alias (espaces, synonyme) | Bloquant | Test Compta Demat (zone considérée absente) | Correspondance trouvée seulement via la table d'alias (ex. `Compte Num`, `Libellé écriture`) ou l'assistant. `CompteAuxNum` et `CompteAuxLib` ne sont **pas** concernés : prévus par les schémas XSD et employés par le BOFiP (§ 160 et 170), ils relèvent de S07. |
+| S08 | Nom de zone reconnu par un alias (espaces, synonyme) | Non conforme | Test Compta Demat (zone considérée absente) | Correspondance trouvée seulement via la table d'alias (ex. `Compte Num`, `Libellé écriture`) ou l'assistant. `CompteAuxNum` et `CompteAuxLib` ne sont **pas** concernés : prévus par les schémas XSD et employés par le BOFiP (§ 160 et 170), ils relèvent de S07. |
 | S09 | Ordre des zones différent de l'arrêté | Anomalie | A47 A-1 VII 1° (« dans l'ordre ») ; non contrôlé par Test Compta Demat | Rang de chaque zone réglementaire dans l'en-tête. |
 | S10 | Zones supplémentaires | Information | A47 A-1 VII 1° (autorisées) ; Test Compta Demat (`S`) | Colonnes non reconnues ; listées par nom. |
-| S11 | Nombre de zones d'une ligne différent de l'en-tête | Bloquant | Test Compta Demat (`E`) | Comptage par ligne ; les zones manquantes sont lues comme vides. |
+| S11 | Nombre de zones d'une ligne différent de l'en-tête | Non conforme | Test Compta Demat (`E`) | Comptage par ligne ; les zones manquantes sont lues comme vides. |
 | S12 | Ligne vide | Information | Test Compta Demat | Ligne sans aucun caractère hors blancs ; ignorée. |
 | S13 | Séparateur en fin de ligne (zone vide fictive) | Information | Test Compta Demat (`I`) | En-tête terminé par un séparateur. |
 | S14 | Zones entre guillemets | Anomalie | A47 A-1 XII 3° (aucun délimiteur prévu) | Guillemets ouvrants et fermants sur la majorité des zones ; retirés à la lecture. |
-| S15 | Fichier sans écriture | Bloquant | Test Compta Demat | Aucune ligne de données. |
-| S16 | XML non conforme au schéma officiel | Bloquant | A47 A-1 VI 2° ; Test Compta Demat (validation XSD) | Racine `comptabilite`, `exercice` / `DateCloture`, `journal`, `ecriture` (au moins 2 `ligne`), éléments obligatoires et leur ordre, selon le schéma déclaré (`formatA47A-I-VII-1`, `VIII-3`, `VIII-5`, `VIII-7`). Contrôle structurel, sans validateur XSD complet. |
+| S15 | Fichier sans écriture | Non conforme | Test Compta Demat | Aucune ligne de données. |
+| S16 | XML non conforme au schéma officiel | Non conforme | A47 A-1 VI 2° ; Test Compta Demat (validation XSD) | Racine `comptabilite`, `exercice` / `DateCloture`, `journal`, `ecriture` (au moins 2 `ligne`), éléments obligatoires et leur ordre, selon le schéma déclaré (`formatA47A-I-VII-1`, `VIII-3`, `VIII-5`, `VIII-7`). Contrôle structurel, sans validateur XSD complet. |
 
 ### Données (D)
 
 | Code | Libellé | Gravité | Source | Méthode de détection |
 |---|---|---|---|---|
-| D01 | Zone obligatoire non renseignée | Bloquant | Test Compta Demat (`E` et `V` « données absentes ») ; A47 A-1 VII 1° ; BOFiP § 180-190 (PieceRef et PieceDate conventionnelles exigées même pour les à-nouveaux) | BIC/IS : JournalCode, JournalLib, EcritureNum, EcritureDate, CompteNum, CompteLib, PieceRef, PieceDate, EcritureLib, Montant/Sens le cas échéant, ValidDate. BNC/BA : JournalCode, JournalLib et CompteNum relèvent de D19. Debit et Credit vides relèvent de D18. |
+| D01 | Zone obligatoire non renseignée | Non conforme | Test Compta Demat (`E` et `V` « données absentes ») ; A47 A-1 VII 1° ; BOFiP § 180-190 (PieceRef et PieceDate conventionnelles exigées même pour les à-nouveaux) | BIC/IS : JournalCode, JournalLib, EcritureNum, EcritureDate, CompteNum, CompteLib, PieceRef, PieceDate, EcritureLib, Montant/Sens le cas échéant, ValidDate. BNC/BA : JournalCode, JournalLib et CompteNum relèvent de D19. Debit et Credit vides relèvent de D18. |
 | D02 | DateRglt ou ModeRglt non renseigné (trésorerie BA/BNC) | Anomalie | A47 A-1 VIII 5° et 7° (non contrôlé par Test Compta Demat depuis 2015) | Zone vide sur une ligne d'un FEC de trésorerie. |
-| D03 | Date inexistante ou illisible | Bloquant | A47 A-1 XII 4° ; Test Compta Demat | EcritureDate, PieceDate, ValidDate, DateLet, DateRglt : ni AAAAMMJJ ni format reconnaissable, ou date inexistante (31 février, mois 13). Test Compta Demat ne détecte que mois > 12 et jour > 31 : cet outil est plus strict. |
+| D03 | Date inexistante ou illisible | Non conforme | A47 A-1 XII 4° ; Test Compta Demat | EcritureDate, PieceDate, ValidDate, DateLet, DateRglt : ni AAAAMMJJ ni format reconnaissable, ou date inexistante (31 février, mois 13). Test Compta Demat ne détecte que mois > 12 et jour > 31 : cet outil est plus strict. |
 | D04 | Date valide mais pas au format AAAAMMJJ | Anomalie | A47 A-1 XII 4° (Test Compta Demat tolère AAAA-MM-JJ, JJ/MM/AAAA…) | Date lue avec séparateurs, ordre JJ/MM/AAAA ou heure accolée. Non applicable au XML (format AAAA-MM-JJ imposé par le schéma). |
-| D05 | Montant non numérique | Bloquant | Test Compta Demat (`E`) | Debit, Credit, Montant, Montantdevise non convertibles ; la valeur est comptée pour 0. |
-| D06 | Montant au point décimal | Bloquant | A47 A-1 XII 2° ; Test Compta Demat (`E` en fichier à plat) | Point comme séparateur décimal (le point est la norme en XML : non signalé). La conversion est faite. |
-| D07 | Montant avec séparateur de milliers | Bloquant | A47 A-1 XII 2° ; Test Compta Demat (`E`) | Espace, espace insécable ou point de groupement des milliers. La conversion est faite. |
+| D05 | Montant non numérique | Non conforme | Test Compta Demat (`E`) | Debit, Credit, Montant, Montantdevise non convertibles ; la valeur est comptée pour 0. |
+| D06 | Montant au point décimal | Non conforme | A47 A-1 XII 2° ; Test Compta Demat (`E` en fichier à plat) | Point comme séparateur décimal (le point est la norme en XML : non signalé). La conversion est faite. |
+| D07 | Montant avec séparateur de milliers | Non conforme | A47 A-1 XII 2° ; Test Compta Demat (`E`) | Espace, espace insécable ou point de groupement des milliers. La conversion est faite. |
 | D08 | Montant signé (négatif) | Information | A47 A-1 XII 2° (signe en tête ou en fin autorisé) | Signe « - » en tête ou en fin ; un débit négatif est converti en crédit positif (et inversement). |
-| D09 | Sens hors D, C, +1, -1 | Bloquant | A47 A-1 X ; BOFiP § 230 ; Test Compta Demat (`E`) | Valeur de Sens autre que D, C, +1, -1 (casse ignorée ; « + 1 » avec espace refusé par le X mais interprété). |
+| D09 | Sens hors D, C, +1, -1 | Non conforme | A47 A-1 X ; BOFiP § 230 ; Test Compta Demat (`E`) | Valeur de Sens autre que D, C, +1, -1 (casse ignorée ; « + 1 » avec espace refusé par le X mais interprété). |
 | D10 | CompteNum ne commençant pas par trois chiffres | Anomalie | A47 A-1 VII 1° (info. 5) ; Test Compta Demat (`A`) | `^\d{3}`. |
 | D11 | Débit et crédit non nuls sur la même ligne | Anomalie | Test Compta Demat (`A`) | Debit ≠ 0 et Credit ≠ 0. |
 | D12 | Ligne à débit et crédit nuls | Information | Test Compta Demat (`A`) — **gravité abaissée, à valider** | Debit = Credit = 0 (fréquent et sans incidence sur les soldes). |
@@ -83,8 +83,8 @@ Chaque constat liste les lignes concernées (numéro de ligne d'origine du fichi
 
 | Code | Libellé | Gravité | Source | Méthode de détection |
 |---|---|---|---|---|
-| E01 | Écriture déséquilibrée | Bloquant | Contrôle d'audit complémentaire (partie double) | Σ débit ≠ Σ crédit par écriture. |
-| E02 | Déséquilibre global | Bloquant | Contrôle d'audit complémentaire | Σ débit ≠ Σ crédit sur le fichier ; écart affiché. |
+| E01 | Écriture déséquilibrée | Non conforme | Contrôle d'audit complémentaire (partie double) | Σ débit ≠ Σ crédit par écriture. |
+| E02 | Déséquilibre global | Non conforme | Contrôle d'audit complémentaire | Σ débit ≠ Σ crédit sur le fichier ; écart affiché. |
 | E03 | Déséquilibre d'un journal | Anomalie | Contrôle d'audit complémentaire | Par JournalCode. |
 | E04 | Déséquilibre d'un mois | Anomalie | Contrôle d'audit complémentaire | Par mois d'EcritureDate. |
 | E05 | Écriture d'une seule ligne | Anomalie | Test Compta Demat (schéma XSD : au moins 2 lignes par écriture) | Nombre de lignes de l'écriture. |
@@ -116,9 +116,9 @@ Le rapport s'ouvre sur : « Contrôle indicatif. Seul l'outil officiel Test Comp
 
 Tolérances de forme (signalées, jamais bloquantes pour l'import) : encodage UTF-8 avec ou sans BOM, ISO-8859-15, Windows-1252 (forçable) ; fins de ligne CR, LF, CRLF ; point-virgule ou virgule avec guillemets ; point décimal, milliers, signes ; casse, accents, alias de colonnes et colonnes en trop ; tiers intégré au numéro de compte.
 
-## Points à trancher
+## Décisions du point d'arrêt 1
 
-1. **D06 / D07 (point décimal, milliers) en Bloquant** : c'est le verdict de Test Compta Demat pour un fichier à plat. Les passer en Anomalie ?
-2. **D12 (lignes à zéro) abaissé en Information** (Test Compta Demat : anomalie).
-3. **S08 (alias) en Bloquant** : l'outil officiel ne reconnaîtrait pas la zone. `CompteAuxNum` / `CompteAuxLib` en sont exclus (variante officielle, S07).
-4. **Décodage Windows-1252** : le `TextDecoder` de Node 22 décode Windows-1252 comme ISO-8859-1 (les octets 0x80–0x9F, dont « € » et « œ », deviennent des caractères de contrôle) ; les navigateurs sont corrects. Proposition : `TextDecoder` pour UTF-8, table de correspondance de 32 caractères pour Windows-1252 et ISO-8859-15, identique en navigateur et en test (écart à la ligne « Lecture des encodages via TextDecoder » de CLAUDE.md).
+1. Niveau le plus élevé nommé « Non conforme » ; il n'empêche jamais l'exploitation du FEC.
+2. D06 / D07 (point décimal, milliers) et S08 (alias) : « Non conforme », comme Test Compta Demat ; la valeur est néanmoins convertie.
+3. D12 (lignes à zéro) : Information.
+4. Encodages : `TextDecoder` pour UTF-8 ; table de correspondance pour Windows-1252 et ISO-8859-15 (le `TextDecoder` de Node 22 décode Windows-1252 comme ISO-8859-1, ce qui fausserait les tests).

@@ -1648,9 +1648,7 @@
    "constats": [
     {
      "code": "S07",
-     "lignes": [
-      1
-     ],
+     "lignes": [],
      "occurrences": 7
     }
    ],
@@ -1675,9 +1673,7 @@
    "constats": [
     {
      "code": "S10",
-     "lignes": [
-      1
-     ],
+     "lignes": [],
      "occurrences": 2
     }
    ],
@@ -1702,9 +1698,7 @@
    "constats": [
     {
      "code": "S09",
-     "lignes": [
-      1
-     ],
+     "lignes": [],
      "occurrences": 1
     }
    ],

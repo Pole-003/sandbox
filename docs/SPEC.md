@@ -67,8 +67,8 @@ Référence : article A47 A-1 du LPF (Légifrance) et l'outil officiel DGFiP « 
 | BIC/IS standard, 18 zones Debit / Credit | noms de colonnes |
 | BIC/IS avec `Montant` + `Sens` à la place de Debit/Credit (Sens `D`/`C` ou `+1`/`-1`) | noms de colonnes |
 | BNC/BA en droit commercial | structure proche du standard |
-| BA de trésorerie, BNC de trésorerie (recettes-dépenses) | zones spécifiques à relever dans l'article A47 A-1 |
-| XML conforme aux XSD officiels (BIC/IS, BNC/BA droit commercial, BA trésorerie, BNC trésorerie) | racine XML et namespace |
+| BA de trésorerie (21 zones : + DateRglt, ModeRglt, NatOp), BNC de trésorerie (22 zones : + IdClient) | présence de ces zones (A47 A-1 VIII 5° et 7°) |
+| XML conforme aux XSD officiels (BIC/IS, BNC/BA droit commercial, BA trésorerie, BNC trésorerie) | racine `comptabilite` et schéma déclaré (`xsi:noNamespaceSchemaLocation`, sans espace de noms) |
 
 Tolérances pratiques (import accepté mais signalé comme non-conformité) :
 - Encodages UTF-8 avec ou sans BOM, ISO-8859-15, Windows-1252 ; détection automatique avec possibilité de forcer.
@@ -81,7 +81,9 @@ Tolérances pratiques (import accepté mais signalé comme non-conformité) :
 Contrôle du nom de fichier : `{SIREN}FEC{AAAAMMJJ}` (date de clôture) ; extraction du SIREN et de la date de clôture, modifiables par l'utilisateur.
 
 ### 3.2 Contrôle de conformité (inspiré de Test Compta Demat)
-Chaque contrôle a : un code, un libellé, une gravité (Bloquant / Anomalie / Information), un nombre d'occurrences, la liste des lignes concernées (export possible), la source de la règle (« A47 A-1 » ou « Contrôle d'audit complémentaire »).
+Chaque contrôle a : un code, un libellé, une gravité (Non conforme / Anomalie / Information), un nombre d'occurrences, la liste des lignes concernées (export possible), la source de la règle (« A47 A-1 », « Test Compta Demat », BOFiP ou « Contrôle d'audit complémentaire »).
+
+**Le tableau détaillé des règles (codes S, D, L, E), validé le 08/10/2026, est dans `docs/fec-regles-conformite.md` ; il fait référence.** « Non conforme » signifie que Test Compta Demat rejetterait le fichier : l'utilisateur est averti mais l'import et les analyses restent possibles.
 
 Structure et format :
 - Nombre, noms et ordre des zones.
