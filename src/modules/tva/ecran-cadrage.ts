@@ -7,7 +7,6 @@
 import { h } from '../../app/dom.ts';
 import { formaterMontant } from '../../core/format.ts';
 import { ecrirePreference, lirePreference } from '../../core/stockage.ts';
-import { lireParametres as lireParametresCirc } from '../circularisations/stockage.ts';
 import { bouton, dateFr, nombreFr, telecharger, TYPE_XLSX } from '../fec/ecran/commun.ts';
 import { chargerExcelJS, octetsClasseur } from '../fec/export/xlsx.ts';
 import { chargerDonneesTva, type DonneesTvaFec, type FiltreLignes } from '../fec/interface-tva.ts';
@@ -134,8 +133,7 @@ export function rendreCadrage(zone: HTMLElement, dossier: Dossier, donnees: () =
   function rendreSynthese(): void {
     if (!cadrage) return;
     const g = cadrage.g340;
-    const p = parametres();
-    const tuile = (valeur: string, libelle: string, alerte = false) => h('div', { class: 'tuile' }, h('span', { class: `tuile-valeur${alerte ? ' ecart-hors-seuil' : ''}` }, valeur), h('span', { class: 'tuile-libelle' }, libelle));
+    const tuile = (valeur: string, libelle: string, alerte = false) => h('div', { class: 'tuile' }, h('span', { class: `tuile-valeur${alerte ? ' ecart-non-nul' : ''}` }, valeur), h('span', { class: 'tuile-libelle' }, libelle));
     synthese.replaceChildren(
       h(
         'div',
@@ -144,14 +142,16 @@ export function rendreCadrage(zone: HTMLElement, dossier: Dossier, donnees: () =
         tuile(`${signe(g.tvaDeclaree)} €`, `TVA collectée déclarée (${cadrage.retenues.length} CA3)`),
         tuile(`${signe(g.ecart)} €`, 'Écart (théorique − déclarée)'),
         tuile(`${signe(g.justifie)} €`, 'Justifié'),
-        tuile(`${signe(g.residuel)} €`, `Écart résiduel (seuil ${formaterMontant(p.seuil)} €)`, g.depasseSeuil),
+        tuile(`${signe(g.residuel)} €`, 'Écart résiduel non justifié', g.residuel !== 0),
       ),
       h(
         'p',
-        { class: `bandeau ${g.depasseSeuil ? 'bandeau-alerte' : 'bandeau-succes'}`, role: 'status' },
-        g.depasseSeuil
-          ? `Écart résiduel non justifié de ${signe(g.residuel)} €, supérieur au seuil de ${formaterMontant(p.seuil)} € : à justifier.`
-          : `Écart résiduel de ${signe(g.residuel)} €, inférieur ou égal au seuil de ${formaterMontant(p.seuil)} €.`,
+        { class: `bandeau ${g.residuel !== 0 ? 'bandeau-alerte' : 'bandeau-succes'}`, role: 'status' },
+        g.ecart === 0
+          ? 'Aucun écart entre la TVA collectée théorique et la TVA collectée déclarée.'
+          : g.residuel === 0
+            ? `Écart de ${signe(g.ecart)} €, entièrement justifié.`
+            : `Écart de ${signe(g.ecart)} €, dont ${signe(g.justifie)} € justifiés : écart résiduel non justifié de ${signe(g.residuel)} €.`,
       ),
       h(
         'div',
@@ -307,7 +307,7 @@ export function rendreCadrage(zone: HTMLElement, dossier: Dossier, donnees: () =
             {},
             h('tr', { class: 'ligne-solde' }, h('th', { scope: 'row', colspan: '5' }, 'TOTAL TVA collectée théorique'), h('td', { class: 'nombre montant' }, signe(g.tvaTheorique)), h('td', { colspan: '4' })),
             h('tr', { class: 'ligne-solde' }, h('th', { scope: 'row', colspan: '5' }, 'TVA collectée déclarée (G300)'), h('td', { class: 'nombre montant' }, signe(g.tvaDeclaree)), h('td', { colspan: '4' })),
-            h('tr', { class: 'ligne-solde' }, h('th', { scope: 'row', colspan: '5' }, 'ÉCART'), h('td', { class: `nombre montant${Math.abs(g.ecart) > p.seuil ? ' ecart-hors-seuil' : ''}` }, signe(g.ecart)), h('td', { colspan: '4' })),
+            h('tr', { class: 'ligne-solde' }, h('th', { scope: 'row', colspan: '5' }, 'ÉCART'), h('td', { class: `nombre montant${g.ecart !== 0 ? ' ecart-non-nul' : ''}` }, signe(g.ecart)), h('td', { colspan: '4' })),
           ),
         ),
       ),
@@ -383,7 +383,7 @@ export function rendreCadrage(zone: HTMLElement, dossier: Dossier, donnees: () =
                 h('td', { class: 'nombre montant' }, m.tvaDeclaree === null ? '—' : signe(m.tvaDeclaree)),
                 h('td', { class: 'nombre montant' }, mois ? lien(m.tva4457, `TVA au crédit des 4457 — ${m.periode}`, { comptes: ['4457'], mois, sens: 'credit' }) : signe(m.tva4457)),
                 h('td', { class: 'nombre montant' }, m.tvaAutoliquidee ? (mois ? lien(m.tvaAutoliquidee, `TVA autoliquidée — ${m.periode}`, { comptes: p.prefixesAutoliquidation, mois, sens: 'credit' }) : signe(m.tvaAutoliquidee)) : ''),
-                h('td', { class: `nombre montant${m.ecartTva ? ' ecart-hors-seuil' : ''}` }, m.ecartTva === null ? '' : signe(m.ecartTva)),
+                h('td', { class: `nombre montant${m.ecartTva ? ' ecart-non-nul' : ''}` }, m.ecartTva === null ? '' : signe(m.ecartTva)),
                 h('td', { class: 'nombre montant' }, m.caDeclare === null ? '—' : signe(m.caDeclare)),
                 h('td', { class: 'nombre montant' }, mois ? lien(m.caComptabilise, `Chiffre d’affaires — ${m.periode}`, { comptes: p.prefixesProduits, mois }) : signe(m.caComptabilise)),
                 h('td', { class: 'nombre montant' }, m.ecartCa === null ? '' : signe(m.ecartCa)),
@@ -410,7 +410,7 @@ export function rendreCadrage(zone: HTMLElement, dossier: Dossier, donnees: () =
                 h('th', { scope: 'row' }, x.libelle, h('div', { class: 'note texte-secondaire' }, x.explication)),
                 h('td', { class: 'nombre montant' }, lien(x.comptable, x.libelle, { comptes: x.comptes, aNouveaux: true })),
                 h('td', { class: 'nombre montant' }, x.declare === null ? '—' : signe(x.declare)),
-                h('td', { class: `nombre montant${x.ecart ? ' ecart-hors-seuil' : ''}` }, x.ecart === null ? '' : signe(x.ecart)),
+                h('td', { class: `nombre montant${x.ecart ? ' ecart-non-nul' : ''}` }, x.ecart === null ? '' : signe(x.ecart)),
               ),
             ),
           ),
@@ -474,7 +474,7 @@ export function rendreCadrage(zone: HTMLElement, dossier: Dossier, donnees: () =
             'tfoot',
             {},
             h('tr', { class: 'ligne-solde' }, h('th', { scope: 'row' }, 'Total justifié'), h('td', { class: 'nombre montant' }, signe(g.justifie)), h('td', { colspan: '3' })),
-            h('tr', { class: 'ligne-solde' }, h('th', { scope: 'row' }, 'Écart résiduel non justifié'), h('td', { class: `nombre montant${g.depasseSeuil ? ' ecart-hors-seuil' : ''}` }, signe(g.residuel)), h('td', { colspan: '3' }, g.depasseSeuil ? `Supérieur au seuil de ${formaterMontant(p.seuil)} €` : `Inférieur ou égal au seuil de ${formaterMontant(p.seuil)} €`)),
+            h('tr', { class: 'ligne-solde' }, h('th', { scope: 'row' }, 'Écart résiduel non justifié'), h('td', { class: `nombre montant${g.residuel !== 0 ? ' ecart-non-nul' : ''}` }, signe(g.residuel)), h('td', { colspan: '3' }, g.residuel === 0 ? 'Écart entièrement justifié' : '')),
           ),
         ),
       ),
@@ -541,10 +541,6 @@ export function rendreCadrage(zone: HTMLElement, dossier: Dossier, donnees: () =
         'div',
         { class: 'ligne-champs' },
         h('div', { class: 'champ' }, h('label', { for: regime.id }, 'Régime d’exigibilité'), regime),
-        texte('tva-seuil', 'Seuil d’écart acceptable (€)', (p.seuil / 100).toFixed(2).replace('.', ','), (v) => {
-          const c = versCentimes(v);
-          if (c !== undefined && c !== null && c >= 0) p.seuil = c;
-        }),
         texte('tva-collaborateur', 'Collaborateur', p.collaborateur, (v) => {
           p.collaborateur = v.trim();
           ecrirePreference(PREF_COLLABORATEUR, p.collaborateur || null);
@@ -568,7 +564,7 @@ export function rendreCadrage(zone: HTMLElement, dossier: Dossier, donnees: () =
       h('p', { class: 'note' }, `${cadrage!.retenues.length} déclaration(s) retenue(s) : ${cadrage!.periodes.join(', ') || 'aucune'}.`, cadrage!.horsExercice.length ? ` Hors exercice (non retenues) : ${cadrage!.horsExercice.map((d) => libellePeriode(d.identification.debut, d.identification.fin)).join(', ')}.` : '', declarations.length === 0 ? ' Déposez les CA3 ci-dessus.' : ''),
       h('div', { class: 'actions' }, bouton('Rétablir les paramètres par défaut', () => {
         if (!window.confirm('Rétablir les paramètres par défaut ? Les taux saisis, soldes N-1 saisis, ventilations et justifications seront perdus.')) return;
-        donnees()!.parametres = { ...parametresParDefaut(p.seuil), collaborateur: p.collaborateur };
+        donnees()!.parametres = { ...parametresParDefaut(), collaborateur: p.collaborateur };
         enregistrer();
       })),
     );
@@ -634,7 +630,7 @@ export function rendreCadrage(zone: HTMLElement, dossier: Dossier, donnees: () =
 
   zone.replaceChildren(h('section', { class: 'carte' }, h('h2', {}, 'Cadrage de la TVA collectée'), h('p', { class: 'texte-secondaire' }, 'Chargement du FEC du dossier…')));
   void (async () => {
-    const [n, n1, circ] = await Promise.all([chargerDonneesTva(dossier.id, 'N'), chargerDonneesTva(dossier.id, 'N-1'), lireParametresCirc(dossier.id).catch(() => null)]);
+    const [n, n1] = await Promise.all([chargerDonneesTva(dossier.id, 'N'), chargerDonneesTva(dossier.id, 'N-1')]);
     if (detruit) return;
     if (!n) {
       zone.replaceChildren(h('section', { class: 'carte' }, h('h2', {}, 'Cadrage de la TVA collectée'), h('p', {}, 'Le dossier n’a pas encore de FEC de l’exercice : ', h('a', { href: '#/fec' }, 'importez-le dans le module FEC'), ' pour reconstituer la TVA théorique.')));
@@ -645,8 +641,7 @@ export function rendreCadrage(zone: HTMLElement, dossier: Dossier, donnees: () =
     const d = donnees();
     if (!d) return;
     if (!d.parametres) {
-      // Seuil par défaut : SAI du dossier (module Circularisations), sinon 1 000 €.
-      d.parametres = { ...parametresParDefaut(circ?.sai ?? 100_000), collaborateur: lirePreference(PREF_COLLABORATEUR) ?? '' };
+      d.parametres = { ...parametresParDefaut(), collaborateur: lirePreference(PREF_COLLABORATEUR) ?? '' };
       void sauver();
     }
     zone.replaceChildren(h('section', { class: 'carte', 'aria-labelledby': 'titre-cadrage-tva' }, h('h2', { id: 'titre-cadrage-tva' }, 'Cadrage de la TVA collectée'), synthese, onglets, panneau, dialogue));

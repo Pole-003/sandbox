@@ -120,7 +120,7 @@
   outline-offset: 1px;
 }
 
-.ecart-hors-seuil {
+.ecart-non-nul {
   color: var(--c-danger);
   font-weight: 700;
 }

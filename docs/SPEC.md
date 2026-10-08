@@ -304,9 +304,10 @@ Le même tableau sert à la vérification : un clic sur une valeur la corrige, a
 ### 5.3 TVA collectée théorique (G340)
 Interface FEC dédiée : `src/modules/fec/interface-tva.ts`. Elle fournit la balance, les mouvements mensuels, l'observation des écritures de vente et les lignes de détail.
 
+Le module TVA est indépendant du module Circularisations, qui relève du commissariat aux comptes : il n'en lit ni les paramètres (SS, SP, SAI) ni les données. Les métadonnées communes du dossier FEC sont dans le fichier neutre `src/modules/fec/dossier-fec.ts`.
+
 **Paramètres du dossier** (IndexedDB, avec les déclarations) :
 - régime d'exigibilité : encaissements par défaut, débits, ou mixte avec un régime par compte ;
-- seuil d'écart : par défaut le SAI saisi dans le module Circularisations, sinon 1 000 € ;
 - collaborateur ;
 - préfixes : produits (70 ; 75, 77 ou comptes précis sélectionnables), TVA collectée observée (4457, 44587), encours (clients 411 et 413, douteux 416, avances 4191, FAE 418, PCA 487), pertes (654), TVA autoliquidée sur achats (4452) ;
 - réglages par compte, ventilation et justifications.
@@ -353,7 +354,7 @@ Règles complémentaires :
   - solde de 4455 à la clôture = ligne 28 de la déclaration qui se termine à la clôture ;
   - solde de 44567 = ligne 27 de cette déclaration ;
   - au régime des encaissements, solde des comptes de TVA collectée (4457, 44587) = TVA comprise dans les encours N.
-- **Justification :** lignes libres (libellé avec exemples proposés, montant, commentaire, référence de pièce). L'écart résiduel est mis en évidence s'il dépasse le seuil.
+- **Justification :** lignes libres (libellé avec exemples proposés, montant, commentaire, référence de pièce). Pas de seuil : l'écart et l'écart résiduel non justifié sont affichés tels quels, et mis en évidence dès qu'ils ne sont pas nuls. Les paramètres enregistrés avec un seuil (version 1) sont convertis à la lecture (version 2, seuil retiré).
 - **Détail des écritures :** chaque montant calculé (CA par compte, soldes N, TVA du mois, CA du mois, contrôles) ouvre les lignes du FEC qui le composent, dans la limite de 2 000 lignes affichées, avec le total.
 
 ### 5.5 Export Excel
@@ -364,11 +365,11 @@ Classeur ExcelJS avec des formules vivantes. Chaque formule porte son résultat 
   - ventes par compte : CA imposable = CA − exonéré, TVA = ROUND(imposable × taux) ;
   - régularisations par catégorie et par taux, avec les formules TTC / (1 + taux) × taux ;
   - synthèse par taux (SUMIFS) ;
-  - TOTAL, TVA déclarée liée par formule à la feuille G300, ÉCART, seuil ;
-  - tableau de justification, et écart résiduel mis en évidence au-delà du seuil (mise en forme conditionnelle).
+  - TOTAL, TVA déclarée liée par formule à la feuille G300, ÉCART ;
+  - tableau de justification, et écart résiduel non justifié, mis en évidence s'il n'est pas nul (mise en forme conditionnelle).
 - **« Cadrage mensuel » :** écarts en formules, plus les contrôles complémentaires.
 - **« Anomalies CA3 » :** anomalies, puis corrections tracées.
-- **« Paramètres » :** régime, seuil, méthode de ventilation, préfixes, empreintes SHA-256 du FEC et de chaque PDF, date, version de l'outil.
+- **« Paramètres » :** régime, méthode de ventilation, préfixes, empreintes SHA-256 du FEC et de chaque PDF, date, version de l'outil.
 
 Les formules sont vérifiées par un recalcul réel avec LibreOffice, après modification de saisies dans le classeur.
 

@@ -93,7 +93,6 @@ export interface G340 {
   ecart: number;
   justifie: number;
   residuel: number;
-  depasseSeuil: boolean;
   avertissements: string[];
 }
 
@@ -354,7 +353,6 @@ export function calculerG340(e: EntreeG340): G340 {
     ecart,
     justifie,
     residuel,
-    depasseSeuil: Math.abs(residuel) > p.seuil,
     avertissements,
   };
 }

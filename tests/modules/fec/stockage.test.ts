@@ -190,3 +190,18 @@ describe('migration de la base (version 3 → 4)', () => {
     expect((await lireTva('v3')).declarations).toEqual([]);
   });
 });
+
+describe('paramètres du cadrage de TVA (version 1 → 2)', () => {
+  it('convertit les paramètres enregistrés avec un seuil d’écart : seuil retiré, le reste conservé', async () => {
+    await toutPurger();
+    const { enregistrerTva, lireTva } = await import('../../../src/modules/tva/stockage.ts');
+    const { parametresParDefaut } = await import('../../../src/modules/tva/cadrage/parametres.ts');
+    const anciens = { ...parametresParDefaut(), version: 1, seuil: 250_000, collaborateur: 'C. Fictif' };
+    await enregistrerTva({ version: 1, dossierId: 'p1', declarations: [], parametres: anciens as never, modifieLe: '' });
+    const relus = (await lireTva('p1')).parametres!;
+    expect(relus.version).toBe(2);
+    expect('seuil' in relus).toBe(false);
+    expect(relus.collaborateur).toBe('C. Fictif');
+    expect(relus).toEqual({ ...parametresParDefaut(), collaborateur: 'C. Fictif' });
+  });
+});

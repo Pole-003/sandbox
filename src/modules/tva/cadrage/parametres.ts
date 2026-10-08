@@ -50,10 +50,9 @@ export interface LigneJustification {
 }
 
 export interface ParametresCadrage {
-  version: 1;
+  /** 2 : suppression du seuil d'écart (version 1), l'écart et l'écart résiduel sont affichés tels quels. */
+  version: 2;
   regime: Regime;
-  /** Seuil d'écart acceptable (centimes). */
-  seuil: number;
   collaborateur: string;
   /** Préfixes des comptes de produits retenus (70 par défaut ; 75, 77… sélectionnables). */
   prefixesProduits: string[];
@@ -79,11 +78,10 @@ export interface ParametresCadrage {
   justifications: LigneJustification[];
 }
 
-export function parametresParDefaut(seuil = 100_000): ParametresCadrage {
+export function parametresParDefaut(): ParametresCadrage {
   return {
-    version: 1,
+    version: 2,
     regime: 'encaissements',
-    seuil,
     collaborateur: '',
     prefixesProduits: ['70'],
     prefixesTva: ['4457', '44587'],
@@ -95,6 +93,13 @@ export function parametresParDefaut(seuil = 100_000): ParametresCadrage {
     soldesN1: {},
     justifications: [],
   };
+}
+
+/** Convertit des paramètres enregistrés par une version antérieure (version 1 : seuil d'écart, abandonné). */
+export function migrerParametres(p: ParametresCadrage | (Omit<ParametresCadrage, 'version'> & { version: 1; seuil?: number })): ParametresCadrage {
+  if (p.version === 2) return p;
+  const { seuil: _seuil, ...reste } = p;
+  return { ...reste, version: 2 };
 }
 
 /** Exemples de lignes de justification proposés (notre feuille G340). */

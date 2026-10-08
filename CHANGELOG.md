@@ -2,6 +2,12 @@
 
 Toutes les évolutions notables de la Sandbox Pôle 003. Format inspiré de « Keep a Changelog », numéros de version au format semver.
 
+## [0.14.1] - 2026-10-08
+
+### Modifié
+- **Cadrage de TVA :** plus de seuil d'écart. L'écart et l'écart résiduel non justifié sont affichés tels quels, à l'écran et dans la feuille Excel, et mis en évidence dès qu'ils ne sont pas nuls.
+- **Cadrage de TVA :** le module ne dépend plus du module Circularisations (il ne reprend plus le SAI). Les paramètres déjà enregistrés sont convertis automatiquement.
+
 ## [0.14.0] - 2026-10-08
 
 ### Ajouté

@@ -26,7 +26,7 @@ beforeAll(async () => {
     const l = await lireFixture('services', a.fichier);
     declarations.push({ id: a.fichier, source: 'pdf', nomFichier: a.fichier, empreinte: 'e'.repeat(64), identification: l.identification, lues: l.cases, corrections: [], messagesLecture: l.messages, casesInconnues: l.casesInconnues, importeLe: '' });
   }
-  p = parametresParDefaut(100_000);
+  p = parametresParDefaut();
   p.collaborateur = 'C. Exemple';
   p.ventilation = { methode: 'manuelle', manuelle: ventilationExacte(ATTENDUS_TVA.conforme) };
   p.justifications = [{ id: 'j1', libelle: 'Écart de déclaration du mois de février', montant: 3_000, commentaire: 'Justification partielle (test)', piece: 'CA3 02/2026' }];
@@ -93,6 +93,17 @@ describe('export Excel du cadrage', () => {
     expect((declaree!.value as { formula: string }).formula).toMatch(/^'G300 Récap TVA'!O\d+$/);
     const params = wb.getWorksheet('Paramètres')!;
     expect(params.getColumn(2).values).toContain(fec.metadonnees.empreinte);
+  });
+
+  it('écart affiché sans seuil : aucune référence à un seuil, résiduel mis en évidence dès qu’il n’est pas nul', async () => {
+    const wb = await lire();
+    const textes: string[] = [];
+    for (const ws of wb.worksheets) ws.eachRow((row) => row.eachCell((c) => textes.push(String(c.value))));
+    expect(textes.filter((t) => /seuil/i.test(t))).toEqual([]);
+    expect(wb.definedNames.model.map((n) => n.name).sort()).toEqual(['ECART_RESIDUEL', 'TVA_DECLAREE', 'TVA_THEORIQUE']);
+    const g = wb.getWorksheet('G340 Contrôle TVA collectée')!;
+    const regles = (g as unknown as { conditionalFormattings: { rules: { formulae?: string[] }[] }[] }).conditionalFormattings.flatMap((m) => m.rules.flatMap((r) => r.formulae ?? []));
+    expect(regles.some((f) => /^\$C\$\d+<>0$/.test(f))).toBe(true);
   });
 
   let soffice = false;

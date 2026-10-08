@@ -10,9 +10,8 @@
 import { calculerBalance } from './analyses/balance.ts';
 import { creerContexte, t, type ContexteAnalyse } from './analyses/contexte.ts';
 import type { FecColonnes } from './donnees/colonnes.ts';
-import { construireDonneesFec, type MetadonneesDossierFec } from './interface-circularisations.ts';
+import { lireDossierFec, type MetadonneesDossierFec } from './dossier-fec.ts';
 import { dateIso } from './import/valeurs.ts';
-import type { JournalAN } from './metadonnees.ts';
 import { lireColonnes, lireDossier, lireImport, type Dossier, type ImportEnregistre, type Role } from './stockage/base-fec.ts';
 
 export const VERSION_INTERFACE_TVA = 1;
@@ -104,11 +103,8 @@ function marquer(f: FecColonnes, prefixes: readonly string[], exclus: readonly s
 const moisDe = (d: number) => (d > 0 ? `${Math.floor(d / 10000)}-${String(Math.floor(d / 100) % 100).padStart(2, '0')}` : '');
 
 export function construireDonneesTva(colonnes: FecColonnes, imp: ImportEnregistre, dossier: Pick<Dossier, 'id' | 'nom'>): DonneesTvaFec {
-  const base = construireDonneesFec(colonnes, imp, dossier);
-  const r = imp.reglages;
-  const journal = r.journalAN ? imp.meta.journaux.find((j) => j.code === r.journalAN) : undefined;
-  const journalAN: JournalAN | null = journal ? { code: journal.code, libelle: journal.libelle, methode: imp.meta.journalAN?.code === journal.code ? imp.meta.journalAN.methode : 'code' } : null;
-  const ctx: ContexteAnalyse = creerContexte(colonnes, base.metadonnees.exercice, journalAN);
+  const { metadonnees, journalAN } = lireDossierFec(imp, dossier);
+  const ctx: ContexteAnalyse = creerContexte(colonnes, metadonnees.exercice, journalAN);
   const f = colonnes;
   let balance: SoldeCompteTva[] | null = null;
   // Lignes de chaque écriture (indices), construites à la demande.
@@ -128,7 +124,7 @@ export function construireDonneesTva(colonnes: FecColonnes, imp: ImportEnregistr
 
   return {
     version: VERSION_INTERFACE_TVA,
-    metadonnees: base.metadonnees,
+    metadonnees,
     comptes() {
       balance ??= calculerBalance(ctx).comptes.map((c) => ({ compteNum: c.compteNum, compteLib: c.compteLib, ouverture: c.ouverture, debit: c.debit, credit: c.credit, cloture: c.cloture }));
       return balance;

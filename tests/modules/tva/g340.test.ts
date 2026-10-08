@@ -85,7 +85,7 @@ describe('TVA théorique (régime des encaissements)', () => {
     const g = calculerG340(entree(conforme, p));
     expect(g.tvaDeclaree).toBe(ATTENDUS_TVA.conforme.tvaCollecteeDeclaree);
     expect(g.ecart).toBe(5_000);
-    expect(g.depasseSeuil).toBe(false);
+    expect(g.residuel).toBe(5_000);
     p.justifications = [{ id: '1', libelle: 'Écart de déclaration du mois de février', montant: 5_000, commentaire: '9B : 500 au lieu de 550', piece: 'CA3 02/2026' }];
     const j = calculerG340(entree(conforme, p));
     expect([j.justifie, j.residuel]).toEqual([5_000, 0]);
@@ -95,9 +95,7 @@ describe('TVA théorique (régime des encaissements)', () => {
     const g = calculerG340(entree(cutoff, parametres(true, 'cutoff'), corrigees()));
     expect(g.tvaTheorique).toBe(ATTENDUS_TVA.cutoff.tvaTheorique);
     expect(g.ecart).toBe(-200_000);
-    const p = parametres(true, 'cutoff');
-    p.seuil = 100_000;
-    expect(calculerG340(entree(cutoff, p, corrigees())).depasseSeuil).toBe(true);
+    expect(g.residuel).toBe(-200_000);
   });
 
   it('régularisations : encours N-1 / N, FAE, PCA, pertes, autoliquidation', () => {

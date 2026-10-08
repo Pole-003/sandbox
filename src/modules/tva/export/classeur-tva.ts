@@ -5,13 +5,13 @@
  *  - « G340 Contrôle TVA collectée » : en-tête (Entreprise, Exercice, Date, Collaborateur, Chap. G 340),
  *    ventes par compte, synthèse Ventes / TVA / Régularisations / Montant à déclarer par taux, encours N-1
  *    et N par taux (TTC / (1 + taux) × taux), TOTAL, TVA déclarée liée à la feuille G300, ÉCART, tableau de
- *    justification et écart résiduel mis en évidence au-delà du seuil ;
+ *    justification et écart résiduel non justifié (mis en évidence s'il n'est pas nul) ;
  *  - « Cadrage mensuel » (et contrôles complémentaires), « Anomalies CA3 », « Paramètres ».
  * Montants en euros (numériques), taux en pourcentage ; chaque formule porte aussi son résultat calculé.
  */
 import type { Workbook, Worksheet } from 'exceljs';
 import { dateExcel, euros, FORMAT_DATE, FORMAT_MONTANT, type ExcelJSModule } from '../../fec/export/xlsx.ts';
-import type { MetadonneesDossierFec } from '../../fec/interface-circularisations.ts';
+import type { MetadonneesDossierFec } from '../../fec/dossier-fec.ts';
 import type { MessageCa3 } from '../ca3/analyse.ts';
 import type { CorrectionCa3 } from '../ca3/declaration.ts';
 import type { LigneG300 } from '../cadrage/g300.ts';
@@ -247,14 +247,13 @@ function feuilleG340(wb: Workbook, d: DonneesClasseurTva, collectee: string): vo
     for (const col of ['C', 'D', 'E', 'F', 'H', 'I', 'J']) ws.getCell(`${col}${r}`).numFmt = FORMAT_MONTANT;
   }
 
-  // Total, TVA déclarée (feuille G300), écart, seuil.
+  // Total, TVA déclarée (feuille G300), écart.
   r += 2;
   const ligneTotal = r;
   const resume: [string, ReturnType<typeof formule> | number, number][] = [
     ['TOTAL TVA collectée théorique', formule(`H${totalVentes}+I${totalRegul}`, euros(g.tvaTheorique)), g.tvaTheorique],
     ['TVA collectée déclarée (G300)', formule(`'G300 Récap TVA'!${collectee}`, euros(g.tvaDeclaree)), g.tvaDeclaree],
     ['ÉCART (théorique − déclarée)', formule(`H${ligneTotal}-H${ligneTotal + 1}`, euros(g.ecart)), g.ecart],
-    ['Seuil d’écart acceptable', euros(p.seuil), p.seuil],
   ];
   resume.forEach(([libelle, v], i) => {
     ws.getCell(`F${r + i}`).value = libelle;
@@ -264,9 +263,7 @@ function feuilleG340(wb: Workbook, d: DonneesClasseurTva, collectee: string): vo
     ws.getCell(`H${r + i}`).font = { bold: true };
   });
   const ligneEcart = r + 2;
-  const ligneSeuil = r + 3;
   wb.definedNames.add(`'G340 Contrôle TVA collectée'!$H$${ligneTotal}`, 'TVA_THEORIQUE');
-  wb.definedNames.add(`'G340 Contrôle TVA collectée'!$H$${ligneSeuil}`, 'SEUIL_TVA');
 
   // Justification de l'écart.
   r += 6;
@@ -299,11 +296,10 @@ function feuilleG340(wb: Workbook, d: DonneesClasseurTva, collectee: string): vo
   ws.getCell(`A${r}`).value = 'Écart résiduel non justifié';
   ws.getCell(`C${r}`).value = formule(`H${ligneEcart}-C${r - 1}`, euros(g.residuel));
   ws.getCell(`C${r}`).numFmt = FORMAT_MONTANT;
-  ws.getCell(`D${r}`).value = formule(`IF(ABS(C${r})>H${ligneSeuil},"Supérieur au seuil","Inférieur ou égal au seuil")`, g.depasseSeuil ? 'Supérieur au seuil' : 'Inférieur ou égal au seuil');
   ws.getRow(r).font = { bold: true };
   ws.addConditionalFormatting({
-    ref: `A${r}:D${r}`,
-    rules: [{ type: 'expression', priority: 1, formulae: [`ABS($C$${r})>$H$${ligneSeuil}`], style: { fill: { type: 'pattern', pattern: 'solid', bgColor: { argb: 'FFFCE8E6' } }, font: { color: { argb: 'FF8C1C13' }, bold: true } } }],
+    ref: `A${r}:C${r}`,
+    rules: [{ type: 'expression', priority: 1, formulae: [`$C$${r}<>0`], style: { fill: { type: 'pattern', pattern: 'solid', bgColor: { argb: 'FFFCE8E6' } }, font: { color: { argb: 'FF8C1C13' }, bold: true } } }],
   });
   wb.definedNames.add(`'G340 Contrôle TVA collectée'!$C$${r}`, 'ECART_RESIDUEL');
   ws.views = [{ state: 'frozen', ySplit: 0 }];
@@ -397,7 +393,6 @@ function feuilleParametres(wb: Workbook, d: DonneesClasseurTva): void {
     ['SIREN', d.siren ?? '—'],
     ['Exercice', `du ${fr(d.exercice.debut)} au ${fr(d.exercice.fin)}`],
     ['Régime d’exigibilité', p.regime === 'encaissements' ? 'Encaissements' : p.regime === 'debits' ? 'Débits' : 'Mixte (par compte)'],
-    ['Seuil d’écart acceptable (€)', euros(p.seuil)],
     ['Méthode de ventilation des encours', d.g340.ventilation.description],
     ['Comptes de produits retenus', p.prefixesProduits.join(', ')],
     ['Comptes de TVA collectée observés', p.prefixesTva.join(', ')],
