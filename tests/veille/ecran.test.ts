@@ -35,6 +35,8 @@ const NEWS: NewsJson = {
       texte: 'PLF 2027', etape_actuelle: '1re lecture au Sénat',
       etapes: [{ libelle: 'Dépôt', date: '2026-09-30', statut: 'fait' }, { libelle: '1re lecture AN', date: null, statut: 'en_cours' }, { libelle: 'CMP', date: null, statut: 'a_venir' }],
       prochaine_echeance: { libelle: 'Vote solennel', date: '2026-10-20' }, mis_a_jour_le: '2026-10-08',
+      delais: [{ libelle: 'Fin du délai de 1re lecture à l’Assemblée (40 jours, art. 47 de la Constitution)', date: '2026-11-10', indicative: true }],
+      source: 'Assemblée nationale — dossier législatif', url: 'https://exemple.invalid/PLF_2027',
     },
     plfss: null,
   },
@@ -157,6 +159,9 @@ describe('veille · écran', () => {
     expect(location.hash).toBe('#/veille/plf');
     expect(conteneur.querySelector('.frise [aria-current="step"]')?.textContent).toContain('1re lecture AN');
     expect(conteneur.querySelector('.panneau')?.textContent).toContain('Pas encore de suivi');
+    expect(conteneur.querySelector('.delais')?.textContent).toContain('10/11/2026 (délai indicatif)');
+    expect(conteneur.querySelector<HTMLAnchorElement>('.suivi a[href="https://exemple.invalid/PLF_2027"]')?.rel).toBe('noopener noreferrer');
+    expect(conteneur.querySelector('.actualites-suivi')?.textContent).toContain('Le Sénat adopte la première partie du PLF');
 
     onglet('indicateurs').click();
     expect(conteneur.querySelector('.tuile')?.textContent).toContain('1,8 %');

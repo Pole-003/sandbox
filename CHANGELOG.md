@@ -2,6 +2,14 @@
 
 Toutes les évolutions notables de la Sandbox Pôle 003. Format inspiré de « Keep a Changelog », numéros de version au format semver.
 
+## [0.4.0] - 2026-10-08
+
+### Ajouté
+- Suivi automatique de la loi de finances (PLF) et du financement de la sécurité sociale (PLFSS), relu chaque jour sur les dossiers législatifs officiels de l'Assemblée nationale : frise des étapes avec leurs dates, étapes restantes, délais constitutionnels calculés depuis le dépôt (indicatifs), lien vers le dossier.
+- Alerte dans le fil d'actualité à chaque nouvelle étape du PLF ou du PLFSS.
+- Onglet « Suivi PLF / PLFSS » : dernières actualités de chaque texte sous la frise.
+- Le texte suivi change d'année tout seul (PLF 2027, puis 2028…).
+
 ## [0.3.0] - 2026-10-08
 
 ### Ajouté

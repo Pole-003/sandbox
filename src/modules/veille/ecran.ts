@@ -24,6 +24,7 @@ import {
   type Importance,
   type NewsJson,
   type SuiviTexte,
+  type Theme,
 } from './modele.ts';
 
 export const ONGLETS = [
@@ -204,18 +205,26 @@ function rendreFil(conteneur: HTMLElement, ctx: ContexteFil): void {
 
 const LIBELLES_STATUT = { fait: 'Fait', en_cours: 'En cours', a_venir: 'À venir' } as const;
 
+function echeanceTexte(e: { libelle: string; date: string | null; indicative?: boolean }): string {
+  return `${e.libelle}${e.date ? ` : ${dateFr(e.date)}` : ''}${e.indicative ? ' (délai indicatif)' : ''}`;
+}
+
 function frise(suivi: SuiviTexte | null, nom: string): HTMLElement {
   if (!suivi) {
-    return h('section', { class: 'carte suivi' }, h('h2', {}, nom), h('p', { class: 'texte-secondaire' }, 'Pas encore de suivi : il se renseigne à la main dans veille/suivi.json.'));
+    return h(
+      'section',
+      { class: 'carte suivi' },
+      h('h2', {}, nom),
+      h('p', { class: 'texte-secondaire' }, 'Pas encore de suivi : le dossier législatif n’a pas pu être lu. Il est relu à chaque collecte (jours ouvrés, 6 h 30).'),
+    );
   }
+  const automatique = Boolean(suivi.source);
   return h(
     'section',
     { class: 'carte suivi', 'aria-label': `Suivi du ${suivi.texte}` },
-    h('h2', {}, suivi.texte),
+    h('h2', {}, `${nom} — ${suivi.texte}`),
     h('p', {}, h('strong', {}, 'Étape actuelle : '), suivi.etape_actuelle),
-    suivi.prochaine_echeance
-      ? h('p', {}, h('strong', {}, 'Prochaine échéance : '), suivi.prochaine_echeance.libelle, suivi.prochaine_echeance.date ? ` (${dateFr(suivi.prochaine_echeance.date)})` : '')
-      : null,
+    suivi.prochaine_echeance ? h('p', {}, h('strong', {}, 'Prochaine échéance : '), echeanceTexte(suivi.prochaine_echeance)) : null,
     h(
       'ol',
       { class: 'frise' },
@@ -228,17 +237,42 @@ function frise(suivi: SuiviTexte | null, nom: string): HTMLElement {
         ),
       ),
     ),
-    h('p', { class: 'texte-secondaire note' }, `Saisi à la main, mis à jour le ${dateFr(suivi.mis_a_jour_le)} : à recouper avec les dossiers législatifs officiels.`),
+    suivi.delais?.length
+      ? h('div', { class: 'delais' }, h('h3', {}, 'Délais constitutionnels'), h('ul', {}, ...suivi.delais.map((d) => h('li', {}, echeanceTexte(d)))))
+      : null,
+    h(
+      'p',
+      { class: 'texte-secondaire note' },
+      automatique
+        ? `Relevé automatiquement le ${dateFr(suivi.mis_a_jour_le)} sur le `
+        : `Saisi à la main, mis à jour le ${dateFr(suivi.mis_a_jour_le)}. `,
+      automatique && suivi.url ? lienExterne(suivi.url, 'dossier législatif de l’Assemblée nationale') : '',
+      automatique ? '. Les étapes « à venir » et les délais (comptés depuis le dépôt) sont indicatifs.' : 'À recouper avec les dossiers législatifs officiels.',
+    ),
+  );
+}
+
+function actualitesTexte(news: NewsJson, theme: Theme, titre: string): HTMLElement {
+  const articles = news.articles.filter((a) => a.theme === theme && (a.importance ?? 0) >= 2).slice(0, 8);
+  return h(
+    'section',
+    { class: 'carte actualites-suivi' },
+    h('h2', {}, titre),
+    articles.length
+      ? h('ul', {}, ...articles.map((a) => h('li', {}, lienExterne(a.url, a.titre), h('span', { class: 'texte-secondaire' }, ` — ${a.source}, ${dateFr(a.date)}`))))
+      : h('p', { class: 'texte-secondaire' }, 'Aucune actualité sur la période.'),
   );
 }
 
 function rendreSuivi(conteneur: HTMLElement, news: NewsJson): void {
-  const dossiers = news.articles.filter((a) => a.source_id === 'an-dossier-plf');
   conteneur.append(
-    h('div', { class: 'grille-suivi' }, frise(news.suivi.plf, 'Projet de loi de finances'), frise(news.suivi.plfss, 'Projet de loi de financement de la sécurité sociale')),
-    dossiers.length
-      ? h('section', { class: 'carte' }, h('h2', {}, 'Changements détectés sur le dossier législatif'), h('ul', {}, ...dossiers.map((a) => h('li', {}, lienExterne(a.url, a.titre), ` — ${dateFr(a.date)}`))))
-      : '',
+    h('div', { class: 'grille-suivi' }, frise(news.suivi.plf, 'Loi de finances'), frise(news.suivi.plfss, 'Financement de la sécurité sociale')),
+    h(
+      'div',
+      { class: 'grille-suivi' },
+      actualitesTexte(news, 'Loi de finances', 'Actualité de la loi de finances'),
+      actualitesTexte(news, 'Sécurité sociale', 'Actualité de la sécurité sociale'),
+    ),
   );
 }
 

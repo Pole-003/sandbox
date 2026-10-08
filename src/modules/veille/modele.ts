@@ -70,12 +70,24 @@ export interface Indicateur {
 
 export type StatutEtape = 'fait' | 'en_cours' | 'a_venir';
 
+export interface EcheanceSuivi {
+  libelle: string;
+  date: string | null;
+  /** Vrai pour un délai calculé (Constitution, art. 47 et 47-1) : indicatif. */
+  indicative?: boolean;
+}
+
 export interface SuiviTexte {
   texte: string;
   etape_actuelle: string;
   etapes: { libelle: string; date: string | null; statut: StatutEtape }[];
-  prochaine_echeance: { libelle: string; date: string | null } | null;
-  /** Date de la dernière mise à jour (saisie manuelle dans veille/suivi.json), AAAA-MM-JJ. */
+  prochaine_echeance: EcheanceSuivi | null;
+  /** Délais constitutionnels calculés depuis le dépôt (indicatifs). */
+  delais?: EcheanceSuivi[];
+  /** Dossier législatif d'origine. */
+  source?: string;
+  url?: string | null;
+  /** Date de la dernière mise à jour, AAAA-MM-JJ. */
   mis_a_jour_le: string;
 }
 
@@ -100,7 +112,7 @@ export type EtatCollecte = 'ok' | 'erreur' | 'inactive' | 'non_configuree';
 export interface EtatSource {
   id: string;
   nom: string;
-  type: 'rss' | 'page' | 'api';
+  type: 'rss' | 'page' | 'api' | 'dossier';
   theme: string;
   statut_catalogue: string;
   etat: EtatCollecte;

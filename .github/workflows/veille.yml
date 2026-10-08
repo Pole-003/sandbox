@@ -1,7 +1,7 @@
 # Collecte quotidienne de la veille (docs/VEILLE.md) : npm run veille:collecte
 #
 # Jours ouvrés (lundi à vendredi) à 6 h 30 heure de Paris, et déclenchement manuel (« Run workflow »).
-# Couches A (flux) et B (API officielles gratuites) uniquement : coût 0 €, aucun service d'IA.
+# Couches A (flux) et B (API officielles gratuites), et suivi PLF / PLFSS : coût 0 €, aucun service d'IA.
 # Publie public/news.json, public/veille-etat.json et public/archives/, les commit seulement
 # s'ils ont changé, puis déclenche le déploiement GitHub Pages.
 #

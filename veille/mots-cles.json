@@ -9,7 +9,8 @@
   "bonus_sources": {
     "bofip-actualites": 2,
     "ce-analyses-jurisprudence": 1,
-    "an-dossier-plf": 4
+    "an-dossier-plf": 4,
+    "an-dossier-plfss": 4
   },
   "exclusions": [
     "compte rendu de réunion",
@@ -17,7 +18,10 @@
   ],
   "themes": {
     "Loi de finances": {
-      "public_par_defaut": ["Expertise comptable", "Conseil aux dirigeants"],
+      "public_par_defaut": [
+        "Expertise comptable",
+        "Conseil aux dirigeants"
+      ],
       "mots_cles": {
         "projet de loi de finances": 6,
         "loi de finances": 5,
@@ -38,7 +42,9 @@
       "exclusions": []
     },
     "Sécurité sociale": {
-      "public_par_defaut": ["Social / paie"],
+      "public_par_defaut": [
+        "Social / paie"
+      ],
       "mots_cles": {
         "financement de la sécurité sociale": 6,
         "plfss": 6,
@@ -60,7 +66,9 @@
       "exclusions": []
     },
     "Fiscal et comptable": {
-      "public_par_defaut": ["Expertise comptable"],
+      "public_par_defaut": [
+        "Expertise comptable"
+      ],
       "mots_cles": {
         "impôt": 2,
         "fiscal": 2,
@@ -92,7 +100,9 @@
       "exclusions": []
     },
     "Audit et profession": {
-      "public_par_defaut": ["Audit / CAC"],
+      "public_par_defaut": [
+        "Audit / CAC"
+      ],
       "mots_cles": {
         "commissaire aux comptes": 5,
         "commissaires aux comptes": 5,
@@ -116,7 +126,9 @@
       "exclusions": []
     },
     "Économie et statistiques": {
-      "public_par_defaut": ["Conseil aux dirigeants"],
+      "public_par_defaut": [
+        "Conseil aux dirigeants"
+      ],
       "mots_cles": {
         "inflation": 3,
         "indice des prix": 3,
@@ -140,7 +152,9 @@
       "exclusions": []
     },
     "Rennes et Bretagne": {
-      "public_par_defaut": ["Conseil aux dirigeants"],
+      "public_par_defaut": [
+        "Conseil aux dirigeants"
+      ],
       "mots_cles": {
         "rennes": 5,
         "ille-et-vilaine": 5,
@@ -161,9 +175,43 @@
     }
   },
   "publics": {
-    "Expertise comptable": ["comptab", "fiscal", "impôt", "tva", "liasse", "facturation électronique", "déclarati"],
-    "Audit / CAC": ["commissaire aux comptes", "commissaires aux comptes", "audit", "cncc", "h2a", "certification", "durabilité", "csrd"],
-    "Social / paie": ["cotisation", "urssaf", "salari", "paie", "sécurité sociale", "retraite", "épargne salariale", "intéressement"],
-    "Conseil aux dirigeants": ["entreprise", "dirigeant", "transmission", "pme", "investissement", "création", "défaillance"]
+    "Expertise comptable": [
+      "comptab",
+      "fiscal",
+      "impôt",
+      "tva",
+      "liasse",
+      "facturation électronique",
+      "déclarati"
+    ],
+    "Audit / CAC": [
+      "commissaire aux comptes",
+      "commissaires aux comptes",
+      "audit",
+      "cncc",
+      "h2a",
+      "certification",
+      "durabilité",
+      "csrd"
+    ],
+    "Social / paie": [
+      "cotisation",
+      "urssaf",
+      "salari",
+      "paie",
+      "sécurité sociale",
+      "retraite",
+      "épargne salariale",
+      "intéressement"
+    ],
+    "Conseil aux dirigeants": [
+      "entreprise",
+      "dirigeant",
+      "transmission",
+      "pme",
+      "investissement",
+      "création",
+      "défaillance"
+    ]
   }
 }

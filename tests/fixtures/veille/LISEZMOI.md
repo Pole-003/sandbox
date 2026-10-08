@@ -12,3 +12,6 @@ décrites dans `docs/VEILLE.md`. Les titres et contenus sont fictifs. Aucun text
 - `an-documents.rss` : flux volumineux de l'Assemblée (fictif) : liens en `http://`, entités HTML, éléments hors sujet
   et hors fenêtre, pour tester le filtre par mots-clés.
 - `senat-iso-8859-15.rss` : flux réellement encodé en iso-8859-15 (cas constaté au diagnostic du 08/10/2026), avec « € » et « Œ ».
+- `an-dossier-plf.html` et `an-dossier-plf-cmp.html` : pages de dossier législatif de l'Assemblée nationale
+  reconstituées d'après la structure relevée le 08/10/2026 (bloc « Étapes de lecture », `etape-slider`) ;
+  la seconde simule un dossier arrivé en commission mixte paritaire. Les étapes et dates sont fictives.

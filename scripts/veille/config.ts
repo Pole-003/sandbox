@@ -22,8 +22,11 @@ export interface ConfigVeille {
 export interface SourceCatalogue {
   id: string;
   nom: string;
-  type: 'rss' | 'page' | 'api';
+  type: 'rss' | 'page' | 'api' | 'dossier';
+  /** Pour un dossier législatif, « {annee} » est remplacé par l'année du texte (essai de l'année suivante, puis de l'année en cours). */
   url?: string;
+  /** Dossier législatif suivi : PLF ou PLFSS. */
+  suivi?: 'plf' | 'plfss';
   theme: string;
   statut: string;
   notes?: string;

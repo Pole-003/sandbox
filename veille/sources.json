@@ -1,5 +1,5 @@
 {
-  "_commentaire": "Catalogue des sources de veille. statut : 'verifie' = flux testé et fonctionnel ; 'en_panne' = testé, ne répond pas correctement (voir notes) ; 'a_verifier' = existence ou URL à confirmer avant activation. Couche A = rss (et page), couche B = api (identifiants dans les secrets GitHub nommés par « secret » ; sans eux, l'API est « non configurée »). type_article (facultatif) : nature des publications de la source. Diagnostic : npm run veille:test (workflow veille-diagnostic.yml). mots_cles (facultatif) : filtre des flux volumineux, appliqué au titre et à la description, sans tenir compte des accents ni des majuscules.",
+  "_commentaire": "Catalogue des sources de veille. statut : 'verifie' = flux testé et fonctionnel ; 'en_panne' = testé, ne répond pas correctement (voir notes) ; 'a_verifier' = existence ou URL à confirmer avant activation. Couche A = rss (et page), couche B = api (identifiants dans les secrets GitHub nommés par « secret » ; sans eux, l'API est « non configurée »). type_article (facultatif) : nature des publications de la source. Diagnostic : npm run veille:test (workflow veille-diagnostic.yml). mots_cles (facultatif) : filtre des flux volumineux, appliqué au titre et à la description, sans tenir compte des accents ni des majuscules. type « dossier » : dossier législatif de l'Assemblée nationale suivi étape par étape (PLF, PLFSS).",
   "sources": [
     {
       "id": "bofip-actualites",
@@ -172,13 +172,25 @@
     },
     {
       "id": "an-dossier-plf",
-      "nom": "Assemblée nationale — Dossier législatif PLF 2027",
-      "type": "page",
-      "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/PLF_2027",
+      "nom": "Assemblée nationale — Dossier législatif du PLF",
+      "type": "dossier",
+      "suivi": "plf",
+      "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/PLF_{annee}",
       "theme": "Loi de finances",
       "statut": "verifie",
-      "notes": "Page de suivi : détecter les changements (nouvelle étape, nouveau texte) par comparaison avec la veille. Mettre à jour l'année chaque automne.",
-      "type_article": "texte_officiel"
+      "type_article": "texte_officiel",
+      "notes": "Suivi automatique des étapes (bloc « Étapes de lecture »), structure relevée le 08/10/2026. {annee} : l'année suivante est essayée, puis l'année en cours."
+    },
+    {
+      "id": "an-dossier-plfss",
+      "nom": "Assemblée nationale — Dossier législatif du PLFSS",
+      "type": "dossier",
+      "suivi": "plfss",
+      "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/PLFSS_{annee}",
+      "theme": "Sécurité sociale",
+      "statut": "verifie",
+      "type_article": "texte_officiel",
+      "notes": "Même structure que le dossier du PLF (exploration du 08/10/2026 : PLFSS_2027 en ligne)."
     },
     {
       "id": "piste-legifrance",

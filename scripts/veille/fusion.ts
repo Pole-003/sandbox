@@ -97,7 +97,7 @@ export function sourcesCitees(sources: readonly { id: string; nom: string; url?:
     .map((s) => {
       let url: string | null = null;
       try {
-        url = s.url ? new URL(s.url).origin : null;
+        url = s.url ? new URL(s.url.replace('{annee}', '2000')).origin : null;
       } catch {
         url = null;
       }

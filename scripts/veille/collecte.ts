@@ -1,7 +1,8 @@
 /**
  * Collecte quotidienne de la veille : npm run veille:collecte (workflow veille.yml). Coût : 0 €.
  *
- * Couche A (flux) + couche B (API officielles gratuites, optionnelles) → fusion et déduplication →
+ * Couche A (flux) + couche B (API officielles gratuites, optionnelles) + suivi des dossiers PLF / PLFSS →
+ * fusion et déduplication →
  * classement par mots-clés → publication de public/news.json, public/veille-etat.json et
  * public/archives/AAAA-MM.json. Aucun appel à un service d'IA.
  *
@@ -15,6 +16,7 @@ import { chargerReglages, themeConnu, type Reglages } from './config.ts';
 import { collecterCoucheA } from './couche-a.ts';
 import { collecterCoucheB, type ConnecteurApi } from './couche-b.ts';
 import { dateIsoParis } from './dates.ts';
+import { collecterDossiers } from './dossier.ts';
 import {
   appliquerClassement,
   completerArchive,
@@ -101,10 +103,20 @@ export async function collecter(d: DependancesCollecte): Promise<Bilan> {
   for (const e of coucheB.etats) journal(`  ${e.etat === 'ok' ? 'OK    ' : e.etat === 'erreur' ? 'ÉCHEC ' : '—     '} ${e.id} : ${e.erreur ?? `${e.nb_articles} élément(s)`}`);
   journal(`Recherche IA : ${RAISON_IA}`);
 
+  // --- Suivi PLF / PLFSS : dossiers législatifs de l'Assemblée nationale ---
+  const dossiers = await collecterDossiers(sources, { client: d.http, maintenant: d.maintenant, etatPrecedent: sourcesPrecedentes });
+  for (const e of dossiers.etats) journal(`  ${e.etat === 'ok' ? 'OK    ' : 'ÉCHEC '} ${e.id} : ${e.erreur ?? `${e.nb_elements} étape(s)`}`);
+  // Priorité : suivi lu aujourd'hui, sinon celui déjà publié, sinon la saisie manuelle (veille/suivi.json).
+  const suiviPublie = {
+    plf: dossiers.suivi.plf ?? newsPrecedent?.suivi?.plf ?? suivi.plf,
+    plfss: dossiers.suivi.plfss ?? newsPrecedent?.suivi?.plfss ?? suivi.plfss,
+  };
+
   // --- Fusion et classement ---
   const nouveaux: Article[] = [
     ...coucheA.articles.map((a) => depuisFlux(a, aujourdhui)),
     ...coucheB.articles.map((a) => depuisFlux(a, aujourdhui, 'api')),
+    ...dossiers.articles.map((a) => depuisFlux(a, aujourdhui)),
   ];
   const themes = new Map(sources.map((s) => [s.id, themeConnu(s.theme)]));
   const classement = appliquerClassement(
@@ -127,14 +139,14 @@ export async function collecter(d: DependancesCollecte): Promise<Bilan> {
     genere_le: d.maintenant.toISOString(),
     articles: trierArticles(gardes),
     indicateurs: indicateursDuJour(coucheB.indicateurs, newsPrecedent?.indicateurs ?? []),
-    suivi,
+    suivi: suiviPublie,
     sources: sourcesCitees(sources),
   };
   const newsModifie = !newsPrecedent || empreinteNews(newsPrecedent) !== empreinteNews(news);
   if (newsModifie) d.depot.ecrire(CHEMINS.news, json(news));
 
   // Ordre du catalogue pour l'écran « État des sources ».
-  const parId = new Map([...coucheA.etats, ...coucheB.etats].map((e) => [e.id, e]));
+  const parId = new Map([...coucheA.etats, ...coucheB.etats, ...dossiers.etats].map((e) => [e.id, e]));
   const etat: EtatVeille = {
     version: 2,
     genere_le: d.maintenant.toISOString(),

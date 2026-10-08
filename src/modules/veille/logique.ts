@@ -75,6 +75,7 @@ export interface Echeance {
   libelle: string;
   date: string | null;
   etapeActuelle: string;
+  indicative?: boolean;
 }
 
 /** Prochaine échéance du PLF et du PLFSS (quand le suivi en indique une). */
@@ -83,7 +84,12 @@ export function prochainesEcheances(news: NewsJson): Echeance[] {
   for (const suivi of [news.suivi.plf, news.suivi.plfss]) {
     if (!suivi) continue;
     const prochaine = suivi.prochaine_echeance ?? premiereEtapeAVenir(suivi);
-    if (prochaine) resultat.push({ texte: suivi.texte, libelle: prochaine.libelle, date: prochaine.date, etapeActuelle: suivi.etape_actuelle });
+    if (prochaine) {
+      resultat.push({
+        texte: suivi.texte, libelle: prochaine.libelle, date: prochaine.date, etapeActuelle: suivi.etape_actuelle,
+        ...('indicative' in prochaine && prochaine.indicative ? { indicative: true } : {}),
+      });
+    }
   }
   return resultat;
 }

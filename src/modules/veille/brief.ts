@@ -49,7 +49,7 @@ export function sectionBrief(annulation: Annulation): HTMLElement {
             h(
               'ul',
               {},
-              ...echeances.map((e) => h('li', {}, h('strong', {}, `${e.texte} : `), e.libelle, e.date ? ` (${dateFr(e.date)})` : '', h('span', { class: 'texte-secondaire' }, ` — étape actuelle : ${e.etapeActuelle}`))),
+              ...echeances.map((e) => h('li', {}, h('strong', {}, `${e.texte} : `), e.libelle, e.date ? ` (${dateFr(e.date)}${e.indicative ? ', délai indicatif' : ''})` : '', h('span', { class: 'texte-secondaire' }, ` — étape actuelle : ${e.etapeActuelle}`))),
             ),
             h('a', { href: '#/veille/plf' }, 'Voir le suivi PLF / PLFSS'),
           )

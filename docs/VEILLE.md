@@ -38,6 +38,17 @@ Chaque API est optionnelle. Les noms des secrets attendus figurent dans le champ
 
 Chaque API a besoin d'un connecteur (`scripts/veille/couche-b.ts`). Un connecteur n'est ajouté qu'après validation de l'API par du code exécuté dans GitHub Actions, comme pour les flux ; tant qu'il manque, l'API est signalée « non configurée (connecteur à développer) ».
 
+## Suivi du PLF et du PLFSS (automatique, 0 €)
+
+Priorité du pôle. Source : les dossiers législatifs de l'Assemblée nationale (`dyn/17/dossiers/PLF_<année>` et `PLFSS_<année>`, sources `an-dossier-plf` et `an-dossier-plfss` de type « dossier »), qui retracent toute la navette (Sénat, CMP, Conseil constitutionnel, promulgation). Structure relevée le 08/10/2026 par `npm run veille:explorer-suivi` : bloc « Étapes de lecture » (`etape-slider`), une diapositive par étape avec son libellé et sa date. Le Sénat n'avait pas encore de page de dossier (404) : non utilisé.
+
+- Année : l'année suivante est essayée en premier (le PLF est déposé à l'automne), puis l'année en cours. Rien à changer chaque automne.
+- Frise : étapes publiées (la dernière « en cours », toutes « faites » après la promulgation), puis étapes restantes « à venir » dans l'ordre de la procédure (1re lecture au Sénat, CMP, Conseil constitutionnel, promulgation). Nouvelle lecture et lecture définitive n'apparaissent que si elles ont lieu.
+- Délais constitutionnels, comptés en jours depuis le dépôt et présentés comme indicatifs : PLF (art. 47 C) 40 jours pour la 1re lecture à l'Assemblée et 70 jours pour le Parlement ; PLFSS (art. 47-1 C) 20 et 50 jours.
+- Prochaine échéance : le premier délai encore à venir et pertinent, sinon la prochaine étape.
+- Nouvelle étape détectée (par rapport au relevé précédent) : alerte dans le fil d'actualité, importance 5.
+- Page illisible (maquette modifiée) : erreur explicite dans « État des sources », le dernier suivi publié est conservé. `veille/suivi.json` (saisie manuelle) ne sert que si le dossier n'a encore jamais pu être lu.
+
 ## Fusion, déduplication et classement
 
 - Clé de déduplication : URL normalisée (https, sans paramètres de suivi `utm_*`, sans `#`), puis similarité de titre. Un article déjà publié garde sa date de première collecte ; un résumé manquant est complété.
@@ -62,7 +73,7 @@ Chaque API a besoin d'un connecteur (`scripts/veille/couche-b.ts`). Un connecteu
 
 - **Brief du jour** (accueil) : les 5 articles d'importance 4 ou 5 les plus récents, tous thèmes confondus, plus la prochaine échéance du PLF et du PLFSS.
 - **Veille** : fil filtrable par thème, source, importance et public ; recherche locale ; marquage « lu » et « important pour nos dossiers » en local.
-- **Suivi PLF / PLFSS** : frise des étapes saisie à la main dans `veille/suivi.json` (faute de source automatique gratuite et fiable), complétée par les changements détectés sur la page du dossier législatif du PLF.
+- **Suivi PLF / PLFSS** : frise automatique des étapes (dossiers législatifs de l'Assemblée nationale), délais constitutionnels indicatifs, lien vers le dossier, et dernières actualités de chaque texte.
 - **Indicateurs** : tuiles (valeur, période, source, date) alimentées par la couche B (INSEE, Banque de France) une fois configurée.
 - **Rennes et Bretagne** : fil dédié et, si la couche B BODACC est active, compteurs hebdomadaires des créations et procédures collectives en Ille-et-Vilaine.
 - **État des sources** : tableaux de `veille-etat.json` pour les flux (couche A) et les API (couche B, dont « non configurée ») : dernière réussite, erreurs, nombre d'articles ; bilan du classement ; recherche IA désactivée ; coût 0 €.
@@ -78,7 +89,7 @@ Chaque API a besoin d'un connecteur (`scripts/veille/couche-b.ts`). Un connecteu
 | Résumés repris des flux (300 caractères) | Fait |
 | Fusion, 60 jours glissants, archives mensuelles | Fait |
 | Workflow `veille.yml` (couches A et B, 0 €) | Fait |
-| Suivi PLF / PLFSS (`veille/suivi.json`, saisie manuelle) | Fait |
+| Suivi PLF / PLFSS automatique (dossiers législatifs de l'Assemblée nationale) | Fait ; `veille/suivi.json` en secours |
 | Écrans (brief, veille, suivi, indicateurs, Rennes, état des sources) | Fait. Indicateurs et compteurs BODACC en attente de la couche B |
 | Recherche IA (couche C) et notation IA | Désactivées : code retiré, description conservée ci-dessous |
 

@@ -169,9 +169,9 @@ async function collecterSource(
 export async function collecterCoucheA(sources: readonly SourceCatalogue[], options: OptionsCoucheA): Promise<ResultatCoucheA> {
   const precedents = new Map(options.etatPrecedent.map((e) => [e.id, e]));
   // Domaines différents en parallèle ; le client HTTP limite à 1 requête par seconde et par domaine.
-  // Les API (couche B) sont traitées par couche-b.ts.
+  // Les API (couche B) sont traitées par couche-b.ts, les dossiers législatifs par dossier.ts.
   const resultats = await Promise.all(
-    sources.filter((s) => s.type !== 'api').map((s) =>
+    sources.filter((s) => s.type === 'rss' || s.type === 'page').map((s) =>
       collecterSource(s, options, precedents.get(s.id)).catch((e: unknown) => ({
         // Filet de sécurité : même une erreur de programmation reste confinée à la source.
         etat: { ...etatInitial(s, precedents.get(s.id)), etat: 'erreur' as const, erreur: `erreur inattendue : ${e instanceof Error ? e.message : String(e)}` },
