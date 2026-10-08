@@ -77,6 +77,28 @@ export interface EcheanceSuivi {
   indicative?: boolean;
 }
 
+/** Article du projet de loi, avec son intitulé officiel et son classement par mots-clés. */
+export interface ArticleProjet {
+  numero: string;
+  intitule: string;
+  /** Partie du texte (ex. « Première partie : conditions générales de l’équilibre financier »). */
+  partie: string | null;
+  /** Subdivision la plus proche (ex. « B – Mesures fiscales »). */
+  groupe: string | null;
+  theme: Theme;
+  importance: Importance;
+  public: Public[];
+  /** Lien direct vers l'article dans le texte, quand il existe. */
+  url: string | null;
+}
+
+export interface MesuresProjet {
+  /** Ex. « Projet de loi de finances pour 2027, n° 3210 (texte déposé) ». */
+  libelle: string;
+  url: string;
+  articles: ArticleProjet[];
+}
+
 export interface SuiviTexte {
   texte: string;
   etape_actuelle: string;
@@ -84,6 +106,8 @@ export interface SuiviTexte {
   prochaine_echeance: EcheanceSuivi | null;
   /** Délais constitutionnels calculés depuis le dépôt (indicatifs). */
   delais?: EcheanceSuivi[];
+  /** Articles du projet de loi déposé (intitulés officiels). */
+  mesures?: MesuresProjet | null;
   /** Dossier législatif d'origine. */
   source?: string;
   url?: string | null;

@@ -49,6 +49,13 @@ Priorité du pôle. Source : les dossiers législatifs de l'Assemblée nationale
 - Nouvelle étape détectée (par rapport au relevé précédent) : alerte dans le fil d'actualité, importance 5.
 - Page illisible (maquette modifiée) : erreur explicite dans « État des sources », le dernier suivi publié est conservé. `veille/suivi.json` (saisie manuelle) ne sert que si le dossier n'a encore jamais pu être lu.
 
+### Principales mesures du projet de loi
+
+- Texte lu : le dossier renvoie vers le projet de loi déposé (`dyn/17/textes/l17b<numéro>_projet-loi`) ; on lit sa version open data `dyn/opendata/PRJLANR5L17B<numéro>.html` (PLF 2027 : n° 3210 ; PLFSS 2027 : n° 3211).
+- Deux présentations relevées le 08/10/2026 et toutes deux gérées : table des matières (`assnatTOC2` à `assnatTOC6`, PLF) et blocs d'article (`assnat9ArticleNum`, parties `assnat2PartieIntit`, PLFSS).
+- Chaque article est repris avec son numéro et son intitulé officiel, sans reformulation, puis classé avec les mêmes mots-clés que le fil (sans bonus de source). Les articles d'importance 3 et plus forment les « principales mesures » ; tous les articles restent consultables, groupés par partie.
+- Texte illisible : le suivi reste publié sans les mesures, l'erreur est indiquée dans « État des sources ».
+
 ## Fusion, déduplication et classement
 
 - Clé de déduplication : URL normalisée (https, sans paramètres de suivi `utm_*`, sans `#`), puis similarité de titre. Un article déjà publié garde sa date de première collecte ; un résumé manquant est complété.
@@ -90,6 +97,7 @@ Priorité du pôle. Source : les dossiers législatifs de l'Assemblée nationale
 | Fusion, 60 jours glissants, archives mensuelles | Fait |
 | Workflow `veille.yml` (couches A et B, 0 €) | Fait |
 | Suivi PLF / PLFSS automatique (dossiers législatifs de l'Assemblée nationale) | Fait ; `veille/suivi.json` en secours |
+| Principales mesures du PLF et du PLFSS (texte open data de l'Assemblée nationale) | Fait |
 | Écrans (brief, veille, suivi, indicateurs, Rennes, état des sources) | Fait. Indicateurs et compteurs BODACC en attente de la couche B |
 | Recherche IA (couche C) et notation IA | Désactivées : code retiré, description conservée ci-dessous |
 

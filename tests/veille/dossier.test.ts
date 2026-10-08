@@ -1,11 +1,24 @@
 import { readFileSync } from 'node:fs';
 import { describe, expect, it } from 'vitest';
 import type { SourceCatalogue } from '../../scripts/veille/config.ts';
+import type { MotsCles } from '../../scripts/veille/classement.ts';
 import { anneesCandidates, collecterDossiers, construireSuivi, lireEtapesAN } from '../../scripts/veille/dossier.ts';
+import { construireMesures, lireArticles, texteDepuisDossier } from '../../scripts/veille/projet-loi.ts';
 import { ClientHttp } from '../../scripts/veille/http.ts';
 
 const page = (nom: string) => readFileSync(new URL(`../fixtures/veille/${nom}`, import.meta.url), 'utf8');
 const MAINTENANT = new Date('2026-10-08T04:30:00Z');
+const MOTS_CLES: MotsCles = {
+  seuils_importance: { '5': 9, '4': 6, '3': 3, '2': 1 },
+  bonus_sources: { 'an-dossier-plf': 4 },
+  exclusions: [],
+  themes: {
+    'Fiscal et comptable': { public_par_defaut: ['Expertise comptable'], mots_cles: { 'impôt': 2, "crédit d'impôt": 3, 'facturation électronique': 5, pme: 2 }, exclusions: [] },
+    'Sécurité sociale': { public_par_defaut: ['Social / paie'], mots_cles: { cotisation: 3, 'allègements généraux': 3 }, exclusions: [] },
+  },
+  publics: { 'Conseil aux dirigeants': ['pme'] },
+};
+const OPENDATA_PLF = 'https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B3210.html';
 
 describe('veille · lecture du dossier législatif (Assemblée nationale)', () => {
   it('lit les étapes et leurs dates, en ignorant le reste de la page', () => {
@@ -81,34 +94,89 @@ const PLFSS: SourceCatalogue = { ...PLF, id: 'an-dossier-plfss', suivi: 'plfss',
 
 describe('veille · collecte des dossiers', () => {
   it('trouve l’année, publie le suivi, signale une panne sans bloquer', async () => {
-    const { client, appels } = fauxHttp({ 'https://www.assemblee-nationale.fr/dyn/17/dossiers/PLF_2027': page('an-dossier-plf.html') });
-    const r = await collecterDossiers([PLF, PLFSS], { client, maintenant: MAINTENANT, etatPrecedent: [] });
+    const { client, appels } = fauxHttp({
+      'https://www.assemblee-nationale.fr/dyn/17/dossiers/PLF_2027': page('an-dossier-plf.html'),
+      [OPENDATA_PLF]: page('an-projet-plf-toc.html'),
+    });
+    const r = await collecterDossiers([PLF, PLFSS], { client, maintenant: MAINTENANT, etatPrecedent: [], motsCles: MOTS_CLES });
     expect(r.suivi.plf).toMatchObject({ texte: 'PLF 2027', source: 'Assemblée nationale — dossier législatif', url: 'https://www.assemblee-nationale.fr/dyn/17/dossiers/PLF_2027' });
     expect(r.suivi.plfss).toBeNull();
     expect(r.etats.map((e) => [e.id, e.etat])).toEqual([['an-dossier-plf', 'ok'], ['an-dossier-plfss', 'erreur']]);
     expect(r.etats[1]?.erreur).toBe('HTTP 404 pour PLFSS 2026');
     expect(appels).toContain('https://www.assemblee-nationale.fr/dyn/17/dossiers/PLFSS_2026'); // repli sur l'année en cours
     expect(r.articles).toEqual([]); // premier relevé : pas d'alerte
+    expect(r.suivi.plf?.mesures).toMatchObject({ libelle: 'Projet de loi n° 3210 (texte déposé par le Gouvernement)', url: 'https://www.assemblee-nationale.fr/dyn/17/textes/l17b3210_projet-loi' });
+    expect(r.suivi.plf?.mesures?.articles).toHaveLength(5);
+  });
+
+  it('texte du projet illisible : suivi des étapes conservé, remarque dans l’état', async () => {
+    const { client } = fauxHttp({ 'https://www.assemblee-nationale.fr/dyn/17/dossiers/PLF_2027': page('an-dossier-plf.html'), [OPENDATA_PLF]: '<html>vide</html>' });
+    const r = await collecterDossiers([PLF], { client, maintenant: MAINTENANT, etatPrecedent: [], motsCles: MOTS_CLES });
+    expect(r.suivi.plf?.etapes.length).toBeGreaterThan(0);
+    expect(r.suivi.plf?.mesures).toBeUndefined();
+    expect(r.etats[0]).toMatchObject({ etat: 'ok', erreur: 'articles du projet de loi non lus : aucun article reconnu (présentation du texte modifiée ?)' });
   });
 
   it('nouvelle étape : alerte dans le fil ; aucune alerte si rien ne change ou si l’ancien relevé était une page', async () => {
-    const premier = await collecterDossiers([PLF], { client: fauxHttp({ 'https://www.assemblee-nationale.fr/dyn/17/dossiers/PLF_2027': page('an-dossier-plf.html') }).client, maintenant: MAINTENANT, etatPrecedent: [] });
-    const identique = await collecterDossiers([PLF], { client: fauxHttp({ 'https://www.assemblee-nationale.fr/dyn/17/dossiers/PLF_2027': page('an-dossier-plf.html') }).client, maintenant: MAINTENANT, etatPrecedent: premier.etats });
+    const premier = await collecterDossiers([PLF], { client: fauxHttp({ 'https://www.assemblee-nationale.fr/dyn/17/dossiers/PLF_2027': page('an-dossier-plf.html') }).client, maintenant: MAINTENANT, etatPrecedent: [], motsCles: MOTS_CLES });
+    const identique = await collecterDossiers([PLF], { client: fauxHttp({ 'https://www.assemblee-nationale.fr/dyn/17/dossiers/PLF_2027': page('an-dossier-plf.html') }).client, maintenant: MAINTENANT, etatPrecedent: premier.etats, motsCles: MOTS_CLES });
     expect(identique.articles).toEqual([]);
 
-    const suite = await collecterDossiers([PLF], { client: fauxHttp({ 'https://www.assemblee-nationale.fr/dyn/17/dossiers/PLF_2027': page('an-dossier-plf-cmp.html') }).client, maintenant: MAINTENANT, etatPrecedent: premier.etats });
+    const suite = await collecterDossiers([PLF], { client: fauxHttp({ 'https://www.assemblee-nationale.fr/dyn/17/dossiers/PLF_2027': page('an-dossier-plf-cmp.html') }).client, maintenant: MAINTENANT, etatPrecedent: premier.etats, motsCles: MOTS_CLES });
     expect(suite.articles).toEqual([
       expect.objectContaining({ titre: 'PLF 2027 : nouvelle étape — Commission mixte paritaire', date: '2026-12-15', theme: 'Loi de finances', source_id: 'an-dossier-plf' }),
     ]);
 
     const ancienRelevePage = [{ ...premier.etats[0]!, type: 'page' as const, empreinte: '8025ca3b9345fc04' }];
-    const migration = await collecterDossiers([PLF], { client: fauxHttp({ 'https://www.assemblee-nationale.fr/dyn/17/dossiers/PLF_2027': page('an-dossier-plf.html') }).client, maintenant: MAINTENANT, etatPrecedent: ancienRelevePage });
+    const migration = await collecterDossiers([PLF], { client: fauxHttp({ 'https://www.assemblee-nationale.fr/dyn/17/dossiers/PLF_2027': page('an-dossier-plf.html') }).client, maintenant: MAINTENANT, etatPrecedent: ancienRelevePage, motsCles: MOTS_CLES });
     expect(migration.articles).toEqual([]);
   });
 
   it('structure de page modifiée : erreur explicite', async () => {
     const { client } = fauxHttp({ 'https://www.assemblee-nationale.fr/dyn/17/dossiers/PLF_2027': '<html><body>Nouvelle maquette</body></html>' });
-    const r = await collecterDossiers([PLF], { client, maintenant: MAINTENANT, etatPrecedent: [] });
+    const r = await collecterDossiers([PLF], { client, maintenant: MAINTENANT, etatPrecedent: [], motsCles: MOTS_CLES });
     expect(r.etats[0]).toMatchObject({ etat: 'erreur', erreur: 'PLF 2027 : bloc « Étapes de lecture » introuvable (structure de la page modifiée ?)' });
+  });
+});
+
+describe('veille · articles du projet de loi', () => {
+  it('présentation par table des matières (PLF) : numéro, intitulé officiel, partie, subdivision, ancre', () => {
+    const a = lireArticles(page('an-projet-plf-toc.html'));
+    expect(a.map((x) => [x.numero, x.intitule, x.groupe])).toEqual([
+      ['1', 'Autorisation de percevoir les impôts existants', 'A – Autorisation de perception des impôts et produits'],
+      ['2', 'Indexation fictive du barème de l’impôt sur le revenu', 'B – Mesures fiscales'],
+      ['3', 'Aménagement fictif du crédit d’impôt recherche pour les PME', 'B – Mesures fiscales'],
+      ['4', 'Report fictif de la généralisation de la facturation électronique', 'B – Mesures fiscales'],
+      ['40', 'Crédits du budget général', 'I – Autorisation des crédits des missions et performance'],
+    ]);
+    expect(a[0]?.partie).toBe('Première partie : conditions générales de l’équilibre financier');
+    expect(a[4]?.partie).toBe('Seconde partie : moyens des politiques publiques et dispositions spéciales');
+    expect(a[1]?.ancre).toBe('_Toc2');
+  });
+
+  it('présentation par blocs (PLFSS) : « 1er », parties, article sans intitulé ignoré', () => {
+    const a = lireArticles(page('an-projet-plfss-blocs.html'));
+    expect(a.map((x) => [x.numero, x.intitule, x.partie, x.groupe])).toEqual([
+      ['1er', 'Rectification fictive des tableaux d’équilibre', 'Dispositions relatives à l’exercice 2026 (exemple fictif)', null],
+      ['7', 'Réforme fictive des allègements généraux de cotisations patronales', 'Dispositions relatives aux recettes pour 2027', 'Titre fictif sur les cotisations'],
+      ['9', 'Contribution fictive sur les jeux', 'Dispositions relatives aux recettes pour 2027', 'Titre fictif sur les cotisations'],
+    ]);
+  });
+
+  it('lien du dossier vers le texte : page et version open data', () => {
+    expect(texteDepuisDossier(page('an-dossier-plf.html'))).toEqual({
+      numero: '3210',
+      page: 'https://www.assemblee-nationale.fr/dyn/17/textes/l17b3210_projet-loi',
+      opendata: OPENDATA_PLF,
+    });
+    expect(texteDepuisDossier('<html></html>')).toBeNull();
+  });
+
+  it('classement des articles par mots-clés (sans bonus de source) et lien direct', () => {
+    const m = construireMesures(lireArticles(page('an-projet-plf-toc.html')), MOTS_CLES, 'Loi de finances', 'PLF', 'https://exemple.invalid/texte', OPENDATA_PLF);
+    const par = Object.fromEntries(m.articles.map((a) => [a.numero, a]));
+    expect(par['4']).toMatchObject({ importance: 3, theme: 'Fiscal et comptable', url: `${OPENDATA_PLF}#_Toc4` });
+    expect(par['3']).toMatchObject({ importance: 3, public: ['Conseil aux dirigeants'] });
+    expect(par['40']).toMatchObject({ importance: 1, theme: 'Loi de finances' });
   });
 });

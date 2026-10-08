@@ -23,6 +23,7 @@ import {
   type EtatVeille,
   type Importance,
   type NewsJson,
+  type ArticleProjet,
   type SuiviTexte,
   type Theme,
 } from './modele.ts';
@@ -264,9 +265,58 @@ function actualitesTexte(news: NewsJson, theme: Theme, titre: string): HTMLEleme
   );
 }
 
+/** Seuil d'importance (classement par mots-clés) au-delà duquel un article figure parmi les principales mesures. */
+export const SEUIL_MESURE_PRINCIPALE = 3;
+
+function ligneArticle(a: ArticleProjet, avecImportance: boolean): HTMLElement {
+  const libelle = `Art. ${a.numero} — ${a.intitule}`;
+  return h(
+    'li',
+    { class: 'mesure' },
+    a.url ? lienExterne(a.url, libelle) : h('span', {}, libelle),
+    avecImportance ? h('span', { class: 'mesure-meta' }, ' ', badgeImportance(a.importance), ...a.public.map((p) => h('span', { class: 'puce' }, p))) : null,
+  );
+}
+
+function mesures(suivi: SuiviTexte | null, nom: string): HTMLElement | null {
+  const m = suivi?.mesures;
+  if (!suivi || !m) return null;
+  const principales = m.articles
+    .filter((a) => a.importance >= SEUIL_MESURE_PRINCIPALE)
+    .sort((a, b) => b.importance - a.importance);
+  const groupes = new Map<string, ArticleProjet[]>();
+  for (const a of m.articles) {
+    const cle = [a.partie, a.groupe].filter(Boolean).join(' — ') || 'Articles';
+    groupes.set(cle, [...(groupes.get(cle) ?? []), a]);
+  }
+  return h(
+    'section',
+    { class: 'carte mesures', 'aria-label': `Mesures du ${suivi.texte}` },
+    h('h2', {}, `${nom} — principales mesures pour nos métiers`),
+    principales.length
+      ? h('ol', { class: 'liste-mesures' }, ...principales.map((a) => ligneArticle(a, true)))
+      : h('p', { class: 'texte-secondaire' }, 'Aucun article ne correspond à nos mots-clés.'),
+    h(
+      'details',
+      { class: 'tous-articles' },
+      h('summary', {}, `Tous les articles du projet (${m.articles.length})`),
+      ...[...groupes].flatMap(([groupe, articles]) => [h('h3', {}, groupe), h('ul', { class: 'liste-mesures' }, ...articles.map((a) => ligneArticle(a, false)))]),
+    ),
+    h(
+      'p',
+      { class: 'texte-secondaire note' },
+      'Intitulés officiels des articles du ',
+      lienExterne(m.url, m.libelle.replace(/^Projet/, 'projet')),
+      `. Ils évolueront avec les amendements ; mesures choisies par nos mots-clés (importance ${SEUIL_MESURE_PRINCIPALE} et plus).`,
+    ),
+  );
+}
+
 function rendreSuivi(conteneur: HTMLElement, news: NewsJson): void {
+  const cartesMesures = [mesures(news.suivi.plf, 'PLF'), mesures(news.suivi.plfss, 'PLFSS')].filter((c): c is HTMLElement => c !== null);
   conteneur.append(
     h('div', { class: 'grille-suivi' }, frise(news.suivi.plf, 'Loi de finances'), frise(news.suivi.plfss, 'Financement de la sécurité sociale')),
+    cartesMesures.length ? h('div', { class: 'grille-suivi' }, ...cartesMesures) : '',
     h(
       'div',
       { class: 'grille-suivi' },

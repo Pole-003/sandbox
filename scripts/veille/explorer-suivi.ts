@@ -54,35 +54,65 @@ export function analyserDossier(html: string): { titre: string | null; flux: str
   return { titre, flux: [...new Set([...flux, ...fluxAncres])], plan, etapes };
 }
 
+/** Liens d'un dossier vers des textes (projet de loi déposé, textes adoptés, PDF). */
+export function liensTextes(html: string, base: string): string[] {
+  const liens = [...html.matchAll(/href=["']([^"']+)["']/gi)]
+    .map((m) => decoderEntites(m[1] ?? ''))
+    .filter((h) => /\/textes\/|projet[-_]?(de-)?loi|\/ta\/|\.pdf$/i.test(h));
+  return [...new Set(liens.map((h) => new URL(h, base).href))];
+}
+
+async function explorerTexte(client: ClientHttp, url: string, rapport: string[]): Promise<void> {
+  rapport.push(`#### Texte : ${url}`);
+  try {
+    const r = await client.recuperer(url);
+    rapport.push(`- HTTP ${r.statut}, ${r.contentType ?? '?'}, ${r.octets.length} octets${r.urlFinale !== url ? `, redirigé vers ${r.urlFinale}` : ''}`);
+    if (r.statut !== 200 || !/html/i.test(r.contentType ?? '')) return;
+    const html = decoderOctets(r.octets, lireEncodageDeclare(r.octets, r.contentType)).texte;
+    const sources = [...html.matchAll(/(?:href|src|data-src)=["']([^"']*(?:opendata|\.pdf|iframe|\/textes\/)[^"']*)["']/gi)].map((m) => decoderEntites(m[1] ?? ''));
+    rapport.push(`- Liens et cadres vers le contenu (${sources.length}) : ${[...new Set(sources)].slice(0, 15).join(' · ') || 'aucun'}`);
+    rapport.push(`- Cadres (iframe) : ${(html.match(/<iframe[^>]*>/gi) ?? []).slice(0, 5).join(' ') || 'aucun'}`);
+    const a = analyserDossier(html);
+    rapport.push(`- Titre : ${a.titre ?? '—'}`, '- Plan (60 premiers titres) :');
+    rapport.push(...a.plan.slice(0, 60).map((l) => `  - ${l}`));
+    const articles = html.match(/>\s*Article\s+(?:liminaire|\d+(?:\s*(?:bis|ter|quater))?)\s*</gi) ?? [];
+    rapport.push(`- Mentions « Article … » isolées dans une balise : ${articles.length} (ex. ${articles.slice(0, 5).join(' | ')})`);
+    for (const repere of [/>\s*Article\s+liminaire/i, />\s*Article\s+1(?:er)?\s*</i, /PREMI[ÈE]RE PARTIE/i]) {
+      const extrait = extraitAutour(html, repere, 3500);
+      rapport.push(`- Structure autour de ${repere} :`, '```', extrait ?? '(absent)', '```');
+    }
+  } catch (e) {
+    rapport.push(`- Échec : ${e instanceof Error ? e.message : String(e)}`);
+  }
+}
+
 async function principal(): Promise<void> {
   const config = JSON.parse(readFileSync(new URL('../../veille/config.json', import.meta.url), 'utf8')) as { user_agent: string };
   const client = new ClientHttp({ userAgent: config.user_agent, delaiMaxMs: 20_000 });
-  const rapport: string[] = ['## Exploration des sources du suivi PLF / PLFSS', ''];
-  for (const c of CANDIDATS) {
+  const rapport: string[] = ['## Exploration : textes du PLF / PLFSS (articles)', ''];
+  for (const c of CANDIDATS.filter((x) => x.id.startsWith('an-'))) {
     rapport.push(`### ${c.id} — ${c.url}`);
     try {
       const r = await client.recuperer(c.url);
-      const texte = decoderOctets(r.octets, lireEncodageDeclare(r.octets, r.contentType)).texte;
-      rapport.push(`- HTTP ${r.statut}, ${r.contentType ?? '?'}, ${r.octets.length} octets${r.urlFinale !== c.url ? `, redirigé vers ${r.urlFinale}` : ''}`);
-      if (r.statut === 200) {
-        const a = analyserDossier(texte);
-        rapport.push(`- Titre : ${a.titre ?? '—'}`, `- Flux déclarés : ${a.flux.join(' · ') || 'aucun'}`, '- Plan :');
-        rapport.push(...a.plan.slice(0, 40).map((l) => `  - ${l}`));
-        rapport.push(`- Lignes évoquant une étape (${a.etapes.length}) :`);
-        rapport.push(...a.etapes.slice(0, 60).map((l) => `  - ${l}`));
-        const dates = [...new Set(texte.replace(/<[^>]+>/g, ' ').match(/\b\d{1,2}(?:er)?\s+(?:janvier|février|mars|avril|mai|juin|juillet|août|septembre|octobre|novembre|décembre)\s+\d{4}\b|\b\d{2}\/\d{2}\/\d{4}\b/gi) ?? [])];
-        rapport.push(`- Dates trouvées dans la page : ${dates.slice(0, 30).join(' · ') || 'aucune'}`);
-        const extrait = extraitAutour(texte, /[ÉE]tapes de lecture/);
-        rapport.push('- Structure HTML autour de « Étapes de lecture » :', '```', extrait ?? '(repère absent)', '```');
+      const html = decoderOctets(r.octets, lireEncodageDeclare(r.octets, r.contentType)).texte;
+      const liens = liensTextes(html, r.urlFinale);
+      rapport.push(`- Liens vers des textes (${liens.length}) :`, ...liens.slice(0, 30).map((l) => `  - ${l}`));
+      const extrait = extraitAutour(html, /acte-legislatif-bloc/, 5000);
+      rapport.push('- Structure du premier acte législatif :', '```', extrait ?? '(absent)', '```');
+      const texte = liens.find((l) => /\/textes\//.test(l) && !/\.pdf$/i.test(l));
+      if (texte) {
+        await explorerTexte(client, texte, rapport);
+        const numero = /l17b(\d+)/.exec(texte)?.[1];
+        if (numero) await explorerTexte(client, `https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17B${numero}.html`, rapport);
       }
     } catch (e) {
       rapport.push(`- Échec : ${e instanceof Error ? e.message : String(e)}`);
     }
     rapport.push('');
   }
-  const texte = rapport.join('\n');
-  console.log(texte);
-  if (process.env.GITHUB_STEP_SUMMARY) appendFileSync(process.env.GITHUB_STEP_SUMMARY, `${texte}\n`);
+  const sortie = rapport.join('\n');
+  console.log(sortie);
+  if (process.env.GITHUB_STEP_SUMMARY) appendFileSync(process.env.GITHUB_STEP_SUMMARY, `${sortie}\n`);
 }
 
 if (process.argv[1] && fileURLToPath(import.meta.url) === process.argv[1]) {

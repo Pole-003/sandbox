@@ -15,3 +15,6 @@ décrites dans `docs/VEILLE.md`. Les titres et contenus sont fictifs. Aucun text
 - `an-dossier-plf.html` et `an-dossier-plf-cmp.html` : pages de dossier législatif de l'Assemblée nationale
   reconstituées d'après la structure relevée le 08/10/2026 (bloc « Étapes de lecture », `etape-slider`) ;
   la seconde simule un dossier arrivé en commission mixte paritaire. Les étapes et dates sont fictives.
+- `an-projet-plf-toc.html` : texte open data d'un projet de loi présenté par table des matières (`assnatTOC2` à `assnatTOC6`),
+  comme le PLF 2027 ; `an-projet-plfss-blocs.html` : présentation par blocs d'article (`assnat9ArticleNum`), comme le PLFSS 2027.
+  Intitulés fictifs ; seule la structure est reproduite.
