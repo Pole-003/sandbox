@@ -2,6 +2,15 @@
 
 Toutes les évolutions notables de la Sandbox Pôle 003. Format inspiré de « Keep a Changelog », numéros de version au format semver.
 
+## [0.10.0] - 2026-10-08
+
+### Ajouté
+- Courriers de circularisation : lettres de demande de confirmation au format Word (.docx), générées à partir de la sélection, avec les mêmes références que le tableau de suivi (BQ-001, CL-001, FO-001).
+- Un modèle par population, modifiable : banques (soldes, emprunts, engagements hors bilan, effets, titres en dépôt, personnes habilitées, rappel des comptes y compris soldés), clients et fournisseurs (solde non indiqué par défaut, solde indiqué en option ; confirmation du solde, relevé de compte, ou les deux), coupon-réponse en option.
+- Lettres sur papier à en-tête du client, signées par son dirigeant, avec réponse directe au cabinet ; bloc adresse du destinataire à compléter dans Word.
+- Écran d'édition : coordonnées du cabinet (communes au poste), en-tête et signataire du client (par dossier), dates des lettres et de réponse, texte des modèles avec variables à insérer, aperçu en direct de la lettre de n'importe quel tiers retenu.
+- Export en lot : archive .zip avec un fichier .docx par tiers, ou document unique pour impression ; choix des lettres à générer.
+
 ## [0.9.0] - 2026-10-08
 
 ### Ajouté

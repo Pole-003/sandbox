@@ -6,7 +6,7 @@
   "fichiersFetch": [
     "src/modules/veille/donnees.ts"
   ],
-  "$commentaire_urlsCodeTiers": "'urlsCodeTiers' : URL figurant dans le code des librairies compilé dans dist/ (contrôle verifier-build uniquement), dans des messages d'erreur ou des mentions de licence ; jamais chargées (et bloquées par la CSP connect-src 'self'). Ajoutées avec ExcelJS (export .xlsx du module FEC) ; la dernière provient de l'aide à l'import CommonJS du bundler.",
+  "$commentaire_urlsCodeTiers": "'urlsCodeTiers' : URL figurant dans le code des librairies compilé dans dist/ (contrôle verifier-build uniquement), dans des messages d'erreur ou des mentions de licence ; jamais chargées (et bloquées par la CSP connect-src 'self'). Ajoutées avec ExcelJS (export .xlsx du module FEC) ; celle de rolldown.rs provient de l'aide à l'import CommonJS du bundler ; celle d'answers.microsoft.com figure dans un message d'erreur de la librairie docx (courriers de circularisation, étape 8).",
   "urlsCodeTiers": [
     "https://github.com/exceljs/exceljs/blob/master/UPGRADE-4.0.md",
     "https://stuk.github.io/jszip/documentation/howto/read_zip.html",
@@ -16,6 +16,7 @@
     "https://github.com/indutny/elliptic/issues",
     "https://github.com/indutny/elliptic",
     "https://github.com/crypto-browserify/crypto-browserify",
-    "https://rolldown.rs/in-depth/bundling-cjs#require-external-modules"
+    "https://rolldown.rs/in-depth/bundling-cjs#require-external-modules",
+    "https://answers.microsoft.com/en-us/msoffice/forum/all/does-word-support-more-than-9-list-levels/d130fdcd-1781-446d-8c84-c6c79124e4d7"
   ]
 }

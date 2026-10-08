@@ -6,7 +6,9 @@
  *  - imports  : métadonnées, constats et réglages d'un FEC importé (index dossierId) ;
  *  - colonnes : FEC normalisé en colonnes typées (séparé pour ne pas le charger en listant les dossiers) ;
  *  - profils  : correspondances de colonnes mémorisées, par signature d'en-tête ;
- *  - circularisations : paramètres et décisions de sélection des circularisations, par dossier (v2).
+ *  - circularisations : paramètres et décisions de sélection des circularisations, par dossier (v2) ;
+ *  - courriers : en-tête, signataire et dates des lettres de circularisation, par dossier (v3) ;
+ *  - modeles-courriers : modèles de lettres et coordonnées du cabinet, communs au poste (v3).
  *
  * Toute évolution de structure incrémente VERSION_BASE et ajoute une migration dans MIGRATIONS,
  * qui convertit l'ancien format (CLAUDE.md, conventions).
@@ -19,7 +21,7 @@ import type { MetaImport } from '../import/pipeline.ts';
 import type { Regime } from '../zones.ts';
 
 export const NOM_BASE = cleStockage('fec');
-export const VERSION_BASE = 2;
+export const VERSION_BASE = 3;
 
 export type Role = 'N' | 'N-1';
 
@@ -76,6 +78,13 @@ const MIGRATIONS: Record<number, (db: IDBDatabase) => void> = {
   // Aucune donnée existante à convertir : les dossiers et FEC de la version 1 sont conservés tels quels.
   2: (db) => {
     db.createObjectStore('circularisations', { keyPath: 'dossierId' });
+  },
+  // Version 3 (étape 8) : courriers de circularisation. Modèles et coordonnées du cabinet communs au poste
+  // (« modeles-courriers », un enregistrement « poste »), en-tête et signataire du client par dossier
+  // (« courriers »). Aucune donnée existante à convertir.
+  3: (db) => {
+    db.createObjectStore('courriers', { keyPath: 'dossierId' });
+    db.createObjectStore('modeles-courriers', { keyPath: 'id' });
   },
 };
 
@@ -256,8 +265,9 @@ export async function mettreAJourImport(id: string, changements: { reglages?: Re
 /** « Purger ce dossier » : supprime le dossier, ses FEC et leurs données. */
 export async function purgerDossier(id: string): Promise<void> {
   const db = await ouvrirBase();
-  const tx = db.transaction(['dossiers', 'imports', 'colonnes', 'circularisations'], 'readwrite');
+  const tx = db.transaction(['dossiers', 'imports', 'colonnes', 'circularisations', 'courriers'], 'readwrite');
   tx.objectStore('circularisations').delete(id);
+  tx.objectStore('courriers').delete(id);
   const imports = await requete(tx.objectStore('imports').index('dossierId').getAllKeys(id));
   for (const cle of imports) {
     tx.objectStore('imports').delete(cle);
@@ -280,12 +290,14 @@ export async function toutPurger(): Promise<void> {
 }
 
 /** Lecture et écriture d'un enregistrement d'un magasin secondaire (utilisé par le module Circularisations). */
-export async function lireEnregistrement<T>(magasin: 'circularisations', cle: string): Promise<T | null> {
+export type MagasinSecondaire = 'circularisations' | 'courriers' | 'modeles-courriers';
+
+export async function lireEnregistrement<T>(magasin: MagasinSecondaire, cle: string): Promise<T | null> {
   const db = await ouvrirBase();
   return ((await requete(db.transaction(magasin).objectStore(magasin).get(cle))) as T | undefined) ?? null;
 }
 
-export async function ecrireEnregistrement(magasin: 'circularisations', valeur: unknown): Promise<void> {
+export async function ecrireEnregistrement(magasin: MagasinSecondaire, valeur: unknown): Promise<void> {
   const db = await ouvrirBase();
   const tx = db.transaction(magasin, 'readwrite');
   tx.objectStore(magasin).put(valeur);

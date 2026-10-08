@@ -39,6 +39,7 @@
 }
 
 .ecran-circularisations input[type='text'],
+.ecran-circularisations input[type='email'],
 .ecran-circularisations input[type='number'],
 .ecran-circularisations input[type='date'],
 .ecran-circularisations input[type='search'],
@@ -110,4 +111,166 @@
 .ligne-exclue td:last-child,
 .ligne-exclue td:nth-child(6) {
   text-decoration: none;
+}
+
+/* --- Courriers --- */
+.libelle-champ {
+  font-weight: 600;
+}
+
+.ecran-circularisations .champ input[type='text'],
+.ecran-circularisations .champ input[type='email'] {
+  min-width: 14rem;
+}
+
+.grille-modele {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 1.25rem;
+  align-items: start;
+  margin-top: 0.75rem;
+}
+
+@media (max-width: 70rem) {
+  .grille-modele {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+.grille-modele .champ {
+  margin-bottom: 0.75rem;
+}
+
+.grille-modele input[type='text'] {
+  width: 100%;
+}
+
+.corps-modele {
+  font-family: var(--police-mono);
+  font-size: 0.8125rem;
+  line-height: 1.5;
+}
+
+.variables {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.375rem;
+}
+
+.bouton-variable {
+  min-height: 1.75rem;
+  padding: 0.125rem 0.5rem;
+  font-family: var(--police-mono);
+  font-size: 0.75rem;
+}
+
+.colonne-apercu {
+  position: sticky;
+  top: 1rem;
+}
+
+.apercu-lettre {
+  max-height: 46rem;
+  overflow: auto;
+  padding: 1.5rem 1.75rem;
+  border: 1px solid var(--c-bordure);
+  border-radius: var(--rayon-carte);
+  background: var(--c-surface);
+  color: var(--c-texte);
+  font-size: 0.8125rem;
+  line-height: 1.45;
+}
+
+.apercu-lettre p {
+  margin: 0 0 0.6rem;
+  text-align: justify;
+}
+
+.apercu-lettre ul {
+  margin: 0 0 0.6rem;
+  padding-left: 1.5rem;
+}
+
+.lettre-entete {
+  margin-bottom: 1.25rem;
+}
+
+.lettre-destinataire,
+.lettre-droite,
+.lettre-signature {
+  margin-left: 50%;
+}
+
+.lettre-destinataire {
+  margin-bottom: 1rem;
+}
+
+.lettre-adresse-vide {
+  min-height: 3.5rem;
+  margin-top: 0.25rem;
+  border: 1px dashed var(--c-bordure);
+  border-radius: var(--rayon);
+  padding: 0.25rem 0.5rem;
+  color: var(--c-texte-2);
+  font-style: italic;
+}
+
+.apercu-lettre .lettre-droite {
+  text-align: left;
+}
+
+.lettre-ref {
+  margin-bottom: 1rem;
+}
+
+.lettre-signature {
+  margin-top: 1.25rem;
+}
+
+.lettre-coupon {
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 2px dashed var(--c-bordure);
+}
+
+.lettre-coupon h4 {
+  margin: 0 0 0.75rem;
+  text-align: center;
+}
+
+.lettre-consigne {
+  font-style: italic;
+}
+
+.lettre-saisie {
+  display: flex;
+  gap: 0.25rem;
+}
+
+.lettre-ligne {
+  flex: 1;
+  border-bottom: 1px solid var(--c-texte-2);
+}
+
+.grille-lettres {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+  gap: 1rem;
+  margin: 0.75rem 0;
+}
+
+.liste-lettres {
+  max-height: 16rem;
+  overflow: auto;
+  margin: 0.5rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.liste-lettres li {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  padding: 0.125rem 0;
 }

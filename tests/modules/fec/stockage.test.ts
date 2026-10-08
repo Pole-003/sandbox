@@ -106,3 +106,44 @@ describe('migration de la base (version 1 → 2)', () => {
     expect(await lireParametres('ancien')).toBeNull();
   });
 });
+
+describe('migration de la base (version 2 → 3)', () => {
+  it('conserve les dossiers et les circularisations, ajoute les magasins des courriers', async () => {
+    await toutPurger();
+    await new Promise<void>((resolve, reject) => {
+      const r = indexedDB.open(NOM_BASE, 2);
+      r.onupgradeneeded = () => {
+        const db = r.result;
+        db.createObjectStore('dossiers', { keyPath: 'id' }).put({ id: 'v2', nom: 'Dossier v2', siren: null, creeLe: '2026-10-01', modifieLe: '2026-10-01', fec: {} });
+        db.createObjectStore('imports', { keyPath: 'id' }).createIndex('dossierId', 'dossierId');
+        db.createObjectStore('colonnes', { keyPath: 'id' });
+        db.createObjectStore('profils', { keyPath: 'signature' });
+        db.createObjectStore('circularisations', { keyPath: 'dossierId' }).put({ dossierId: 'v2', parametres: { graine: 42 }, modifieLe: '' });
+      };
+      r.onsuccess = () => {
+        r.result.close();
+        resolve();
+      };
+      r.onerror = () => reject(r.error);
+    });
+    expect((await listerDossiers()).map((d) => d.nom)).toEqual(['Dossier v2']);
+    const { lireParametres } = await import('../../../src/modules/circularisations/stockage.ts');
+    expect((await lireParametres('v2'))?.graine).toBe(42);
+    const s = await import('../../../src/modules/circularisations/courriers/stockage.ts');
+    const { reglagesDossierParDefaut } = await import('../../../src/modules/circularisations/courriers/modeles.ts');
+    // Modèles par défaut tant que rien n'est enregistré, puis complétés pour les clés absentes.
+    const m = await s.lireModeles();
+    expect(m.modeles.fournisseurs.soldeIndique).toBe(false);
+    m.cabinet.nom = 'Cabinet fictif';
+    m.modeles.clients.soldeIndique = true;
+    await s.enregistrerModeles(m);
+    expect((await s.lireModeles()).cabinet.nom).toBe('Cabinet fictif');
+    expect((await s.lireModeles()).modeles.clients.soldeIndique).toBe(true);
+    await s.enregistrerReglagesCourriers('v2', { ...reglagesDossierParDefaut('Dossier v2', null), lieu: 'Lyon' });
+    expect((await s.lireReglagesCourriers('v2'))?.lieu).toBe('Lyon');
+    // « Purger ce dossier » efface ses réglages de courriers, pas les modèles du poste.
+    await purgerDossier('v2');
+    expect(await s.lireReglagesCourriers('v2')).toBeNull();
+    expect((await s.lireModeles()).cabinet.nom).toBe('Cabinet fictif');
+  });
+});

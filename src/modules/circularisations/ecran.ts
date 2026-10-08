@@ -11,6 +11,7 @@ import { chargerExcelJS, octetsClasseur } from '../fec/export/xlsx.ts';
 import { chargerDonneesFec, type DonneesFec } from '../fec/interface-circularisations.ts';
 import { listerDossiers, type Dossier } from '../fec/stockage/base-fec.ts';
 import { nouvelleGraine } from './alea.ts';
+import { rendreCourriers, type EcranCourriers } from './courriers/ecran-courriers.ts';
 import { classeurSuivi } from './export-suivi.ts';
 import { parametresParDefaut, proposerEtablissement, seuilEffectif, type Critere, type ParametresCircularisation, type Population } from './parametres.ts';
 import { LIBELLES_MOTIFS, selectionner, type ResultatPopulation, type Selection, type TiersCandidat } from './selection.ts';
@@ -45,10 +46,12 @@ export function rendreEcranCircularisations(conteneur: HTMLElement): () => void 
     clients: { texte: '', retenusSeulement: false, tri: 'cle' },
     fournisseurs: { texte: '', retenusSeulement: false, tri: 'cle' },
   };
+  let courriers: EcranCourriers | null = null;
   let minuterieSauvegarde: number | undefined;
   let sauvegardeEnAttente = false;
   /** Enregistre sans attendre les modifications en attente (fermeture ou rechargement de la page). */
   const vider = () => {
+    courriers?.vider();
     if (!sauvegardeEnAttente || !dossier || !p) return;
     window.clearTimeout(minuterieSauvegarde);
     sauvegardeEnAttente = false;
@@ -61,18 +64,20 @@ export function rendreEcranCircularisations(conteneur: HTMLElement): () => void 
   const bandeau = h('div');
   const zoneParametres = h('div');
   const zoneResultats = h('div');
+  const zoneCourriers = h('div');
   const dialogue = h('dialog', { class: 'dialogue-ecriture', 'aria-labelledby': 'titre-justification' }) as HTMLDialogElement;
   conteneur.replaceChildren(
     h(
       'div',
       { class: 'ecran ecran-fec ecran-circularisations' },
       h('h1', {}, 'Circularisations'),
-      h('p', { class: 'texte-secondaire' }, 'Sélection des banques, clients et fournisseurs à circulariser à partir du FEC du dossier, et tableau de suivi. Tout est calculé sur ce poste.'),
+      h('p', { class: 'texte-secondaire' }, 'Sélection des banques, clients et fournisseurs à circulariser à partir du FEC du dossier, tableau de suivi et lettres de demande de confirmation. Tout est calculé sur ce poste.'),
       annonce,
       entete,
       bandeau,
       zoneParametres,
       zoneResultats,
+      zoneCourriers,
       dialogue,
     ),
   );
@@ -94,6 +99,7 @@ export function rendreEcranCircularisations(conteneur: HTMLElement): () => void 
     if (!donnees || !p) return;
     if (modification && p.selectionArreteeLe) p.selectionArreteeLe = null;
     selection = selectionner(donnees, p);
+    courriers?.maj(selection, p.dateCloture, Boolean(p.selectionArreteeLe));
     rendreBandeau();
     rendreResultats();
     if (modification) sauvegarder();
@@ -102,6 +108,9 @@ export function rendreEcranCircularisations(conteneur: HTMLElement): () => void 
   // ---- Chargement --------------------------------------------------------------------------------
   async function choisirDossier(id: string | null): Promise<void> {
     vider();
+    courriers?.detruire();
+    courriers = null;
+    zoneCourriers.replaceChildren();
     dossier = dossiers.find((d) => d.id === id) ?? null;
     ecrirePreference(PREF_DOSSIER, dossier?.id ?? null);
     donnees = null;
@@ -127,6 +136,7 @@ export function rendreEcranCircularisations(conteneur: HTMLElement): () => void 
       sauvegarder();
     }
     rendreParametres();
+    courriers = rendreCourriers(zoneCourriers, d, fec.metadonnees, dire);
     recalculer(false);
   }
 
@@ -181,6 +191,7 @@ export function rendreEcranCircularisations(conteneur: HTMLElement): () => void 
               p.selectionArreteeLe = new Date().toISOString();
               window.clearTimeout(minuterieSauvegarde);
               void enregistrerParametres(dossier.id, structuredClone(p)).then(() => dire('Sélection arrêtée et enregistrée.'));
+              if (selection) courriers?.maj(selection, p.dateCloture, true);
               rendreBandeau();
             },
             { primaire: !arretee },
@@ -568,6 +579,7 @@ export function rendreEcranCircularisations(conteneur: HTMLElement): () => void 
     detruit = true;
     if (dialogue.open) dialogue.close();
     vider();
+    courriers?.detruire();
     window.removeEventListener('pagehide', vider);
   };
 }

@@ -9,6 +9,7 @@ import type { DataValidation, Workbook, Worksheet } from 'exceljs';
 import { dateExcel, euros, FORMAT_DATE, FORMAT_MONTANT, type ExcelJSModule } from '../fec/export/xlsx.ts';
 import type { MetadonneesDossierFec } from '../fec/interface-circularisations.ts';
 import { seuilEffectif, type ParametresCircularisation, type ParametresPopulation } from './parametres.ts';
+import { demandes, type Demande } from './demandes.ts';
 import { LIBELLES_MOTIFS, type Selection, type TiersCandidat } from './selection.ts';
 
 export const STATUTS = ['À envoyer', 'Envoyé', 'Relancé', 'Réponse reçue', 'Sans réponse – procédure alternative'];
@@ -146,23 +147,22 @@ function feuillePopulation(wb: Workbook, nom: string, lignes: LigneSuivi[], clot
   return { ws, derniere };
 }
 
-function lignesTiers(prefixe: string, population: 'Client' | 'Fournisseur', tiers: TiersCandidat[]): LigneSuivi[] {
-  return tiers
-    .filter((t) => t.retenu)
-    .map((t, i) => ({
-      ref: `${prefixe}-${String(i + 1).padStart(3, '0')}`,
-      population,
-      comptes: t.comptes.join(', '),
-      codeTiers: t.compAuxNum ?? '',
-      libelle: t.libelle,
-      solde: t.solde,
-      debit: t.debit,
-      credit: t.credit,
-      motifs: t.motifs
-        .map((m) => `${m} ${LIBELLES_MOTIFS[m]}${m.endsWith('4') && t.rangTirage ? ` (n° ${t.rangTirage})` : ''}${m.endsWith('5') && t.justificationAjout ? ` : ${t.justificationAjout}` : ''}`)
-        .join(' ; '),
-      methode: t.methode ?? '',
-    }));
+function ligneTiers(d: Extract<Demande, { tiers: TiersCandidat }>): LigneSuivi {
+  const t = d.tiers;
+  return {
+    ref: d.ref,
+    population: d.population === 'clients' ? 'Client' : 'Fournisseur',
+    comptes: t.comptes.join(', '),
+    codeTiers: t.compAuxNum ?? '',
+    libelle: t.libelle,
+    solde: t.solde,
+    debit: t.debit,
+    credit: t.credit,
+    motifs: t.motifs
+      .map((m) => `${m} ${LIBELLES_MOTIFS[m]}${m.endsWith('4') && t.rangTirage ? ` (n° ${t.rangTirage})` : ''}${m.endsWith('5') && t.justificationAjout ? ` : ${t.justificationAjout}` : ''}`)
+      .join(' ; '),
+    methode: t.methode ?? '',
+  };
 }
 
 const dateFr = (iso: string) => `${iso.slice(8, 10)}/${iso.slice(5, 7)}/${iso.slice(0, 4)}`;
@@ -181,22 +181,30 @@ export function classeurSuivi(
   const cloture = dateFr(parametres.dateCloture);
   const synthese = wb.addWorksheet('Synthèse');
 
-  const banques: LigneSuivi[] = selection.banques.etablissements.map((e, i) => ({
-    ref: `BQ-${String(i + 1).padStart(3, '0')}`,
-    population: 'Banque',
-    comptes: e.comptes.map((c) => `${c.compteNum}${c.cloture === 0 ? ' (soldé)' : ''}`).join(', '),
-    codeTiers: '',
-    libelle: e.etablissement,
-    solde: e.solde,
-    debit: e.debit,
-    credit: e.credit,
-    motifs: 'Banques : sélection exhaustive (comptes mouvementés dans l’exercice, même soldés)',
-    methode: 'Exhaustive',
-  }));
+  const liste = demandes(selection);
+  const banques: LigneSuivi[] = liste.banques.flatMap((d) => {
+    if (d.population !== 'banques') return [];
+    const e = d.etablissement;
+    return [
+      {
+        ref: d.ref,
+        population: 'Banque',
+        comptes: e.comptes.map((c) => `${c.compteNum}${c.cloture === 0 ? ' (soldé)' : ''}`).join(', '),
+        codeTiers: '',
+        libelle: e.etablissement,
+        solde: e.solde,
+        debit: e.debit,
+        credit: e.credit,
+        motifs: 'Banques : sélection exhaustive (comptes mouvementés dans l’exercice, même soldés)',
+        methode: 'Exhaustive',
+      },
+    ];
+  });
+  const tiers = (population: 'clients' | 'fournisseurs') => liste[population].flatMap((d) => ('tiers' in d ? [ligneTiers(d)] : []));
   const feuilles = [
     { nom: 'Banques', ...feuillePopulation(wb, 'Banques', banques, cloture, `Banques — ${fec.nomDossier} — clôture ${cloture}`) },
-    { nom: 'Clients', ...feuillePopulation(wb, 'Clients', lignesTiers('CL', 'Client', selection.clients.tiers), cloture, `Clients — ${fec.nomDossier} — clôture ${cloture}`) },
-    { nom: 'Fournisseurs', ...feuillePopulation(wb, 'Fournisseurs', lignesTiers('FO', 'Fournisseur', selection.fournisseurs.tiers), cloture, `Fournisseurs — ${fec.nomDossier} — clôture ${cloture}`) },
+    { nom: 'Clients', ...feuillePopulation(wb, 'Clients', tiers('clients'), cloture, `Clients — ${fec.nomDossier} — clôture ${cloture}`) },
+    { nom: 'Fournisseurs', ...feuillePopulation(wb, 'Fournisseurs', tiers('fournisseurs'), cloture, `Fournisseurs — ${fec.nomDossier} — clôture ${cloture}`) },
   ];
 
   // Décisions manuelles (traçabilité), puis paramètres.

@@ -221,8 +221,18 @@ Onglet Synthèse (formules vivantes) : par population, nombre de demandes, taux 
 
 Onglet Paramètres : SS, SP, SAI, seuils par critère, graine, date et heure de sélection, version de l'outil, nom du fichier FEC et son empreinte SHA-256 (pour prouver quel fichier a servi, sans le contenu).
 
-### 4.5 Plus tard : courriers
+### 4.5 Courriers
 - Génération `.docx` (librairie `docx`) des lettres de demande de confirmation, un modèle par population, à partir du tableau de suivi.
 - Modèles éditables (en-tête du client, signataire, adresse de réponse du cabinet, date de clôture, mention « solde ou relevé de compte »).
 - Option de lettre « à solde non indiqué » ou « à solde indiqué » selon la population.
 - Export en lot (un fichier par tiers dans une archive, ou un document unique pour impression).
+
+Règles retenues à l'étape 8 (décisions du 08/10/2026) :
+- Une lettre par demande du tableau de suivi, avec la même référence : une par établissement bancaire (BQ-…), une par client (CL-…) et par fournisseur (FO-…) retenu. Les lettres sont générées depuis la sélection en cours ; un avertissement s'affiche tant que la sélection n'est pas arrêtée (les références peuvent encore changer).
+- Lettre sur papier à en-tête du client, signée par son dirigeant (nom et qualité saisis par dossier), réponse adressée directement au cabinet (nom, adresse de réponse, e-mail facultatif). Pour les banques, la lettre autorise expressément l'établissement à répondre au cabinet.
+- Bloc adresse du destinataire : nom du tiers ou de l'établissement seulement, adresse laissée vide et complétée dans Word (le FEC ne contient pas d'adresses).
+- Solde non indiqué par défaut pour toutes les populations. Banques : toujours non indiqué (demande ouverte : soldes de tous les comptes y compris clôturés, emprunts et concours, engagements hors bilan, effets escomptés et Dailly, titres en dépôt, personnes habilitées ; rappel facultatif des comptes enregistrés, numéro et libellé, sans solde). Clients et fournisseurs : option « solde indiqué » (montant en valeur absolue, « en notre faveur » si le solde est débiteur, « en votre faveur » s'il est créditeur), et demande au choix : confirmation du solde, relevé de compte, ou les deux (par défaut). Une demande de relevé seul n'indique jamais le solde.
+- Coupon-réponse facultatif (par défaut pour clients et fournisseurs), sur une page séparée : accord / désaccord à cocher pour une lettre à solde indiqué, solde à compléter sinon, case « relevé joint », date, signataire, cachet.
+- Modèles et coordonnées du cabinet communs à tous les dossiers du poste ; en-tête, signataire, date des lettres (par défaut : jour de l'export) et date limite de réponse (par défaut : « dans les meilleurs délais ») propres au dossier. Stockage IndexedDB (base version 3) ; « Purger ce dossier » efface les réglages du dossier, « Tout purger » efface aussi les modèles.
+- Texte des modèles : texte simple, paragraphes séparés par une ligne vide, « - » pour une puce, variables entre accolades (`{societe}`, `{tiers}`, `{code_tiers}`, `{reference}`, `{date_cloture}`, `{cabinet}`, `{contact_reponse}`, `{delai_reponse}`, `{phrase_solde}`, `{phrase_demande}`, `{solde}`, `{sens_solde}`, `{comptes_banque}`) ; un paragraphe vide après remplacement est supprimé ; une variable inconnue reste visible. Bouton « Rétablir le texte par défaut ».
+- Export : archive `.zip` d'un `.docx` par lettre, nommé `{Réf.} - {tiers}.docx`, ou document unique (une section par lettre, coupon sur page séparée). Lettres choisies par population ou une à une.
