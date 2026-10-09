@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "genere_le": "2026-10-09T10:52:29.424Z",
+  "genere_le": "2026-10-09T11:17:58.545Z",
   "indicateurs": [
     {
       "id": "dette",
@@ -515,12 +515,12 @@
       },
       "regle": {
         "frequence": "mensuelle",
-        "decalage_jours": 40,
+        "decalage_jours": 12,
         "heure": null,
         "tolerance_jours_ouvres": 10
       },
       "prochaine_publication": {
-        "date": "2026-11-09",
+        "date": "2026-10-12",
         "heure": null,
         "estimee": true
       },
