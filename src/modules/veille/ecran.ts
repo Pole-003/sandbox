@@ -6,6 +6,8 @@
 import { h } from '../../app/dom.ts';
 import { formaterDate } from '../../core/format.ts';
 import { chargerEtat, chargerNews, MESSAGES_CHARGEMENT } from './donnees.ts';
+import { rendreEcheances } from './ecran-echeances.ts';
+import { dateIsoParis } from './dates-paris.ts';
 import {
   ageEnJours,
   CRITERES_PAR_DEFAUT,
@@ -30,6 +32,7 @@ import {
 
 export const ONGLETS = [
   { id: 'fil', libelle: 'Fil d’actualité' },
+  { id: 'echeances', libelle: 'Échéances' },
   { id: 'plf', libelle: 'Suivi PLF / PLFSS' },
   { id: 'indicateurs', libelle: 'Indicateurs' },
   { id: 'rennes', libelle: 'Rennes et Bretagne' },
@@ -511,6 +514,7 @@ export async function rendreVeille(
     history.replaceState(null, '', `#/veille${id === 'fil' ? '' : `/${id}`}`);
     if (id === 'fil') rendreFil(panneau, { articles: news.articles, marques, magasin, criteres: criteresFil });
     if (id === 'rennes') rendreFil(panneau, { articles: news.articles, marques, magasin, criteres: criteresRennes, themeFixe: 'Rennes et Bretagne' });
+    if (id === 'echeances') rendreEcheances(panneau, news.echeances ?? [], dateIsoParis(options.maintenant ?? new Date()));
     if (id === 'plf') rendreSuivi(panneau, news);
     if (id === 'indicateurs') rendreIndicateurs(panneau, news);
     if (id === 'sources') rendreEtat(panneau, etat);

@@ -5,12 +5,14 @@
  *  - veille/mots-cles.json : classement par mots-clés (thème, importance, public, exclusions) ;
  *  - veille/suivi.json : suivi PLF / PLFSS saisi à la main ;
  *  - veille/hierarchie-mesures.json : hiérarchie des mesures du PLF et du PLFSS établie par le pôle ;
- *  - veille/indicateurs.json : séries suivies par les API de la couche B (INSEE, BODACC).
+ *  - veille/indicateurs.json : séries suivies par les API de la couche B (INSEE, BODACC) ;
+ *  - veille/echeances.json : échéances des entreprises saisies à la main (règles et dates ponctuelles).
  */
 import { readFileSync } from 'node:fs';
 import { THEMES, type SuiviTexte, type Theme, type TypeArticle } from '../../src/modules/veille/modele.ts';
 import { verifierMotsCles, type MotsCles } from './classement.ts';
 import type { PolitiqueRobots } from './http.ts';
+import { verifierFichierEcheances, type FichierEcheances } from '../../src/modules/veille/echeances.ts';
 import { verifierHierarchie, type HierarchieMesures } from './projet-loi.ts';
 
 export interface ConfigVeille {
@@ -26,7 +28,7 @@ export interface ConfigVeille {
 export interface SourceCatalogue {
   id: string;
   nom: string;
-  type: 'rss' | 'page' | 'api' | 'dossier' | 'alerte_google';
+  type: 'rss' | 'page' | 'api' | 'dossier' | 'alerte_google' | 'calendrier';
   /** Pour un dossier législatif, « {annee} » est remplacé par l'année du texte (essai de l'année suivante, puis de l'année en cours). */
   url?: string;
   /** Dossier législatif suivi : PLF ou PLFSS. */
@@ -65,6 +67,8 @@ export interface Reglages {
   hierarchie?: HierarchieMesures;
   /** Séries suivies par les connecteurs de la couche B (veille/indicateurs.json). */
   indicateurs?: IndicateurCatalogue[];
+  /** Échéances saisies à la main (veille/echeances.json). */
+  echeances?: FichierEcheances;
 }
 
 const RACINE = new URL('../../', import.meta.url);
@@ -93,7 +97,10 @@ export function chargerReglages(): Reglages {
   const hierarchie = lireJson<HierarchieMesures>('veille/hierarchie-mesures.json');
   verifierHierarchie(hierarchie);
   const { indicateurs } = lireJson<{ indicateurs: IndicateurCatalogue[] }>('veille/indicateurs.json');
-  return { config, sources, motsCles, suivi: { plf: suivi.plf ?? null, plfss: suivi.plfss ?? null }, hierarchie, indicateurs };
+  const echeances = lireJson<FichierEcheances>('veille/echeances.json');
+  const erreursEcheances = verifierFichierEcheances(echeances);
+  if (erreursEcheances.length) throw new Error(`veille/echeances.json invalide : ${erreursEcheances.join(' ; ')}`);
+  return { config, sources, motsCles, suivi: { plf: suivi.plf ?? null, plfss: suivi.plfss ?? null }, hierarchie, indicateurs, echeances };
 }
 
 /** Fenêtre de veille (en jours) d'un thème. */

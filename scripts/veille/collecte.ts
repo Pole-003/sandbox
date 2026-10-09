@@ -13,6 +13,9 @@ import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import type { Article, EtatVeille, NewsJson } from '../../src/modules/veille/modele.ts';
 import { collecterAlertes } from './alertes.ts';
+import { collecterCalendrier } from './calendrier-fiscal.ts';
+import { developperEcheances, fusionnerEcheances } from '../../src/modules/veille/echeances.ts';
+import { ajouterJours } from '../../src/core/dates.ts';
 import { chargerReglages, themeConnu, type Reglages } from './config.ts';
 import { collecterCoucheA } from './couche-a.ts';
 import { collecterCoucheB, type ConnecteurApi } from './couche-b.ts';
@@ -77,7 +80,7 @@ const json = (valeur: unknown) => `${JSON.stringify(valeur, null, 2)}\n`;
 export const RAISON_IA = 'désactivée : la veille fonctionne à 0 €, sans appel à un service d’IA';
 
 export async function collecter(d: DependancesCollecte): Promise<Bilan> {
-  const { config, sources, motsCles, suivi, hierarchie, indicateurs } = d.reglages;
+  const { config, sources, motsCles, suivi, hierarchie, indicateurs, echeances: echeancesSaisies } = d.reglages;
   const journal = d.journal ?? (() => {});
   const aujourdhui = dateIsoParis(d.maintenant);
 
@@ -121,6 +124,23 @@ export async function collecter(d: DependancesCollecte): Promise<Bilan> {
     plfss: dossiers.suivi.plfss ?? newsPrecedent?.suivi?.plfss ?? suivi.plfss,
   };
 
+  // --- Échéances : calendrier fiscal officiel + veille/echeances.json ---
+  const calendrier = await collecterCalendrier(sources, {
+    client: d.http, maintenant: d.maintenant, etatPrecedent: sourcesPrecedentes,
+    ...(d.delaisNouvellesTentatives ? { delaisNouvellesTentatives: d.delaisNouvellesTentatives } : {}),
+  });
+  for (const e of calendrier.etats) journal(`  ${e.etat === 'ok' ? 'OK    ' : 'ÉCHEC '} ${e.id} : ${e.nb_elements ?? 0} échéance(s)${e.erreur ? ` — ${e.erreur}` : ''}`);
+  const fenetreEcheances = { du: ajouterJours(aujourdhui, -7), au: ajouterJours(aujourdhui, 100) };
+  // Un mois du calendrier illisible aujourd'hui garde les échéances déjà publiées pour ce mois.
+  const officielles = [
+    ...calendrier.echeances,
+    ...(newsPrecedent?.echeances ?? []).filter((e) => e.origine === 'calendrier_officiel' && !calendrier.moisLus.includes(e.date.slice(0, 7))),
+  ].filter((e) => e.date >= fenetreEcheances.du && e.date <= fenetreEcheances.au);
+  const echeances = fusionnerEcheances(
+    officielles,
+    echeancesSaisies ? developperEcheances(echeancesSaisies, fenetreEcheances.du, fenetreEcheances.au) : [],
+  );
+
   // --- Fusion et classement ---
   const nouveaux: Article[] = [
     ...coucheA.articles.map((a) => depuisFlux(a, aujourdhui)),
@@ -152,12 +172,13 @@ export async function collecter(d: DependancesCollecte): Promise<Bilan> {
     indicateurs: indicateursDuJour(coucheB.indicateurs, newsPrecedent?.indicateurs ?? []),
     suivi: suiviPublie,
     sources: sourcesCitees(sources),
+    echeances,
   };
   const newsModifie = !newsPrecedent || empreinteNews(newsPrecedent) !== empreinteNews(news);
   if (newsModifie) d.depot.ecrire(CHEMINS.news, json(news));
 
   // Ordre du catalogue pour l'écran « État des sources ».
-  const parId = new Map([...coucheA.etats, ...alertes.etats, ...coucheB.etats, ...dossiers.etats].map((e) => [e.id, e]));
+  const parId = new Map([...coucheA.etats, ...alertes.etats, ...coucheB.etats, ...dossiers.etats, ...calendrier.etats].map((e) => [e.id, e]));
   const etat: EtatVeille = {
     version: 2,
     genere_le: d.maintenant.toISOString(),

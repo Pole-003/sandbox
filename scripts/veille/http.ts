@@ -101,6 +101,10 @@ export class ClientHttp {
     if (!etat) {
       etat = this.lireRobots(new URL('/robots.txt', url.origin));
       this.robots.set(url.origin, etat);
+      // Un robots.txt injoignable (panne passagère) n'est pas gardé : la nouvelle tentative le relira.
+      void etat.then((e) => {
+        if (e.toutInterdit) this.robots.delete(url.origin);
+      });
     }
     return etat;
   }

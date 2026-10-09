@@ -5,6 +5,7 @@
  * Ce fichier ne contient que des types et des constantes : il est partagé entre les scripts
  * de collecte (Node, GitHub Actions) et le navigateur.
  */
+import type { EcheanceEntreprise } from './echeances.ts';
 
 export const THEMES = [
   'Loi de finances',
@@ -163,6 +164,8 @@ export interface NewsJson {
   suivi: { plf: SuiviTexte | null; plfss: SuiviTexte | null };
   /** Sources consultées, pour la mention des sources. */
   sources: SourceCitee[];
+  /** Échéances des entreprises : calendrier fiscal officiel et veille/echeances.json (7 jours passés, 100 à venir). */
+  echeances?: EcheanceEntreprise[];
 }
 
 export type EtatCollecte = 'ok' | 'erreur' | 'inactive' | 'non_configuree';
@@ -170,7 +173,7 @@ export type EtatCollecte = 'ok' | 'erreur' | 'inactive' | 'non_configuree';
 export interface EtatSource {
   id: string;
   nom: string;
-  type: 'rss' | 'page' | 'api' | 'dossier' | 'alerte_google';
+  type: 'rss' | 'page' | 'api' | 'dossier' | 'alerte_google' | 'calendrier';
   theme: string;
   statut_catalogue: string;
   etat: EtatCollecte;

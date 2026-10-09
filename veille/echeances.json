@@ -1,0 +1,108 @@
+{
+  "_commentaire": "Échéances des entreprises saisies à la main (docs/VEILLE.md, « Échéances »). Le calendrier fiscal officiel d'impots.gouv.fr (TVA, IS, DSN, taxe sur les salaires…) est relu automatiquement à chaque collecte : n'ajoutez ici que ce qu'il ne contient pas. Chaque échéance cite sa source officielle (nom et lien https). Règles : « mensuelle » {jour, mois facultatifs}, « annuelle » {jour, mois}, « jours_ouvres_apres » {jour, mois, rang, plus_jours} ; une date tombant un samedi, un dimanche ou un jour férié est reportée au premier jour ouvré suivant, sauf « report »: false. Catégories : fiscal, social, juridique. Dates de droit commun pour un exercice clos le 31 décembre.",
+  "mis_a_jour_le": "2026-10-09",
+  "regles": [
+    {
+      "id": "urssaf-ti-mensuel-5",
+      "titre": "Travailleurs indépendants : prélèvement mensuel des cotisations (échéance du 5)",
+      "detail": "Prélèvement le 5 de chaque mois, de janvier à décembre (date par défaut). Montants sur l'échéancier de l'espace en ligne Urssaf.",
+      "categorie": "social",
+      "source": "Urssaf",
+      "url": "https://www.urssaf.fr/accueil/independant/comprendre-payer-cotisations/calendrier-paiement-cotisations.html",
+      "mensuelle": {
+        "jour": 5
+      }
+    },
+    {
+      "id": "urssaf-ti-mensuel-20",
+      "titre": "Travailleurs indépendants : prélèvement mensuel des cotisations (échéance du 20)",
+      "detail": "Pour ceux qui ont choisi le prélèvement le 20 de chaque mois.",
+      "categorie": "social",
+      "source": "Urssaf",
+      "url": "https://www.urssaf.fr/accueil/independant/comprendre-payer-cotisations/calendrier-paiement-cotisations.html",
+      "mensuelle": {
+        "jour": 20
+      }
+    },
+    {
+      "id": "urssaf-ti-trimestriel",
+      "titre": "Travailleurs indépendants : paiement trimestriel des cotisations",
+      "detail": "Échéances trimestrielles les 5 février, 5 mai, 5 août et 5 novembre.",
+      "categorie": "social",
+      "source": "Urssaf",
+      "url": "https://www.urssaf.fr/accueil/independant/comprendre-payer-cotisations/calendrier-paiement-cotisations.html",
+      "mensuelle": {
+        "jour": 5,
+        "mois": [
+          2,
+          5,
+          8,
+          11
+        ]
+      }
+    },
+    {
+      "id": "index-egalite",
+      "titre": "Index de l'égalité professionnelle : publication et transmission au CSE et à la DREETS",
+      "detail": "Entreprises d'au moins 50 salariés : index de l'année précédente, avant le 1er mars.",
+      "categorie": "social",
+      "source": "Ministère du Travail",
+      "url": "https://travail-emploi.gouv.fr/lindex-de-legalite-professionnelle-femmes-hommes",
+      "annuelle": {
+        "jour": 1,
+        "mois": 3
+      },
+      "report": false
+    },
+    {
+      "id": "approbation-comptes",
+      "titre": "Approbation des comptes annuels (exercice clos le 31 décembre)",
+      "detail": "Assemblée dans les 6 mois de la clôture, sauf prorogation accordée par le président du tribunal de commerce.",
+      "categorie": "juridique",
+      "source": "justice.fr (avec Entreprendre Service Public)",
+      "url": "https://www.justice.fr/fiche/depot-comptes-annuels-societe",
+      "annuelle": {
+        "jour": 30,
+        "mois": 6
+      },
+      "report": false
+    },
+    {
+      "id": "depot-comptes-papier",
+      "titre": "Dépôt des comptes annuels au greffe (dépôt papier)",
+      "detail": "Un mois après l'approbation (art. L. 232-23 du Code de commerce) : 31 juillet pour des comptes approuvés le 30 juin.",
+      "categorie": "juridique",
+      "source": "justice.fr (avec Entreprendre Service Public)",
+      "url": "https://www.justice.fr/fiche/depot-comptes-annuels-societe",
+      "annuelle": {
+        "jour": 31,
+        "mois": 7
+      },
+      "report": false
+    },
+    {
+      "id": "depot-comptes-electronique",
+      "titre": "Dépôt des comptes annuels au greffe (dépôt électronique)",
+      "detail": "Deux mois après l'approbation en cas de dépôt électronique : 31 août pour des comptes approuvés le 30 juin.",
+      "categorie": "juridique",
+      "source": "justice.fr (avec Entreprendre Service Public)",
+      "url": "https://www.justice.fr/fiche/depot-comptes-annuels-societe",
+      "annuelle": {
+        "jour": 31,
+        "mois": 8
+      },
+      "report": false
+    }
+  ],
+  "ponctuelles": [
+    {
+      "id": "facturation-electronique-2027",
+      "date": "2027-09-01",
+      "titre": "Facturation électronique : obligation d'émission et d'e-reporting pour les PME et les microentreprises",
+      "detail": "La réception des factures électroniques est obligatoire pour toutes les entreprises depuis le 1er septembre 2026.",
+      "categorie": "fiscal",
+      "source": "impots.gouv.fr",
+      "url": "https://www.impots.gouv.fr/professionnel/questions/partir-de-quand-suis-je-concerne-par-la-reforme-de-la-facturation"
+    }
+  ]
+}

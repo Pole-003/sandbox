@@ -123,7 +123,7 @@ export function empreinteNews(news: NewsJson): string {
 
 export function sourcesCitees(sources: readonly { id: string; nom: string; url?: string; type: string; statut: string }[]): SourceCitee[] {
   return sources
-    .filter((s) => (s.type === 'rss' || s.type === 'page' || s.type === 'dossier') && s.statut === 'verifie')
+    .filter((s) => ['rss', 'page', 'dossier', 'calendrier'].includes(s.type) && s.statut === 'verifie')
     .map((s) => {
       let url: string | null = null;
       try {

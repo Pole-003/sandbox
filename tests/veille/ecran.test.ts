@@ -220,9 +220,9 @@ describe('veille · écran', () => {
     await rendreVeille(conteneur, { magasin: magasinMemoire() });
     const fil = conteneur.querySelector<HTMLButtonElement>('#onglet-fil')!;
     fil.dispatchEvent(new KeyboardEvent('keydown', { key: 'ArrowRight' }));
-    expect(conteneur.querySelector('#onglet-plf')?.getAttribute('aria-selected')).toBe('true');
-    expect(document.activeElement?.id).toBe('onglet-plf');
-    conteneur.querySelector<HTMLButtonElement>('#onglet-plf')!.dispatchEvent(new KeyboardEvent('keydown', { key: 'End' }));
+    expect(conteneur.querySelector('#onglet-echeances')?.getAttribute('aria-selected')).toBe('true');
+    expect(document.activeElement?.id).toBe('onglet-echeances');
+    conteneur.querySelector<HTMLButtonElement>('#onglet-echeances')!.dispatchEvent(new KeyboardEvent('keydown', { key: 'End' }));
     expect(document.activeElement?.id).toBe('onglet-sources');
   });
 

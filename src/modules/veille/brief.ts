@@ -6,8 +6,10 @@ import { h } from '../../app/dom.ts';
 import { chargerNews, MESSAGES_CHARGEMENT } from './donnees.ts';
 import { badgeImportance, dateFr, lienExterne, type Annulation } from './ecran.ts';
 import { briefDuJour, prochainesEcheances } from './logique.ts';
+import { blocEcheancesAccueil } from './ecran-echeances.ts';
+import { dateIsoParis } from './dates-paris.ts';
 
-export function sectionBrief(annulation: Annulation): HTMLElement {
+export function sectionBrief(annulation: Annulation, maintenant: () => Date = () => new Date()): HTMLElement {
   const contenu = h('div', { class: 'brief-contenu' }, h('p', { class: 'texte-secondaire', role: 'status' }, 'Chargement du brief…'));
   const section = h(
     'section',
@@ -54,6 +56,7 @@ export function sectionBrief(annulation: Annulation): HTMLElement {
             h('a', { href: '#/veille/plf' }, 'Voir le suivi PLF / PLFSS'),
           )
         : '',
+      blocEcheancesAccueil(news.echeances ?? [], dateIsoParis(maintenant())) ?? '',
       h('p', { class: 'note texte-secondaire' }, `Collecte du ${dateFr(news.genere_le)}. Extraits publiés par les sources : seul le texte officiel fait foi.`),
     );
   });

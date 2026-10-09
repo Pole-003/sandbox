@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "genere_le": "2026-10-09T10:30:27.820Z",
+  "genere_le": "2026-10-09T10:39:04.086Z",
   "articles": [
     {
       "id": "b069aa48d1f16264",
@@ -3639,6 +3639,11 @@
       "url": "https://www.conseil-etat.fr"
     },
     {
+      "id": "impots-calendrier-fiscal",
+      "nom": "impots.gouv.fr — Calendrier fiscal des professionnels",
+      "url": "https://www.impots.gouv.fr"
+    },
+    {
       "id": "an-dossier-plf",
       "nom": "Assemblée nationale — Dossier législatif du PLF",
       "url": "https://www.assemblee-nationale.fr"
@@ -3647,6 +3652,598 @@
       "id": "an-dossier-plfss",
       "nom": "Assemblée nationale — Dossier législatif du PLFSS",
       "url": "https://www.assemblee-nationale.fr"
+    }
+  ],
+  "echeances": [
+    {
+      "id": "impots-2026-10-05-6e0408c6",
+      "date": "2026-10-05",
+      "titre": "Prélèvement à la source – DSN",
+      "detail": "Date limite pour la télédéclaration DSN de septembre 2026 et le télépaiement (entreprises de 50 salariés ou plus).",
+      "categorie": "social",
+      "source": "impots.gouv.fr — calendrier fiscal",
+      "url": "https://www.impots.gouv.fr/professionnel/calendrier-fiscal/2026-10",
+      "origine": "calendrier_officiel"
+    },
+    {
+      "id": "urssaf-ti-mensuel-5-2026-10-05",
+      "date": "2026-10-05",
+      "titre": "Travailleurs indépendants : prélèvement mensuel des cotisations (échéance du 5)",
+      "detail": "Prélèvement le 5 de chaque mois, de janvier à décembre (date par défaut). Montants sur l'échéancier de l'espace en ligne Urssaf.",
+      "categorie": "social",
+      "source": "Urssaf",
+      "url": "https://www.urssaf.fr/accueil/independant/comprendre-payer-cotisations/calendrier-paiement-cotisations.html",
+      "origine": "saisie"
+    },
+    {
+      "id": "impots-2026-10-12-d7f63edc",
+      "date": "2026-10-12",
+      "titre": "Entreprises soumises à la TVA",
+      "detail": "Date limite de dépôt de la DES (déclaration européenne de services) pour les opérations intracommunautaires réalisées en septembre 2026.",
+      "categorie": "fiscal",
+      "source": "impots.gouv.fr — calendrier fiscal",
+      "url": "https://www.impots.gouv.fr/professionnel/calendrier-fiscal/2026-10",
+      "origine": "calendrier_officiel"
+    },
+    {
+      "id": "impots-2026-10-12-d133c7a9",
+      "date": "2026-10-12",
+      "titre": "Entreprises soumises à la TVA",
+      "detail": "Date limite de dépôt de l'état récapitulatif des clients pour les opérations intracommunautaires réalisées en septembre 2026.",
+      "categorie": "fiscal",
+      "source": "impots.gouv.fr — calendrier fiscal",
+      "url": "https://www.impots.gouv.fr/professionnel/calendrier-fiscal/2026-10",
+      "origine": "calendrier_officiel"
+    },
+    {
+      "id": "impots-2026-10-12-51ab08b9",
+      "date": "2026-10-12",
+      "titre": "Prélèvement à la source – PASRAU",
+      "detail": "Date limite pour la télédéclaration PASRAU (revenus de remplacement) de septembre 2026 et le télépaiement (paiement mensuel et option de paiement trimestriel).",
+      "categorie": "social",
+      "source": "impots.gouv.fr — calendrier fiscal",
+      "url": "https://www.impots.gouv.fr/professionnel/calendrier-fiscal/2026-10",
+      "origine": "calendrier_officiel"
+    },
+    {
+      "id": "impots-2026-10-15-849d3efc",
+      "date": "2026-10-15",
+      "titre": "Prélèvement et retenues à la source sur les RCM",
+      "detail": "Date limite de : dépôt de la déclaration de retenue à la source sur les revenus des obligations et autres titres d'emprunt négociables relative au mois de septembre 2026 (déclaration n° 2753) ; dépôt de la déclaration relative au mois de septembre 2026 concernant les prélèvements et retenues à la source sur les revenus de capitaux mobiliers (déclaration n° 2777).",
+      "categorie": "fiscal",
+      "source": "impots.gouv.fr — calendrier fiscal",
+      "url": "https://www.impots.gouv.fr/professionnel/calendrier-fiscal/2026-10",
+      "origine": "calendrier_officiel"
+    },
+    {
+      "id": "impots-2026-10-15-e066979f",
+      "date": "2026-10-15",
+      "titre": "Retenue à la source - Prélèvement libératoire",
+      "detail": "Date limite de versement de l’acompte dû (acquitté à l'appui de la déclaration n° 2777 relative au mois de septembre 2026 déposée en octobre 2026) au titre : de la contribution sociale généralisée, du prélèvement de solidarité et de la contribution pour le remboursement de la dette sociale ; et du prélèvement forfaitaire et de la retenue à la source.",
+      "categorie": "fiscal",
+      "source": "impots.gouv.fr — calendrier fiscal",
+      "url": "https://www.impots.gouv.fr/professionnel/calendrier-fiscal/2026-10",
+      "origine": "calendrier_officiel"
+    },
+    {
+      "id": "impots-2026-10-15-1ef59e08",
+      "date": "2026-10-15",
+      "titre": "Sociétés soumises à l'IS",
+      "detail": "Date limite de télépaiement du solde de l'impôt sur les sociétés (IS)et de la contribution sociale sur l'IS de 3,3 %, à l'aide du relevé de solde n° 2572, si votre exercice est clos le 30 juin 2026.",
+      "categorie": "fiscal",
+      "source": "impots.gouv.fr — calendrier fiscal",
+      "url": "https://www.impots.gouv.fr/professionnel/calendrier-fiscal/2026-10",
+      "origine": "calendrier_officiel"
+    },
+    {
+      "id": "impots-2026-10-15-4d87e62c",
+      "date": "2026-10-15",
+      "titre": "Taxe Générale sur les Activités Polluantes (TGAP)",
+      "detail": "Entre les 15 et 26 octobre 2026 : date limite de dépôt de la déclaration d’acompte n°2020-TGAP-AC au titre de la TGAP 2026 pour les redevables soumis au régime réel normal en TVA à la date figurant dans votre espace professionnel.",
+      "categorie": "fiscal",
+      "source": "impots.gouv.fr — calendrier fiscal",
+      "url": "https://www.impots.gouv.fr/professionnel/calendrier-fiscal/2026-10",
+      "origine": "calendrier_officiel"
+    },
+    {
+      "id": "impots-2026-10-15-037a97ea",
+      "date": "2026-10-15",
+      "titre": "Taxe sur les conventions d'assurances",
+      "detail": "La taxe due doit être télédéclarée et télépayée avec le formulaire n°2787-SD au titre des primes émises, des conventions conclues et des sommes échues au cours du mois de septembre 2026.",
+      "categorie": "fiscal",
+      "source": "impots.gouv.fr — calendrier fiscal",
+      "url": "https://www.impots.gouv.fr/professionnel/calendrier-fiscal/2026-10",
+      "origine": "calendrier_officiel"
+    },
+    {
+      "id": "impots-2026-10-15-198600ed",
+      "date": "2026-10-15",
+      "titre": "Taxe sur les salaires",
+      "detail": "Date limite de télépaiement de la taxe concernant les salaires payés en septembre (redevables mensuels) ou les salaires payés au cours du 3ème trimestre (redevables trimestriels) à l'aide du relevé de versement provisionnel n° 2501.",
+      "categorie": "fiscal",
+      "source": "impots.gouv.fr — calendrier fiscal",
+      "url": "https://www.impots.gouv.fr/professionnel/calendrier-fiscal/2026-10",
+      "origine": "calendrier_officiel"
+    },
+    {
+      "id": "impots-2026-10-15-dcec54cd",
+      "date": "2026-10-15",
+      "titre": "Taxe sur les services numériques (TSN)",
+      "detail": "Entre les 15 et 24 octobre 2026 : paiement du 2ème acompte de TSN pour les redevables déposant des déclarations mensuelles de TVA ou non assujettis à la TVA à la date figurant dans votre espace professionnel.",
+      "categorie": "fiscal",
+      "source": "impots.gouv.fr — calendrier fiscal",
+      "url": "https://www.impots.gouv.fr/professionnel/calendrier-fiscal/2026-10",
+      "origine": "calendrier_officiel"
+    },
+    {
+      "id": "impots-2026-10-15-4b23ca42",
+      "date": "2026-10-15",
+      "titre": "TVA régime réel normal d'imposition",
+      "detail": "Entre les 15 et 24 octobre 2026, dépôt et paiement de la déclaration mensuelle ou trimestrielle de TVA à la date figurant dans votre espace professionnel.",
+      "categorie": "fiscal",
+      "source": "impots.gouv.fr — calendrier fiscal",
+      "url": "https://www.impots.gouv.fr/professionnel/calendrier-fiscal/2026-10",
+      "origine": "calendrier_officiel"
+    },
+    {
+      "id": "impots-2026-10-15-e3d43af0",
+      "date": "2026-10-15",
+      "titre": "Prélèvement à la source – DSN",
+      "detail": "Date limite pour la télédéclaration DSN de septembre 2026 (entreprises de moins de 50 salariés) et le télépaiement (paiement mensuel et option de paiement trimestriel).",
+      "categorie": "social",
+      "source": "impots.gouv.fr — calendrier fiscal",
+      "url": "https://www.impots.gouv.fr/professionnel/calendrier-fiscal/2026-10",
+      "origine": "calendrier_officiel"
+    },
+    {
+      "id": "urssaf-ti-mensuel-20-2026-10-20",
+      "date": "2026-10-20",
+      "titre": "Travailleurs indépendants : prélèvement mensuel des cotisations (échéance du 20)",
+      "detail": "Pour ceux qui ont choisi le prélèvement le 20 de chaque mois.",
+      "categorie": "social",
+      "source": "Urssaf",
+      "url": "https://www.urssaf.fr/accueil/independant/comprendre-payer-cotisations/calendrier-paiement-cotisations.html",
+      "origine": "saisie"
+    },
+    {
+      "id": "impots-2026-10-26-a8c68c9e",
+      "date": "2026-10-26",
+      "titre": "Taxe Générale sur les Activités Polluantes (TGAP)",
+      "detail": "Date limite de dépôt de la déclaration d’acompte n°2020-TGAP-AC au titre de la TGAP 2026 pour les redevables non imposables ou en franchise de TVA.",
+      "categorie": "fiscal",
+      "source": "impots.gouv.fr — calendrier fiscal",
+      "url": "https://www.impots.gouv.fr/professionnel/calendrier-fiscal/2026-10",
+      "origine": "calendrier_officiel"
+    },
+    {
+      "id": "impots-2026-10-26-177124e1",
+      "date": "2026-10-26",
+      "titre": "Taxe Générale sur les Activités Polluantes (TGAP)",
+      "detail": "Date limite de dépôt de la déclaration d’acompte n°2020-TGAP-AC au titre de la TGAP 2026 pour les redevables soumis au régime simplifié d’imposition en TVA.",
+      "categorie": "fiscal",
+      "source": "impots.gouv.fr — calendrier fiscal",
+      "url": "https://www.impots.gouv.fr/professionnel/calendrier-fiscal/2026-10",
+      "origine": "calendrier_officiel"
+    },
+    {
+      "id": "impots-2026-10-27-9da332b2",
+      "date": "2026-10-27",
+      "titre": "Accise sur l’électricité, les gaz naturels et les charbons",
+      "detail": "Date limite de dépôt de la déclaration n°2040-TIC mensuelle ou trimestrielle pour l’accise sur l’électricité, trimestrielle pour l’accise sur les gaz naturels et l’accise sur les charbons en rythme trimestriel.",
+      "categorie": "fiscal",
+      "source": "impots.gouv.fr — calendrier fiscal",
+      "url": "https://www.impots.gouv.fr/professionnel/calendrier-fiscal/2026-10",
+      "origine": "calendrier_officiel"
+    },
+    {
+      "id": "impots-2026-10-30-d8d21475",
+      "date": "2026-10-30",
+      "titre": "Entreprises dont l'exercice est clos le 31 juillet 2026",
+      "detail": "Date limite de souscription de : la déclaration de résultats n° 2065 et ses annexes (impôt sur les sociétés) - délai supplémentaire de 15 jours calendaires accordé aux utilisateurs des téléprocédures ; la notification n° 2065-INT pour les entités appartenant à un groupe dans le champ du Pilier 2 ; la déclaration de retenue à la source n° 2754 pour les entreprises étrangères exploitant un établissement stable en France ; la télédéclaration annuelle n° CA12 E (TVA - régime simplifié).",
+      "categorie": "fiscal",
+      "source": "impots.gouv.fr — calendrier fiscal",
+      "url": "https://www.impots.gouv.fr/professionnel/calendrier-fiscal/2026-10",
+      "origine": "calendrier_officiel"
+    },
+    {
+      "id": "impots-2026-10-30-23794aa5",
+      "date": "2026-10-30",
+      "titre": "TVA - Agriculteurs redevables de la TVA sur option",
+      "detail": "Modalités de renonciation : les agriculteurs redevables de la TVA sur option et qui entendent y renoncer à partir du 1er janvier 2027 (à l'expiration de la période d'option en cours) doivent formuler auprès de leur service des impôts des entreprises leur renonciation deux mois avant l'expiration de la période d'option.",
+      "categorie": "fiscal",
+      "source": "impots.gouv.fr — calendrier fiscal",
+      "url": "https://www.impots.gouv.fr/professionnel/calendrier-fiscal/2026-10",
+      "origine": "calendrier_officiel"
+    },
+    {
+      "id": "impots-2026-10-30-c02f2029",
+      "date": "2026-10-30",
+      "titre": "TVA - franchise en base",
+      "detail": "Date limite d'option pour le paiement de la TVA à partir du 1 er octobre 2026 pour les entreprises bénéficiant de la franchise en base (article 293 F du CGI).",
+      "categorie": "fiscal",
+      "source": "impots.gouv.fr — calendrier fiscal",
+      "url": "https://www.impots.gouv.fr/professionnel/calendrier-fiscal/2026-10",
+      "origine": "calendrier_officiel"
+    },
+    {
+      "id": "impots-2026-10-30-fa2676ba",
+      "date": "2026-10-30",
+      "titre": "TVA - Personnes bénéficiant du régime dérogatoire",
+      "detail": "Date limite de renonciation à l'option pour le paiement de la TVA sur les acquisitions intracommunautaires pour les personnes bénéficiant du régime dérogatoire et désirant abandonner cette option à partir du 1er janvier 2027 (à l'expiration de la période d'option en cours). La dénonciation de l'option doit être réalisée par écrit auprès de leur service des impôts des entreprises.",
+      "categorie": "fiscal",
+      "source": "impots.gouv.fr — calendrier fiscal",
+      "url": "https://www.impots.gouv.fr/professionnel/calendrier-fiscal/2026-10",
+      "origine": "calendrier_officiel"
+    },
+    {
+      "id": "impots-2026-11-05-6869b79c",
+      "date": "2026-11-05",
+      "titre": "Agriculteurs soumis au régime simplifié agricole et déposant une CA12A annuelle",
+      "detail": "Date limite de dépôt du bulletin d'échéance n° 3525 bis relatif au troisième trimestre 2026.",
+      "categorie": "fiscal",
+      "source": "impots.gouv.fr — calendrier fiscal",
+      "url": "https://www.impots.gouv.fr/professionnel/calendrier-fiscal/2026-11",
+      "origine": "calendrier_officiel"
+    },
+    {
+      "id": "impots-2026-11-05-dc5dd57b",
+      "date": "2026-11-05",
+      "titre": "Prélèvement à la source – DSN",
+      "detail": "Date limite pour la télédéclaration DSN d’octobre 2026 et le télépaiement (entreprises de 50 salariés ou plus).",
+      "categorie": "social",
+      "source": "impots.gouv.fr — calendrier fiscal",
+      "url": "https://www.impots.gouv.fr/professionnel/calendrier-fiscal/2026-11",
+      "origine": "calendrier_officiel"
+    },
+    {
+      "id": "urssaf-ti-trimestriel-2026-11-05",
+      "date": "2026-11-05",
+      "titre": "Travailleurs indépendants : paiement trimestriel des cotisations",
+      "detail": "Échéances trimestrielles les 5 février, 5 mai, 5 août et 5 novembre.",
+      "categorie": "social",
+      "source": "Urssaf",
+      "url": "https://www.urssaf.fr/accueil/independant/comprendre-payer-cotisations/calendrier-paiement-cotisations.html",
+      "origine": "saisie"
+    },
+    {
+      "id": "urssaf-ti-mensuel-5-2026-11-05",
+      "date": "2026-11-05",
+      "titre": "Travailleurs indépendants : prélèvement mensuel des cotisations (échéance du 5)",
+      "detail": "Prélèvement le 5 de chaque mois, de janvier à décembre (date par défaut). Montants sur l'échéancier de l'espace en ligne Urssaf.",
+      "categorie": "social",
+      "source": "Urssaf",
+      "url": "https://www.urssaf.fr/accueil/independant/comprendre-payer-cotisations/calendrier-paiement-cotisations.html",
+      "origine": "saisie"
+    },
+    {
+      "id": "impots-2026-11-10-bf20a9b0",
+      "date": "2026-11-10",
+      "titre": "Prélèvement à la source – PASRAU",
+      "detail": "Date limite pour la télédéclaration PASRAU (revenus de remplacement) d’octobre 2026 et le télépaiement (paiement mensuel).",
+      "categorie": "social",
+      "source": "impots.gouv.fr — calendrier fiscal",
+      "url": "https://www.impots.gouv.fr/professionnel/calendrier-fiscal/2026-11",
+      "origine": "calendrier_officiel"
+    },
+    {
+      "id": "impots-2026-11-13-5da84577",
+      "date": "2026-11-13",
+      "titre": "Entreprises soumises à la TVA",
+      "detail": "Date limite de dépôt de l'état récapitulatif des clients pour les opérations intracommunautaires réalisées en octobre 2026.",
+      "categorie": "fiscal",
+      "source": "impots.gouv.fr — calendrier fiscal",
+      "url": "https://www.impots.gouv.fr/professionnel/calendrier-fiscal/2026-11",
+      "origine": "calendrier_officiel"
+    },
+    {
+      "id": "impots-2026-11-13-f697ecf8",
+      "date": "2026-11-13",
+      "titre": "Entreprises soumises à la TVA",
+      "detail": "Date limite de dépôt de la DES (déclaration européenne de services) pour les opérations intracommunautaires réalisées en octobre 2026.",
+      "categorie": "fiscal",
+      "source": "impots.gouv.fr — calendrier fiscal",
+      "url": "https://www.impots.gouv.fr/professionnel/calendrier-fiscal/2026-11",
+      "origine": "calendrier_officiel"
+    },
+    {
+      "id": "impots-2026-11-16-aa60a7e9",
+      "date": "2026-11-16",
+      "titre": "Prélèvement et retenues à la source sur les RCM",
+      "detail": "Date limite de : dépôt de la déclaration de retenue à la source sur les revenus des obligations et autres titres d'emprunt négociables relative au mois d'octobre 2026 (déclaration n° 2753) ; dépôt de la déclaration relative au mois d’octobre 2026 concernant les prélèvements et retenues à la source sur les revenus de capitaux mobiliers (déclaration n° 2777).",
+      "categorie": "fiscal",
+      "source": "impots.gouv.fr — calendrier fiscal",
+      "url": "https://www.impots.gouv.fr/professionnel/calendrier-fiscal/2026-11",
+      "origine": "calendrier_officiel"
+    },
+    {
+      "id": "impots-2026-11-16-06b19ab1",
+      "date": "2026-11-16",
+      "titre": "Sociétés soumises à l'IS",
+      "detail": "Date limite de télépaiement du solde de l'impôt sur les sociétés et de la contribution sociale sur l'IS de 3,3 %, à l'aide du relevé de solde n° 2572 si votre exercice est clos le 31 juillet 2026.",
+      "categorie": "fiscal",
+      "source": "impots.gouv.fr — calendrier fiscal",
+      "url": "https://www.impots.gouv.fr/professionnel/calendrier-fiscal/2026-11",
+      "origine": "calendrier_officiel"
+    },
+    {
+      "id": "impots-2026-11-16-7387214a",
+      "date": "2026-11-16",
+      "titre": "Taxe sur les conventions d'assurances",
+      "detail": "La taxe due doit être télédéclarée et télépayée avec le formulaire n°2787-SD au titre des primes émises, des conventions conclues et des sommes échues au cours du mois d'octobre 2026.",
+      "categorie": "fiscal",
+      "source": "impots.gouv.fr — calendrier fiscal",
+      "url": "https://www.impots.gouv.fr/professionnel/calendrier-fiscal/2026-11",
+      "origine": "calendrier_officiel"
+    },
+    {
+      "id": "impots-2026-11-16-0e913eba",
+      "date": "2026-11-16",
+      "titre": "Taxe sur les salaires",
+      "detail": "Date limite de télépaiement de la taxe concernant les salaires payés en octobre (redevables mensuels) à l'aide du relevé de versement provisionnel n° 2501.",
+      "categorie": "fiscal",
+      "source": "impots.gouv.fr — calendrier fiscal",
+      "url": "https://www.impots.gouv.fr/professionnel/calendrier-fiscal/2026-11",
+      "origine": "calendrier_officiel"
+    },
+    {
+      "id": "impots-2026-11-16-cd627d45",
+      "date": "2026-11-16",
+      "titre": "TVA régime réel normal d'imposition",
+      "detail": "Entre les 16 et 24 novembre 2026, dépôt et paiement de la déclaration mensuelle de TVA à la date figurant dans votre espace professionnel.",
+      "categorie": "fiscal",
+      "source": "impots.gouv.fr — calendrier fiscal",
+      "url": "https://www.impots.gouv.fr/professionnel/calendrier-fiscal/2026-11",
+      "origine": "calendrier_officiel"
+    },
+    {
+      "id": "impots-2026-11-16-07b7ab32",
+      "date": "2026-11-16",
+      "titre": "Prélèvement à la source – DSN",
+      "detail": "Date limite pour la télédéclaration DSN d’octobre 2026 (entreprises de moins de 50 salariés) et le télépaiement (paiement mensuel).",
+      "categorie": "social",
+      "source": "impots.gouv.fr — calendrier fiscal",
+      "url": "https://www.impots.gouv.fr/professionnel/calendrier-fiscal/2026-11",
+      "origine": "calendrier_officiel"
+    },
+    {
+      "id": "urssaf-ti-mensuel-20-2026-11-20",
+      "date": "2026-11-20",
+      "titre": "Travailleurs indépendants : prélèvement mensuel des cotisations (échéance du 20)",
+      "detail": "Pour ceux qui ont choisi le prélèvement le 20 de chaque mois.",
+      "categorie": "social",
+      "source": "Urssaf",
+      "url": "https://www.urssaf.fr/accueil/independant/comprendre-payer-cotisations/calendrier-paiement-cotisations.html",
+      "origine": "saisie"
+    },
+    {
+      "id": "impots-2026-11-25-13a78905",
+      "date": "2026-11-25",
+      "titre": "Accise sur l’électricité, les gaz naturels et les charbons",
+      "detail": "Date limite de dépôt de la déclaration mensuelle n°2040-TIC pour les redevables de l’accise sur l’électricité en rythme mensuel.",
+      "categorie": "fiscal",
+      "source": "impots.gouv.fr — calendrier fiscal",
+      "url": "https://www.impots.gouv.fr/professionnel/calendrier-fiscal/2026-11",
+      "origine": "calendrier_officiel"
+    },
+    {
+      "id": "impots-2026-11-30-0bccb27c",
+      "date": "2026-11-30",
+      "titre": "CFE et/ou IFER (solde) : Adhésion au prélèvement à l’échéance",
+      "detail": "Jusqu’à cette date, il est possible d’acquitter le solde de CFE et/ou d’IFER en optant pour le prélèvement à l’échéance. L'adhésion peut être effectuée sur le site impots.gouv.fr, ou en téléphonant au 0809 401 401 (du lundi au vendredi de 8h30 à 19h, service gratuit + prix de l'appel).",
+      "categorie": "fiscal",
+      "source": "impots.gouv.fr — calendrier fiscal",
+      "url": "https://www.impots.gouv.fr/professionnel/calendrier-fiscal/2026-11",
+      "origine": "calendrier_officiel"
+    },
+    {
+      "id": "impots-2026-11-30-bf1b4bd4",
+      "date": "2026-11-30",
+      "titre": "Entreprises dont l'exercice est clos le 31 août 2026",
+      "detail": "Date limite de souscription de : la déclaration de résultats n° 2065 et ses annexes (impôt sur les sociétés) délai supplémentaire de 15 jours calendaires accordé aux utilisateurs des téléprocédures ; la notification n° 2065-INT pour les entités appartenant à un groupe dans le champ du Pilier 2 ; la déclaration de retenue à la source n° 2754 pour les entreprises étrangères exploitant un établissement stable en France ; la télédéclaration annuelle n° CA12 E (TVA - régime simplifié).",
+      "categorie": "fiscal",
+      "source": "impots.gouv.fr — calendrier fiscal",
+      "url": "https://www.impots.gouv.fr/professionnel/calendrier-fiscal/2026-11",
+      "origine": "calendrier_officiel"
+    },
+    {
+      "id": "impots-2026-11-30-918aed38",
+      "date": "2026-11-30",
+      "titre": "TVA - franchise en base",
+      "detail": "Date limite d'option pour le paiement de la TVA à partir du 1 er novembre 2026 pour les entreprises bénéficiant de la franchise en base (article 293 F du CGI).",
+      "categorie": "fiscal",
+      "source": "impots.gouv.fr — calendrier fiscal",
+      "url": "https://www.impots.gouv.fr/professionnel/calendrier-fiscal/2026-11",
+      "origine": "calendrier_officiel"
+    },
+    {
+      "id": "impots-2026-12-07-b22e63e6",
+      "date": "2026-12-07",
+      "titre": "Prélèvement à la source – DSN",
+      "detail": "Date limite pour la télédéclaration DSN de novembre 2026 et le télépaiement (entreprises de 50 salariés ou plus).",
+      "categorie": "social",
+      "source": "impots.gouv.fr — calendrier fiscal",
+      "url": "https://www.impots.gouv.fr/professionnel/calendrier-fiscal/2026-12",
+      "origine": "calendrier_officiel"
+    },
+    {
+      "id": "urssaf-ti-mensuel-5-2026-12-07",
+      "date": "2026-12-07",
+      "titre": "Travailleurs indépendants : prélèvement mensuel des cotisations (échéance du 5)",
+      "detail": "Prélèvement le 5 de chaque mois, de janvier à décembre (date par défaut). Montants sur l'échéancier de l'espace en ligne Urssaf.",
+      "categorie": "social",
+      "source": "Urssaf",
+      "url": "https://www.urssaf.fr/accueil/independant/comprendre-payer-cotisations/calendrier-paiement-cotisations.html",
+      "origine": "saisie"
+    },
+    {
+      "id": "impots-2026-12-10-0e04a2d7",
+      "date": "2026-12-10",
+      "titre": "Prélèvement à la source – PASRAU",
+      "detail": "Date limite pour la télédéclaration PASRAU (revenus de remplacement) de novembre 2026 et le télépaiement (paiement mensuel).",
+      "categorie": "social",
+      "source": "impots.gouv.fr — calendrier fiscal",
+      "url": "https://www.impots.gouv.fr/professionnel/calendrier-fiscal/2026-12",
+      "origine": "calendrier_officiel"
+    },
+    {
+      "id": "impots-2026-12-11-bd3322c0",
+      "date": "2026-12-11",
+      "titre": "Entreprises soumises à la TVA",
+      "detail": "Date limite de dépôt de l'état récapitulatif des clients pour les opérations intracommunautaires réalisées en novembre 2026.",
+      "categorie": "fiscal",
+      "source": "impots.gouv.fr — calendrier fiscal",
+      "url": "https://www.impots.gouv.fr/professionnel/calendrier-fiscal/2026-12",
+      "origine": "calendrier_officiel"
+    },
+    {
+      "id": "impots-2026-12-11-aa1fb3ef",
+      "date": "2026-12-11",
+      "titre": "Entreprises soumises à la TVA",
+      "detail": "Date limite de dépôt de la DES (déclaration européenne de services) pour les opérations intracommunautaires réalisées en novembre 2026.",
+      "categorie": "fiscal",
+      "source": "impots.gouv.fr — calendrier fiscal",
+      "url": "https://www.impots.gouv.fr/professionnel/calendrier-fiscal/2026-12",
+      "origine": "calendrier_officiel"
+    },
+    {
+      "id": "impots-2026-12-15-047cac83",
+      "date": "2026-12-15",
+      "titre": "CFE et/ou IFER (solde) : Date limite de paiement",
+      "detail": "Date limite de paiement du solde de la CFE et/ou de l’IFER par paiement direct en ligne (télérèglement) pour les redevables non mensualisés ou n’ayant pas opté pour le prélèvement à l’échéance.",
+      "categorie": "fiscal",
+      "source": "impots.gouv.fr — calendrier fiscal",
+      "url": "https://www.impots.gouv.fr/professionnel/calendrier-fiscal/2026-12",
+      "origine": "calendrier_officiel"
+    },
+    {
+      "id": "impots-2026-12-15-b6580a26",
+      "date": "2026-12-15",
+      "titre": "Prélèvement et retenues à la source sur les RCM",
+      "detail": "Date limite de : dépôt de la déclaration de retenue à la source sur les revenus des obligations et autres titres d'emprunt négociables relative au mois de novembre 2026 (déclaration n° 2753) ; dépôt de la déclaration relative au mois de novembre 2026 concernant les prélèvements et retenues à la source sur les revenus de capitaux mobiliers (déclaration n° 2777).",
+      "categorie": "fiscal",
+      "source": "impots.gouv.fr — calendrier fiscal",
+      "url": "https://www.impots.gouv.fr/professionnel/calendrier-fiscal/2026-12",
+      "origine": "calendrier_officiel"
+    },
+    {
+      "id": "impots-2026-12-15-4a6f6f57",
+      "date": "2026-12-15",
+      "titre": "Sociétés soumises à l'IS",
+      "detail": "Date limite de télépaiement : de l'acompte de l'impôt sur les sociétés (IS), de la contribution sociale sur l'IS de 3,3 % à l'aide du relevé d'acompte n° 2571 ; du solde de l'IS et de la contribution sociale sur l'IS de 3,3 %, à l'aide du relevé de solde n° 2572, si votre exercice est clos le 31 août 2026.",
+      "categorie": "fiscal",
+      "source": "impots.gouv.fr — calendrier fiscal",
+      "url": "https://www.impots.gouv.fr/professionnel/calendrier-fiscal/2026-12",
+      "origine": "calendrier_officiel"
+    },
+    {
+      "id": "impots-2026-12-15-92267c7b",
+      "date": "2026-12-15",
+      "titre": "Taxe sur les conventions d'assurances",
+      "detail": "La taxe due doit être télédéclarée et télépayée avec le formulaire n°2787-SD au titre des primes émises, des conventions conclues et des sommes échues au cours du mois de novembre 2026.",
+      "categorie": "fiscal",
+      "source": "impots.gouv.fr — calendrier fiscal",
+      "url": "https://www.impots.gouv.fr/professionnel/calendrier-fiscal/2026-12",
+      "origine": "calendrier_officiel"
+    },
+    {
+      "id": "impots-2026-12-15-1f060480",
+      "date": "2026-12-15",
+      "titre": "Taxe sur les salaires",
+      "detail": "Date limite de télépaiement de la taxe concernant les salaires payés en novembre (redevables mensuels) à l'aide du relevé de versement provisionnel n° 2501.",
+      "categorie": "fiscal",
+      "source": "impots.gouv.fr — calendrier fiscal",
+      "url": "https://www.impots.gouv.fr/professionnel/calendrier-fiscal/2026-12",
+      "origine": "calendrier_officiel"
+    },
+    {
+      "id": "impots-2026-12-15-2181ca18",
+      "date": "2026-12-15",
+      "titre": "TVA - régime simplifié",
+      "detail": "Entre les 15 et 24 décembre 2026 : télépaiement de l'acompte semestriel RSI de décembre 2026 à la date limite figurant dans votre espace professionnel.",
+      "categorie": "fiscal",
+      "source": "impots.gouv.fr — calendrier fiscal",
+      "url": "https://www.impots.gouv.fr/professionnel/calendrier-fiscal/2026-12",
+      "origine": "calendrier_officiel"
+    },
+    {
+      "id": "impots-2026-12-15-19b81535",
+      "date": "2026-12-15",
+      "titre": "TVA régime réel normal d'imposition",
+      "detail": "Entre les 15 et 24 décembre 2026, dépôt et paiement de la déclaration mensuelle de TVA à la date figurant dans votre espace professionnel.",
+      "categorie": "fiscal",
+      "source": "impots.gouv.fr — calendrier fiscal",
+      "url": "https://www.impots.gouv.fr/professionnel/calendrier-fiscal/2026-12",
+      "origine": "calendrier_officiel"
+    },
+    {
+      "id": "impots-2026-12-15-3ffb8c65",
+      "date": "2026-12-15",
+      "titre": "Prélèvement à la source – DSN",
+      "detail": "Date limite pour la télédéclaration DSN de novembre 2026 (entreprises de moins de 50 salariés) et le télépaiement (paiement mensuel).",
+      "categorie": "social",
+      "source": "impots.gouv.fr — calendrier fiscal",
+      "url": "https://www.impots.gouv.fr/professionnel/calendrier-fiscal/2026-12",
+      "origine": "calendrier_officiel"
+    },
+    {
+      "id": "urssaf-ti-mensuel-20-2026-12-21",
+      "date": "2026-12-21",
+      "titre": "Travailleurs indépendants : prélèvement mensuel des cotisations (échéance du 20)",
+      "detail": "Pour ceux qui ont choisi le prélèvement le 20 de chaque mois.",
+      "categorie": "social",
+      "source": "Urssaf",
+      "url": "https://www.urssaf.fr/accueil/independant/comprendre-payer-cotisations/calendrier-paiement-cotisations.html",
+      "origine": "saisie"
+    },
+    {
+      "id": "impots-2026-12-28-13a78905",
+      "date": "2026-12-28",
+      "titre": "Accise sur l’électricité, les gaz naturels et les charbons",
+      "detail": "Date limite de dépôt de la déclaration mensuelle n°2040-TIC pour les redevables de l’accise sur l’électricité en rythme mensuel.",
+      "categorie": "fiscal",
+      "source": "impots.gouv.fr — calendrier fiscal",
+      "url": "https://www.impots.gouv.fr/professionnel/calendrier-fiscal/2026-12",
+      "origine": "calendrier_officiel"
+    },
+    {
+      "id": "impots-2026-12-31-ddb8bc6b",
+      "date": "2026-12-31",
+      "titre": "CFE",
+      "detail": "Date limite de dépôt de la déclaration (n° 1447-C) en cas de création d'établissement ou de changement d'exploitant intervenus en 2026.",
+      "categorie": "fiscal",
+      "source": "impots.gouv.fr — calendrier fiscal",
+      "url": "https://www.impots.gouv.fr/professionnel/calendrier-fiscal/2026-12",
+      "origine": "calendrier_officiel"
+    },
+    {
+      "id": "impots-2026-12-31-5e709cc2",
+      "date": "2026-12-31",
+      "titre": "Entreprises dont l'exercice est clos le 30 septembre 2026",
+      "detail": "Date limite de souscription de : la déclaration de résultats n° 2065 et ses annexes (impôt sur les sociétés) - délai supplémentaire de 15 jours calendaires accordé aux utilisateurs des téléprocédures ; la notification n° 2065-INT pour les entités appartenant à un groupe dans le champ du Pilier 2 ; la déclaration de retenue à la source n° 2754 pour les entreprises étrangères exploitant un établissement stable en France ; la télédéclaration annuelle n° CA12 E (TVA - régime simplifié).",
+      "categorie": "fiscal",
+      "source": "impots.gouv.fr — calendrier fiscal",
+      "url": "https://www.impots.gouv.fr/professionnel/calendrier-fiscal/2026-12",
+      "origine": "calendrier_officiel"
+    },
+    {
+      "id": "impots-2026-12-31-f353b07a",
+      "date": "2026-12-31",
+      "titre": "TVA - franchise en base",
+      "detail": "Date limite d'option pour le paiement de la TVA à partir du 1er décembre 2026 pour les entreprises bénéficiant de la franchise en base (article 293 F du CGI).",
+      "categorie": "fiscal",
+      "source": "impots.gouv.fr — calendrier fiscal",
+      "url": "https://www.impots.gouv.fr/professionnel/calendrier-fiscal/2026-12",
+      "origine": "calendrier_officiel"
+    },
+    {
+      "id": "urssaf-ti-mensuel-5-2027-01-05",
+      "date": "2027-01-05",
+      "titre": "Travailleurs indépendants : prélèvement mensuel des cotisations (échéance du 5)",
+      "detail": "Prélèvement le 5 de chaque mois, de janvier à décembre (date par défaut). Montants sur l'échéancier de l'espace en ligne Urssaf.",
+      "categorie": "social",
+      "source": "Urssaf",
+      "url": "https://www.urssaf.fr/accueil/independant/comprendre-payer-cotisations/calendrier-paiement-cotisations.html",
+      "origine": "saisie"
     }
   ]
 }

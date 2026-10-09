@@ -230,6 +230,17 @@ describe('client HTTP · exceptions à robots.txt', () => {
     await expect(client.recuperer('https://api.exemple.fr/api/x', { robots: 'api_documentee' })).rejects.toThrow(/interdit par robots\.txt/);
   });
 
+  it('un robots.txt injoignable n’est pas gardé en mémoire : la nouvelle tentative le relit', async () => {
+    let essais = 0;
+    const fetch = (async (entree: URL | string) => {
+      if (String(entree).endsWith('/robots.txt')) return new Response('', { status: essais++ === 0 ? 503 : 404 });
+      return new Response('ok');
+    }) as typeof globalThis.fetch;
+    const client = new ClientHttp({ userAgent: 'test', fetch, attendre: async () => {}, maintenant: () => 0 });
+    await expect(client.recuperer('https://www.senat.fr/rss/textes.rss')).rejects.toThrow(/injoignable/);
+    await expect(client.recuperer('https://www.senat.fr/rss/textes.rss')).resolves.toMatchObject({ statut: 200 });
+  });
+
   it('ignorer : robots.txt n’est pas lu', async () => {
     const { client, appels } = fauxHttp({ 'https://www.google.com/alerts/feeds/1/2': { corps: 'ok' } });
     await client.recuperer('https://www.google.com/alerts/feeds/1/2', { robots: 'ignorer' });
