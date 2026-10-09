@@ -1,5 +1,0 @@
-{
-  "_commentaire": "Suivi PLF / PLFSS de secours, saisi à la main. Le suivi est normalement automatique (dossiers législatifs de l'Assemblée nationale, sources an-dossier-plf et an-dossier-plfss) ; ce fichier ne sert que si le dossier n'a encore jamais pu être lu. Laisser null sinon. Format : {\"texte\": \"PLF 2027\", \"etape_actuelle\": \"…\", \"etapes\": [{\"libelle\": \"…\", \"date\": \"AAAA-MM-JJ\" ou null, \"statut\": \"fait\" | \"en_cours\" | \"a_venir\"}], \"prochaine_echeance\": {\"libelle\": \"…\", \"date\": \"AAAA-MM-JJ\" ou null} ou null, \"mis_a_jour_le\": \"AAAA-MM-JJ\"}.",
-  "plf": null,
-  "plfss": null
-}

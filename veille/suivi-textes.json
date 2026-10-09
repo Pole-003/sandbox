@@ -1,0 +1,25 @@
+{
+  "_commentaire": "Suivi du PLF et du PLFSS complété à la main (docs/VEILLE.md). Le suivi est automatique (dossiers législatifs de l'Assemblée nationale et du Sénat) ; ce fichier ajoute : « mots_cles » (rattachent un article de la veille au texte, même syntaxe que mots-cles.json, « = » pour un mot exact), « etapes » (étapes connues absentes des dossiers, {libelle, date AAAA-MM-JJ, source}), « echeances » (dates à venir annoncées, {libelle, date, source}) et « secours » (frise complète au format de news.json, utilisée seulement si le dossier n'a jamais pu être lu ; null sinon).",
+  "plf": {
+    "mots_cles": [
+      "projet de loi de finances",
+      "loi de finances pour 2027",
+      "=plf",
+      "=plf 2027",
+      "article d'équilibre"
+    ],
+    "etapes": [],
+    "echeances": [],
+    "secours": null
+  },
+  "plfss": {
+    "mots_cles": [
+      "financement de la sécurité sociale",
+      "plfss",
+      "=lfss"
+    ],
+    "etapes": [],
+    "echeances": [],
+    "secours": null
+  }
+}

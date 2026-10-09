@@ -46,18 +46,49 @@ export function lireEtapesAN(html: string): EtapeLue[] {
   return etapes;
 }
 
+/**
+ * Étapes d'un dossier législatif du Sénat (structure relevée le 09/10/2026 sur pjlf2026.html) :
+ * <ol class="timeline timeline-summary"><li …><div class="timeline-content"><a …>Première lecture - Sénat</a>
+ * <time datetime="2025-11-24">…</time></div></li>…</ol>
+ */
+export function lireEtapesSenat(html: string): EtapeLue[] {
+  const debut = html.search(/<ol\b[^>]*timeline-summary/);
+  if (debut < 0) return [];
+  const bloc = html.slice(debut, html.indexOf('</ol>', debut) + 5);
+  const etapes: EtapeLue[] = [];
+  for (const m of bloc.matchAll(/timeline-content[^>]*>\s*<a\b[^>]*>([\s\S]*?)<\/a>\s*(?:<time\b[^>]*datetime="(\d{4}-\d{2}-\d{2})")?/g)) {
+    const libelle = texte(m[1] ?? '');
+    if (libelle) etapes.push({ libelle, date: m[2] ?? null });
+  }
+  return etapes;
+}
+
 /** Ordre canonique de la procédure budgétaire (pour placer les étapes restantes). */
 const PROCEDURE: { motif: RegExp; libelle: string; aVenir: boolean }[] = [
   { motif: /d[ée]p[ôo]t/i, libelle: 'Dépôt à l’Assemblée nationale', aVenir: false },
   { motif: /premi[eè]re lecture.*assembl/i, libelle: 'Première lecture à l’Assemblée nationale', aVenir: false },
   { motif: /premi[eè]re lecture.*s[ée]nat/i, libelle: 'Première lecture au Sénat', aVenir: true },
-  { motif: /commission mixte/i, libelle: 'Commission mixte paritaire', aVenir: true },
+  { motif: /commission mixte|\bcmp\b/i, libelle: 'Commission mixte paritaire', aVenir: true },
   { motif: /nouvelle lecture/i, libelle: 'Nouvelle lecture', aVenir: false },
   { motif: /lecture d[ée]finitive/i, libelle: 'Lecture définitive', aVenir: false },
   { motif: /conseil constitutionnel/i, libelle: 'Conseil constitutionnel', aVenir: true },
   { motif: /promulg/i, libelle: 'Promulgation', aVenir: true },
 ];
 const rang = (libelle: string) => PROCEDURE.findIndex((p) => p.motif.test(libelle));
+
+/** Étape canonique : rang dans la procédure et assemblée (deux « nouvelle lecture » se distinguent). */
+const cleEtape = (libelle: string) => `${rang(libelle)}|${/s[ée]nat/i.test(libelle) ? 's' : /assembl/i.test(libelle) ? 'a' : ''}`;
+
+/**
+ * Ajoute aux étapes de l'Assemblée celles que seul le Sénat publie (même étape canonique : celle de
+ * l'Assemblée est gardée), dans l'ordre chronologique puis de la procédure.
+ */
+export function fusionnerEtapes(assemblee: readonly EtapeLue[], senat: readonly EtapeLue[]): EtapeLue[] {
+  const connues = new Set(assemblee.map((e) => cleEtape(e.libelle)));
+  const ajouts = senat.filter((e) => rang(e.libelle) >= 0 && !connues.has(cleEtape(e.libelle)));
+  if (ajouts.length === 0) return [...assemblee];
+  return [...assemblee, ...ajouts].sort((a, b) => (a.date ?? '9999').localeCompare(b.date ?? '9999') || rang(a.libelle) - rang(b.libelle));
+}
 
 const DELAIS: Record<'plf' | 'plfss', { assemblee: number; parlement: number; article: string }> = {
   plf: { assemblee: 40, parlement: 70, article: 'art. 47 de la Constitution' },
@@ -147,7 +178,9 @@ export async function collecterDossiers(
   const aujourdhui = dateIsoParis(options.maintenant);
   const precedents = new Map(options.etatPrecedent.map((e) => [e.id, e]));
 
-  for (const source of sources.filter((s) => s.type === 'dossier')) {
+  const lus: Partial<Record<'plf' | 'plfss', { annee: number; etapes: EtapeLue[]; url: string }>> = {};
+
+  for (const source of sources.filter((s) => s.type === 'dossier' && s.chambre !== 'senat')) {
     const precedent = precedents.get(source.id);
     const etat: EtatSource = {
       id: source.id, nom: source.nom, type: 'dossier', theme: source.theme, statut_catalogue: source.statut, etat: 'inactive',
@@ -210,6 +243,7 @@ export async function collecterDossiers(
         }
       }
       resultat.suivi[type] = suivi;
+      lus[type] = { annee: trouve.annee, etapes: trouve.etapes, url: trouve.url };
       const empreinte = empreinteEtapes(trouve.etapes);
       // Nouvelle étape : seulement par rapport à un relevé précédent du même type (pas l'ancienne empreinte de page).
       if (precedent?.type === 'dossier' && precedent.empreinte && precedent.empreinte !== empreinte) {
@@ -235,5 +269,97 @@ export async function collecterDossiers(
     }
     resultat.etats.push(etat);
   }
+
+  // --- Dossiers du Sénat : même année que le dossier de l'Assemblée, étapes ajoutées à la frise ---
+  for (const source of sources.filter((s) => s.type === 'dossier' && s.chambre === 'senat')) {
+    const precedent = precedents.get(source.id);
+    const etat: EtatSource = {
+      id: source.id, nom: source.nom, type: 'dossier', theme: source.theme, statut_catalogue: source.statut, etat: 'inactive',
+      derniere_tentative: options.maintenant.toISOString(), derniere_reussite: precedent?.derniere_reussite ?? null,
+      erreur: null, nb_articles: 0, nb_elements: null, duree_ms: null, empreinte: precedent?.empreinte ?? null,
+    };
+    const type = source.suivi;
+    const an = type ? lus[type] : undefined;
+    const suivi = type ? resultat.suivi[type] : null;
+    if (source.statut !== 'verifie' || !source.url || !type) {
+      resultat.etats.push({ ...etat, derniere_tentative: precedent?.derniere_tentative ?? null, erreur: 'dossier non suivi (catalogue)' });
+      continue;
+    }
+    if (!an || !suivi) {
+      resultat.etats.push({ ...etat, derniere_tentative: precedent?.derniere_tentative ?? null, erreur: 'dossier de l’Assemblée non lu : le Sénat n’est pas consulté' });
+      continue;
+    }
+    try {
+      const url = source.url.replace('{annee}', String(an.annee));
+      const r = await options.client.recuperer(url);
+      etat.duree_ms = r.dureeMs;
+      if (r.statut === 404) {
+        // Normal tant que le texte n'est pas transmis au Sénat.
+        Object.assign(etat, { etat: 'ok', derniere_reussite: options.maintenant.toISOString(), nb_elements: 0, erreur: `pas encore de dossier au Sénat pour le ${SIGLES[type]} ${an.annee}` });
+        resultat.etats.push(etat);
+        continue;
+      }
+      if (r.statut !== 200) throw new Error(`HTTP ${r.statut}`);
+      const etapes = lireEtapesSenat(decoderOctets(r.octets, lireEncodageDeclare(r.octets, r.contentType)).texte);
+      if (etapes.length === 0) throw new Error(`${SIGLES[type]} ${an.annee} : liste « Les étapes de la discussion » introuvable (structure de la page modifiée ?)`);
+      const fusion = construireSuivi(type, suivi.texte, fusionnerEtapes(an.etapes, etapes), aujourdhui, an.url);
+      resultat.suivi[type] = { ...fusion, mesures: suivi.mesures ?? null, source: 'Assemblée nationale et Sénat — dossiers législatifs', url_senat: url };
+      const empreinte = empreinteEtapes(etapes);
+      if (precedent?.empreinte && precedent.empreinte !== empreinte) {
+        const derniere = etapes[etapes.length - 1]!;
+        resultat.articles.push({
+          titre: `${suivi.texte} : nouvelle étape au Sénat — ${derniere.libelle}`,
+          url,
+          date: derniere.date ?? aujourdhui,
+          theme: themeConnu(THEMES_SUIVI[type]),
+          source: source.nom,
+          source_id: source.id,
+          resume: `Étape « ${derniere.libelle} »${derniere.date ? ` (${derniere.date.split('-').reverse().join('/')})` : ''}, d’après le dossier législatif du Sénat.`,
+          type: 'texte_officiel',
+        });
+      }
+      Object.assign(etat, {
+        etat: 'ok', derniere_reussite: options.maintenant.toISOString(), empreinte, nb_elements: etapes.length,
+        nb_articles: resultat.articles.filter((a) => a.source_id === source.id).length,
+      });
+    } catch (e) {
+      Object.assign(etat, { etat: 'erreur', erreur: e instanceof Error ? e.message : String(e) });
+    }
+    resultat.etats.push(etat);
+  }
   return resultat;
+}
+
+/** Saisie du pôle pour un texte (veille/suivi-textes.json). */
+export interface SaisieTexte {
+  mots_cles: string[];
+  etapes: { libelle: string; date: string; source: string }[];
+  echeances: { libelle: string; date: string; source: string }[];
+  secours: SuiviTexte | null;
+}
+
+/**
+ * Complète un suivi avec la saisie du pôle : mots-clés de rattachement, échéances annoncées, étapes connues
+ * absentes des dossiers (une étape saisie remplace l'étape générique « à venir » de même nature).
+ */
+export function completerSuivi(suivi: SuiviTexte, saisie: SaisieTexte | undefined, aujourdhui: string): SuiviTexte {
+  if (!saisie) return suivi;
+  // Les étapes saisies d'un suivi déjà complété sont retirées puis reprises du fichier (modifications comprises).
+  const lues = suivi.etapes.filter((e) => !e.saisie);
+  const presentes = new Set(lues.filter((e) => e.statut !== 'a_venir').map((e) => cleEtape(e.libelle)));
+  const ajouts = saisie.etapes.filter((e) => !presentes.has(cleEtape(e.libelle)));
+  const clesAjouts = new Set(ajouts.map((e) => cleEtape(e.libelle)));
+  const etapes = [
+    ...lues.filter((e) => !(e.statut === 'a_venir' && e.date === null && clesAjouts.has(cleEtape(e.libelle)))),
+    ...ajouts.map((e) => ({ libelle: e.libelle, date: e.date, statut: (e.date <= aujourdhui ? 'fait' : 'a_venir') as StatutEtape, saisie: { source: e.source } })),
+  ];
+  // Ordre : étapes datées passées et en cours, puis à venir (datées d'abord), dans l'ordre de la procédure.
+  const poids = (e: SuiviTexte['etapes'][number]) => (e.statut === 'a_venir' ? 1 : 0);
+  etapes.sort((a, b) => poids(a) - poids(b) || (a.date ?? '9999').localeCompare(b.date ?? '9999') || rang(a.libelle) - rang(b.libelle));
+  return {
+    ...suivi,
+    etapes,
+    mots_cles: saisie.mots_cles,
+    echeances_saisies: saisie.echeances.filter((e) => e.date >= aujourdhui).sort((a, b) => a.date.localeCompare(b.date)),
+  };
 }

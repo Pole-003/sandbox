@@ -53,7 +53,7 @@ export function sectionBrief(annulation: Annulation, maintenant: () => Date = ()
               {},
               ...echeances.map((e) => h('li', {}, h('strong', {}, `${e.texte} : `), e.libelle, e.date ? ` (${dateFr(e.date)}${e.indicative ? ', délai indicatif' : ''})` : '', h('span', { class: 'texte-secondaire' }, ` — étape actuelle : ${e.etapeActuelle}`))),
             ),
-            h('a', { href: '#/veille/plf' }, 'Voir le suivi PLF / PLFSS'),
+            h('a', { href: '#/veille/suivi/plf' }, 'Voir le suivi PLF / PLFSS'),
           )
         : '',
       blocEcheancesAccueil(news.echeances ?? [], dateIsoParis(maintenant())) ?? '',

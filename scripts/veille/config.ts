@@ -3,7 +3,7 @@
  *  - veille/config.json : fenêtres, conservation, longueur des résumés, User-Agent ;
  *  - veille/sources.json : catalogue des sources ;
  *  - veille/mots-cles.json : classement par mots-clés (thème, importance, public, exclusions) ;
- *  - veille/suivi.json : suivi PLF / PLFSS saisi à la main ;
+ *  - veille/suivi-textes.json : suivi PLF / PLFSS complété à la main (mots-clés, étapes, échéances, secours) ;
  *  - veille/hierarchie-mesures.json : hiérarchie des mesures du PLF et du PLFSS établie par le pôle ;
  *  - veille/indicateurs.json : séries suivies par les API de la couche B (INSEE, BODACC) ;
  *  - veille/echeances.json : échéances des entreprises saisies à la main (règles et dates ponctuelles).
@@ -14,6 +14,7 @@ import { verifierMotsCles, type MotsCles } from './classement.ts';
 import type { PolitiqueRobots } from './http.ts';
 import { verifierFichierEcheances, type FichierEcheances } from '../../src/modules/veille/echeances.ts';
 import { verifierHierarchie, type HierarchieMesures } from './projet-loi.ts';
+import type { SaisieTexte } from './dossier.ts';
 
 export interface ConfigVeille {
   /** Toujours false : la recherche IA (couche C) est désactivée, la veille fonctionne à 0 €. */
@@ -33,6 +34,8 @@ export interface SourceCatalogue {
   url?: string;
   /** Dossier législatif suivi : PLF ou PLFSS. */
   suivi?: 'plf' | 'plfss';
+  /** Assemblée du dossier législatif (défaut : Assemblée nationale). */
+  chambre?: 'an' | 'senat';
   theme: string;
   statut: string;
   notes?: string;
@@ -61,8 +64,10 @@ export interface Reglages {
   config: ConfigVeille;
   sources: SourceCatalogue[];
   motsCles: MotsCles;
-  /** Suivi PLF / PLFSS saisi à la main (veille/suivi.json). */
+  /** Frise de secours saisie à la main (veille/suivi-textes.json, champ « secours »). */
   suivi: { plf: SuiviTexte | null; plfss: SuiviTexte | null };
+  /** Saisie du pôle pour chaque texte (veille/suivi-textes.json). */
+  suiviTextes?: { plf?: SaisieTexte; plfss?: SaisieTexte };
   /** Hiérarchie des mesures établie par le pôle ; à défaut, classement par mots-clés. */
   hierarchie?: HierarchieMesures;
   /** Séries suivies par les connecteurs de la couche B (veille/indicateurs.json). */
@@ -93,14 +98,15 @@ export function chargerReglages(): Reglages {
   const { sources } = lireJson<{ sources: SourceCatalogue[] }>('veille/sources.json');
   const motsCles = lireJson<MotsCles>('veille/mots-cles.json');
   verifierMotsCles(motsCles);
-  const suivi = lireJson<{ plf?: SuiviTexte | null; plfss?: SuiviTexte | null }>('veille/suivi.json');
+  const suiviTextes = lireJson<{ plf?: SaisieTexte; plfss?: SaisieTexte }>('veille/suivi-textes.json');
+  const suivi = { plf: suiviTextes.plf?.secours ?? null, plfss: suiviTextes.plfss?.secours ?? null };
   const hierarchie = lireJson<HierarchieMesures>('veille/hierarchie-mesures.json');
   verifierHierarchie(hierarchie);
   const { indicateurs } = lireJson<{ indicateurs: IndicateurCatalogue[] }>('veille/indicateurs.json');
   const echeances = lireJson<FichierEcheances>('veille/echeances.json');
   const erreursEcheances = verifierFichierEcheances(echeances);
   if (erreursEcheances.length) throw new Error(`veille/echeances.json invalide : ${erreursEcheances.join(' ; ')}`);
-  return { config, sources, motsCles, suivi: { plf: suivi.plf ?? null, plfss: suivi.plfss ?? null }, hierarchie, indicateurs, echeances };
+  return { config, sources, motsCles, suivi, suiviTextes, hierarchie, indicateurs, echeances };
 }
 
 /** Fenêtre de veille (en jours) d'un thème. */

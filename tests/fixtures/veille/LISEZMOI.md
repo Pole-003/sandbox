@@ -28,3 +28,7 @@ décrites dans `docs/VEILLE.md`. Les titres et contenus sont fictifs. Aucun text
   `veille/indicateurs.json` (dernière observation de chacune).
 - `bodacc-35-comptes.json` : réponse réelle de l'API open data du BODACC du 09/10/2026 : nombre d'annonces
   d'Ille-et-Vilaine par famille, du 02/10 au 08/10/2026. Comptes agrégés uniquement, aucun nom.
+- `senat-dossier-pjlf2026.html` : extrait réel de la page du dossier législatif du PLF 2026 au Sénat (liste
+  « Les étapes de la discussion », `ol.timeline-summary`), enregistré le 09/10/2026.
+- `impots-calendrier-2026-10.html` : page réelle du calendrier fiscal des professionnels d'impots.gouv.fr,
+  octobre 2026, enregistrée le 09/10/2026.

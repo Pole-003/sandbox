@@ -34,6 +34,9 @@
   --c-danger-texte: #8c1c13;
   --c-focus: #1f4e8c;
   --c-voile: rgb(14 19 26 / 45%);
+  /* Séries des graphiques (palette validée : écart CVD ΔE > 20, bande de luminosité, contraste ≥ 3:1). */
+  --c-serie-1: #2a64b0;
+  --c-serie-2: #c0620f;
 }
 
 :root[data-theme='sombre'] {
@@ -58,6 +61,8 @@
   --c-danger-texte: #f38b82;
   --c-focus: #86aee6;
   --c-voile: rgb(0 0 0 / 60%);
+  --c-serie-1: #5b8fd9;
+  --c-serie-2: #c47a32;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -83,5 +88,7 @@
     --c-danger-texte: #f38b82;
     --c-focus: #86aee6;
     --c-voile: rgb(0 0 0 / 60%);
+    --c-serie-1: #5b8fd9;
+    --c-serie-2: #c47a32;
   }
 }

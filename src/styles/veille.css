@@ -172,7 +172,10 @@
 }
 
 .champ-cases {
-  justify-content: flex-end;
+  grid-column: 1 / -1;
+  flex-flow: row wrap;
+  gap: 0.375rem 1.25rem;
+  justify-content: flex-start;
 }
 
 .champ-cases label {
@@ -592,7 +595,13 @@
 }
 
 .champ-recherche {
-  flex: 2 1 16rem;
+  grid-column: span 2;
+}
+
+@media (max-width: 640px) {
+  .champ-recherche {
+    grid-column: 1 / -1;
+  }
 }
 
 .champ-recherche .aide {
@@ -611,4 +620,705 @@
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
+}
+
+/* --- Onglet Suivi : sous-onglets --- */
+.sous-onglets {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 0.125rem;
+  margin: 0.25rem 0 1rem;
+  padding: 0.1875rem;
+  border-radius: 8px;
+  background: var(--c-surface-2);
+}
+
+.sous-onglets [role='tab'] {
+  padding: 0.375rem 0.75rem;
+  border: 0;
+  border-radius: var(--rayon);
+  background: none;
+  color: var(--c-texte-2);
+  font: inherit;
+  cursor: pointer;
+}
+
+.sous-onglets [role='tab'][aria-selected='true'] {
+  background: var(--c-surface);
+  color: var(--c-texte);
+  font-weight: 600;
+  box-shadow: 0 1px 2px rgb(0 0 0 / 8%);
+}
+
+.chiffre {
+  font-variant-numeric: tabular-nums;
+}
+
+/* --- Marchés : cartes --- */
+.cartes-marche {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+  gap: 0.75rem;
+}
+
+.carte-marche {
+  display: grid;
+  gap: 0.25rem;
+  padding: 0.875rem 1rem 0.625rem;
+  border: 1px solid var(--c-bordure);
+  border-radius: var(--rayon-carte);
+  background: var(--c-surface);
+  color: inherit;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+  transition: border-color var(--duree);
+}
+
+.carte-marche:hover {
+  border-color: var(--c-primaire);
+}
+
+.carte-marche[aria-pressed='true'] {
+  border-color: var(--c-primaire);
+  box-shadow: inset 0 0 0 1px var(--c-primaire);
+}
+
+.carte-marche-tete {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 0.5rem;
+}
+
+.carte-marche-nom {
+  font-weight: 600;
+}
+
+.carte-marche-valeur {
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+.carte-marche-unite {
+  color: var(--c-texte-2);
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.carte-marche-variation,
+.carte-marche-meta {
+  color: var(--c-texte-2);
+  font-size: 0.8125rem;
+}
+
+.variation {
+  color: var(--c-texte);
+  font-weight: 600;
+}
+
+.variation.hausse::before {
+  content: '▲ ';
+  color: var(--c-texte-2);
+  font-size: 0.625rem;
+}
+
+.variation.baisse::before {
+  content: '▼ ';
+  color: var(--c-texte-2);
+  font-size: 0.625rem;
+}
+
+.sparkline {
+  display: block;
+  width: 100%;
+  height: 40px;
+}
+
+.sparkline-aire {
+  fill: var(--c-primaire-fond);
+}
+
+.sparkline-ligne {
+  fill: none;
+  stroke: var(--c-serie-1);
+  stroke-width: 1.5;
+}
+
+.sparkline-point {
+  fill: var(--c-serie-1);
+}
+
+.apparition {
+  animation: apparition 320ms ease-out both;
+}
+
+.cartes-marche .apparition:nth-child(2) { animation-delay: 60ms; }
+.cartes-marche .apparition:nth-child(3) { animation-delay: 120ms; }
+.cartes-marche .apparition:nth-child(4) { animation-delay: 180ms; }
+
+@keyframes apparition {
+  from {
+    opacity: 0.4;
+    transform: translateY(4px);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .apparition {
+    animation: none;
+  }
+
+  .carte-marche {
+    transition: none;
+  }
+}
+
+/* --- Fraîcheur --- */
+.badge-fraicheur::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: currentcolor;
+}
+
+.fraicheur-a_jour {
+  background: var(--c-succes-fond);
+  color: var(--c-succes-texte);
+}
+
+.fraicheur-decalage_normal {
+  background: var(--c-primaire-fond);
+  color: var(--c-primaire);
+}
+
+.fraicheur-en_retard {
+  background: var(--c-alerte-fond);
+  color: var(--c-alerte-texte);
+}
+
+.fraicheur-en_panne {
+  background: var(--c-danger-fond);
+  color: var(--c-danger-texte);
+}
+
+.fraicheur-neutre {
+  background: var(--c-surface-2);
+  color: var(--c-texte-2);
+}
+
+/* --- Marchés : détail et colonne --- */
+.disposition-marche {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 20rem;
+  gap: 1rem;
+  align-items: start;
+  margin-top: 1rem;
+}
+
+@media (max-width: 960px) {
+  .disposition-marche {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+.colonne-marche {
+  display: grid;
+  gap: 1rem;
+  min-width: 0;
+}
+
+.panneau-marche {
+  display: grid;
+  gap: 0.75rem;
+  min-width: 0;
+  padding: 1rem;
+  border: 1px solid var(--c-bordure);
+  border-radius: var(--rayon-carte);
+  background: var(--c-surface);
+}
+
+.panneau-marche h2 {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.detail-marche {
+  display: grid;
+  gap: 0.75rem;
+  min-width: 0;
+}
+
+.panneau-tete {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.periodes {
+  display: inline-flex;
+  overflow: hidden;
+  border: 1px solid var(--c-bordure);
+  border-radius: var(--rayon);
+}
+
+.periodes button {
+  padding: 0.25rem 0.625rem;
+  border: 0;
+  background: var(--c-surface);
+  color: var(--c-texte-2);
+  font: inherit;
+  font-size: 0.8125rem;
+  cursor: pointer;
+}
+
+.periodes button + button {
+  border-left: 1px solid var(--c-bordure);
+}
+
+.periodes button[aria-pressed='true'] {
+  background: var(--c-primaire-fond);
+  color: var(--c-primaire);
+  font-weight: 600;
+}
+
+.comparateur {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+  color: var(--c-texte-2);
+  font-size: 0.8125rem;
+}
+
+.sous-titre-graphique {
+  margin: 0.25rem 0 0;
+  color: var(--c-texte-2);
+  font-size: 0.8125rem;
+  font-weight: 600;
+}
+
+.graphique {
+  position: relative;
+}
+
+.graphique-svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.graphique-svg:focus-visible {
+  outline: 2px solid var(--c-focus);
+  outline-offset: 2px;
+}
+
+.graphique-axe,
+.graphique-evenement text {
+  fill: var(--c-texte-2);
+  font-family: var(--police);
+  font-size: 11px;
+}
+
+.graphique-grille {
+  stroke: var(--c-bordure);
+  stroke-width: 1;
+}
+
+.graphique-ligne {
+  fill: none;
+  stroke-width: 2;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+}
+
+.graphique-ligne.serie-1 { stroke: var(--c-serie-1); }
+.graphique-ligne.serie-2 { stroke: var(--c-serie-2); }
+
+.graphique-extreme {
+  fill: var(--c-surface);
+  stroke-width: 2;
+}
+
+.graphique-extreme.serie-1 { stroke: var(--c-serie-1); }
+
+.graphique-evenement line {
+  stroke: var(--c-texte-2);
+  stroke-width: 1;
+  stroke-dasharray: 3 3;
+  opacity: 0.6;
+}
+
+.graphique-repere {
+  stroke: var(--c-texte-2);
+  stroke-width: 1;
+}
+
+.graphique-zone {
+  fill: transparent;
+}
+
+.graphique-barre.serie-1 {
+  fill: var(--c-serie-1);
+  opacity: 0.75;
+  stroke: var(--c-surface);
+  stroke-width: 2;
+}
+
+.graphique-barre-derniere.serie-1,
+.graphique-barre:hover,
+.graphique-barre:focus-visible {
+  opacity: 1;
+  outline: none;
+}
+
+.graphique-infobulle {
+  position: absolute;
+  top: 0.25rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: var(--rayon);
+  background: var(--c-texte);
+  color: var(--c-surface);
+  font-size: 0.75rem;
+  white-space: nowrap;
+  transform: translateX(-50%);
+  pointer-events: none;
+}
+
+.legende-graphique {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: 0;
+  color: var(--c-texte-2);
+  font-size: 0.8125rem;
+}
+
+.legende-graphique span::before {
+  content: '';
+  display: inline-block;
+  width: 14px;
+  height: 2px;
+  margin-right: 0.375rem;
+  vertical-align: middle;
+}
+
+.legende-serie-1::before { background: var(--c-serie-1); }
+.legende-serie-2::before { background: var(--c-serie-2); }
+
+.extremes-marche {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.25rem;
+  color: var(--c-texte-2);
+  font-size: 0.8125rem;
+}
+
+.extremes-marche strong {
+  color: var(--c-texte);
+}
+
+.variations-marche {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr));
+  gap: 0.25rem 1rem;
+  margin: 0;
+  font-size: 0.8125rem;
+}
+
+.variations-marche dt {
+  color: var(--c-texte-2);
+}
+
+.variations-marche dd {
+  margin: 0 0 0.5rem;
+  font-weight: 600;
+}
+
+.source-marche p {
+  margin: 0;
+  color: var(--c-texte-2);
+  font-size: 0.75rem;
+}
+
+.note-secours {
+  color: var(--c-alerte-texte) !important;
+}
+
+.graphique-tableau summary {
+  color: var(--c-primaire);
+  font-size: 0.8125rem;
+  cursor: pointer;
+}
+
+.graphique-tableau .tableau-defilant {
+  max-height: 18rem;
+  overflow: auto;
+}
+
+/* --- Compteur de la dette --- */
+.compteur-montant {
+  margin: 0;
+  font-size: 1.375rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+.mention-estimation {
+  justify-self: start;
+  margin: 0;
+  padding: 0.0625rem 0.375rem;
+  border-radius: 4px;
+  background: var(--c-alerte-fond);
+  color: var(--c-alerte-texte);
+  font-size: 0.75rem;
+}
+
+.methode {
+  position: relative;
+}
+
+.methode-bouton {
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--c-primaire);
+  font: inherit;
+  font-size: 0.8125rem;
+  text-decoration: underline dotted;
+  cursor: help;
+}
+
+.methode-texte {
+  position: absolute;
+  z-index: 2;
+  top: 1.75rem;
+  left: 0;
+  width: min(22rem, 80vw);
+  margin: 0;
+  padding: 0.625rem 0.75rem;
+  border: 1px solid var(--c-bordure);
+  border-radius: var(--rayon);
+  background: var(--c-surface);
+  box-shadow: 0 4px 16px rgb(0 0 0 / 15%);
+  color: var(--c-texte);
+  font-size: 0.8125rem;
+  visibility: hidden;
+}
+
+.methode:hover .methode-texte,
+.methode:focus-within .methode-texte {
+  visibility: visible;
+}
+
+/* --- Prochaines publications, conjoncture --- */
+.chronologie {
+  display: grid;
+  gap: 0.875rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.chronologie h3 {
+  margin: 0 0 0.375rem;
+  color: var(--c-texte-2);
+  font-size: 0.75rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.chronologie ul {
+  display: grid;
+  gap: 0.5rem;
+  margin: 0;
+  padding: 0 0 0 0.75rem;
+  border-left: 2px solid var(--c-bordure);
+  list-style: none;
+}
+
+.chronologie-quand {
+  display: block;
+  color: var(--c-texte-2);
+  font-size: 0.75rem;
+}
+
+.conjoncture {
+  display: grid;
+  gap: 0.125rem;
+  margin: 0;
+  font-size: 0.8125rem;
+}
+
+.conjoncture dd {
+  margin: 0 0 0.375rem;
+  font-weight: 600;
+}
+
+/* --- PLF / PLFSS : frise interactive --- */
+.frise-interactive {
+  display: flex;
+  margin: 0.5rem 0;
+  padding: 0.25rem 0;
+  overflow-x: auto;
+  list-style: none;
+}
+
+.frise-interactive li {
+  flex: 1 0 6.75rem;
+}
+
+.etape-frise {
+  position: relative;
+  display: grid;
+  justify-items: start;
+  gap: 0.25rem;
+  width: 100%;
+  padding: 0 0.75rem 0.25rem 0;
+  border: 0;
+  background: none;
+  color: inherit;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.etape-frise::before {
+  content: '';
+  position: absolute;
+  top: 7px;
+  left: 16px;
+  right: 0;
+  height: 2px;
+  background: var(--c-bordure);
+}
+
+.frise-interactive li:last-child .etape-frise::before {
+  display: none;
+}
+
+.etape-point {
+  position: relative;
+  z-index: 1;
+  width: 16px;
+  height: 16px;
+  border: 2px solid var(--c-bordure);
+  border-radius: 50%;
+  background: var(--c-surface);
+}
+
+.etape-fait .etape-point {
+  border-color: var(--c-primaire);
+  background: var(--c-primaire);
+}
+
+.etape-fait::before {
+  background: var(--c-primaire);
+}
+
+.etape-en_cours .etape-point {
+  border-color: var(--c-primaire);
+  box-shadow: 0 0 0 4px var(--c-primaire-fond);
+}
+
+.etape-libelle {
+  font-size: 0.8125rem;
+  font-weight: 500;
+}
+
+.etape-en_cours .etape-libelle {
+  color: var(--c-primaire);
+  font-weight: 700;
+}
+
+.etape-a_venir .etape-libelle,
+.etape-date,
+.etape-saisie {
+  color: var(--c-texte-2);
+}
+
+.etape-date,
+.etape-saisie {
+  font-size: 0.75rem;
+}
+
+.etape-frise[aria-pressed='true'] .etape-libelle {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.badge-etape {
+  background: var(--c-primaire-fond);
+  color: var(--c-primaire);
+}
+
+.echeances-texte h3,
+.articles-etape h3 {
+  margin: 0.75rem 0 0.375rem;
+  font-size: 0.875rem;
+}
+
+.echeances-texte ul,
+.liste-articles-etape {
+  display: grid;
+  gap: 0.375rem;
+  margin: 0;
+  padding-left: 1.125rem;
+}
+
+/* --- État des sources --- */
+.groupe-sources th {
+  background: var(--c-surface-2);
+  font-size: 0.75rem;
+  text-align: left;
+}
+
+.tableau-sources td,
+.tableau-sources th {
+  vertical-align: middle;
+}
+
+.pastilles {
+  display: inline-flex;
+  gap: 2px;
+}
+
+.pastille {
+  display: block;
+  width: 7px;
+  height: 14px;
+  border-radius: 2px;
+}
+
+.pastille-vert { background: var(--c-succes); }
+.pastille-orange { background: var(--c-alerte); }
+.pastille-rouge { background: var(--c-danger); }
+.pastille-gris { background: var(--c-bordure); }
+
+/* --- Rennes : compteurs du BODACC --- */
+.grille-compteurs {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+  gap: 0.5rem 1rem;
+  margin: 0.5rem 0;
+}
+
+.grille-compteurs dt {
+  color: var(--c-texte-2);
+  font-size: 0.8125rem;
+}
+
+.grille-compteurs dd {
+  margin: 0;
+  font-size: 1.375rem;
+  font-weight: 600;
 }

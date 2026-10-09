@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "genere_le": "2026-10-09T10:39:04.086Z",
+  "genere_le": "2026-10-09T11:08:37.502Z",
   "articles": [
     {
       "id": "b069aa48d1f16264",
@@ -2869,7 +2869,15 @@
           "origine": "pole",
           "etablie_le": "2026-10-08"
         }
-      }
+      },
+      "mots_cles": [
+        "projet de loi de finances",
+        "loi de finances pour 2027",
+        "=plf",
+        "=plf 2027",
+        "article d'équilibre"
+      ],
+      "echeances_saisies": []
     },
     "plfss": {
       "texte": "PLFSS 2027",
@@ -3559,7 +3567,13 @@
           "origine": "pole",
           "etablie_le": "2026-10-08"
         }
-      }
+      },
+      "mots_cles": [
+        "financement de la sécurité sociale",
+        "plfss",
+        "=lfss"
+      ],
+      "echeances_saisies": []
     }
   },
   "sources": [
@@ -3652,6 +3666,16 @@
       "id": "an-dossier-plfss",
       "nom": "Assemblée nationale — Dossier législatif du PLFSS",
       "url": "https://www.assemblee-nationale.fr"
+    },
+    {
+      "id": "senat-dossier-plf",
+      "nom": "Sénat — Dossier législatif du PLF",
+      "url": "https://www.senat.fr"
+    },
+    {
+      "id": "senat-dossier-plfss",
+      "nom": "Sénat — Dossier législatif du PLFSS",
+      "url": "https://www.senat.fr"
     }
   ],
   "echeances": [

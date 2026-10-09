@@ -11,7 +11,7 @@
  */
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
-import type { Article, EtatVeille, NewsJson } from '../../src/modules/veille/modele.ts';
+import type { Article, EtatVeille, NewsJson, SuiviTexte } from '../../src/modules/veille/modele.ts';
 import { collecterAlertes } from './alertes.ts';
 import { collecterCalendrier } from './calendrier-fiscal.ts';
 import { developperEcheances, fusionnerEcheances } from '../../src/modules/veille/echeances.ts';
@@ -20,7 +20,7 @@ import { chargerReglages, themeConnu, type Reglages } from './config.ts';
 import { collecterCoucheA } from './couche-a.ts';
 import { collecterCoucheB, type ConnecteurApi } from './couche-b.ts';
 import { dateIsoParis } from './dates.ts';
-import { collecterDossiers } from './dossier.ts';
+import { collecterDossiers, completerSuivi, type SaisieTexte } from './dossier.ts';
 import {
   appliquerClassement,
   completerArchive,
@@ -80,7 +80,7 @@ const json = (valeur: unknown) => `${JSON.stringify(valeur, null, 2)}\n`;
 export const RAISON_IA = 'désactivée : la veille fonctionne à 0 €, sans appel à un service d’IA';
 
 export async function collecter(d: DependancesCollecte): Promise<Bilan> {
-  const { config, sources, motsCles, suivi, hierarchie, indicateurs, echeances: echeancesSaisies } = d.reglages;
+  const { config, sources, motsCles, suivi, suiviTextes, hierarchie, indicateurs, echeances: echeancesSaisies } = d.reglages;
   const journal = d.journal ?? (() => {});
   const aujourdhui = dateIsoParis(d.maintenant);
 
@@ -118,10 +118,12 @@ export async function collecter(d: DependancesCollecte): Promise<Bilan> {
   // --- Suivi PLF / PLFSS : dossiers législatifs de l'Assemblée nationale ---
   const dossiers = await collecterDossiers(sources, { client: d.http, maintenant: d.maintenant, etatPrecedent: sourcesPrecedentes, motsCles, hierarchie });
   for (const e of dossiers.etats) journal(`  ${e.etat === 'ok' ? 'OK    ' : 'ÉCHEC '} ${e.id} : ${e.nb_elements ?? 0} étape(s)${e.erreur ? ` — ${e.erreur}` : ''}`);
-  // Priorité : suivi lu aujourd'hui, sinon celui déjà publié, sinon la saisie manuelle (veille/suivi.json).
+  // Priorité : suivi lu aujourd'hui, sinon celui déjà publié, sinon le secours saisi à la main ;
+  // puis la saisie du pôle (veille/suivi-textes.json) le complète.
+  const completer = (s: SuiviTexte | null, saisie: SaisieTexte | undefined) => (s ? completerSuivi(s, saisie, aujourdhui) : null);
   const suiviPublie = {
-    plf: dossiers.suivi.plf ?? newsPrecedent?.suivi?.plf ?? suivi.plf,
-    plfss: dossiers.suivi.plfss ?? newsPrecedent?.suivi?.plfss ?? suivi.plfss,
+    plf: completer(dossiers.suivi.plf ?? newsPrecedent?.suivi?.plf ?? suivi.plf, suiviTextes?.plf),
+    plfss: completer(dossiers.suivi.plfss ?? newsPrecedent?.suivi?.plfss ?? suivi.plfss, suiviTextes?.plfss),
   };
 
   // --- Échéances : calendrier fiscal officiel + veille/echeances.json ---
@@ -182,7 +184,12 @@ export async function collecter(d: DependancesCollecte): Promise<Bilan> {
   const etat: EtatVeille = {
     version: 2,
     genere_le: d.maintenant.toISOString(),
-    sources: sources.flatMap((s) => parId.get(s.id) ?? []),
+    sources: sources.flatMap((s) => {
+      const e = parId.get(s.id);
+      if (!e) return [];
+      const ancien = sourcesPrecedentes.find((p) => p.id === s.id)?.historique ?? [];
+      return [{ ...e, historique: historiqueEtat(ancien, aujourdhui, e.etat) }];
+    }),
     recherche_ia: { active: false, raison: RAISON_IA },
     classement: { articles: news.articles.length, exclus: classement.exclus, marginaux: classement.marginaux },
   };
@@ -190,6 +197,12 @@ export async function collecter(d: DependancesCollecte): Promise<Bilan> {
 
   journal(`Publication : ${news.articles.length} article(s) en ligne${newsModifie ? '' : ' (inchangé)'}.`);
   return { news, etat, newsModifie };
+}
+
+/** Ajoute l'état du jour à l'historique d'une source (30 jours, une entrée par jour, la dernière collecte du jour l'emporte). */
+export function historiqueEtat(ancien: readonly { date: string; etat: EtatVeille['sources'][number]['etat'] }[], aujourdhui: string, etat: EtatVeille['sources'][number]['etat']) {
+  const limite = ajouterJours(aujourdhui, -30);
+  return [...ancien.filter((h) => h.date !== aujourdhui && h.date > limite), { date: aujourdhui, etat }].sort((a, b) => a.date.localeCompare(b.date));
 }
 
 /** Dépôt réel : fichiers sous la racine du projet. */

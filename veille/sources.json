@@ -213,6 +213,30 @@
       "notes": "Même structure que le dossier du PLF (exploration du 08/10/2026 : PLFSS_2027 en ligne)."
     },
     {
+      "id": "senat-dossier-plf",
+      "nom": "Sénat — Dossier législatif du PLF",
+      "type": "dossier",
+      "chambre": "senat",
+      "suivi": "plf",
+      "url": "https://www.senat.fr/dossier-legislatif/pjlf{annee}.html",
+      "theme": "Loi de finances",
+      "statut": "verifie",
+      "type_article": "texte_officiel",
+      "notes": "Liste « Les étapes de la discussion » (ol.timeline-summary, time[datetime]), structure relevée le 09/10/2026 sur pjlf2026.html. Lu pour la même année que le dossier de l'Assemblée ; 404 tant que le texte n'est pas transmis au Sénat (normal). Étapes ajoutées à la frise, nouvelle étape signalée dans le fil."
+    },
+    {
+      "id": "senat-dossier-plfss",
+      "nom": "Sénat — Dossier législatif du PLFSS",
+      "type": "dossier",
+      "chambre": "senat",
+      "suivi": "plfss",
+      "url": "https://www.senat.fr/dossier-legislatif/plfss{annee}.html",
+      "theme": "Sécurité sociale",
+      "statut": "verifie",
+      "type_article": "texte_officiel",
+      "notes": "Même structure que le dossier du PLF au Sénat."
+    },
+    {
       "id": "piste-legifrance",
       "nom": "Légifrance — Journal officiel (API PISTE)",
       "type": "api",

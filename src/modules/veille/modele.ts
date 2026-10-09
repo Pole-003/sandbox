@@ -137,7 +137,7 @@ export interface MesuresProjet {
 export interface SuiviTexte {
   texte: string;
   etape_actuelle: string;
-  etapes: { libelle: string; date: string | null; statut: StatutEtape }[];
+  etapes: { libelle: string; date: string | null; statut: StatutEtape; saisie?: { source: string } }[];
   prochaine_echeance: EcheanceSuivi | null;
   /** Délais constitutionnels calculés depuis le dépôt (indicatifs). */
   delais?: EcheanceSuivi[];
@@ -146,6 +146,12 @@ export interface SuiviTexte {
   /** Dossier législatif d'origine. */
   source?: string;
   url?: string | null;
+  /** Dossier du Sénat, quand il existe. */
+  url_senat?: string | null;
+  /** Échéances connues saisies par le pôle (veille/suivi-textes.json), avec leur source. */
+  echeances_saisies?: (EcheanceSuivi & { source: string })[];
+  /** Mots-clés qui rattachent un article de la veille à ce texte (veille/suivi-textes.json). */
+  mots_cles?: string[];
   /** Date de la dernière mise à jour, AAAA-MM-JJ. */
   mis_a_jour_le: string;
 }
@@ -187,6 +193,8 @@ export interface EtatSource {
   duree_ms: number | null;
   /** Pages suivies : empreinte du texte visible, pour détecter un changement. */
   empreinte?: string | null;
+  /** État de chaque jour de collecte, sur 30 jours (pastilles de « État des sources »). */
+  historique?: { date: string; etat: EtatCollecte }[];
 }
 
 export interface EtatVeille {

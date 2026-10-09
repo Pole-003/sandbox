@@ -221,3 +221,31 @@ export function ageEnJours(genereLe: string, maintenant: Date): number {
   const t = Date.parse(genereLe);
   return Number.isNaN(t) ? Infinity : Math.floor((maintenant.getTime() - t) / 86_400_000);
 }
+
+/** Mot-clé de rattachement (même syntaxe que mots-cles.json) : début de mot, ou mot exact s'il commence par « = ». */
+export function contientMotCle(texteNormalise: string, mot: string): boolean {
+  const exact = mot.startsWith('=');
+  const m = normaliser(exact ? mot.slice(1) : mot).replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  return new RegExp(`(^|[^a-z0-9])${m}${exact ? '($|[^a-z0-9])' : ''}`).test(texteNormalise);
+}
+
+/**
+ * Articles de la veille liés à un texte (PLF, PLFSS) : mot-clé de rattachement, ou thème du texte avec une
+ * importance d'au moins 2, publiés
+ * pendant l'étape choisie (de sa date à celle de l'étape suivante ; étape non datée : toute la période).
+ */
+export function articlesDeLEtape(articles: readonly Article[], suivi: SuiviTexte, theme: Theme, indice: number, aujourdhui: string): Article[] {
+  const etape = suivi.etapes[indice];
+  if (!etape || (etape.statut === 'a_venir' && (!etape.date || etape.date > aujourdhui))) return [];
+  const suivante = suivi.etapes.slice(indice + 1).find((e) => e.date && e.date > (etape.date ?? ''));
+  const du = etape.date ?? '0000-00-00';
+  const au = etape.statut === 'en_cours' || !suivante?.date ? '9999-12-31' : suivante.date;
+  const mots = suivi.mots_cles ?? [];
+  return articles.filter((a) => {
+    if (a.date < du || a.date >= au) return false;
+    const t = normaliser(`${a.titre} ${a.resume ?? ''}`);
+    if (mots.some((m) => contientMotCle(t, m))) return true;
+    // Thème du texte : sans les articles marginaux (importance 1), qui n'ont souvent que le thème de leur source.
+    return a.theme === theme && (a.importance ?? 0) >= 2;
+  });
+}

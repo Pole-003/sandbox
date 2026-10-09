@@ -302,3 +302,31 @@ const estObjet = (v: unknown): v is Record<string, unknown> => typeof v === 'obj
 export function estMarches(v: unknown): v is MarchesJson {
   return estObjet(v) && v.version === 1 && Array.isArray(v.indicateurs) && Array.isArray(v.evenements);
 }
+
+// --- Prochaine récupération (« État des sources ») ---
+
+/** Horaires de la collecte des marchés, heure de Paris, jours ouvrés : doivent rester alignés sur marches.yml. */
+export const CRENEAUX_MARCHES = ['07:05', '09:02', '16:20', '19:30'] as const;
+/** Horaire de la collecte de la veille (veille.yml), jours ouvrés. */
+export const CRENEAU_VEILLE = '06:30';
+
+const estJourOuvreSemaine = (iso: string) => jourSemaine(iso) !== 0 && jourSemaine(iso) !== 6;
+
+/** Premier créneau (jour ouvré, du lundi au vendredi) à partir de `apres`, parmi les horaires donnés. */
+export function prochainCreneau(apres: Date, creneaux: readonly string[]): Date {
+  let jour = enHeureDeParis(apres).date;
+  for (let i = 0; i < 14; i++, jour = ajouterJours(jour, 1)) {
+    if (!estJourOuvreSemaine(jour)) continue;
+    for (const heure of creneaux) {
+      const instant = instantParis(jour, heure);
+      if (instant >= apres) return instant;
+    }
+  }
+  return instantParis(jour, creneaux[0] ?? '00:00');
+}
+
+/** Prochaine interrogation d'un indicateur : premier créneau après la prochaine publication (ou tout de suite si elle est passée). */
+export function prochaineRecuperation(i: Pick<IndicateurMarche, 'prochaine_publication' | 'derniere_erreur'>, maintenant: Date): Date {
+  const publication = i.prochaine_publication && i.derniere_erreur === null ? instantParis(i.prochaine_publication.date, i.prochaine_publication.heure) : maintenant;
+  return prochainCreneau(publication > maintenant ? publication : maintenant, CRENEAUX_MARCHES);
+}

@@ -1,11 +1,12 @@
 /**
  * Chargement des fichiers de veille publiés avec le site (CLAUDE.md, règle n° 1) :
- * seuls news.json et veille-etat.json sont chargés, sur la même origine, en GET, sans paramètre.
+ * seuls news.json, veille-etat.json et marches.json sont chargés, sur la même origine, en GET, sans paramètre.
  * Le navigateur ne contacte jamais les sites sources.
  */
 import type { EtatVeille, NewsJson } from './modele.ts';
+import { estMarches, type MarchesJson } from './marches.ts';
 
-const FICHIERS = { news: 'news.json', etat: 'veille-etat.json' } as const;
+const FICHIERS = { news: 'news.json', etat: 'veille-etat.json', marches: 'marches.json' } as const;
 
 export type Chargement<T> = { ok: true; donnees: T } | { ok: false; raison: 'absent' | 'illisible' | 'reseau' };
 
@@ -49,6 +50,14 @@ export function chargerNews(): Promise<Chargement<NewsJson>> {
 
 export function chargerEtat(): Promise<Chargement<EtatVeille>> {
   return charger(FICHIERS.etat, estEtat);
+}
+
+/**
+ * Indicateurs de marché : relus à chaque ouverture du sous-onglet et quand l'onglet du navigateur redevient
+ * visible (jamais de requête périodique). « no-cache » : revalidation sans paramètre dans l'adresse.
+ */
+export function chargerMarches(): Promise<Chargement<MarchesJson>> {
+  return charger(FICHIERS.marches, estMarches);
 }
 
 /** Pour les tests. */

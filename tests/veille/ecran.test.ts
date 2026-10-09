@@ -2,7 +2,7 @@
 import { IDBFactory } from 'fake-indexeddb';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import { oublierCache } from '../../src/modules/veille/donnees.ts';
-import { ongletDepuisAncre, rendreVeille } from '../../src/modules/veille/ecran.ts';
+import { ancreVeille, ongletDepuisAncre, rendreVeille } from '../../src/modules/veille/ecran.ts';
 import {
   CRITERES_PAR_DEFAUT,
   briefDuJour,
@@ -93,10 +93,14 @@ describe('veille · logique de l’écran', () => {
     expect(prochainesEcheances(sansEcheance)[0]?.libelle).toBe('CMP');
   });
 
-  it('onglet demandé par l’adresse', () => {
-    expect(ongletDepuisAncre('#/veille/plf')).toBe('plf');
+  it('onglet demandé par l’adresse, anciennes adresses comprises', () => {
     expect(ongletDepuisAncre('#/veille')).toBe('fil');
     expect(ongletDepuisAncre('#/veille/inconnu')).toBe('fil');
+    expect(ancreVeille('#/veille/suivi/sources')).toEqual({ onglet: 'suivi', sous: 'sources' });
+    expect(ancreVeille('#/veille/suivi')).toEqual({ onglet: 'suivi', sous: 'marches' });
+    expect(ancreVeille('#/veille/plf')).toEqual({ onglet: 'suivi', sous: 'plf' });
+    expect(ancreVeille('#/veille/indicateurs')).toEqual({ onglet: 'suivi', sous: 'marches' });
+    expect(ancreVeille('#/veille/echeances')).toEqual({ onglet: 'echeances', sous: 'marches' });
   });
 });
 
@@ -121,11 +125,16 @@ describe('veille · écran', () => {
   });
   afterEach(() => vi.unstubAllGlobals());
 
-  it('ne charge que news.json et veille-etat.json, sur la même origine, sans paramètre', async () => {
+  it('ne charge que news.json, veille-etat.json et marches.json, sur la même origine, sans paramètre', async () => {
     servir({ 'news.json': NEWS, 'veille-etat.json': ETAT });
     await rendreVeille(conteneur, { magasin: magasinMemoire(), maintenant: new Date('2026-10-08T08:00:00Z') });
     expect(appels.map((a) => a.url).sort()).toEqual(['/news.json', '/veille-etat.json']);
     expect(appels.every((a) => (a.init?.method ?? 'GET') === 'GET' && !a.url.includes('?'))).toBe(true);
+    // L'onglet « Suivi » charge en plus marches.json, de la même façon.
+    conteneur.querySelector<HTMLButtonElement>('#onglet-suivi')!.click();
+    await vi.waitFor(() => expect(appels.map((a) => a.url)).toContain('/marches.json'));
+    expect(new Set(appels.map((a) => a.url))).toEqual(new Set(['/news.json', '/veille-etat.json', '/marches.json']));
+    expect(appels.every((a) => (a.init?.method ?? 'GET') === 'GET' && !a.url.includes('?') && a.init?.credentials === 'omit')).toBe(true);
   });
 
   it('fil : articles, liens externes sûrs, mention de la source', async () => {
@@ -158,18 +167,19 @@ describe('veille · écran', () => {
     expect(conteneur.querySelector('.compteur')?.textContent).toBe('3 articles sur 5');
   });
 
-  it('onglets : suivi PLF, indicateurs, Rennes, état des sources (flux, API, classement, coût 0 €)', async () => {
+  it('onglets : Suivi (PLF / PLFSS, état des sources), Rennes', async () => {
     servir({ 'news.json': NEWS, 'veille-etat.json': ETAT });
-    await rendreVeille(conteneur, { magasin: magasinMemoire() });
+    await rendreVeille(conteneur, { magasin: magasinMemoire(), maintenant: new Date('2026-10-08T08:00:00Z') });
     const onglet = (id: string) => conteneur.querySelector<HTMLButtonElement>(`#onglet-${id}`)!;
 
-    onglet('plf').click();
-    expect(location.hash).toBe('#/veille/plf');
-    expect(conteneur.querySelector('.frise [aria-current="step"]')?.textContent).toContain('1re lecture AN');
+    onglet('suivi').click();
+    conteneur.querySelector<HTMLButtonElement>('#sous-onglet-plf')!.click();
+    expect(location.hash).toBe('#/veille/suivi/plf');
+    expect(conteneur.querySelector('.frise-interactive [aria-current="step"]')?.textContent).toContain('1re lecture AN');
     expect(conteneur.querySelector('.panneau')?.textContent).toContain('Pas encore de suivi');
-    expect(conteneur.querySelector('.delais')?.textContent).toContain('10/11/2026 (délai indicatif)');
+    expect(conteneur.querySelector('.echeances-texte')?.textContent).toContain('10/11/2026 Fin du délai de 1re lecture à l’Assemblée');
     expect(conteneur.querySelector<HTMLAnchorElement>('.suivi a[href="https://exemple.invalid/PLF_2027"]')?.rel).toBe('noopener noreferrer');
-    expect(conteneur.querySelector('.actualites-suivi')?.textContent).toContain('Le Sénat adopte la première partie du PLF');
+    expect(conteneur.querySelector('.articles-etape')?.textContent).toContain('Le Sénat adopte la première partie du PLF');
     const mesures = conteneur.querySelector('.mesures')!;
     expect([...mesures.querySelectorAll('.paliers-mesures .palier')].map((t) => t.textContent)).toEqual(['Important (1)', 'À suivre (1)']);
     expect([...mesures.querySelectorAll('.paliers-mesures .liste-mesures > li')].map((li) => li.textContent?.split(' Importance')[0])).toEqual([
@@ -180,23 +190,17 @@ describe('veille · écran', () => {
     expect(mesures.querySelector('summary')?.textContent).toBe('Tous les articles du projet (3)');
     expect(mesures.querySelector<HTMLAnchorElement>('a[href="https://exemple.invalid/texte-3210#_Toc4"]')?.rel).toBe('noopener noreferrer');
 
-    onglet('indicateurs').click();
-    expect(conteneur.querySelector('.tuile')?.textContent).toContain('1,8 %');
-    expect(conteneur.querySelector('.tuile')?.textContent).not.toContain('IA');
-
-    onglet('rennes').click();
-    expect([...conteneur.querySelectorAll('article.article')].map((c) => c.getAttribute('data-id'))).toEqual(['e']);
-
-    onglet('sources').click();
-    const tableaux = [...conteneur.querySelectorAll('.bloc-sources')];
-    expect(tableaux.map((t) => t.querySelector('h2')?.textContent)).toEqual(['Flux officiels (couche A)', 'API officielles (couche B)']);
-    expect(tableaux[0]?.textContent).toContain('Sénat — Derniers textes');
-    expect(tableaux[1]?.textContent).toContain('Non configurée');
-    expect(tableaux[1]?.textContent).toContain('identifiants absents (INSEE_API_KEY)');
+    conteneur.querySelector<HTMLButtonElement>('#sous-onglet-sources')!.click();
     const panneau = conteneur.querySelector('.panneau')?.textContent ?? '';
+    expect(panneau).toContain('Sénat — Derniers textes');
+    expect(panneau).toContain('Non configurée');
+    expect(panneau).toContain('identifiants absents (INSEE_API_KEY)');
     expect(panneau).toContain('Recherche IA : désactivée : la veille fonctionne à 0 €');
     expect(panneau).toContain('dont 1 marginal(aux) masqué(s) par défaut ; 2 exclu(s)');
     expect(panneau).toContain('Coût : 0 €');
+
+    onglet('rennes').click();
+    expect([...conteneur.querySelectorAll('article.article')].map((c) => c.getAttribute('data-id'))).toEqual(['e']);
   });
 
   it('suivi : hiérarchie du pôle, par palier, avec la rubrique', async () => {
@@ -209,6 +213,7 @@ describe('veille · écran', () => {
     servir({ 'news.json': { ...NEWS, suivi: { ...NEWS.suivi, plf: { ...plf, mesures } } }, 'veille-etat.json': ETAT });
     location.hash = '#/veille/plf';
     await rendreVeille(conteneur, { magasin: magasinMemoire() });
+    expect(location.hash).toBe('#/veille/suivi/plf');
     const carte = conteneur.querySelector('.mesures')!;
     expect([...carte.querySelectorAll('.palier')].map((t) => t.textContent)).toEqual(['Essentiel pour nos dossiers (1)']);
     expect(carte.querySelector('.paliers-mesures .puce-rubrique')?.textContent).toBe('Finances publiques');
@@ -223,7 +228,7 @@ describe('veille · écran', () => {
     expect(conteneur.querySelector('#onglet-echeances')?.getAttribute('aria-selected')).toBe('true');
     expect(document.activeElement?.id).toBe('onglet-echeances');
     conteneur.querySelector<HTMLButtonElement>('#onglet-echeances')!.dispatchEvent(new KeyboardEvent('keydown', { key: 'End' }));
-    expect(document.activeElement?.id).toBe('onglet-sources');
+    expect(document.activeElement?.id).toBe('onglet-rennes');
   });
 
   it('pas encore de collecte : message explicite', async () => {
@@ -253,7 +258,7 @@ describe('veille · écran', () => {
     conteneur.append(section);
     await vi.waitFor(() => expect(section.querySelectorAll('.brief-liste li')).toHaveLength(3));
     expect(section.textContent).toContain('PLF 2027 : Vote solennel (20/10/2026)');
-    expect(section.querySelector('a[href="#/veille/plf"]')).not.toBeNull();
+    expect(section.querySelector('a[href="#/veille/suivi/plf"]')).not.toBeNull();
   });
 });
 
