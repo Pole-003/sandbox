@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "genere_le": "2026-10-09T14:37:14.601Z",
+  "genere_le": "2026-10-09T15:54:03.195Z",
   "indicateurs": [
     {
       "id": "dette",
@@ -510,8 +510,8 @@
         "libelle": "Taux long terme de la France pour le critère de convergence (moyenne mensuelle)",
         "lien": "https://data.ecb.europa.eu/data/datasets/IRS",
         "conditions": "Réutilisation libre avec mention de la source (BCE)",
-        "secours": true,
-        "nature": "mensuel"
+        "secours": false,
+        "nature": "moyenne mensuelle officielle"
       },
       "regle": {
         "frequence": "mensuelle",
@@ -524,16 +524,23 @@
         "heure": null,
         "estimee": true
       },
-      "derniere_tentative": "2026-10-09T10:52:29.424Z",
-      "derniere_reussite": "2026-10-09T10:52:29.424Z",
+      "derniere_tentative": "2026-10-09T15:54:03.195Z",
+      "derniere_reussite": "2026-10-09T15:54:03.195Z",
       "derniere_erreur": null,
-      "remarque": "bdf-webstat-tec10 : non configurée (BDF_API_KEY absent)",
+      "remarque": null,
       "journal": [
         {
           "date": "2026-10-09",
           "etat": "ok"
         }
-      ]
+      ],
+      "lien_du_jour": {
+        "libelle": "TEC 10",
+        "organisme": "Banque de France",
+        "mention": "Le TEC 10 (indice CNO-TEC® calculé par Euronext Paris) est publié chaque jour ouvré par la Banque de France et l'Agence France Trésor. Sa licence en interdit la redistribution : il se consulte sur le site de la Banque de France ; la carte affiche la moyenne mensuelle officielle de la BCE.",
+        "url": "https://www.banque-france.fr/fr/statistiques/taux-et-cours/indices-obligataires-2026-10-09",
+        "date": "2026-10-09"
+      }
     },
     {
       "id": "eurusd",
