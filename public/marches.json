@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "genere_le": "2026-10-09T11:17:58.545Z",
+  "genere_le": "2026-10-09T14:37:14.601Z",
   "indicateurs": [
     {
       "id": "dette",
@@ -542,29 +542,29 @@
       "decimales": 4,
       "genre": "niveau",
       "nature": "quotidien officiel",
-      "valeur": 1.1186,
-      "date_valeur": "2026-10-08",
-      "recupere_le": "2026-10-09T10:52:29.424Z",
+      "valeur": 1.1206,
+      "date_valeur": "2026-10-09",
+      "recupere_le": "2026-10-09T14:37:14.601Z",
       "variations": {
         "precedente": {
-          "depuis": "2026-10-07",
-          "absolue": 0.0009,
-          "relative": 0.0805
+          "depuis": "2026-10-08",
+          "absolue": 0.002,
+          "relative": 0.1788
         },
         "un_mois": {
-          "depuis": "2026-09-08",
-          "absolue": -0.0428,
-          "relative": -3.6852
+          "depuis": "2026-09-09",
+          "absolue": -0.0446,
+          "relative": -3.8277
         },
         "debut_annee": {
           "depuis": "2025-12-31",
-          "absolue": -0.0564,
-          "relative": -4.8
+          "absolue": -0.0544,
+          "relative": -4.6298
         },
         "un_an": {
-          "depuis": "2025-10-08",
-          "absolue": -0.0441,
-          "relative": -3.7929
+          "depuis": "2025-10-09",
+          "absolue": -0.0405,
+          "relative": -3.4881
         }
       },
       "historique": [
@@ -2607,6 +2607,10 @@
         [
           "2026-10-08",
           1.1186
+        ],
+        [
+          "2026-10-09",
+          1.1206
         ]
       ],
       "complements": [],
@@ -2625,12 +2629,12 @@
         "tolerance_jours_ouvres": 1
       },
       "prochaine_publication": {
-        "date": "2026-10-09",
+        "date": "2026-10-12",
         "heure": "16:15",
         "estimee": true
       },
-      "derniere_tentative": "2026-10-09T10:52:29.424Z",
-      "derniere_reussite": "2026-10-09T10:52:29.424Z",
+      "derniere_tentative": "2026-10-09T14:37:14.601Z",
+      "derniere_reussite": "2026-10-09T14:37:14.601Z",
       "derniere_erreur": null,
       "remarque": null,
       "journal": [
