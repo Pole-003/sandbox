@@ -40,7 +40,7 @@ describe('CSP de production', () => {
   });
 
   it('données de veille seulement exemptées du contrôle des URL (liens vers les sources)', () => {
-    expect(['news.json', 'veille-etat.json', 'archives/2026-08.json'].every(estDonneeVeille)).toBe(true);
+    expect(['news.json', 'veille-etat.json', 'marches.json', 'archives/2026-08.json'].every(estDonneeVeille)).toBe(true);
     expect(['assets/index.js', 'autre.json', 'archives/x.js', 'sous/news.json'].some(estDonneeVeille)).toBe(false);
   });
 });

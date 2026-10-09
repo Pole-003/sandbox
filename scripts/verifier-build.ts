@@ -4,7 +4,7 @@
  *  - aucun script ni style en ligne (interdits par la CSP) ;
  *  - aucune URL absolue vers une autre origine dans les fichiers produits.
  *
- * Exception : les données de veille (news.json, veille-etat.json, archives/) contiennent par nature
+ * Exception : les données de veille (news.json, veille-etat.json, marches.json, archives/) contiennent par nature
  * les liens vers les sources. Ce sont des données, jamais exécutées ni chargées par le navigateur :
  * ces liens ne s'ouvrent que sur clic, dans un nouvel onglet (rel="noopener noreferrer").
  */
@@ -49,7 +49,7 @@ export function verifierUrls(fichier: string, contenu: string, urlsAutorisees: s
 /** Fichiers de données de veille publiés avec le site (chemin relatif à dist/). */
 export function estDonneeVeille(cheminDansDist: string): boolean {
   const chemin = cheminDansDist.split('\\').join('/');
-  return chemin === 'news.json' || chemin === 'veille-etat.json' || /^archives\/\d{4}-\d{2}\.json$/.test(chemin);
+  return chemin === 'news.json' || chemin === 'veille-etat.json' || chemin === 'marches.json' || /^archives\/\d{4}-\d{2}\.json$/.test(chemin);
 }
 
 function lister(dossier: string): string[] {

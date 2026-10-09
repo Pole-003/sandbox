@@ -1,0 +1,131 @@
+{
+  "_commentaire": "Repères verticaux du graphique détaillé (docs/VEILLE.md) : réunions de politique monétaire de la BCE (jour de la décision), dépôt du projet de loi de finances. Complétez à la main ; chaque repère cite sa source.",
+  "evenements": [
+    {
+      "date": "2024-10-10",
+      "libelle": "Dépôt du PLF 2025",
+      "type": "plf",
+      "source": "https://www.assemblee-nationale.fr/dyn/17/dossiers/PLF_2025"
+    },
+    {
+      "date": "2024-10-17",
+      "libelle": "Réunion BCE",
+      "type": "bce",
+      "source": "https://www.ecb.europa.eu/press/calendars/mgcgc/html/index.fr.html"
+    },
+    {
+      "date": "2024-12-12",
+      "libelle": "Réunion BCE",
+      "type": "bce",
+      "source": "https://www.ecb.europa.eu/press/calendars/mgcgc/html/index.fr.html"
+    },
+    {
+      "date": "2025-01-30",
+      "libelle": "Réunion BCE",
+      "type": "bce",
+      "source": "https://www.ecb.europa.eu/press/calendars/mgcgc/html/index.fr.html"
+    },
+    {
+      "date": "2025-03-06",
+      "libelle": "Réunion BCE",
+      "type": "bce",
+      "source": "https://www.ecb.europa.eu/press/calendars/mgcgc/html/index.fr.html"
+    },
+    {
+      "date": "2025-04-17",
+      "libelle": "Réunion BCE",
+      "type": "bce",
+      "source": "https://www.ecb.europa.eu/press/calendars/mgcgc/html/index.fr.html"
+    },
+    {
+      "date": "2025-06-05",
+      "libelle": "Réunion BCE",
+      "type": "bce",
+      "source": "https://www.ecb.europa.eu/press/calendars/mgcgc/html/index.fr.html"
+    },
+    {
+      "date": "2025-07-24",
+      "libelle": "Réunion BCE",
+      "type": "bce",
+      "source": "https://www.ecb.europa.eu/press/calendars/mgcgc/html/index.fr.html"
+    },
+    {
+      "date": "2025-09-11",
+      "libelle": "Réunion BCE",
+      "type": "bce",
+      "source": "https://www.ecb.europa.eu/press/calendars/mgcgc/html/index.fr.html"
+    },
+    {
+      "date": "2025-10-14",
+      "libelle": "Dépôt du PLF 2026",
+      "type": "plf",
+      "source": "https://www.assemblee-nationale.fr/dyn/17/dossiers/PLF_2026"
+    },
+    {
+      "date": "2025-10-30",
+      "libelle": "Réunion BCE",
+      "type": "bce",
+      "source": "https://www.ecb.europa.eu/press/calendars/mgcgc/html/index.fr.html"
+    },
+    {
+      "date": "2025-12-18",
+      "libelle": "Réunion BCE",
+      "type": "bce",
+      "source": "https://www.ecb.europa.eu/press/calendars/mgcgc/html/index.fr.html"
+    },
+    {
+      "date": "2026-02-05",
+      "libelle": "Réunion BCE",
+      "type": "bce",
+      "source": "https://www.ecb.europa.eu/press/calendars/mgcgc/html/index.fr.html"
+    },
+    {
+      "date": "2026-03-19",
+      "libelle": "Réunion BCE",
+      "type": "bce",
+      "source": "https://www.ecb.europa.eu/press/calendars/mgcgc/html/index.fr.html"
+    },
+    {
+      "date": "2026-04-30",
+      "libelle": "Réunion BCE",
+      "type": "bce",
+      "source": "https://www.ecb.europa.eu/press/calendars/mgcgc/html/index.fr.html"
+    },
+    {
+      "date": "2026-06-11",
+      "libelle": "Réunion BCE",
+      "type": "bce",
+      "source": "https://www.ecb.europa.eu/press/calendars/mgcgc/html/index.fr.html"
+    },
+    {
+      "date": "2026-07-23",
+      "libelle": "Réunion BCE",
+      "type": "bce",
+      "source": "https://www.ecb.europa.eu/press/calendars/mgcgc/html/index.fr.html"
+    },
+    {
+      "date": "2026-09-10",
+      "libelle": "Réunion BCE",
+      "type": "bce",
+      "source": "https://www.ecb.europa.eu/press/calendars/mgcgc/html/index.fr.html"
+    },
+    {
+      "date": "2026-10-01",
+      "libelle": "Dépôt du PLF 2027",
+      "type": "plf",
+      "source": "https://www.assemblee-nationale.fr/dyn/17/dossiers/PLF_2027"
+    },
+    {
+      "date": "2026-10-29",
+      "libelle": "Réunion BCE",
+      "type": "bce",
+      "source": "https://www.ecb.europa.eu/press/calendars/mgcgc/html/index.fr.html"
+    },
+    {
+      "date": "2026-12-17",
+      "libelle": "Réunion BCE",
+      "type": "bce",
+      "source": "https://www.ecb.europa.eu/press/calendars/mgcgc/html/index.fr.html"
+    }
+  ]
+}

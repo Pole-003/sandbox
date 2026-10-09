@@ -1,0 +1,130 @@
+# Collecte des indicateurs de marché et de finances publiques (docs/VEILLE.md) : npm run marches:collecte
+#
+# Jours ouvrés, juste après les heures de publication validées (veille/marches-sources.json), heure de Paris :
+#   07 h 05  rattrapage quotidien (tout ce qui est attendu, en retard ou en échec la veille)
+#   09 h 02  dette publique de l'INSEE (publiée à 8 h 45, les jours du calendrier officiel)
+#   16 h 20  taux de référence EUR/USD de la BCE (publié vers 16 h)
+#   19 h 30  TEC 10 de la Banque de France (soirée) et Brent (EIA, le mercredi)
+# plus un déclenchement manuel (« Run workflow », avec l'option « forcer » pour interroger toutes les sources).
+# Le script n'interroge que les sources dont une nouvelle valeur est attendue. Coût : 0 €.
+#
+# Le cron de GitHub est en UTC : chaque horaire est programmé deux fois (heure d'été UTC+2, heure d'hiver UTC+1)
+# et l'étape « Heure de Paris » ne laisse passer que celui qui correspond à l'heure légale du jour.
+#
+# public/marches.json n'est commité (un commit par exécution au plus, message explicite) et le site redéployé
+# que si une valeur a changé ou si un indicateur tombe en panne ou s'en remet.
+#
+# Secret facultatif : BDF_API_KEY (compte gratuit Webstat) pour le TEC 10 quotidien ; sans lui, la moyenne
+# mensuelle de la BCE sert de secours.
+
+name: Marchés · collecte des indicateurs
+
+on:
+  schedule:
+    # Heure d'été (UTC+2)
+    - cron: '5 5 * * 1-5'
+    - cron: '2 7 * * 1-5'
+    - cron: '20 14 * * 1-5'
+    - cron: '30 17 * * 1-5'
+    # Heure d'hiver (UTC+1)
+    - cron: '5 6 * * 1-5'
+    - cron: '2 8 * * 1-5'
+    - cron: '20 15 * * 1-5'
+    - cron: '30 18 * * 1-5'
+  workflow_dispatch:
+    inputs:
+      forcer:
+        description: 'Interroger toutes les sources, même si aucune nouvelle valeur n’est attendue'
+        type: boolean
+        default: false
+
+permissions:
+  contents: write # commit de public/marches.json
+  actions: write # déclenchement du workflow de déploiement
+
+concurrency:
+  group: marches-collecte
+  cancel-in-progress: false
+
+jobs:
+  collecte:
+    name: Collecter et publier
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Heure de Paris
+        id: heure
+        env:
+          EVENEMENT: ${{ github.event_name }}
+          CRON: ${{ github.event.schedule }}
+        run: |
+          if [ "$EVENEMENT" != "schedule" ]; then
+            echo "lancer=true" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          case "$CRON" in
+            '5 5 * * 1-5'|'2 7 * * 1-5'|'20 14 * * 1-5'|'30 17 * * 1-5') attendu='+0200' ;;
+            *) attendu='+0100' ;;
+          esac
+          if [ "$(TZ=Europe/Paris date +%z)" = "$attendu" ]; then
+            echo "lancer=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "lancer=false" >> "$GITHUB_OUTPUT"
+            echo "::notice::Déclenchement « $CRON » ignoré : il ne correspond pas à l'heure légale du jour à Paris."
+          fi
+
+      - name: Récupérer le dépôt
+        if: steps.heure.outputs.lancer == 'true'
+        uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+
+      - name: Installer Node.js
+        if: steps.heure.outputs.lancer == 'true'
+        uses: actions/setup-node@v7
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+
+      - name: Installer les dépendances
+        if: steps.heure.outputs.lancer == 'true'
+        run: npm ci
+
+      - name: Collecter
+        id: collecte
+        if: steps.heure.outputs.lancer == 'true'
+        # La clé Webstat n'est transmise qu'à cette étape ; GitHub la masque dans les journaux.
+        env:
+          BDF_API_KEY: ${{ secrets.BDF_API_KEY }}
+          MARCHES_FORCER: ${{ github.event_name == 'workflow_dispatch' && inputs.forcer }}
+        run: npm run marches:collecte
+
+      - name: Publier si une valeur a changé
+        id: publication
+        if: steps.collecte.outputs.modifie == 'true'
+        env:
+          MESSAGE: ${{ steps.collecte.outputs.message }}
+        run: |
+          git add public/marches.json
+          if git diff --cached --quiet; then
+            echo "publie=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git commit -m "$MESSAGE"
+          for essai in 1 2 3; do
+            if git pull --rebase --quiet origin "$GITHUB_REF_NAME" && git push --quiet origin "HEAD:$GITHUB_REF_NAME"; then
+              echo "publie=true" >> "$GITHUB_OUTPUT"
+              exit 0
+            fi
+            sleep $((essai * 5))
+          done
+          echo "::error::Envoi de marches.json impossible après 3 essais."
+          exit 1
+
+      - name: Déclencher le déploiement
+        if: steps.publication.outputs.publie == 'true' && (github.ref_name == 'main' || github.ref_name == 'beta')
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run deploiement.yml --ref main

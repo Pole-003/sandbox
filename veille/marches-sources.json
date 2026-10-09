@@ -1,0 +1,207 @@
+{
+  "_commentaire": "Indicateurs du sous-onglet « Marchés et finances publiques » (docs/VEILLE.md). Pour chaque indicateur : règle de publication (fréquence, heure habituelle de Paris, tolérance de retard en jours ouvrés TARGET), calendrier officiel éventuel, sources par ordre de préférence (la suivante sert de secours) et emplacement de la valeur dans la réponse. Format « insee » : SDMX de l'API BDM, emplacement = idbank ; « csv » : colonnes date et valeur (« ; » pour Webstat). Jetons d'URL : {debut} (AAAA-MM-JJ, 2 ans), {debut_mois} (AAAA-MM, 3 ans), {debut_trimestre} (AAAA-Tn, 3 ans). « secret » : variable d'environnement de la clé, envoyée dans l'en-tête « Authorization: Apikey ». Sources validées le 09/10/2026 (point d'arrêt 1). « regle_secours » : règle de publication propre à une source de secours (ex. moyenne mensuelle de la BCE à la place du TEC 10 quotidien) ; la source principale est réessayée à chaque exécution tant qu'elle est disponible.",
+  "historique_jours": 730,
+  "indicateurs": [
+    {
+      "id": "dette",
+      "nom": "Dette publique",
+      "unite": "Md€",
+      "decimales": 1,
+      "genre": "niveau",
+      "nature": "trimestriel",
+      "regle": {
+        "frequence": "trimestrielle",
+        "decalage_jours": 85,
+        "heure": "08:45",
+        "tolerance_jours_ouvres": 5
+      },
+      "calendrier": [
+        {
+          "date": "2026-12-18",
+          "heure": "08:45"
+        }
+      ],
+      "page_calendrier": "https://www.insee.fr/fr/statistiques/9053525",
+      "sources": [
+        {
+          "id": "insee-dette",
+          "organisme": "INSEE",
+          "libelle": "Dette des administrations publiques au sens de Maastricht, fin de trimestre (base 2020)",
+          "format": "insee",
+          "url": "https://api.insee.fr/series/BDM/V1/data/SERIES_BDM/010777616+010777608?lastNObservations=12",
+          "emplacement": {
+            "valeur": "010777616",
+            "complements": {
+              "pib": "010777608"
+            }
+          },
+          "robots": "api_documentee",
+          "lien": "https://www.insee.fr/fr/statistiques/serie/010777616",
+          "conditions": "Licence Ouverte Etalab 2.0, mention « Source : Insee »"
+        },
+        {
+          "id": "bce-gfs-dette",
+          "organisme": "BCE (données de l'INSEE transmises via Eurostat)",
+          "libelle": "Government debt (consolidated), France",
+          "format": "csv",
+          "url": "https://data-api.ecb.europa.eu/service/data/GFS/Q.N.FR.W0.S13.S1.C.L.LE.GD.T._Z.XDC._T.F.V.N._T?startPeriod={debut_trimestre}&format=csvdata",
+          "emplacement": {
+            "date": "TIME_PERIOD",
+            "valeur": "OBS_VALUE",
+            "multiplicateur": 0.001
+          },
+          "lien": "https://data.ecb.europa.eu/data/datasets/GFS",
+          "conditions": "Réutilisation libre avec mention de la source (BCE)",
+          "regle_secours": {
+            "frequence": "trimestrielle",
+            "decalage_jours": 110,
+            "heure": null,
+            "tolerance_jours_ouvres": 10
+          }
+        }
+      ],
+      "complements": [
+        {
+          "cle": "pib",
+          "libelle": "Dette en % du PIB",
+          "unite": "% du PIB",
+          "decimales": 1
+        },
+        {
+          "cle": "negociable",
+          "libelle": "Dette négociable de l'État (fin de mois, données de l'AFT)",
+          "unite": "Md€",
+          "decimales": 1,
+          "source": {
+            "id": "insee-dette-negociable",
+            "organisme": "Agence France Trésor, via l'INSEE",
+            "libelle": "Encours de la dette négociable de l'État",
+            "format": "insee",
+            "url": "https://api.insee.fr/series/BDM/V1/data/SERIES_BDM/001711531?lastNObservations=36",
+            "emplacement": {
+              "valeur": "001711531",
+              "multiplicateur": 0.001
+            },
+            "robots": "api_documentee",
+            "lien": "https://www.insee.fr/fr/statistiques/serie/001711531",
+            "conditions": "Licence Ouverte Etalab 2.0"
+          }
+        }
+      ]
+    },
+    {
+      "id": "oat10",
+      "nom": "OAT 10 ans",
+      "unite": "%",
+      "decimales": 2,
+      "genre": "taux",
+      "nature": "quotidien officiel",
+      "regle": {
+        "frequence": "quotidienne",
+        "heure": "19:00",
+        "tolerance_jours_ouvres": 1
+      },
+      "sources": [
+        {
+          "id": "bdf-webstat-tec10",
+          "organisme": "Banque de France",
+          "libelle": "Taux de l'échéance constante 10 ans (TEC 10)",
+          "format": "csv",
+          "separateur": ";",
+          "secret": "BDF_API_KEY",
+          "url": "https://webstat.banque-france.fr/api/explore/v2.1/catalog/datasets/observations/exports/csv?refine=series_key:%22FM.D.FR.EUR.FR2.BB.FRMOYTEC10.HSTA%22&where=time_period_start%3E%3Ddate%27{debut}%27&delimiter=%3B",
+          "emplacement": {
+            "date": [
+              "time_period_end",
+              "time_period_start",
+              "time_period"
+            ],
+            "valeur": [
+              "obs_value",
+              "value"
+            ]
+          },
+          "lien": "https://webstat.banque-france.fr/fr/catalogue/fm/FM.D.FR.EUR.FR2.BB.FRMOYTEC10.HSTA",
+          "conditions": "Licence ouverte des jeux Webstat, mention « Banque de France »"
+        },
+        {
+          "id": "bce-taux-long-fr",
+          "organisme": "BCE",
+          "libelle": "Taux long terme de la France pour le critère de convergence (moyenne mensuelle)",
+          "format": "csv",
+          "nature_secours": "mensuel",
+          "url": "https://data-api.ecb.europa.eu/service/data/IRS/M.FR.L.L40.CI.0000.EUR.N.Z?startPeriod={debut_mois}&format=csvdata",
+          "emplacement": {
+            "date": "TIME_PERIOD",
+            "valeur": "OBS_VALUE"
+          },
+          "lien": "https://data.ecb.europa.eu/data/datasets/IRS",
+          "conditions": "Réutilisation libre avec mention de la source (BCE)",
+          "regle_secours": {
+            "frequence": "mensuelle",
+            "decalage_jours": 12,
+            "heure": null,
+            "tolerance_jours_ouvres": 10
+          }
+        }
+      ]
+    },
+    {
+      "id": "eurusd",
+      "nom": "EUR/USD",
+      "unite": "$",
+      "decimales": 4,
+      "genre": "niveau",
+      "nature": "quotidien officiel",
+      "regle": {
+        "frequence": "quotidienne",
+        "heure": "16:15",
+        "tolerance_jours_ouvres": 1
+      },
+      "sources": [
+        {
+          "id": "bce-eur-usd",
+          "organisme": "BCE",
+          "libelle": "Taux de change de référence de l'euro (dollar des États-Unis), 14 h 15 CET",
+          "format": "csv",
+          "url": "https://data-api.ecb.europa.eu/service/data/EXR/D.USD.EUR.SP00.A?startPeriod={debut}&format=csvdata",
+          "emplacement": {
+            "date": "TIME_PERIOD",
+            "valeur": "OBS_VALUE"
+          },
+          "lien": "https://data.ecb.europa.eu/data/datasets/EXR/EXR.D.USD.EUR.SP00.A",
+          "conditions": "Réutilisation libre avec mention « Source : BCE » ; taux publiés à titre d'information"
+        }
+      ]
+    },
+    {
+      "id": "brent",
+      "nom": "Brent",
+      "unite": "$/baril",
+      "decimales": 2,
+      "genre": "niveau",
+      "nature": "quotidien, publié chaque semaine",
+      "regle": {
+        "frequence": "hebdomadaire",
+        "jour_semaine": 3,
+        "heure": "19:00",
+        "tolerance_jours_ouvres": 2
+      },
+      "sources": [
+        {
+          "id": "fred-brent",
+          "organisme": "EIA (U.S. Energy Information Administration), via FRED",
+          "libelle": "Europe Brent Spot Price FOB (DCOILBRENTEU)",
+          "format": "csv",
+          "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DCOILBRENTEU&cosd={debut}",
+          "emplacement": {
+            "date": "observation_date",
+            "valeur": "DCOILBRENTEU"
+          },
+          "lien": "https://fred.stlouisfed.org/series/DCOILBRENTEU",
+          "conditions": "Domaine public, citation demandée (EIA, via FRED, Federal Reserve Bank of St. Louis)"
+        }
+      ]
+    }
+  ]
+}

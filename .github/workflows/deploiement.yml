@@ -91,8 +91,8 @@ jobs:
           if [ "$BETA_OK" = "true" ]; then
             mkdir site/beta
             cp -R beta/dist/. site/beta/
-            # La veille n'est collectée que sur main : la bêta affiche les mêmes actualités.
-            for fichier in news.json veille-etat.json; do
+            # La veille et les marchés ne sont collectés que sur main : la bêta affiche les mêmes données.
+            for fichier in news.json veille-etat.json marches.json; do
               if [ -f "main/dist/$fichier" ]; then cp "main/dist/$fichier" "site/beta/$fichier"; fi
             done
             if [ -d main/dist/archives ]; then

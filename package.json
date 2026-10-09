@@ -19,6 +19,7 @@
     "veille:collecte": "node scripts/veille/collecte.ts",
     "veille:explorer-suivi": "node scripts/veille/explorer-suivi.ts",
     "veille:explorer-marches": "node scripts/veille/explorer-marches.ts",
+    "marches:collecte": "node scripts/marches/collecte.ts",
     "fec:fictifs": "node scripts/generer-fec-fictifs.ts",
     "fec:gros": "node scripts/generer-fec-fictifs.ts --gros",
     "ca3:fictives": "node scripts/generer-ca3-fictives.ts",
