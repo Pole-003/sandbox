@@ -17,6 +17,18 @@ export interface Candidat {
   url: string;
   /** Extrait « date valeur » de la réponse, ou null si illisible. */
   lire?: (texte: string) => string | null;
+  /** Diagnostic seulement : si robots.txt est injoignable, lit quand même l'URL une fois pour en donner le statut. */
+  sonde?: boolean;
+  /** Motif dont on affiche le contexte (texte sans balises) quand la page répond. */
+  extrait?: RegExp;
+}
+
+/** Texte sans balises autour de la première occurrence du motif, pour lire une page inconnue. */
+export function extraitAutour(html: string, motif: RegExp, largeur = 220): string | null {
+  const texte = html.replace(/<script[\s\S]*?<\/script>|<style[\s\S]*?<\/style>/gi, ' ').replace(/<[^>]+>/g, ' ').replace(/&nbsp;/g, ' ').replace(/\s+/g, ' ');
+  const m = motif.exec(texte);
+  if (!m) return null;
+  return texte.slice(Math.max(0, m.index - 40), m.index + largeur).trim();
 }
 
 /** Dernière observation d'une réponse SDMX-ML de l'INSEE (BDM). */
@@ -46,6 +58,12 @@ export const CANDIDATS: Candidat[] = [
   { id: 'insee-dette-negociable', indicateur: "Dette négociable de l'État (M€, mensuelle, données AFT)", url: `${INSEE}/001711531?lastNObservations=2`, lire: derniereObservationInsee },
   { id: 'insee-page-ir-dette', indicateur: 'Dette : page Informations rapides (prochaine publication)', url: 'https://www.insee.fr/fr/statistiques/9053525', lire: (t) => /Prochaine publication\s*(?:&nbsp;|\s)*:\s*([^<.]+)/i.exec(t)?.[1]?.trim() ?? null },
   { id: 'aft-dette-negociable', indicateur: "Dette négociable de l'État (site de l'AFT)", url: 'https://www.aft.gouv.fr/fr/dette-negociable-etat' },
+  { id: 'aft-tec10-jour-en', indicateur: 'OAT 10 ans, TEC 10 du jour (AFT, page anglaise)', url: 'https://www.aft.gouv.fr/en/today-tec-10-index', sonde: true, extrait: /TEC\s?10/i },
+  { id: 'aft-tec10-jour-fr', indicateur: 'OAT 10 ans, TEC 10 du jour (AFT, page française)', url: 'https://www.aft.gouv.fr/fr/indice-tec-10-du-jour', sonde: true, extrait: /TEC\s?10/i },
+  { id: 'aft-tec10-methode', indicateur: 'TEC 10, méthodologie (AFT)', url: 'https://www.aft.gouv.fr/en/tec-10-oat', sonde: true, extrait: /(redistribu|licen|réutilis|reuse|copyright)/i },
+  { id: 'aft-mentions-legales', indicateur: 'AFT, mentions légales', url: 'https://www.aft.gouv.fr/fr/mentions-legales', sonde: true, extrait: /(réutilis|licence|propriété intellectuelle)/i },
+  { id: 'bdf-indices-obligataires', indicateur: 'Banque de France, indices obligataires quotidiens (page)', url: 'https://www.banque-france.fr/fr/statistiques/taux-et-cours/indices-obligataires-quotidiens-26-juin-2024', sonde: true, extrait: /redistribu/i },
+  { id: 'bdf-webstat-csv-ancien', indicateur: 'Banque de France, CSV historique TEC (ancien lien Webstat)', url: 'https://webstat.banque-france.fr/fr/downloadFile.do?id=5385693&exportType=csv' },
   { id: 'bdf-webstat-tec10', indicateur: 'OAT 10 ans, TEC 10 quotidien (clé requise)', url: 'https://webstat.banque-france.fr/api/explore/v2.1/catalog/datasets/observations/exports/csv?refine=series_key:%22FM.D.FR.EUR.FR2.BB.FRMOYTEC10.HSTA%22&limit=1' },
   { id: 'bce-taux-long-fr', indicateur: 'OAT 10 ans, taux de convergence mensuel (BCE, sans clé)', url: `${BCE}/IRS/M.FR.L.L40.CI.0000.EUR.N.Z?lastNObservations=2&format=csvdata`, lire: (t) => derniereLigneCsv(t, 'TIME_PERIOD', 'OBS_VALUE') },
   { id: 'bce-eur-usd', indicateur: 'EUR/USD, taux de référence quotidien', url: `${BCE}/EXR/D.USD.EUR.SP00.A?lastNObservations=2&format=csvdata`, lire: (t) => derniereLigneCsv(t, 'TIME_PERIOD', 'OBS_VALUE') },
@@ -70,8 +88,9 @@ export async function explorer(client: ClientHttp, c: Candidat): Promise<Resulta
   try {
     const droit = await client.autorise(new URL(c.url));
     base.robots = droit.autorise ? `autorisé (${droit.detail})` : `refusé (${droit.detail})`;
-    if (!droit.autorise) return base;
-    const r = await client.recuperer(c.url);
+    const sondeSeule = !droit.autorise && c.sonde === true && droit.detail.includes('injoignable');
+    if (!droit.autorise && !sondeSeule) return base;
+    const r = await client.recuperer(c.url, sondeSeule ? { robots: 'ignorer' } : {});
     const texte = new TextDecoder().decode(r.octets);
     const lu = r.statut >= 200 && r.statut < 300 && c.lire ? c.lire(texte) : null;
     return {
@@ -80,7 +99,9 @@ export async function explorer(client: ClientHttp, c: Candidat): Promise<Resulta
       contentType: r.contentType?.split(';')[0]?.trim() ?? null,
       dureeMs: r.dureeMs,
       derniere: lu,
-      message: r.statut >= 400 ? texte.replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim().slice(0, 160) : null,
+      message: r.statut >= 400
+        ? texte.replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim().slice(0, 160)
+        : c.extrait ? extraitAutour(texte, c.extrait) : null,
     };
   } catch (e) {
     return { ...base, message: e instanceof ErreurCollecte ? e.message : String(e) };
