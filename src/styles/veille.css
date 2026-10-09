@@ -545,3 +545,70 @@
   margin: 1rem 0 0.5rem;
   font-size: 0.9375rem;
 }
+
+/* --- Fil : nouveautés, recherche, score, export --- */
+.badge-nouveau {
+  background: var(--c-primaire);
+  color: var(--c-sur-primaire);
+}
+
+.badge-presse {
+  background: var(--c-surface-2);
+  color: var(--c-texte-2);
+}
+
+.article-nouveau {
+  border-left: 3px solid var(--c-primaire);
+}
+
+.article mark {
+  padding: 0 0.0625rem;
+  border-radius: 2px;
+  background: var(--c-alerte-fond);
+  color: inherit;
+}
+
+.article-autres-sources {
+  margin: 0.25rem 0 0;
+  color: var(--c-texte-2);
+  font-size: 0.8125rem;
+}
+
+.pourquoi-score {
+  margin-top: 0.5rem;
+  font-size: 0.8125rem;
+}
+
+.pourquoi-score summary {
+  width: fit-content;
+  color: var(--c-primaire);
+  cursor: pointer;
+}
+
+.pourquoi-score ul {
+  margin: 0.375rem 0 0;
+  padding-left: 1.25rem;
+  color: var(--c-texte-2);
+}
+
+.champ-recherche {
+  flex: 2 1 16rem;
+}
+
+.champ-recherche .aide {
+  font-size: 0.75rem;
+}
+
+.barre-fil {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.barre-fil-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}

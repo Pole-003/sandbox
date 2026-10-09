@@ -10,12 +10,20 @@ import { rendreEcheances } from './ecran-echeances.ts';
 import { dateIsoParis } from './dates-paris.ts';
 import {
   ageEnJours,
+  analyserRecherche,
   CRITERES_PAR_DEFAUT,
+  decouperSurlignage,
+  estNouveau,
   filtrerArticles,
+  lireCriteres,
+  lireVisites,
+  noterVisite,
   sourcesPresentes,
   type Criteres,
   type Marque,
 } from './logique.ts';
+import { ecrirePreference, lirePreference } from '../../core/stockage.ts';
+import { telecharger, TYPE_XLSX } from '../fec/ecran/commun.ts';
 import { ouvrirMagasin, type MagasinMarques } from './marques.ts';
 import {
   LIBELLES_TYPE,
@@ -85,17 +93,56 @@ function ligneMeta(a: Article): HTMLElement {
 
 // --- Fil ---
 
-function carteArticle(a: Article, marque: Marque | undefined, basculer: (champ: keyof Marque) => void): HTMLElement {
+/** Texte avec les termes recherchés entourés de <mark>. */
+function surligne(texte: string, termes: readonly string[]): (Node | string)[] {
+  return decouperSurlignage(texte, termes).map((m) => (m.surligne ? h('mark', {}, m.texte) : m.texte));
+}
+
+const nombreFr = (n: number) => String(n).replace('.', ',');
+
+/** « Pourquoi ce score » : mots-clés reconnus, coefficient de la source, bonus. */
+export function detailScore(a: Article): HTMLElement | null {
+  const p = a.pourquoi;
+  if (!p) return null;
+  const lignes: (HTMLElement | null)[] = [
+    p.mots.length
+      ? h('li', {}, 'Mots-clés détectés : ', ...p.mots.flatMap((m, i) => [i ? ', ' : '', h('strong', {}, m.mot), ` (+${nombreFr(m.poids)})`]))
+      : h('li', {}, 'Aucun mot-clé détecté : thème de la source.'),
+    p.coefficient !== 1 ? h('li', {}, `Coefficient de la source : × ${nombreFr(p.coefficient)} (alerte de presse)`) : null,
+    p.bonus_source ? h('li', {}, `Bonus de la source : +${nombreFr(p.bonus_source)}`) : null,
+    h('li', {}, `Score : ${nombreFr(p.score)}, soit l’importance ${a.importance ?? '—'}/5`),
+    p.bonus_fraicheur ? h('li', {}, `Bonus de fraîcheur pour le tri : +${nombreFr(p.bonus_fraicheur)}`) : null,
+  ];
+  return h('details', { class: 'pourquoi-score' }, h('summary', {}, 'Pourquoi ce score ?'), h('ul', {}, ...lignes));
+}
+
+function carteArticle(
+  a: Article,
+  marque: Marque | undefined,
+  basculer: (champ: keyof Marque) => void,
+  options: { nouveau: boolean; termes: readonly string[] },
+): HTMLElement {
   const bouton = (champ: keyof Marque, libelle: string) =>
     h('button', { type: 'button', class: 'bouton-marque', 'aria-pressed': String(Boolean(marque?.[champ])), 'data-marque': champ }, libelle);
   const carte = h(
     'article',
-    { class: `carte article${marque?.lu ? ' article-lu' : ''}${marque?.important ? ' article-important' : ''}`, 'data-id': a.id },
-    h('div', { class: 'article-badges' }, badgeImportance(a.importance), a.origine === 'api' ? h('span', { class: 'badge badge-api', title: 'Publié par une API officielle' }, 'API officielle') : null),
-    h('h3', { class: 'article-titre' }, lienExterne(a.url, a.titre)),
+    { class: `carte article${marque?.lu ? ' article-lu' : ''}${marque?.important ? ' article-important' : ''}${options.nouveau ? ' article-nouveau' : ''}`, 'data-id': a.id },
+    h(
+      'div',
+      { class: 'article-badges' },
+      options.nouveau ? h('span', { class: 'badge badge-nouveau', title: 'Collecté depuis votre dernière visite' }, 'Nouveau') : null,
+      badgeImportance(a.importance),
+      a.origine === 'api' ? h('span', { class: 'badge badge-api', title: 'Publié par une API officielle' }, 'API officielle') : null,
+      a.origine === 'alerte' ? h('span', { class: 'badge badge-presse', title: 'Article de presse repéré par une alerte Google' }, 'Presse') : null,
+    ),
+    h('h3', { class: 'article-titre' }, lienExterne(a.url, ...surligne(a.titre, options.termes))),
     ligneMeta(a),
-    a.resume ? h('p', { class: 'article-resume' }, a.resume) : h('p', { class: 'article-resume texte-secondaire' }, 'Pas d’extrait fourni par la source : consultez-la.'),
+    a.resume ? h('p', { class: 'article-resume' }, ...surligne(a.resume, options.termes)) : h('p', { class: 'article-resume texte-secondaire' }, 'Pas d’extrait fourni par la source : consultez-la.'),
+    a.autres_sources?.length
+      ? h('p', { class: 'article-autres-sources' }, 'Aussi publié par : ', ...a.autres_sources.flatMap((x, i) => [i ? ', ' : '', lienExterne(x.url, x.source)]))
+      : null,
     a.public.length ? h('p', { class: 'article-public' }, h('span', { class: 'visuellement-masque' }, 'Public concerné : '), ...a.public.map((p) => h('span', { class: 'puce' }, p))) : null,
+    detailScore(a),
     h('div', { class: 'article-actions' }, bouton('lu', 'Lu'), bouton('important', 'Important pour nos dossiers')),
   );
   for (const b of carte.querySelectorAll<HTMLButtonElement>('.bouton-marque')) {
@@ -122,25 +169,47 @@ interface ContexteFil {
   criteres: Criteres;
   /** Thème imposé (onglet Rennes et Bretagne). */
   themeFixe?: Article['theme'];
+  /** Jour de la visite précédente (badge « nouveau »). */
+  visitePrecedente: string | null;
+  /** Mémorise les critères (préférence d'interface, localStorage). */
+  memoriser?: (c: Criteres) => void;
+}
+
+const LIBELLES_IMPORTANCE = { '0': 'Toutes, y compris marginales', '2': '2 et plus', '3': '3 et plus', '4': '4 et plus (essentiel)' } as const;
+
+/** Critères en clair pour l'onglet « Paramètres » de l'export. */
+function criteresEnClair(c: Criteres, themeFixe?: string): [string, string][] {
+  return [
+    ['Thème', themeFixe ?? (c.theme || 'Tous')],
+    ['Source', c.source || 'Toutes'],
+    ['Importance', LIBELLES_IMPORTANCE[String(c.importanceMin) as keyof typeof LIBELLES_IMPORTANCE]],
+    ['Public', c.public || 'Tous'],
+    ['Recherche', c.recherche || '—'],
+    ['Non lus seulement', c.nonLus ? 'oui' : 'non'],
+    ['Importants pour nos dossiers', c.importants ? 'oui' : 'non'],
+    ['Nouveaux depuis la dernière visite', c.nouveaux ? 'oui' : 'non'],
+  ];
 }
 
 function rendreFil(conteneur: HTMLElement, ctx: ContexteFil): void {
   const c = { ...ctx.criteres, ...(ctx.themeFixe ? { theme: ctx.themeFixe } : {}) };
   const prefixe = ctx.themeFixe ? 'rennes' : 'fil';
   const base = ctx.themeFixe ? ctx.articles.filter((a) => a.theme === ctx.themeFixe) : ctx.articles;
+  const nbNouveaux = base.filter((a) => estNouveau(a, ctx.visitePrecedente)).length;
 
   const theme = liste([['', 'Tous les thèmes'], ...THEMES.map((t) => [t, t] as const)], c.theme);
   const source = liste([['', 'Toutes les sources'], ...sourcesPresentes(base).map((s) => [s, s] as const)], c.source);
-  const importance = liste(
-    [['0', 'Toutes, y compris marginales'], ['2', '2 et plus'], ['3', '3 et plus'], ['4', '4 et plus (essentiel)']],
-    String(c.importanceMin),
-  );
+  const importance = liste(Object.entries(LIBELLES_IMPORTANCE) as [string, string][], String(c.importanceMin));
   const publicCible = liste([['', 'Tous les publics'], ...PUBLICS.map((p) => [p, p] as const)], c.public);
-  const recherche = h('input', { type: 'search', placeholder: 'Mots du titre, du résumé ou de la source', value: c.recherche, autocomplete: 'off' });
+  const recherche = h('input', { type: 'search', placeholder: 'Mots, "expression exacte", -mot exclu', value: c.recherche, autocomplete: 'off', 'aria-describedby': `${prefixe}-aide-recherche` });
   const nonLus = h('input', { type: 'checkbox', checked: c.nonLus });
   const importants = h('input', { type: 'checkbox', checked: c.importants });
+  const nouveaux = h('input', { type: 'checkbox', checked: c.nouveaux, disabled: ctx.visitePrecedente === null });
   const compteur = h('p', { class: 'compteur', role: 'status', 'aria-live': 'polite' });
   const resultats = h('div', { class: 'liste-articles' });
+  const reinitialiser = h('button', { type: 'button', class: 'bouton' }, 'Réinitialiser les filtres');
+  const exporter = h('button', { type: 'button', class: 'bouton' }, 'Exporter la sélection (.xlsx)');
+  let visibles: Article[] = [];
 
   const filtres = h(
     'div',
@@ -149,14 +218,22 @@ function rendreFil(conteneur: HTMLElement, ctx: ContexteFil): void {
     champ('Source', source, `${prefixe}-source`),
     champ('Importance', importance, `${prefixe}-importance`),
     champ('Public', publicCible, `${prefixe}-public`),
-    champ('Recherche', recherche, `${prefixe}-recherche`),
+    h(
+      'div',
+      { class: 'champ champ-recherche' },
+      h('label', { for: `${prefixe}-recherche` }, 'Recherche dans les 60 derniers jours'),
+      recherche,
+      h('span', { class: 'aide texte-secondaire', id: `${prefixe}-aide-recherche` }, 'Titres, extraits, sources et thèmes, sans tenir compte des accents.'),
+    ),
     h(
       'div',
       { class: 'champ champ-cases' },
       h('label', {}, nonLus, ' Non lus seulement'),
       h('label', {}, importants, ' Importants pour nos dossiers'),
+      h('label', {}, nouveaux, ctx.visitePrecedente ? ` Nouveaux depuis ma dernière visite (${nbNouveaux})` : ' Nouveaux depuis ma dernière visite (première visite)'),
     ),
   );
+  recherche.id = `${prefixe}-recherche`;
 
   const afficher = () => {
     Object.assign(ctx.criteres, {
@@ -167,39 +244,74 @@ function rendreFil(conteneur: HTMLElement, ctx: ContexteFil): void {
       recherche: recherche.value,
       nonLus: nonLus.checked,
       importants: importants.checked,
+      nouveaux: nouveaux.checked,
     } satisfies Criteres);
-    const visibles = filtrerArticles(base, { ...ctx.criteres, ...(ctx.themeFixe ? { theme: ctx.themeFixe } : {}) }, ctx.marques);
+    ctx.memoriser?.(ctx.criteres);
+    const criteres = { ...ctx.criteres, ...(ctx.themeFixe ? { theme: ctx.themeFixe } : {}) };
+    const termes = analyserRecherche(criteres.recherche).inclus;
+    visibles = filtrerArticles(base, criteres, ctx.marques, ctx.visitePrecedente);
     compteur.textContent = `${visibles.length} article${visibles.length > 1 ? 's' : ''} sur ${base.length}`;
+    exporter.disabled = visibles.length === 0;
     resultats.replaceChildren(
       ...(visibles.length
         ? visibles.map((a) =>
-            carteArticle(a, ctx.marques.get(a.id), (champMarque) => {
-              const actuelle = ctx.marques.get(a.id) ?? { lu: false, important: false };
-              const nouvelle = { ...actuelle, [champMarque]: !actuelle[champMarque] };
-              ctx.marques.set(a.id, nouvelle);
-              void ctx.magasin.enregistrer(a.id, nouvelle);
-              // On reconstruit la liste pour appliquer les filtres, en gardant le focus sur le bouton utilisé
-              // (ou sur le compteur si l'article vient de sortir de la sélection).
-              afficher();
-              const bouton = resultats.querySelector<HTMLButtonElement>(`[data-id="${a.id}"] [data-marque="${champMarque}"]`);
-              if (bouton) {
-                bouton.focus();
-              } else {
-                compteur.tabIndex = -1;
-                compteur.focus();
-              }
-            }),
+            carteArticle(
+              a,
+              ctx.marques.get(a.id),
+              (champMarque) => {
+                const actuelle = ctx.marques.get(a.id) ?? { lu: false, important: false };
+                const nouvelle = { ...actuelle, [champMarque]: !actuelle[champMarque] };
+                ctx.marques.set(a.id, nouvelle);
+                void ctx.magasin.enregistrer(a.id, nouvelle);
+                // On reconstruit la liste pour appliquer les filtres, en gardant le focus sur le bouton utilisé
+                // (ou sur le compteur si l'article vient de sortir de la sélection).
+                afficher();
+                const bouton = resultats.querySelector<HTMLButtonElement>(`[data-id="${a.id}"] [data-marque="${champMarque}"]`);
+                if (bouton) {
+                  bouton.focus();
+                } else {
+                  compteur.tabIndex = -1;
+                  compteur.focus();
+                }
+              },
+              { nouveau: estNouveau(a, ctx.visitePrecedente), termes },
+            ),
           )
         : [h('p', { class: 'texte-secondaire vide' }, 'Aucun article ne correspond à ces critères.')]),
     );
   };
-  for (const controle of [theme, source, importance, publicCible, nonLus, importants]) controle.addEventListener('change', afficher);
+  for (const controle of [theme, source, importance, publicCible, nonLus, importants, nouveaux]) controle.addEventListener('change', afficher);
   recherche.addEventListener('input', afficher);
+  reinitialiser.addEventListener('click', () => {
+    const d = CRITERES_PAR_DEFAUT;
+    theme.value = d.theme;
+    source.value = d.source;
+    importance.value = String(d.importanceMin);
+    publicCible.value = d.public;
+    recherche.value = d.recherche;
+    nonLus.checked = d.nonLus;
+    importants.checked = d.importants;
+    nouveaux.checked = d.nouveaux;
+    afficher();
+  });
+  exporter.addEventListener('click', async () => {
+    exporter.disabled = true;
+    const libelle = exporter.textContent;
+    exporter.textContent = 'Préparation du classeur…';
+    try {
+      const { exporterArticles } = await import('./export-xlsx.ts');
+      const octets = await exporterArticles(visibles, criteresEnClair(ctx.criteres, ctx.themeFixe), __APP_VERSION__);
+      telecharger(octets, `veille-selection-${dateIsoParis(new Date())}.xlsx`, TYPE_XLSX);
+    } finally {
+      exporter.textContent = libelle;
+      exporter.disabled = visibles.length === 0;
+    }
+  });
 
   conteneur.append(
     filtres,
     ctx.magasin.persistant ? '' : h('p', { class: 'note' }, 'Ce navigateur ne permet pas de conserver les marques « lu » et « important » : elles seront perdues en quittant la page.'),
-    compteur,
+    h('div', { class: 'barre-fil' }, compteur, h('div', { class: 'barre-fil-actions' }, reinitialiser, exporter)),
     resultats,
   );
   afficher();
@@ -490,8 +602,13 @@ export async function rendreVeille(
 
   const marques = await magasin.toutes();
   if (options.annulation?.annule) return;
-  const criteresFil: Criteres = { ...CRITERES_PAR_DEFAUT };
-  const criteresRennes: Criteres = { ...CRITERES_PAR_DEFAUT };
+  // Préférences d'interface (localStorage, CLAUDE.md règle n° 5) : critères des filtres et jour des visites.
+  const criteresFil = lireCriteres(lirePreference('veille-filtres-fil'));
+  const criteresRennes = lireCriteres(lirePreference('veille-filtres-rennes'));
+  const visites = noterVisite(lireVisites(lirePreference('veille-visites')), dateIsoParis(options.maintenant ?? new Date()));
+  ecrirePreference('veille-visites', JSON.stringify(visites));
+  const nbNouveaux = news.articles.filter((a) => estNouveau(a, visites.precedente)).length;
+  if (visites.precedente && nbNouveaux > 0) statut.append(` ${nbNouveaux} nouveau${nbNouveaux > 1 ? 'x' : ''} depuis votre dernière visite.`);
 
   const liste = h('div', { class: 'onglets', role: 'tablist', 'aria-label': 'Rubriques de la veille' });
   const panneau = h('div', { class: 'panneau', role: 'tabpanel', tabindex: '0' });
@@ -512,8 +629,18 @@ export async function rendreVeille(
     panneau.replaceChildren();
     // L'adresse reflète l'onglet sans relancer le rendu de l'écran (replaceState ne déclenche pas « hashchange »).
     history.replaceState(null, '', `#/veille${id === 'fil' ? '' : `/${id}`}`);
-    if (id === 'fil') rendreFil(panneau, { articles: news.articles, marques, magasin, criteres: criteresFil });
-    if (id === 'rennes') rendreFil(panneau, { articles: news.articles, marques, magasin, criteres: criteresRennes, themeFixe: 'Rennes et Bretagne' });
+    if (id === 'fil') {
+      rendreFil(panneau, {
+        articles: news.articles, marques, magasin, criteres: criteresFil, visitePrecedente: visites.precedente,
+        memoriser: (c) => ecrirePreference('veille-filtres-fil', JSON.stringify(c)),
+      });
+    }
+    if (id === 'rennes') {
+      rendreFil(panneau, {
+        articles: news.articles, marques, magasin, criteres: criteresRennes, themeFixe: 'Rennes et Bretagne', visitePrecedente: visites.precedente,
+        memoriser: (c) => ecrirePreference('veille-filtres-rennes', JSON.stringify(c)),
+      });
+    }
     if (id === 'echeances') rendreEcheances(panneau, news.echeances ?? [], dateIsoParis(options.maintenant ?? new Date()));
     if (id === 'plf') rendreSuivi(panneau, news);
     if (id === 'indicateurs') rendreIndicateurs(panneau, news);
