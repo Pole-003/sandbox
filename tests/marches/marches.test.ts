@@ -14,7 +14,7 @@ import {
   type MarchesJson,
   type ReglePublication,
 } from '../../src/modules/veille/marches.ts';
-import { collecterMarches, messageCommit, noterJournal, urlAvecJetons, type ConfigMarches } from '../../scripts/marches/collecte.ts';
+import { chercherLienDuJour, collecterMarches, messageCommit, noterJournal, urlAvecJetons, type ConfigMarches } from '../../scripts/marches/collecte.ts';
 import { dateDePeriode, lireCsv, lireProchainePublicationInsee, lireSerieCsv, lireSerieInsee } from '../../scripts/marches/lecture.ts';
 import { ClientHttp } from '../../scripts/veille/http.ts';
 
@@ -46,9 +46,10 @@ describe('lecture des sources (réponses enregistrées)', () => {
     expect(l.historique.at(-1)).toEqual(['2026-10-06', 125.44]);
   });
 
-  it('Webstat : séparateur « ; », virgule décimale, première colonne de date disponible', () => {
-    const l = lireSerieCsv(fixture('webstat-tec10-reconstitue.csv'), { date: ['time_period_end', 'time_period'], valeur: ['obs_value'] }, ';');
-    expect(l.historique).toEqual([['2026-10-06', 3.97], ['2026-10-07', 3.99], ['2026-10-08', 4.01]]);
+  it('CSV à séparateur « ; » et virgule décimale, première colonne de date disponible', () => {
+    const csv = 'time_period_start;time_period_end;obs_value\n2026-10-07;2026-10-07;3,99\n2026-10-08;2026-10-08;4,01\n';
+    const l = lireSerieCsv(csv, { date: ['time_period_end', 'time_period'], valeur: ['obs_value'] }, ';');
+    expect(l.historique).toEqual([['2026-10-07', 3.99], ['2026-10-08', 4.01]]);
   });
 
   it('colonne absente : erreur explicite', () => {
@@ -189,11 +190,9 @@ describe('collecte des marchés', () => {
         sources: [{ id: 'bce-eur-usd', organisme: 'BCE', libelle: 'EUR/USD', format: 'csv', url: 'https://data-api.ecb.europa.eu/eurusd?startPeriod={debut}', emplacement: { date: 'TIME_PERIOD', valeur: 'OBS_VALUE' }, lien: 'https://bce', conditions: 'libre' }],
       },
       {
-        id: 'oat10', nom: 'OAT 10 ans', unite: '%', decimales: 2, genre: 'taux', nature: 'quotidien officiel', regle: { ...QUOTIDIEN, heure: '19:00' },
-        sources: [
-          { id: 'webstat', organisme: 'Banque de France', libelle: 'TEC 10', format: 'csv', separateur: ';', secret: 'BDF_API_KEY', url: 'https://webstat.banque-france.fr/tec10', emplacement: { date: ['time_period_end'], valeur: ['obs_value'] }, lien: 'https://bdf', conditions: 'licence ouverte' },
-          { id: 'bce-irs', organisme: 'BCE', libelle: 'Taux long', format: 'csv', url: 'https://data-api.ecb.europa.eu/irs', emplacement: { date: 'TIME_PERIOD', valeur: 'OBS_VALUE' }, lien: 'https://bce', conditions: 'libre', nature_secours: 'mensuel', regle_secours: MENS },
-        ],
+        id: 'oat10', nom: 'OAT 10 ans', unite: '%', decimales: 2, genre: 'taux', nature: 'moyenne mensuelle officielle', regle: MENS,
+        sources: [{ id: 'bce-irs', organisme: 'BCE', libelle: 'Taux long', format: 'csv', url: 'https://data-api.ecb.europa.eu/irs', emplacement: { date: 'TIME_PERIOD', valeur: 'OBS_VALUE' }, lien: 'https://bce', conditions: 'libre' }],
+        lien_du_jour: { libelle: 'TEC 10', organisme: 'Banque de France', modele: 'https://www.banque-france.fr/indices-{date}', repli: 'https://www.banque-france.fr/taux', mention: 'Licence Euronext.' },
       },
     ],
   };
@@ -209,49 +208,105 @@ describe('collecte des marchés', () => {
     }) as typeof globalThis.fetch;
     return { client: new ClientHttp({ userAgent: 'test', fetch, attendre: async () => {}, maintenant: () => 0 }), appels: () => appels.filter((a) => !a.url.endsWith('/robots.txt')) };
   }
-  const ROUTES = { 'https://data-api.ecb.europa.eu/eurusd': fixture('bce-eur-usd.csv'), 'https://data-api.ecb.europa.eu/irs': fixture('bce-taux-long-fr.csv') };
+  // Page du TEC 10 de la Banque de France : celle de la veille existe, celle du jour pas encore (404).
+  const PAGE_BDF = '<h1>Indices obligataires</h1><td>TEC10</td><td>4,7950</td>';
+  const ROUTES = {
+    'https://data-api.ecb.europa.eu/eurusd': fixture('bce-eur-usd.csv'),
+    'https://data-api.ecb.europa.eu/irs': fixture('bce-taux-long-fr.csv'),
+    'https://www.banque-france.fr/indices-2026-10-08': PAGE_BDF,
+  };
+  const BDF = (a: { url: string }) => a.url.startsWith('https://www.banque-france.fr/');
 
-  it('première collecte : toutes les sources, secours sans clé Webstat, fichier à écrire', async () => {
+  it('première collecte : toutes les sources sans clé, lien vers la dernière page du TEC 10, fichier à écrire', async () => {
     const { client, appels } = reseau(ROUTES);
-    const r = await collecterMarches({ config: CONFIG, evenements: [], precedent: null, client, maintenant: ici('2026-10-09T08:00:00Z'), env: {} });
+    const r = await collecterMarches({ config: CONFIG, evenements: [], precedent: null, client, maintenant: ici('2026-10-09T08:00:00Z') });
     expect(r.modifie).toBe(true);
-    expect(appels().map((a) => a.url)).toEqual(['https://data-api.ecb.europa.eu/eurusd', 'https://data-api.ecb.europa.eu/irs']);
+    expect(appels().filter((a) => !BDF(a)).map((a) => a.url)).toEqual(['https://data-api.ecb.europa.eu/eurusd', 'https://data-api.ecb.europa.eu/irs']);
+    expect(appels().every((a) => !('Authorization' in a.entetes))).toBe(true);
     const oat = r.marches.indicateurs.find((i) => i.id === 'oat10')!;
-    expect(oat).toMatchObject({ valeur: 4, date_valeur: '2026-08-31', source: { id: 'bce-irs', secours: true, nature: 'mensuel' }, regle: MENS, remarque: 'webstat : non configurée (BDF_API_KEY absent)' });
+    expect(oat).toMatchObject({ valeur: 4, date_valeur: '2026-08-31', source: { id: 'bce-irs', secours: false, nature: 'moyenne mensuelle officielle' }, regle: MENS, remarque: null });
+    expect(oat.lien_du_jour).toEqual({ libelle: 'TEC 10', organisme: 'Banque de France', url: 'https://www.banque-france.fr/indices-2026-10-08', date: '2026-10-08', mention: 'Licence Euronext.' });
+    // La page n'est jamais reprise : seule son adresse est publiée.
+    expect(JSON.stringify(r.marches)).not.toContain('4,795');
     expect(r.marches.indicateurs[0]).toMatchObject({ valeur: 1.1186, date_valeur: '2026-10-08', journal: [{ date: '2026-10-09', etat: 'ok' }] });
-    expect(r.nouveautes).toEqual(['EUR/USD 1,1186 au 08/10', 'OAT 10 ans 4,00 % au 31/08']);
+    expect(r.marches.indicateurs[0]!.lien_du_jour).toBeUndefined();
+    expect(r.nouveautes).toEqual(['EUR/USD 1,1186 au 08/10', 'OAT 10 ans 4,00 % au 31/08', 'lien TEC 10 du 08/10']);
+  });
+
+  it('lien du TEC 10 : page du jour dès qu’elle existe, sans redemander une date déjà trouvée', async () => {
+    const def = CONFIG.indicateurs[1]!.lien_du_jour!;
+    // 15 h 25 : la page du jour est en ligne, une seule requête.
+    const avec = reseau({ ...ROUTES, 'https://www.banque-france.fr/indices-2026-10-09': PAGE_BDF });
+    const veille = { libelle: 'TEC 10', organisme: 'Banque de France', url: 'https://www.banque-france.fr/indices-2026-10-08', date: '2026-10-08' };
+    expect(await chercherLienDuJour(avec.client, def, ici('2026-10-09T13:25:00Z'), veille)).toMatchObject({ url: 'https://www.banque-france.fr/indices-2026-10-09', date: '2026-10-09' });
+    expect(avec.appels().map((a) => a.url)).toEqual(['https://www.banque-france.fr/indices-2026-10-09']);
+    // Page du jour pas encore publiée : le lien de la veille est gardé après une seule requête.
+    const sans = reseau(ROUTES);
+    expect(await chercherLienDuJour(sans.client, def, ici('2026-10-09T13:25:00Z'), veille)).toMatchObject({ date: '2026-10-08' });
+    expect(sans.appels()).toHaveLength(1);
+    // Déjà à jour : aucune requête.
+    const ajour = reseau(ROUTES);
+    await chercherLienDuJour(ajour.client, def, ici('2026-10-09T17:30:00Z'), { ...veille, url: 'https://www.banque-france.fr/indices-2026-10-09', date: '2026-10-09' });
+    expect(ajour.appels()).toHaveLength(0);
+    // Le lundi, la page du vendredi précédent est cherchée, pas celles du week-end.
+    const lundi = reseau({ 'https://www.banque-france.fr/indices-2026-10-09': PAGE_BDF });
+    expect(await chercherLienDuJour(lundi.client, def, ici('2026-10-12T05:05:00Z'), null)).toMatchObject({ date: '2026-10-09' });
+    expect(lundi.appels().map((a) => a.url)).toEqual(['https://www.banque-france.fr/indices-2026-10-12', 'https://www.banque-france.fr/indices-2026-10-09']);
+    // Site en panne et aucun lien connu : page générale, sans date.
+    const panne = reseau({ 'https://www.banque-france.fr/indices-2026-10-09': 503 });
+    expect(await chercherLienDuJour(panne.client, def, ici('2026-10-09T13:25:00Z'), null)).toMatchObject({ url: 'https://www.banque-france.fr/taux', date: null });
+    expect(panne.appels()).toHaveLength(1);
+  });
+
+  it('nouveau lien du TEC 10 : publication avec un message explicite', async () => {
+    const { client: c1 } = reseau(ROUTES);
+    const r1 = await collecterMarches({ config: CONFIG, evenements: [], precedent: null, client: c1, maintenant: ici('2026-10-09T08:00:00Z') });
+    const { client } = reseau({ ...ROUTES, 'https://www.banque-france.fr/indices-2026-10-09': PAGE_BDF });
+    const r2 = await collecterMarches({ config: CONFIG, evenements: [], precedent: r1.marches, client, maintenant: ici('2026-10-09T13:25:00Z') });
+    expect(r2.modifie).toBe(true);
+    expect(messageCommit(r2.nouveautes, ici('2026-10-09T13:25:00Z'))).toBe('Marchés : lien TEC 10 du 09/10 (collecte du 09/10/2026 15 h 25)');
+  });
+
+  it('source principale en panne : secours avec sa propre règle, principale réessayée à chaque exécution', async () => {
+    const config: ConfigMarches = {
+      historique_jours: 730,
+      indicateurs: [{
+        id: 'oat10', nom: 'OAT 10 ans', unite: '%', decimales: 2, genre: 'taux', nature: 'quotidien officiel', regle: QUOTIDIEN,
+        sources: [
+          { id: 'principale', organisme: 'A', libelle: 'Quotidien', format: 'csv', url: 'https://a.example/serie', emplacement: { date: 'TIME_PERIOD', valeur: 'OBS_VALUE' }, lien: 'https://a', conditions: 'libre' },
+          { id: 'bce-irs', organisme: 'BCE', libelle: 'Taux long', format: 'csv', url: 'https://data-api.ecb.europa.eu/irs', emplacement: { date: 'TIME_PERIOD', valeur: 'OBS_VALUE' }, lien: 'https://bce', conditions: 'libre', nature_secours: 'mensuel', regle_secours: MENS },
+        ],
+      }],
+    };
+    const { client: c1 } = reseau({ ...ROUTES, 'https://a.example/serie': 503 });
+    const r1 = await collecterMarches({ config, evenements: [], precedent: null, client: c1, maintenant: ici('2026-10-09T08:00:00Z') });
+    expect(r1.marches.indicateurs[0]).toMatchObject({ valeur: 4, source: { id: 'bce-irs', secours: true, nature: 'mensuel' }, regle: MENS, remarque: 'principale : HTTP 503' });
+    const { client, appels } = reseau({ ...ROUTES, 'https://a.example/serie': fixture('bce-eur-usd.csv') });
+    const r2 = await collecterMarches({ config, evenements: [], precedent: r1.marches, client, maintenant: ici('2026-10-09T09:00:00Z') });
+    expect(appels()[0]!.url).toBe('https://a.example/serie');
+    expect(r2.marches.indicateurs[0]).toMatchObject({ valeur: 1.1186, source: { id: 'principale', secours: false }, regle: QUOTIDIEN });
   });
 
   it('exécution suivante : seules les sources dont une valeur est attendue sont interrogées', async () => {
     const premier = reseau(ROUTES);
-    const r1 = await collecterMarches({ config: CONFIG, evenements: [], precedent: null, client: premier.client, maintenant: ici('2026-10-09T08:00:00Z'), env: {} });
+    const r1 = await collecterMarches({ config: CONFIG, evenements: [], precedent: null, client: premier.client, maintenant: ici('2026-10-09T08:00:00Z') });
     const second = reseau(ROUTES);
-    const r2 = await collecterMarches({ config: CONFIG, evenements: [], precedent: r1.marches, client: second.client, maintenant: ici('2026-10-09T09:00:00Z'), env: {} });
-    expect(second.appels()).toHaveLength(0);
+    const r2 = await collecterMarches({ config: CONFIG, evenements: [], precedent: r1.marches, client: second.client, maintenant: ici('2026-10-09T09:00:00Z') });
+    // Seule la page du TEC 10 du jour est cherchée (pas encore publiée) ; aucune source de données.
+    expect(second.appels().map((a) => a.url)).toEqual(['https://www.banque-france.fr/indices-2026-10-09']);
     expect(r2.modifie).toBe(false);
     // Après 16 h 15 : seul EUR/USD est attendu ; même réponse, donc rien à publier.
     const troisieme = reseau(ROUTES);
-    const r3 = await collecterMarches({ config: CONFIG, evenements: [], precedent: r1.marches, client: troisieme.client, maintenant: ici('2026-10-09T14:20:00Z'), env: {} });
-    expect(troisieme.appels().map((a) => a.url)).toEqual(['https://data-api.ecb.europa.eu/eurusd']);
+    const r3 = await collecterMarches({ config: CONFIG, evenements: [], precedent: r1.marches, client: troisieme.client, maintenant: ici('2026-10-09T14:20:00Z') });
+    expect(troisieme.appels().filter((a) => !BDF(a)).map((a) => a.url)).toEqual(['https://data-api.ecb.europa.eu/eurusd']);
     expect(r3.modifie).toBe(false);
-  });
-
-  it('clé Webstat présente : source principale réessayée, en-tête d’authentification envoyé', async () => {
-    const { client: c1 } = reseau(ROUTES);
-    const r1 = await collecterMarches({ config: CONFIG, evenements: [], precedent: null, client: c1, maintenant: ici('2026-10-09T08:00:00Z'), env: {} });
-    const { client, appels } = reseau({ ...ROUTES, 'https://webstat.banque-france.fr/tec10': fixture('webstat-tec10-reconstitue.csv') });
-    const r = await collecterMarches({ config: CONFIG, evenements: [], precedent: r1.marches, client, maintenant: ici('2026-10-09T09:00:00Z'), env: { BDF_API_KEY: 'cle-fictive' } });
-    expect(appels().find((a) => a.url.includes('webstat'))?.entetes.Authorization).toBe('Apikey cle-fictive');
-    expect(r.marches.indicateurs.find((i) => i.id === 'oat10')).toMatchObject({ valeur: 4.01, source: { id: 'webstat', secours: false }, regle: { frequence: 'quotidienne' } });
-    expect(r.modifie).toBe(true);
-    expect(JSON.stringify(r.marches)).not.toContain('cle-fictive');
   });
 
   it('source en panne : valeur conservée, erreur notée, publication (changement d’état), puis retour à la normale', async () => {
     const { client: c1 } = reseau(ROUTES);
-    const r1 = await collecterMarches({ config: CONFIG, evenements: [], precedent: null, client: c1, maintenant: ici('2026-10-09T08:00:00Z'), env: {} });
+    const r1 = await collecterMarches({ config: CONFIG, evenements: [], precedent: null, client: c1, maintenant: ici('2026-10-09T08:00:00Z') });
     const { client } = reseau({ 'https://data-api.ecb.europa.eu/irs': fixture('bce-taux-long-fr.csv'), 'https://data-api.ecb.europa.eu/eurusd': 503 });
-    const r2 = await collecterMarches({ config: CONFIG, evenements: [], precedent: r1.marches, client, maintenant: ici('2026-10-09T14:20:00Z'), env: {} });
+    const r2 = await collecterMarches({ config: CONFIG, evenements: [], precedent: r1.marches, client, maintenant: ici('2026-10-09T14:20:00Z') });
     const eur = r2.marches.indicateurs[0]!;
     expect(eur).toMatchObject({ valeur: 1.1186, derniere_erreur: 'bce-eur-usd : HTTP 503', journal: [{ date: '2026-10-09', etat: 'erreur' }] });
     expect(calculerFraicheur(eur, ici('2026-10-09T14:20:00Z'))).toBe('en_panne');
@@ -259,7 +314,7 @@ describe('collecte des marchés', () => {
     expect(messageCommit(r2.nouveautes, ici('2026-10-09T14:20:00Z'))).toBe('Marchés : état des sources mis à jour (collecte du 09/10/2026 16 h 20)');
     // Le lendemain matin, la source répond : l'erreur disparaît.
     const { client: c3 } = reseau(ROUTES);
-    const r3 = await collecterMarches({ config: CONFIG, evenements: [], precedent: r2.marches, client: c3, maintenant: ici('2026-10-10T05:05:00Z'), env: {} });
+    const r3 = await collecterMarches({ config: CONFIG, evenements: [], precedent: r2.marches, client: c3, maintenant: ici('2026-10-10T05:05:00Z') });
     expect(r3.marches.indicateurs[0]!.derniere_erreur).toBeNull();
     expect(r3.modifie).toBe(true);
   });

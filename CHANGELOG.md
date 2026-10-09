@@ -2,6 +2,13 @@
 
 Toutes les évolutions notables de la Sandbox Pôle 003. Format inspiré de « Keep a Changelog », numéros de version au format semver.
 
+## [0.15.1] - 2026-10-09
+
+### Modifié
+- **OAT 10 ans :** la carte affiche la moyenne mensuelle officielle de la BCE, et dessous un lien « Taux du jour » vers la page du TEC 10 publiée chaque jour par la Banque de France (relié vers 15 h 25). Le TEC 10 étant un indice d'Euronext dont la licence interdit la redistribution, il n'est pas reproduit dans l'application.
+- Sous chaque carte du Suivi : nature, organisme et date de la valeur (par exemple « Moyenne mensuelle officielle · BCE · août 2026 »).
+- Plus aucune clé d'API pour les indicateurs de marché : la source Webstat et son secret ont été retirés.
+
 ## [0.15.0] - 2026-10-09
 
 ### Ajouté

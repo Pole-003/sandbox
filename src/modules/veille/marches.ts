@@ -59,6 +59,20 @@ export interface SerieComplementaire {
   lien: string;
 }
 
+/**
+ * Lien vers la page où l'organisme publie la valeur du jour (ex. TEC 10 de la Banque de France),
+ * quand sa licence interdit de reprendre la valeur elle-même : seule l'adresse est publiée.
+ */
+export interface LienDuJour {
+  libelle: string;
+  organisme: string;
+  url: string;
+  /** Date de la page liée ; null quand le lien mène à la page générale (page du jour introuvable). */
+  date: string | null;
+  /** Pourquoi la valeur n'est pas reprise (licence). */
+  mention?: string;
+}
+
 export interface JournalCollecte {
   date: string;
   etat: 'ok' | 'sans_nouveaute' | 'erreur';
@@ -92,6 +106,8 @@ export interface IndicateurMarche {
   remarque: string | null;
   /** 30 derniers jours de collecte. */
   journal: JournalCollecte[];
+  /** Valeur du jour consultable chez l'organisme (absente des fichiers antérieurs). */
+  lien_du_jour?: LienDuJour | null;
 }
 
 export interface EvenementMarche {
@@ -306,7 +322,7 @@ export function estMarches(v: unknown): v is MarchesJson {
 // --- Prochaine récupération (« État des sources ») ---
 
 /** Horaires de la collecte des marchés, heure de Paris, jours ouvrés : doivent rester alignés sur marches.yml. */
-export const CRENEAUX_MARCHES = ['07:05', '09:02', '16:20', '19:30'] as const;
+export const CRENEAUX_MARCHES = ['07:05', '09:02', '15:25', '16:20', '19:30'] as const;
 /** Horaire de la collecte de la veille (veille.yml), jours ouvrés. */
 export const CRENEAU_VEILLE = '06:30';
 

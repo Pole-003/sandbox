@@ -22,6 +22,7 @@ import {
   type IdIndicateur,
   type IndicateurMarche,
   type JournalCollecte,
+  type LienDuJour,
   type MarchesJson,
   type ReglePublication,
   type SerieComplementaire,
@@ -35,8 +36,6 @@ export interface SourceIndicateur {
   libelle: string;
   format: 'insee' | 'csv';
   separateur?: string;
-  /** Variable d'environnement de la clé (en-tête « Authorization: Apikey »). */
-  secret?: string;
   url: string;
   emplacement: Emplacement;
   robots?: Exclude<PolitiqueRobots, 'respecter'>;
@@ -61,6 +60,22 @@ export interface IndicateurConfig {
   page_calendrier?: string;
   sources: SourceIndicateur[];
   complements?: { cle: string; libelle: string; unite: string; decimales: number; source?: SourceIndicateur }[];
+  lien_du_jour?: ConfigLienDuJour;
+}
+
+/**
+ * Page datée où l'organisme publie la valeur du jour. Seule son existence est vérifiée : la page n'est
+ * pas lue et sa valeur n'est jamais reprise (licence de l'indice).
+ */
+export interface ConfigLienDuJour {
+  libelle: string;
+  organisme: string;
+  /** Adresse de la page du jour, {date} remplacé par AAAA-MM-JJ. */
+  modele: string;
+  /** Page générale, liée quand aucune page du jour n'est trouvée. */
+  repli: string;
+  /** Pourquoi la valeur n'est pas reprise (licence), affiché sous le lien. */
+  mention?: string;
 }
 
 export interface ConfigMarches {
@@ -69,10 +84,6 @@ export interface ConfigMarches {
 }
 
 export const CHEMIN_MARCHES = 'public/marches.json';
-
-/** Erreur de configuration (clé absente) : la source est sautée sans être comptée comme une panne. */
-class SourceNonConfiguree extends Error {}
-
 
 /** Remplace {debut}, {debut_mois} et {debut_trimestre} dans une URL. */
 export function urlAvecJetons(url: string, maintenant: Date, historiqueJours: number): string {
@@ -83,16 +94,42 @@ export function urlAvecJetons(url: string, maintenant: Date, historiqueJours: nu
   return url.replaceAll('{debut}', debut).replaceAll('{debut_mois}', ilYa3Ans.slice(0, 7)).replaceAll('{debut_trimestre}', trimestre);
 }
 
-export async function lireSource(client: ClientHttp, s: SourceIndicateur, env: Readonly<Record<string, string | undefined>>, maintenant: Date, historiqueJours: number): Promise<Lecture> {
-  const cle = s.secret ? env[s.secret] : undefined;
-  if (s.secret && !cle) throw new SourceNonConfiguree(`non configurée (${s.secret} absent)`);
-  const r = await client.recuperer(urlAvecJetons(s.url, maintenant, historiqueJours), {
-    ...(s.robots ? { robots: s.robots } : {}),
-    ...(cle ? { entetes: { Authorization: `Apikey ${cle}` } } : {}),
-  });
+export async function lireSource(client: ClientHttp, s: SourceIndicateur, maintenant: Date, historiqueJours: number): Promise<Lecture> {
+  const r = await client.recuperer(urlAvecJetons(s.url, maintenant, historiqueJours), s.robots ? { robots: s.robots } : {});
   if (r.statut !== 200) throw new Error(`HTTP ${r.statut}`);
   const texte = new TextDecoder().decode(r.octets);
   return s.format === 'insee' ? lireSerieInsee(texte, s.emplacement) : lireSerieCsv(texte, s.emplacement, s.separateur ?? ',');
+}
+
+/** Jours de semaine, du plus récent au plus ancien, à partir d'aujourd'hui (heure de Paris). */
+function joursOuvresRecents(aujourdhui: string, nombre: number): string[] {
+  const jours: string[] = [];
+  for (let jour = aujourdhui; jours.length < nombre; jour = ajouterJours(jour, -1)) {
+    const j = new Date(`${jour}T12:00:00Z`).getUTCDay();
+    if (j !== 0 && j !== 6) jours.push(jour);
+  }
+  return jours;
+}
+
+/**
+ * Lien vers la page du jour la plus récente : essaie aujourd'hui puis les jours ouvrés précédents (5 au plus),
+ * sans redemander une date déjà trouvée. En cas d'erreur réseau, garde le lien précédent ; à défaut, la page générale.
+ */
+export async function chercherLienDuJour(client: ClientHttp, def: ConfigLienDuJour, maintenant: Date, precedent: LienDuJour | null | undefined): Promise<LienDuJour> {
+  const base = { libelle: def.libelle, organisme: def.organisme, ...(def.mention ? { mention: def.mention } : {}) };
+  const connu = precedent?.date && precedent.url === def.modele.replace('{date}', precedent.date) ? precedent : null;
+  for (const date of joursOuvresRecents(enHeureDeParis(maintenant).date, 5)) {
+    if (connu && date <= connu.date!) return { ...base, url: connu.url, date: connu.date };
+    const url = def.modele.replace('{date}', date);
+    try {
+      const r = await client.recuperer(url);
+      if (r.statut === 200) return { ...base, url, date };
+      if (r.statut !== 404) break;
+    } catch {
+      break;
+    }
+  }
+  return connu ? { ...base, url: connu.url, date: connu.date } : { ...base, url: def.repli, date: null };
 }
 
 function indicateurVide(c: IndicateurConfig): IndicateurMarche {
@@ -122,7 +159,7 @@ export function noterJournal(journal: readonly JournalCollecte[], date: string, 
 
 /** Contenu qui justifie une publication : valeurs, séries, source utilisée, panne ou non, prochaine publication. */
 export function signature(i: IndicateurMarche): string {
-  return JSON.stringify([i.valeur, i.date_valeur, i.historique, i.complements.map((c) => c.historique), i.source.id, i.derniere_erreur !== null, i.prochaine_publication]);
+  return JSON.stringify([i.valeur, i.date_valeur, i.historique, i.complements.map((c) => c.historique), i.source.id, i.derniere_erreur !== null, i.prochaine_publication, i.lien_du_jour ?? null]);
 }
 
 const nombreFr = (n: number, d: number) => new Intl.NumberFormat('fr-FR', { minimumFractionDigits: d, maximumFractionDigits: d }).format(n);
@@ -133,7 +170,6 @@ export interface DependancesMarches {
   precedent: MarchesJson | null;
   client: ClientHttp;
   maintenant: Date;
-  env: Readonly<Record<string, string | undefined>>;
   /** Interroge toutes les sources, même si aucune valeur n'est attendue (déclenchement manuel). */
   forcer?: boolean;
   journal?: (m: string) => void;
@@ -151,11 +187,9 @@ export async function collecterMarches(d: DependancesMarches): Promise<{ marches
     let i: IndicateurMarche = { ...indicateurVide(c), ...(precedent ?? {}), nom: c.nom, unite: c.unite, decimales: c.decimales, genre: c.genre };
     i.regle = regleEffective(c, i.source);
     const calendrier = [...(c.calendrier ?? [])];
-    // Sur une source de secours, la source principale est réessayée dès qu'elle est disponible (clé configurée).
-    const principale = c.sources[0]!;
-    const principaleDisponible = i.source.secours && (!principale.secret || Boolean(d.env[principale.secret]));
+    // Sur une source de secours, la source principale est réessayée à chaque exécution.
     const attendue =
-      d.forcer || principaleDisponible || nouvelleValeurAttendue({ ...i, prochaine_publication: prochainePublication(i.regle, i.date_valeur, d.maintenant, calendrier) }, d.maintenant);
+      d.forcer || i.source.secours || nouvelleValeurAttendue({ ...i, prochaine_publication: prochainePublication(i.regle, i.date_valeur, d.maintenant, calendrier) }, d.maintenant);
 
     if (!attendue) {
       log(`  —      ${c.id} : aucune nouvelle valeur attendue avant le ${i.prochaine_publication?.date.split('-').reverse().join('/') ?? '?'}`);
@@ -175,7 +209,7 @@ export async function collecterMarches(d: DependancesMarches): Promise<{ marches
       let rang = 0;
       for (const [n, s] of c.sources.entries()) {
         try {
-          lecture = await lireSource(d.client, s, d.env, d.maintenant, d.config.historique_jours);
+          lecture = await lireSource(d.client, s, d.maintenant, d.config.historique_jours);
           rang = n;
           break;
         } catch (e) {
@@ -197,7 +231,7 @@ export async function collecterMarches(d: DependancesMarches): Promise<{ marches
           if (def.source) {
             src = def.source;
             try {
-              serie = (await lireSource(d.client, def.source, d.env, d.maintenant, d.config.historique_jours)).historique;
+              serie = (await lireSource(d.client, def.source, d.maintenant, d.config.historique_jours)).historique;
             } catch (e) {
               remarques.push(`${def.source.id} : ${e instanceof Error ? e.message : String(e)}`);
               serie = undefined;
@@ -221,6 +255,16 @@ export async function collecterMarches(d: DependancesMarches): Promise<{ marches
         i = { ...i, derniere_erreur: erreurs.join(' ; '), journal: noterJournal(i.journal, auj, 'erreur') };
         log(`  ÉCHEC   ${c.id} : ${i.derniere_erreur}`);
       }
+    }
+    if (c.lien_du_jour) {
+      const avant = i.lien_du_jour;
+      i.lien_du_jour = await chercherLienDuJour(d.client, c.lien_du_jour, d.maintenant, avant);
+      if (i.lien_du_jour.date && i.lien_du_jour.date !== avant?.date) {
+        nouveautes.push(`lien ${c.lien_du_jour.libelle} du ${i.lien_du_jour.date.split('-').reverse().slice(0, 2).join('/')}`);
+        log(`  LIEN    ${c.id} : ${i.lien_du_jour.url}`);
+      }
+    } else {
+      delete i.lien_du_jour;
     }
     i.regle = regleEffective(c, i.source);
     i.variations = calculerVariations(i.historique, c.genre);
@@ -266,7 +310,7 @@ async function principal(): Promise<void> {
   const maintenant = new Date();
   console.log(`Marchés : collecte du ${maintenant.toISOString()}${process.env.MARCHES_FORCER === 'true' ? ' (toutes les sources)' : ''}`);
   const { marches, modifie, nouveautes } = await collecterMarches({
-    config, evenements, precedent, maintenant, env: process.env, forcer: process.env.MARCHES_FORCER === 'true',
+    config, evenements, precedent, maintenant, forcer: process.env.MARCHES_FORCER === 'true',
     client: new ClientHttp({ userAgent, delaiMaxMs: 20_000, intervalleParDomaineMs: 1_000 }),
     journal: (m) => console.log(m),
   });

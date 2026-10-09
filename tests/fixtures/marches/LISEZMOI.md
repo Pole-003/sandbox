@@ -11,8 +11,5 @@ personnelle) :
 - `insee-dette-negociable.xml` : dette négociable de l'État en M€ (001711531, données de l'AFT), 12 mois.
 - `insee-ir-dette.html` : extrait de la page « Informations rapides » de la dette du 2e trimestre 2026 (mention de la prochaine publication).
 
-Réponse **reconstituée** (structure documentée, valeurs fictives) :
-
-- `webstat-tec10-reconstitue.csv` : export CSV de Webstat (séparateur « ; », colonnes `time_period_*` et `obs_value`).
-  L'API exige une clé : la réponse réelle sera vérifiée à la première collecte avec `BDF_API_KEY`
-  (une colonne absente donne une erreur explicite dans « État des sources » et la BCE prend le relais).
+La page quotidienne du TEC 10 de la Banque de France n'est pas enregistrée : la collecte vérifie seulement
+qu'elle existe et n'en lit jamais le contenu (licence Euronext, redistribution interdite).

@@ -1,6 +1,6 @@
 /**
- * Lecture des réponses des sources d'indicateurs (veille/marches-sources.json) : CSV de la BCE, de FRED
- * et de Webstat, SDMX de l'INSEE, page « Informations rapides » de l'INSEE (prochaine publication).
+ * Lecture des réponses des sources d'indicateurs (veille/marches-sources.json) : CSV de la BCE et de FRED
+ * (séparateur réglable), SDMX de l'INSEE, page « Informations rapides » de l'INSEE (prochaine publication).
  * Fonctions pures, testées sur les réponses enregistrées dans tests/fixtures/marches/.
  */
 import { finDePeriode, lireSeriesInsee } from '../veille/insee.ts';

@@ -4,7 +4,7 @@
  * Lecture seule, sans coût, sans secret : pour chaque URL candidate, vérifie robots.txt (avec le même
  * client que la collecte), puis affiche le statut HTTP, le type de contenu, le temps de réponse et la
  * dernière observation lisible (date et valeur). Sert à valider les sources avant d'écrire les
- * connecteurs (docs/VEILLE.md, « Suivi des marchés »). Les sources à clé (Webstat, EIA) ne sont
+ * connecteurs (docs/VEILLE.md, « Suivi des marchés »). Les sources à clé (EIA) ne sont
  * testées que pour vérifier qu'elles refusent l'accès anonyme.
  */
 import { appendFileSync } from 'node:fs';
@@ -49,6 +49,14 @@ export function derniereLigneCsv(csv: string, colonneDate: string, colonneValeur
   return `${derniere[iDate]} ${derniere[iValeur]}`;
 }
 
+/** Jour ouvré (lundi à vendredi) précédant la date donnée, en AAAA-MM-JJ : sa page quotidienne existe forcément. */
+export function jourOuvrePrecedent(maintenant: Date): string {
+  const d = new Date(Date.UTC(maintenant.getUTCFullYear(), maintenant.getUTCMonth(), maintenant.getUTCDate()));
+  do d.setUTCDate(d.getUTCDate() - 1);
+  while (d.getUTCDay() === 0 || d.getUTCDay() === 6);
+  return d.toISOString().slice(0, 10);
+}
+
 const INSEE = 'https://api.insee.fr/series/BDM/V1/data/SERIES_BDM';
 const BCE = 'https://data-api.ecb.europa.eu/service/data';
 
@@ -58,13 +66,8 @@ export const CANDIDATS: Candidat[] = [
   { id: 'insee-dette-negociable', indicateur: "Dette négociable de l'État (M€, mensuelle, données AFT)", url: `${INSEE}/001711531?lastNObservations=2`, lire: derniereObservationInsee },
   { id: 'insee-page-ir-dette', indicateur: 'Dette : page Informations rapides (prochaine publication)', url: 'https://www.insee.fr/fr/statistiques/9053525', lire: (t) => /Prochaine publication\s*(?:&nbsp;|\s)*:\s*([^<.]+)/i.exec(t)?.[1]?.trim() ?? null },
   { id: 'aft-dette-negociable', indicateur: "Dette négociable de l'État (site de l'AFT)", url: 'https://www.aft.gouv.fr/fr/dette-negociable-etat' },
-  { id: 'aft-tec10-jour-en', indicateur: 'OAT 10 ans, TEC 10 du jour (AFT, page anglaise)', url: 'https://www.aft.gouv.fr/en/today-tec-10-index', sonde: true, extrait: /TEC\s?10/i },
-  { id: 'aft-tec10-jour-fr', indicateur: 'OAT 10 ans, TEC 10 du jour (AFT, page française)', url: 'https://www.aft.gouv.fr/fr/indice-tec-10-du-jour', sonde: true, extrait: /TEC\s?10/i },
-  { id: 'aft-tec10-methode', indicateur: 'TEC 10, méthodologie (AFT)', url: 'https://www.aft.gouv.fr/en/tec-10-oat', sonde: true, extrait: /(redistribu|licen|réutilis|reuse|copyright)/i },
-  { id: 'aft-mentions-legales', indicateur: 'AFT, mentions légales', url: 'https://www.aft.gouv.fr/fr/mentions-legales', sonde: true, extrait: /(réutilis|licence|propriété intellectuelle)/i },
-  { id: 'bdf-indices-obligataires', indicateur: 'Banque de France, indices obligataires quotidiens (page)', url: 'https://www.banque-france.fr/fr/statistiques/taux-et-cours/indices-obligataires-quotidiens-26-juin-2024', sonde: true, extrait: /redistribu/i },
-  { id: 'bdf-webstat-csv-ancien', indicateur: 'Banque de France, CSV historique TEC (ancien lien Webstat)', url: 'https://webstat.banque-france.fr/fr/downloadFile.do?id=5385693&exportType=csv' },
-  { id: 'bdf-webstat-tec10', indicateur: 'OAT 10 ans, TEC 10 quotidien (clé requise)', url: 'https://webstat.banque-france.fr/api/explore/v2.1/catalog/datasets/observations/exports/csv?refine=series_key:%22FM.D.FR.EUR.FR2.BB.FRMOYTEC10.HSTA%22&limit=1' },
+  { id: 'aft-tec10-jour-fr', indicateur: 'TEC 10 du jour (AFT ; protégé par Cloudflare, lien non utilisé)', url: 'https://www.aft.gouv.fr/fr/indice-tec-10-du-jour', sonde: true, extrait: /TEC\s?10/i },
+  { id: 'bdf-tec10-page-du-jour', indicateur: 'TEC 10 : page quotidienne de la Banque de France (lien seul, licence Euronext)', url: `https://www.banque-france.fr/fr/statistiques/taux-et-cours/indices-obligataires-${jourOuvrePrecedent(new Date())}`, extrait: /redistribu/i },
   { id: 'bce-taux-long-fr', indicateur: 'OAT 10 ans, taux de convergence mensuel (BCE, sans clé)', url: `${BCE}/IRS/M.FR.L.L40.CI.0000.EUR.N.Z?lastNObservations=2&format=csvdata`, lire: (t) => derniereLigneCsv(t, 'TIME_PERIOD', 'OBS_VALUE') },
   { id: 'bce-eur-usd', indicateur: 'EUR/USD, taux de référence quotidien', url: `${BCE}/EXR/D.USD.EUR.SP00.A?lastNObservations=2&format=csvdata`, lire: (t) => derniereLigneCsv(t, 'TIME_PERIOD', 'OBS_VALUE') },
   { id: 'eia-brent-api', indicateur: 'Brent, API EIA v2 (clé requise)', url: 'https://api.eia.gov/v2/petroleum/pri/spt/data/?frequency=daily&data[0]=value&facets[series][]=RBRTE&sort[0][column]=period&sort[0][direction]=desc&length=1' },

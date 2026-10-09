@@ -10,8 +10,11 @@ import { ClientHttp } from '../../scripts/veille/http.ts';
 import { oublierCache } from '../../src/modules/veille/donnees.ts';
 import { rendreVeille } from '../../src/modules/veille/ecran.ts';
 import {
+  dateDeValeur,
   enBase100,
   fraicheurSource,
+  lienDuJour,
+  metaCarte,
   friseTexte,
   pastilles,
   pointsPeriode,
@@ -21,7 +24,7 @@ import {
 } from '../../src/modules/veille/ecran-suivi.ts';
 import { graduations, graphiqueLignes, sparkline } from '../../src/modules/veille/graphiques.ts';
 import { articlesDeLEtape, contientMotCle } from '../../src/modules/veille/logique.ts';
-import { calculerVariations, prochainCreneau, prochaineRecuperation, type IndicateurMarche, type MarchesJson } from '../../src/modules/veille/marches.ts';
+import { calculerVariations, CRENEAUX_MARCHES, prochainCreneau, prochaineRecuperation, type IndicateurMarche, type MarchesJson } from '../../src/modules/veille/marches.ts';
 import { magasinMemoire } from '../../src/modules/veille/marques.ts';
 import type { Article, NewsJson, SuiviTexte } from '../../src/modules/veille/modele.ts';
 
@@ -61,7 +64,15 @@ const DETTE = indicateur({
   prochaine_publication: { date: '2026-12-18', heure: '08:45', estimee: false },
 });
 const EURUSD = indicateur({ id: 'eurusd', nom: 'EUR/USD', historique: serieQuotidienne('2026-10-08', 520, 1.05, 0.0001) });
-const OAT = indicateur({ id: 'oat10', nom: 'OAT 10 ans', unite: '%', decimales: 2, genre: 'taux', historique: serieQuotidienne('2026-10-08', 520, 3.2, 0.0015), prochaine_publication: { date: '2026-10-09', heure: '19:00', estimee: true } });
+const FINS_DE_MOIS = Array.from({ length: 24 }, (_, k) => new Date(Date.UTC(2024, 9 + k, 0)).toISOString().slice(0, 10)); // 30/09/2024 → 31/08/2026
+const OAT = indicateur({
+  id: 'oat10', nom: 'OAT 10 ans', unite: '%', decimales: 2, genre: 'taux', nature: 'moyenne mensuelle officielle',
+  historique: FINS_DE_MOIS.map((d, k) => [d, Math.round((3 + k * 0.04) * 100) / 100]),
+  source: { id: 'bce-taux-long-fr', organisme: 'BCE', libelle: 'Taux long terme de la France', lien: 'https://data.ecb.europa.eu/data/datasets/IRS', conditions: 'Réutilisation libre avec mention de la source (BCE)', secours: false, nature: 'moyenne mensuelle officielle' },
+  regle: { frequence: 'mensuelle', decalage_jours: 12, heure: null, tolerance_jours_ouvres: 10 },
+  prochaine_publication: { date: '2026-10-12', heure: null, estimee: true },
+  lien_du_jour: { libelle: 'TEC 10', organisme: 'Banque de France', url: 'https://www.banque-france.fr/fr/statistiques/taux-et-cours/indices-obligataires-2026-10-08', date: '2026-10-08', mention: 'Licence Euronext : consultable sur le site de la Banque de France.' },
+});
 const BRENT = indicateur({ id: 'brent', nom: 'Brent', unite: '$/baril', decimales: 2, historique: serieQuotidienne('2026-10-06', 500, 80, 0.09), prochaine_publication: { date: '2026-10-14', heure: '19:00', estimee: true } });
 const MARCHES: MarchesJson = {
   version: 1, genere_le: '2026-10-08T14:20:00Z', indicateurs: [DETTE, OAT, EURUSD, BRENT],
@@ -110,6 +121,20 @@ describe('suivi · logique', () => {
     expect(variationEnClair(EURUSD, { depuis: 'x', absolue: 0.01, relative: 0.8957 })).toBe('+0,90 %');
   });
 
+  it('ligne sous la carte : nature, organisme et date selon la périodicité ; lien vers la valeur du jour', () => {
+    expect(dateDeValeur(OAT)).toBe('août 2026');
+    expect(metaCarte(OAT)).toBe('Moyenne mensuelle officielle · BCE · août 2026');
+    expect(metaCarte(EURUSD)).toBe('Quotidien officiel · BCE · 08/10/2026');
+    expect(metaCarte({ ...EURUSD, source: { ...EURUSD.source, secours: true } })).toBe('Quotidien officiel · BCE (secours) · 08/10/2026');
+    const lien = lienDuJour(OAT, 'carte-marche-lien')!;
+    expect(lien.textContent).toBe('Taux du jour : TEC 10 du 08/10/2026 · Banque de France (nouvel onglet)');
+    expect(lien.querySelector('a')).toMatchObject({ href: OAT.lien_du_jour!.url, target: '_blank', rel: 'noopener noreferrer' });
+    expect(lienDuJour({ lien_du_jour: { ...OAT.lien_du_jour!, date: null } }, 'x')!.textContent).toContain('TEC 10 du jour · Banque de France');
+    // Seules les adresses https:// sont rendues ; pas de lien sans données.
+    expect(lienDuJour({ lien_du_jour: { ...OAT.lien_du_jour!, url: 'javascript:alert(1)' } }, 'x')).toBeNull();
+    expect(lienDuJour(EURUSD, 'x')).toBeNull();
+  });
+
   it('pastilles des 30 derniers jours (vert, orange, rouge, gris)', () => {
     const p = pastilles([{ date: '2026-10-08', etat: 'ok' }, { date: '2026-10-07', etat: 'sans_nouveaute' }, { date: '2026-10-06', etat: 'erreur' }], '2026-10-08');
     expect(p).toHaveLength(30);
@@ -126,9 +151,10 @@ describe('suivi · logique', () => {
 
   it('prochaine récupération : créneaux de marches.yml, jours ouvrés', () => {
     expect(prochainCreneau(new Date('2026-10-09T15:00:00Z'), ['07:05', '09:02', '16:20', '19:30']).toISOString()).toBe('2026-10-09T17:30:00.000Z');
+    expect(prochainCreneau(new Date('2026-10-09T13:00:00Z'), CRENEAUX_MARCHES).toISOString()).toBe('2026-10-09T13:25:00.000Z');
     expect(prochainCreneau(new Date('2026-10-09T18:00:00Z'), ['07:05', '09:02', '16:20', '19:30']).toISOString()).toBe('2026-10-12T05:05:00.000Z'); // vendredi soir → lundi
     expect(prochaineRecuperation(DETTE, new Date('2026-10-09T08:00:00Z')).toISOString()).toBe('2026-12-18T08:02:00.000Z');
-    expect(prochaineRecuperation({ ...EURUSD, derniere_erreur: 'HTTP 503' }, new Date('2026-10-09T08:00:00Z')).toISOString()).toBe('2026-10-09T14:20:00.000Z');
+    expect(prochaineRecuperation({ ...EURUSD, derniere_erreur: 'HTTP 503' }, new Date('2026-10-09T08:00:00Z')).toISOString()).toBe('2026-10-09T13:25:00.000Z');
   });
 
   it('articles liés à une étape : thème ou mot-clé, pendant l’étape', () => {
@@ -210,6 +236,18 @@ describe('suivi · écran', () => {
     expect(cartes[0]!.textContent).toContain('3\u202f595,5');
     expect(cartes[0]!.textContent).toContain('119,0 % du PIB');
     expect(cartes[2]!.querySelector('.badge-fraicheur')?.textContent).toBe('À jour');
+    // OAT : moyenne mensuelle de la BCE sur la carte, lien vers le TEC 10 du jour sous la carte (hors du bouton).
+    expect(cartes[1]!.querySelector('.carte-marche-meta')?.textContent).toBe('Moyenne mensuelle officielle · BCE · août 2026');
+    expect(cartes[1]!.querySelector('a')).toBeNull();
+    const lienOat = cartes[1]!.parentElement!.querySelector<HTMLAnchorElement>('.carte-marche-lien a')!;
+    expect(lienOat.href).toBe('https://www.banque-france.fr/fr/statistiques/taux-et-cours/indices-obligataires-2026-10-08');
+    expect(conteneur.querySelectorAll('.carte-marche-lien')).toHaveLength(1);
+    (cartes[1] as HTMLButtonElement).click();
+    expect(conteneur.querySelector('.source-marche .lien-du-jour a')?.textContent).toContain('TEC 10 du 08/10/2026');
+    expect(conteneur.querySelector('.source-marche')?.textContent).toContain('Licence Euronext');
+    expect(conteneur.querySelector('.carte-marche[data-id="oat10"]')?.getAttribute('aria-pressed')).toBe('true');
+    conteneur.querySelector<HTMLButtonElement>('.carte-marche[data-id="dette"]')!.click();
+    cartes.splice(0, cartes.length, ...conteneur.querySelectorAll('.carte-marche'));
     // Dette : barres trimestrielles et courbe en % du PIB (deux panneaux, une échelle chacun).
     expect(conteneur.querySelectorAll('.graphique-barre')).toHaveLength(5);
     expect(conteneur.querySelector('.compteur-montant')?.textContent).toMatch(/^3\u202f\d{3}\u202f\d{3}\u202f\d{3}\u202f\d{3} €$/);

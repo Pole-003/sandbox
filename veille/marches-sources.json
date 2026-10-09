@@ -1,5 +1,5 @@
 {
-  "_commentaire": "Indicateurs du sous-onglet « Marchés et finances publiques » (docs/VEILLE.md). Pour chaque indicateur : règle de publication (fréquence, heure habituelle de Paris, tolérance de retard en jours ouvrés TARGET), calendrier officiel éventuel, sources par ordre de préférence (la suivante sert de secours) et emplacement de la valeur dans la réponse. Format « insee » : SDMX de l'API BDM, emplacement = idbank ; « csv » : colonnes date et valeur (« ; » pour Webstat). Jetons d'URL : {debut} (AAAA-MM-JJ, 2 ans), {debut_mois} (AAAA-MM, 3 ans), {debut_trimestre} (AAAA-Tn, 3 ans). « secret » : variable d'environnement de la clé, envoyée dans l'en-tête « Authorization: Apikey ». Sources validées le 09/10/2026 (point d'arrêt 1). « regle_secours » : règle de publication propre à une source de secours (ex. moyenne mensuelle de la BCE à la place du TEC 10 quotidien) ; la source principale est réessayée à chaque exécution tant qu'elle est disponible.",
+  "_commentaire": "Indicateurs du sous-onglet « Marchés et finances publiques » (docs/VEILLE.md). Pour chaque indicateur : règle de publication (fréquence, heure habituelle de Paris, tolérance de retard en jours ouvrés TARGET), calendrier officiel éventuel, sources par ordre de préférence (la suivante sert de secours) et emplacement de la valeur dans la réponse. Format « insee » : SDMX de l'API BDM, emplacement = idbank ; « csv » : colonnes date et valeur (« separateur » si ce n'est pas la virgule). Jetons d'URL : {debut} (AAAA-MM-JJ, 2 ans), {debut_mois} (AAAA-MM, 3 ans), {debut_trimestre} (AAAA-Tn, 3 ans). Toutes les sources sont publiques et sans clé. Sources validées le 09/10/2026 (point d'arrêt 1). « regle_secours » : règle de publication propre à une source de secours (ex. dette trimestrielle de la BCE) ; la source principale est réessayée à chaque exécution. « lien_du_jour » : page datée de l'organisme qui publie la valeur du jour quand sa licence interdit de la reprendre (TEC 10 : indice CNO-TEC® d'Euronext, redistribution interdite) ; la collecte vérifie seulement que la page existe ({date} = AAAA-MM-JJ, jours ouvrés, 5 au plus) et publie son adresse, jamais sa valeur.",
   "historique_jours": 730,
   "indicateurs": [
     {
@@ -95,56 +95,35 @@
       "unite": "%",
       "decimales": 2,
       "genre": "taux",
-      "nature": "quotidien officiel",
+      "nature": "moyenne mensuelle officielle",
       "regle": {
-        "frequence": "quotidienne",
-        "heure": "19:00",
-        "tolerance_jours_ouvres": 1
+        "frequence": "mensuelle",
+        "decalage_jours": 12,
+        "heure": null,
+        "tolerance_jours_ouvres": 10
       },
       "sources": [
-        {
-          "id": "bdf-webstat-tec10",
-          "organisme": "Banque de France",
-          "libelle": "Taux de l'échéance constante 10 ans (TEC 10)",
-          "format": "csv",
-          "separateur": ";",
-          "secret": "BDF_API_KEY",
-          "url": "https://webstat.banque-france.fr/api/explore/v2.1/catalog/datasets/observations/exports/csv?refine=series_key:%22FM.D.FR.EUR.FR2.BB.FRMOYTEC10.HSTA%22&where=time_period_start%3E%3Ddate%27{debut}%27&delimiter=%3B",
-          "emplacement": {
-            "date": [
-              "time_period_end",
-              "time_period_start",
-              "time_period"
-            ],
-            "valeur": [
-              "obs_value",
-              "value"
-            ]
-          },
-          "lien": "https://webstat.banque-france.fr/fr/catalogue/fm/FM.D.FR.EUR.FR2.BB.FRMOYTEC10.HSTA",
-          "conditions": "Licence ouverte des jeux Webstat, mention « Banque de France »"
-        },
         {
           "id": "bce-taux-long-fr",
           "organisme": "BCE",
           "libelle": "Taux long terme de la France pour le critère de convergence (moyenne mensuelle)",
           "format": "csv",
-          "nature_secours": "mensuel",
           "url": "https://data-api.ecb.europa.eu/service/data/IRS/M.FR.L.L40.CI.0000.EUR.N.Z?startPeriod={debut_mois}&format=csvdata",
           "emplacement": {
             "date": "TIME_PERIOD",
             "valeur": "OBS_VALUE"
           },
           "lien": "https://data.ecb.europa.eu/data/datasets/IRS",
-          "conditions": "Réutilisation libre avec mention de la source (BCE)",
-          "regle_secours": {
-            "frequence": "mensuelle",
-            "decalage_jours": 12,
-            "heure": null,
-            "tolerance_jours_ouvres": 10
-          }
+          "conditions": "Réutilisation libre avec mention de la source (BCE)"
         }
-      ]
+      ],
+      "lien_du_jour": {
+        "libelle": "TEC 10",
+        "organisme": "Banque de France",
+        "modele": "https://www.banque-france.fr/fr/statistiques/taux-et-cours/indices-obligataires-{date}",
+        "repli": "https://www.banque-france.fr/fr/statistiques/themes-statistiques-et-series-webstat-associees/taux-et-cours",
+        "mention": "Le TEC 10 (indice CNO-TEC® calculé par Euronext Paris) est publié chaque jour ouvré par la Banque de France et l'Agence France Trésor. Sa licence en interdit la redistribution : il se consulte sur le site de la Banque de France ; la carte affiche la moyenne mensuelle officielle de la BCE."
+      }
     },
     {
       "id": "eurusd",

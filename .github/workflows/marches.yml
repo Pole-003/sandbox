@@ -3,8 +3,9 @@
 # Jours ouvrés, juste après les heures de publication validées (veille/marches-sources.json), heure de Paris :
 #   07 h 05  rattrapage quotidien (tout ce qui est attendu, en retard ou en échec la veille)
 #   09 h 02  dette publique de l'INSEE (publiée à 8 h 45, les jours du calendrier officiel)
+#   15 h 25  lien vers la page du TEC 10 du jour de la Banque de France (indice publié vers 15 h)
 #   16 h 20  taux de référence EUR/USD de la BCE (publié vers 16 h)
-#   19 h 30  TEC 10 de la Banque de France (soirée) et Brent (EIA, le mercredi)
+#   19 h 30  Brent (EIA, le mercredi) et dernière recherche du lien du TEC 10
 # plus un déclenchement manuel (« Run workflow », avec l'option « forcer » pour interroger toutes les sources)
 # et une exécution à chaque modification sur main de veille/marches-sources.json ou veille/evenements.json.
 # Le script n'interroge que les sources dont une nouvelle valeur est attendue. Coût : 0 €.
@@ -15,8 +16,9 @@
 # public/marches.json n'est commité (un commit par exécution au plus, message explicite) et le site redéployé
 # que si une valeur a changé ou si un indicateur tombe en panne ou s'en remet.
 #
-# Secret facultatif : BDF_API_KEY (compte gratuit Webstat) pour le TEC 10 quotidien ; sans lui, la moyenne
-# mensuelle de la BCE sert de secours.
+# Aucun secret : toutes les sources sont publiques et sans clé. L'OAT 10 ans est la moyenne mensuelle de la
+# BCE ; le TEC 10 du jour (licence Euronext, redistribution interdite) n'est jamais repris, seul le lien vers
+# la page de la Banque de France est publié.
 
 name: Marchés · collecte des indicateurs
 
@@ -25,11 +27,13 @@ on:
     # Heure d'été (UTC+2)
     - cron: '5 5 * * 1-5'
     - cron: '2 7 * * 1-5'
+    - cron: '25 13 * * 1-5'
     - cron: '20 14 * * 1-5'
     - cron: '30 17 * * 1-5'
     # Heure d'hiver (UTC+1)
     - cron: '5 6 * * 1-5'
     - cron: '2 8 * * 1-5'
+    - cron: '25 14 * * 1-5'
     - cron: '20 15 * * 1-5'
     - cron: '30 18 * * 1-5'
   # Une modification du catalogue des indicateurs ou des repères sur main est appliquée tout de suite.
@@ -70,7 +74,7 @@ jobs:
             exit 0
           fi
           case "$CRON" in
-            '5 5 * * 1-5'|'2 7 * * 1-5'|'20 14 * * 1-5'|'30 17 * * 1-5') attendu='+0200' ;;
+            '5 5 * * 1-5'|'2 7 * * 1-5'|'25 13 * * 1-5'|'20 14 * * 1-5'|'30 17 * * 1-5') attendu='+0200' ;;
             *) attendu='+0100' ;;
           esac
           if [ "$(TZ=Europe/Paris date +%z)" = "$attendu" ]; then
@@ -100,9 +104,7 @@ jobs:
       - name: Collecter
         id: collecte
         if: steps.heure.outputs.lancer == 'true'
-        # La clé Webstat n'est transmise qu'à cette étape ; GitHub la masque dans les journaux.
         env:
-          BDF_API_KEY: ${{ secrets.BDF_API_KEY }}
           MARCHES_FORCER: ${{ github.event_name == 'workflow_dispatch' && inputs.forcer }}
         run: npm run marches:collecte
 

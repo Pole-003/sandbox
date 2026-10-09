@@ -42,7 +42,7 @@ Le client HTTP respecte `robots.txt` (RFC 9309 : un fichier injoignable vaut int
 - `"api_documentee"` : API officielle documentée pour un usage automatisé. Un `robots.txt` injoignable est traité comme absent ; une interdiction explicite reste respectée. Utilisé pour l'API BDM de l'INSEE.
 - `"ignorer"` : `robots.txt` n'est pas consulté. Utilisé pour les flux d'alertes Google créés par l'utilisateur et pour l'API open data du BODACC, dont le `robots.txt` vise les robots d'indexation.
 
-Les en-têtes d'authentification (clé Webstat) ne suivent jamais une redirection vers un autre hôte.
+Les en-têtes d'authentification ne suivent jamais une redirection vers un autre hôte.
 
 ## Architecture : couches A et B (0 €)
 
@@ -68,7 +68,6 @@ Sources structurées, beaucoup plus fiables que le scraping. Clés éventuelles 
 | **INSEE, API BDM** (`insee-bdm`) | Active : 5 indicateurs de `veille/indicateurs.json` (inflation IPCH, croissance du PIB, chômage BIT, climat des affaires, créations d'entreprises) | Aucune (API ouverte depuis 2024 ; `INSEE_API_KEY` n'est plus utilisé) |
 | **BODACC 35** (`bodacc-35`) | Active : nombre d'annonces d'Ille-et-Vilaine sur 7 jours par famille (créations, procédures collectives, ventes et cessions, radiations), aucun nom publié | Aucune |
 | **PISTE** (Légifrance, Judilibre) | Non configurée, connecteur à développer | `PISTE_CLIENT_ID`, `PISTE_CLIENT_SECRET` |
-| **Banque de France Webstat** (`bdf-webstat`, défaillances, crédits) | Non configurée, connecteur à développer (le TEC 10 est suivi par la collecte des marchés) | `BDF_API_KEY` |
 
 Les indicateurs d'une API en panne restent ceux déjà publiés. Sans identifiants, l'API est sautée et signalée « non configurée » dans `veille-etat.json`, sans bloquer la collecte. Un connecteur n'est ajouté qu'après validation de l'API par du code exécuté dans GitHub Actions (`npm run veille:explorer-marches`).
 
@@ -129,25 +128,30 @@ Priorité du pôle. Sources :
 |---|---|---|---|---|---|
 | Dette publique (Md€ et % du PIB) | INSEE, BDM 010777616 et 010777608 (base 2020) | BCE, GFS (mêmes chiffres via Eurostat, environ 4 semaines plus tard) | trimestrielle, 8 h 45 aux dates du calendrier officiel (prochaine : 18/12/2026) | non | Licence Ouverte Etalab 2.0, « Source : Insee » |
 | Dette négociable de l'État (complément) | données de l'AFT, BDM 001711531 | — | mensuelle | non | Licence Ouverte |
-| OAT 10 ans | Banque de France, Webstat, TEC 10 quotidien (`FM.D.FR.EUR.FR2.BB.FRMOYTEC10.HSTA`) | BCE, taux long terme de la France (moyenne mensuelle, environ 12 jours après la fin du mois) | quotidien, en soirée | `BDF_API_KEY` (compte gratuit) | licence ouverte des jeux Webstat, « Banque de France » |
+| OAT 10 ans | BCE, taux long terme de la France pour le critère de convergence (`IRS/M.FR.L.L40.CI.0000.EUR.N.Z`, moyenne mensuelle) | — | mensuelle, environ 12 jours après la fin du mois | non | libre avec mention « Source : BCE » |
+| TEC 10 du jour (lien seulement) | page quotidienne « Indices obligataires » de la Banque de France | page générale « Taux et cours » | jours ouvrés, indice publié vers 15 h | non | **redistribution interdite** (licence Euronext) : seule l'adresse de la page est publiée |
 | EUR/USD | BCE, taux de référence (`EXR/D.USD.EUR.SP00.A`) | — | jours TARGET, vers 16 h | non | libre avec mention « Source : BCE » |
 | Brent | EIA via FRED (`DCOILBRENTEU`) | — | valeurs quotidiennes publiées chaque mercredi | non | domaine public, citation demandée |
 
 Choix du Brent : FRED, sans clé (le plus simple à actualiser), qui reprend la série officielle de l'EIA. Le site de l'AFT bloque les robots : la dette négociable est lue dans la BDM de l'INSEE, qui la diffuse.
 
+**OAT 10 ans et TEC 10 (vérifié le 09/10/2026).** Le TEC 10 est un indice CNO-TEC® calculé et administré par Euronext Paris. Il est publié chaque jour ouvré par l'Agence France Trésor et la Banque de France, mais « à titre d'information uniquement » : il « ne peut être redistribué, sous-licencié ou utilisé à des fins commerciales […] sans l'autorisation écrite préalable d'Euronext Paris » (mention des pages « Indices obligataires » de la Banque de France ; contact : indexEOD@euronext.com). Le site et le dépôt étant publics, la valeur n'est donc ni collectée ni publiée. Autres constats : aft.gouv.fr renvoie un défi anti-robots Cloudflare (403), depuis GitHub Actions comme ailleurs, `robots.txt` compris ; `webstat.banque-france.fr` et les pages statistiques de `www.banque-france.fr` sont autorisés par leur `robots.txt` ; l'export CSV public de l'historique (`webstat.banque-france.fr/export/csv-columns/fr/selection/5385693`, sans clé) contient les mêmes indices, sous la même licence. L'ancien lien `downloadFile.do?id=5385693` redirige désormais vers une page HTML.
+
+La carte « OAT 10 ans » affiche donc la moyenne mensuelle de la BCE (réutilisation libre) et, dessous, un lien « Taux du jour : TEC 10 du JJ/MM/AAAA · Banque de France ». La collecte vérifie seulement que la page datée du jour existe (une requête par exécution tant qu'elle n'est pas publiée, aucune ensuite) et publie son adresse ; elle ne lit ni ne reprend la valeur. Si une autorisation écrite d'Euronext est obtenue, le TEC 10 quotidien pourra être repris depuis l'export CSV de la Banque de France.
+
 ### `veille/marches-sources.json`
-Pour chaque indicateur : règle de publication (`frequence` quotidienne, hebdomadaire, mensuelle ou trimestrielle ; `heure` de Paris ; `tolerance_jours_ouvres` ; `decalage_jours` pour les estimations), `calendrier` officiel (dates et heures connues), `page_calendrier` (page INSEE lue à chaque interrogation pour « Prochaine publication : le … à … »), `sources` par ordre de préférence avec l'emplacement de la valeur (`emplacement` : idbank INSEE, ou colonnes date et valeur d'un CSV ; `multiplicateur` pour les unités), `regle_secours` propre à une source de secours, et `complements` (% du PIB, dette négociable).
+Pour chaque indicateur : règle de publication (`frequence` quotidienne, hebdomadaire, mensuelle ou trimestrielle ; `heure` de Paris ; `tolerance_jours_ouvres` ; `decalage_jours` pour les estimations), `calendrier` officiel (dates et heures connues), `page_calendrier` (page INSEE lue à chaque interrogation pour « Prochaine publication : le … à … »), `sources` par ordre de préférence avec l'emplacement de la valeur (`emplacement` : idbank INSEE, ou colonnes date et valeur d'un CSV ; `multiplicateur` pour les unités), `regle_secours` propre à une source de secours, `complements` (% du PIB, dette négociable) et `lien_du_jour` (page datée de l'organisme, `{date}` = AAAA-MM-JJ, page de `repli`, `mention` de licence affichée dans le détail). Toutes les sources sont publiques et sans clé.
 
 **À mettre à jour à la main :** après chaque publication trimestrielle de la dette, l'adresse de la nouvelle page « Informations rapides » de l'INSEE dans `page_calendrier` (sinon la date suivante est estimée, mention « estimée ») ; les dates connues du calendrier de l'INSEE dans `calendrier`.
 
 ### Collecte calée sur les publications (`marches.yml`, `npm run marches:collecte`)
-- Jours ouvrés à **7 h 05** (rattrapage quotidien), **9 h 02** (INSEE, publiée à 8 h 45), **16 h 20** (BCE, vers 16 h) et **19 h 30** (TEC 10 et Brent), plus déclenchement manuel (option « forcer ») et exécution à chaque modification de `marches-sources.json` ou `evenements.json` sur `main`. Le cron de GitHub est en UTC : chaque horaire est programmé pour l'heure d'été et pour l'heure d'hiver, et seul celui qui correspond à l'heure légale du jour passe.
-- **N'interroge que les indicateurs dont une nouvelle valeur est attendue** : prochaine publication passée, échec à l'exécution précédente, pas encore de valeur, ou source principale de nouveau disponible quand le secours est utilisé.
+- Jours ouvrés à **7 h 05** (rattrapage quotidien), **9 h 02** (INSEE, publiée à 8 h 45), **15 h 25** (lien vers la page du TEC 10 du jour, indice publié vers 15 h), **16 h 20** (BCE, vers 16 h) et **19 h 30** (Brent, et dernière recherche de la page du TEC 10), plus déclenchement manuel (option « forcer ») et exécution à chaque modification de `marches-sources.json` ou `evenements.json` sur `main`. Le cron de GitHub est en UTC : chaque horaire est programmé pour l'heure d'été et pour l'heure d'hiver, et seul celui qui correspond à l'heure légale du jour passe.
+- **N'interroge que les indicateurs dont une nouvelle valeur est attendue** : prochaine publication passée, échec à l'exécution précédente, pas encore de valeur, ou secours en cours (la source principale est réessayée). La page du TEC 10 du jour est cherchée à chaque exécution jusqu'à ce qu'elle soit trouvée (aujourd'hui, sinon les jours ouvrés précédents, 5 au plus).
 - Une source en panne passe la main au secours ; si toutes échouent, la dernière valeur est conservée et l'erreur notée.
-- **Publication** : `public/marches.json` n'est réécrit que si une valeur a changé ou si un indicateur tombe en panne ou s'en remet ; un commit groupé par exécution au plus, au message explicite (« Marchés : EUR/USD 1,1201 au 09/10 (collecte du 09/10/2026 16 h 20) »), puis redéploiement.
+- **Publication** : `public/marches.json` n'est réécrit que si une valeur a changé ou si un indicateur tombe en panne ou s'en remet ; un commit groupé par exécution au plus, au message explicite (« Marchés : EUR/USD 1,1201 au 09/10, lien TEC 10 du 09/10 (collecte du 09/10/2026 16 h 20) »), puis redéploiement.
 
 ### `public/marches.json`
-Pour chaque indicateur : valeur, unité, date de la valeur, date de récupération, variations (publication précédente, 1 mois, depuis le 1er janvier, 1 an ; en points de base pour un taux), historique (2 ans pour les séries quotidiennes, 12 trimestres pour la dette), séries complémentaires, source (organisme, libellé, lien, conditions, secours ou non, nature : « quotidien officiel », « mensuel », « trimestriel »…), règle en vigueur, prochaine publication attendue (calendrier officiel, ou estimée d'après la fréquence), dernière tentative, réussite et erreur, journal des 30 derniers jours. Plus les repères de `veille/evenements.json`.
+Pour chaque indicateur : valeur, unité, date de la valeur, date de récupération, variations (publication précédente, 1 mois, depuis le 1er janvier, 1 an ; en points de base pour un taux), historique (2 ans pour les séries quotidiennes, 12 trimestres pour la dette), séries complémentaires, source (organisme, libellé, lien, conditions, secours ou non, nature : « quotidien officiel », « mensuel », « trimestriel »…), règle en vigueur, lien vers la valeur du jour (`lien_du_jour` : libellé, organisme, adresse, date de la page, mention de licence), prochaine publication attendue (calendrier officiel, ou estimée d'après la fréquence), dernière tentative, réussite et erreur, journal des 30 derniers jours. Plus les repères de `veille/evenements.json`.
 
 ### Fraîcheur (calculée dans le navigateur, à l'instant de la consultation)
 - **À jour** : la prochaine publication attendue n'est pas encore passée.
@@ -170,7 +174,7 @@ Extrapolation linéaire depuis le dernier chiffre officiel de l'INSEE (fin de tr
 - **Veille › Fil d'actualité** : filtres (thème, source, importance, public, non lus, importants, nouveaux depuis la dernière visite) mémorisés en local ; recherche plein texte sur 60 jours (guillemets, « -mot », surlignage) ; badge « Nouveau » ; « Pourquoi ce score ? » ; « Aussi publié par » ; marquage « lu » et « important » (IndexedDB) ; export .xlsx de la sélection.
 - **Veille › Échéances** : calendrier fiscal officiel et échéances saisies, par jour.
 - **Veille › Suivi** :
-  - *Marchés et finances publiques* : quatre cartes, graphique détaillé (périodes, survol et clavier, minimum et maximum, repères, comparaison en base 100), dette en barres trimestrielles et en % du PIB (deux panneaux superposés, une échelle chacun : jamais de double axe), compteur de la dette, prochaines publications, conjoncture INSEE. `marches.json` est relu à l'ouverture du sous-onglet et quand l'onglet du navigateur redevient visible, jamais périodiquement.
+  - *Marchés et finances publiques* : quatre cartes (sous chacune : nature, organisme et date de la valeur, par exemple « Moyenne mensuelle officielle · BCE · août 2026 » ; sous l'OAT, lien vers le TEC 10 du jour de la Banque de France), graphique détaillé (périodes, survol et clavier, minimum et maximum, repères, comparaison en base 100), dette en barres trimestrielles et en % du PIB (deux panneaux superposés, une échelle chacun : jamais de double axe), compteur de la dette, prochaines publications, conjoncture INSEE. `marches.json` est relu à l'ouverture du sous-onglet et quand l'onglet du navigateur redevient visible, jamais périodiquement.
   - *PLF / PLFSS* : frise interactive (étape en cours mise en avant, dates, échéances à venir ; clic sur une étape → articles de la veille liés au texte publiés pendant l'étape), principales mesures.
   - *État des sources* : une ligne par source de veille et par indicateur (dernière réussite, prochaine récupération prévue, fraîcheur, nombre d'éléments, dernière erreur, 30 pastilles : vert réussie, orange valeur attendue pas encore publiée, rouge échec, gris pas de collecte) ; classement et coût.
 - **Veille › Rennes et Bretagne** : compteurs du BODACC sur 7 jours et fil dédié.
@@ -181,7 +185,6 @@ Extrapolation linéaire depuis le dernier chiffre officiel de l'INSEE (fin de tr
 | Secret | Utilisé par | Effet sans lui |
 |---|---|---|
 | `ALERTES_RSS` | `veille.yml` | alertes Google « non configurées » |
-| `BDF_API_KEY` | `veille.yml`, `marches.yml` | OAT 10 ans en moyenne mensuelle (BCE) au lieu du TEC 10 quotidien |
 | `PISTE_CLIENT_ID`, `PISTE_CLIENT_SECRET` | `veille.yml` | Légifrance et Judilibre « non configurés » (connecteurs à développer) |
 
 Les workflows programmés ne tournent que depuis la branche par défaut (`main`).
@@ -193,14 +196,14 @@ Les workflows programmés ne tournent que depuis la branche par défaut (`main`)
 | Diagnostic des sources (`npm run veille:test`, `veille:explorer-marches`, workflow `veille-diagnostic.yml`) | Fait |
 | Couche A (flux RSS/Atom) | Fait |
 | Alertes Google (secret `ALERTES_RSS`) | Fait, à configurer |
-| Couche B : INSEE et BODACC | Fait ; PISTE et Webstat (veille) à développer |
+| Couche B : INSEE et BODACC | Fait ; PISTE à développer |
 | Exceptions à robots.txt par source | Fait |
 | Classement par mots-clés v2 (expressions exactes, coefficients, fraîcheur, détail du score) | Fait |
 | Regroupement des articles similaires | Fait |
 | Échéances (calendrier fiscal officiel et saisie) | Fait |
 | Fil : nouveautés, filtres mémorisés, recherche plein texte, export .xlsx | Fait |
 | Suivi PLF / PLFSS (Assemblée nationale et Sénat, `suivi-textes.json`) | Fait |
-| Suivi des marchés (`marches.yml`, `marches.json`, onglet Suivi) | Fait ; TEC 10 quotidien dès que `BDF_API_KEY` est configuré |
+| Suivi des marchés (`marches.yml`, `marches.json`, onglet Suivi) | Fait ; OAT 10 ans en moyenne mensuelle (BCE) et lien vers le TEC 10 du jour (licence Euronext) |
 | État des sources avec historique sur 30 jours | Fait |
 | Recherche IA (couche C) et notation IA | Désactivées : code retiré, description conservée ci-dessous |
 

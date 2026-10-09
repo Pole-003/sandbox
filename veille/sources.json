@@ -264,15 +264,6 @@
       "notes": "API ouverte sans clé depuis 2024 (INSEE_API_KEY inutile). robots.txt d'api.insee.fr injoignable depuis GitHub Actions (09/10/2026) : politique « api_documentee ». Séries suivies : veille/indicateurs.json."
     },
     {
-      "id": "bdf-webstat",
-      "nom": "Banque de France — Webstat",
-      "type": "api",
-      "secret": "BDF_API_KEY",
-      "theme": "Économie et statistiques",
-      "statut": "a_verifier",
-      "notes": "Clé gratuite (compte Webstat), en-tête « Authorization: Apikey ». Connecteur de veille (défaillances, taux des crédits) à développer ; le TEC 10 est suivi par la collecte des marchés (veille/marches-sources.json)."
-    },
-    {
       "id": "bodacc-35",
       "nom": "BODACC — Annonces Ille-et-Vilaine",
       "type": "api",

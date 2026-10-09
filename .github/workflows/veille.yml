@@ -8,7 +8,7 @@
 # s'ils ont changé, puis déclenche le déploiement GitHub Pages.
 #
 # Secrets facultatifs (Settings > Secrets and variables > Actions) :
-#  - PISTE_CLIENT_ID et PISTE_CLIENT_SECRET, BDF_API_KEY : API de la couche B (l'API de l'INSEE et celle
+#  - PISTE_CLIENT_ID et PISTE_CLIENT_SECRET : API de la couche B (l'API de l'INSEE et celle
 #    du BODACC sont ouvertes, sans clé) ;
 #  - ALERTES_RSS : flux d'alertes Google, une ligne « Thème|URL » par flux.
 # Une source sans ses identifiants est sautée et signalée « non configurée » dans veille-etat.json.
@@ -93,7 +93,6 @@ jobs:
         env:
           PISTE_CLIENT_ID: ${{ secrets.PISTE_CLIENT_ID }}
           PISTE_CLIENT_SECRET: ${{ secrets.PISTE_CLIENT_SECRET }}
-          BDF_API_KEY: ${{ secrets.BDF_API_KEY }}
           ALERTES_RSS: ${{ secrets.ALERTES_RSS }}
         run: npm run veille:collecte
 

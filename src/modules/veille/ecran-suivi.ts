@@ -94,6 +94,27 @@ const PERIODES = [
   { mois: 24, libelle: '2 ans' },
 ];
 
+/** Date de la valeur selon sa périodicité : « août 2026 » pour une moyenne mensuelle, « 09/10/2026 » sinon. */
+export function dateDeValeur(i: Pick<IndicateurMarche, 'regle' | 'date_valeur'>): string {
+  if (!i.date_valeur) return '—';
+  if (i.regle.frequence !== 'mensuelle') return dateFr(i.date_valeur);
+  return new Intl.DateTimeFormat('fr-FR', { month: 'long', year: 'numeric', timeZone: 'UTC' }).format(new Date(`${i.date_valeur.slice(0, 10)}T12:00:00Z`));
+}
+
+/** Ligne sous la carte : nature, organisme et date de la valeur (« Moyenne mensuelle officielle · BCE · août 2026 »). */
+export function metaCarte(i: Pick<IndicateurMarche, 'source' | 'regle' | 'date_valeur'>): string {
+  const nature = i.source.nature.charAt(0).toUpperCase() + i.source.nature.slice(1);
+  return `${nature} · ${i.source.organisme}${i.source.secours ? ' (secours)' : ''} · ${dateDeValeur(i)}`;
+}
+
+/** Lien vers la valeur du jour chez l'organisme (adresse publiée par la collecte, jamais la valeur). */
+export function lienDuJour(i: Pick<IndicateurMarche, 'lien_du_jour'>, classe: string): HTMLElement | null {
+  const l = i.lien_du_jour;
+  if (!l || !l.url.startsWith('https://')) return null;
+  const libelle = l.date ? `${l.libelle} du ${dateFr(l.date)}` : `${l.libelle} du jour`;
+  return h('p', { class: classe }, 'Taux du jour : ', lienExterne(l.url, `${libelle} · ${l.organisme}`));
+}
+
 function carteIndicateur(i: IndicateurMarche, maintenant: Date, choisie: boolean, rang: number): HTMLButtonElement {
   const derniers = i.historique.slice(-30).map((p) => p[1]);
   const pib = i.complements.find((c) => c.cle === 'pib')?.historique.at(-1);
@@ -121,7 +142,7 @@ function carteIndicateur(i: IndicateurMarche, maintenant: Date, choisie: boolean
       { class: 'carte-marche-meta' },
       i.id === 'dette' && i.date_valeur
         ? `${trimestreLong(i.date_valeur)}${pib ? ` · ${nombreFr(pib[1], 1)} % du PIB` : ''}`
-        : `${i.source.nature}${i.date_valeur ? ` · valeur du ${dateCourte(i.date_valeur)}` : ''}`,
+        : metaCarte(i),
     ),
   );
   carte.dataset.rang = String(rang);
@@ -169,6 +190,8 @@ function ligneSource(i: IndicateurMarche): HTMLElement {
     { class: 'source-marche' },
     h('p', {}, 'Source : ', lienExterne(i.source.lien, `${i.source.organisme} — ${i.source.libelle}`), ` · ${i.source.nature}. ${i.source.conditions}.`),
     i.source.secours ? h('p', { class: 'note-secours' }, 'Source de secours : la source principale n’a pas pu être lue (voir « État des sources »).') : null,
+    lienDuJour(i, 'lien-du-jour'),
+    i.lien_du_jour?.mention ? h('p', { class: 'texte-secondaire' }, i.lien_du_jour.mention) : null,
     i.derniere_erreur ? h('p', { class: 'alerte-texte' }, `Dernière collecte en échec : ${i.derniere_erreur}. La dernière valeur connue est affichée.`) : null,
   );
 }
@@ -409,7 +432,11 @@ function tableauMarches(conteneur: HTMLElement, m: MarchesJson, news: NewsJson, 
       return;
     }
     vue.choisie = choisie.id;
-    const cartes = h('div', { class: 'cartes-marche' }, ...m.indicateurs.map((i, k) => carteIndicateur(i, actuel, i.id === choisie.id, k)));
+    const cartes = h(
+      'div',
+      { class: 'cartes-marche' },
+      ...m.indicateurs.map((i, k) => h('div', { class: 'carte-marche-bloc' }, carteIndicateur(i, actuel, i.id === choisie.id, k), lienDuJour(i, 'carte-marche-lien') ?? '')),
+    );
     for (const carte of cartes.querySelectorAll<HTMLButtonElement>('.carte-marche')) {
       carte.addEventListener('click', () => {
         vue.choisie = carte.dataset.id as IndicateurMarche['id'];
@@ -442,7 +469,7 @@ async function rendreMarches(zone: HTMLElement, ctx: ContexteSuivi): Promise<voi
     if (!r.ok) {
       contenu.replaceChildren(
         h('p', { class: 'texte-secondaire' }, r.raison === 'absent'
-          ? 'Les indicateurs n’ont pas encore été collectés : ils le seront au prochain créneau (7 h 05, 9 h 02, 16 h 20 ou 19 h 30, les jours ouvrés).'
+          ? 'Les indicateurs n’ont pas encore été collectés : ils le seront au prochain créneau (7 h 05, 9 h 02, 15 h 25, 16 h 20 ou 19 h 30, les jours ouvrés).'
           : 'Les indicateurs n’ont pas pu être chargés. Vérifiez votre connexion puis rechargez la page.'),
       );
       return true;
