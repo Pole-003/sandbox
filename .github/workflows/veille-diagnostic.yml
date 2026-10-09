@@ -6,18 +6,19 @@
 # Déclenchement :
 #  - manuel (bouton « Run workflow ») : GitHub ne le propose que pour les workflows présents
 #    sur la branche par défaut (main) ;
-#  - en attendant, à chaque push sur la branche de travail qui modifie la veille.
+#  - en attendant, à chaque push sur la branche beta qui modifie la veille.
 
 name: Veille · diagnostic des sources
 
 on:
   workflow_dispatch:
   push:
-    branches: [beta-8flzza]
+    branches: [beta]
     paths:
       - 'scripts/veille/**'
       - 'veille/sources.json'
       - 'veille/config.json'
+      - 'veille/marches-sources.json'
       - '.github/workflows/veille-diagnostic.yml'
 
 permissions:
@@ -52,3 +53,6 @@ jobs:
 
       - name: Exploration des sources du suivi PLF / PLFSS
         run: npm run veille:explorer-suivi
+
+      - name: Exploration des sources des indicateurs de marché
+        run: npm run veille:explorer-marches

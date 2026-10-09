@@ -18,6 +18,7 @@
     "veille:test": "node scripts/veille/diagnostic.ts",
     "veille:collecte": "node scripts/veille/collecte.ts",
     "veille:explorer-suivi": "node scripts/veille/explorer-suivi.ts",
+    "veille:explorer-marches": "node scripts/veille/explorer-marches.ts",
     "fec:fictifs": "node scripts/generer-fec-fictifs.ts",
     "fec:gros": "node scripts/generer-fec-fictifs.ts --gros",
     "ca3:fictives": "node scripts/generer-ca3-fictives.ts",
