@@ -5,9 +5,11 @@
 # Publie public/news.json, public/veille-etat.json et public/archives/, les commit seulement
 # s'ils ont changé, puis déclenche le déploiement GitHub Pages.
 #
-# Secrets facultatifs (Settings > Secrets and variables > Actions), un jeu par API de la couche B :
-# PISTE_CLIENT_ID et PISTE_CLIENT_SECRET, INSEE_API_KEY, BDF_API_KEY. Une API sans identifiants
-# est sautée et signalée « non configurée » dans veille-etat.json.
+# Secrets facultatifs (Settings > Secrets and variables > Actions) :
+#  - PISTE_CLIENT_ID et PISTE_CLIENT_SECRET, BDF_API_KEY : API de la couche B (l'API de l'INSEE et celle
+#    du BODACC sont ouvertes, sans clé) ;
+#  - ALERTES_RSS : flux d'alertes Google, une ligne « Thème|URL » par flux.
+# Une source sans ses identifiants est sautée et signalée « non configurée » dans veille-etat.json.
 
 name: Veille · collecte quotidienne
 
@@ -79,13 +81,13 @@ jobs:
 
       - name: Collecter
         if: steps.heure.outputs.lancer == 'true'
-        # Identifiants des API de la couche B, transmis à cette seule étape. GitHub les masque dans
-        # les journaux et le script ne cite que leurs noms. Un secret absent donne une valeur vide.
+        # Identifiants des API de la couche B et adresses des alertes Google, transmis à cette seule étape.
+        # GitHub les masque dans les journaux et le script ne cite que leurs noms. Un secret absent donne une valeur vide.
         env:
           PISTE_CLIENT_ID: ${{ secrets.PISTE_CLIENT_ID }}
           PISTE_CLIENT_SECRET: ${{ secrets.PISTE_CLIENT_SECRET }}
-          INSEE_API_KEY: ${{ secrets.INSEE_API_KEY }}
           BDF_API_KEY: ${{ secrets.BDF_API_KEY }}
+          ALERTES_RSS: ${{ secrets.ALERTES_RSS }}
         run: npm run veille:collecte
 
       - name: Publier si les fichiers ont changé

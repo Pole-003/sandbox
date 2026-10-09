@@ -4,11 +4,13 @@
  *  - veille/sources.json : catalogue des sources ;
  *  - veille/mots-cles.json : classement par mots-clés (thème, importance, public, exclusions) ;
  *  - veille/suivi.json : suivi PLF / PLFSS saisi à la main ;
- *  - veille/hierarchie-mesures.json : hiérarchie des mesures du PLF et du PLFSS établie par le pôle.
+ *  - veille/hierarchie-mesures.json : hiérarchie des mesures du PLF et du PLFSS établie par le pôle ;
+ *  - veille/indicateurs.json : séries suivies par les API de la couche B (INSEE, BODACC).
  */
 import { readFileSync } from 'node:fs';
 import { THEMES, type SuiviTexte, type Theme, type TypeArticle } from '../../src/modules/veille/modele.ts';
 import { verifierMotsCles, type MotsCles } from './classement.ts';
+import type { PolitiqueRobots } from './http.ts';
 import { verifierHierarchie, type HierarchieMesures } from './projet-loi.ts';
 
 export interface ConfigVeille {
@@ -24,7 +26,7 @@ export interface ConfigVeille {
 export interface SourceCatalogue {
   id: string;
   nom: string;
-  type: 'rss' | 'page' | 'api' | 'dossier';
+  type: 'rss' | 'page' | 'api' | 'dossier' | 'alerte_google';
   /** Pour un dossier législatif, « {annee} » est remplacé par l'année du texte (essai de l'année suivante, puis de l'année en cours). */
   url?: string;
   /** Dossier législatif suivi : PLF ou PLFSS. */
@@ -37,6 +39,20 @@ export interface SourceCatalogue {
   mots_cles?: string[];
   /** Nature des publications de la source (texte officiel, doctrine, jurisprudence…). */
   type_article?: TypeArticle;
+  /** Exception à robots.txt validée par l'utilisateur (voir http.ts) ; absent = robots.txt respecté. */
+  robots?: Exclude<PolitiqueRobots, 'respecter'>;
+}
+
+/** Indicateur d'une API de la couche B (veille/indicateurs.json). */
+export interface IndicateurCatalogue {
+  source_id: string;
+  /** Identifiant de la série (idbank INSEE). */
+  serie: string;
+  libelle: string;
+  unite: string;
+  decimales: number;
+  /** Page de présentation de la série chez l'émetteur. */
+  url: string;
 }
 
 export interface Reglages {
@@ -47,6 +63,8 @@ export interface Reglages {
   suivi: { plf: SuiviTexte | null; plfss: SuiviTexte | null };
   /** Hiérarchie des mesures établie par le pôle ; à défaut, classement par mots-clés. */
   hierarchie?: HierarchieMesures;
+  /** Séries suivies par les connecteurs de la couche B (veille/indicateurs.json). */
+  indicateurs?: IndicateurCatalogue[];
 }
 
 const RACINE = new URL('../../', import.meta.url);
@@ -74,7 +92,8 @@ export function chargerReglages(): Reglages {
   const suivi = lireJson<{ plf?: SuiviTexte | null; plfss?: SuiviTexte | null }>('veille/suivi.json');
   const hierarchie = lireJson<HierarchieMesures>('veille/hierarchie-mesures.json');
   verifierHierarchie(hierarchie);
-  return { config, sources, motsCles, suivi: { plf: suivi.plf ?? null, plfss: suivi.plfss ?? null }, hierarchie };
+  const { indicateurs } = lireJson<{ indicateurs: IndicateurCatalogue[] }>('veille/indicateurs.json');
+  return { config, sources, motsCles, suivi: { plf: suivi.plf ?? null, plfss: suivi.plfss ?? null }, hierarchie, indicateurs };
 }
 
 /** Fenêtre de veille (en jours) d'un thème. */

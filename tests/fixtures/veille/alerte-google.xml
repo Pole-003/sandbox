@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xmlns:idx="urn:atom-extension:indexing">
+<id>tag:google.com,2005:reader/user/00000000000000000000/state/com.google/alerts/0000000000000000000</id>
+<title>Alerte Google - facturation électronique</title>
+<link href="https://www.google.com/alerts/feeds/00000000000000000000/0000000000000000000" rel="self"></link>
+<updated>2026-10-08T05:12:00Z</updated>
+<entry>
+<id>tag:google.com,2013:googlealerts/feed:1000000000000000001</id>
+<title type="html">La &lt;b&gt;facturation électronique&lt;/b&gt; : le calendrier fictif confirmé</title>
+<link href="https://www.google.com/url?rct=j&amp;sa=t&amp;url=https://presse-fictive.example/economie/facturation-electronique-calendrier&amp;ct=ga&amp;cd=CAIyGjAwMDAwMDAwMDAwMDAwMDA6ZnI6RlI6Ug&amp;usg=AOvVaw0000000000000000000000"></link>
+<published>2026-10-07T14:00:00Z</published>
+<updated>2026-10-07T14:00:00Z</updated>
+<content type="html">Les entreprises devront émettre leurs factures par une plateforme agréée : le &lt;b&gt;calendrier&lt;/b&gt; fictif est confirmé.</content>
+<author><name></name></author>
+</entry>
+<entry>
+<id>tag:google.com,2013:googlealerts/feed:1000000000000000002</id>
+<title type="html">Article trop ancien sur la &lt;b&gt;TVA&lt;/b&gt;</title>
+<link href="https://www.google.com/url?rct=j&amp;sa=t&amp;url=https://presse-fictive.example/ancien&amp;ct=ga"></link>
+<published>2026-09-01T08:00:00Z</published>
+<updated>2026-09-01T08:00:00Z</updated>
+<content type="html">Hors de la fenêtre de veille.</content>
+</entry>
+<entry>
+<id>tag:google.com,2013:googlealerts/feed:1000000000000000003</id>
+<title type="html">Lien sans adresse d'article</title>
+<link href="https://www.google.com/url?rct=j&amp;sa=t&amp;ct=ga"></link>
+<published>2026-10-07T09:00:00Z</published>
+<updated>2026-10-07T09:00:00Z</updated>
+<content type="html">Ignoré.</content>
+</entry>
+</feed>

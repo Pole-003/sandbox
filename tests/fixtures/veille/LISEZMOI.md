@@ -18,3 +18,13 @@ décrites dans `docs/VEILLE.md`. Les titres et contenus sont fictifs. Aucun text
 - `an-projet-plf-toc.html` : texte open data d'un projet de loi présenté par table des matières (`assnatTOC2` à `assnatTOC6`),
   comme le PLF 2027 ; `an-projet-plfss-blocs.html` : présentation par blocs d'article (`assnat9ArticleNum`), comme le PLFSS 2027.
   Intitulés fictifs ; seule la structure est reproduite.
+- `alerte-google.xml` : flux Atom d'une alerte Google **fictif** (identifiants remplacés par des zéros, domaine
+  `presse-fictive.example`), avec la structure observée : titres en HTML échappé (`<b>`), liens de redirection
+  `https://www.google.com/url?…&url=<article>&…`, un article hors fenêtre et un lien sans adresse d'article.
+
+## Réponses enregistrées (données publiques)
+
+- `insee-bdm-indicateurs.xml` : réponse réelle de l'API BDM de l'INSEE du 09/10/2026 pour les 5 séries de
+  `veille/indicateurs.json` (dernière observation de chacune).
+- `bodacc-35-comptes.json` : réponse réelle de l'API open data du BODACC du 09/10/2026 : nombre d'annonces
+  d'Ille-et-Vilaine par famille, du 02/10 au 08/10/2026. Comptes agrégés uniquement, aucun nom.

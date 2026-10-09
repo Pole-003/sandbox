@@ -1,5 +1,5 @@
 {
-  "_commentaire": "Classement de la veille par mots-clés (sans IA). Chaque mot-clé est cherché dans le titre et le résumé, sans tenir compte des accents ni des majuscules ; il reconnaît le début d'un mot (« comptab » trouve « comptable » et « comptabilité »). Score d'un thème = somme des poids des mots-clés trouvés (chacun compté une fois) + bonus de la source. L'article reçoit le thème au score le plus élevé (à défaut, celui de sa source) et l'importance correspondant au premier seuil atteint. Un mot d'exclusion général retire l'article de la publication ; une exclusion de thème empêche seulement d'attribuer ce thème.",
+  "_commentaire": "Classement de la veille par mots-clés (sans IA). Chaque mot-clé est cherché dans le titre et le résumé, sans tenir compte des accents ni des majuscules ; il reconnaît le début d'un mot (« comptab » trouve « comptable » et « comptabilité »). Précédé de « = », il ne reconnaît que le mot ou l'expression exacte (« =plf » ne trouve ni « plfss » ni « plfr » ; « =audit » ne trouve pas « audition »). Score d'un thème = somme des poids des mots-clés trouvés (chacun une fois) × coefficient de la nature de la source (coefficients_origine : flux et API officiels 1, alertes Google de presse 0,6) + bonus de la source (bonus_sources). L'article reçoit le thème au score le plus élevé (à défaut, celui de sa source) et l'importance correspondant au premier seuil atteint. bonus_fraicheur : ajouté au score de tri des articles récents (premier palier dont l'âge en jours n'est pas dépassé), sans effet sur l'importance. Un mot d'exclusion général retire l'article de la publication ; une exclusion de thème empêche seulement d'attribuer ce thème. Le détail du score est publié (« Pourquoi ce score » à l'écran).",
   "seuils_importance": {
     "5": 9,
     "4": 6,
@@ -12,6 +12,21 @@
     "an-dossier-plf": 4,
     "an-dossier-plfss": 4
   },
+  "coefficients_origine": {
+    "flux": 1,
+    "api": 1,
+    "alerte": 0.6
+  },
+  "bonus_fraicheur": [
+    {
+      "jours": 1,
+      "bonus": 2
+    },
+    {
+      "jours": 3,
+      "bonus": 1
+    }
+  ],
   "exclusions": [
     "compte rendu de réunion",
     "ordre du jour"
@@ -26,8 +41,8 @@
         "projet de loi de finances": 6,
         "loi de finances": 5,
         "loi de finances rectificative": 5,
-        "plf": 5,
-        "plfr": 5,
+        "=plf": 5,
+        "=plfr": 5,
         "budget": 1,
         "budgétaire": 1,
         "finances publiques": 2,
@@ -37,7 +52,7 @@
         "commission mixte paritaire": 2,
         "lecture définitive": 2,
         "conseil constitutionnel": 2,
-        "49.3": 2
+        "=49.3": 2
       },
       "exclusions": []
     },
@@ -48,7 +63,7 @@
       "mots_cles": {
         "financement de la sécurité sociale": 6,
         "plfss": 6,
-        "lfss": 5,
+        "=lfss": 5,
         "sécurité sociale": 2,
         "cotisation": 3,
         "urssaf": 3,
@@ -75,8 +90,8 @@
         "tva": 3,
         "taxe sur la valeur ajoutée": 3,
         "impôt sur les sociétés": 4,
-        "cvae": 4,
-        "cfe": 3,
+        "=cvae": 4,
+        "=cfe": 3,
         "crédit d'impôt": 3,
         "plus-value": 2,
         "droits d'enregistrement": 3,
@@ -108,12 +123,12 @@
         "commissaires aux comptes": 5,
         "cncc": 5,
         "haute autorité de l'audit": 5,
-        "h2a": 5,
-        "h3c": 4,
+        "=h2a": 5,
+        "=h3c": 4,
         "expert-comptable": 4,
         "experts-comptables": 4,
         "ordre des experts": 4,
-        "audit": 3,
+        "=audit": 3,
         "certification des comptes": 4,
         "durabilité": 3,
         "csrd": 5,
@@ -121,7 +136,8 @@
         "contrôle qualité": 3,
         "normes d'exercice professionnel": 5,
         "blanchiment": 3,
-        "lcb-ft": 4
+        "lcb-ft": 4,
+        "audits": 3
       },
       "exclusions": []
     },
@@ -132,7 +148,7 @@
       "mots_cles": {
         "inflation": 3,
         "indice des prix": 3,
-        "pib": 3,
+        "=pib": 3,
         "croissance": 2,
         "chômage": 3,
         "insee": 3,
@@ -140,10 +156,10 @@
         "défaillances": 4,
         "créations d'entreprises": 4,
         "taux d'intérêt": 3,
-        "bce": 3,
+        "=bce": 3,
         "taux d'usure": 4,
         "intérêt légal": 4,
-        "pme": 2,
+        "=pme": 2,
         "entreprises": 1,
         "investissement": 1,
         "commerce": 1,
@@ -171,7 +187,9 @@
         "quimper": 2,
         "saint-brieuc": 2
       },
-      "exclusions": []
+      "exclusions": [
+        "stade rennais"
+      ]
     }
   },
   "publics": {
@@ -187,7 +205,7 @@
     "Audit / CAC": [
       "commissaire aux comptes",
       "commissaires aux comptes",
-      "audit",
+      "=audit",
       "cncc",
       "h2a",
       "certification",

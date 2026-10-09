@@ -58,6 +58,8 @@ export function similariteTitres(a: string, b: string): number {
 
 /** Au-delà de ce seuil, deux titres publiés à moins de 3 jours d'écart désignent la même information. */
 export const SEUIL_SIMILARITE = 0.8;
+/** Seuil de regroupement de deux articles similaires venant de sources différentes. */
+export const SEUIL_REGROUPEMENT = 0.5;
 const ECART_MAX_JOURS = 3;
 
 function ecartJours(a: string, b: string): number {
@@ -71,25 +73,38 @@ function ecartJours(a: string, b: string): number {
 export function dedoublonner<T extends { url: string; titre: string; date: string }>(
   elements: readonly T[],
   fusionner: (conserve: T, doublon: T) => T,
+  options: {
+    /** Adresses déjà rattachées à un élément (autres sources d'un article regroupé). */
+    urlsRattachees?: (element: T) => readonly string[];
+    /** Regroupement plus large entre sources différentes : seuil de similarité (sous SEUIL_SIMILARITE). */
+    seuilSourcesDifferentes?: number;
+    source?: (element: T) => string;
+  } = {},
 ): T[] {
   const resultat: T[] = [];
   const parUrl = new Map<string, number>();
+  const proche = (r: T, e: T) => {
+    if (ecartJours(r.date, e.date) > ECART_MAX_JOURS) return false;
+    const sim = similariteTitres(r.titre, e.titre);
+    if (sim >= SEUIL_SIMILARITE) return true;
+    const { seuilSourcesDifferentes: seuil, source } = options;
+    return seuil !== undefined && source !== undefined && sim >= seuil && source(r) !== source(e);
+  };
   for (const element of elements) {
     const cle = normaliserUrl(element.url);
     let indice = parUrl.get(cle);
     if (indice === undefined) {
-      indice = resultat.findIndex(
-        (r) => ecartJours(r.date, element.date) <= ECART_MAX_JOURS && similariteTitres(r.titre, element.titre) >= SEUIL_SIMILARITE,
-      );
+      indice = resultat.findIndex((r) => proche(r, element));
       if (indice < 0) indice = undefined;
     }
     if (indice === undefined) {
-      parUrl.set(cle, resultat.length);
+      indice = resultat.length;
       resultat.push(element);
     } else {
       resultat[indice] = fusionner(resultat[indice] as T, element);
-      parUrl.set(cle, indice);
     }
+    parUrl.set(cle, indice);
+    for (const url of options.urlsRattachees?.(element) ?? []) parUrl.set(normaliserUrl(url), indice);
   }
   return resultat;
 }

@@ -5,6 +5,13 @@
  *  - au plus 1 requête par seconde et par domaine (robots.txt compris) ;
  *  - robots.txt respecté à chaque étape d'une redirection ;
  *  - délai maximal par requête, lecture du corps comprise.
+ *
+ * Deux exceptions à robots.txt, choisies source par source dans le catalogue (champ « robots »)
+ * et validées par l'utilisateur le 09/10/2026 :
+ *  - « api_documentee » : API officielle documentée pour un usage automatisé (INSEE) ; un robots.txt
+ *    injoignable est traité comme absent, mais une interdiction explicite reste respectée ;
+ *  - « ignorer » : robots.txt n'est pas consulté (flux d'alertes Google créés par l'utilisateur,
+ *    API open data du BODACC dont le robots.txt vise les robots d'indexation).
  */
 import { analyserRobots, estAutorise, type Robots } from './robots.ts';
 
@@ -34,6 +41,15 @@ export class ErreurCollecte extends Error {
 }
 
 type EtatRobots = { robots: Robots | null; detail: string; toutInterdit: boolean };
+
+/** Politique robots.txt d'une requête (voir l'en-tête). */
+export type PolitiqueRobots = 'respecter' | 'api_documentee' | 'ignorer';
+
+export interface OptionsRequete {
+  robots?: PolitiqueRobots;
+  /** En-têtes supplémentaires (clé d'API). Jamais journalisés. */
+  entetes?: Record<string, string>;
+}
 
 export class ClientHttp {
   readonly userAgent: string;
@@ -65,12 +81,12 @@ export class ClientHttp {
   }
 
   /** Envoie une requête à son créneau ; `debut` est l'instant d'envoi (hors attente du créneau). */
-  private async requete(url: URL): Promise<{ reponse: Response; debut: number }> {
+  private async requete(url: URL, entetes: Record<string, string> = {}): Promise<{ reponse: Response; debut: number }> {
     await this.patienter(url.host);
     const debut = this.maintenant();
     try {
       const reponse = await this.fetch(url, {
-        headers: { 'User-Agent': this.userAgent, Accept: '*/*' },
+        headers: { 'User-Agent': this.userAgent, Accept: '*/*', ...entetes },
         redirect: 'manual',
         signal: AbortSignal.timeout(this.delaiMaxMs),
       });
@@ -111,9 +127,11 @@ export class ClientHttp {
     }
   }
 
-  /** Indique si robots.txt autorise la lecture de l'URL. */
-  async autorise(url: URL): Promise<{ autorise: boolean; detail: string }> {
+  /** Indique si robots.txt autorise la lecture de l'URL, selon la politique de la source. */
+  async autorise(url: URL, politique: PolitiqueRobots = 'respecter'): Promise<{ autorise: boolean; detail: string }> {
+    if (politique === 'ignorer') return { autorise: true, detail: 'robots.txt non consulté (exception du catalogue)' };
     const etat = await this.etatRobots(url);
+    if (etat.toutInterdit && politique === 'api_documentee') return { autorise: true, detail: `${etat.detail}, considéré absent (API documentée)` };
     if (etat.toutInterdit) return { autorise: false, detail: etat.detail };
     if (!etat.robots) return { autorise: true, detail: etat.detail };
     const ok = estAutorise(etat.robots, this.userAgent, url.pathname + url.search);
@@ -121,13 +139,15 @@ export class ClientHttp {
   }
 
   /** Télécharge une ressource en suivant les redirections, robots.txt vérifié à chaque étape. */
-  async recuperer(adresse: string): Promise<Reponse> {
+  async recuperer(adresse: string, options: OptionsRequete = {}): Promise<Reponse> {
     let url = new URL(adresse);
+    const hoteInitial = url.host;
     for (let saut = 0; ; saut++) {
-      const droit = await this.autorise(url);
+      const droit = await this.autorise(url, options.robots);
       if (!droit.autorise) throw new ErreurCollecte(`${droit.detail} (${url.host})`);
 
-      const { reponse, debut } = await this.requete(url);
+      // Les en-têtes d'authentification ne suivent jamais une redirection vers un autre hôte.
+      const { reponse, debut } = await this.requete(url, url.host === hoteInitial ? options.entetes : {});
       const destination = reponse.headers.get('location');
       if (reponse.status >= 300 && reponse.status < 400 && destination) {
         await reponse.body?.cancel();

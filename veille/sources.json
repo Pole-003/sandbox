@@ -1,5 +1,5 @@
 {
-  "_commentaire": "Catalogue des sources de veille. statut : 'verifie' = flux testé et fonctionnel ; 'en_panne' = testé, ne répond pas correctement (voir notes) ; 'a_verifier' = existence ou URL à confirmer avant activation. Couche A = rss (et page), couche B = api (identifiants dans les secrets GitHub nommés par « secret » ; sans eux, l'API est « non configurée »). type_article (facultatif) : nature des publications de la source. Diagnostic : npm run veille:test (workflow veille-diagnostic.yml). mots_cles (facultatif) : filtre des flux volumineux, appliqué au titre et à la description, sans tenir compte des accents ni des majuscules. type « dossier » : dossier législatif de l'Assemblée nationale suivi étape par étape (PLF, PLFSS).",
+  "_commentaire": "Catalogue des sources de veille. statut : 'verifie' = flux testé et fonctionnel ; 'en_panne' = testé, ne répond pas correctement (voir notes) ; 'a_verifier' = existence ou URL à confirmer avant activation. Couche A = rss (et page), couche B = api (identifiants dans les secrets GitHub nommés par « secret » ; sans eux, l'API est « non configurée »). type_article (facultatif) : nature des publications de la source. Diagnostic : npm run veille:test (workflow veille-diagnostic.yml). mots_cles (facultatif) : filtre des flux volumineux, appliqué au titre et à la description, sans tenir compte des accents ni des majuscules. type « dossier » : dossier législatif de l'Assemblée nationale suivi étape par étape (PLF, PLFSS). type « alerte_google » : flux d'alertes Google de l'utilisateur, adresses lues dans le secret nommé par « secret » (une ligne « Thème|URL » par flux). robots (facultatif) : exception à robots.txt validée par l'utilisateur le 09/10/2026, « api_documentee » (robots.txt injoignable traité comme absent, interdiction explicite respectée) ou « ignorer » (robots.txt non consulté).",
   "sources": [
     {
       "id": "bofip-actualites",
@@ -171,6 +171,17 @@
       "type_article": "texte_officiel"
     },
     {
+      "id": "alertes-google",
+      "nom": "Alertes Google (presse)",
+      "type": "alerte_google",
+      "secret": "ALERTES_RSS",
+      "theme": "Économie et statistiques",
+      "statut": "verifie",
+      "robots": "ignorer",
+      "type_article": "presse",
+      "notes": "Flux créés par l'utilisateur sur google.com/alerts (Envoyer à : flux RSS). Secret ALERTES_RSS : une ligne « Thème|URL » par flux ; si « Thème » est un thème de la veille, il sert de thème de départ. Liens de redirection Google nettoyés. Poids réduit au classement (coefficients_origine de mots-cles.json)."
+    },
+    {
       "id": "an-dossier-plf",
       "nom": "Assemblée nationale — Dossier législatif du PLF",
       "type": "dossier",
@@ -214,10 +225,10 @@
       "id": "insee-bdm",
       "nom": "INSEE — Séries BDM",
       "type": "api",
-      "secret": "INSEE_API_KEY",
       "theme": "Économie et statistiques",
-      "statut": "a_verifier",
-      "notes": "Indicateurs : inflation (IPC), taux de chômage, PIB, climat des affaires, créations d'entreprises. Identifiants de séries à choisir et documenter dans veille/indicateurs.json."
+      "statut": "verifie",
+      "robots": "api_documentee",
+      "notes": "API ouverte sans clé depuis 2024 (INSEE_API_KEY inutile). robots.txt d'api.insee.fr injoignable depuis GitHub Actions (09/10/2026) : politique « api_documentee ». Séries suivies : veille/indicateurs.json."
     },
     {
       "id": "bdf-webstat",
@@ -226,15 +237,16 @@
       "secret": "BDF_API_KEY",
       "theme": "Économie et statistiques",
       "statut": "a_verifier",
-      "notes": "Défaillances d'entreprises, taux des crédits aux entreprises."
+      "notes": "Clé gratuite (compte Webstat), en-tête « Authorization: Apikey ». Connecteur de veille (défaillances, taux des crédits) à développer ; le TEC 10 est suivi par la collecte des marchés (veille/marches-sources.json)."
     },
     {
       "id": "bodacc-35",
       "nom": "BODACC — Annonces Ille-et-Vilaine",
       "type": "api",
       "theme": "Rennes et Bretagne",
-      "statut": "a_verifier",
-      "notes": "Open data DILA. Filtrer département 35 : créations, ventes et cessions, procédures collectives. Vérifier l'URL officielle de l'API et ses conditions d'utilisation."
+      "statut": "verifie",
+      "robots": "ignorer",
+      "notes": "Open data DILA (bodacc-datadila.opendatasoft.com), sans clé. Le robots.txt du portail interdit /api/ aux robots d'indexation ; lecture validée par l'utilisateur le 09/10/2026. Compteurs sur 7 jours par famille d'annonces, sans aucun nom publié."
     }
   ]
 }

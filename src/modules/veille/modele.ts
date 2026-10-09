@@ -33,8 +33,28 @@ export const LIBELLES_TYPE: Record<TypeArticle, string> = {
 
 export type Importance = 1 | 2 | 3 | 4 | 5;
 
-/** D'où vient l'article : flux officiel (couche A) ou API officielle (couche B). */
-export type Origine = 'flux' | 'api';
+/** D'où vient l'article : flux officiel (couche A), API officielle (couche B) ou alerte Google (presse). */
+export type Origine = 'flux' | 'api' | 'alerte';
+
+/** Détail du score de classement, affiché dans « Pourquoi ce score ». */
+export interface DetailScore {
+  /** Mots-clés reconnus pour le thème retenu, avec leur poids. */
+  mots: { mot: string; poids: number }[];
+  /** Coefficient de la nature de la source (officielle 1, alerte presse plus faible). */
+  coefficient: number;
+  bonus_source: number;
+  /** Bonus de fraîcheur du jour de la collecte : sert au tri, pas à l'importance. */
+  bonus_fraicheur: number;
+  /** Score thématique (mots × coefficient + bonus de source), qui fixe l'importance. */
+  score: number;
+}
+
+/** Même information publiée par une autre source (regroupement des articles similaires). */
+export interface AutreSource {
+  source: string;
+  url: string;
+  titre: string;
+}
 
 export interface Article {
   /** Empreinte de l'URL normalisée. */
@@ -56,9 +76,19 @@ export interface Article {
   origine: Origine;
   /** Première collecte, AAAA-MM-JJ. */
   collecte_le: string;
+  /** Thème de départ propre à l'article (alerte Google : thème de l'alerte), prioritaire sur celui du catalogue. */
+  theme_source?: Theme;
+  /** Détail du classement par mots-clés. */
+  pourquoi?: DetailScore;
+  /** Score de tri : score thématique + bonus de fraîcheur. */
+  score?: number;
+  /** Autres sources ayant publié la même information (titres proches, dates voisines). */
+  autres_sources?: AutreSource[];
 }
 
 export interface Indicateur {
+  /** Source du catalogue qui a fourni l'indicateur (insee-bdm, bodacc-35…). */
+  source_id?: string;
   libelle: string;
   valeur: string;
   periode: string;
@@ -140,7 +170,7 @@ export type EtatCollecte = 'ok' | 'erreur' | 'inactive' | 'non_configuree';
 export interface EtatSource {
   id: string;
   nom: string;
-  type: 'rss' | 'page' | 'api' | 'dossier';
+  type: 'rss' | 'page' | 'api' | 'dossier' | 'alerte_google';
   theme: string;
   statut_catalogue: string;
   etat: EtatCollecte;

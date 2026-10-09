@@ -12,6 +12,7 @@
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import type { Article, EtatVeille, NewsJson } from '../../src/modules/veille/modele.ts';
+import { collecterAlertes } from './alertes.ts';
 import { chargerReglages, themeConnu, type Reglages } from './config.ts';
 import { collecterCoucheA } from './couche-a.ts';
 import { collecterCoucheB, type ConnecteurApi } from './couche-b.ts';
@@ -76,7 +77,7 @@ const json = (valeur: unknown) => `${JSON.stringify(valeur, null, 2)}\n`;
 export const RAISON_IA = 'désactivée : la veille fonctionne à 0 €, sans appel à un service d’IA';
 
 export async function collecter(d: DependancesCollecte): Promise<Bilan> {
-  const { config, sources, motsCles, suivi, hierarchie } = d.reglages;
+  const { config, sources, motsCles, suivi, hierarchie, indicateurs } = d.reglages;
   const journal = d.journal ?? (() => {});
   const aujourdhui = dateIsoParis(d.maintenant);
 
@@ -85,7 +86,7 @@ export async function collecter(d: DependancesCollecte): Promise<Bilan> {
   const sourcesPrecedentes = etatPrecedent?.sources ?? [];
 
   // --- Couche A : flux ---
-  journal(`Couche A : ${sources.filter((s) => s.type !== 'api').length} sources…`);
+  journal(`Couche A : ${sources.filter((s) => s.type === 'rss' || s.type === 'page').length} sources…`);
   const coucheA = await collecterCoucheA(sources, {
     config, client: d.http, maintenant: d.maintenant, etatPrecedent: sourcesPrecedentes,
     ...(d.delaisNouvellesTentatives ? { delaisNouvellesTentatives: d.delaisNouvellesTentatives } : {}),
@@ -94,10 +95,18 @@ export async function collecter(d: DependancesCollecte): Promise<Bilan> {
     journal(`  ${e.etat === 'ok' ? 'OK    ' : 'ÉCHEC '} ${e.id} : ${e.etat === 'ok' ? `${e.nb_articles} article(s) retenu(s)` : e.erreur}`);
   }
 
+  // --- Alertes Google (flux de l'utilisateur, adresses dans un secret) ---
+  const alertes = await collecterAlertes(sources, {
+    config, client: d.http, maintenant: d.maintenant, env: d.env, etatPrecedent: sourcesPrecedentes,
+    ...(d.delaisNouvellesTentatives ? { delaisNouvellesTentatives: d.delaisNouvellesTentatives } : {}),
+  });
+  for (const e of alertes.etats) journal(`  ${e.etat === 'ok' ? 'OK    ' : e.etat === 'erreur' ? 'ÉCHEC ' : '—     '} ${e.id} : ${e.etat === 'ok' ? `${e.nb_articles} article(s)` : e.erreur}`);
+
   // --- Couche B : API officielles (optionnelles) ---
   const coucheB = await collecterCoucheB(sources, {
     client: d.http, config, maintenant: d.maintenant, env: d.env, etatPrecedent: sourcesPrecedentes,
     ...(d.connecteurs ? { connecteurs: d.connecteurs } : {}),
+    ...(indicateurs ? { indicateurs } : {}),
   });
   journal('Couche B :');
   for (const e of coucheB.etats) journal(`  ${e.etat === 'ok' ? 'OK    ' : e.etat === 'erreur' ? 'ÉCHEC ' : '—     '} ${e.id} : ${e.erreur ?? `${e.nb_articles} élément(s)`}`);
@@ -116,6 +125,7 @@ export async function collecter(d: DependancesCollecte): Promise<Bilan> {
   const nouveaux: Article[] = [
     ...coucheA.articles.map((a) => depuisFlux(a, aujourdhui)),
     ...coucheB.articles.map((a) => depuisFlux(a, aujourdhui, 'api')),
+    ...alertes.articles.map((a) => depuisFlux(a, aujourdhui, 'alerte')),
     ...dossiers.articles.map((a) => depuisFlux(a, aujourdhui)),
   ];
   const themes = new Map(sources.map((s) => [s.id, themeConnu(s.theme)]));
@@ -123,6 +133,7 @@ export async function collecter(d: DependancesCollecte): Promise<Bilan> {
     fusionnerArticles(newsPrecedent?.articles ?? [], nouveaux),
     motsCles,
     (id) => (id ? (themes.get(id) ?? null) : null),
+    aujourdhui,
   );
   journal(`Classement : ${classement.articles.length} article(s), ${classement.exclus} exclu(s), ${classement.marginaux} marginal(aux)`);
 
@@ -146,7 +157,7 @@ export async function collecter(d: DependancesCollecte): Promise<Bilan> {
   if (newsModifie) d.depot.ecrire(CHEMINS.news, json(news));
 
   // Ordre du catalogue pour l'écran « État des sources ».
-  const parId = new Map([...coucheA.etats, ...coucheB.etats, ...dossiers.etats].map((e) => [e.id, e]));
+  const parId = new Map([...coucheA.etats, ...alertes.etats, ...coucheB.etats, ...dossiers.etats].map((e) => [e.id, e]));
   const etat: EtatVeille = {
     version: 2,
     genere_le: d.maintenant.toISOString(),

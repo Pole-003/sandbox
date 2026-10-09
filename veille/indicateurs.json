@@ -1,0 +1,45 @@
+{
+  "_commentaire": "Séries suivies par les connecteurs de la couche B (scripts/veille/connecteurs.ts). INSEE : idbank de la BDM (https://www.insee.fr/fr/statistiques/serie/<idbank>). La dernière observation est publiée dans news.json (onglet Indicateurs). Choix du 09/10/2026.",
+  "indicateurs": [
+    {
+      "source_id": "insee-bdm",
+      "serie": "011812232",
+      "libelle": "Inflation sur un an (IPCH)",
+      "unite": "%",
+      "decimales": 1,
+      "url": "https://www.insee.fr/fr/statistiques/serie/011812232"
+    },
+    {
+      "source_id": "insee-bdm",
+      "serie": "011794844",
+      "libelle": "Croissance du PIB sur un trimestre",
+      "unite": "%",
+      "decimales": 1,
+      "url": "https://www.insee.fr/fr/statistiques/serie/011794844"
+    },
+    {
+      "source_id": "insee-bdm",
+      "serie": "001688527",
+      "libelle": "Taux de chômage (BIT)",
+      "unite": "%",
+      "decimales": 1,
+      "url": "https://www.insee.fr/fr/statistiques/serie/001688527"
+    },
+    {
+      "source_id": "insee-bdm",
+      "serie": "001565530",
+      "libelle": "Climat des affaires (100 = moyenne de long terme)",
+      "unite": "",
+      "decimales": 1,
+      "url": "https://www.insee.fr/fr/statistiques/serie/001565530"
+    },
+    {
+      "source_id": "insee-bdm",
+      "serie": "010755537",
+      "libelle": "Créations d’entreprises dans le mois",
+      "unite": "créations",
+      "decimales": 0,
+      "url": "https://www.insee.fr/fr/statistiques/serie/010755537"
+    }
+  ]
+}

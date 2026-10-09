@@ -23,6 +23,8 @@ export interface ArticleFlux {
   /** Description du flux nettoyée et tronquée (config.longueur_resume), sans reformulation. */
   resume: string | null;
   type: TypeArticle | null;
+  /** Thème propre à l'article (alerte Google), prioritaire sur le thème du catalogue au classement. */
+  theme_source?: Theme;
 }
 
 export interface ResultatCoucheA {
@@ -60,7 +62,7 @@ export function correspondMotsCles(texte: string, motsCles: readonly string[] | 
   });
 }
 
-async function avecNouvellesTentatives(
+export async function avecNouvellesTentatives(
   action: () => Promise<Reponse>,
   delais: readonly number[],
   attendre: (ms: number) => Promise<void>,
@@ -117,7 +119,7 @@ async function collecterSource(
   etat.derniere_tentative = horodatage;
   try {
     const reponse = await avecNouvellesTentatives(
-      () => options.client.recuperer(source.url as string),
+      () => options.client.recuperer(source.url as string, source.robots ? { robots: source.robots } : {}),
       options.delaisNouvellesTentatives ?? [5_000, 15_000],
       options.attendre ?? ((ms) => new Promise((r) => setTimeout(r, ms))),
     );

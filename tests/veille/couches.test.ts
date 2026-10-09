@@ -130,7 +130,7 @@ describe('veille · couche B', () => {
   });
 
   it('identifiants présents mais pas de connecteur : non configurée', async () => {
-    const r = await collecterCoucheB([piste, bodacc], { client: fauxHttp({}).client, config: CONFIG, maintenant: MAINTENANT, env: { PISTE_CLIENT_ID: 'a', PISTE_CLIENT_SECRET: 'b' }, etatPrecedent: [] });
+    const r = await collecterCoucheB([piste, bodacc], { client: fauxHttp({}).client, config: CONFIG, maintenant: MAINTENANT, env: { PISTE_CLIENT_ID: 'a', PISTE_CLIENT_SECRET: 'b' }, etatPrecedent: [], connecteurs: {} });
     expect(r.etats.map((e) => e.erreur)).toEqual(['non configurée : identifiants présents, connecteur à développer', 'non configurée : connecteur à développer']);
   });
 

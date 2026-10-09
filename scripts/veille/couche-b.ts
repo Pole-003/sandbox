@@ -11,9 +11,10 @@
  * connecteur, elle est signalée « non configurée (connecteur à développer) ».
  */
 import type { EtatSource, Indicateur } from '../../src/modules/veille/modele.ts';
-import type { ConfigVeille, SourceCatalogue } from './config.ts';
+import type { ConfigVeille, IndicateurCatalogue, SourceCatalogue } from './config.ts';
 import type { ArticleFlux } from './couche-a.ts';
 import type { ClientHttp } from './http.ts';
+import { connecteurBodacc, connecteurInsee } from './connecteurs.ts';
 
 export interface ContexteConnecteur {
   source: SourceCatalogue;
@@ -22,14 +23,19 @@ export interface ContexteConnecteur {
   maintenant: Date;
   /** Identifiants de l'API (valeurs des variables listées dans le catalogue). Ne jamais les journaliser. */
   identifiants: Record<string, string>;
+  /** Séries suivies (veille/indicateurs.json). */
+  indicateurs?: readonly IndicateurCatalogue[];
 }
 
 export interface ConnecteurApi {
   collecter(ctx: ContexteConnecteur): Promise<{ articles: ArticleFlux[]; indicateurs: Indicateur[] }>;
 }
 
-/** Connecteurs validés, par identifiant de source. Vide pour l'instant (voir l'en-tête). */
-export const CONNECTEURS: Readonly<Record<string, ConnecteurApi>> = {};
+/** Connecteurs validés, par identifiant de source (voir connecteurs.ts). */
+export const CONNECTEURS: Readonly<Record<string, ConnecteurApi>> = {
+  'insee-bdm': connecteurInsee,
+  'bodacc-35': connecteurBodacc,
+};
 
 /** Noms des variables d'environnement requises : « PISTE_CLIENT_ID / PISTE_CLIENT_SECRET » → deux noms. */
 export function secretsRequis(source: SourceCatalogue): string[] {
@@ -43,6 +49,7 @@ export interface OptionsCoucheB {
   env: Readonly<Record<string, string | undefined>>;
   etatPrecedent: EtatSource[];
   connecteurs?: Readonly<Record<string, ConnecteurApi>>;
+  indicateurs?: readonly IndicateurCatalogue[];
 }
 
 export interface ResultatCoucheB {
@@ -67,7 +74,9 @@ export async function collecterCoucheB(sources: readonly SourceCatalogue[], opti
     const manquants = requis.filter((nom) => !options.env[nom]);
     const connecteur = connecteurs[source.id];
 
-    if (manquants.length > 0) {
+    if (source.statut === 'en_panne') {
+      Object.assign(etat, { etat: 'inactive', erreur: 'source écartée dans le catalogue' });
+    } else if (manquants.length > 0) {
       etat.erreur = `non configurée : identifiants absents (${manquants.join(', ')})`;
     } else if (!connecteur) {
       etat.erreur = requis.length ? 'non configurée : identifiants présents, connecteur à développer' : 'non configurée : connecteur à développer';
@@ -76,7 +85,10 @@ export async function collecterCoucheB(sources: readonly SourceCatalogue[], opti
       const debut = Date.now();
       try {
         const identifiants = Object.fromEntries(requis.map((nom) => [nom, options.env[nom] as string]));
-        const r = await connecteur.collecter({ source, client: options.client, config: options.config, maintenant: options.maintenant, identifiants });
+        const r = await connecteur.collecter({
+          source, client: options.client, config: options.config, maintenant: options.maintenant, identifiants,
+          ...(options.indicateurs ? { indicateurs: options.indicateurs } : {}),
+        });
         resultat.articles.push(...r.articles);
         resultat.indicateurs.push(...r.indicateurs);
         Object.assign(etat, { etat: 'ok', derniere_reussite: etat.derniere_tentative, nb_articles: r.articles.length + r.indicateurs.length, duree_ms: Date.now() - debut });
