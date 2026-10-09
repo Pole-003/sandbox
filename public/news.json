@@ -1,7 +1,59 @@
 {
   "version": 1,
-  "genere_le": "2026-10-09T11:08:37.502Z",
+  "genere_le": "2026-10-09T15:54:05.061Z",
   "articles": [
+    {
+      "id": "d1d8e3bced73701b",
+      "titre": "Dispositif des stocks de sécurité des médicaments - rapport n° 13",
+      "source": "Sénat — Derniers rapports",
+      "source_id": "senat-rapports",
+      "url": "https://www.senat.fr/rap/l26-013/l26-013.html",
+      "date": "2026-10-09",
+      "theme": "Loi de finances",
+      "resume": "Rapport n° 13 de M. Khalifé KHALIFÉ, fait au nom de la commission des affaires sociales, sur la proposition de loi révisant le dispositif des stocks de sécurité des médicaments (7 octobre 2026)",
+      "importance": 1,
+      "public": [
+        "Expertise comptable",
+        "Conseil aux dirigeants"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-10-09",
+      "score": 2,
+      "pourquoi": {
+        "mots": [],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 2,
+        "score": 0
+      }
+    },
+    {
+      "id": "f6ac82842758f28f",
+      "titre": "Faciliter le déroulement des élections sénatoriales - texte N° 15",
+      "source": "Sénat — Derniers textes",
+      "source_id": "senat-textes",
+      "url": "https://www.senat.fr/leg/ppl26-015.html",
+      "date": "2026-10-09",
+      "theme": "Loi de finances",
+      "resume": "Proposition de loi visant à faciliter le déroulement des élections sénatoriales : texte N° 15 de M. Mickaël VALLET, déposé au Sénat le 7 octobre 2026",
+      "importance": 1,
+      "public": [
+        "Expertise comptable",
+        "Conseil aux dirigeants"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-10-09",
+      "score": 2,
+      "pourquoi": {
+        "mots": [],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 2,
+        "score": 0
+      }
+    },
     {
       "id": "b069aa48d1f16264",
       "titre": "Accélérer le développement de la médecine nucléaire thérapeutique en oncologie - texte de la commission N° 17",
@@ -26,7 +78,14 @@
         "bonus_source": 0,
         "bonus_fraicheur": 2,
         "score": 0
-      }
+      },
+      "autres_sources": [
+        {
+          "source": "Sénat — Derniers rapports",
+          "url": "https://www.senat.fr/rap/l26-016/l26-016.html",
+          "titre": "Accélérer le développement de la médecine nucléaire thérapeutique en oncologie - rapport n° 16"
+        }
+      ]
     },
     {
       "id": "5b5c707dbad6f680",
@@ -190,7 +249,14 @@
         "bonus_source": 0,
         "bonus_fraicheur": 1,
         "score": 0
-      }
+      },
+      "autres_sources": [
+        {
+          "source": "Sénat — Derniers rapports",
+          "url": "https://www.senat.fr/rap/l26-009/l26-009.html",
+          "titre": "Dématérialiser l'état civil des bénéficiaires de la protection internationale - rapport n° 9"
+        }
+      ]
     },
     {
       "id": "190647b8a32fabcb",
@@ -368,7 +434,14 @@
         "bonus_source": 0,
         "bonus_fraicheur": 1,
         "score": 0
-      }
+      },
+      "autres_sources": [
+        {
+          "source": "Sénat — Derniers rapports",
+          "url": "https://www.senat.fr/rap/l26-011/l26-011.html",
+          "titre": "Prescription de l'action publique en matière criminelle - rapport n° 11"
+        }
+      ]
     },
     {
       "id": "aebd3f9a77b9c576",
@@ -798,6 +871,31 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-08",
+      "score": 1,
+      "pourquoi": {
+        "mots": [],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 1,
+        "score": 0
+      }
+    },
+    {
+      "id": "7de732401047682e",
+      "titre": "N° 3246 - Proposition de loi de M. Sylvain Berrios visant à modifier l'article 55 de la loi n° 2000-1208 du 13 décembre 2000 relative à la solidarité et au renouvellement urbains",
+      "source": "Assemblée nationale — Commission des affaires économiques",
+      "source_id": "an-commission-affaires-economiques",
+      "url": "https://www.assemblee-nationale.fr/17/propositions/pion3246.asp",
+      "date": "2026-10-06",
+      "theme": "Économie et statistiques",
+      "resume": null,
+      "importance": 1,
+      "public": [
+        "Conseil aux dirigeants"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-10-09",
       "score": 1,
       "pourquoi": {
         "mots": [],
