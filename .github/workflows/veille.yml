@@ -1,7 +1,9 @@
 # Collecte quotidienne de la veille (docs/VEILLE.md) : npm run veille:collecte
 #
-# Jours ouvrés (lundi à vendredi) à 6 h 30 heure de Paris, et déclenchement manuel (« Run workflow »).
-# Couches A (flux) et B (API officielles gratuites), suivi PLF / PLFSS et leurs principales mesures : coût 0 €, aucun service d'IA.
+# Jours ouvrés (lundi à vendredi) à 6 h 30 heure de Paris, déclenchement manuel (« Run workflow ») et à chaque
+# modification sur main d'un réglage saisi à la main (catalogue, mots-clés, échéances, suivi des textes).
+# Couches A (flux) et B (API officielles gratuites), alertes Google, calendrier fiscal, suivi PLF / PLFSS (Assemblée
+# et Sénat) et leurs principales mesures : coût 0 €, aucun service d'IA.
 # Publie public/news.json, public/veille-etat.json et public/archives/, les commit seulement
 # s'ils ont changé, puis déclenche le déploiement GitHub Pages.
 #
@@ -21,12 +23,17 @@ on:
     - cron: '30 4 * * 1-5'
     - cron: '30 5 * * 1-5'
   workflow_dispatch:
-  # Branche de travail : une exécution à chaque modification de ce workflow, en attendant
-  # qu'il soit sur main (le bouton « Run workflow » n'existe que pour la branche par défaut).
+  # Une modification des réglages saisis à la main sur main est appliquée tout de suite.
   push:
-    branches: [beta-8flzza]
+    branches: [main]
     paths:
-      - '.github/workflows/veille.yml'
+      - 'veille/sources.json'
+      - 'veille/mots-cles.json'
+      - 'veille/config.json'
+      - 'veille/echeances.json'
+      - 'veille/suivi-textes.json'
+      - 'veille/indicateurs.json'
+      - 'veille/hierarchie-mesures.json'
 
 permissions:
   contents: write # commit des fichiers publiés

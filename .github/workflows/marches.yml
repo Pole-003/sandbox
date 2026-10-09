@@ -5,7 +5,8 @@
 #   09 h 02  dette publique de l'INSEE (publiée à 8 h 45, les jours du calendrier officiel)
 #   16 h 20  taux de référence EUR/USD de la BCE (publié vers 16 h)
 #   19 h 30  TEC 10 de la Banque de France (soirée) et Brent (EIA, le mercredi)
-# plus un déclenchement manuel (« Run workflow », avec l'option « forcer » pour interroger toutes les sources).
+# plus un déclenchement manuel (« Run workflow », avec l'option « forcer » pour interroger toutes les sources)
+# et une exécution à chaque modification sur main de veille/marches-sources.json ou veille/evenements.json.
 # Le script n'interroge que les sources dont une nouvelle valeur est attendue. Coût : 0 €.
 #
 # Le cron de GitHub est en UTC : chaque horaire est programmé deux fois (heure d'été UTC+2, heure d'hiver UTC+1)
@@ -31,6 +32,12 @@ on:
     - cron: '2 8 * * 1-5'
     - cron: '20 15 * * 1-5'
     - cron: '30 18 * * 1-5'
+  # Une modification du catalogue des indicateurs ou des repères sur main est appliquée tout de suite.
+  push:
+    branches: [main]
+    paths:
+      - 'veille/marches-sources.json'
+      - 'veille/evenements.json'
   workflow_dispatch:
     inputs:
       forcer:

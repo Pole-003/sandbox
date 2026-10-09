@@ -10,7 +10,7 @@ La spécification fonctionnelle détaillée est dans `docs/SPEC.md`. Le plan de 
 
 Les fichiers traités (FEC, stocks, déclarations) sont des données clients confidentielles soumises au secret professionnel et au RGPD. L'application doit garantir qu'ils ne quittent jamais le poste de l'utilisateur.
 
-1. **Aucun envoi réseau de données utilisateur.** Les seuls appels réseau autorisés dans le code applicatif sont les chargements des fichiers statiques de veille `news.json` et `veille-etat.json` (même origine, méthode GET, sans paramètre de requête). Les scripts de collecte de `scripts/veille/` tournent dans GitHub Actions, jamais dans le navigateur, et ne manipulent que de l'information publique ; leurs clés d'API sont lues depuis les secrets GitHub et ne doivent jamais apparaître dans le code, les journaux ou les fichiers publiés. Aucun `fetch`, `XMLHttpRequest`, `WebSocket`, `sendBeacon`, `EventSource`, formulaire, image ou iframe ne doit pointer vers une autre origine ou transporter des données.
+1. **Aucun envoi réseau de données utilisateur.** Les seuls appels réseau autorisés dans le code applicatif sont les chargements des fichiers statiques de veille `news.json`, `veille-etat.json` et `marches.json` (même origine, méthode GET, sans paramètre de requête). Les scripts de collecte de `scripts/veille/` et `scripts/marches/` tournent dans GitHub Actions, jamais dans le navigateur, et ne manipulent que de l'information publique ; leurs clés d'API sont lues depuis les secrets GitHub et ne doivent jamais apparaître dans le code, les journaux ou les fichiers publiés. Aucun `fetch`, `XMLHttpRequest`, `WebSocket`, `sendBeacon`, `EventSource`, formulaire, image ou iframe ne doit pointer vers une autre origine ou transporter des données.
 2. **Aucune ressource externe au chargement.** Pas de CDN, pas de Google Fonts, pas d'analytics, pas de télémétrie. Toutes les librairies sont installées via npm et intégrées au build. Les polices sont auto-hébergées.
 3. **Content-Security-Policy stricte** injectée dans le `index.html` de production via `<meta http-equiv="Content-Security-Policy">` (GitHub Pages ne permet pas d'en-têtes personnalisés) :
    `default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data: blob:; font-src 'self'; connect-src 'self'; worker-src 'self' blob:; form-action 'none'; base-uri 'none'; object-src 'none'`
@@ -40,6 +40,8 @@ Avant chaque fin de tâche, vérifie avec `npm run check:securite` qu'aucune URL
 - `npm run fec:fictifs` : régénère le jeu de FEC fictifs dans `tests/fixtures/`
 - `npm run veille:test` : diagnostic des sources de veille (statut HTTP, encodage, nombre d'éléments, date du plus récent)
 - `npm run veille:collecte` : collecte complète de la veille, couches A et B, 0 € (exécutée par le workflow `veille.yml`)
+- `npm run veille:explorer-marches` : vérification des sources des indicateurs de marché (robots.txt, statut, dernière valeur)
+- `npm run marches:collecte` : collecte des indicateurs de marché et de finances publiques, 0 € (exécutée par le workflow `marches.yml`)
 
 ## Conventions
 

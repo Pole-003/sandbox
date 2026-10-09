@@ -2,6 +2,23 @@
 
 Toutes les évolutions notables de la Sandbox Pôle 003. Format inspiré de « Keep a Changelog », numéros de version au format semver.
 
+## [0.15.0] - 2026-10-09
+
+### Ajouté
+- **Veille, onglet « Suivi »**, en trois sous-onglets :
+  - **Marchés et finances publiques :** dette publique (INSEE), OAT 10 ans (Banque de France), EUR/USD (BCE) et Brent (EIA). Chaque carte donne la dernière valeur, la variation sur la publication précédente, les 30 dernières valeurs et un badge de fraîcheur (à jour, décalage normal, en retard, source en panne). Le graphique détaillé couvre 1 mois à 2 ans : survol, minimum et maximum, repères des réunions de la BCE et du dépôt du PLF, comparaison de deux indicateurs en base 100. La dette s'affiche en barres trimestrielles (Md€) et en % du PIB.
+  - **Estimation de la dette en temps réel :** compteur calculé dans votre navigateur à partir du dernier chiffre de l'INSEE ; ce n'est pas un chiffre officiel, la méthode est expliquée au survol.
+  - **Prochaines publications attendues** (aujourd'hui, cette semaine, ce trimestre) et indicateurs de conjoncture de l'INSEE (inflation, croissance, chômage, climat des affaires, créations d'entreprises).
+  - **PLF / PLFSS :** frise interactive alimentée par les dossiers législatifs de l'Assemblée nationale et du Sénat. Un clic sur une étape affiche les articles de la veille publiés pendant cette étape ; les échéances à venir sont listées.
+  - **État des sources :** une ligne par source de veille et par indicateur, avec la dernière réussite, la prochaine récupération, la dernière erreur et l'historique des 30 derniers jours en pastilles.
+- **Échéances fiscales, sociales et juridiques :** nouvel onglet alimenté par le calendrier fiscal officiel d'impots.gouv.fr (relu chaque jour) et par les échéances saisies par le pôle, chacune avec sa source. Les 15 prochains jours apparaissent sur l'accueil.
+- **Fil d'actualité :** badge « Nouveau » depuis votre dernière visite, filtres mémorisés, recherche plein texte sur 60 jours (expressions entre guillemets, mots exclus avec « - », termes surlignés), « Pourquoi ce score ? » sur chaque article, articles similaires regroupés (« Aussi publié par »), export Excel de la sélection.
+- **Nouvelles sources :** alertes Google de presse (flux personnels, configurés par un secret GitHub), API de l'INSEE (sans clé), annonces du BODACC en Ille-et-Vilaine (compteurs sur 7 jours dans l'onglet Rennes et Bretagne), dossiers législatifs du Sénat.
+
+### Modifié
+- Classement par mots-clés : expressions exactes (« =plf » ne reconnaît plus « plfss » ; « =audit » ne reconnaît plus « audition »), poids réduit pour la presse, bonus de fraîcheur pour l'ordre d'affichage.
+- Les anciens onglets « Suivi PLF / PLFSS », « Indicateurs » et « État des sources » sont regroupés dans « Suivi » ; les anciens liens restent valables.
+
 ## [0.14.1] - 2026-10-08
 
 ### Modifié
