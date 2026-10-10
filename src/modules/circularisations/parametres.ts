@@ -40,8 +40,15 @@ export interface DecisionManuelle {
   le: string;
 }
 
+/** Sélection arrêtée puis remise en cause : conservée pour la traçabilité (règle n° 6), exportée avec les paramètres. */
+export interface SelectionAbandonnee {
+  arreteeLe: string;
+  abandonneeLe: string;
+  graine: number;
+}
+
 export interface ParametresCircularisation {
-  version: 2;
+  version: 3;
   dateCloture: string;
   /** Seuils en centimes (null = non saisi). */
   ss: number | null;
@@ -60,6 +67,8 @@ export interface ParametresCircularisation {
   manuels: DecisionManuelle[];
   /** Date-heure à laquelle la sélection a été arrêtée (affichée et exportée). */
   selectionArreteeLe: string | null;
+  /** Sélections arrêtées puis modifiées (la plus ancienne en premier). */
+  selectionsAbandonnees: SelectionAbandonnee[];
 }
 
 /** Préfixes bancaires (décision du 08/10/2026 : les emprunts 164 ne font pas partie de la population des banques). */
@@ -67,13 +76,18 @@ export const PREFIXES_BANQUES = ['512', '514', '517', '519', '5186'];
 
 /**
  * Conversion des paramètres enregistrés vers la version courante.
- *  - v1 → v2 : retrait du préfixe 164 (emprunts) des banques.
+ *  - v1 → v2 : retrait du préfixe 164 (emprunts) des banques ;
+ *  - v2 → v3 : historique des sélections abandonnées (vide pour les dossiers existants).
  */
 export function migrerParametres(p: Omit<ParametresCircularisation, 'version'> & { version: number }): ParametresCircularisation {
   const r = structuredClone(p);
   if (r.version < 2) {
     r.banques.prefixes = r.banques.prefixes.filter((x) => x !== '164');
     r.version = 2;
+  }
+  if (r.version < 3) {
+    (r as Partial<ParametresCircularisation>).selectionsAbandonnees = [];
+    r.version = 3;
   }
   return r as ParametresCircularisation;
 }
@@ -90,7 +104,7 @@ export function parametresParDefaut(dateCloture: string, graine = nouvelleGraine
     aleatoire: { actif: true, nombre: 5 },
   });
   return {
-    version: 2,
+    version: 3,
     dateCloture,
     ss: null,
     sp: null,
@@ -101,6 +115,7 @@ export function parametresParDefaut(dateCloture: string, graine = nouvelleGraine
     fournisseurs: population(['401', '403', '404', '405', '4091'], ['408'], ['4091']),
     manuels: [],
     selectionArreteeLe: null,
+    selectionsAbandonnees: [],
   };
 }
 

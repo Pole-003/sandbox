@@ -40,6 +40,8 @@ export function rendreEcranCircularisations(conteneur: HTMLElement): () => void 
   let dossier: Dossier | null = null;
   let donnees: DonneesFec | null = null;
   let p: ParametresCircularisation | null = null;
+  /** Paramètres tels qu'ils étaient à l'arrêt de la sélection : permet d'annuler une modification non confirmée. */
+  let etatArrete: ParametresCircularisation | null = null;
   let selection: Selection | null = null;
   let vue: 'banques' | Population = 'clients';
   const filtres: Record<Population, { texte: string; retenusSeulement: boolean; tri: 'cle' | 'solde' | 'mouvements' }> = {
@@ -94,15 +96,30 @@ export function rendreEcranCircularisations(conteneur: HTMLElement): () => void 
     }, 400);
   }
 
-  /** Recalcul instantané après toute modification ; la sélection n'est plus « arrêtée ». */
-  function recalculer(modification = true): void {
-    if (!donnees || !p) return;
-    if (modification && p.selectionArreteeLe) p.selectionArreteeLe = null;
+  /**
+   * Recalcul instantané après toute modification. Modifier une sélection arrêtée demande confirmation ; si elle est
+   * confirmée, la sélection n'est plus « arrêtée » et son ancienne graine reste tracée (règle n° 6).
+   * Renvoie false si la modification a été refusée (paramètres restaurés).
+   */
+  function recalculer(modification = true): boolean {
+    if (!donnees || !p) return false;
+    if (modification && p.selectionArreteeLe && etatArrete) {
+      if (!confirm('La sélection est arrêtée. Modifier un paramètre, la graine ou une décision la remet en cause : la graine actuelle restera tracée dans le tableau de suivi. Continuer ?')) {
+        p = structuredClone(etatArrete);
+        rendreParametres();
+        recalculer(false);
+        return false;
+      }
+      p.selectionsAbandonnees.push({ arreteeLe: p.selectionArreteeLe, abandonneeLe: new Date().toISOString(), graine: etatArrete.graine });
+      p.selectionArreteeLe = null;
+      etatArrete = null;
+    }
     selection = selectionner(donnees, p);
     courriers?.maj(selection, p.dateCloture, Boolean(p.selectionArreteeLe));
     rendreBandeau();
     rendreResultats();
     if (modification) sauvegarder();
+    return true;
   }
 
   // ---- Chargement --------------------------------------------------------------------------------
@@ -115,6 +132,7 @@ export function rendreEcranCircularisations(conteneur: HTMLElement): () => void 
     ecrirePreference(PREF_DOSSIER, dossier?.id ?? null);
     donnees = null;
     p = null;
+    etatArrete = null;
     selection = null;
     bandeau.replaceChildren();
     zoneParametres.replaceChildren();
@@ -135,6 +153,7 @@ export function rendreEcranCircularisations(conteneur: HTMLElement): () => void 
       for (const c of fec.comptesBancaires([...p.banques.prefixes, '50'])) p.banques.etablissements[c.compteNum] = proposerEtablissement(c.compteLib);
       sauvegarder();
     }
+    etatArrete = p.selectionArreteeLe ? structuredClone(p) : null;
     rendreParametres();
     courriers = rendreCourriers(zoneCourriers, d, fec.metadonnees, dire);
     recalculer(false);
@@ -181,14 +200,14 @@ export function rendreEcranCircularisations(conteneur: HTMLElement): () => void 
             if (!p) return;
             p.graine = nouvelleGraine();
             rendreParametres();
-            recalculer();
-            dire(`Nouvelle graine : ${p.graine}.`);
+            if (recalculer()) dire(`Nouvelle graine : ${p.graine}.`);
           }),
           bouton(
             'Arrêter la sélection',
             () => {
               if (!p || !dossier) return;
               p.selectionArreteeLe = new Date().toISOString();
+              etatArrete = structuredClone(p);
               window.clearTimeout(minuterieSauvegarde);
               void enregistrerParametres(dossier.id, structuredClone(p)).then(() => dire('Sélection arrêtée et enregistrée.'));
               if (selection) courriers?.maj(selection, p.dateCloture, true);
@@ -229,7 +248,7 @@ export function rendreEcranCircularisations(conteneur: HTMLElement): () => void 
 
   function ligneCritere(id: string, code: string, libelle: string, c: Critere): HTMLElement {
     const actif = h('input', { type: 'checkbox', id: `${id}-actif`, checked: c.actif });
-    const valeur = h('input', { id: `${id}-valeur`, type: 'text', inputmode: 'decimal', autocomplete: 'off', class: 'champ-court', value: c.mode === 'euros' ? enEuros(c.valeur) : String(c.valeur) });
+    const valeur = h('input', { id: `${id}-valeur`, type: 'text', inputmode: 'decimal', autocomplete: 'off', class: 'champ-court', 'aria-label': `Valeur du seuil ${code}`, value: c.mode === 'euros' ? enEuros(c.valeur) : String(c.valeur) });
     const mode = h('select', { id: `${id}-mode`, 'aria-label': `Unité du seuil ${code}` }, h('option', { value: 'pct-sp', selected: c.mode === 'pct-sp' }, '% du SP'), h('option', { value: 'euros', selected: c.mode === 'euros' }, '€'));
     const effectif = h('span', { class: 'note texte-secondaire' });
     const majEffectif = () => {

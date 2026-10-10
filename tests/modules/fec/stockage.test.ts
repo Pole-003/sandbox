@@ -107,9 +107,15 @@ describe('migration de la base (version 1 → 2)', () => {
     v1.banques.prefixes = ['512', '514', '517', '519', '5186', '164'];
     await enregistrerParametres('ancien', v1);
     const migres = await lireParametres('ancien');
-    expect(migres?.version).toBe(2);
+    expect(migres?.version).toBe(3);
     expect(migres?.banques.prefixes).toEqual(['512', '514', '517', '519', '5186']);
     expect(migres?.graine).toBe(8);
+    expect(migres?.selectionsAbandonnees).toEqual([]);
+    // Paramètres enregistrés en version 2 (sans historique des sélections abandonnées).
+    const { selectionsAbandonnees: _, ...v2 } = { ...parametresParDefaut('2025-12-31', 9), version: 2 };
+    void _;
+    await enregistrerParametres('ancien', v2 as unknown as Parameters<typeof enregistrerParametres>[1]);
+    expect(await lireParametres('ancien')).toMatchObject({ version: 3, graine: 9, selectionsAbandonnees: [] });
     await purgerDossier('ancien');
     expect(await lireParametres('ancien')).toBeNull();
   });

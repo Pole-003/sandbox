@@ -18,15 +18,21 @@ export function delaiEnClair(date: string, aujourdhui: string): string {
   return `Dans ${ecart} jours`;
 }
 
-function ligneEcheance(e: EcheanceEntreprise, aujourdhui: string, detail: boolean): HTMLElement {
+/** « J−3 » pour un compte à rebours lisible d'un coup d'œil ; le texte complet reste pour les lecteurs d'écran. */
+export function delaiCourt(date: string, aujourdhui: string): HTMLElement {
+  const n = ecartJours(aujourdhui, date);
+  return h('span', { class: 'delai' }, h('span', { class: 'visuellement-masque' }, delaiEnClair(date, aujourdhui)), h('span', { 'aria-hidden': 'true' }, n === 0 ? 'J0' : n > 0 ? `J−${n}` : `J+${-n}`));
+}
+
+function ligneEcheance(e: EcheanceEntreprise): HTMLElement {
   return h(
     'li',
     { class: `echeance echeance-${e.categorie}` },
     h('span', { class: `badge badge-categorie badge-categorie-${e.categorie}` }, LIBELLES_CATEGORIE[e.categorie]),
     h('div', { class: 'echeance-corps' },
       h('p', { class: 'echeance-titre' }, e.titre),
-      detail && e.detail ? h('p', { class: 'echeance-detail' }, e.detail) : null,
-      h('p', { class: 'echeance-source texte-secondaire' }, 'Source : ', lienExterne(e.url, e.source), detail ? '' : ` · ${dateFr(e.date)}, ${delaiEnClair(e.date, aujourdhui).toLowerCase()}`),
+      e.detail ? h('p', { class: 'echeance-detail' }, e.detail) : null,
+      h('p', { class: 'echeance-source texte-secondaire' }, 'Source : ', lienExterne(e.url, e.source)),
     ),
   );
 }
@@ -43,7 +49,7 @@ function listeParJour(echeances: readonly EcheanceEntreprise[], aujourdhui: stri
         'section',
         { class: `echeances-jour${date === aujourdhui ? ' echeances-aujourdhui' : ''}`, 'aria-label': `Échéances du ${dateFr(date)}` },
         h('h3', { class: 'echeances-date' }, h('time', { datetime: date }, `${JOURS[jourSemaine(date)]} ${dateFr(date)}`), h('span', { class: 'texte-secondaire' }, ` · ${delaiEnClair(date, aujourdhui)}`)),
-        h('ul', { class: 'liste-echeances' }, ...liste.map((e) => ligneEcheance(e, aujourdhui, true))),
+        h('ul', { class: 'liste-echeances' }, ...liste.map((e) => ligneEcheance(e))),
       ),
     ),
   );
@@ -85,15 +91,31 @@ export function rendreEcheances(conteneur: HTMLElement, echeances: readonly Eche
   afficher();
 }
 
-/** Bloc de l'accueil : les échéances des 15 prochains jours (8 au plus). */
+/** Bloc de l'accueil : les échéances des 15 prochains jours (8 au plus), en tableau. */
 export function blocEcheancesAccueil(echeances: readonly EcheanceEntreprise[], aujourdhui: string): HTMLElement | null {
   const prochaines = echeancesAVenir(echeances, aujourdhui, 15);
   if (prochaines.length === 0) return null;
   return h(
     'div',
     { class: 'brief-echeances-entreprises' },
-    h('h3', {}, 'Échéances des 15 prochains jours'),
-    h('ul', { class: 'liste-echeances liste-echeances-compacte' }, ...prochaines.slice(0, 8).map((e) => ligneEcheance(e, aujourdhui, false))),
-    h('a', { href: '#/veille/echeances' }, prochaines.length > 8 ? `Voir les ${prochaines.length} échéances` : 'Voir toutes les échéances'),
+    h('h3', {}, 'Entreprises · 15 prochains jours'),
+    h(
+      'div',
+      { class: 'tableau-defilant' },
+      h(
+        'table',
+        { class: 'tableau' },
+        h('caption', { class: 'visuellement-masque' }, 'Échéances des entreprises dans les 15 prochains jours'),
+        h('thead', {}, h('tr', {}, h('th', { scope: 'col', class: 'col-date' }, 'Date'), h('th', { scope: 'col' }, 'Délai'), h('th', { scope: 'col' }, 'Type'), h('th', { scope: 'col' }, 'Échéance'))),
+        h(
+          'tbody',
+          {},
+          ...prochaines.slice(0, 8).map((e) =>
+            h('tr', {}, h('td', { class: 'col-date' }, dateFr(e.date)), h('td', {}, delaiCourt(e.date, aujourdhui)), h('td', { class: 'texte-secondaire' }, LIBELLES_CATEGORIE[e.categorie]), h('td', {}, lienExterne(e.url, e.titre))),
+          ),
+        ),
+      ),
+    ),
+    h('a', { class: 'accueil-pied', href: '#/veille/echeances' }, prochaines.length > 8 ? `Voir les ${prochaines.length} échéances` : 'Voir toutes les échéances'),
   );
 }

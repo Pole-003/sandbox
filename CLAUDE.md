@@ -52,6 +52,7 @@ Avant chaque fin de tâche, vérifie avec `npm run check:securite` qu'aucune URL
 - Numéro de version affiché dans l'interface (semver dans `package.json`) et encart « Nouveautés » alimenté par `CHANGELOG.md`.
 - Toute migration de structure de données IndexedDB est versionnée et convertit l'ancien format.
 - Accessibilité : contrastes suffisants, navigation clavier, `prefers-reduced-motion` respecté.
+- Charte graphique : `design-system/innovation-sandbox/MASTER.md` (jetons dans `src/styles/jetons.css`, composants partagés dans `src/styles/composants.css`) ; lire `pages/<page>.md` s'il existe pour la page concernée. Polices et icônes uniquement via npm, jamais depuis un CDN.
 
 ## Manière de travailler
 

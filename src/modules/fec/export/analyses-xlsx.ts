@@ -32,7 +32,8 @@ function ligneTotal(ws: Worksheet, premiere: number, derniere: number, colonnesS
   r.font = { bold: true };
   for (const c of colonnesSommees) {
     const l = lettre(c);
-    r.getCell(c).value = { formula: `SUBTOTAL(9,${l}${premiere}:${l}${derniere})` };
+    // ARRONDI : la somme de montants décimaux laisse un résidu (−5,8E-11) que le format afficherait « -0,00 » en rouge.
+    r.getCell(c).value = { formula: `ROUND(SUBTOTAL(9,${l}${premiere}:${l}${derniere}),2)` };
     r.getCell(c).numFmt = ws.getColumn(c).numFmt ?? "";
   }
 }

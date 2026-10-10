@@ -3,10 +3,6 @@
  * Couleurs : uniquement les paires de jetons vérifiées par tests/app/contrastes.test.ts.
  */
 
-.ecran-fec {
-  max-width: 72rem;
-}
-
 .fec-principal {
   display: grid;
   gap: 1rem;
@@ -15,55 +11,6 @@
 
 .ecran-fec h2 {
   margin-top: 0;
-}
-
-/* --- Boutons --- */
-.bouton {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.375rem;
-  min-height: 2.25rem;
-  padding: 0.375rem 0.875rem;
-  border: 1px solid var(--c-bordure);
-  border-radius: var(--rayon);
-  background: var(--c-surface);
-  color: var(--c-texte);
-  font: inherit;
-  font-weight: 500;
-  cursor: pointer;
-  transition: background-color var(--duree), border-color var(--duree);
-}
-
-.bouton:hover {
-  background: var(--c-surface-2);
-}
-
-.bouton-primaire {
-  border-color: var(--c-primaire);
-  background: var(--c-primaire);
-  color: var(--c-sur-primaire);
-}
-
-.bouton-primaire:hover {
-  background: var(--c-primaire);
-  filter: brightness(1.08);
-}
-
-.bouton-danger {
-  border-color: var(--c-danger);
-  color: var(--c-danger-texte);
-  background: var(--c-surface);
-}
-
-.bouton-danger:hover {
-  background: var(--c-danger-fond);
-}
-
-.actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  margin: 0.75rem 0;
 }
 
 .actions-purge {
@@ -76,18 +23,6 @@
   flex-wrap: wrap;
   gap: 0.75rem 1rem;
   align-items: flex-end;
-}
-
-.ecran-fec .champ input[type='text'],
-.ecran-fec .champ input[type='date'],
-.ecran-fec .champ select {
-  min-height: 2.25rem;
-  padding: 0.375rem 0.5rem;
-  border: 1px solid var(--c-bordure);
-  border-radius: var(--rayon);
-  background: var(--c-surface);
-  color: var(--c-texte);
-  font: inherit;
 }
 
 .champ-case {
@@ -122,8 +57,8 @@
   flex-direction: column;
   align-items: center;
   gap: 0.25rem;
-  padding: 2rem 1rem;
-  border: 2px dashed var(--c-bordure);
+  padding: 0.875rem 1rem;
+  border: 1px dashed var(--c-texte-2);
   border-radius: var(--rayon-carte);
   background: var(--c-surface-2);
   text-align: center;
@@ -211,22 +146,6 @@ input[type='file']:focus-visible + .zone-depot {
 .badge-gravite-information {
   background: var(--c-primaire-fond);
   color: var(--c-primaire);
-}
-
-.bandeau {
-  margin: 0.75rem 0;
-  padding: 0.75rem 1rem;
-  border-radius: var(--rayon);
-}
-
-.bandeau-alerte {
-  border: 1px solid var(--c-danger);
-  background: var(--c-danger-fond);
-  color: var(--c-danger-texte);
-}
-
-.bandeau-alerte p {
-  margin: 0 0 0.5rem;
 }
 
 .avertissement-officiel {

@@ -30,8 +30,9 @@ data-reelles/
 # Tout fichier ressemblant à un FEC ({SIREN}FEC{AAAAMMJJ}), où qu'il soit…
 *FEC2[0-9][0-9][0-9]*
 *fec2[0-9][0-9][0-9]*
-# … sauf les FEC fictifs générés par scripts/generer-fec-fictifs.ts
-!tests/fixtures/**
+# … sauf les FEC fictifs générés par scripts/generer-fec-fictifs.ts : leur SIREN commence par 000 (jamais attribué par l'INSEE).
+# Un vrai FEC copié dans tests/fixtures/ reste donc ignoré.
+!tests/fixtures/**/000[0-9][0-9][0-9][0-9][0-9][0-9]FEC*
 # Gros FEC fictif de performance (npm run fec:gros) : trop volumineux pour le dépôt.
 tests/fixtures/fec/gros/
 

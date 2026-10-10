@@ -1,0 +1,177 @@
+/* Accueil : poste de pilotage (design-system/innovation-sandbox/pages/accueil.md). */
+
+.accueil-entete {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.25rem 1rem;
+  margin-bottom: 0.75rem;
+}
+
+.accueil-entete h1 {
+  margin: 0;
+}
+
+.accueil-statut {
+  margin: 0;
+  font-family: var(--police-mono);
+  font-size: 0.75rem;
+}
+
+/* Colonnes asymétriques : la veille (texte long) domine, les chiffres restent à portée de regard. */
+.accueil-grille {
+  display: grid;
+  grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+  gap: 0.75rem;
+  align-items: start;
+}
+
+.accueil-colonne {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 0.75rem;
+  min-width: 0;
+}
+
+.accueil-panneau {
+  padding: 0;
+}
+
+.accueil-tete {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.5rem 0.75rem;
+  border-bottom: 1px solid var(--c-bordure);
+}
+
+.accueil-tete h2 {
+  margin: 0;
+}
+
+.accueil-tete a {
+  font-size: 0.75rem;
+}
+
+.accueil-corps .tableau-defilant {
+  margin-bottom: 0;
+}
+
+.accueil-corps .tableau th:first-child,
+.accueil-corps .tableau td:first-child {
+  padding-left: 0.75rem;
+}
+
+.accueil-corps .tableau th:last-child,
+.accueil-corps .tableau td:last-child {
+  padding-right: 0.75rem;
+}
+
+.accueil-corps .tableau tbody tr:last-child > * {
+  border-bottom: 0;
+}
+
+.accueil-corps .tableau tbody th {
+  font-weight: 500;
+  text-align: left;
+}
+
+.accueil-vide {
+  margin: 0;
+  padding: 0.75rem;
+}
+
+.accueil-pied {
+  display: block;
+  margin: 0;
+  padding: 0.375rem 0.75rem;
+  border-top: 1px solid var(--c-bordure);
+  font-size: 0.75rem;
+}
+
+p.accueil-pied {
+  color: var(--c-texte-2);
+}
+
+.accueil-corps h3 {
+  margin: 0;
+  padding: 0.5rem 0.75rem 0.25rem;
+  border-top: 1px solid var(--c-bordure);
+  font-family: var(--police-mono);
+  font-size: 0.6875rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--c-texte-2);
+}
+
+.col-importance {
+  width: 2.75rem;
+  font-family: var(--police-mono);
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.col-date {
+  white-space: nowrap;
+  font-family: var(--police-mono);
+  font-size: 0.78125rem;
+}
+
+.col-texte {
+  white-space: nowrap;
+}
+
+.col-tendance {
+  width: 5rem;
+}
+
+.brief-titre {
+  font-weight: 500;
+}
+
+.delai {
+  font-family: var(--police-mono);
+  font-size: 0.78125rem;
+  color: var(--c-texte-2);
+}
+
+.accueil-fraicheur {
+  margin-left: 0.5rem;
+}
+
+@media (max-width: 70rem) {
+  .accueil-grille {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+/* Petit écran : la veille se lit en lignes (titre pleine largeur, source et date dessous). */
+@media (max-width: 40rem) {
+  .brief-liste thead {
+    display: none;
+  }
+
+  .brief-liste tbody tr {
+    display: grid;
+    grid-template-columns: 2.75rem minmax(0, 1fr);
+    border-bottom: 1px solid var(--c-bordure);
+  }
+
+  .brief-liste tbody td {
+    border-bottom: 0;
+  }
+
+  .brief-liste .col-importance {
+    grid-row: 1 / span 3;
+  }
+
+  .brief-liste td:nth-child(3),
+  .brief-liste td:nth-child(4) {
+    padding-top: 0;
+    padding-bottom: 0.125rem;
+    grid-column: 2;
+    font-size: 0.75rem;
+  }
+}

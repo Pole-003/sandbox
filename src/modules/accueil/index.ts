@@ -1,8 +1,11 @@
 import { h } from '../../app/dom.ts';
-import { House, ShieldCheck, icone } from '../../app/icones.ts';
+import { House } from '../../app/icones.ts';
 import type { DescripteurModule } from '../../app/module.ts';
-import { sectionBrief } from '../veille/brief.ts';
+import { creerPanneaux } from './panneaux.ts';
 
+const DATE_LONGUE = new Intl.DateTimeFormat('fr-FR', { timeZone: 'Europe/Paris', weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' });
+
+/** Poste de pilotage : ce qui change (veille, échéances, indicateurs) et ce que ce poste conserve (dossiers). */
 export const moduleAccueil: DescripteurModule = {
   id: 'accueil',
   libelle: 'Accueil',
@@ -10,26 +13,18 @@ export const moduleAccueil: DescripteurModule = {
   statut: 'actif',
   rendre(conteneur) {
     const annulation = { annule: false };
+    const maintenant = new Date();
+    const panneaux = creerPanneaux(annulation, maintenant);
+    const statut = h('p', { class: 'accueil-statut texte-secondaire', role: 'status' }, DATE_LONGUE.format(maintenant));
+    panneaux.surResume((texte) => statut.replaceChildren(`${DATE_LONGUE.format(maintenant)} · ${texte}`));
     conteneur.append(
-      h('h1', { tabindex: '-1' }, 'Bienvenue dans la Sandbox du Pôle 003'),
+      h('div', { class: 'accueil-entete' }, h('h1', { tabindex: '-1' }, 'Accueil'), statut),
       h(
-        'p',
-        { class: 'texte-secondaire' },
-        'Le tableau de bord personnalisé (salutation, accès aux modules, dossiers en cache) arrivera avec l’écran d’accueil complet.',
+        'div',
+        { class: 'accueil-grille' },
+        h('div', { class: 'accueil-colonne' }, panneaux.veille, panneaux.echeances),
+        h('div', { class: 'accueil-colonne' }, panneaux.indicateurs, panneaux.dossiers),
       ),
-      h(
-        'section',
-        { class: 'carte carte-confidentialite', 'aria-labelledby': 'titre-confidentialite' },
-        h('h2', { id: 'titre-confidentialite' }, icone(ShieldCheck, 20), 'Vos fichiers restent sur votre poste'),
-        h(
-          'ul',
-          {},
-          h('li', {}, 'Les FEC et autres fichiers sont lus et analysés dans votre navigateur, sans aucun envoi.'),
-          h('li', {}, 'Les dossiers sont conservés dans ce navigateur uniquement, et peuvent être purgés à tout moment.'),
-          h('li', {}, 'Le site ne charge aucune ressource externe : ni police, ni statistique de visite, ni traceur.'),
-        ),
-      ),
-      sectionBrief(annulation),
     );
     return () => {
       annulation.annule = true;

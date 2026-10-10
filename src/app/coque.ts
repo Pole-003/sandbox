@@ -34,7 +34,13 @@ export function monterCoque(racine: HTMLElement, { modules, version, canal }: Op
         ),
       );
     }
-    const lien = h('a', { class: 'nav-element', href: lienVers(m.id) }, icone(m.icone), h('span', { class: 'nav-libelle' }, m.libelle));
+    const lien = h(
+      'a',
+      { class: 'nav-element', href: lienVers(m.id), 'aria-keyshortcuts': `g ${m.id[0]}` },
+      icone(m.icone),
+      h('span', { class: 'nav-libelle' }, m.libelle),
+      h('kbd', { class: 'nav-touche', 'aria-hidden': 'true' }, m.id[0]!.toUpperCase()),
+    );
     liens.set(m.id, lien);
     return h('li', {}, lien);
   });
@@ -67,16 +73,24 @@ export function monterCoque(racine: HTMLElement, { modules, version, canal }: Op
     titre,
     canal === 'beta' &&
       h('span', { class: 'badge badge-beta', title: 'Version de validation : les données sont séparées de la version officielle.' }, 'Bêta'),
+    h('span', { class: 'entete-espace' }),
+    boutonTheme,
+  );
+
+  // --- Barre d'état : ce qui doit rester visible en permanence (confidentialité, version, navigation clavier) ---
+  const barreEtat = h(
+    'footer',
+    { class: 'barre-etat' },
     h(
       'span',
-      { class: 'badge badge-local', title: 'Les fichiers sont traités dans votre navigateur et ne quittent jamais votre poste.' },
-      icone(ShieldCheck, 16),
+      { class: 'badge-local', title: 'Les fichiers sont traités dans votre navigateur et ne quittent jamais votre poste.' },
+      icone(ShieldCheck, 14),
       h('span', {}, '100 % local'),
       h('span', { class: 'badge-local-detail' }, ' · aucune donnée envoyée'),
     ),
-    h('span', { class: 'entete-espace' }),
+    h('span', { class: 'barre-etat-espace' }),
+    h('span', { class: 'barre-etat-aide' }, h('kbd', {}, 'g'), ' puis une lettre : changer de module'),
     h('span', { class: 'version', title: 'Version de la Sandbox' }, `v${version}`),
-    boutonTheme,
   );
 
   const principal = h('main', { id: 'contenu', class: 'contenu', tabindex: '-1' });
@@ -85,7 +99,7 @@ export function monterCoque(racine: HTMLElement, { modules, version, canal }: Op
 
   racine.replaceChildren(
     lienEvitement,
-    h('div', { class: 'coque' }, barre, voile, h('div', { class: 'colonne-principale' }, entete, principal)),
+    h('div', { class: 'coque' }, barre, voile, h('div', { class: 'colonne-principale' }, entete, principal, barreEtat)),
   );
 
   // --- Thème ---
@@ -121,6 +135,22 @@ export function monterCoque(racine: HTMLElement, { modules, version, canal }: Op
   };
   document.addEventListener('keydown', surTouche);
 
+  // Navigation au clavier : « g » puis la lettre du module (comme dans les outils de développement).
+  let attenteLettre = 0;
+  const surRaccourci = (e: KeyboardEvent) => {
+    const cible = e.target as HTMLElement | null;
+    if (e.ctrlKey || e.metaKey || e.altKey || cible?.closest?.('input, textarea, select, [contenteditable], dialog[open]')) return;
+    if (e.key === 'g') {
+      attenteLettre = Date.now() + 1500;
+      return;
+    }
+    if (Date.now() > attenteLettre) return;
+    attenteLettre = 0;
+    const id = idsActifs.find((i) => i[0] === e.key.toLowerCase());
+    if (id) location.hash = lienVers(id);
+  };
+  document.addEventListener('keydown', surRaccourci);
+
   // Le lien d'évitement ne doit pas modifier l'ancre (elle porte la route).
   lienEvitement.addEventListener('click', (e) => {
     e.preventDefault();
@@ -152,6 +182,7 @@ export function monterCoque(racine: HTMLElement, { modules, version, canal }: Op
   return () => {
     window.removeEventListener('hashchange', surAncre);
     document.removeEventListener('keydown', surTouche);
+    document.removeEventListener('keydown', surRaccourci);
     if (typeof nettoyer === 'function') nettoyer();
   };
 }

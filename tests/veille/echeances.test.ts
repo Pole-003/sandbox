@@ -168,7 +168,7 @@ describe('écran Échéances', () => {
   it('accueil : bloc des 15 prochains jours, absent s’il n’y a rien', () => {
     expect(blocEcheancesAccueil([], '2026-10-09')).toBeNull();
     const bloc = blocEcheancesAccueil(liste, '2026-10-09')!;
-    expect(bloc.querySelectorAll('li')).toHaveLength(2);
+    expect(bloc.querySelectorAll('tbody tr')).toHaveLength(2);
     expect(bloc.querySelector('a[href="#/veille/echeances"]')).not.toBeNull();
   });
 });

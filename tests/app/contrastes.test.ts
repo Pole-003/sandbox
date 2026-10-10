@@ -42,6 +42,10 @@ const PAIRES: [string, string][] = [
   ['c-alerte-texte', 'c-alerte-fond'],
   ['c-danger', 'c-surface'],
   ['c-danger-texte', 'c-danger-fond'],
+  ['c-barre-texte', 'c-barre'],
+  ['c-barre-discret', 'c-barre'],
+  ['c-barre-actif-texte', 'c-barre-actif-fond'],
+  ['c-barre-texte', 'c-barre-actif-fond'],
 ];
 
 const clair = lireBloc(':root {');

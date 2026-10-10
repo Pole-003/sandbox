@@ -1,38 +1,49 @@
 /*
- * Jetons de la charte graphique Pôle 003.
+ * Jetons de la charte graphique Pôle 003 (référence : design-system/innovation-sandbox/MASTER.md).
+ * Identité « poste de travail » : papier chaud, encre, un seul accent pétrole, un signal ambre réservé aux repères.
  * Les contrastes (WCAG AA ≥ 4,5:1) sont vérifiés par tests/app/contrastes.test.ts.
  * Les valeurs sombres sont dupliquées : thème forcé ([data-theme="sombre"]) et thème automatique (media query).
  */
 :root {
-  --police: 'Inter Variable', 'Segoe UI', system-ui, -apple-system, sans-serif;
-  --police-mono: ui-monospace, 'Cascadia Mono', 'Segoe UI Mono', Consolas, monospace;
+  --police: 'IBM Plex Sans', 'Segoe UI', system-ui, -apple-system, sans-serif;
+  --police-mono: 'IBM Plex Mono', ui-monospace, 'Cascadia Mono', 'Segoe UI Mono', Consolas, monospace;
   --taille-base: 0.875rem;
-  --rayon: 6px;
-  --rayon-carte: 10px;
-  --largeur-barre: 15rem;
-  --hauteur-entete: 3.5rem;
-  --duree: 150ms;
+  --rayon: 3px;
+  --rayon-carte: 4px;
+  --largeur-barre: 13.5rem;
+  --hauteur-entete: 2.75rem;
+  --hauteur-barre-etat: 1.75rem;
+  --duree: 120ms;
 
   color-scheme: light;
-  --c-fond: #f6f7f9;
-  --c-surface: #ffffff;
-  --c-surface-2: #eef0f3;
-  --c-bordure: #dde2e8;
-  --c-texte: #18212f;
-  --c-texte-2: #566173;
-  --c-primaire: #1f4e8c;
+  --c-fond: #f1f0ec;
+  --c-surface: #fafaf8;
+  --c-surface-2: #e8e6e0;
+  --c-bordure: #d3d0c7;
+  --c-texte: #15181d;
+  --c-texte-2: #555a63;
+  --c-primaire: #0b5a60;
   --c-sur-primaire: #ffffff;
-  --c-primaire-fond: #e7eef8;
-  --c-succes: #1b7a4c;
-  --c-succes-fond: #e3f4ea;
-  --c-succes-texte: #145c39;
-  --c-alerte: #9a5b00;
-  --c-alerte-fond: #fdf1dc;
-  --c-alerte-texte: #7a4700;
-  --c-danger: #b42318;
-  --c-danger-fond: #fce8e6;
-  --c-danger-texte: #8c1c13;
-  --c-focus: #1f4e8c;
+  --c-primaire-fond: #d9eae8;
+  --c-succes: #28692b;
+  --c-succes-fond: #e1eede;
+  --c-succes-texte: #1d5420;
+  --c-alerte: #8a5200;
+  --c-alerte-fond: #f6e8c9;
+  --c-alerte-texte: #6b4000;
+  --c-danger: #b0241b;
+  --c-danger-fond: #f8e1de;
+  --c-danger-texte: #861a13;
+  --c-focus: #0b5a60;
+  /* Repère d'identité (barre active, marqueurs de section) : jamais utilisé pour du texte. */
+  --c-signal: #d99a1e;
+  /* Barre latérale : sombre dans les deux thèmes. */
+  --c-barre: #11171e;
+  --c-barre-bordure: #222b35;
+  --c-barre-texte: #aab4c0;
+  --c-barre-discret: #8d98a5;
+  --c-barre-actif-texte: #ffffff;
+  --c-barre-actif-fond: #1b2530;
   --c-voile: rgb(14 19 26 / 45%);
   /* Séries des graphiques (palette validée : écart CVD ΔE > 20, bande de luminosité, contraste ≥ 3:1). */
   --c-serie-1: #2a64b0;
@@ -41,25 +52,32 @@
 
 :root[data-theme='sombre'] {
   color-scheme: dark;
-  --c-fond: #0e131a;
-  --c-surface: #151c26;
-  --c-surface-2: #1c2430;
-  --c-bordure: #283240;
-  --c-texte: #e5e9f0;
-  --c-texte-2: #9aa4b3;
-  --c-primaire: #86aee6;
-  --c-sur-primaire: #0e131a;
-  --c-primaire-fond: #1c2a3d;
-  --c-succes: #4fc48b;
-  --c-succes-fond: #12301f;
-  --c-succes-texte: #7eddb0;
+  --c-fond: #0e1217;
+  --c-surface: #141a21;
+  --c-surface-2: #1b222b;
+  --c-bordure: #2a323d;
+  --c-texte: #dfe3e8;
+  --c-texte-2: #98a1ad;
+  --c-primaire: #5fc4ca;
+  --c-sur-primaire: #0e1217;
+  --c-primaire-fond: #123238;
+  --c-succes: #66c273;
+  --c-succes-fond: #14301a;
+  --c-succes-texte: #8bd996;
   --c-alerte: #f0b44c;
   --c-alerte-fond: #3a2a0c;
   --c-alerte-texte: #f0b44c;
   --c-danger: #f38b82;
   --c-danger-fond: #3b1714;
   --c-danger-texte: #f38b82;
-  --c-focus: #86aee6;
+  --c-focus: #5fc4ca;
+  --c-signal: #e8ad3a;
+  --c-barre: #0a0e13;
+  --c-barre-bordure: #1d252e;
+  --c-barre-texte: #9aa5b2;
+  --c-barre-discret: #7f8a97;
+  --c-barre-actif-texte: #ffffff;
+  --c-barre-actif-fond: #161e27;
   --c-voile: rgb(0 0 0 / 60%);
   --c-serie-1: #5b8fd9;
   --c-serie-2: #c47a32;
@@ -68,25 +86,32 @@
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme='clair']) {
     color-scheme: dark;
-    --c-fond: #0e131a;
-    --c-surface: #151c26;
-    --c-surface-2: #1c2430;
-    --c-bordure: #283240;
-    --c-texte: #e5e9f0;
-    --c-texte-2: #9aa4b3;
-    --c-primaire: #86aee6;
-    --c-sur-primaire: #0e131a;
-    --c-primaire-fond: #1c2a3d;
-    --c-succes: #4fc48b;
-    --c-succes-fond: #12301f;
-    --c-succes-texte: #7eddb0;
+    --c-fond: #0e1217;
+    --c-surface: #141a21;
+    --c-surface-2: #1b222b;
+    --c-bordure: #2a323d;
+    --c-texte: #dfe3e8;
+    --c-texte-2: #98a1ad;
+    --c-primaire: #5fc4ca;
+    --c-sur-primaire: #0e1217;
+    --c-primaire-fond: #123238;
+    --c-succes: #66c273;
+    --c-succes-fond: #14301a;
+    --c-succes-texte: #8bd996;
     --c-alerte: #f0b44c;
     --c-alerte-fond: #3a2a0c;
     --c-alerte-texte: #f0b44c;
     --c-danger: #f38b82;
     --c-danger-fond: #3b1714;
     --c-danger-texte: #f38b82;
-    --c-focus: #86aee6;
+    --c-focus: #5fc4ca;
+    --c-signal: #e8ad3a;
+    --c-barre: #0a0e13;
+    --c-barre-bordure: #1d252e;
+    --c-barre-texte: #9aa5b2;
+    --c-barre-discret: #7f8a97;
+    --c-barre-actif-texte: #ffffff;
+    --c-barre-actif-fond: #161e27;
     --c-voile: rgb(0 0 0 / 60%);
     --c-serie-1: #5b8fd9;
     --c-serie-2: #c47a32;

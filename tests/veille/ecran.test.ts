@@ -1,4 +1,5 @@
 // @vitest-environment happy-dom
+import { h } from '../../src/app/dom.ts';
 import { IDBFactory } from 'fake-indexeddb';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import { oublierCache } from '../../src/modules/veille/donnees.ts';
@@ -11,7 +12,7 @@ import {
 } from '../../src/modules/veille/logique.ts';
 import { magasinMemoire, NOM_BASE, ouvrirMagasin } from '../../src/modules/veille/marques.ts';
 import type { Article, EtatVeille, NewsJson } from '../../src/modules/veille/modele.ts';
-import { sectionBrief } from '../../src/modules/veille/brief.ts';
+import { contenuEcheances, tableauArticles } from '../../src/modules/accueil/panneaux.ts';
 
 const article = (id: string, champs: Partial<Article> = {}): Article => ({
   id, titre: `Titre ${id}`, source: 'Sénat', source_id: 'senat-textes', url: `https://exemple.invalid/${id}`, date: '2026-10-07',
@@ -252,13 +253,14 @@ describe('veille · écran', () => {
     expect(conteneur.querySelector('.onglets')).toBeNull();
   });
 
-  it('brief du jour sur l’accueil : 3 articles importants et la prochaine échéance', async () => {
-    servir({ 'news.json': NEWS });
-    const section = sectionBrief({ annule: false });
-    conteneur.append(section);
-    await vi.waitFor(() => expect(section.querySelectorAll('.brief-liste li')).toHaveLength(3));
-    expect(section.textContent).toContain('PLF 2027 : Vote solennel (20/10/2026)');
-    expect(section.querySelector('a[href="#/veille/suivi/plf"]')).not.toBeNull();
+  it('accueil : 3 articles importants et la prochaine échéance du PLF', () => {
+    const articles = tableauArticles(NEWS);
+    expect(articles.querySelectorAll('.brief-liste tbody tr')).toHaveLength(3);
+    const echeances = h('div', {}, ...contenuEcheances(NEWS, '2026-10-09'));
+    expect(echeances.textContent).toContain('PLF 2027');
+    expect(echeances.textContent).toContain('Vote solennel');
+    expect(echeances.textContent).toContain('20/10/2026');
+    expect(echeances.querySelector('a[href="#/veille/suivi/plf"]')).not.toBeNull();
   });
 });
 

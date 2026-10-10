@@ -1,5 +1,5 @@
 // @vitest-environment happy-dom
-import { afterEach, beforeEach, describe, expect, it } from 'vitest';
+import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import { monterCoque } from '../../src/app/coque.ts';
 import { MODULES } from '../../src/modules/index.ts';
 
@@ -12,6 +12,8 @@ describe('coque', () => {
   };
 
   beforeEach(() => {
+    // L'accueil charge news.json et marches.json : aucun réseau en test.
+    vi.stubGlobal('fetch', () => Promise.resolve(new Response('', { status: 404 })));
     location.hash = '';
     racine = document.createElement('div');
     document.body.replaceChildren(racine);
@@ -54,7 +56,7 @@ describe('coque', () => {
   it("ouvre l'accueil par défaut et suit l'ancre", async () => {
     monter();
     expect(racine.querySelector('[aria-current="page"]')?.getAttribute('href')).toBe('#/accueil');
-    expect(racine.querySelector('main h1')?.textContent).toContain('Bienvenue');
+    expect(racine.querySelector('main h1')?.textContent).toBe('Accueil');
 
     location.hash = '#/fec';
     await new Promise((r) => setTimeout(r, 0));

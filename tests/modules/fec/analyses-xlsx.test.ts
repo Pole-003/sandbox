@@ -99,7 +99,7 @@ describe('exports Excel des analyses', () => {
     expect(typeof ws.getRow(5).getCell(8).value).toBe('number');
     const total = ws.getRow(5 + b.comptes.length);
     expect(total.getCell(1).value).toBe('Total');
-    expect((total.getCell(8).value as { formula: string }).formula).toBe(`SUBTOTAL(9,H5:H${4 + b.comptes.length})`);
+    expect((total.getCell(8).value as { formula: string }).formula).toBe(`ROUND(SUBTOTAL(9,H5:H${4 + b.comptes.length}),2)`);
     expect(wb.getWorksheet('Paramètres')!.getCell('B5').value).toBe('e'.repeat(64));
   });
 

@@ -2,6 +2,34 @@
 
 Toutes les évolutions notables de la Sandbox Pôle 003. Format inspiré de « Keep a Changelog », numéros de version au format semver.
 
+## [0.16.0] - 2026-10-10
+
+### Modifié
+- **Nouvelle interface « poste de travail » :** papier, encre et un accent pétrole ; typographie IBM Plex (Sans et Mono) auto-hébergée ; barre latérale sombre ; panneaux plats, filets fins, rayons réduits, aucune ombre. Les tableaux gagnent en densité (en-têtes techniques, chiffres en mono alignés). Thèmes clair et sombre revus, contrastes AA vérifiés par les tests.
+- **Barre d'état permanente** en bas de l'écran : « 100 % local », aide au clavier et version (elle quitte l'en-tête).
+- **Accueil refondu en poste de pilotage :** veille à lire, échéances (PLF, PLFSS, entreprises avec compte à rebours), indicateurs de marché avec tendance, date et source, et dossiers conservés dans le navigateur. Le texte d'attente a disparu.
+- **Navigation au clavier :** `g` puis la lettre du module (`g f` pour le FEC, `g t` pour la TVA…).
+- Le fil de la veille devient une liste dense ; les libellés d'importance ne sont plus colorés.
+
+### Corrigé
+- Plus de défilement horizontal de la page sur petit écran (accueil, Circularisations).
+
+### Ajouté
+- `design-system/innovation-sandbox/` : design system de référence (jetons, composants, règles par page), à lire avant toute évolution de l'interface.
+
+## [0.15.2] - 2026-10-10
+
+### Modifié
+- **Circularisations, traçabilité :** modifier un paramètre, la graine ou une décision après « Arrêter la sélection » demande désormais confirmation (un refus rétablit les paramètres). Si vous confirmez, la graine de la sélection abandonnée est conservée et listée dans l'onglet « Paramètres » du tableau de suivi. Les paramètres déjà enregistrés sont convertis automatiquement.
+- **Excel, balance générale :** le total des soldes d'ouverture ne s'affiche plus « -0,00 » en rouge (résidu d'arrondi des sommes).
+
+### Corrigé
+- **Circularisations :** les champs de seuil (C1, C2, F1, F2) ont maintenant un nom accessible pour les lecteurs d'écran.
+- **Veille, Suivi :** l'infobulle « Méthode et hypothèses » n'élargit plus la page et n'est plus coupée au bord droit de la fenêtre.
+
+### Sécurité
+- Le `.gitignore` ne laisse plus passer un FEC au SIREN réel placé dans `tests/fixtures/` : seuls les FEC fictifs (SIREN commençant par 000) restent suivis.
+
 ## [0.15.1] - 2026-10-09
 
 ### Modifié

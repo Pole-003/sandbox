@@ -59,6 +59,17 @@ describe('tableau de suivi des circularisations (.xlsx)', () => {
     expect(typeof fo.getCell('F5').value).toBe('number');
   });
 
+  it('liste les sélections arrêtées puis abandonnées dans les paramètres (traçabilité)', async () => {
+    const avecHistorique = { ...p, selectionsAbandonnees: [{ arreteeLe: '2026-10-07T08:00:00Z', abandonneeLe: '2026-10-08T09:30:00Z', graine: 1234 }] };
+    const wb = await lire(await octetsClasseur(classeurSuivi(ExcelJS, selectionner(donnees, avecHistorique), avecHistorique, donnees.metadonnees, '0.9.0', new Date('2026-10-08T10:00:00Z'))));
+    const param = wb.getWorksheet('Paramètres')!;
+    expect(param.getCell('A24').value).toBe('Sélection antérieure abandonnée n° 1');
+    expect(String(param.getCell('B24').value)).toContain('graine 1234');
+    expect(param.getCell('A25').value).toBeNull();
+    // Sans historique : aucune ligne en plus après « Outil ».
+    expect((await lire(octets)).getWorksheet('Paramètres')!.getCell('A24').value).toBeNull();
+  });
+
   it('formules, listes déroulantes, mises en forme conditionnelles, SAI nommé', async () => {
     const wb = await lire(octets);
     const cl = wb.getWorksheet('Clients')!;

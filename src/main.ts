@@ -1,8 +1,14 @@
-import '@fontsource-variable/inter/wght.css';
+import '@fontsource/ibm-plex-sans/latin-400.css';
+import '@fontsource/ibm-plex-sans/latin-500.css';
+import '@fontsource/ibm-plex-sans/latin-600.css';
+import '@fontsource/ibm-plex-mono/latin-400.css';
+import '@fontsource/ibm-plex-mono/latin-500.css';
 import './styles/jetons.css';
 import './styles/base.css';
 import './styles/coque.css';
+import './styles/composants.css';
 import './styles/intro.css';
+import './styles/accueil.css';
 import './styles/veille.css';
 import './styles/fec.css';
 import './styles/circularisations.css';

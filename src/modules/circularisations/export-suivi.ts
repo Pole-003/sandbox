@@ -247,6 +247,10 @@ export function classeurSuivi(
     ['Empreinte SHA-256 du FEC', fec.empreinte],
     ['Exercice', `${dateFr(fec.exercice.debut)} – ${dateFr(fec.exercice.fin)}`],
     ['Outil', `Sandbox Pôle 003, version ${version}`],
+    ...parametres.selectionsAbandonnees.map(({ graine, arreteeLe, abandonneeLe }, i): [string, string] => [
+      `Sélection antérieure abandonnée n° ${i + 1}`,
+      `graine ${graine} · arrêtée le ${new Date(arreteeLe).toLocaleString('fr-FR')} · abandonnée le ${new Date(abandonneeLe).toLocaleString('fr-FR')}`,
+    ]),
   ];
   lignes.forEach(([k, v], i) => {
     param.getCell(i + 1, 1).value = k;
