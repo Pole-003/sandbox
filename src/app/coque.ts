@@ -12,13 +12,13 @@ export interface OptionsCoque {
   canal: 'production' | 'beta';
 }
 
-/** Monte la coque d'interface (barre latérale, en-tête, zone principale) et le routage par ancre. */
+/** Monte la coque d'interface (barre de navigation, zone principale, pied de page) et le routage par ancre. */
 export function monterCoque(racine: HTMLElement, { modules, version, canal }: OptionsCoque): () => void {
   const actifs = modules.filter((m) => m.statut === 'actif');
   const idsActifs = actifs.map((m) => m.id);
   const defaut = idsActifs[0] ?? 'accueil';
 
-  // --- Barre latérale ---
+  // --- Navigation ---
   const liens = new Map<string, HTMLAnchorElement>();
   const elementsNav = modules.map((m) => {
     if (m.statut === 'bientot') {
@@ -28,7 +28,6 @@ export function monterCoque(racine: HTMLElement, { modules, version, canal }: Op
         h(
           'span',
           { class: 'nav-element nav-bientot', 'aria-disabled': 'true', title: 'Bientôt disponible' },
-          icone(m.icone),
           h('span', { class: 'nav-libelle' }, m.libelle),
           h('span', { class: 'etiquette' }, 'bientôt'),
         ),
@@ -37,60 +36,59 @@ export function monterCoque(racine: HTMLElement, { modules, version, canal }: Op
     const lien = h(
       'a',
       { class: 'nav-element', href: lienVers(m.id), 'aria-keyshortcuts': `g ${m.id[0]}` },
-      icone(m.icone),
       h('span', { class: 'nav-libelle' }, m.libelle),
-      h('kbd', { class: 'nav-touche', 'aria-hidden': 'true' }, m.id[0]!.toUpperCase()),
     );
     liens.set(m.id, lien);
     return h('li', {}, lien);
   });
 
-  const barre = h(
-    'aside',
-    { class: 'barre-laterale', id: 'barre-laterale' },
-    h(
-      'div',
-      { class: 'marque' },
-      h('span', { class: 'marque-nom' }, 'Pôle 003'),
-      h('span', { class: 'marque-sous-titre' }, 'Innovation · Sandbox'),
-    ),
-    h('nav', { 'aria-label': 'Modules' }, h('ul', { class: 'nav-liste' }, ...elementsNav)),
-  );
+  const navigation = h('nav', { class: 'navigation', id: 'navigation', 'aria-label': 'Modules' }, h('ul', { class: 'nav-liste' }, ...elementsNav));
+  const marque = () =>
+    h('span', { class: 'marque' }, h('span', { class: 'marque-logo', 'aria-hidden': 'true' }), h('span', { class: 'marque-nom' }, 'Pôle 003'), h('span', { class: 'marque-sous-titre' }, 'Sandbox'));
 
-  // --- En-tête ---
+  // --- En-tête : logo à gauche, modules au centre, réglages à droite ---
   const boutonMenu = h(
     'button',
-    { type: 'button', class: 'bouton-icone bouton-menu', 'aria-controls': 'barre-laterale', 'aria-expanded': 'false' },
+    { type: 'button', class: 'bouton-icone bouton-menu', 'aria-controls': 'navigation', 'aria-expanded': 'false' },
     icone(Menu, 20),
     h('span', { class: 'visuellement-masque' }, 'Afficher le menu des modules'),
   );
-  const titre = h('span', { class: 'entete-titre' });
   const boutonTheme = h('button', { type: 'button', class: 'bouton-icone' });
   const entete = h(
     'header',
     { class: 'entete' },
-    boutonMenu,
-    titre,
-    canal === 'beta' &&
-      h('span', { class: 'badge badge-beta', title: 'Version de validation : les données sont séparées de la version officielle.' }, 'Bêta'),
-    h('span', { class: 'entete-espace' }),
-    boutonTheme,
+    h(
+      'div',
+      { class: 'entete-interieur' },
+      h('a', { class: 'marque-lien', href: lienVers(defaut), title: 'Sandbox Pôle 003 — Innovation' }, marque()),
+      navigation,
+      h('span', { class: 'entete-espace' }),
+      canal === 'beta' &&
+        h('span', { class: 'badge badge-beta', title: 'Version de validation : les données sont séparées de la version officielle.' }, 'Bêta'),
+      boutonMenu,
+      boutonTheme,
+    ),
   );
 
-  // --- Barre d'état : ce qui doit rester visible en permanence (confidentialité, version, navigation clavier) ---
-  const barreEtat = h(
+  // --- Pied de page : confidentialité, version, navigation clavier ---
+  const pied = h(
     'footer',
-    { class: 'barre-etat' },
+    { class: 'pied' },
     h(
-      'span',
-      { class: 'badge-local', title: 'Les fichiers sont traités dans votre navigateur et ne quittent jamais votre poste.' },
-      icone(ShieldCheck, 14),
-      h('span', {}, '100 % local'),
-      h('span', { class: 'badge-local-detail' }, ' · aucune donnée envoyée'),
+      'div',
+      { class: 'pied-interieur' },
+      marque(),
+        h(
+        'span',
+        { class: 'badge-local', title: 'Les fichiers sont traités dans votre navigateur et ne quittent jamais votre poste.' },
+        icone(ShieldCheck, 16),
+        h('span', {}, '100 % local'),
+        h('span', { class: 'badge-local-detail' }, ' · aucune donnée envoyée'),
+      ),
+      h('span', { class: 'pied-espace' }),
+      h('span', { class: 'pied-aide' }, h('kbd', {}, 'g'), ' puis une lettre : changer de module'),
+      h('span', { class: 'version', title: 'Version de la Sandbox' }, `v${version}`),
     ),
-    h('span', { class: 'barre-etat-espace' }),
-    h('span', { class: 'barre-etat-aide' }, h('kbd', {}, 'g'), ' puis une lettre : changer de module'),
-    h('span', { class: 'version', title: 'Version de la Sandbox' }, `v${version}`),
   );
 
   const principal = h('main', { id: 'contenu', class: 'contenu', tabindex: '-1' });
@@ -99,7 +97,7 @@ export function monterCoque(racine: HTMLElement, { modules, version, canal }: Op
 
   racine.replaceChildren(
     lienEvitement,
-    h('div', { class: 'coque' }, barre, voile, h('div', { class: 'colonne-principale' }, entete, principal, barreEtat)),
+    h('div', { class: 'coque' }, entete, voile, principal, pied),
   );
 
   // --- Thème ---
@@ -121,14 +119,14 @@ export function monterCoque(racine: HTMLElement, { modules, version, canal }: Op
 
   // --- Menu mobile ---
   const basculerMenu = (ouvert: boolean) => {
-    barre.classList.toggle('ouverte', ouvert);
+    navigation.classList.toggle('ouverte', ouvert);
     voile.hidden = !ouvert;
     boutonMenu.setAttribute('aria-expanded', String(ouvert));
   };
-  boutonMenu.addEventListener('click', () => basculerMenu(!barre.classList.contains('ouverte')));
+  boutonMenu.addEventListener('click', () => basculerMenu(!navigation.classList.contains('ouverte')));
   voile.addEventListener('click', () => basculerMenu(false));
   const surTouche = (e: KeyboardEvent) => {
-    if (e.key === 'Escape' && barre.classList.contains('ouverte')) {
+    if (e.key === 'Escape' && navigation.classList.contains('ouverte')) {
       basculerMenu(false);
       boutonMenu.focus();
     }
@@ -168,7 +166,6 @@ export function monterCoque(racine: HTMLElement, { modules, version, canal }: Op
       if (idLien === id) lien.setAttribute('aria-current', 'page');
       else lien.removeAttribute('aria-current');
     }
-    titre.textContent = module.libelle;
     document.title = `${module.libelle} · Sandbox Pôle 003`;
     principal.replaceChildren();
     nettoyer = module.rendre(principal);

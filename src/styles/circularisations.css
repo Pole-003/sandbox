@@ -10,9 +10,10 @@
   justify-content: space-between;
   gap: 0.5rem 1rem;
   margin: 1rem 0;
-  border: 1px solid var(--c-primaire);
-  background: var(--c-primaire-fond);
+  background: var(--c-surface);
   color: var(--c-texte);
+  border-radius: var(--rayon-champ);
+  padding: 1.25rem 1.5rem;
 }
 
 .bandeau-graine p {
@@ -47,9 +48,9 @@
 .ecran-circularisations textarea {
   min-height: 2rem;
   padding: 0.25rem 0.5rem;
-  border: 1px solid var(--c-bordure);
-  border-radius: var(--rayon);
-  background: var(--c-surface);
+  border: 1px solid var(--c-champ);
+  border-radius: var(--rayon-champ);
+  background: var(--c-fond);
   color: var(--c-texte);
   font: inherit;
 }
@@ -71,7 +72,6 @@
   margin-right: 0.25rem;
   background: var(--c-primaire-fond);
   color: var(--c-primaire);
-  font-family: var(--police-mono);
 }
 
 .tuiles {
@@ -86,19 +86,18 @@
   flex-direction: column;
   gap: 0.125rem;
   padding: 0.75rem 1rem;
-  border: 1px solid var(--c-bordure);
   border-radius: var(--rayon-carte);
   background: var(--c-surface);
 }
 
 .tuile-valeur {
   font-size: 1.375rem;
-  font-weight: 600;
+  font-weight: 700;
   font-variant-numeric: tabular-nums;
 }
 
 .tuile-libelle {
-  font-size: 0.8125rem;
+  font-size: 0.875rem;
   color: var(--c-texte-2);
 }
 
@@ -115,7 +114,7 @@
 
 /* --- Courriers --- */
 .libelle-champ {
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .ecran-circularisations .champ input[type='text'],
@@ -146,8 +145,7 @@
 }
 
 .corps-modele {
-  font-family: var(--police-mono);
-  font-size: 0.8125rem;
+  font-size: 0.875rem;
   line-height: 1.5;
 }
 
@@ -161,8 +159,7 @@
 .bouton-variable {
   min-height: 1.75rem;
   padding: 0.125rem 0.5rem;
-  font-family: var(--police-mono);
-  font-size: 0.75rem;
+  font-size: 0.875rem;
 }
 
 .colonne-apercu {
@@ -175,10 +172,10 @@
   overflow: auto;
   padding: 1.5rem 1.75rem;
   border: 1px solid var(--c-bordure);
-  border-radius: var(--rayon-carte);
+  border-radius: var(--rayon);
   background: var(--c-surface);
   color: var(--c-texte);
-  font-size: 0.8125rem;
+  font-size: 0.875rem;
   line-height: 1.45;
 }
 

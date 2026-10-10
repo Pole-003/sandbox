@@ -61,7 +61,6 @@ describe('coque', () => {
     location.hash = '#/fec';
     await new Promise((r) => setTimeout(r, 0));
     expect(racine.querySelector('[aria-current="page"]')?.getAttribute('href')).toBe('#/fec');
-    expect(racine.querySelector('.entete-titre')?.textContent).toBe('FEC');
     expect(document.title).toBe('FEC · Sandbox Pôle 003');
     expect(document.activeElement).toBe(racine.querySelector('main h1'));
   });

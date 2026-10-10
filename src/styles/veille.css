@@ -4,7 +4,7 @@
  */
 
 .note {
-  font-size: 0.8125rem;
+  font-size: 0.875rem;
 }
 
 .alerte-texte {
@@ -20,7 +20,7 @@
 .badge-importance-forte {
   background: transparent;
   color: var(--c-texte);
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .badge-importance-moyenne {
@@ -56,10 +56,10 @@
 
 .puce {
   display: inline-block;
-  padding: 0 0.4375rem;
+  padding: 0.125rem 0.625rem;
   border: 1px solid var(--c-bordure);
-  border-radius: var(--rayon);
-  font-size: 0.6875rem;
+  border-radius: var(--rayon-pilule);
+  font-size: 0.875rem;
   line-height: 1.25rem;
   color: var(--c-texte-2);
 }
@@ -75,15 +75,14 @@
 /* --- Articles --- */
 .liste-articles {
   display: grid;
-  border: 1px solid var(--c-bordure);
   border-radius: var(--rayon-carte);
   background: var(--c-surface);
 }
 
 .article {
-  padding: 0.5rem 0.75rem;
+  padding: 1.25rem 1.5rem;
   border: 0;
-  border-top: 1px solid var(--c-bordure);
+  border-top: 1px solid var(--c-fond);
   border-radius: 0;
   background: transparent;
 }
@@ -92,8 +91,8 @@
   border-top: 0;
 }
 
-.article-lu {
-  background: var(--c-surface-2);
+.article-lu .article-titre a {
+  color: var(--c-texte-2);
 }
 
 .article-important {
@@ -108,15 +107,24 @@
 }
 
 .article-titre {
-  font-size: 0.9375rem;
-  margin-bottom: 0.125rem;
+  font-size: 1.0625rem;
+  margin-bottom: 0.25rem;
+}
+
+.article-titre a {
+  text-decoration: none;
+}
+
+.article-titre a:hover,
+.article-titre a:focus-visible {
+  text-decoration: underline;
 }
 
 .article-meta {
   display: flex;
   flex-wrap: wrap;
   gap: 0.25rem 0.875rem;
-  font-size: 0.8125rem;
+  font-size: 0.875rem;
   color: var(--c-texte-2);
 }
 
@@ -133,13 +141,13 @@
 }
 
 .bouton-marque {
-  padding: 0.25rem 0.75rem;
-  border: 1px solid var(--c-bordure);
-  border-radius: var(--rayon);
-  background: var(--c-surface);
+  padding: 0.375rem 1rem;
+  border: 1px solid var(--c-filet);
+  border-radius: var(--rayon-pilule);
+  background: var(--c-fond);
   color: var(--c-texte);
   cursor: pointer;
-  font-size: 0.8125rem;
+  font-size: 0.875rem;
 }
 
 .bouton-marque[aria-pressed='true'] {
@@ -201,11 +209,11 @@
 }
 
 .frise-en_cours .frise-libelle {
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .frise-detail {
-  font-size: 0.8125rem;
+  font-size: 0.875rem;
   color: var(--c-texte-2);
 }
 
@@ -268,7 +276,7 @@
 }
 
 .tous-articles h3 {
-  font-size: 0.8125rem;
+  font-size: 0.875rem;
   margin-top: 0.75rem;
   color: var(--c-texte-2);
 }
@@ -288,18 +296,18 @@
 }
 
 .tuile-libelle {
-  font-size: 0.8125rem;
+  font-size: 0.875rem;
   color: var(--c-texte-2);
 }
 
 .tuile-valeur {
   font-size: 1.5rem;
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .tuile-periode,
 .tuile-source {
-  font-size: 0.8125rem;
+  font-size: 0.875rem;
 }
 
 /* --- État des sources --- */
@@ -312,7 +320,7 @@
   margin-top: 2rem;
   padding-top: 1rem;
   border-top: 1px solid var(--c-bordure);
-  font-size: 0.8125rem;
+  font-size: 0.875rem;
   color: var(--c-texte-2);
 }
 
@@ -374,8 +382,7 @@
   gap: 0.75rem;
   align-items: flex-start;
   padding: 0.625rem 0.75rem;
-  border: 1px solid var(--c-bordure);
-  border-radius: var(--rayon);
+  border-radius: var(--rayon-champ);
   background: var(--c-surface);
 }
 
@@ -388,7 +395,7 @@
 }
 
 .echeance-titre {
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .echeance-detail {
@@ -397,7 +404,7 @@
 
 .echeance-source {
   margin-top: 0.25rem;
-  font-size: 0.8125rem;
+  font-size: 0.875rem;
 }
 
 /* --- Fil : nouveautés, recherche, score, export --- */
@@ -425,12 +432,12 @@
 .article-autres-sources {
   margin: 0.25rem 0 0;
   color: var(--c-texte-2);
-  font-size: 0.8125rem;
+  font-size: 0.875rem;
 }
 
 .pourquoi-score {
   margin-top: 0.5rem;
-  font-size: 0.8125rem;
+  font-size: 0.875rem;
 }
 
 .pourquoi-score summary {
@@ -456,7 +463,7 @@
 }
 
 .champ-recherche .aide {
-  font-size: 0.75rem;
+  font-size: 0.875rem;
 }
 
 .barre-fil {
@@ -497,36 +504,36 @@
 
 .carte-marche-lien {
   margin: 0;
-  padding: 0 0.25rem;
+  padding: 0 1.5rem;
   color: var(--c-texte-2);
-  font-size: 0.8125rem;
+  font-size: 0.875rem;
 }
 
 .lien-du-jour {
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .carte-marche {
   display: grid;
-  gap: 0.25rem;
-  padding: 0.875rem 1rem 0.625rem;
-  border: 1px solid var(--c-bordure);
+  gap: 0.375rem;
+  padding: 1.5rem;
   border-radius: var(--rayon-carte);
   background: var(--c-surface);
   color: inherit;
   font: inherit;
   text-align: left;
   cursor: pointer;
-  transition: border-color var(--duree);
+  transition: border-color var(--duree), background-color var(--duree);
+  border: 2px solid transparent;
 }
 
 .carte-marche:hover {
-  border-color: var(--c-primaire);
+  background: var(--c-surface-2);
 }
 
 .carte-marche[aria-pressed='true'] {
   border-color: var(--c-primaire);
-  box-shadow: inset 0 0 0 1px var(--c-primaire);
+  background: var(--c-fond);
 }
 
 .carte-marche-tete {
@@ -537,13 +544,12 @@
 }
 
 .carte-marche-nom {
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .carte-marche-valeur {
-  font-size: 1.5rem;
-  font-weight: 600;
-  letter-spacing: -0.01em;
+  font-size: 1.625rem;
+  font-weight: 700;
 }
 
 .carte-marche-unite {
@@ -555,12 +561,12 @@
 .carte-marche-variation,
 .carte-marche-meta {
   color: var(--c-texte-2);
-  font-size: 0.8125rem;
+  font-size: 0.875rem;
 }
 
 .variation {
   color: var(--c-texte);
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .variation.hausse::before {
@@ -685,7 +691,6 @@
   gap: 0.75rem;
   min-width: 0;
   padding: 1rem;
-  border: 1px solid var(--c-bordure);
   border-radius: var(--rayon-carte);
   background: var(--c-surface);
 }
@@ -712,28 +717,27 @@
 .periodes {
   display: inline-flex;
   overflow: hidden;
-  border: 1px solid var(--c-bordure);
-  border-radius: var(--rayon);
+  border-radius: var(--rayon-pilule);
+  background: var(--c-surface);
+  padding: 0.25rem;
 }
 
 .periodes button {
-  padding: 0.25rem 0.625rem;
+  padding: 0.375rem 0.875rem;
   border: 0;
-  background: var(--c-surface);
+  background: transparent;
   color: var(--c-texte-2);
   font: inherit;
-  font-size: 0.8125rem;
+  font-size: 0.875rem;
   cursor: pointer;
+  border-radius: var(--rayon-pilule);
 }
 
-.periodes button + button {
-  border-left: 1px solid var(--c-bordure);
-}
 
 .periodes button[aria-pressed='true'] {
-  background: var(--c-primaire-fond);
-  color: var(--c-primaire);
-  font-weight: 600;
+  background: var(--c-fond);
+  color: var(--c-texte);
+  font-weight: 700;
 }
 
 .comparateur {
@@ -742,14 +746,14 @@
   gap: 0.5rem;
   align-items: center;
   color: var(--c-texte-2);
-  font-size: 0.8125rem;
+  font-size: 0.875rem;
 }
 
 .sous-titre-graphique {
   margin: 0.25rem 0 0;
   color: var(--c-texte-2);
-  font-size: 0.8125rem;
-  font-weight: 600;
+  font-size: 0.875rem;
+  font-weight: 700;
 }
 
 .graphique {
@@ -833,7 +837,7 @@
   border-radius: var(--rayon);
   background: var(--c-texte);
   color: var(--c-surface);
-  font-size: 0.75rem;
+  font-size: 0.875rem;
   white-space: nowrap;
   transform: translateX(-50%);
   pointer-events: none;
@@ -845,7 +849,7 @@
   gap: 1rem;
   margin: 0;
   color: var(--c-texte-2);
-  font-size: 0.8125rem;
+  font-size: 0.875rem;
 }
 
 .legende-graphique span::before {
@@ -865,7 +869,7 @@
   flex-wrap: wrap;
   gap: 0.5rem 1.25rem;
   color: var(--c-texte-2);
-  font-size: 0.8125rem;
+  font-size: 0.875rem;
 }
 
 .extremes-marche strong {
@@ -877,7 +881,7 @@
   grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr));
   gap: 0.25rem 1rem;
   margin: 0;
-  font-size: 0.8125rem;
+  font-size: 0.875rem;
 }
 
 .variations-marche dt {
@@ -886,13 +890,13 @@
 
 .variations-marche dd {
   margin: 0 0 0.5rem;
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .source-marche p {
   margin: 0;
   color: var(--c-texte-2);
-  font-size: 0.75rem;
+  font-size: 0.875rem;
 }
 
 .note-secours {
@@ -901,7 +905,7 @@
 
 .graphique-tableau summary {
   color: var(--c-primaire);
-  font-size: 0.8125rem;
+  font-size: 0.875rem;
   cursor: pointer;
 }
 
@@ -914,7 +918,7 @@
 .compteur-montant {
   margin: 0;
   font-size: 1.375rem;
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: -0.01em;
 }
 
@@ -925,7 +929,7 @@
   border-radius: 4px;
   background: var(--c-alerte-fond);
   color: var(--c-alerte-texte);
-  font-size: 0.75rem;
+  font-size: 0.875rem;
 }
 
 .methode {
@@ -938,7 +942,7 @@
   background: none;
   color: var(--c-primaire);
   font: inherit;
-  font-size: 0.8125rem;
+  font-size: 0.875rem;
   text-decoration: underline dotted;
   cursor: help;
 }
@@ -951,12 +955,11 @@
   width: min(22rem, 80vw);
   margin: 0;
   padding: 0.625rem 0.75rem;
-  border: 1px solid var(--c-bordure);
-  border-radius: var(--rayon);
-  background: var(--c-surface);
-  box-shadow: 0 4px 16px rgb(0 0 0 / 15%);
+  border-radius: var(--rayon-champ);
+  background: var(--c-fond);
+  box-shadow: var(--ombre);
   color: var(--c-texte);
-  font-size: 0.8125rem;
+  font-size: 0.875rem;
   display: none; /* et non visibility:hidden, qui laisserait l'infobulle élargir la page */
 }
 
@@ -977,8 +980,8 @@
 .chronologie h3 {
   margin: 0 0 0.375rem;
   color: var(--c-texte-2);
-  font-size: 0.75rem;
-  letter-spacing: 0.06em;
+  font-size: 0.875rem;
+  letter-spacing: var(--interlettrage);
   text-transform: uppercase;
 }
 
@@ -994,19 +997,19 @@
 .chronologie-quand {
   display: block;
   color: var(--c-texte-2);
-  font-size: 0.75rem;
+  font-size: 0.875rem;
 }
 
 .conjoncture {
   display: grid;
   gap: 0.125rem;
   margin: 0;
-  font-size: 0.8125rem;
+  font-size: 0.875rem;
 }
 
 .conjoncture dd {
   margin: 0 0 0.375rem;
-  font-weight: 600;
+  font-weight: 700;
 }
 
 /* --- PLF / PLFSS : frise interactive --- */
@@ -1076,7 +1079,7 @@
 }
 
 .etape-libelle {
-  font-size: 0.8125rem;
+  font-size: 0.875rem;
   font-weight: 500;
 }
 
@@ -1093,7 +1096,7 @@
 
 .etape-date,
 .etape-saisie {
-  font-size: 0.75rem;
+  font-size: 0.875rem;
 }
 
 .etape-frise[aria-pressed='true'] .etape-libelle {
@@ -1123,7 +1126,7 @@
 /* --- État des sources --- */
 .groupe-sources th {
   background: var(--c-surface-2);
-  font-size: 0.75rem;
+  font-size: 0.875rem;
   text-align: left;
 }
 
@@ -1159,11 +1162,11 @@
 
 .grille-compteurs dt {
   color: var(--c-texte-2);
-  font-size: 0.8125rem;
+  font-size: 0.875rem;
 }
 
 .grille-compteurs dd {
   margin: 0;
   font-size: 1.375rem;
-  font-weight: 600;
+  font-weight: 700;
 }

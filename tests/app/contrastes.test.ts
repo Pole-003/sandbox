@@ -42,15 +42,15 @@ const PAIRES: [string, string][] = [
   ['c-alerte-texte', 'c-alerte-fond'],
   ['c-danger', 'c-surface'],
   ['c-danger-texte', 'c-danger-fond'],
-  ['c-barre-texte', 'c-barre'],
-  ['c-barre-discret', 'c-barre'],
-  ['c-barre-actif-texte', 'c-barre-actif-fond'],
-  ['c-barre-texte', 'c-barre-actif-fond'],
+  ['c-texte', 'c-primaire-fond'],
+  ['c-pied-texte', 'c-pied'],
+  ['c-pied-discret', 'c-pied'],
 ];
 
 const clair = lireBloc(':root {');
-const sombreForce = lireBloc(":root[data-theme='sombre']");
-const sombreAuto = lireBloc(":root:not([data-theme='clair'])");
+// Le thème sombre hérite des jetons qu'il ne redéfinit pas (pied de page).
+const sombreForce = { ...clair, ...lireBloc(":root[data-theme='sombre']") };
+const sombreAuto = { ...clair, ...lireBloc(":root:not([data-theme='clair'])") };
 
 describe('contrastes de la charte (WCAG AA)', () => {
   it('le thème sombre automatique est identique au thème sombre forcé', () => {
@@ -65,6 +65,16 @@ describe('contrastes de la charte (WCAG AA)', () => {
       expect(jetons[texte], texte).toBeDefined();
       expect(jetons[fond], fond).toBeDefined();
       expect(contraste(jetons[texte]!, jetons[fond]!)).toBeGreaterThanOrEqual(4.5);
+    });
+
+    // Bordure de champ et séries de graphiques : éléments non textuels, 3:1 suffit (WCAG 1.4.11).
+    it.each([
+      ['c-champ', 'c-fond'],
+      ['c-champ', 'c-surface'],
+      ['c-serie-1', 'c-surface'],
+      ['c-serie-2', 'c-surface'],
+    ])(`${nom} : %s sur %s ≥ 3:1`, (element, fond) => {
+      expect(contraste(jetons[element]!, jetons[fond]!)).toBeGreaterThanOrEqual(3);
     });
   }
 });

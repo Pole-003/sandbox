@@ -2,6 +2,18 @@
 
 Toutes les évolutions notables de la Sandbox Pôle 003. Format inspiré de « Keep a Changelog », numéros de version au format semver.
 
+## [0.17.0] - 2026-10-10
+
+### Modifié
+- **Nouvelle charte graphique « porcelaine et violet » :** fond blanc, cartes gris nuage aux grands arrondis, texte encre, un seul violet pour les actions, liens et états sélectionnés. Typographie Inter auto-hébergée (graisses 500 et 700, titres espacés). Aucune ombre ni dégradé.
+- **Navigation en haut de page** : logo à gauche, modules au centre, thème à droite ; la barre latérale disparaît. Sur écran étroit, les modules passent dans un menu.
+- **Pied de page sombre** pleine largeur : « 100 % local », aide au clavier et version.
+- Boutons et onglets en pilules, champs arrondis, groupes de champs en panneaux blancs, tableaux aux en-têtes en petites capitales. Les textes passent à 14 px au minimum.
+- Accueil : la date et l'organisme de chaque indicateur s'affichent sous son nom.
+
+### Corrigé
+- **FEC, grand-livre :** la liste ne fait plus déborder la page en largeur.
+
 ## [0.16.0] - 2026-10-10
 
 ### Modifié

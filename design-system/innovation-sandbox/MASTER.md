@@ -1,105 +1,112 @@
 # Design System — Sandbox Pôle 003 · Innovation
 
 > **Règle de lecture :** pour une page précise, lire d'abord `pages/<page>.md`. S'il existe, il prévaut sur ce fichier.
-> Les valeurs ci-dessous sont celles **réellement appliquées** dans `src/styles/` (jetons : `jetons.css`).
-> Les contrastes AA sont vérifiés par `tests/app/contrastes.test.ts` : toute nouvelle paire texte/fond doit y figurer.
+> Les valeurs ci-dessous sont celles **réellement appliquées** dans `src/styles/` (jetons : `jetons.css`, composants : `composants.css`).
+> Les contrastes sont vérifiés par `tests/app/contrastes.test.ts` : toute nouvelle paire texte/fond doit y figurer.
 
-**Généré avec UI UX Pro Max 2.13.0** (`--design-system --persist`, dials : variance 4, motion 2, densité 8), puis **adapté** aux règles du projet (voir « Écarts par rapport à la sortie générée »).
+**Source :** charte « Ivory terminal with violet pulse » (fichier `DESIGN.md` fourni le 10/10/2026), appliquée à la v0.17.0. Elle remplace la direction « poste de travail » de la v0.16.0.
 
 ---
 
-## 1. Direction artistique : « poste de travail »
+## 1. Principe
 
-Un outil d'analyste ouvert toute la journée, pas un site vitrine. Précision d'un outil de développement, lisibilité d'un logiciel de gestion, densité maîtrisée.
-
-- **Papier, encre, un accent.** Fond papier chaud, texte encre, un seul accent **pétrole** pour les actions et les liens. Un **signal ambre** minuscule (carrés de section, repère de navigation active) donne la signature ; il ne sert jamais pour du texte.
-- **Barre latérale sombre** dans les deux thèmes : ancre visuelle stable, les données restent sur fond clair.
-- **Typographie technique.** IBM Plex Sans (lecture) + IBM Plex Mono (étiquettes, chiffres, métadonnées).
-- **Filets, pas de relief.** Bordures 1 px, rayons 3–4 px, aucune ombre (sauf infobulle), aucun dégradé.
-- **Détails « geek » utiles :** fil d'Ariane `sandbox / module`, barre d'état permanente (confidentialité, version, aide), raccourcis `g` puis lettre (`g f` = FEC), compte à rebours d'échéances `J−3`, chiffres en mono alignés.
+Un espace de travail blanc et clinique où **une seule couleur, le violet, marque chaque action délibérée**. 98 % monochrome, plat : ni dégradé, ni ombre décorative, ni animation. La profondeur vient de la **teinte des surfaces** (porcelaine → nuage), pas du relief. Géométrie généreuse : boutons en pilules, cartes très arrondies.
 
 ## 2. Jetons
 
-### Couleurs (clair / sombre)
+### Couleurs
 
-| Jeton | Clair | Sombre | Usage |
-|---|---|---|---|
-| `--c-fond` | `#f1f0ec` | `#0e1217` | fond de page |
-| `--c-surface` | `#fafaf8` | `#141a21` | panneaux, tableaux, en-tête |
-| `--c-surface-2` | `#e8e6e0` | `#1b222b` | survol de ligne, sous-onglets, `kbd` |
-| `--c-bordure` | `#d3d0c7` | `#2a323d` | filets |
-| `--c-texte` / `--c-texte-2` | `#15181d` / `#555a63` | `#dfe3e8` / `#98a1ad` | texte / texte secondaire |
-| `--c-primaire` | `#0b5a60` | `#5fc4ca` | actions, liens, focus |
-| `--c-succes` `--c-alerte` `--c-danger` | `#28692b` `#8a5200` `#b0241b` | `#66c273` `#f0b44c` `#f38b82` | **états uniquement** (conforme, attention, erreur) |
-| `--c-signal` | `#d99a1e` | `#e8ad3a` | repères d'identité, jamais du texte |
-| `--c-barre*` | `#11171e` … | `#0a0e13` … | barre latérale (sombre dans les deux thèmes) |
-| `--c-serie-1/2` | `#2a64b0` / `#c0620f` | `#5b8fd9` / `#c47a32` | séries de graphiques (palette validée daltonisme) |
+| Jeton | Clair | Sombre | Nom charte | Usage |
+|---|---|---|---|---|
+| `--c-fond` | `#ffffff` | `#000000` | Porcelain / Obsidian | fond de page, champs, panneaux dans une carte |
+| `--c-surface` | `#f6f6f6` | `#1f1f1f` | Cloud / Inkstone | cartes, bandeaux, onglets inactifs |
+| `--c-surface-2` | `#e7e7e7` | `#333333` | Mist / Graphite | survol |
+| `--c-bordure` | `#e7e7e7` | `#333333` | Mist | séparateurs discrets, lignes de tableau |
+| `--c-filet` | `#b0b0b0` | `#5d5d5d` | Ash | filet sous la navigation et les en-têtes de tableau, boutons neutres |
+| `--c-champ` | `#888888` | `#888888` | Smoke | bordure de champ (≥ 3:1, WCAG 1.4.11) |
+| `--c-texte` / `--c-texte-2` | `#1f1f1f` / `#5d5d5d` | `#f6f6f6` / `#b0b0b0` | Inkstone / Slate | texte / texte secondaire |
+| `--c-primaire` | `#594ff4` | `#8b84ff` | Signal Violet | actions, liens, onglet actif, logo, focus |
+| `--c-primaire-fond` | `#f0efff` | `#25224a` | — | état sélectionné ou survolé léger (bouton secondaire, sélection de texte) |
+| `--c-pied` | `#000000` | `#000000` | Obsidian | pied de page |
+| `--c-serie-1` / `--c-serie-2` | `#594ff4` / `#1f1f1f` | `#8b84ff` / `#e7e7e7` | violet / encre | séries des graphiques |
+| `--c-succes` `--c-alerte` `--c-danger` | inchangés | inchangés | — | **états uniquement** (voir § 7) |
 
-Règle : une couleur d'état s'accompagne toujours d'un libellé ou d'une icône (jamais la couleur seule).
+Règle : une couleur d'état s'accompagne toujours d'un libellé (jamais la couleur seule).
 
 ### Typographie
 
-| Rôle | Police | Détails |
-|---|---|---|
-| Texte | IBM Plex Sans 400 / 500 / 600 | 14 px (`--taille-base`), interligne 1,45 |
-| Étiquettes, en-têtes de tableaux, chiffres | IBM Plex Mono 400 / 500 | 11–12,5 px, capitales + espacement 0,04–0,06 em pour les titres |
-| Titre de page (`h1`) | Plex Sans 600 | 1,25 rem |
-| Titre de section (`h2`) | Plex Mono 500, capitales | 0,75 rem, précédé du carré signal |
+| Rôle | Taille | Graisse | Interligne | Interlettrage |
+|---|---|---|---|---|
+| Texte courant, interface | 15 px (`--taille-base`) | 500 | 1,5 | — |
+| Légende, tableaux, métadonnées | 14 px (minimum) | 500 | 1,5 | — |
+| Surtitre (`.surtitre`, en-têtes de tableau) | 13–14 px, capitales | 500 | — | 0,075 em |
+| `h3` | 17 px | 700 | 1,4 | — |
+| `h2` (titre de carte) | 20 px | 700 | 1,33 | 0,075 em |
+| `h1` (titre de page) | 26 px | 700 | 1,2 | 0,075 em |
 
-Polices **auto-hébergées** par npm (`@fontsource/ibm-plex-sans`, `@fontsource/ibm-plex-mono`, sous-ensemble latin) : aucun CDN, conforme à la règle n° 2 et à la CSP `font-src 'self'`. Chiffres tabulaires partout (`font-variant-numeric: tabular-nums`).
+Police : **Inter Variable**, auto-hébergée (`@fontsource-variable/inter`), variantes `ss01` et `cv11` actives. Une seule famille, deux graisses (500, 700). Chiffres tabulaires partout.
 
-### Espacement, forme, mouvement (densité 8/10)
+### Formes, espacements, mouvement
 
-- Rayons : `--rayon` 3 px, `--rayon-carte` 4 px. Hauteur de contrôle : 2 rem. Ligne de tableau ≈ 30 px.
-- Échelle : 0,25 · 0,5 · 0,75 · 1 · 1,25 rem. Gouttière de grille : 0,75 rem.
-- En-tête 2,75 rem, barre d'état 1,75 rem, barre latérale 13,5 rem. Contenu jusqu'à 96 rem (écran secondaire).
-- Mouvement : `--duree` 120 ms, uniquement sur survol et focus. `prefers-reduced-motion` respecté globalement. Aucune animation d'entrée ou de défilement.
+- Rayons : pilule `--rayon-pilule` 99 px (boutons, onglets, étiquettes), champ `--rayon-champ` 16 px (champs, bandeaux, groupes de champs), carte `--rayon-carte` 36 px, petit élément `--rayon` 10 px.
+- Base 4 px. Écart entre éléments `--ecart` 24 px, marge intérieure de carte `--marge-carte` 32 px (20 px sous 48 rem), bas de page `--ecart-section` 64 px.
+- Largeur de page 1 200 px (`--largeur-page`), navigation 64 px de haut.
+- Ombre unique `--ombre` (`rgba(0,0,0,.12) 0 0 60px -13px`) : réservée aux éléments **flottants** (fenêtre d'écriture, infobulle). Jamais sur un bouton, une carte ou un champ.
+- Mouvement : `--duree` 120 ms, uniquement sur survol et focus. `prefers-reduced-motion` respecté.
 
-## 3. Composants (fichier : `src/styles/composants.css`)
+## 3. Composants (fichier : `src/styles/composants.css`, `base.css`)
 
 | Composant | Règle |
 |---|---|
-| Panneau `.carte` | surface plate, filet 1 px, **jamais imbriqué** dans un autre panneau |
-| Bouton `.bouton` | 2 rem, filet ; `.bouton-primaire` plein pétrole ; `.bouton-danger` filet rouge. Un seul bouton primaire par zone |
-| Champ `.champ` | libellé 12 px au-dessus, saisie 2 rem, focus = bordure pétrole + anneau 2 px |
-| Tableau `.tableau` | en-tête mono capitales soulignée d'un filet plein, filets de ligne discrets, survol de ligne, nombres (`.nombre`, `.montant`) en mono alignés à droite |
-| Onglets `.onglets` | soulignement 2 px sous l'onglet actif ; sous-onglets `.sous-onglets` = commutateur segmenté |
-| Badge `.badge` | étiquette carrée à filet ; réservé à un **état** (conformité, fraîcheur, bêta) |
-| Bandeau `.bandeau` | filet gauche 3 px + teinte ; `.bandeau-alerte` pour les erreurs |
-| `kbd` | raccourci clavier, mono 11 px |
+| Carte `.carte` | fond nuage, rayon 36 px, marge 32 px, **sans bordure ni ombre** ; deux cartes successives espacées de 24 px |
+| Bouton `.bouton` | pilule, contour et texte violets, fond porcelaine (bouton « fantôme » de la charte) |
+| Bouton `.bouton-primaire` | pilule violette pleine, texte blanc — **un seul par zone** |
+| Bouton `.bouton-danger` | pilule à contour rouge (purge, suppression) |
+| Champ `.champ` | libellé 14 px ardoise au-dessus, saisie 44 px, rayon 16 px, fond porcelaine, bordure fumée |
+| Groupe `fieldset` | panneau porcelaine rayon 16 px, légende en gras au-dessus (pas de cadre gravé) |
+| Tableau `.tableau` | en-tête en surtitre (capitales espacées) sur filet cendre ; lignes séparées d'un filet discret ; nombres alignés à droite ; liens de tableau soulignés au survol seulement |
+| Onglets `.onglets` | pilules ; l'onglet actif est violet plein (état « sélectionné » de la charte) |
+| Sous-onglets `.sous-onglets` | commutateur pilule sur fond nuage, élément actif en porcelaine |
+| Étiquette `.badge` | pilule 14 px, fond nuage (porcelaine dans une carte) ; variantes d'état colorent le texte |
+| Bandeau `.bandeau` | panneau nuage rayon 16 px ; `.bandeau-alerte` en teinte d'erreur |
+| `kbd` | pilule à filet, 13 px |
 
 ## 4. Mise en page
 
-- Coque : barre latérale sombre + en-tête fin (fil d'Ariane) + contenu + barre d'état (`coque.css`).
-- Pages de travail : panneaux de tailles adaptées au contenu, colonnes asymétriques (3 / 2) plutôt que grille de cartes identiques ; tableaux à pleine largeur du panneau.
-- Sous 70 rem : une colonne. Sous 48 rem : barre latérale escamotable. Pas de défilement horizontal de page (les tableaux larges défilent dans `.tableau-defilant`).
+- **Navigation** (`coque.css`) : barre blanche collante de 64 px, filet cendre en bas. Logo (forme géométrique violette + « Pôle 003 Sandbox ») à gauche, modules au centre (texte 16 px, module courant en violet gras), réglages à droite (badge bêta, thème). Sous 64 rem : menu déroulant.
+- **Contenu** : 1 200 px centrés, 48 px au-dessus du titre de page.
+- **Pied de page** : bande noire pleine largeur (logo, « 100 % local », aide clavier, version).
+- Pages de travail : cartes empilées ; deux colonnes sur l'accueil ; tableaux larges défilant dans `.tableau-defilant` (jamais de défilement horizontal de la page).
 
 ## 5. Données et graphiques
 
-- Toute valeur affiche **unité, date et source** (accueil : colonne « Date · source »).
-- Courbes pour les séries temporelles, barres pour les encours trimestriels, mini-courbes (`sparkline`) pour la tendance. Pas de graphique décoratif, axes non tronqués pour les barres.
-- Les variations sont signées (+ / −) et neutres : une hausse n'est ni verte ni rouge (une dette qui monte n'est pas « bonne »).
+- Toute valeur affiche **unité, date et source**.
+- Graphiques monochromes : série principale violette, série de comparaison encre. Pas de graphique décoratif, axes non tronqués pour les barres.
+- Variations signées (+ / −) et neutres : une hausse n'est ni verte ni rouge.
 
 ## 6. Accessibilité
 
-Contraste AA (testé), focus visible 2 px sur tous les contrôles, lien d'évitement, un `h1` par page, tableaux avec `caption` masquée et `scope`, compte à rebours doublé d'un texte pour lecteur d'écran, `aria-keyshortcuts` sur la navigation, cibles ≥ 24 px, thème clair / sombre / automatique.
+Contraste AA vérifié par les tests (texte ≥ 4,5:1 ; bordures de champ et séries ≥ 3:1), focus visible violet 2 px, lien d'évitement, un `h1` par page, tableaux avec `caption` masquée et `scope`, `aria-keyshortcuts` sur la navigation (`g` + lettre), cibles ≥ 40 px, thème clair / sombre / automatique.
 
-## 7. Écarts par rapport à la sortie générée
+## 7. Écarts assumés par rapport à la charte
 
-Éléments **volontairement écartés** car contraires au brief ou aux règles du dépôt :
-
-- Import **Google Fonts** et Fira Code / Fira Sans : interdit (aucune ressource externe) → IBM Plex auto-hébergée.
-- Pattern « Enterprise Gateway » (hero, CTA « Contact Sales », logos clients) : conçu pour une vitrine, pas pour un outil.
-- Rayons 8–16 px, ombres `shadow-md/lg/xl`, survol qui soulève (`translateY`), flou d'arrière-plan des modales : relief décoratif.
-- Révélation au défilement (GSAP ScrollTrigger) : animation sans fonction ; aucune dépendance d'animation ajoutée.
-- Bouton primaire ambre sur texte noir : l'ambre est réservé au signal ; l'action est pétrole.
-- Recherche « chart » : a renvoyé des chandeliers boursiers, hors sujet (aucune donnée OHLC) ; non retenue.
+| Charte | Appliqué | Raison |
+|---|---|---|
+| Police Aeonik (et Rubik en appoint) | Inter (substitut cité par la charte) | Aeonik est commerciale et absente de npm ; règle n° 2 : polices auto-hébergées uniquement. Rubik non utilisée (usage marginal). |
+| Thème clair seul | Thème sombre dérivé (Obsidian / Inkstone / Graphite, violet éclairci `#8b84ff`) | Le choix du thème est une fonctionnalité existante. Le violet de la charte n'atteint que 2,7:1 sur fond sombre. |
+| Smoke `#888888` pour le texte d'aide | Slate `#5d5d5d` pour tout texte secondaire ; Smoke réservé aux bordures de champ | Smoke sur blanc = 3,5:1, sous le seuil AA pour du texte. |
+| Aucune autre couleur chromatique | Vert, ambre, rouge conservés **pour les états** (conforme, anomalie, non conforme, purge) | Un outil de contrôle FEC / TVA doit signaler une erreur sans ambiguïté. Toujours doublés d'un libellé. |
+| Teinte violette interdite en fond | `--c-primaire-fond` très clair pour les états sélectionnés / survolés | Usage fonctionnel (état actif), jamais décoratif. |
+| Grands titres 56–72 px, hero, maquettes superposées, grilles de 3 cartes, FAQ | Non repris | Composants de site vitrine ; la Sandbox est un outil de travail. L'échelle s'arrête à 26 px. |
+| Section 64–96 px entre blocs | 24 px entre cartes, 64 px en bas de page | Les écrans de travail (FEC, TVA) enchaînent de nombreuses cartes. |
+| Animation interdite | Animation d'ouverture (fusée) conservée | Fonctionnalité existante, une fois par jour, désactivée par `prefers-reduced-motion`. |
 
 ## 8. Avant de livrer une page
 
-- [ ] Jetons uniquement (aucune couleur ou rayon en dur)
-- [ ] Aucun panneau dans un panneau, aucun badge sans fonction, aucune icône décorative
-- [ ] Nombres en mono alignés à droite, unité et période visibles
+- [ ] Jetons uniquement (aucune couleur ni rayon en dur)
+- [ ] Violet réservé aux actions, liens, états actifs et logo
+- [ ] Graisses 500 et 700 uniquement ; aucun texte sous 14 px (hors données brutes du FEC)
+- [ ] Aucune carte dans une carte (dans une carte, utiliser un `fieldset` ou un panneau porcelaine)
 - [ ] Focus clavier visible, ordre de tabulation logique
 - [ ] Clair et sombre vérifiés ; 375 px sans défilement horizontal de page
 - [ ] `npm test`, `npm run check:securite`, `npm run build` verts (CSP inchangée)

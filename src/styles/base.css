@@ -7,7 +7,9 @@
 html {
   font-family: var(--police);
   font-size: 100%;
-  line-height: 1.45;
+  font-weight: 500;
+  font-feature-settings: 'ss01' on, 'cv11' on;
+  line-height: 1.5;
   -webkit-text-size-adjust: 100%;
   text-size-adjust: 100%;
 }
@@ -22,42 +24,44 @@ body {
   font-variant-numeric: tabular-nums;
 }
 
+/* Titres : 700, interlignage serré, interlettrage 0,075 em (échelle de la charte : 26 / 20 / 17 px). */
 h1,
 h2,
 h3 {
   margin: 0 0 0.5em;
-  line-height: 1.25;
-  font-weight: 600;
+  font-weight: 700;
+  letter-spacing: var(--interlettrage);
+  color: var(--c-texte);
 }
 
 h1 {
-  font-size: 1.25rem;
-  letter-spacing: -0.005em;
+  font-size: 1.625rem;
+  line-height: 1.2;
 }
 
-/* Titre de section : étiquette technique (mono, capitales), à la manière d'un panneau d'éditeur. */
 h2 {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  font-family: var(--police-mono);
-  font-size: 0.75rem;
-  font-weight: 500;
-  letter-spacing: 0.06em;
+  font-size: 1.25rem;
+  line-height: 1.33;
+}
+
+h3 {
+  font-size: 1.0625rem;
+  line-height: 1.4;
+  letter-spacing: 0;
+}
+
+/* Surtitre : petite capitale espacée au-dessus d'un titre. */
+.surtitre {
+  margin: 0 0 0.5rem;
+  font-size: 0.875rem;
+  letter-spacing: var(--interlettrage);
   text-transform: uppercase;
   color: var(--c-texte-2);
 }
 
-h2::before {
-  flex: none;
-  width: 0.4375rem;
-  height: 0.4375rem;
-  background: var(--c-signal);
-  content: '';
-}
-
-h3 {
-  font-size: 0.875rem;
+strong,
+b {
+  font-weight: 700;
 }
 
 p {
@@ -77,20 +81,18 @@ button {
 code,
 kbd,
 .mono {
-  font-family: var(--police-mono);
   font-size: 0.9em;
 }
 
 kbd {
   display: inline-block;
-  min-width: 1.25rem;
-  padding: 0 0.3125rem;
-  border: 1px solid var(--c-bordure);
-  border-radius: var(--rayon);
-  background: var(--c-surface-2);
-  color: var(--c-texte-2);
-  font-size: 0.6875rem;
-  line-height: 1.25rem;
+  min-width: 1.5rem;
+  padding: 0 0.4375rem;
+  border: 1px solid var(--c-filet);
+  border-radius: var(--rayon-pilule);
+  font: inherit;
+  font-size: 0.8125rem;
+  line-height: 1.375rem;
   text-align: center;
 }
 
@@ -133,26 +135,32 @@ kbd {
   flex: none;
 }
 
-/* Panneau : surface plate, filet fin, aucun relief. */
+/* Carte : surface nuage, grands arrondis, ni bordure ni ombre (l'élévation vient de la teinte). */
 .carte {
   background: var(--c-surface);
-  border: 1px solid var(--c-bordure);
   border-radius: var(--rayon-carte);
-  padding: 0.75rem 1rem;
+  padding: var(--marge-carte);
 }
 
-/* Badge : étiquette carrée à filet, pas une pastille. */
+/* Étiquette : pilule, fond nuage (neutre) ; les variantes d'état colorent le texte. */
 .badge {
   display: inline-flex;
   align-items: center;
   gap: 0.375rem;
-  padding: 0 0.4375rem;
-  border: 1px solid currentcolor;
-  border-radius: var(--rayon);
-  font-size: 0.6875rem;
-  font-weight: 500;
-  line-height: 1.25rem;
+  padding: 0.25rem 0.75rem;
+  border-radius: var(--rayon-pilule);
+  background: var(--c-surface);
+  font-size: 0.875rem;
+  line-height: 1.2;
   white-space: nowrap;
+}
+
+.carte + .carte {
+  margin-top: var(--ecart);
+}
+
+.carte .badge {
+  background: var(--c-fond);
 }
 
 @media (prefers-reduced-motion: reduce) {

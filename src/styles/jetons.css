@@ -1,30 +1,38 @@
 /*
- * Jetons de la charte graphique Pôle 003 (référence : design-system/innovation-sandbox/MASTER.md).
- * Identité « poste de travail » : papier chaud, encre, un seul accent pétrole, un signal ambre réservé aux repères.
+ * Jetons de la charte graphique (référence : design-system/innovation-sandbox/MASTER.md).
+ * Charte « Ivory terminal / Signal Violet » : surfaces porcelaine et nuage, texte encre, un seul violet pour l'action.
  * Les contrastes (WCAG AA ≥ 4,5:1) sont vérifiés par tests/app/contrastes.test.ts.
  * Les valeurs sombres sont dupliquées : thème forcé ([data-theme="sombre"]) et thème automatique (media query).
  */
 :root {
-  --police: 'IBM Plex Sans', 'Segoe UI', system-ui, -apple-system, sans-serif;
-  --police-mono: 'IBM Plex Mono', ui-monospace, 'Cascadia Mono', 'Segoe UI Mono', Consolas, monospace;
-  --taille-base: 0.875rem;
-  --rayon: 3px;
-  --rayon-carte: 4px;
-  --largeur-barre: 13.5rem;
-  --hauteur-entete: 2.75rem;
-  --hauteur-barre-etat: 1.75rem;
+  /* Aeonik (commerciale, absente de npm) → Inter, substitut indiqué par la charte ; ss01 et cv11 sont ses variantes. */
+  --police: 'Inter Variable', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --taille-base: 0.9375rem;
+  --interlettrage: 0.075em;
+  --rayon: 10px;
+  --rayon-champ: 16px;
+  --rayon-carte: 36px;
+  --rayon-pilule: 99px;
+  --largeur-page: 75rem;
+  --hauteur-entete: 4rem;
+  --marge-carte: 2rem;
+  --ecart: 1.5rem;
+  --ecart-section: 4rem;
+  --ombre: rgb(0 0 0 / 12%) 0 0 60px -13px;
   --duree: 120ms;
 
   color-scheme: light;
-  --c-fond: #f1f0ec;
-  --c-surface: #fafaf8;
-  --c-surface-2: #e8e6e0;
-  --c-bordure: #d3d0c7;
-  --c-texte: #15181d;
-  --c-texte-2: #555a63;
-  --c-primaire: #0b5a60;
+  --c-fond: #ffffff;
+  --c-surface: #f6f6f6;
+  --c-surface-2: #e7e7e7;
+  --c-bordure: #e7e7e7;
+  --c-filet: #b0b0b0;
+  --c-champ: #888888;
+  --c-texte: #1f1f1f;
+  --c-texte-2: #5d5d5d;
+  --c-primaire: #594ff4;
   --c-sur-primaire: #ffffff;
-  --c-primaire-fond: #d9eae8;
+  --c-primaire-fond: #f0efff;
   --c-succes: #28692b;
   --c-succes-fond: #e1eede;
   --c-succes-texte: #1d5420;
@@ -34,33 +42,32 @@
   --c-danger: #b0241b;
   --c-danger-fond: #f8e1de;
   --c-danger-texte: #861a13;
-  --c-focus: #0b5a60;
-  /* Repère d'identité (barre active, marqueurs de section) : jamais utilisé pour du texte. */
-  --c-signal: #d99a1e;
-  /* Barre latérale : sombre dans les deux thèmes. */
-  --c-barre: #11171e;
-  --c-barre-bordure: #222b35;
-  --c-barre-texte: #aab4c0;
-  --c-barre-discret: #8d98a5;
-  --c-barre-actif-texte: #ffffff;
-  --c-barre-actif-fond: #1b2530;
-  --c-voile: rgb(14 19 26 / 45%);
-  /* Séries des graphiques (palette validée : écart CVD ΔE > 20, bande de luminosité, contraste ≥ 3:1). */
-  --c-serie-1: #2a64b0;
-  --c-serie-2: #c0620f;
+  --c-focus: #594ff4;
+  /* Marque (logo, repères) : le violet de l'action, jamais un autre chromatique. */
+  --c-signal: #594ff4;
+  /* Pied de page : bande sombre pleine largeur, identique dans les deux thèmes. */
+  --c-pied: #000000;
+  --c-pied-texte: #ffffff;
+  --c-pied-discret: #b0b0b0;
+  --c-voile: rgb(0 0 0 / 45%);
+  /* Séries des graphiques : violet + encre (écart de luminance, lisible en vision des couleurs altérée). */
+  --c-serie-1: #594ff4;
+  --c-serie-2: #1f1f1f;
 }
 
 :root[data-theme='sombre'] {
   color-scheme: dark;
-  --c-fond: #0e1217;
-  --c-surface: #141a21;
-  --c-surface-2: #1b222b;
-  --c-bordure: #2a323d;
-  --c-texte: #dfe3e8;
-  --c-texte-2: #98a1ad;
-  --c-primaire: #5fc4ca;
-  --c-sur-primaire: #0e1217;
-  --c-primaire-fond: #123238;
+  --c-fond: #000000;
+  --c-surface: #1f1f1f;
+  --c-surface-2: #333333;
+  --c-bordure: #333333;
+  --c-filet: #5d5d5d;
+  --c-champ: #888888;
+  --c-texte: #f6f6f6;
+  --c-texte-2: #b0b0b0;
+  --c-primaire: #8b84ff;
+  --c-sur-primaire: #000000;
+  --c-primaire-fond: #25224a;
   --c-succes: #66c273;
   --c-succes-fond: #14301a;
   --c-succes-texte: #8bd996;
@@ -70,31 +77,27 @@
   --c-danger: #f38b82;
   --c-danger-fond: #3b1714;
   --c-danger-texte: #f38b82;
-  --c-focus: #5fc4ca;
-  --c-signal: #e8ad3a;
-  --c-barre: #0a0e13;
-  --c-barre-bordure: #1d252e;
-  --c-barre-texte: #9aa5b2;
-  --c-barre-discret: #7f8a97;
-  --c-barre-actif-texte: #ffffff;
-  --c-barre-actif-fond: #161e27;
+  --c-focus: #8b84ff;
+  --c-signal: #8b84ff;
   --c-voile: rgb(0 0 0 / 60%);
-  --c-serie-1: #5b8fd9;
-  --c-serie-2: #c47a32;
+  --c-serie-1: #8b84ff;
+  --c-serie-2: #e7e7e7;
 }
 
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme='clair']) {
     color-scheme: dark;
-    --c-fond: #0e1217;
-    --c-surface: #141a21;
-    --c-surface-2: #1b222b;
-    --c-bordure: #2a323d;
-    --c-texte: #dfe3e8;
-    --c-texte-2: #98a1ad;
-    --c-primaire: #5fc4ca;
-    --c-sur-primaire: #0e1217;
-    --c-primaire-fond: #123238;
+    --c-fond: #000000;
+    --c-surface: #1f1f1f;
+    --c-surface-2: #333333;
+    --c-bordure: #333333;
+    --c-filet: #5d5d5d;
+    --c-champ: #888888;
+    --c-texte: #f6f6f6;
+    --c-texte-2: #b0b0b0;
+    --c-primaire: #8b84ff;
+    --c-sur-primaire: #000000;
+    --c-primaire-fond: #25224a;
     --c-succes: #66c273;
     --c-succes-fond: #14301a;
     --c-succes-texte: #8bd996;
@@ -104,16 +107,10 @@
     --c-danger: #f38b82;
     --c-danger-fond: #3b1714;
     --c-danger-texte: #f38b82;
-    --c-focus: #5fc4ca;
-    --c-signal: #e8ad3a;
-    --c-barre: #0a0e13;
-    --c-barre-bordure: #1d252e;
-    --c-barre-texte: #9aa5b2;
-    --c-barre-discret: #7f8a97;
-    --c-barre-actif-texte: #ffffff;
-    --c-barre-actif-fond: #161e27;
+    --c-focus: #8b84ff;
+    --c-signal: #8b84ff;
     --c-voile: rgb(0 0 0 / 60%);
-    --c-serie-1: #5b8fd9;
-    --c-serie-2: #c47a32;
+    --c-serie-1: #8b84ff;
+    --c-serie-2: #e7e7e7;
   }
 }

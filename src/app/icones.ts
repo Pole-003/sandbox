@@ -2,15 +2,9 @@ import { createElement, type IconNode } from 'lucide';
 
 export type { IconNode };
 export {
-  FileSpreadsheet,
-  House,
-  MailCheck,
   Menu,
   Monitor,
   Moon,
-  Newspaper,
-  Package,
-  ReceiptEuro,
   ShieldCheck,
   Sun,
 } from 'lucide';

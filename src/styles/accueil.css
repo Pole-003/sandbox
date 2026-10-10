@@ -1,49 +1,39 @@
 /* Accueil : poste de pilotage (design-system/innovation-sandbox/pages/accueil.md). */
 
 .accueil-entete {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: baseline;
-  gap: 0.25rem 1rem;
-  margin-bottom: 0.75rem;
+  margin-bottom: 2.5rem;
 }
 
 .accueil-entete h1 {
-  margin: 0;
+  margin: 0 0 0.5rem;
 }
 
 .accueil-statut {
   margin: 0;
-  font-family: var(--police-mono);
-  font-size: 0.75rem;
 }
 
-/* Colonnes asymétriques : la veille (texte long) domine, les chiffres restent à portée de regard. */
+/* Deux colonnes égales : la veille et les échéances à gauche, les chiffres et dossiers à droite. */
 .accueil-grille {
   display: grid;
-  grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
-  gap: 0.75rem;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: var(--ecart);
   align-items: start;
 }
 
 .accueil-colonne {
   display: grid;
   grid-template-columns: minmax(0, 1fr);
-  gap: 0.75rem;
+  gap: var(--ecart);
   min-width: 0;
-}
-
-.accueil-panneau {
-  padding: 0;
 }
 
 .accueil-tete {
   display: flex;
+  flex-wrap: wrap;
   align-items: baseline;
   justify-content: space-between;
-  gap: 1rem;
-  padding: 0.5rem 0.75rem;
-  border-bottom: 1px solid var(--c-bordure);
+  gap: 0.5rem 1rem;
+  margin-bottom: 1rem;
 }
 
 .accueil-tete h2 {
@@ -51,21 +41,15 @@
 }
 
 .accueil-tete a {
-  font-size: 0.75rem;
+  font-size: 0.875rem;
 }
 
 .accueil-corps .tableau-defilant {
-  margin-bottom: 0;
+  margin: 0 -0.75rem;
 }
 
-.accueil-corps .tableau th:first-child,
-.accueil-corps .tableau td:first-child {
-  padding-left: 0.75rem;
-}
-
-.accueil-corps .tableau th:last-child,
-.accueil-corps .tableau td:last-child {
-  padding-right: 0.75rem;
+.accueil-corps .tableau-defilant > .accueil-pied {
+  padding: 0 0.75rem;
 }
 
 .accueil-corps .tableau tbody tr:last-child > * {
@@ -73,21 +57,17 @@
 }
 
 .accueil-corps .tableau tbody th {
-  font-weight: 500;
   text-align: left;
 }
 
 .accueil-vide {
   margin: 0;
-  padding: 0.75rem;
 }
 
 .accueil-pied {
   display: block;
-  margin: 0;
-  padding: 0.375rem 0.75rem;
-  border-top: 1px solid var(--c-bordure);
-  font-size: 0.75rem;
+  margin: 1rem 0 0;
+  font-size: 0.875rem;
 }
 
 p.accueil-pied {
@@ -95,28 +75,20 @@ p.accueil-pied {
 }
 
 .accueil-corps h3 {
-  margin: 0;
-  padding: 0.5rem 0.75rem 0.25rem;
-  border-top: 1px solid var(--c-bordure);
-  font-family: var(--police-mono);
-  font-size: 0.6875rem;
-  font-weight: 500;
-  letter-spacing: 0.04em;
+  margin: 1.5rem 0 0.5rem;
+  font-size: 0.875rem;
+  letter-spacing: var(--interlettrage);
   text-transform: uppercase;
   color: var(--c-texte-2);
 }
 
 .col-importance {
-  width: 2.75rem;
-  font-family: var(--police-mono);
-  font-weight: 500;
+  width: 3rem;
   white-space: nowrap;
 }
 
 .col-date {
   white-space: nowrap;
-  font-family: var(--police-mono);
-  font-size: 0.78125rem;
 }
 
 .col-texte {
@@ -132,9 +104,13 @@ p.accueil-pied {
 }
 
 .delai {
-  font-family: var(--police-mono);
-  font-size: 0.78125rem;
   color: var(--c-texte-2);
+}
+
+/* Date et organisme sous le nom de l'indicateur : unité, date et source restent visibles sans colonne de plus. */
+.accueil-source {
+  display: block;
+  font-size: 0.875rem;
 }
 
 .accueil-fraicheur {
@@ -155,8 +131,8 @@ p.accueil-pied {
 
   .brief-liste tbody tr {
     display: grid;
-    grid-template-columns: 2.75rem minmax(0, 1fr);
-    border-bottom: 1px solid var(--c-bordure);
+    grid-template-columns: 3rem minmax(0, 1fr);
+    border-bottom: 1px solid var(--c-fond);
   }
 
   .brief-liste tbody td {
@@ -172,6 +148,6 @@ p.accueil-pied {
     padding-top: 0;
     padding-bottom: 0.125rem;
     grid-column: 2;
-    font-size: 0.75rem;
+    font-size: 0.875rem;
   }
 }

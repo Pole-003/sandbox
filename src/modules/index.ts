@@ -6,7 +6,7 @@ import { moduleStocks } from './stocks/index.ts';
 import { moduleTva } from './tva/index.ts';
 import { moduleVeille } from './veille/index.ts';
 
-/** Ordre d'affichage dans la barre latérale. */
+/** Ordre d'affichage dans la navigation. */
 export const MODULES: readonly DescripteurModule[] = [
   moduleAccueil,
   moduleVeille,

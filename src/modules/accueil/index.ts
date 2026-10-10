@@ -1,5 +1,4 @@
 import { h } from '../../app/dom.ts';
-import { House } from '../../app/icones.ts';
 import type { DescripteurModule } from '../../app/module.ts';
 import { creerPanneaux } from './panneaux.ts';
 
@@ -9,7 +8,6 @@ const DATE_LONGUE = new Intl.DateTimeFormat('fr-FR', { timeZone: 'Europe/Paris',
 export const moduleAccueil: DescripteurModule = {
   id: 'accueil',
   libelle: 'Accueil',
-  icone: House,
   statut: 'actif',
   rendre(conteneur) {
     const annulation = { annule: false };
@@ -18,7 +16,7 @@ export const moduleAccueil: DescripteurModule = {
     const statut = h('p', { class: 'accueil-statut texte-secondaire', role: 'status' }, DATE_LONGUE.format(maintenant));
     panneaux.surResume((texte) => statut.replaceChildren(`${DATE_LONGUE.format(maintenant)} · ${texte}`));
     conteneur.append(
-      h('div', { class: 'accueil-entete' }, h('h1', { tabindex: '-1' }, 'Accueil'), statut),
+      h('div', { class: 'accueil-entete' }, h('p', { class: 'surtitre' }, 'Pôle 003 · Innovation'), h('h1', { tabindex: '-1' }, 'Accueil'), statut),
       h(
         'div',
         { class: 'accueil-grille' },

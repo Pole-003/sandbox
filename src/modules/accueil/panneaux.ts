@@ -116,7 +116,7 @@ export function tableauIndicateurs(m: MarchesJson, maintenant: Date): HTMLElemen
       'table',
       { class: 'tableau' },
       h('caption', { class: 'visuellement-masque' }, 'Indicateurs de marché et de finances publiques'),
-      h('thead', {}, h('tr', {}, h('th', { scope: 'col' }, 'Indicateur'), h('th', { scope: 'col', class: 'nombre' }, 'Valeur'), h('th', { scope: 'col', class: 'nombre' }, 'Variation'), h('th', { scope: 'col' }, 'Tendance'), h('th', { scope: 'col' }, 'Date · source'))),
+      h('thead', {}, h('tr', {}, h('th', { scope: 'col' }, 'Indicateur'), h('th', { scope: 'col', class: 'nombre' }, 'Valeur'), h('th', { scope: 'col', class: 'nombre' }, 'Variation'), h('th', { scope: 'col' }, 'Tendance'))),
       h(
         'tbody',
         {},
@@ -125,11 +125,16 @@ export function tableauIndicateurs(m: MarchesJson, maintenant: Date): HTMLElemen
           return h(
             'tr',
             {},
-            h('th', { scope: 'row' }, i.nom, fraicheur === 'en_retard' || fraicheur === 'en_panne' ? h('span', { class: 'accueil-fraicheur' }, badgeFraicheur(fraicheur)) : null),
+            h(
+              'th',
+              { scope: 'row' },
+              i.nom,
+              fraicheur === 'en_retard' || fraicheur === 'en_panne' ? h('span', { class: 'accueil-fraicheur' }, badgeFraicheur(fraicheur)) : null,
+              h('span', { class: 'accueil-source texte-secondaire' }, i.date_valeur ? `${dateCourte(i.date_valeur)} · ` : '', i.source.organisme),
+            ),
             h('td', { class: 'nombre' }, i.valeur === null ? '—' : `${nombreFr(i.valeur, i.decimales)} ${i.unite}`),
             h('td', { class: 'nombre', title: i.variations.precedente ? `Depuis le ${dateCourte(i.variations.precedente.depuis)}` : '' }, variationEnClair(i, i.variations.precedente)),
             h('td', { class: 'col-tendance' }, i.historique.length > 1 ? sparkline(i.historique.slice(-12).map(([, v]) => v), `Tendance : ${i.nom}`) : null),
-            h('td', { class: 'texte-secondaire' }, i.date_valeur ? `${dateCourte(i.date_valeur)} · ` : '', i.source.organisme),
           );
         }),
       ),
