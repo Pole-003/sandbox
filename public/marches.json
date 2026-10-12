@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "genere_le": "2026-10-09T15:54:03.195Z",
+  "genere_le": "2026-10-12T13:51:58.171Z",
   "indicateurs": [
     {
       "id": "dette",
@@ -336,28 +336,28 @@
       "decimales": 2,
       "genre": "taux",
       "nature": "quotidien officiel",
-      "valeur": 4,
-      "date_valeur": "2026-08-31",
-      "recupere_le": "2026-10-09T10:52:29.424Z",
+      "valeur": 4.44,
+      "date_valeur": "2026-09-30",
+      "recupere_le": "2026-10-12T13:51:58.171Z",
       "variations": {
         "precedente": {
-          "depuis": "2026-07-31",
-          "absolue": 0.15,
+          "depuis": "2026-08-31",
+          "absolue": 0.44,
           "relative": null
         },
         "un_mois": {
           "depuis": "2026-07-31",
-          "absolue": 0.15,
+          "absolue": 0.59,
           "relative": null
         },
         "debut_annee": {
           "depuis": "2025-12-31",
-          "absolue": 0.44,
+          "absolue": 0.88,
           "relative": null
         },
         "un_an": {
-          "depuis": "2025-08-31",
-          "absolue": 0.58,
+          "depuis": "2025-09-30",
+          "absolue": 0.93,
           "relative": null
         }
       },
@@ -501,6 +501,10 @@
         [
           "2026-08-31",
           4
+        ],
+        [
+          "2026-09-30",
+          4.44
         ]
       ],
       "complements": [],
@@ -520,17 +524,21 @@
         "tolerance_jours_ouvres": 10
       },
       "prochaine_publication": {
-        "date": "2026-10-12",
+        "date": "2026-11-12",
         "heure": null,
         "estimee": true
       },
-      "derniere_tentative": "2026-10-09T15:54:03.195Z",
-      "derniere_reussite": "2026-10-09T15:54:03.195Z",
+      "derniere_tentative": "2026-10-12T13:51:58.171Z",
+      "derniere_reussite": "2026-10-12T13:51:58.171Z",
       "derniere_erreur": null,
       "remarque": null,
       "journal": [
         {
           "date": "2026-10-09",
+          "etat": "ok"
+        },
+        {
+          "date": "2026-10-12",
           "etat": "ok"
         }
       ],
@@ -538,8 +546,8 @@
         "libelle": "TEC 10",
         "organisme": "Banque de France",
         "mention": "Le TEC 10 (indice CNO-TEC® calculé par Euronext Paris) est publié chaque jour ouvré par la Banque de France et l'Agence France Trésor. Sa licence en interdit la redistribution : il se consulte sur le site de la Banque de France ; la carte affiche la moyenne mensuelle officielle de la BCE.",
-        "url": "https://www.banque-france.fr/fr/statistiques/taux-et-cours/indices-obligataires-2026-10-09",
-        "date": "2026-10-09"
+        "url": "https://www.banque-france.fr/fr/statistiques/taux-et-cours/indices-obligataires-2026-10-12",
+        "date": "2026-10-12"
       }
     },
     {
