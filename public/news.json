@@ -1,7 +1,33 @@
 {
   "version": 1,
-  "genere_le": "2026-10-09T15:54:05.061Z",
+  "genere_le": "2026-10-12T04:44:54.073Z",
   "articles": [
+    {
+      "id": "473d7f29ebf43c3b",
+      "titre": "Modernisation de la radio - rapport n° 18",
+      "source": "Sénat — Derniers rapports",
+      "source_id": "senat-rapports",
+      "url": "https://www.senat.fr/rap/l26-018/l26-018.html",
+      "date": "2026-10-10",
+      "theme": "Loi de finances",
+      "resume": "Rapport n° 18 de M. Laurent LAFON, fait au nom de la commission de la culture, de l'éducation, de la communication et du sport, sur la proposition de loi relative à la modernisation de la radio (7 octobre 2026)",
+      "importance": 1,
+      "public": [
+        "Expertise comptable",
+        "Conseil aux dirigeants"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-10-12",
+      "score": 1,
+      "pourquoi": {
+        "mots": [],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 1,
+        "score": 0
+      }
+    },
     {
       "id": "d1d8e3bced73701b",
       "titre": "Dispositif des stocks de sécurité des médicaments - rapport n° 13",
@@ -19,12 +45,12 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-09",
-      "score": 2,
+      "score": 1,
       "pourquoi": {
         "mots": [],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 2,
+        "bonus_fraicheur": 1,
         "score": 0
       }
     },
@@ -45,12 +71,12 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-09",
-      "score": 2,
+      "score": 1,
       "pourquoi": {
         "mots": [],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 2,
+        "bonus_fraicheur": 1,
         "score": 0
       }
     },
@@ -71,12 +97,12 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-08",
-      "score": 2,
+      "score": 0,
       "pourquoi": {
         "mots": [],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 2,
+        "bonus_fraicheur": 0,
         "score": 0
       },
       "autres_sources": [
@@ -104,12 +130,12 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-08",
-      "score": 2,
+      "score": 0,
       "pourquoi": {
         "mots": [],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 2,
+        "bonus_fraicheur": 0,
         "score": 0
       }
     },
@@ -130,12 +156,12 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-09",
-      "score": 2,
+      "score": 0,
       "pourquoi": {
         "mots": [],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 2,
+        "bonus_fraicheur": 0,
         "score": 0
       }
     },
@@ -156,12 +182,12 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-08",
-      "score": 2,
+      "score": 0,
       "pourquoi": {
         "mots": [],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 2,
+        "bonus_fraicheur": 0,
         "score": 0
       }
     },
@@ -181,7 +207,7 @@
       "type": "doctrine",
       "origine": "flux",
       "collecte_le": "2026-10-08",
-      "score": 9,
+      "score": 8,
       "pourquoi": {
         "mots": [
           {
@@ -195,7 +221,7 @@
         ],
         "coefficient": 1,
         "bonus_source": 2,
-        "bonus_fraicheur": 1,
+        "bonus_fraicheur": 0,
         "score": 8
       }
     },
@@ -216,12 +242,12 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-08",
-      "score": 1,
+      "score": 0,
       "pourquoi": {
         "mots": [],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 1,
+        "bonus_fraicheur": 0,
         "score": 0
       }
     },
@@ -242,12 +268,12 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-08",
-      "score": 1,
+      "score": 0,
       "pourquoi": {
         "mots": [],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 1,
+        "bonus_fraicheur": 0,
         "score": 0
       },
       "autres_sources": [
@@ -275,12 +301,12 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-08",
-      "score": 1,
+      "score": 0,
       "pourquoi": {
         "mots": [],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 1,
+        "bonus_fraicheur": 0,
         "score": 0
       }
     },
@@ -301,14 +327,21 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-08",
-      "score": 1,
+      "score": 0,
       "pourquoi": {
         "mots": [],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 1,
+        "bonus_fraicheur": 0,
         "score": 0
-      }
+      },
+      "autres_sources": [
+        {
+          "source": "Sénat — Économie et finances, fiscalité",
+          "url": "https://www.senat.fr/rap/l26-007/l26-007.html",
+          "titre": "Maîtrise d'ouvrage pour les communes rurales - Rapport n° 7"
+        }
+      ]
     },
     {
       "id": "ac0d097d254d409c",
@@ -326,12 +359,12 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-08",
-      "score": 1,
+      "score": 0,
       "pourquoi": {
         "mots": [],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 1,
+        "bonus_fraicheur": 0,
         "score": 0
       }
     },
@@ -351,12 +384,37 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-08",
-      "score": 1,
+      "score": 0,
       "pourquoi": {
         "mots": [],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 1,
+        "bonus_fraicheur": 0,
+        "score": 0
+      }
+    },
+    {
+      "id": "6ab99fd4db4833f3",
+      "titre": "N° 3274 rapport - Rapport de M. Christophe Naegelen sur la proposition de loi, après engagement de la procédure accélérée, de M. Christophe Naegelen et plusieurs de ses collègues visant à moderniser et rééquilibrer le fonctionnement du titre-restaurant (2892).",
+      "source": "Assemblée nationale — Commission des affaires sociales",
+      "source_id": "an-commission-affaires-sociales",
+      "url": "https://www.assemblee-nationale.fr/17/rapports/r3274.asp",
+      "date": "2026-10-07",
+      "theme": "Sécurité sociale",
+      "resume": null,
+      "importance": 1,
+      "public": [
+        "Social / paie"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-10-12",
+      "score": 0,
+      "pourquoi": {
+        "mots": [],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 0,
         "score": 0
       }
     },
@@ -376,12 +434,12 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-08",
-      "score": 1,
+      "score": 0,
       "pourquoi": {
         "mots": [],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 1,
+        "bonus_fraicheur": 0,
         "score": 0
       }
     },
@@ -401,12 +459,12 @@
       "type": null,
       "origine": "flux",
       "collecte_le": "2026-10-08",
-      "score": 1,
+      "score": 0,
       "pourquoi": {
         "mots": [],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 1,
+        "bonus_fraicheur": 0,
         "score": 0
       }
     },
@@ -427,12 +485,12 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-08",
-      "score": 1,
+      "score": 0,
       "pourquoi": {
         "mots": [],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 1,
+        "bonus_fraicheur": 0,
         "score": 0
       },
       "autres_sources": [
@@ -459,7 +517,7 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-08",
-      "score": 7,
+      "score": 6,
       "pourquoi": {
         "mots": [
           {
@@ -473,7 +531,7 @@
         ],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 1,
+        "bonus_fraicheur": 0,
         "score": 6
       }
     },
@@ -493,7 +551,7 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-08",
-      "score": 3,
+      "score": 2,
       "pourquoi": {
         "mots": [
           {
@@ -503,7 +561,7 @@
         ],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 1,
+        "bonus_fraicheur": 0,
         "score": 2
       }
     },
@@ -523,7 +581,7 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-08",
-      "score": 3,
+      "score": 2,
       "pourquoi": {
         "mots": [
           {
@@ -533,7 +591,7 @@
         ],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 1,
+        "bonus_fraicheur": 0,
         "score": 2
       }
     },
@@ -554,7 +612,7 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-08",
-      "score": 3,
+      "score": 2,
       "pourquoi": {
         "mots": [
           {
@@ -564,7 +622,7 @@
         ],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 1,
+        "bonus_fraicheur": 0,
         "score": 2
       }
     },
@@ -584,7 +642,7 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-08",
-      "score": 2,
+      "score": 1,
       "pourquoi": {
         "mots": [
           {
@@ -594,7 +652,7 @@
         ],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 1,
+        "bonus_fraicheur": 0,
         "score": 1
       }
     },
@@ -614,7 +672,7 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-08",
-      "score": 2,
+      "score": 1,
       "pourquoi": {
         "mots": [
           {
@@ -624,7 +682,7 @@
         ],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 1,
+        "bonus_fraicheur": 0,
         "score": 1
       }
     },
@@ -645,12 +703,12 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-08",
-      "score": 1,
+      "score": 0,
       "pourquoi": {
         "mots": [],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 1,
+        "bonus_fraicheur": 0,
         "score": 0
       }
     },
@@ -670,12 +728,12 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-08",
-      "score": 1,
+      "score": 0,
       "pourquoi": {
         "mots": [],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 1,
+        "bonus_fraicheur": 0,
         "score": 0
       }
     },
@@ -695,12 +753,12 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-08",
-      "score": 1,
+      "score": 0,
       "pourquoi": {
         "mots": [],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 1,
+        "bonus_fraicheur": 0,
         "score": 0
       }
     },
@@ -721,12 +779,12 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-08",
-      "score": 1,
+      "score": 0,
       "pourquoi": {
         "mots": [],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 1,
+        "bonus_fraicheur": 0,
         "score": 0
       }
     },
@@ -746,12 +804,12 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-08",
-      "score": 1,
+      "score": 0,
       "pourquoi": {
         "mots": [],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 1,
+        "bonus_fraicheur": 0,
         "score": 0
       }
     },
@@ -771,12 +829,12 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-08",
-      "score": 1,
+      "score": 0,
       "pourquoi": {
         "mots": [],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 1,
+        "bonus_fraicheur": 0,
         "score": 0
       }
     },
@@ -796,12 +854,12 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-08",
-      "score": 1,
+      "score": 0,
       "pourquoi": {
         "mots": [],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 1,
+        "bonus_fraicheur": 0,
         "score": 0
       }
     },
@@ -821,12 +879,12 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-08",
-      "score": 1,
+      "score": 0,
       "pourquoi": {
         "mots": [],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 1,
+        "bonus_fraicheur": 0,
         "score": 0
       }
     },
@@ -846,12 +904,12 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-09",
-      "score": 1,
+      "score": 0,
       "pourquoi": {
         "mots": [],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 1,
+        "bonus_fraicheur": 0,
         "score": 0
       }
     },
@@ -871,12 +929,12 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-08",
-      "score": 1,
+      "score": 0,
       "pourquoi": {
         "mots": [],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 1,
+        "bonus_fraicheur": 0,
         "score": 0
       }
     },
@@ -896,12 +954,12 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-09",
-      "score": 1,
+      "score": 0,
       "pourquoi": {
         "mots": [],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 1,
+        "bonus_fraicheur": 0,
         "score": 0
       }
     },
@@ -921,12 +979,12 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-08",
-      "score": 1,
+      "score": 0,
       "pourquoi": {
         "mots": [],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 1,
+        "bonus_fraicheur": 0,
         "score": 0
       }
     },
@@ -946,12 +1004,12 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-08",
-      "score": 1,
+      "score": 0,
       "pourquoi": {
         "mots": [],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 1,
+        "bonus_fraicheur": 0,
         "score": 0
       }
     },
@@ -971,12 +1029,12 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-08",
-      "score": 1,
+      "score": 0,
       "pourquoi": {
         "mots": [],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 1,
+        "bonus_fraicheur": 0,
         "score": 0
       }
     },
@@ -997,12 +1055,12 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-08",
-      "score": 1,
+      "score": 0,
       "pourquoi": {
         "mots": [],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 1,
+        "bonus_fraicheur": 0,
         "score": 0
       }
     },
@@ -1023,12 +1081,12 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-08",
-      "score": 1,
+      "score": 0,
       "pourquoi": {
         "mots": [],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 1,
+        "bonus_fraicheur": 0,
         "score": 0
       }
     },
@@ -1049,12 +1107,12 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-08",
-      "score": 1,
+      "score": 0,
       "pourquoi": {
         "mots": [],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 1,
+        "bonus_fraicheur": 0,
         "score": 0
       }
     },
@@ -1074,12 +1132,12 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-08",
-      "score": 1,
+      "score": 0,
       "pourquoi": {
         "mots": [],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 1,
+        "bonus_fraicheur": 0,
         "score": 0
       }
     },
@@ -1099,12 +1157,12 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-08",
-      "score": 1,
+      "score": 0,
       "pourquoi": {
         "mots": [],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 1,
+        "bonus_fraicheur": 0,
         "score": 0
       }
     },
@@ -1124,12 +1182,12 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-08",
-      "score": 1,
+      "score": 0,
       "pourquoi": {
         "mots": [],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 1,
+        "bonus_fraicheur": 0,
         "score": 0
       }
     },
@@ -1150,12 +1208,12 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-08",
-      "score": 1,
+      "score": 0,
       "pourquoi": {
         "mots": [],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 1,
+        "bonus_fraicheur": 0,
         "score": 0
       }
     },
@@ -1176,12 +1234,12 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-08",
-      "score": 1,
+      "score": 0,
       "pourquoi": {
         "mots": [],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 1,
+        "bonus_fraicheur": 0,
         "score": 0
       }
     },
@@ -1594,7 +1652,7 @@
       "source": "INSEE",
       "url": "https://www.insee.fr/fr/statistiques/serie/011812232",
       "date_publication": "2026-09-15",
-      "collecte_le": "2026-10-09"
+      "collecte_le": "2026-10-12"
     },
     {
       "source_id": "insee-bdm",
@@ -1604,7 +1662,7 @@
       "source": "INSEE",
       "url": "https://www.insee.fr/fr/statistiques/serie/011794844",
       "date_publication": "2026-08-28",
-      "collecte_le": "2026-10-09"
+      "collecte_le": "2026-10-12"
     },
     {
       "source_id": "insee-bdm",
@@ -1614,7 +1672,7 @@
       "source": "INSEE",
       "url": "https://www.insee.fr/fr/statistiques/serie/001688527",
       "date_publication": "2026-08-07",
-      "collecte_le": "2026-10-09"
+      "collecte_le": "2026-10-12"
     },
     {
       "source_id": "insee-bdm",
@@ -1624,7 +1682,7 @@
       "source": "INSEE",
       "url": "https://www.insee.fr/fr/statistiques/serie/001565530",
       "date_publication": "2026-09-24",
-      "collecte_le": "2026-10-09"
+      "collecte_le": "2026-10-12"
     },
     {
       "source_id": "insee-bdm",
@@ -1634,47 +1692,47 @@
       "source": "INSEE",
       "url": "https://www.insee.fr/fr/statistiques/serie/010755537",
       "date_publication": "2026-09-18",
-      "collecte_le": "2026-10-09"
+      "collecte_le": "2026-10-12"
     },
     {
       "source_id": "bodacc-35",
       "libelle": "Créations d’entreprises en Ille-et-Vilaine",
-      "valeur": "197 annonces",
-      "periode": "du 02/10/2026 au 08/10/2026",
+      "valeur": "211 annonces",
+      "periode": "du 05/10/2026 au 11/10/2026",
       "source": "BODACC (DILA)",
       "url": "https://www.bodacc.fr/",
-      "date_publication": "2026-10-08",
-      "collecte_le": "2026-10-09"
+      "date_publication": "2026-10-11",
+      "collecte_le": "2026-10-12"
     },
     {
       "source_id": "bodacc-35",
       "libelle": "Procédures collectives en Ille-et-Vilaine",
       "valeur": "50 annonces",
-      "periode": "du 02/10/2026 au 08/10/2026",
+      "periode": "du 05/10/2026 au 11/10/2026",
       "source": "BODACC (DILA)",
       "url": "https://www.bodacc.fr/",
-      "date_publication": "2026-10-08",
-      "collecte_le": "2026-10-09"
+      "date_publication": "2026-10-11",
+      "collecte_le": "2026-10-12"
     },
     {
       "source_id": "bodacc-35",
       "libelle": "Ventes et cessions de fonds en Ille-et-Vilaine",
-      "valeur": "24 annonces",
-      "periode": "du 02/10/2026 au 08/10/2026",
+      "valeur": "31 annonces",
+      "periode": "du 05/10/2026 au 11/10/2026",
       "source": "BODACC (DILA)",
       "url": "https://www.bodacc.fr/",
-      "date_publication": "2026-10-08",
-      "collecte_le": "2026-10-09"
+      "date_publication": "2026-10-11",
+      "collecte_le": "2026-10-12"
     },
     {
       "source_id": "bodacc-35",
       "libelle": "Radiations en Ille-et-Vilaine",
-      "valeur": "225 annonces",
-      "periode": "du 02/10/2026 au 08/10/2026",
+      "valeur": "185 annonces",
+      "periode": "du 05/10/2026 au 11/10/2026",
       "source": "BODACC (DILA)",
       "url": "https://www.bodacc.fr/",
-      "date_publication": "2026-10-08",
-      "collecte_le": "2026-10-09"
+      "date_publication": "2026-10-11",
+      "collecte_le": "2026-10-12"
     }
   ],
   "suivi": {
@@ -1732,7 +1790,7 @@
       ],
       "source": "Assemblée nationale — dossier législatif",
       "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/PLF_2027",
-      "mis_a_jour_le": "2026-10-09",
+      "mis_a_jour_le": "2026-10-12",
       "mesures": {
         "libelle": "Projet de loi n° 3210 (texte déposé par le Gouvernement)",
         "url": "https://www.assemblee-nationale.fr/dyn/17/textes/l17b3210_projet-loi",
@@ -3031,7 +3089,7 @@
       ],
       "source": "Assemblée nationale — dossier législatif",
       "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/PLFSS_2027",
-      "mis_a_jour_le": "2026-10-09",
+      "mis_a_jour_le": "2026-10-12",
       "mesures": {
         "libelle": "Projet de loi n° 3211 (texte déposé par le Gouvernement)",
         "url": "https://www.assemblee-nationale.fr/dyn/17/textes/l17b3211_projet-loi",
@@ -4362,6 +4420,16 @@
       "date": "2027-01-05",
       "titre": "Travailleurs indépendants : prélèvement mensuel des cotisations (échéance du 5)",
       "detail": "Prélèvement le 5 de chaque mois, de janvier à décembre (date par défaut). Montants sur l'échéancier de l'espace en ligne Urssaf.",
+      "categorie": "social",
+      "source": "Urssaf",
+      "url": "https://www.urssaf.fr/accueil/independant/comprendre-payer-cotisations/calendrier-paiement-cotisations.html",
+      "origine": "saisie"
+    },
+    {
+      "id": "urssaf-ti-mensuel-20-2027-01-20",
+      "date": "2027-01-20",
+      "titre": "Travailleurs indépendants : prélèvement mensuel des cotisations (échéance du 20)",
+      "detail": "Pour ceux qui ont choisi le prélèvement le 20 de chaque mois.",
       "categorie": "social",
       "source": "Urssaf",
       "url": "https://www.urssaf.fr/accueil/independant/comprendre-payer-cotisations/calendrier-paiement-cotisations.html",
