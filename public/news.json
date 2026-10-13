@@ -1,7 +1,42 @@
 {
   "version": 1,
-  "genere_le": "2026-10-12T04:44:54.073Z",
+  "genere_le": "2026-10-13T04:45:51.493Z",
   "articles": [
+    {
+      "id": "041c8a3985e60998",
+      "titre": "N° 3279 tome IX - Avis de M. Aurélien Taché sur le projet de loi de finances pour 2027 (n°3210).",
+      "source": "Assemblée nationale — Commission des finances",
+      "source_id": "an-commission-finances",
+      "url": "https://www.assemblee-nationale.fr/17/budget/plf2027/a3279-tIX.asp",
+      "date": "2026-10-12",
+      "theme": "Loi de finances",
+      "resume": null,
+      "importance": 5,
+      "public": [
+        "Expertise comptable",
+        "Conseil aux dirigeants"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-10-13",
+      "score": 13,
+      "pourquoi": {
+        "mots": [
+          {
+            "mot": "projet de loi de finances",
+            "poids": 6
+          },
+          {
+            "mot": "loi de finances",
+            "poids": 5
+          }
+        ],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 2,
+        "score": 11
+      }
+    },
     {
       "id": "473d7f29ebf43c3b",
       "titre": "Modernisation de la radio - rapport n° 18",
@@ -45,12 +80,12 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-09",
-      "score": 1,
+      "score": 0,
       "pourquoi": {
         "mots": [],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 1,
+        "bonus_fraicheur": 0,
         "score": 0
       }
     },
@@ -71,12 +106,12 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-09",
-      "score": 1,
+      "score": 0,
       "pourquoi": {
         "mots": [],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 1,
+        "bonus_fraicheur": 0,
         "score": 0
       }
     },
@@ -1652,7 +1687,7 @@
       "source": "INSEE",
       "url": "https://www.insee.fr/fr/statistiques/serie/011812232",
       "date_publication": "2026-09-15",
-      "collecte_le": "2026-10-12"
+      "collecte_le": "2026-10-13"
     },
     {
       "source_id": "insee-bdm",
@@ -1662,7 +1697,7 @@
       "source": "INSEE",
       "url": "https://www.insee.fr/fr/statistiques/serie/011794844",
       "date_publication": "2026-08-28",
-      "collecte_le": "2026-10-12"
+      "collecte_le": "2026-10-13"
     },
     {
       "source_id": "insee-bdm",
@@ -1672,7 +1707,7 @@
       "source": "INSEE",
       "url": "https://www.insee.fr/fr/statistiques/serie/001688527",
       "date_publication": "2026-08-07",
-      "collecte_le": "2026-10-12"
+      "collecte_le": "2026-10-13"
     },
     {
       "source_id": "insee-bdm",
@@ -1682,7 +1717,7 @@
       "source": "INSEE",
       "url": "https://www.insee.fr/fr/statistiques/serie/001565530",
       "date_publication": "2026-09-24",
-      "collecte_le": "2026-10-12"
+      "collecte_le": "2026-10-13"
     },
     {
       "source_id": "insee-bdm",
@@ -1692,47 +1727,47 @@
       "source": "INSEE",
       "url": "https://www.insee.fr/fr/statistiques/serie/010755537",
       "date_publication": "2026-09-18",
-      "collecte_le": "2026-10-12"
+      "collecte_le": "2026-10-13"
     },
     {
       "source_id": "bodacc-35",
       "libelle": "Créations d’entreprises en Ille-et-Vilaine",
       "valeur": "211 annonces",
-      "periode": "du 05/10/2026 au 11/10/2026",
+      "periode": "du 06/10/2026 au 12/10/2026",
       "source": "BODACC (DILA)",
       "url": "https://www.bodacc.fr/",
-      "date_publication": "2026-10-11",
-      "collecte_le": "2026-10-12"
+      "date_publication": "2026-10-12",
+      "collecte_le": "2026-10-13"
     },
     {
       "source_id": "bodacc-35",
       "libelle": "Procédures collectives en Ille-et-Vilaine",
       "valeur": "50 annonces",
-      "periode": "du 05/10/2026 au 11/10/2026",
+      "periode": "du 06/10/2026 au 12/10/2026",
       "source": "BODACC (DILA)",
       "url": "https://www.bodacc.fr/",
-      "date_publication": "2026-10-11",
-      "collecte_le": "2026-10-12"
+      "date_publication": "2026-10-12",
+      "collecte_le": "2026-10-13"
     },
     {
       "source_id": "bodacc-35",
       "libelle": "Ventes et cessions de fonds en Ille-et-Vilaine",
       "valeur": "31 annonces",
-      "periode": "du 05/10/2026 au 11/10/2026",
+      "periode": "du 06/10/2026 au 12/10/2026",
       "source": "BODACC (DILA)",
       "url": "https://www.bodacc.fr/",
-      "date_publication": "2026-10-11",
-      "collecte_le": "2026-10-12"
+      "date_publication": "2026-10-12",
+      "collecte_le": "2026-10-13"
     },
     {
       "source_id": "bodacc-35",
       "libelle": "Radiations en Ille-et-Vilaine",
       "valeur": "185 annonces",
-      "periode": "du 05/10/2026 au 11/10/2026",
+      "periode": "du 06/10/2026 au 12/10/2026",
       "source": "BODACC (DILA)",
       "url": "https://www.bodacc.fr/",
-      "date_publication": "2026-10-11",
-      "collecte_le": "2026-10-12"
+      "date_publication": "2026-10-12",
+      "collecte_le": "2026-10-13"
     }
   ],
   "suivi": {
@@ -1790,7 +1825,7 @@
       ],
       "source": "Assemblée nationale — dossier législatif",
       "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/PLF_2027",
-      "mis_a_jour_le": "2026-10-12",
+      "mis_a_jour_le": "2026-10-13",
       "mesures": {
         "libelle": "Projet de loi n° 3210 (texte déposé par le Gouvernement)",
         "url": "https://www.assemblee-nationale.fr/dyn/17/textes/l17b3210_projet-loi",
@@ -3089,7 +3124,7 @@
       ],
       "source": "Assemblée nationale — dossier législatif",
       "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/PLFSS_2027",
-      "mis_a_jour_le": "2026-10-12",
+      "mis_a_jour_le": "2026-10-13",
       "mesures": {
         "libelle": "Projet de loi n° 3211 (texte déposé par le Gouvernement)",
         "url": "https://www.assemblee-nationale.fr/dyn/17/textes/l17b3211_projet-loi",
@@ -3835,26 +3870,6 @@
     }
   ],
   "echeances": [
-    {
-      "id": "impots-2026-10-05-6e0408c6",
-      "date": "2026-10-05",
-      "titre": "Prélèvement à la source – DSN",
-      "detail": "Date limite pour la télédéclaration DSN de septembre 2026 et le télépaiement (entreprises de 50 salariés ou plus).",
-      "categorie": "social",
-      "source": "impots.gouv.fr — calendrier fiscal",
-      "url": "https://www.impots.gouv.fr/professionnel/calendrier-fiscal/2026-10",
-      "origine": "calendrier_officiel"
-    },
-    {
-      "id": "urssaf-ti-mensuel-5-2026-10-05",
-      "date": "2026-10-05",
-      "titre": "Travailleurs indépendants : prélèvement mensuel des cotisations (échéance du 5)",
-      "detail": "Prélèvement le 5 de chaque mois, de janvier à décembre (date par défaut). Montants sur l'échéancier de l'espace en ligne Urssaf.",
-      "categorie": "social",
-      "source": "Urssaf",
-      "url": "https://www.urssaf.fr/accueil/independant/comprendre-payer-cotisations/calendrier-paiement-cotisations.html",
-      "origine": "saisie"
-    },
     {
       "id": "impots-2026-10-12-d7f63edc",
       "date": "2026-10-12",
