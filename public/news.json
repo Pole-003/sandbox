@@ -1,7 +1,518 @@
 {
   "version": 1,
-  "genere_le": "2026-10-13T04:45:51.493Z",
+  "genere_le": "2026-10-14T04:57:51.237Z",
   "articles": [
+    {
+      "id": "80354f021703487a",
+      "titre": "Égalité d'accès aux soins des Ultramarins sur l'ensemble du territoire national - texte de la commission N° 35",
+      "source": "Sénat — Derniers textes",
+      "source_id": "senat-textes",
+      "url": "https://www.senat.fr/leg/ppl26-035.html",
+      "date": "2026-10-14",
+      "theme": "Loi de finances",
+      "resume": "Proposition de loi pour l'égalité d'accès aux soins des Ultramarins sur l'ensemble du territoire national : texte de la commission N° 35 déposé le 13 octobre 2026",
+      "importance": 1,
+      "public": [
+        "Expertise comptable",
+        "Conseil aux dirigeants"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-10-14",
+      "score": 2,
+      "pourquoi": {
+        "mots": [],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 2,
+        "score": 0
+      }
+    },
+    {
+      "id": "04d779e8199ebe48",
+      "titre": "Encadrer les usages des produits à base de cannabidiol - texte N° 21",
+      "source": "Sénat — Derniers textes",
+      "source_id": "senat-textes",
+      "url": "https://www.senat.fr/leg/ppl26-021.html",
+      "date": "2026-10-14",
+      "theme": "Loi de finances",
+      "resume": "Proposition de loi visant à encadrer la production, la traçabilité, la distribution et certains usages des produits à base de cannabidiol : texte N° 21 de M. Guillaume GONTARD et plusieurs de ses collègues, déposé au Sénat le 8 octobre 2026",
+      "importance": 1,
+      "public": [
+        "Expertise comptable",
+        "Conseil aux dirigeants"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-10-14",
+      "score": 2,
+      "pourquoi": {
+        "mots": [],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 2,
+        "score": 0
+      }
+    },
+    {
+      "id": "e3224ed493a66a32",
+      "titre": "Faciliter l'accès à l'interruption volontaire de grossesse - texte N° 20",
+      "source": "Sénat — Derniers textes",
+      "source_id": "senat-textes",
+      "url": "https://www.senat.fr/leg/ppl26-020.html",
+      "date": "2026-10-14",
+      "theme": "Loi de finances",
+      "resume": "Proposition de loi visant à faciliter l'accès à l'interruption volontaire de grossesse : texte N° 20 de Mme Laurence ROSSIGNOL, déposé au Sénat le 8 octobre 2026",
+      "importance": 1,
+      "public": [
+        "Expertise comptable",
+        "Conseil aux dirigeants"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-10-14",
+      "score": 2,
+      "pourquoi": {
+        "mots": [],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 2,
+        "score": 0
+      }
+    },
+    {
+      "id": "233cb1555803a777",
+      "titre": "N° 3291 annexe 46 - Rapport de M. Jean-Philippe Tanguy sur le projet de loi de finances pour 2027 (n°3210).",
+      "source": "Assemblée nationale — Publications parlementaires",
+      "source_id": "an-documents",
+      "url": "https://www.assemblee-nationale.fr/17/budget/plf2027/b3291-tIII-a46.asp",
+      "date": "2026-10-13",
+      "theme": "Loi de finances",
+      "resume": null,
+      "importance": 5,
+      "public": [
+        "Expertise comptable",
+        "Conseil aux dirigeants"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-10-14",
+      "autres_sources": [
+        {
+          "source": "Assemblée nationale — Commission des finances",
+          "url": "https://www.assemblee-nationale.fr/17/rapports/r3291-tII-v1.asp",
+          "titre": "N° 3291 volume 1 - Rapport de M. Philippe Juvin sur le projet de loi de finances pour 2027 (n°3210)."
+        }
+      ],
+      "score": 13,
+      "pourquoi": {
+        "mots": [
+          {
+            "mot": "projet de loi de finances",
+            "poids": 6
+          },
+          {
+            "mot": "loi de finances",
+            "poids": 5
+          }
+        ],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 2,
+        "score": 11
+      }
+    },
+    {
+      "id": "590beb35183197e6",
+      "titre": "N° 3328 - Proposition de loi de M. Corentin Le Fur visant à étendre le crédit d'impôt pour frais de garde des enfants jusqu'à onze ans",
+      "source": "Assemblée nationale — Commission des finances",
+      "source_id": "an-commission-finances",
+      "url": "https://www.assemblee-nationale.fr/17/propositions/pion3328.asp",
+      "date": "2026-10-13",
+      "theme": "Fiscal et comptable",
+      "resume": null,
+      "importance": 3,
+      "public": [
+        "Expertise comptable"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-10-14",
+      "score": 7,
+      "pourquoi": {
+        "mots": [
+          {
+            "mot": "impôt",
+            "poids": 2
+          },
+          {
+            "mot": "crédit d'impôt",
+            "poids": 3
+          }
+        ],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 2,
+        "score": 5
+      }
+    },
+    {
+      "id": "84dbe9bddc03b2c8",
+      "titre": "N° 3303 - Proposition de loi de M. Philippe Juvin relative à la protection des intérêts stratégiques de la Nation face aux investissements étrangers",
+      "source": "Assemblée nationale — Commission des finances",
+      "source_id": "an-commission-finances",
+      "url": "https://www.assemblee-nationale.fr/17/propositions/pion3303.asp",
+      "date": "2026-10-13",
+      "theme": "Économie et statistiques",
+      "resume": null,
+      "importance": 2,
+      "public": [
+        "Conseil aux dirigeants"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-10-14",
+      "score": 3,
+      "pourquoi": {
+        "mots": [
+          {
+            "mot": "investissement",
+            "poids": 1
+          }
+        ],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 2,
+        "score": 1
+      }
+    },
+    {
+      "id": "5f8314a0457e8439",
+      "titre": "N° 3307 - Proposition de loi de Mme Élise Leboucher visant à refonder le financement, l'organisation et les pratiques de la psychiatrie française",
+      "source": "Assemblée nationale — Commission des affaires sociales",
+      "source_id": "an-commission-affaires-sociales",
+      "url": "https://www.assemblee-nationale.fr/17/propositions/pion3307.asp",
+      "date": "2026-10-13",
+      "theme": "Sécurité sociale",
+      "resume": null,
+      "importance": 1,
+      "public": [
+        "Social / paie"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-10-14",
+      "score": 2,
+      "pourquoi": {
+        "mots": [],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 2,
+        "score": 0
+      }
+    },
+    {
+      "id": "28f331ea0d9cfc9b",
+      "titre": "N° 3309 - Proposition de loi de Mme Josiane Corneloup visant à maintenir les pharmacies existantes dans les communes rurales",
+      "source": "Assemblée nationale — Commission des affaires sociales",
+      "source_id": "an-commission-affaires-sociales",
+      "url": "https://www.assemblee-nationale.fr/17/propositions/pion3309.asp",
+      "date": "2026-10-13",
+      "theme": "Sécurité sociale",
+      "resume": null,
+      "importance": 1,
+      "public": [
+        "Social / paie"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-10-14",
+      "score": 2,
+      "pourquoi": {
+        "mots": [],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 2,
+        "score": 0
+      }
+    },
+    {
+      "id": "dea579ffe92b83a2",
+      "titre": "N° 3314 - Proposition de loi de Mme Constance de Pélichy visant à autoriser le diagnostic préimplantatoire des aneuploïdies au bénéfice des couples, et des femmes engagées dans une démarche d'assistance médicale à la procréation",
+      "source": "Assemblée nationale — Commission des affaires sociales",
+      "source_id": "an-commission-affaires-sociales",
+      "url": "https://www.assemblee-nationale.fr/17/propositions/pion3314.asp",
+      "date": "2026-10-13",
+      "theme": "Sécurité sociale",
+      "resume": null,
+      "importance": 1,
+      "public": [
+        "Social / paie"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-10-14",
+      "score": 2,
+      "pourquoi": {
+        "mots": [],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 2,
+        "score": 0
+      }
+    },
+    {
+      "id": "9c01521d65e7d1f0",
+      "titre": "N° 3315 - Proposition de loi de M. Antoine Vermorel visant à rendre obligatoire l'étiquetage de la viande issue d'animaux abattus sans étourdissement",
+      "source": "Assemblée nationale — Commission des affaires économiques",
+      "source_id": "an-commission-affaires-economiques",
+      "url": "https://www.assemblee-nationale.fr/17/propositions/pion3315.asp",
+      "date": "2026-10-13",
+      "theme": "Économie et statistiques",
+      "resume": null,
+      "importance": 1,
+      "public": [
+        "Conseil aux dirigeants"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-10-14",
+      "score": 2,
+      "pourquoi": {
+        "mots": [],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 2,
+        "score": 0
+      }
+    },
+    {
+      "id": "94639bdff282073e",
+      "titre": "N° 3316 - Proposition de loi de M. Antoine Vermorel visant à protéger les enfants de la publicité pour les produits trop gras, trop sucrés, trop salés et ultra-transformés sur le modèle britannique",
+      "source": "Assemblée nationale — Commission des affaires sociales",
+      "source_id": "an-commission-affaires-sociales",
+      "url": "https://www.assemblee-nationale.fr/17/propositions/pion3316.asp",
+      "date": "2026-10-13",
+      "theme": "Sécurité sociale",
+      "resume": null,
+      "importance": 1,
+      "public": [
+        "Social / paie"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-10-14",
+      "score": 2,
+      "pourquoi": {
+        "mots": [],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 2,
+        "score": 0
+      }
+    },
+    {
+      "id": "67fb25f52b6c234f",
+      "titre": "N° 3319 - Proposition de loi de M. Sébastien Huyghe visant à moderniser les communications d'urgence",
+      "source": "Assemblée nationale — Commission des affaires économiques",
+      "source_id": "an-commission-affaires-economiques",
+      "url": "https://www.assemblee-nationale.fr/17/propositions/pion3319.asp",
+      "date": "2026-10-13",
+      "theme": "Économie et statistiques",
+      "resume": null,
+      "importance": 1,
+      "public": [
+        "Conseil aux dirigeants"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-10-14",
+      "score": 2,
+      "pourquoi": {
+        "mots": [],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 2,
+        "score": 0
+      }
+    },
+    {
+      "id": "6d9a51fcbe1b382c",
+      "titre": "N° 3323 - Proposition de loi de M. Yannick Neuder visant à prévenir l'exposition des mineurs et jeunes adultes aux boissons énergisantes et aux boissons alcooliques",
+      "source": "Assemblée nationale — Commission des affaires sociales",
+      "source_id": "an-commission-affaires-sociales",
+      "url": "https://www.assemblee-nationale.fr/17/propositions/pion3323.asp",
+      "date": "2026-10-13",
+      "theme": "Sécurité sociale",
+      "resume": null,
+      "importance": 1,
+      "public": [
+        "Social / paie"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-10-14",
+      "score": 2,
+      "pourquoi": {
+        "mots": [],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 2,
+        "score": 0
+      }
+    },
+    {
+      "id": "1bfffb8cd966fa1f",
+      "titre": "N° 3324 - Proposition de loi de M. Benoît Biteau visant à interdire l'utilisation de l'hexane dans la fabrication des aliments destinés à l'alimentation humaine et animale, ainsi que la mise sur le marché des produits qui en dérivent",
+      "source": "Assemblée nationale — Commission des affaires économiques",
+      "source_id": "an-commission-affaires-economiques",
+      "url": "https://www.assemblee-nationale.fr/17/propositions/pion3324.asp",
+      "date": "2026-10-13",
+      "theme": "Économie et statistiques",
+      "resume": null,
+      "importance": 1,
+      "public": [
+        "Conseil aux dirigeants"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-10-14",
+      "score": 2,
+      "pourquoi": {
+        "mots": [],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 2,
+        "score": 0
+      }
+    },
+    {
+      "id": "b0c88298f736e884",
+      "titre": "N° 3325 - Proposition de loi de M. Sébastien Peytavie relative à la garantie de l'exercice des droits fondamentaux des personnes handicapées",
+      "source": "Assemblée nationale — Commission des affaires sociales",
+      "source_id": "an-commission-affaires-sociales",
+      "url": "https://www.assemblee-nationale.fr/17/propositions/pion3325.asp",
+      "date": "2026-10-13",
+      "theme": "Sécurité sociale",
+      "resume": null,
+      "importance": 1,
+      "public": [
+        "Social / paie"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-10-14",
+      "score": 2,
+      "pourquoi": {
+        "mots": [],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 2,
+        "score": 0
+      }
+    },
+    {
+      "id": "f7affbb3febee4cf",
+      "titre": "N° 3327 - Proposition de loi de M. Corentin Le Fur visant à adapter le barème kilométrique pour soutenir la France qui travaille et la transition du parc automobile",
+      "source": "Assemblée nationale — Commission des finances",
+      "source_id": "an-commission-finances",
+      "url": "https://www.assemblee-nationale.fr/17/propositions/pion3327.asp",
+      "date": "2026-10-13",
+      "theme": "Loi de finances",
+      "resume": null,
+      "importance": 1,
+      "public": [
+        "Expertise comptable",
+        "Conseil aux dirigeants"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-10-14",
+      "score": 2,
+      "pourquoi": {
+        "mots": [],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 2,
+        "score": 0
+      }
+    },
+    {
+      "id": "5b50be603140ee4d",
+      "titre": "N° 3329 - Proposition de loi de M. Corentin Le Fur visant à encourager la réhabilitation des friches",
+      "source": "Assemblée nationale — Commission des finances",
+      "source_id": "an-commission-finances",
+      "url": "https://www.assemblee-nationale.fr/17/propositions/pion3329.asp",
+      "date": "2026-10-13",
+      "theme": "Loi de finances",
+      "resume": null,
+      "importance": 1,
+      "public": [
+        "Expertise comptable",
+        "Conseil aux dirigeants"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-10-14",
+      "score": 2,
+      "pourquoi": {
+        "mots": [],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 2,
+        "score": 0
+      }
+    },
+    {
+      "id": "394d2d73dd485aa0",
+      "titre": "N° 3333 - Proposition de loi de Mme Constance Le Grip visant à simplifier les démarches de stationnement des titulaires de la Carte Mobilité Inclusion mention « stationnement pour personnes handicapées »",
+      "source": "Assemblée nationale — Commission des affaires sociales",
+      "source_id": "an-commission-affaires-sociales",
+      "url": "https://www.assemblee-nationale.fr/17/propositions/pion3333.asp",
+      "date": "2026-10-13",
+      "theme": "Sécurité sociale",
+      "resume": null,
+      "importance": 1,
+      "public": [
+        "Social / paie"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-10-14",
+      "score": 2,
+      "pourquoi": {
+        "mots": [],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 2,
+        "score": 0
+      }
+    },
+    {
+      "id": "d8e4d0bbd665cbc2",
+      "titre": "Texte adopté n° 352 - Proposition de loi, adoptée, par l'Assemblée nationale après engagement de la procédure accélérée, visant à moderniser et rééquilibrer le fonctionnement du titre-restaurant",
+      "source": "Assemblée nationale — Commission des affaires sociales",
+      "source_id": "an-commission-affaires-sociales",
+      "url": "https://www.assemblee-nationale.fr/17/ta/ta0352.asp",
+      "date": "2026-10-13",
+      "theme": "Sécurité sociale",
+      "resume": null,
+      "importance": 1,
+      "public": [
+        "Social / paie"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-10-14",
+      "score": 2,
+      "pourquoi": {
+        "mots": [],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 2,
+        "score": 0
+      }
+    },
     {
       "id": "041c8a3985e60998",
       "titre": "N° 3279 tome IX - Avis de M. Aurélien Taché sur le projet de loi de finances pour 2027 (n°3210).",
@@ -19,7 +530,7 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-13",
-      "score": 13,
+      "score": 12,
       "pourquoi": {
         "mots": [
           {
@@ -33,7 +544,7 @@
         ],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 2,
+        "bonus_fraicheur": 1,
         "score": 11
       }
     },
@@ -54,12 +565,12 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-12",
-      "score": 1,
+      "score": 0,
       "pourquoi": {
         "mots": [],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 1,
+        "bonus_fraicheur": 0,
         "score": 0
       }
     },
@@ -372,9 +883,9 @@
       },
       "autres_sources": [
         {
-          "source": "Sénat — Économie et finances, fiscalité",
+          "source": "Sénat — Derniers rapports",
           "url": "https://www.senat.fr/rap/l26-007/l26-007.html",
-          "titre": "Maîtrise d'ouvrage pour les communes rurales - Rapport n° 7"
+          "titre": "Maîtrise d'ouvrage pour les communes rurales - rapport n° 7"
         }
       ]
     },
@@ -1687,7 +2198,7 @@
       "source": "INSEE",
       "url": "https://www.insee.fr/fr/statistiques/serie/011812232",
       "date_publication": "2026-09-15",
-      "collecte_le": "2026-10-13"
+      "collecte_le": "2026-10-14"
     },
     {
       "source_id": "insee-bdm",
@@ -1697,7 +2208,7 @@
       "source": "INSEE",
       "url": "https://www.insee.fr/fr/statistiques/serie/011794844",
       "date_publication": "2026-08-28",
-      "collecte_le": "2026-10-13"
+      "collecte_le": "2026-10-14"
     },
     {
       "source_id": "insee-bdm",
@@ -1707,7 +2218,7 @@
       "source": "INSEE",
       "url": "https://www.insee.fr/fr/statistiques/serie/001688527",
       "date_publication": "2026-08-07",
-      "collecte_le": "2026-10-13"
+      "collecte_le": "2026-10-14"
     },
     {
       "source_id": "insee-bdm",
@@ -1717,7 +2228,7 @@
       "source": "INSEE",
       "url": "https://www.insee.fr/fr/statistiques/serie/001565530",
       "date_publication": "2026-09-24",
-      "collecte_le": "2026-10-13"
+      "collecte_le": "2026-10-14"
     },
     {
       "source_id": "insee-bdm",
@@ -1727,47 +2238,47 @@
       "source": "INSEE",
       "url": "https://www.insee.fr/fr/statistiques/serie/010755537",
       "date_publication": "2026-09-18",
-      "collecte_le": "2026-10-13"
+      "collecte_le": "2026-10-14"
     },
     {
       "source_id": "bodacc-35",
       "libelle": "Créations d’entreprises en Ille-et-Vilaine",
-      "valeur": "211 annonces",
-      "periode": "du 06/10/2026 au 12/10/2026",
+      "valeur": "218 annonces",
+      "periode": "du 07/10/2026 au 13/10/2026",
       "source": "BODACC (DILA)",
       "url": "https://www.bodacc.fr/",
-      "date_publication": "2026-10-12",
-      "collecte_le": "2026-10-13"
+      "date_publication": "2026-10-13",
+      "collecte_le": "2026-10-14"
     },
     {
       "source_id": "bodacc-35",
       "libelle": "Procédures collectives en Ille-et-Vilaine",
-      "valeur": "50 annonces",
-      "periode": "du 06/10/2026 au 12/10/2026",
+      "valeur": "38 annonces",
+      "periode": "du 07/10/2026 au 13/10/2026",
       "source": "BODACC (DILA)",
       "url": "https://www.bodacc.fr/",
-      "date_publication": "2026-10-12",
-      "collecte_le": "2026-10-13"
+      "date_publication": "2026-10-13",
+      "collecte_le": "2026-10-14"
     },
     {
       "source_id": "bodacc-35",
       "libelle": "Ventes et cessions de fonds en Ille-et-Vilaine",
-      "valeur": "31 annonces",
-      "periode": "du 06/10/2026 au 12/10/2026",
+      "valeur": "32 annonces",
+      "periode": "du 07/10/2026 au 13/10/2026",
       "source": "BODACC (DILA)",
       "url": "https://www.bodacc.fr/",
-      "date_publication": "2026-10-12",
-      "collecte_le": "2026-10-13"
+      "date_publication": "2026-10-13",
+      "collecte_le": "2026-10-14"
     },
     {
       "source_id": "bodacc-35",
       "libelle": "Radiations en Ille-et-Vilaine",
-      "valeur": "185 annonces",
-      "periode": "du 06/10/2026 au 12/10/2026",
+      "valeur": "159 annonces",
+      "periode": "du 07/10/2026 au 13/10/2026",
       "source": "BODACC (DILA)",
       "url": "https://www.bodacc.fr/",
-      "date_publication": "2026-10-12",
-      "collecte_le": "2026-10-13"
+      "date_publication": "2026-10-13",
+      "collecte_le": "2026-10-14"
     }
   ],
   "suivi": {
@@ -1825,7 +2336,7 @@
       ],
       "source": "Assemblée nationale — dossier législatif",
       "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/PLF_2027",
-      "mis_a_jour_le": "2026-10-13",
+      "mis_a_jour_le": "2026-10-14",
       "mesures": {
         "libelle": "Projet de loi n° 3210 (texte déposé par le Gouvernement)",
         "url": "https://www.assemblee-nationale.fr/dyn/17/textes/l17b3210_projet-loi",
@@ -3124,7 +3635,7 @@
       ],
       "source": "Assemblée nationale — dossier législatif",
       "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/PLFSS_2027",
-      "mis_a_jour_le": "2026-10-13",
+      "mis_a_jour_le": "2026-10-14",
       "mesures": {
         "libelle": "Projet de loi n° 3211 (texte déposé par le Gouvernement)",
         "url": "https://www.assemblee-nationale.fr/dyn/17/textes/l17b3211_projet-loi",
