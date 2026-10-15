@@ -1,7 +1,413 @@
 {
   "version": 1,
-  "genere_le": "2026-10-14T04:57:51.237Z",
+  "genere_le": "2026-10-15T04:56:25.687Z",
   "articles": [
+    {
+      "id": "b2f9165f9e4c434b",
+      "titre": "Abrogation du « code noir » - texte de la commission N° 56",
+      "source": "Sénat — Derniers textes",
+      "source_id": "senat-textes",
+      "url": "https://www.senat.fr/leg/ppl26-056.html",
+      "date": "2026-10-15",
+      "theme": "Loi de finances",
+      "resume": "Proposition de loi portant abrogation du « code noir » : texte de la commission N° 56 déposé le 14 octobre 2026",
+      "importance": 1,
+      "public": [
+        "Expertise comptable",
+        "Conseil aux dirigeants"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-10-15",
+      "score": 2,
+      "pourquoi": {
+        "mots": [],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 2,
+        "score": 0
+      }
+    },
+    {
+      "id": "36ecb7b1dc9f8a95",
+      "titre": "Accès à un panier diversifié de denrées alimentaires - texte N° 50",
+      "source": "Sénat — Derniers textes",
+      "source_id": "senat-textes",
+      "url": "https://www.senat.fr/leg/ppl26-050.html",
+      "date": "2026-10-15",
+      "theme": "Loi de finances",
+      "resume": "Proposition de loi visant à garantir l'accès à un panier diversifié de denrées alimentaires favorables à la santé et vendues à prix coûtant : texte N° 50 résultat des travaux de la commission le 14 octobre 2026",
+      "importance": 1,
+      "public": [
+        "Expertise comptable",
+        "Conseil aux dirigeants"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-10-15",
+      "score": 2,
+      "pourquoi": {
+        "mots": [],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 2,
+        "score": 0
+      }
+    },
+    {
+      "id": "0da5e9f06aab9401",
+      "titre": "Contributions à l'ONF et composition de son conseil d'administration - texte de la commission N° 60",
+      "source": "Sénat — Derniers textes",
+      "source_id": "senat-textes",
+      "url": "https://www.senat.fr/leg/ppl26-060.html",
+      "date": "2026-10-15",
+      "theme": "Loi de finances",
+      "resume": "Proposition de loi relative aux modalités de recouvrement de la contribution aux frais de garderie et de la contribution additionnelle versées à l'ONF par les collectivités territoriales et personnes morales propriétaires de bois et forêts relevant du régime forestier : texte de la commission N°…",
+      "importance": 1,
+      "public": [
+        "Expertise comptable",
+        "Conseil aux dirigeants"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-10-15",
+      "score": 2,
+      "pourquoi": {
+        "mots": [],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 2,
+        "score": 0
+      }
+    },
+    {
+      "id": "f0fa1103cf973b2d",
+      "titre": "Divers ajustements du code des impositions sur les biens et services - texte N° 71",
+      "source": "Sénat — Derniers textes",
+      "source_id": "senat-textes",
+      "url": "https://www.senat.fr/leg/pjl26-071.html",
+      "date": "2026-10-15",
+      "theme": "Loi de finances",
+      "resume": "Projet de loi ratifiant l'ordonnance n° 2026-671 du 27 juillet 2026 portant divers ajustements du code des impositions sur les biens et services : texte N° 71 de M. Roland LESCURE, ministre de l'économie, des finances et de la souveraineté industrielle, énergétique et numérique, déposé au Sénat le…",
+      "importance": 1,
+      "public": [
+        "Expertise comptable",
+        "Conseil aux dirigeants"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-10-15",
+      "score": 2,
+      "pourquoi": {
+        "mots": [],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 2,
+        "score": 0
+      }
+    },
+    {
+      "id": "6a5eb94e1a1b53ae",
+      "titre": "Encadrer le nombre de listes aux élections européennes - texte N° 33",
+      "source": "Sénat — Derniers textes",
+      "source_id": "senat-textes",
+      "url": "https://www.senat.fr/leg/ppl26-033.html",
+      "date": "2026-10-15",
+      "theme": "Loi de finances",
+      "resume": "Proposition de loi visant à encadrer le nombre de listes aux élections européennes : texte N° 33 de M. Olivier PACCAUD et plusieurs de ses collègues, déposé au Sénat le 13 octobre 2026",
+      "importance": 1,
+      "public": [
+        "Expertise comptable",
+        "Conseil aux dirigeants"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-10-15",
+      "score": 2,
+      "pourquoi": {
+        "mots": [],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 2,
+        "score": 0
+      }
+    },
+    {
+      "id": "9c23da1aa8b02549",
+      "titre": "Garantir la protection des victimes de violences sexistes et sexuelles - texte de la commission N° 68",
+      "source": "Sénat — Derniers textes",
+      "source_id": "senat-textes",
+      "url": "https://www.senat.fr/leg/ppl26-068.html",
+      "date": "2026-10-15",
+      "theme": "Loi de finances",
+      "resume": "Proposition de loi visant à garantir l'information et la protection effective des victimes de violences sexistes et sexuelles lors de la libération de leur agresseur : texte de la commission N° 68 déposé le 14 octobre 2026",
+      "importance": 1,
+      "public": [
+        "Expertise comptable",
+        "Conseil aux dirigeants"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-10-15",
+      "score": 2,
+      "pourquoi": {
+        "mots": [],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 2,
+        "score": 0
+      }
+    },
+    {
+      "id": "e046ff4c595c474f",
+      "titre": "Lutte contre les ingérences étrangères dans la vie démocratique - texte de la commission N° 64",
+      "source": "Sénat — Derniers textes",
+      "source_id": "senat-textes",
+      "url": "https://www.senat.fr/leg/pjl26-064.html",
+      "date": "2026-10-15",
+      "theme": "Loi de finances",
+      "resume": "Projet de loi relatif à la lutte contre les ingérences étrangères dans la vie démocratique : texte de la commission N° 64 déposé le 14 octobre 2026",
+      "importance": 1,
+      "public": [
+        "Expertise comptable",
+        "Conseil aux dirigeants"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-10-15",
+      "score": 2,
+      "pourquoi": {
+        "mots": [],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 2,
+        "score": 0
+      }
+    },
+    {
+      "id": "0a880b3772464438",
+      "titre": "Moderniser et rééquilibrer le fonctionnement du titre-restaurant - texte N° 32",
+      "source": "Sénat — Derniers textes",
+      "source_id": "senat-textes",
+      "url": "https://www.senat.fr/leg/ppl26-032.html",
+      "date": "2026-10-15",
+      "theme": "Loi de finances",
+      "resume": "Proposition de loi visant à moderniser et rééquilibrer le fonctionnement du titre-restaurant : texte N° 32 transmis au Sénat le 13 octobre 2026",
+      "importance": 1,
+      "public": [
+        "Expertise comptable",
+        "Conseil aux dirigeants"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-10-15",
+      "score": 2,
+      "pourquoi": {
+        "mots": [],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 2,
+        "score": 0
+      }
+    },
+    {
+      "id": "cd0417f43c691897",
+      "titre": "Reconnaissance de la Nation envers les rapatriés d'Indochine - texte de la commission N° 66",
+      "source": "Sénat — Derniers textes",
+      "source_id": "senat-textes",
+      "url": "https://www.senat.fr/leg/ppl26-066.html",
+      "date": "2026-10-15",
+      "theme": "Loi de finances",
+      "resume": "Proposition de loi portant reconnaissance de la Nation envers les rapatriés d'Indochine et réparation des préjudices subis par ceux-ci et leurs familles du fait de l'indignité de leurs conditions d'accueil et de vie dans certaines structures sur le territoire français : texte de la commission N°…",
+      "importance": 1,
+      "public": [
+        "Expertise comptable",
+        "Conseil aux dirigeants"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-10-15",
+      "score": 2,
+      "pourquoi": {
+        "mots": [],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 2,
+        "score": 0
+      }
+    },
+    {
+      "id": "f37c025b6838373b",
+      "titre": "Reconnaître une politique nationale d'adaptation au changement climatique - texte de la commission N° 62",
+      "source": "Sénat — Derniers textes",
+      "source_id": "senat-textes",
+      "url": "https://www.senat.fr/leg/ppl26-062.html",
+      "date": "2026-10-15",
+      "theme": "Loi de finances",
+      "resume": "Proposition de loi visant à reconnaître une politique nationale d'adaptation au changement climatique et à adapter les mécanismes d'assurance : texte de la commission N° 62 déposé le 14 octobre 2026",
+      "importance": 1,
+      "public": [
+        "Expertise comptable",
+        "Conseil aux dirigeants"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-10-15",
+      "autres_sources": [
+        {
+          "source": "Sénat — Économie et finances, fiscalité",
+          "url": "https://www.senat.fr/rap/a26-038/a26-038.html",
+          "titre": "Reconnaître une politique nationale d'adaptation au changement climatique - Avis n° 38"
+        }
+      ],
+      "score": 2,
+      "pourquoi": {
+        "mots": [],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 2,
+        "score": 0
+      }
+    },
+    {
+      "id": "cd182e5914eb8630",
+      "titre": "Réduire les risques sanitaires liés aux contaminations au cadmium - texte de la commission N° 54",
+      "source": "Sénat — Derniers textes",
+      "source_id": "senat-textes",
+      "url": "https://www.senat.fr/leg/ppl26-054.html",
+      "date": "2026-10-15",
+      "theme": "Loi de finances",
+      "resume": "Proposition de loi visant à réduire les risques sanitaires liés aux contaminations au cadmium dans l'alimentation : texte de la commission N° 54 déposé le 14 octobre 2026",
+      "importance": 1,
+      "public": [
+        "Expertise comptable",
+        "Conseil aux dirigeants"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-10-15",
+      "score": 2,
+      "pourquoi": {
+        "mots": [],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 2,
+        "score": 0
+      }
+    },
+    {
+      "id": "acfcd457f35d2377",
+      "titre": "Retrouver la confiance et l'équilibre dans les rapports locatifs - texte de la commission N° 48",
+      "source": "Sénat — Derniers textes",
+      "source_id": "senat-textes",
+      "url": "https://www.senat.fr/leg/ppl26-048.html",
+      "date": "2026-10-15",
+      "theme": "Loi de finances",
+      "resume": "Proposition de loi pour retrouver la confiance et l'équilibre dans les rapports locatifs : texte de la commission N° 48 déposé le 14 octobre 2026",
+      "importance": 1,
+      "public": [
+        "Expertise comptable",
+        "Conseil aux dirigeants"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-10-15",
+      "score": 2,
+      "pourquoi": {
+        "mots": [],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 2,
+        "score": 0
+      }
+    },
+    {
+      "id": "06cde992c4cbc078",
+      "titre": "Simplifier l'ouverture des débits de boissons en zone rurale - texte de la commission N° 70",
+      "source": "Sénat — Derniers textes",
+      "source_id": "senat-textes",
+      "url": "https://www.senat.fr/leg/ppl26-070.html",
+      "date": "2026-10-15",
+      "theme": "Loi de finances",
+      "resume": "Proposition de loi simplifiant l'ouverture des débits de boissons en zone rurale : texte de la commission N° 70 déposé le 14 octobre 2026",
+      "importance": 1,
+      "public": [
+        "Expertise comptable",
+        "Conseil aux dirigeants"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-10-15",
+      "score": 2,
+      "pourquoi": {
+        "mots": [],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 2,
+        "score": 0
+      }
+    },
+    {
+      "id": "7c74c3bdfdd7430e",
+      "titre": "TVA - Champ d’application du mandat à l’international prévu à l’article 289 A bis du CGI - Mise à jour suite à consultation publique",
+      "source": "BOFiP-Impôts — Actualités",
+      "source_id": "bofip-actualites",
+      "url": "https://bofip.impots.gouv.fr/bofip/15217-PGP.html/ACTU-2026-00165",
+      "date": "2026-10-14",
+      "theme": "Fiscal et comptable",
+      "resume": "TVA - Champ d’application du mandat à l’international prévu à l’article 289 A bis du CGI - Mise à jour suite à consultation publique (identifiant juridique ACTU-2026-00165; publié le 14/10/2026)",
+      "importance": 3,
+      "public": [
+        "Expertise comptable"
+      ],
+      "type": "doctrine",
+      "origine": "flux",
+      "collecte_le": "2026-10-15",
+      "score": 7,
+      "pourquoi": {
+        "mots": [
+          {
+            "mot": "tva",
+            "poids": 3
+          }
+        ],
+        "coefficient": 1,
+        "bonus_source": 2,
+        "bonus_fraicheur": 2,
+        "score": 5
+      }
+    },
+    {
+      "id": "8d4cdb236ed472e5",
+      "titre": "N° 3295 - Proposition de loi organique de Mme Christelle D'Intorni visant à renforcer l'indépendance, les moyens et les pouvoirs du Haut Conseil des finances publiques",
+      "source": "Assemblée nationale — Commission des finances",
+      "source_id": "an-commission-finances",
+      "url": "https://www.assemblee-nationale.fr/17/propositions/pion3295.asp",
+      "date": "2026-10-14",
+      "theme": "Loi de finances",
+      "resume": null,
+      "importance": 2,
+      "public": [
+        "Expertise comptable",
+        "Conseil aux dirigeants"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-10-15",
+      "score": 4,
+      "pourquoi": {
+        "mots": [
+          {
+            "mot": "finances publiques",
+            "poids": 2
+          }
+        ],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 2,
+        "score": 2
+      }
+    },
     {
       "id": "80354f021703487a",
       "titre": "Égalité d'accès aux soins des Ultramarins sur l'ensemble du territoire national - texte de la commission N° 35",
@@ -97,14 +503,7 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-14",
-      "autres_sources": [
-        {
-          "source": "Assemblée nationale — Commission des finances",
-          "url": "https://www.assemblee-nationale.fr/17/rapports/r3291-tII-v1.asp",
-          "titre": "N° 3291 volume 1 - Rapport de M. Philippe Juvin sur le projet de loi de finances pour 2027 (n°3210)."
-        }
-      ],
-      "score": 13,
+      "score": 12,
       "pourquoi": {
         "mots": [
           {
@@ -118,9 +517,16 @@
         ],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 2,
+        "bonus_fraicheur": 1,
         "score": 11
-      }
+      },
+      "autres_sources": [
+        {
+          "source": "Assemblée nationale — Commission des finances",
+          "url": "https://www.assemblee-nationale.fr/17/rapports/r3291-tII-v1.asp",
+          "titre": "N° 3291 volume 1 - Rapport de M. Philippe Juvin sur le projet de loi de finances pour 2027 (n°3210)."
+        }
+      ]
     },
     {
       "id": "590beb35183197e6",
@@ -138,7 +544,7 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-14",
-      "score": 7,
+      "score": 6,
       "pourquoi": {
         "mots": [
           {
@@ -152,7 +558,7 @@
         ],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 2,
+        "bonus_fraicheur": 1,
         "score": 5
       }
     },
@@ -172,7 +578,7 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-14",
-      "score": 3,
+      "score": 2,
       "pourquoi": {
         "mots": [
           {
@@ -182,7 +588,7 @@
         ],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 2,
+        "bonus_fraicheur": 1,
         "score": 1
       }
     },
@@ -202,12 +608,12 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-14",
-      "score": 2,
+      "score": 1,
       "pourquoi": {
         "mots": [],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 2,
+        "bonus_fraicheur": 1,
         "score": 0
       }
     },
@@ -227,12 +633,12 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-14",
-      "score": 2,
+      "score": 1,
       "pourquoi": {
         "mots": [],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 2,
+        "bonus_fraicheur": 1,
         "score": 0
       }
     },
@@ -252,12 +658,12 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-14",
-      "score": 2,
+      "score": 1,
       "pourquoi": {
         "mots": [],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 2,
+        "bonus_fraicheur": 1,
         "score": 0
       }
     },
@@ -277,12 +683,12 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-14",
-      "score": 2,
+      "score": 1,
       "pourquoi": {
         "mots": [],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 2,
+        "bonus_fraicheur": 1,
         "score": 0
       }
     },
@@ -302,12 +708,12 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-14",
-      "score": 2,
+      "score": 1,
       "pourquoi": {
         "mots": [],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 2,
+        "bonus_fraicheur": 1,
         "score": 0
       }
     },
@@ -327,12 +733,12 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-14",
-      "score": 2,
+      "score": 1,
       "pourquoi": {
         "mots": [],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 2,
+        "bonus_fraicheur": 1,
         "score": 0
       }
     },
@@ -352,12 +758,12 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-14",
-      "score": 2,
+      "score": 1,
       "pourquoi": {
         "mots": [],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 2,
+        "bonus_fraicheur": 1,
         "score": 0
       }
     },
@@ -377,12 +783,12 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-14",
-      "score": 2,
+      "score": 1,
       "pourquoi": {
         "mots": [],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 2,
+        "bonus_fraicheur": 1,
         "score": 0
       }
     },
@@ -402,12 +808,12 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-14",
-      "score": 2,
+      "score": 1,
       "pourquoi": {
         "mots": [],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 2,
+        "bonus_fraicheur": 1,
         "score": 0
       }
     },
@@ -428,12 +834,12 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-14",
-      "score": 2,
+      "score": 1,
       "pourquoi": {
         "mots": [],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 2,
+        "bonus_fraicheur": 1,
         "score": 0
       }
     },
@@ -454,12 +860,12 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-14",
-      "score": 2,
+      "score": 1,
       "pourquoi": {
         "mots": [],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 2,
+        "bonus_fraicheur": 1,
         "score": 0
       }
     },
@@ -479,12 +885,12 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-14",
-      "score": 2,
+      "score": 1,
       "pourquoi": {
         "mots": [],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 2,
+        "bonus_fraicheur": 1,
         "score": 0
       }
     },
@@ -504,12 +910,12 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-14",
-      "score": 2,
+      "score": 1,
       "pourquoi": {
         "mots": [],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 2,
+        "bonus_fraicheur": 1,
         "score": 0
       }
     },
@@ -2198,7 +2604,7 @@
       "source": "INSEE",
       "url": "https://www.insee.fr/fr/statistiques/serie/011812232",
       "date_publication": "2026-09-15",
-      "collecte_le": "2026-10-14"
+      "collecte_le": "2026-10-15"
     },
     {
       "source_id": "insee-bdm",
@@ -2208,7 +2614,7 @@
       "source": "INSEE",
       "url": "https://www.insee.fr/fr/statistiques/serie/011794844",
       "date_publication": "2026-08-28",
-      "collecte_le": "2026-10-14"
+      "collecte_le": "2026-10-15"
     },
     {
       "source_id": "insee-bdm",
@@ -2218,7 +2624,7 @@
       "source": "INSEE",
       "url": "https://www.insee.fr/fr/statistiques/serie/001688527",
       "date_publication": "2026-08-07",
-      "collecte_le": "2026-10-14"
+      "collecte_le": "2026-10-15"
     },
     {
       "source_id": "insee-bdm",
@@ -2228,7 +2634,7 @@
       "source": "INSEE",
       "url": "https://www.insee.fr/fr/statistiques/serie/001565530",
       "date_publication": "2026-09-24",
-      "collecte_le": "2026-10-14"
+      "collecte_le": "2026-10-15"
     },
     {
       "source_id": "insee-bdm",
@@ -2238,47 +2644,47 @@
       "source": "INSEE",
       "url": "https://www.insee.fr/fr/statistiques/serie/010755537",
       "date_publication": "2026-09-18",
-      "collecte_le": "2026-10-14"
+      "collecte_le": "2026-10-15"
     },
     {
       "source_id": "bodacc-35",
       "libelle": "Créations d’entreprises en Ille-et-Vilaine",
       "valeur": "218 annonces",
-      "periode": "du 07/10/2026 au 13/10/2026",
+      "periode": "du 08/10/2026 au 14/10/2026",
       "source": "BODACC (DILA)",
       "url": "https://www.bodacc.fr/",
-      "date_publication": "2026-10-13",
-      "collecte_le": "2026-10-14"
+      "date_publication": "2026-10-14",
+      "collecte_le": "2026-10-15"
     },
     {
       "source_id": "bodacc-35",
       "libelle": "Procédures collectives en Ille-et-Vilaine",
-      "valeur": "38 annonces",
-      "periode": "du 07/10/2026 au 13/10/2026",
+      "valeur": "41 annonces",
+      "periode": "du 08/10/2026 au 14/10/2026",
       "source": "BODACC (DILA)",
       "url": "https://www.bodacc.fr/",
-      "date_publication": "2026-10-13",
-      "collecte_le": "2026-10-14"
+      "date_publication": "2026-10-14",
+      "collecte_le": "2026-10-15"
     },
     {
       "source_id": "bodacc-35",
       "libelle": "Ventes et cessions de fonds en Ille-et-Vilaine",
       "valeur": "32 annonces",
-      "periode": "du 07/10/2026 au 13/10/2026",
+      "periode": "du 08/10/2026 au 14/10/2026",
       "source": "BODACC (DILA)",
       "url": "https://www.bodacc.fr/",
-      "date_publication": "2026-10-13",
-      "collecte_le": "2026-10-14"
+      "date_publication": "2026-10-14",
+      "collecte_le": "2026-10-15"
     },
     {
       "source_id": "bodacc-35",
       "libelle": "Radiations en Ille-et-Vilaine",
       "valeur": "159 annonces",
-      "periode": "du 07/10/2026 au 13/10/2026",
+      "periode": "du 08/10/2026 au 14/10/2026",
       "source": "BODACC (DILA)",
       "url": "https://www.bodacc.fr/",
-      "date_publication": "2026-10-13",
-      "collecte_le": "2026-10-14"
+      "date_publication": "2026-10-14",
+      "collecte_le": "2026-10-15"
     }
   ],
   "suivi": {
@@ -2336,7 +2742,7 @@
       ],
       "source": "Assemblée nationale — dossier législatif",
       "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/PLF_2027",
-      "mis_a_jour_le": "2026-10-14",
+      "mis_a_jour_le": "2026-10-15",
       "mesures": {
         "libelle": "Projet de loi n° 3210 (texte déposé par le Gouvernement)",
         "url": "https://www.assemblee-nationale.fr/dyn/17/textes/l17b3210_projet-loi",
@@ -3635,7 +4041,7 @@
       ],
       "source": "Assemblée nationale — dossier législatif",
       "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/PLFSS_2027",
-      "mis_a_jour_le": "2026-10-14",
+      "mis_a_jour_le": "2026-10-15",
       "mesures": {
         "libelle": "Projet de loi n° 3211 (texte déposé par le Gouvernement)",
         "url": "https://www.assemblee-nationale.fr/dyn/17/textes/l17b3211_projet-loi",
