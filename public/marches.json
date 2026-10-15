@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "genere_le": "2026-10-14T17:56:09.424Z",
+  "genere_le": "2026-10-15T05:25:26.054Z",
   "indicateurs": [
     {
       "id": "dette",
@@ -2705,10 +2705,6 @@
       },
       "historique": [
         [
-          "2024-10-14",
-          78.47
-        ],
-        [
           "2024-10-15",
           73.68
         ],
@@ -4730,8 +4726,8 @@
         "heure": "19:00",
         "estimee": true
       },
-      "derniere_tentative": "2026-10-14T17:56:09.424Z",
-      "derniere_reussite": "2026-10-14T17:56:09.424Z",
+      "derniere_tentative": "2026-10-15T05:25:26.054Z",
+      "derniere_reussite": "2026-10-15T05:25:26.054Z",
       "derniere_erreur": null,
       "remarque": null,
       "journal": [
@@ -4741,6 +4737,10 @@
         },
         {
           "date": "2026-10-14",
+          "etat": "sans_nouveaute"
+        },
+        {
+          "date": "2026-10-15",
           "etat": "sans_nouveaute"
         }
       ]
