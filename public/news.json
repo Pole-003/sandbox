@@ -1,7 +1,145 @@
 {
   "version": 1,
-  "genere_le": "2026-10-16T04:58:33.448Z",
+  "genere_le": "2026-10-19T05:01:23.354Z",
   "articles": [
+    {
+      "id": "921daf8d2804396c",
+      "titre": "Diverses dispositions relatives au secteur nucléaire - texte N° 72",
+      "source": "Sénat — Derniers textes",
+      "source_id": "senat-textes",
+      "url": "https://www.senat.fr/leg/pjl26-072.html",
+      "date": "2026-10-17",
+      "theme": "Loi de finances",
+      "resume": "Projet de loi portant diverses dispositions relatives au secteur nucléaire : texte N° 72 de M. Roland LESCURE, ministre de l'économie, des finances et de la souveraineté industrielle, énergétique et numérique, déposé au Sénat le 14 octobre 2026",
+      "importance": 1,
+      "public": [
+        "Expertise comptable",
+        "Conseil aux dirigeants"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-10-19",
+      "score": 1,
+      "pourquoi": {
+        "mots": [],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 1,
+        "score": 0
+      }
+    },
+    {
+      "id": "4dbf1ab77a5db317",
+      "titre": "N° 3345 tome II - Rapport de M. Thibault Bazin, Mme Danielle Simonnet, Mme Christine Loir, Mme Sandrine Runel et M. Louis Boyard sur le projet de loi de financement de la sécurité sociale pour 2027 (n°3211).",
+      "source": "Assemblée nationale — Publications parlementaires",
+      "source_id": "an-documents",
+      "url": "https://www.assemblee-nationale.fr/17/rapports/r3345-tII.asp",
+      "date": "2026-10-16",
+      "theme": "Sécurité sociale",
+      "resume": null,
+      "importance": 4,
+      "public": [
+        "Social / paie"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-10-19",
+      "score": 9,
+      "pourquoi": {
+        "mots": [
+          {
+            "mot": "financement de la sécurité sociale",
+            "poids": 6
+          },
+          {
+            "mot": "sécurité sociale",
+            "poids": 2
+          }
+        ],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 1,
+        "score": 8
+      }
+    },
+    {
+      "id": "53c485a98441458e",
+      "titre": "Abrogation du « code noir » - rapport n° 55",
+      "source": "Sénat — Derniers rapports",
+      "source_id": "senat-rapports",
+      "url": "https://www.senat.fr/rap/l26-055/l26-055.html",
+      "date": "2026-10-16",
+      "theme": "Loi de finances",
+      "resume": "Rapport n° 55 de M. Louis VOGEL, fait au nom de la commission des lois constitutionnelles, de législation, du suffrage universel, du Règlement et d'administration générale, sur la proposition de loi portant abrogation du « code noir » (14 octobre 2026)",
+      "importance": 1,
+      "public": [
+        "Expertise comptable",
+        "Conseil aux dirigeants"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-10-19",
+      "score": 1,
+      "pourquoi": {
+        "mots": [],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 1,
+        "score": 0
+      }
+    },
+    {
+      "id": "0989e603736f6cc1",
+      "titre": "Commémoration de la répression d'Algériens le 17 octobre 1961 - texte N° 74",
+      "source": "Sénat — Derniers textes",
+      "source_id": "senat-textes",
+      "url": "https://www.senat.fr/leg/ppl26-074.html",
+      "date": "2026-10-16",
+      "theme": "Loi de finances",
+      "resume": "Proposition de loi relative à la commémoration de la répression d'Algériens le 17 octobre 1961 et les jours suivants à Paris : texte N° 74 de M. Rachid TEMAL et plusieurs de ses collègues, déposé au Sénat le 15 octobre 2026",
+      "importance": 1,
+      "public": [
+        "Expertise comptable",
+        "Conseil aux dirigeants"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-10-19",
+      "score": 1,
+      "pourquoi": {
+        "mots": [],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 1,
+        "score": 0
+      }
+    },
+    {
+      "id": "225280e52abf41c5",
+      "titre": "Le projet de décret portant ouverture et annulation de crédits à titre d'avance - rapport d'information n° 77",
+      "source": "Sénat — Derniers rapports",
+      "source_id": "senat-rapports",
+      "url": "https://www.senat.fr/notice-rapport/2026/r26-077-notice.html",
+      "date": "2026-10-16",
+      "theme": "Loi de finances",
+      "resume": "Rapport d'information n° 77 de Mme Christine LAVARDE, rapporteur général, fait au nom de la commission des finances : Le projet de décret portant ouverture et annulation de crédits à titre d'avance (16 octobre 2026)",
+      "importance": 1,
+      "public": [
+        "Expertise comptable",
+        "Conseil aux dirigeants"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-10-19",
+      "score": 1,
+      "pourquoi": {
+        "mots": [],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 1,
+        "score": 0
+      }
+    },
     {
       "id": "4cd405225ef5298c",
       "titre": "IR - RSA - Aménagements du régime spécifique d’imposition des gains réalisés dans le cadre de management packages (loi n° 2026-103 du 19 février 2026 de finances pour 2026, art. 24) - Mise à jour suite à consultation publique",
@@ -18,12 +156,12 @@
       "type": "doctrine",
       "origine": "flux",
       "collecte_le": "2026-10-16",
-      "score": 4,
+      "score": 2,
       "pourquoi": {
         "mots": [],
         "coefficient": 1,
         "bonus_source": 2,
-        "bonus_fraicheur": 2,
+        "bonus_fraicheur": 0,
         "score": 2
       }
     },
@@ -44,12 +182,12 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-15",
-      "score": 2,
+      "score": 0,
       "pourquoi": {
         "mots": [],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 2,
+        "bonus_fraicheur": 0,
         "score": 0
       }
     },
@@ -70,14 +208,21 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-15",
-      "score": 2,
+      "score": 0,
       "pourquoi": {
         "mots": [],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 2,
+        "bonus_fraicheur": 0,
         "score": 0
-      }
+      },
+      "autres_sources": [
+        {
+          "source": "Sénat — Derniers rapports",
+          "url": "https://www.senat.fr/rap/l26-049/l26-049.html",
+          "titre": "Accès à un panier diversifié de denrées alimentaires - rapport n° 49"
+        }
+      ]
     },
     {
       "id": "0da5e9f06aab9401",
@@ -96,14 +241,26 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-15",
-      "score": 2,
+      "score": 0,
       "pourquoi": {
         "mots": [],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 2,
+        "bonus_fraicheur": 0,
         "score": 0
-      }
+      },
+      "autres_sources": [
+        {
+          "source": "Sénat — Économie et finances, fiscalité",
+          "url": "https://www.senat.fr/rap/a26-043/a26-043.html",
+          "titre": "Contributions à l'ONF et composition de son conseil d'administration - Avis n° 43"
+        },
+        {
+          "source": "Sénat — Économie et finances, fiscalité",
+          "url": "https://www.senat.fr/rap/l26-059/l26-059.html",
+          "titre": "Contributions à l'ONF et composition de son conseil d'administration - Rapport n° 59"
+        }
+      ]
     },
     {
       "id": "f0fa1103cf973b2d",
@@ -122,12 +279,12 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-15",
-      "score": 2,
+      "score": 0,
       "pourquoi": {
         "mots": [],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 2,
+        "bonus_fraicheur": 0,
         "score": 0
       }
     },
@@ -148,12 +305,12 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-15",
-      "score": 2,
+      "score": 0,
       "pourquoi": {
         "mots": [],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 2,
+        "bonus_fraicheur": 0,
         "score": 0
       }
     },
@@ -174,14 +331,21 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-15",
-      "score": 2,
+      "score": 0,
       "pourquoi": {
         "mots": [],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 2,
+        "bonus_fraicheur": 0,
         "score": 0
-      }
+      },
+      "autres_sources": [
+        {
+          "source": "Sénat — Derniers rapports",
+          "url": "https://www.senat.fr/rap/l26-067/l26-067.html",
+          "titre": "Garantir la protection des victimes de violences sexistes et sexuelles - rapport n° 67"
+        }
+      ]
     },
     {
       "id": "e046ff4c595c474f",
@@ -200,12 +364,12 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-15",
-      "score": 2,
+      "score": 0,
       "pourquoi": {
         "mots": [],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 2,
+        "bonus_fraicheur": 0,
         "score": 0
       },
       "autres_sources": [
@@ -213,6 +377,11 @@
           "source": "Sénat — Derniers rapports",
           "url": "https://www.senat.fr/rap/a26-057/a26-057.html",
           "titre": "Lutte contre les ingérences étrangères dans la vie démocratique - avis n° 57"
+        },
+        {
+          "source": "Sénat — Derniers rapports",
+          "url": "https://www.senat.fr/rap/l26-063/l26-063.html",
+          "titre": "Lutte contre les ingérences étrangères dans la vie démocratique - rapport n° 63"
         }
       ]
     },
@@ -232,12 +401,12 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-16",
-      "score": 2,
+      "score": 0,
       "pourquoi": {
         "mots": [],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 2,
+        "bonus_fraicheur": 0,
         "score": 0
       }
     },
@@ -258,12 +427,12 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-15",
-      "score": 2,
+      "score": 0,
       "pourquoi": {
         "mots": [],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 2,
+        "bonus_fraicheur": 0,
         "score": 0
       }
     },
@@ -284,12 +453,12 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-15",
-      "score": 2,
+      "score": 0,
       "pourquoi": {
         "mots": [],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 2,
+        "bonus_fraicheur": 0,
         "score": 0
       },
       "autres_sources": [
@@ -317,12 +486,12 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-15",
-      "score": 2,
+      "score": 0,
       "pourquoi": {
         "mots": [],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 2,
+        "bonus_fraicheur": 0,
         "score": 0
       },
       "autres_sources": [
@@ -355,14 +524,21 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-15",
-      "score": 2,
+      "score": 0,
       "pourquoi": {
         "mots": [],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 2,
+        "bonus_fraicheur": 0,
         "score": 0
-      }
+      },
+      "autres_sources": [
+        {
+          "source": "Sénat — Derniers rapports",
+          "url": "https://www.senat.fr/rap/l26-053/l26-053.html",
+          "titre": "Réduire les risques sanitaires liés aux contaminations au cadmium - rapport n° 53"
+        }
+      ]
     },
     {
       "id": "acfcd457f35d2377",
@@ -381,14 +557,21 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-15",
-      "score": 2,
+      "score": 0,
       "pourquoi": {
         "mots": [],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 2,
+        "bonus_fraicheur": 0,
         "score": 0
-      }
+      },
+      "autres_sources": [
+        {
+          "source": "Sénat — Derniers rapports",
+          "url": "https://www.senat.fr/rap/l26-047/l26-047.html",
+          "titre": "Retrouver la confiance et l'équilibre dans les rapports locatifs - rapport n° 47"
+        }
+      ]
     },
     {
       "id": "06cde992c4cbc078",
@@ -407,12 +590,12 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-15",
-      "score": 2,
+      "score": 0,
       "pourquoi": {
         "mots": [],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 2,
+        "bonus_fraicheur": 0,
         "score": 0
       },
       "autres_sources": [
@@ -439,7 +622,7 @@
       "type": "doctrine",
       "origine": "flux",
       "collecte_le": "2026-10-15",
-      "score": 6,
+      "score": 5,
       "pourquoi": {
         "mots": [
           {
@@ -449,7 +632,7 @@
         ],
         "coefficient": 1,
         "bonus_source": 2,
-        "bonus_fraicheur": 1,
+        "bonus_fraicheur": 0,
         "score": 5
       }
     },
@@ -470,7 +653,7 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-15",
-      "score": 3,
+      "score": 2,
       "pourquoi": {
         "mots": [
           {
@@ -480,7 +663,7 @@
         ],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 1,
+        "bonus_fraicheur": 0,
         "score": 2
       }
     },
@@ -501,12 +684,12 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-14",
-      "score": 1,
+      "score": 0,
       "pourquoi": {
         "mots": [],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 1,
+        "bonus_fraicheur": 0,
         "score": 0
       },
       "autres_sources": [
@@ -534,12 +717,12 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-14",
-      "score": 1,
+      "score": 0,
       "pourquoi": {
         "mots": [],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 1,
+        "bonus_fraicheur": 0,
         "score": 0
       }
     },
@@ -560,12 +743,12 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-14",
-      "score": 1,
+      "score": 0,
       "pourquoi": {
         "mots": [],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 1,
+        "bonus_fraicheur": 0,
         "score": 0
       }
     },
@@ -586,7 +769,7 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-14",
-      "score": 12,
+      "score": 11,
       "pourquoi": {
         "mots": [
           {
@@ -600,7 +783,7 @@
         ],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 1,
+        "bonus_fraicheur": 0,
         "score": 11
       },
       "autres_sources": [
@@ -627,7 +810,7 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-14",
-      "score": 6,
+      "score": 5,
       "pourquoi": {
         "mots": [
           {
@@ -641,7 +824,7 @@
         ],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 1,
+        "bonus_fraicheur": 0,
         "score": 5
       }
     },
@@ -661,7 +844,7 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-14",
-      "score": 2,
+      "score": 1,
       "pourquoi": {
         "mots": [
           {
@@ -671,7 +854,7 @@
         ],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 1,
+        "bonus_fraicheur": 0,
         "score": 1
       }
     },
@@ -691,12 +874,12 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-14",
-      "score": 1,
+      "score": 0,
       "pourquoi": {
         "mots": [],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 1,
+        "bonus_fraicheur": 0,
         "score": 0
       }
     },
@@ -716,12 +899,12 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-14",
-      "score": 1,
+      "score": 0,
       "pourquoi": {
         "mots": [],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 1,
+        "bonus_fraicheur": 0,
         "score": 0
       }
     },
@@ -741,12 +924,12 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-14",
-      "score": 1,
+      "score": 0,
       "pourquoi": {
         "mots": [],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 1,
+        "bonus_fraicheur": 0,
         "score": 0
       }
     },
@@ -766,12 +949,12 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-14",
-      "score": 1,
+      "score": 0,
       "pourquoi": {
         "mots": [],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 1,
+        "bonus_fraicheur": 0,
         "score": 0
       }
     },
@@ -791,12 +974,12 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-14",
-      "score": 1,
+      "score": 0,
       "pourquoi": {
         "mots": [],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 1,
+        "bonus_fraicheur": 0,
         "score": 0
       }
     },
@@ -816,12 +999,12 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-14",
-      "score": 1,
+      "score": 0,
       "pourquoi": {
         "mots": [],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 1,
+        "bonus_fraicheur": 0,
         "score": 0
       }
     },
@@ -841,12 +1024,12 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-14",
-      "score": 1,
+      "score": 0,
       "pourquoi": {
         "mots": [],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 1,
+        "bonus_fraicheur": 0,
         "score": 0
       }
     },
@@ -866,12 +1049,12 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-14",
-      "score": 1,
+      "score": 0,
       "pourquoi": {
         "mots": [],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 1,
+        "bonus_fraicheur": 0,
         "score": 0
       }
     },
@@ -891,12 +1074,12 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-14",
-      "score": 1,
+      "score": 0,
       "pourquoi": {
         "mots": [],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 1,
+        "bonus_fraicheur": 0,
         "score": 0
       }
     },
@@ -917,12 +1100,12 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-14",
-      "score": 1,
+      "score": 0,
       "pourquoi": {
         "mots": [],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 1,
+        "bonus_fraicheur": 0,
         "score": 0
       }
     },
@@ -943,12 +1126,12 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-14",
-      "score": 1,
+      "score": 0,
       "pourquoi": {
         "mots": [],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 1,
+        "bonus_fraicheur": 0,
         "score": 0
       }
     },
@@ -968,12 +1151,12 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-14",
-      "score": 1,
+      "score": 0,
       "pourquoi": {
         "mots": [],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 1,
+        "bonus_fraicheur": 0,
         "score": 0
       }
     },
@@ -993,12 +1176,12 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-14",
-      "score": 1,
+      "score": 0,
       "pourquoi": {
         "mots": [],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 1,
+        "bonus_fraicheur": 0,
         "score": 0
       }
     },
@@ -2687,7 +2870,7 @@
       "source": "INSEE",
       "url": "https://www.insee.fr/fr/statistiques/serie/011812232",
       "date_publication": "2026-10-15",
-      "collecte_le": "2026-10-16"
+      "collecte_le": "2026-10-19"
     },
     {
       "source_id": "insee-bdm",
@@ -2697,7 +2880,7 @@
       "source": "INSEE",
       "url": "https://www.insee.fr/fr/statistiques/serie/011794844",
       "date_publication": "2026-08-28",
-      "collecte_le": "2026-10-16"
+      "collecte_le": "2026-10-19"
     },
     {
       "source_id": "insee-bdm",
@@ -2707,7 +2890,7 @@
       "source": "INSEE",
       "url": "https://www.insee.fr/fr/statistiques/serie/001688527",
       "date_publication": "2026-08-07",
-      "collecte_le": "2026-10-16"
+      "collecte_le": "2026-10-19"
     },
     {
       "source_id": "insee-bdm",
@@ -2717,57 +2900,57 @@
       "source": "INSEE",
       "url": "https://www.insee.fr/fr/statistiques/serie/001565530",
       "date_publication": "2026-09-24",
-      "collecte_le": "2026-10-16"
+      "collecte_le": "2026-10-19"
     },
     {
       "source_id": "insee-bdm",
       "libelle": "Créations d’entreprises dans le mois",
-      "valeur": "93 110 créations",
-      "periode": "août 2026",
+      "valeur": "124 240 créations",
+      "periode": "septembre 2026",
       "source": "INSEE",
       "url": "https://www.insee.fr/fr/statistiques/serie/010755537",
-      "date_publication": "2026-09-18",
-      "collecte_le": "2026-10-16"
+      "date_publication": "2026-10-16",
+      "collecte_le": "2026-10-19"
     },
     {
       "source_id": "bodacc-35",
       "libelle": "Créations d’entreprises en Ille-et-Vilaine",
-      "valeur": "222 annonces",
-      "periode": "du 09/10/2026 au 15/10/2026",
+      "valeur": "204 annonces",
+      "periode": "du 12/10/2026 au 18/10/2026",
       "source": "BODACC (DILA)",
       "url": "https://www.bodacc.fr/",
-      "date_publication": "2026-10-15",
-      "collecte_le": "2026-10-16"
+      "date_publication": "2026-10-18",
+      "collecte_le": "2026-10-19"
     },
     {
       "source_id": "bodacc-35",
       "libelle": "Procédures collectives en Ille-et-Vilaine",
-      "valeur": "41 annonces",
-      "periode": "du 09/10/2026 au 15/10/2026",
+      "valeur": "51 annonces",
+      "periode": "du 12/10/2026 au 18/10/2026",
       "source": "BODACC (DILA)",
       "url": "https://www.bodacc.fr/",
-      "date_publication": "2026-10-15",
-      "collecte_le": "2026-10-16"
+      "date_publication": "2026-10-18",
+      "collecte_le": "2026-10-19"
     },
     {
       "source_id": "bodacc-35",
       "libelle": "Ventes et cessions de fonds en Ille-et-Vilaine",
       "valeur": "28 annonces",
-      "periode": "du 09/10/2026 au 15/10/2026",
+      "periode": "du 12/10/2026 au 18/10/2026",
       "source": "BODACC (DILA)",
       "url": "https://www.bodacc.fr/",
-      "date_publication": "2026-10-15",
-      "collecte_le": "2026-10-16"
+      "date_publication": "2026-10-18",
+      "collecte_le": "2026-10-19"
     },
     {
       "source_id": "bodacc-35",
       "libelle": "Radiations en Ille-et-Vilaine",
-      "valeur": "140 annonces",
-      "periode": "du 09/10/2026 au 15/10/2026",
+      "valeur": "209 annonces",
+      "periode": "du 12/10/2026 au 18/10/2026",
       "source": "BODACC (DILA)",
       "url": "https://www.bodacc.fr/",
-      "date_publication": "2026-10-15",
-      "collecte_le": "2026-10-16"
+      "date_publication": "2026-10-18",
+      "collecte_le": "2026-10-19"
     }
   ],
   "suivi": {
@@ -2825,7 +3008,7 @@
       ],
       "source": "Assemblée nationale — dossier législatif",
       "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/PLF_2027",
-      "mis_a_jour_le": "2026-10-16",
+      "mis_a_jour_le": "2026-10-19",
       "mesures": {
         "libelle": "Projet de loi n° 3210 (texte déposé par le Gouvernement)",
         "url": "https://www.assemblee-nationale.fr/dyn/17/textes/l17b3210_projet-loi",
@@ -4124,7 +4307,7 @@
       ],
       "source": "Assemblée nationale — dossier législatif",
       "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/PLFSS_2027",
-      "mis_a_jour_le": "2026-10-16",
+      "mis_a_jour_le": "2026-10-19",
       "mesures": {
         "libelle": "Projet de loi n° 3211 (texte déposé par le Gouvernement)",
         "url": "https://www.assemblee-nationale.fr/dyn/17/textes/l17b3211_projet-loi",
