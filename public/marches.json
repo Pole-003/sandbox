@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "genere_le": "2026-10-19T14:03:49.982Z",
+  "genere_le": "2026-10-19T14:51:16.801Z",
   "indicateurs": [
     {
       "id": "dette",
@@ -557,44 +557,32 @@
       "decimales": 4,
       "genre": "niveau",
       "nature": "quotidien officiel",
-      "valeur": 1.1253,
-      "date_valeur": "2026-10-16",
-      "recupere_le": "2026-10-16T14:48:30.415Z",
+      "valeur": 1.1225,
+      "date_valeur": "2026-10-19",
+      "recupere_le": "2026-10-19T14:51:16.801Z",
       "variations": {
         "precedente": {
-          "depuis": "2026-10-15",
-          "absolue": 0.0045,
-          "relative": 0.4015
+          "depuis": "2026-10-16",
+          "absolue": -0.0028,
+          "relative": -0.2488
         },
         "un_mois": {
-          "depuis": "2026-09-16",
-          "absolue": -0.0284,
-          "relative": -2.4616
+          "depuis": "2026-09-18",
+          "absolue": -0.0235,
+          "relative": -2.0506
         },
         "debut_annee": {
           "depuis": "2025-12-31",
-          "absolue": -0.0497,
-          "relative": -4.2298
+          "absolue": -0.0525,
+          "relative": -4.4681
         },
         "un_an": {
-          "depuis": "2025-10-16",
-          "absolue": -0.0396,
-          "relative": -3.3994
+          "depuis": "2025-10-17",
+          "absolue": -0.0456,
+          "relative": -3.9038
         }
       },
       "historique": [
-        [
-          "2024-10-16",
-          1.0897
-        ],
-        [
-          "2024-10-17",
-          1.0866
-        ],
-        [
-          "2024-10-18",
-          1.0847
-        ],
         [
           "2024-10-21",
           1.0853
@@ -2626,6 +2614,10 @@
         [
           "2026-10-16",
           1.1253
+        ],
+        [
+          "2026-10-19",
+          1.1225
         ]
       ],
       "complements": [],
@@ -2644,12 +2636,12 @@
         "tolerance_jours_ouvres": 1
       },
       "prochaine_publication": {
-        "date": "2026-10-19",
+        "date": "2026-10-20",
         "heure": "16:15",
         "estimee": true
       },
-      "derniere_tentative": "2026-10-16T14:48:30.415Z",
-      "derniere_reussite": "2026-10-16T14:48:30.415Z",
+      "derniere_tentative": "2026-10-19T14:51:16.801Z",
+      "derniere_reussite": "2026-10-19T14:51:16.801Z",
       "derniere_erreur": null,
       "remarque": null,
       "journal": [
@@ -2675,6 +2667,10 @@
         },
         {
           "date": "2026-10-16",
+          "etat": "ok"
+        },
+        {
+          "date": "2026-10-19",
           "etat": "ok"
         }
       ]
