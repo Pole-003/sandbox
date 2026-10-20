@@ -1,7 +1,143 @@
 {
   "version": 1,
-  "genere_le": "2026-10-19T05:01:23.354Z",
+  "genere_le": "2026-10-20T04:57:43.133Z",
   "articles": [
+    {
+      "id": "669945a7e28d159f",
+      "titre": "N° 3345 tome III - Rapport de M. Thibault Bazin, Mme Danielle Simonnet, Mme Christine Loir, Mme Sandrine Runel et M. Louis Boyard sur le projet de loi de financement de la sécurité sociale pour 2027 (n°3211).",
+      "source": "Assemblée nationale — Publications parlementaires",
+      "source_id": "an-documents",
+      "url": "https://www.assemblee-nationale.fr/17/rapports/r3345-tIII.asp",
+      "date": "2026-10-20",
+      "theme": "Sécurité sociale",
+      "resume": null,
+      "importance": 4,
+      "public": [
+        "Social / paie"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-10-20",
+      "score": 10,
+      "pourquoi": {
+        "mots": [
+          {
+            "mot": "financement de la sécurité sociale",
+            "poids": 6
+          },
+          {
+            "mot": "sécurité sociale",
+            "poids": 2
+          }
+        ],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 2,
+        "score": 8
+      }
+    },
+    {
+      "id": "4baac1b8b2513a56",
+      "titre": "Garantir une meilleure protection de la biodiversité forestière - texte N° 52",
+      "source": "Sénat — Derniers textes",
+      "source_id": "senat-textes",
+      "url": "https://www.senat.fr/leg/ppl26-052.html",
+      "date": "2026-10-19",
+      "theme": "Loi de finances",
+      "resume": "Proposition de loi visant à garantir une meilleure protection de la biodiversité forestière : texte N° 52 de M. Michaël WEBER et plusieurs de ses collègues, déposé au Sénat le 14 octobre 2026",
+      "importance": 1,
+      "public": [
+        "Expertise comptable",
+        "Conseil aux dirigeants"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-10-20",
+      "score": 2,
+      "pourquoi": {
+        "mots": [],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 2,
+        "score": 0
+      }
+    },
+    {
+      "id": "17fde9ba631f8098",
+      "titre": "Originalité de l'oeuvre - texte N° 58",
+      "source": "Sénat — Derniers textes",
+      "source_id": "senat-textes",
+      "url": "https://www.senat.fr/leg/ppl26-058.html",
+      "date": "2026-10-19",
+      "theme": "Loi de finances",
+      "resume": "Proposition de loi portant réforme de la preuve de l'originalité de l'oeuvre : texte N° 58 de Mme Sylvie ROBERT, déposé au Sénat le 14 octobre 2026",
+      "importance": 1,
+      "public": [
+        "Expertise comptable",
+        "Conseil aux dirigeants"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-10-20",
+      "score": 2,
+      "pourquoi": {
+        "mots": [],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 2,
+        "score": 0
+      }
+    },
+    {
+      "id": "3340148dd81ed868",
+      "titre": "Ratification de l'accord de passation conjointe de marché - Texte n° 9",
+      "source": "Sénat — Économie et finances, fiscalité",
+      "source_id": "senat-fiscalite",
+      "url": "https://www.senat.fr/leg/tas26-009.html",
+      "date": "2026-10-19",
+      "theme": "Fiscal et comptable",
+      "resume": "Texte",
+      "importance": 1,
+      "public": [
+        "Expertise comptable"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-10-20",
+      "score": 2,
+      "pourquoi": {
+        "mots": [],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 2,
+        "score": 0
+      }
+    },
+    {
+      "id": "02c55a336c421666",
+      "titre": "Un mois, deux juridictions : la cour administrative d’appel et le tribunal administratif de Nantes",
+      "source": "Conseil d'État — Actualités",
+      "source_id": "ce-actualites",
+      "url": "https://www.conseil-etat.fr/actualites/un-mois-deux-juridictions-la-cour-administrative-d-appel-et-le-tribunal-administratif-de-nantes2",
+      "date": "2026-10-19",
+      "theme": "Fiscal et comptable",
+      "resume": null,
+      "importance": 1,
+      "public": [
+        "Expertise comptable"
+      ],
+      "type": null,
+      "origine": "flux",
+      "collecte_le": "2026-10-20",
+      "score": 2,
+      "pourquoi": {
+        "mots": [],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 2,
+        "score": 0
+      }
+    },
     {
       "id": "921daf8d2804396c",
       "titre": "Diverses dispositions relatives au secteur nucléaire - texte N° 72",
@@ -44,7 +180,7 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-19",
-      "score": 9,
+      "score": 8,
       "pourquoi": {
         "mots": [
           {
@@ -58,9 +194,16 @@
         ],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 1,
+        "bonus_fraicheur": 0,
         "score": 8
-      }
+      },
+      "autres_sources": [
+        {
+          "source": "Assemblée nationale — Commission des affaires sociales",
+          "url": "https://www.assemblee-nationale.fr/17/rapports/r3345-tI.asp",
+          "titre": "N° 3345 tome I - Rapport de M. Thibault Bazin, Mme Danielle Simonnet, Mme Christine Loir, Mme Sandrine Runel et M. Louis Boyard sur le projet de loi de financement de la sécurité sociale pour 2027 (n°3211)."
+        }
+      ]
     },
     {
       "id": "53c485a98441458e",
@@ -79,12 +222,12 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-19",
-      "score": 1,
+      "score": 0,
       "pourquoi": {
         "mots": [],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 1,
+        "bonus_fraicheur": 0,
         "score": 0
       }
     },
@@ -105,12 +248,12 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-19",
-      "score": 1,
+      "score": 0,
       "pourquoi": {
         "mots": [],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 1,
+        "bonus_fraicheur": 0,
         "score": 0
       }
     },
@@ -131,12 +274,12 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-19",
-      "score": 1,
+      "score": 0,
       "pourquoi": {
         "mots": [],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 1,
+        "bonus_fraicheur": 0,
         "score": 0
       }
     },
@@ -496,9 +639,9 @@
       },
       "autres_sources": [
         {
-          "source": "Sénat — Économie et finances, fiscalité",
+          "source": "Sénat — Derniers rapports",
           "url": "https://www.senat.fr/rap/a26-038/a26-038.html",
-          "titre": "Reconnaître une politique nationale d'adaptation au changement climatique - Avis n° 38"
+          "titre": "Reconnaître une politique nationale d'adaptation au changement climatique - avis n° 38"
         },
         {
           "source": "Sénat — Économie et finances, fiscalité",
@@ -605,6 +748,40 @@
           "titre": "Simplifier l'ouverture des débits de boissons en zone rurale - Rapport n° 69"
         }
       ]
+    },
+    {
+      "id": "c81f5ed0449d2651",
+      "titre": "N° 3339 avis - Avis de M. Nicolas Tryzna sur le projet de loi de financement de la sécurité sociale pour 2027 (n°3211).",
+      "source": "Assemblée nationale — Publications parlementaires",
+      "source_id": "an-documents",
+      "url": "https://www.assemblee-nationale.fr/17/rapports/r3339.asp",
+      "date": "2026-10-14",
+      "theme": "Sécurité sociale",
+      "resume": null,
+      "importance": 4,
+      "public": [
+        "Social / paie"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-10-20",
+      "score": 8,
+      "pourquoi": {
+        "mots": [
+          {
+            "mot": "financement de la sécurité sociale",
+            "poids": 6
+          },
+          {
+            "mot": "sécurité sociale",
+            "poids": 2
+          }
+        ],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 0,
+        "score": 8
+      }
     },
     {
       "id": "7c74c3bdfdd7430e",
@@ -2870,7 +3047,7 @@
       "source": "INSEE",
       "url": "https://www.insee.fr/fr/statistiques/serie/011812232",
       "date_publication": "2026-10-15",
-      "collecte_le": "2026-10-19"
+      "collecte_le": "2026-10-20"
     },
     {
       "source_id": "insee-bdm",
@@ -2880,7 +3057,7 @@
       "source": "INSEE",
       "url": "https://www.insee.fr/fr/statistiques/serie/011794844",
       "date_publication": "2026-08-28",
-      "collecte_le": "2026-10-19"
+      "collecte_le": "2026-10-20"
     },
     {
       "source_id": "insee-bdm",
@@ -2890,7 +3067,7 @@
       "source": "INSEE",
       "url": "https://www.insee.fr/fr/statistiques/serie/001688527",
       "date_publication": "2026-08-07",
-      "collecte_le": "2026-10-19"
+      "collecte_le": "2026-10-20"
     },
     {
       "source_id": "insee-bdm",
@@ -2900,7 +3077,7 @@
       "source": "INSEE",
       "url": "https://www.insee.fr/fr/statistiques/serie/001565530",
       "date_publication": "2026-09-24",
-      "collecte_le": "2026-10-19"
+      "collecte_le": "2026-10-20"
     },
     {
       "source_id": "insee-bdm",
@@ -2910,47 +3087,47 @@
       "source": "INSEE",
       "url": "https://www.insee.fr/fr/statistiques/serie/010755537",
       "date_publication": "2026-10-16",
-      "collecte_le": "2026-10-19"
+      "collecte_le": "2026-10-20"
     },
     {
       "source_id": "bodacc-35",
       "libelle": "Créations d’entreprises en Ille-et-Vilaine",
       "valeur": "204 annonces",
-      "periode": "du 12/10/2026 au 18/10/2026",
+      "periode": "du 13/10/2026 au 19/10/2026",
       "source": "BODACC (DILA)",
       "url": "https://www.bodacc.fr/",
-      "date_publication": "2026-10-18",
-      "collecte_le": "2026-10-19"
+      "date_publication": "2026-10-19",
+      "collecte_le": "2026-10-20"
     },
     {
       "source_id": "bodacc-35",
       "libelle": "Procédures collectives en Ille-et-Vilaine",
       "valeur": "51 annonces",
-      "periode": "du 12/10/2026 au 18/10/2026",
+      "periode": "du 13/10/2026 au 19/10/2026",
       "source": "BODACC (DILA)",
       "url": "https://www.bodacc.fr/",
-      "date_publication": "2026-10-18",
-      "collecte_le": "2026-10-19"
+      "date_publication": "2026-10-19",
+      "collecte_le": "2026-10-20"
     },
     {
       "source_id": "bodacc-35",
       "libelle": "Ventes et cessions de fonds en Ille-et-Vilaine",
       "valeur": "28 annonces",
-      "periode": "du 12/10/2026 au 18/10/2026",
+      "periode": "du 13/10/2026 au 19/10/2026",
       "source": "BODACC (DILA)",
       "url": "https://www.bodacc.fr/",
-      "date_publication": "2026-10-18",
-      "collecte_le": "2026-10-19"
+      "date_publication": "2026-10-19",
+      "collecte_le": "2026-10-20"
     },
     {
       "source_id": "bodacc-35",
       "libelle": "Radiations en Ille-et-Vilaine",
       "valeur": "209 annonces",
-      "periode": "du 12/10/2026 au 18/10/2026",
+      "periode": "du 13/10/2026 au 19/10/2026",
       "source": "BODACC (DILA)",
       "url": "https://www.bodacc.fr/",
-      "date_publication": "2026-10-18",
-      "collecte_le": "2026-10-19"
+      "date_publication": "2026-10-19",
+      "collecte_le": "2026-10-20"
     }
   ],
   "suivi": {
@@ -3008,7 +3185,7 @@
       ],
       "source": "Assemblée nationale — dossier législatif",
       "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/PLF_2027",
-      "mis_a_jour_le": "2026-10-19",
+      "mis_a_jour_le": "2026-10-20",
       "mesures": {
         "libelle": "Projet de loi n° 3210 (texte déposé par le Gouvernement)",
         "url": "https://www.assemblee-nationale.fr/dyn/17/textes/l17b3210_projet-loi",
@@ -4307,7 +4484,7 @@
       ],
       "source": "Assemblée nationale — dossier législatif",
       "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/PLFSS_2027",
-      "mis_a_jour_le": "2026-10-19",
+      "mis_a_jour_le": "2026-10-20",
       "mesures": {
         "libelle": "Projet de loi n° 3211 (texte déposé par le Gouvernement)",
         "url": "https://www.assemblee-nationale.fr/dyn/17/textes/l17b3211_projet-loi",
@@ -5053,36 +5230,6 @@
     }
   ],
   "echeances": [
-    {
-      "id": "impots-2026-10-12-d7f63edc",
-      "date": "2026-10-12",
-      "titre": "Entreprises soumises à la TVA",
-      "detail": "Date limite de dépôt de la DES (déclaration européenne de services) pour les opérations intracommunautaires réalisées en septembre 2026.",
-      "categorie": "fiscal",
-      "source": "impots.gouv.fr — calendrier fiscal",
-      "url": "https://www.impots.gouv.fr/professionnel/calendrier-fiscal/2026-10",
-      "origine": "calendrier_officiel"
-    },
-    {
-      "id": "impots-2026-10-12-d133c7a9",
-      "date": "2026-10-12",
-      "titre": "Entreprises soumises à la TVA",
-      "detail": "Date limite de dépôt de l'état récapitulatif des clients pour les opérations intracommunautaires réalisées en septembre 2026.",
-      "categorie": "fiscal",
-      "source": "impots.gouv.fr — calendrier fiscal",
-      "url": "https://www.impots.gouv.fr/professionnel/calendrier-fiscal/2026-10",
-      "origine": "calendrier_officiel"
-    },
-    {
-      "id": "impots-2026-10-12-51ab08b9",
-      "date": "2026-10-12",
-      "titre": "Prélèvement à la source – PASRAU",
-      "detail": "Date limite pour la télédéclaration PASRAU (revenus de remplacement) de septembre 2026 et le télépaiement (paiement mensuel et option de paiement trimestriel).",
-      "categorie": "social",
-      "source": "impots.gouv.fr — calendrier fiscal",
-      "url": "https://www.impots.gouv.fr/professionnel/calendrier-fiscal/2026-10",
-      "origine": "calendrier_officiel"
-    },
     {
       "id": "impots-2026-10-15-849d3efc",
       "date": "2026-10-15",
