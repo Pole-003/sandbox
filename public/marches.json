@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "genere_le": "2026-10-20T13:59:50.943Z",
+  "genere_le": "2026-10-20T14:49:06.720Z",
   "indicateurs": [
     {
       "id": "dette",
@@ -557,29 +557,29 @@
       "decimales": 4,
       "genre": "niveau",
       "nature": "quotidien officiel",
-      "valeur": 1.1225,
-      "date_valeur": "2026-10-19",
-      "recupere_le": "2026-10-19T14:51:16.801Z",
+      "valeur": 1.1215,
+      "date_valeur": "2026-10-20",
+      "recupere_le": "2026-10-20T14:49:06.720Z",
       "variations": {
         "precedente": {
-          "depuis": "2026-10-16",
-          "absolue": -0.0028,
-          "relative": -0.2488
+          "depuis": "2026-10-19",
+          "absolue": -0.001,
+          "relative": -0.0891
         },
         "un_mois": {
           "depuis": "2026-09-18",
-          "absolue": -0.0235,
-          "relative": -2.0506
+          "absolue": -0.0245,
+          "relative": -2.1379
         },
         "debut_annee": {
           "depuis": "2025-12-31",
-          "absolue": -0.0525,
-          "relative": -4.4681
+          "absolue": -0.0535,
+          "relative": -4.5532
         },
         "un_an": {
-          "depuis": "2025-10-17",
-          "absolue": -0.0456,
-          "relative": -3.9038
+          "depuis": "2025-10-20",
+          "absolue": -0.044,
+          "relative": -3.7752
         }
       },
       "historique": [
@@ -2618,6 +2618,10 @@
         [
           "2026-10-19",
           1.1225
+        ],
+        [
+          "2026-10-20",
+          1.1215
         ]
       ],
       "complements": [],
@@ -2636,12 +2640,12 @@
         "tolerance_jours_ouvres": 1
       },
       "prochaine_publication": {
-        "date": "2026-10-20",
+        "date": "2026-10-21",
         "heure": "16:15",
         "estimee": true
       },
-      "derniere_tentative": "2026-10-19T14:51:16.801Z",
-      "derniere_reussite": "2026-10-19T14:51:16.801Z",
+      "derniere_tentative": "2026-10-20T14:49:06.720Z",
+      "derniere_reussite": "2026-10-20T14:49:06.720Z",
       "derniere_erreur": null,
       "remarque": null,
       "journal": [
@@ -2671,6 +2675,10 @@
         },
         {
           "date": "2026-10-19",
+          "etat": "ok"
+        },
+        {
+          "date": "2026-10-20",
           "etat": "ok"
         }
       ]
