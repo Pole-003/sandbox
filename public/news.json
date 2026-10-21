@@ -1,7 +1,93 @@
 {
   "version": 1,
-  "genere_le": "2026-10-20T04:57:43.133Z",
+  "genere_le": "2026-10-21T04:58:17.321Z",
   "articles": [
+    {
+      "id": "3c2065226bc62339",
+      "titre": "Taux réduit de TVA sur les matériaux réutilisables de chantiers - texte N° 40",
+      "source": "Sénat — Derniers textes",
+      "source_id": "senat-textes",
+      "url": "https://www.senat.fr/leg/ppl26-040.html",
+      "date": "2026-10-21",
+      "theme": "Fiscal et comptable",
+      "resume": "Proposition de loi visant à appliquer un taux réduit de taxe sur la valeur ajoutée aux matériaux réutilisables de chantiers : texte N° 40 de M. Stéphane DEMILLY, déposé au Sénat le 13 octobre 2026",
+      "importance": 4,
+      "public": [
+        "Expertise comptable"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-10-21",
+      "score": 8,
+      "pourquoi": {
+        "mots": [
+          {
+            "mot": "tva",
+            "poids": 3
+          },
+          {
+            "mot": "taxe sur la valeur ajoutée",
+            "poids": 3
+          }
+        ],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 2,
+        "score": 6
+      }
+    },
+    {
+      "id": "fd409955a6d53675",
+      "titre": "Amendes de police liées aux incivilités - texte N° 41",
+      "source": "Sénat — Derniers textes",
+      "source_id": "senat-textes",
+      "url": "https://www.senat.fr/leg/ppl26-041.html",
+      "date": "2026-10-21",
+      "theme": "Loi de finances",
+      "resume": "Proposition de loi visant à reverser aux communes le produit des amendes de police liées aux incivilités : texte N° 41 de M. Stéphane DEMILLY, déposé au Sénat le 13 octobre 2026",
+      "importance": 1,
+      "public": [
+        "Expertise comptable",
+        "Conseil aux dirigeants"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-10-21",
+      "score": 2,
+      "pourquoi": {
+        "mots": [],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 2,
+        "score": 0
+      }
+    },
+    {
+      "id": "f5cf5d4aae08a390",
+      "titre": "Transparence de la représentation d'intérêts - texte N° 24",
+      "source": "Sénat — Derniers textes",
+      "source_id": "senat-textes",
+      "url": "https://www.senat.fr/leg/ppl26-024.html",
+      "date": "2026-10-21",
+      "theme": "Loi de finances",
+      "resume": "Proposition de loi renforçant la transparence de la représentation d'intérêts, au service du débat démocratique : texte N° 24 de M. Arnaud BAZIN, déposé au Sénat le 12 octobre 2026",
+      "importance": 1,
+      "public": [
+        "Expertise comptable",
+        "Conseil aux dirigeants"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-10-21",
+      "score": 2,
+      "pourquoi": {
+        "mots": [],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 2,
+        "score": 0
+      }
+    },
     {
       "id": "669945a7e28d159f",
       "titre": "N° 3345 tome III - Rapport de M. Thibault Bazin, Mme Danielle Simonnet, Mme Christine Loir, Mme Sandrine Runel et M. Louis Boyard sur le projet de loi de financement de la sécurité sociale pour 2027 (n°3211).",
@@ -37,6 +123,327 @@
       }
     },
     {
+      "id": "675fa354eac63d24",
+      "titre": "N° 3354 rapport d'information - Rapport d'information de Mme Agnès Firmin Le Bodo et Mme Karine Lebon déposé par la délégation de l'Assemblée nationale aux droits des femmes et à l'égalité des chances entre les hommes et les femmes sur le projet de loi de financement de la Sécurité sociale pour 2027",
+      "source": "Assemblée nationale — Publications parlementaires",
+      "source_id": "an-documents",
+      "url": "https://www.assemblee-nationale.fr/17/rap-info/i3354.asp",
+      "date": "2026-10-20",
+      "theme": "Sécurité sociale",
+      "resume": null,
+      "importance": 4,
+      "public": [
+        "Social / paie"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-10-21",
+      "score": 10,
+      "pourquoi": {
+        "mots": [
+          {
+            "mot": "financement de la sécurité sociale",
+            "poids": 6
+          },
+          {
+            "mot": "sécurité sociale",
+            "poids": 2
+          }
+        ],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 2,
+        "score": 8
+      }
+    },
+    {
+      "id": "56fee2258c167625",
+      "titre": "N° 3356 - Proposition de loi de M. Yannick Favennec-Bécot visant à renforcer la reconnaissance de l'engagement des sapeurs-pompiers volontaires dans le calcul de leurs droits à la retraite",
+      "source": "Assemblée nationale — Commission des affaires sociales",
+      "source_id": "an-commission-affaires-sociales",
+      "url": "https://www.assemblee-nationale.fr/17/propositions/pion3356.asp",
+      "date": "2026-10-20",
+      "theme": "Sécurité sociale",
+      "resume": null,
+      "importance": 2,
+      "public": [
+        "Social / paie"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-10-21",
+      "score": 4,
+      "pourquoi": {
+        "mots": [
+          {
+            "mot": "retraite",
+            "poids": 2
+          }
+        ],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 2,
+        "score": 2
+      }
+    },
+    {
+      "id": "85776a0e68346c6c",
+      "titre": "N° 3363 - Proposition de loi de M. Jean-Luc Warsmann visant à sécuriser les budgets publics de restauration scolaire et de périscolaires par le prélèvement sur les prestations familiales",
+      "source": "Assemblée nationale — Commission des affaires sociales",
+      "source_id": "an-commission-affaires-sociales",
+      "url": "https://www.assemblee-nationale.fr/17/propositions/pion3363.asp",
+      "date": "2026-10-20",
+      "theme": "Loi de finances",
+      "resume": null,
+      "importance": 2,
+      "public": [
+        "Expertise comptable",
+        "Conseil aux dirigeants"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-10-21",
+      "score": 3,
+      "pourquoi": {
+        "mots": [
+          {
+            "mot": "budget",
+            "poids": 1
+          }
+        ],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 2,
+        "score": 1
+      }
+    },
+    {
+      "id": "c3c2ce4aa5c356a1",
+      "titre": "N° 3297 - Proposition de loi, adoptée par le Sénat, visant à accélérer le développement de la médecine nucléaire thérapeutique en oncologie",
+      "source": "Assemblée nationale — Commission des affaires sociales",
+      "source_id": "an-commission-affaires-sociales",
+      "url": "https://www.assemblee-nationale.fr/17/propositions/pion3297.asp",
+      "date": "2026-10-20",
+      "theme": "Sécurité sociale",
+      "resume": null,
+      "importance": 1,
+      "public": [
+        "Social / paie"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-10-21",
+      "score": 2,
+      "pourquoi": {
+        "mots": [],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 2,
+        "score": 0
+      }
+    },
+    {
+      "id": "02866ad9565e219a",
+      "titre": "N° 3298 - Proposition de loi, adoptée par le Sénat, révisant le dispositif des stocks de sécurité des médicaments",
+      "source": "Assemblée nationale — Commission des affaires sociales",
+      "source_id": "an-commission-affaires-sociales",
+      "url": "https://www.assemblee-nationale.fr/17/propositions/pion3298.asp",
+      "date": "2026-10-20",
+      "theme": "Sécurité sociale",
+      "resume": null,
+      "importance": 1,
+      "public": [
+        "Social / paie"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-10-21",
+      "score": 2,
+      "pourquoi": {
+        "mots": [],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 2,
+        "score": 0
+      }
+    },
+    {
+      "id": "8a59259088660e74",
+      "titre": "N° 3360 - Proposition de loi de Mme Nadège Abomangoli visant à améliorer la prévention, la détection, la reconnaissance et la prise en charge du Covid long",
+      "source": "Assemblée nationale — Commission des affaires sociales",
+      "source_id": "an-commission-affaires-sociales",
+      "url": "https://www.assemblee-nationale.fr/17/propositions/pion3360.asp",
+      "date": "2026-10-20",
+      "theme": "Sécurité sociale",
+      "resume": null,
+      "importance": 1,
+      "public": [
+        "Social / paie"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-10-21",
+      "score": 2,
+      "pourquoi": {
+        "mots": [],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 2,
+        "score": 0
+      }
+    },
+    {
+      "id": "5ef1e2b0501cdea5",
+      "titre": "N° 3364 - Proposition de loi de M. Jean-Luc Warsmann visant à la création d'un certificat de constructibilité familiale",
+      "source": "Assemblée nationale — Commission des affaires économiques",
+      "source_id": "an-commission-affaires-economiques",
+      "url": "https://www.assemblee-nationale.fr/17/propositions/pion3364.asp",
+      "date": "2026-10-20",
+      "theme": "Économie et statistiques",
+      "resume": null,
+      "importance": 1,
+      "public": [
+        "Conseil aux dirigeants"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-10-21",
+      "score": 2,
+      "pourquoi": {
+        "mots": [],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 2,
+        "score": 0
+      }
+    },
+    {
+      "id": "49b18b9b76329002",
+      "titre": "N° 3370 - Proposition de loi de M. Jean-Luc Warsmann visant à renforcer l'attractivité de nos territoires par la rénovation du patrimoine bâti",
+      "source": "Assemblée nationale — Commission des affaires économiques",
+      "source_id": "an-commission-affaires-economiques",
+      "url": "https://www.assemblee-nationale.fr/17/propositions/pion3370.asp",
+      "date": "2026-10-20",
+      "theme": "Économie et statistiques",
+      "resume": null,
+      "importance": 1,
+      "public": [
+        "Conseil aux dirigeants"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-10-21",
+      "score": 2,
+      "pourquoi": {
+        "mots": [],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 2,
+        "score": 0
+      }
+    },
+    {
+      "id": "fbaf0cbe68a293b0",
+      "titre": "N° 3373 - Proposition de loi de M. Boris Tavernier visant à garantir l'accès à un panier diversifié de denrées alimentaires favorables à la santé et vendues à prix coûtant",
+      "source": "Assemblée nationale — Commission des affaires économiques",
+      "source_id": "an-commission-affaires-economiques",
+      "url": "https://www.assemblee-nationale.fr/17/propositions/pion3373.asp",
+      "date": "2026-10-20",
+      "theme": "Économie et statistiques",
+      "resume": null,
+      "importance": 1,
+      "public": [
+        "Conseil aux dirigeants"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-10-21",
+      "score": 2,
+      "pourquoi": {
+        "mots": [],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 2,
+        "score": 0
+      }
+    },
+    {
+      "id": "41f6a32e5caab5c5",
+      "titre": "N° 3374 - Proposition de loi de M. Tristan Lahais visant à faire contribuer davantage les héritiers les plus fortunés",
+      "source": "Assemblée nationale — Commission des finances",
+      "source_id": "an-commission-finances",
+      "url": "https://www.assemblee-nationale.fr/17/propositions/pion3374.asp",
+      "date": "2026-10-20",
+      "theme": "Loi de finances",
+      "resume": null,
+      "importance": 1,
+      "public": [
+        "Expertise comptable",
+        "Conseil aux dirigeants"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-10-21",
+      "score": 2,
+      "pourquoi": {
+        "mots": [],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 2,
+        "score": 0
+      }
+    },
+    {
+      "id": "cf7d4e5bfb9b9451",
+      "titre": "N° 3376 - Proposition de loi de Mme Louise Morel visant à instaurer une négociation obligatoire sur la situation des parents isolés",
+      "source": "Assemblée nationale — Commission des affaires sociales",
+      "source_id": "an-commission-affaires-sociales",
+      "url": "https://www.assemblee-nationale.fr/17/propositions/pion3376.asp",
+      "date": "2026-10-20",
+      "theme": "Sécurité sociale",
+      "resume": null,
+      "importance": 1,
+      "public": [
+        "Social / paie"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-10-21",
+      "score": 2,
+      "pourquoi": {
+        "mots": [],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 2,
+        "score": 0
+      }
+    },
+    {
+      "id": "022fd55b5587e598",
+      "titre": "Reconnaître une politique nationale d'adaptation au changement climatique - Texte n° 10",
+      "source": "Sénat — Économie et finances, fiscalité",
+      "source_id": "senat-fiscalite",
+      "url": "https://www.senat.fr/leg/tas26-010.html",
+      "date": "2026-10-20",
+      "theme": "Fiscal et comptable",
+      "resume": "Texte",
+      "importance": 1,
+      "public": [
+        "Expertise comptable"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-10-21",
+      "score": 2,
+      "pourquoi": {
+        "mots": [],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 2,
+        "score": 0
+      }
+    },
+    {
       "id": "4baac1b8b2513a56",
       "titre": "Garantir une meilleure protection de la biodiversité forestière - texte N° 52",
       "source": "Sénat — Derniers textes",
@@ -53,12 +460,12 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-20",
-      "score": 2,
+      "score": 1,
       "pourquoi": {
         "mots": [],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 2,
+        "bonus_fraicheur": 1,
         "score": 0
       }
     },
@@ -79,12 +486,12 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-20",
-      "score": 2,
+      "score": 1,
       "pourquoi": {
         "mots": [],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 2,
+        "bonus_fraicheur": 1,
         "score": 0
       }
     },
@@ -104,12 +511,12 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-20",
-      "score": 2,
+      "score": 1,
       "pourquoi": {
         "mots": [],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 2,
+        "bonus_fraicheur": 1,
         "score": 0
       }
     },
@@ -129,12 +536,12 @@
       "type": null,
       "origine": "flux",
       "collecte_le": "2026-10-20",
-      "score": 2,
+      "score": 1,
       "pourquoi": {
         "mots": [],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 2,
+        "bonus_fraicheur": 1,
         "score": 0
       }
     },
@@ -155,12 +562,12 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-19",
-      "score": 1,
+      "score": 0,
       "pourquoi": {
         "mots": [],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 1,
+        "bonus_fraicheur": 0,
         "score": 0
       }
     },
@@ -281,6 +688,48 @@
         "bonus_source": 0,
         "bonus_fraicheur": 0,
         "score": 0
+      }
+    },
+    {
+      "id": "71ab9ebe113f1060",
+      "titre": "N° 3344 tome I - Avis de Mme Sophie Panonacle sur le projet de loi de finances pour 2027 (n°3210).",
+      "source": "Assemblée nationale — Publications parlementaires",
+      "source_id": "an-documents",
+      "url": "https://www.assemblee-nationale.fr/17/budget/plf2027/a3344-tI.asp",
+      "date": "2026-10-15",
+      "theme": "Loi de finances",
+      "resume": null,
+      "importance": 5,
+      "public": [
+        "Expertise comptable",
+        "Conseil aux dirigeants"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-10-21",
+      "autres_sources": [
+        {
+          "source": "Assemblée nationale — Commission des finances",
+          "url": "https://www.assemblee-nationale.fr/17/budget/plf2027/a3344-tIV.asp",
+          "titre": "N° 3344 tome IV - Avis de M. Vincent Descoeur sur le projet de loi de finances pour 2027 (n°3210)."
+        }
+      ],
+      "score": 11,
+      "pourquoi": {
+        "mots": [
+          {
+            "mot": "projet de loi de finances",
+            "poids": 6
+          },
+          {
+            "mot": "loi de finances",
+            "poids": 5
+          }
+        ],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 0,
+        "score": 11
       }
     },
     {
@@ -639,9 +1088,9 @@
       },
       "autres_sources": [
         {
-          "source": "Sénat — Derniers rapports",
+          "source": "Sénat — Économie et finances, fiscalité",
           "url": "https://www.senat.fr/rap/a26-038/a26-038.html",
-          "titre": "Reconnaître une politique nationale d'adaptation au changement climatique - avis n° 38"
+          "titre": "Reconnaître une politique nationale d'adaptation au changement climatique - Avis n° 38"
         },
         {
           "source": "Sénat — Économie et finances, fiscalité",
@@ -1395,7 +1844,14 @@
         "bonus_source": 0,
         "bonus_fraicheur": 0,
         "score": 11
-      }
+      },
+      "autres_sources": [
+        {
+          "source": "Assemblée nationale — Publications parlementaires",
+          "url": "https://www.assemblee-nationale.fr/17/budget/plf2027/a3344-tV.asp",
+          "titre": "N° 3344 tome V - Avis de M. Auguste Evrard sur le projet de loi de finances pour 2027 (n°3210)."
+        }
+      ]
     },
     {
       "id": "473d7f29ebf43c3b",
@@ -3047,7 +3503,7 @@
       "source": "INSEE",
       "url": "https://www.insee.fr/fr/statistiques/serie/011812232",
       "date_publication": "2026-10-15",
-      "collecte_le": "2026-10-20"
+      "collecte_le": "2026-10-21"
     },
     {
       "source_id": "insee-bdm",
@@ -3057,7 +3513,7 @@
       "source": "INSEE",
       "url": "https://www.insee.fr/fr/statistiques/serie/011794844",
       "date_publication": "2026-08-28",
-      "collecte_le": "2026-10-20"
+      "collecte_le": "2026-10-21"
     },
     {
       "source_id": "insee-bdm",
@@ -3067,7 +3523,7 @@
       "source": "INSEE",
       "url": "https://www.insee.fr/fr/statistiques/serie/001688527",
       "date_publication": "2026-08-07",
-      "collecte_le": "2026-10-20"
+      "collecte_le": "2026-10-21"
     },
     {
       "source_id": "insee-bdm",
@@ -3077,7 +3533,7 @@
       "source": "INSEE",
       "url": "https://www.insee.fr/fr/statistiques/serie/001565530",
       "date_publication": "2026-09-24",
-      "collecte_le": "2026-10-20"
+      "collecte_le": "2026-10-21"
     },
     {
       "source_id": "insee-bdm",
@@ -3087,47 +3543,47 @@
       "source": "INSEE",
       "url": "https://www.insee.fr/fr/statistiques/serie/010755537",
       "date_publication": "2026-10-16",
-      "collecte_le": "2026-10-20"
+      "collecte_le": "2026-10-21"
     },
     {
       "source_id": "bodacc-35",
       "libelle": "Créations d’entreprises en Ille-et-Vilaine",
-      "valeur": "204 annonces",
-      "periode": "du 13/10/2026 au 19/10/2026",
+      "valeur": "222 annonces",
+      "periode": "du 14/10/2026 au 20/10/2026",
       "source": "BODACC (DILA)",
       "url": "https://www.bodacc.fr/",
-      "date_publication": "2026-10-19",
-      "collecte_le": "2026-10-20"
+      "date_publication": "2026-10-20",
+      "collecte_le": "2026-10-21"
     },
     {
       "source_id": "bodacc-35",
       "libelle": "Procédures collectives en Ille-et-Vilaine",
-      "valeur": "51 annonces",
-      "periode": "du 13/10/2026 au 19/10/2026",
+      "valeur": "57 annonces",
+      "periode": "du 14/10/2026 au 20/10/2026",
       "source": "BODACC (DILA)",
       "url": "https://www.bodacc.fr/",
-      "date_publication": "2026-10-19",
-      "collecte_le": "2026-10-20"
+      "date_publication": "2026-10-20",
+      "collecte_le": "2026-10-21"
     },
     {
       "source_id": "bodacc-35",
       "libelle": "Ventes et cessions de fonds en Ille-et-Vilaine",
-      "valeur": "28 annonces",
-      "periode": "du 13/10/2026 au 19/10/2026",
+      "valeur": "33 annonces",
+      "periode": "du 14/10/2026 au 20/10/2026",
       "source": "BODACC (DILA)",
       "url": "https://www.bodacc.fr/",
-      "date_publication": "2026-10-19",
-      "collecte_le": "2026-10-20"
+      "date_publication": "2026-10-20",
+      "collecte_le": "2026-10-21"
     },
     {
       "source_id": "bodacc-35",
       "libelle": "Radiations en Ille-et-Vilaine",
-      "valeur": "209 annonces",
-      "periode": "du 13/10/2026 au 19/10/2026",
+      "valeur": "215 annonces",
+      "periode": "du 14/10/2026 au 20/10/2026",
       "source": "BODACC (DILA)",
       "url": "https://www.bodacc.fr/",
-      "date_publication": "2026-10-19",
-      "collecte_le": "2026-10-20"
+      "date_publication": "2026-10-20",
+      "collecte_le": "2026-10-21"
     }
   ],
   "suivi": {
@@ -3185,7 +3641,7 @@
       ],
       "source": "Assemblée nationale — dossier législatif",
       "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/PLF_2027",
-      "mis_a_jour_le": "2026-10-20",
+      "mis_a_jour_le": "2026-10-21",
       "mesures": {
         "libelle": "Projet de loi n° 3210 (texte déposé par le Gouvernement)",
         "url": "https://www.assemblee-nationale.fr/dyn/17/textes/l17b3210_projet-loi",
@@ -4482,9 +4938,9 @@
           "indicative": true
         }
       ],
-      "source": "Assemblée nationale — dossier législatif",
+      "source": "Assemblée nationale et Sénat — dossiers législatifs",
       "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/PLFSS_2027",
-      "mis_a_jour_le": "2026-10-20",
+      "mis_a_jour_le": "2026-10-21",
       "mesures": {
         "libelle": "Projet de loi n° 3211 (texte déposé par le Gouvernement)",
         "url": "https://www.assemblee-nationale.fr/dyn/17/textes/l17b3211_projet-loi",
@@ -5119,6 +5575,7 @@
           "etablie_le": "2026-10-08"
         }
       },
+      "url_senat": "https://www.senat.fr/dossier-legislatif/plfss2027.html",
       "mots_cles": [
         "financement de la sécurité sociale",
         "plfss",
