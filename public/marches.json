@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "genere_le": "2026-10-21T14:48:36.032Z",
+  "genere_le": "2026-10-21T17:54:28.692Z",
   "indicateurs": [
     {
       "id": "dette",
@@ -4766,9 +4766,9 @@
         "heure": "19:00",
         "estimee": true
       },
-      "derniere_tentative": "2026-10-16T05:26:16.266Z",
+      "derniere_tentative": "2026-10-21T17:54:28.692Z",
       "derniere_reussite": "2026-10-16T05:26:16.266Z",
-      "derniere_erreur": null,
+      "derniere_erreur": "fred-brent : colonnes introuvables (observation_date ; DCOILBRENTEU) : réponse inattendue",
       "remarque": null,
       "journal": [
         {
@@ -4786,6 +4786,10 @@
         {
           "date": "2026-10-16",
           "etat": "ok"
+        },
+        {
+          "date": "2026-10-21",
+          "etat": "erreur"
         }
       ]
     }
