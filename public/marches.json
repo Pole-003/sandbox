@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "genere_le": "2026-10-21T17:54:28.692Z",
+  "genere_le": "2026-10-22T05:27:46.425Z",
   "indicateurs": [
     {
       "id": "dette",
@@ -546,8 +546,8 @@
         "libelle": "TEC 10",
         "organisme": "Banque de France",
         "mention": "Le TEC 10 (indice CNO-TEC® calculé par Euronext Paris) est publié chaque jour ouvré par la Banque de France et l'Agence France Trésor. Sa licence en interdit la redistribution : il se consulte sur le site de la Banque de France ; la carte affiche la moyenne mensuelle officielle de la BCE.",
-        "url": "https://www.banque-france.fr/fr/statistiques/taux-et-cours/indices-obligataires-2026-10-21",
-        "date": "2026-10-21"
+        "url": "https://www.banque-france.fr/fr/statistiques/taux-et-cours/indices-obligataires-2026-10-22",
+        "date": "2026-10-22"
       }
     },
     {
@@ -2698,48 +2698,32 @@
       "decimales": 2,
       "genre": "niveau",
       "nature": "quotidien, publié chaque semaine",
-      "valeur": 126.55,
-      "date_valeur": "2026-10-14",
-      "recupere_le": "2026-10-16T05:26:16.266Z",
+      "valeur": 115.22,
+      "date_valeur": "2026-10-20",
+      "recupere_le": "2026-10-22T05:27:46.425Z",
       "variations": {
         "precedente": {
-          "depuis": "2026-10-13",
-          "absolue": 0.77,
-          "relative": 0.6122
+          "depuis": "2026-10-19",
+          "absolue": -3.6,
+          "relative": -3.0298
         },
         "un_mois": {
-          "depuis": "2026-09-14",
-          "absolue": 5.3,
-          "relative": 4.3711
+          "depuis": "2026-09-18",
+          "absolue": -4.44,
+          "relative": -3.7105
         },
         "debut_annee": {
           "depuis": "2025-12-31",
-          "absolue": 65.2,
-          "relative": 106.2755
+          "absolue": 53.87,
+          "relative": 87.8077
         },
         "un_an": {
-          "depuis": "2025-10-14",
-          "absolue": 63.55,
-          "relative": 100.873
+          "depuis": "2025-10-20",
+          "absolue": 54.51,
+          "relative": 89.7875
         }
       },
       "historique": [
-        [
-          "2024-10-16",
-          73.65
-        ],
-        [
-          "2024-10-17",
-          74.37
-        ],
-        [
-          "2024-10-18",
-          72.75
-        ],
-        [
-          "2024-10-21",
-          73.29
-        ],
         [
           "2024-10-22",
           75.59
@@ -4743,6 +4727,22 @@
         [
           "2026-10-14",
           126.55
+        ],
+        [
+          "2026-10-15",
+          126.35
+        ],
+        [
+          "2026-10-16",
+          119.33
+        ],
+        [
+          "2026-10-19",
+          118.82
+        ],
+        [
+          "2026-10-20",
+          115.22
         ]
       ],
       "complements": [],
@@ -4762,13 +4762,13 @@
         "tolerance_jours_ouvres": 2
       },
       "prochaine_publication": {
-        "date": "2026-10-21",
+        "date": "2026-10-28",
         "heure": "19:00",
         "estimee": true
       },
-      "derniere_tentative": "2026-10-21T17:54:28.692Z",
-      "derniere_reussite": "2026-10-16T05:26:16.266Z",
-      "derniere_erreur": "fred-brent : colonnes introuvables (observation_date ; DCOILBRENTEU) : réponse inattendue",
+      "derniere_tentative": "2026-10-22T05:27:46.425Z",
+      "derniere_reussite": "2026-10-22T05:27:46.425Z",
+      "derniere_erreur": null,
       "remarque": null,
       "journal": [
         {
@@ -4790,6 +4790,10 @@
         {
           "date": "2026-10-21",
           "etat": "erreur"
+        },
+        {
+          "date": "2026-10-22",
+          "etat": "ok"
         }
       ]
     }
