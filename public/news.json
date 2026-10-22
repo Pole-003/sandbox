@@ -1,7 +1,33 @@
 {
   "version": 1,
-  "genere_le": "2026-10-21T04:58:17.321Z",
+  "genere_le": "2026-10-22T04:59:34.795Z",
   "articles": [
+    {
+      "id": "33f2d9648501ad79",
+      "titre": "Réparation des dommages résultant de dégradations commises dans l'espace public - texte de la commission N° 87",
+      "source": "Sénat — Derniers textes",
+      "source_id": "senat-textes",
+      "url": "https://www.senat.fr/leg/pjl26-087.html",
+      "date": "2026-10-22",
+      "theme": "Loi de finances",
+      "resume": "Projet de loi relatif à la réparation des dommages résultant de violences ou de dégradations commises dans l'espace public et au recouvrement des dommages et intérêts : texte de la commission N° 87 déposé le 21 octobre 2026",
+      "importance": 1,
+      "public": [
+        "Expertise comptable",
+        "Conseil aux dirigeants"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-10-22",
+      "score": 2,
+      "pourquoi": {
+        "mots": [],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 2,
+        "score": 0
+      }
+    },
     {
       "id": "3c2065226bc62339",
       "titre": "Taux réduit de TVA sur les matériaux réutilisables de chantiers - texte N° 40",
@@ -37,6 +63,116 @@
       }
     },
     {
+      "id": "990c727079eae8c4",
+      "titre": "N° 3377 - Proposition de loi organique de M. Nicolas Tryzna visant à garantir un pouvoir de décision fiscale aux collectivités territoriales",
+      "source": "Assemblée nationale — Publications parlementaires",
+      "source_id": "an-documents",
+      "url": "https://www.assemblee-nationale.fr/17/propositions/pion3377.asp",
+      "date": "2026-10-21",
+      "theme": "Fiscal et comptable",
+      "resume": null,
+      "importance": 2,
+      "public": [
+        "Expertise comptable"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-10-22",
+      "score": 4,
+      "pourquoi": {
+        "mots": [
+          {
+            "mot": "fiscal",
+            "poids": 2
+          }
+        ],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 2,
+        "score": 2
+      }
+    },
+    {
+      "id": "019c2ffd7ec331d4",
+      "titre": "N° 3379 annexe 0 - Rapport sur la proposition de loi de Mme Gabrielle Cathala et plusieurs de ses collègues visant à créer un parcours de soins intégralement pris en charge par la sécurité sociale pour toutes les victimes de violences sexuelles (3168).",
+      "source": "Assemblée nationale — Publications parlementaires",
+      "source_id": "an-documents",
+      "url": "https://www.assemblee-nationale.fr/17/ta-commission/r3379-a0.asp",
+      "date": "2026-10-21",
+      "theme": "Sécurité sociale",
+      "resume": null,
+      "importance": 2,
+      "public": [
+        "Social / paie"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-10-22",
+      "score": 4,
+      "pourquoi": {
+        "mots": [
+          {
+            "mot": "sécurité sociale",
+            "poids": 2
+          }
+        ],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 2,
+        "score": 2
+      }
+    },
+    {
+      "id": "f72f78120ba7e5a8",
+      "titre": "Accord France - Inde - Texte de la commission n° 82",
+      "source": "Sénat — Économie et finances, fiscalité",
+      "source_id": "senat-fiscalite",
+      "url": "https://www.senat.fr/leg/pjl26-082.html",
+      "date": "2026-10-21",
+      "theme": "Fiscal et comptable",
+      "resume": "Texte",
+      "importance": 1,
+      "public": [
+        "Expertise comptable"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-10-22",
+      "score": 2,
+      "pourquoi": {
+        "mots": [],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 2,
+        "score": 0
+      }
+    },
+    {
+      "id": "61a69db9d1926045",
+      "titre": "Accords multilatéraux concernant l'échange automatique de renseignements - Texte de la commission n° 84",
+      "source": "Sénat — Économie et finances, fiscalité",
+      "source_id": "senat-fiscalite",
+      "url": "https://www.senat.fr/leg/pjl26-084.html",
+      "date": "2026-10-21",
+      "theme": "Fiscal et comptable",
+      "resume": "Texte",
+      "importance": 1,
+      "public": [
+        "Expertise comptable"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-10-22",
+      "score": 2,
+      "pourquoi": {
+        "mots": [],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 2,
+        "score": 0
+      }
+    },
+    {
       "id": "fd409955a6d53675",
       "titre": "Amendes de police liées aux incivilités - texte N° 41",
       "source": "Sénat — Derniers textes",
@@ -53,6 +189,58 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-21",
+      "score": 2,
+      "pourquoi": {
+        "mots": [],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 2,
+        "score": 0
+      }
+    },
+    {
+      "id": "24d8790abcd928f4",
+      "titre": "L'avenir du maintien de l'ordre : 30 propositions pour reprendre le contrôle - rapport d'information n° 78",
+      "source": "Sénat — Derniers rapports",
+      "source_id": "senat-rapports",
+      "url": "https://www.senat.fr/notice-rapport/2026/r26-078-notice.html",
+      "date": "2026-10-21",
+      "theme": "Loi de finances",
+      "resume": "Rapport d'information n° 78 de MM. David MARGUERITTE et Olivier BITZ, fait au nom de la commission des lois constitutionnelles, de législation, du suffrage universel, du Règlement et d'administration générale : L'avenir du maintien de l'ordre : 30 propositions pour reprendre le contrôle (19…",
+      "importance": 1,
+      "public": [
+        "Expertise comptable",
+        "Conseil aux dirigeants"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-10-22",
+      "score": 2,
+      "pourquoi": {
+        "mots": [],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 2,
+        "score": 0
+      }
+    },
+    {
+      "id": "b872f423d98c9a68",
+      "titre": "Protection des enfants - avis n° 79",
+      "source": "Sénat — Derniers rapports",
+      "source_id": "senat-rapports",
+      "url": "https://www.senat.fr/rap/a26-079/a26-079.html",
+      "date": "2026-10-21",
+      "theme": "Loi de finances",
+      "resume": "Avis n° 79 de M. Jean SOL et Mme Brigitte BOURGUIGNON, fait au nom de la commission des affaires sociales, sur le projet de loi relatif à la protection des enfants (20 octobre 2026)",
+      "importance": 1,
+      "public": [
+        "Expertise comptable",
+        "Conseil aux dirigeants"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-10-22",
       "score": 2,
       "pourquoi": {
         "mots": [],
@@ -104,7 +292,7 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-20",
-      "score": 10,
+      "score": 9,
       "pourquoi": {
         "mots": [
           {
@@ -118,7 +306,7 @@
         ],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 2,
+        "bonus_fraicheur": 1,
         "score": 8
       }
     },
@@ -138,7 +326,7 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-21",
-      "score": 10,
+      "score": 9,
       "pourquoi": {
         "mots": [
           {
@@ -152,7 +340,7 @@
         ],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 2,
+        "bonus_fraicheur": 1,
         "score": 8
       }
     },
@@ -172,7 +360,7 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-21",
-      "score": 4,
+      "score": 3,
       "pourquoi": {
         "mots": [
           {
@@ -182,7 +370,7 @@
         ],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 2,
+        "bonus_fraicheur": 1,
         "score": 2
       }
     },
@@ -203,7 +391,7 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-21",
-      "score": 3,
+      "score": 2,
       "pourquoi": {
         "mots": [
           {
@@ -213,7 +401,7 @@
         ],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 2,
+        "bonus_fraicheur": 1,
         "score": 1
       }
     },
@@ -233,12 +421,12 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-21",
-      "score": 2,
+      "score": 1,
       "pourquoi": {
         "mots": [],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 2,
+        "bonus_fraicheur": 1,
         "score": 0
       }
     },
@@ -258,12 +446,12 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-21",
-      "score": 2,
+      "score": 1,
       "pourquoi": {
         "mots": [],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 2,
+        "bonus_fraicheur": 1,
         "score": 0
       }
     },
@@ -283,12 +471,12 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-21",
-      "score": 2,
+      "score": 1,
       "pourquoi": {
         "mots": [],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 2,
+        "bonus_fraicheur": 1,
         "score": 0
       }
     },
@@ -308,12 +496,12 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-21",
-      "score": 2,
+      "score": 1,
       "pourquoi": {
         "mots": [],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 2,
+        "bonus_fraicheur": 1,
         "score": 0
       }
     },
@@ -333,12 +521,12 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-21",
-      "score": 2,
+      "score": 1,
       "pourquoi": {
         "mots": [],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 2,
+        "bonus_fraicheur": 1,
         "score": 0
       }
     },
@@ -358,12 +546,12 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-21",
-      "score": 2,
+      "score": 1,
       "pourquoi": {
         "mots": [],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 2,
+        "bonus_fraicheur": 1,
         "score": 0
       }
     },
@@ -384,12 +572,12 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-21",
-      "score": 2,
+      "score": 1,
       "pourquoi": {
         "mots": [],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 2,
+        "bonus_fraicheur": 1,
         "score": 0
       }
     },
@@ -409,12 +597,12 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-21",
-      "score": 2,
+      "score": 1,
       "pourquoi": {
         "mots": [],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 2,
+        "bonus_fraicheur": 1,
         "score": 0
       }
     },
@@ -434,12 +622,12 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-21",
-      "score": 2,
+      "score": 1,
       "pourquoi": {
         "mots": [],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 2,
+        "bonus_fraicheur": 1,
         "score": 0
       }
     },
@@ -3503,7 +3691,7 @@
       "source": "INSEE",
       "url": "https://www.insee.fr/fr/statistiques/serie/011812232",
       "date_publication": "2026-10-15",
-      "collecte_le": "2026-10-21"
+      "collecte_le": "2026-10-22"
     },
     {
       "source_id": "insee-bdm",
@@ -3513,7 +3701,7 @@
       "source": "INSEE",
       "url": "https://www.insee.fr/fr/statistiques/serie/011794844",
       "date_publication": "2026-08-28",
-      "collecte_le": "2026-10-21"
+      "collecte_le": "2026-10-22"
     },
     {
       "source_id": "insee-bdm",
@@ -3523,7 +3711,7 @@
       "source": "INSEE",
       "url": "https://www.insee.fr/fr/statistiques/serie/001688527",
       "date_publication": "2026-08-07",
-      "collecte_le": "2026-10-21"
+      "collecte_le": "2026-10-22"
     },
     {
       "source_id": "insee-bdm",
@@ -3533,7 +3721,7 @@
       "source": "INSEE",
       "url": "https://www.insee.fr/fr/statistiques/serie/001565530",
       "date_publication": "2026-09-24",
-      "collecte_le": "2026-10-21"
+      "collecte_le": "2026-10-22"
     },
     {
       "source_id": "insee-bdm",
@@ -3543,47 +3731,47 @@
       "source": "INSEE",
       "url": "https://www.insee.fr/fr/statistiques/serie/010755537",
       "date_publication": "2026-10-16",
-      "collecte_le": "2026-10-21"
+      "collecte_le": "2026-10-22"
     },
     {
       "source_id": "bodacc-35",
       "libelle": "Créations d’entreprises en Ille-et-Vilaine",
       "valeur": "222 annonces",
-      "periode": "du 14/10/2026 au 20/10/2026",
+      "periode": "du 15/10/2026 au 21/10/2026",
       "source": "BODACC (DILA)",
       "url": "https://www.bodacc.fr/",
-      "date_publication": "2026-10-20",
-      "collecte_le": "2026-10-21"
+      "date_publication": "2026-10-21",
+      "collecte_le": "2026-10-22"
     },
     {
       "source_id": "bodacc-35",
       "libelle": "Procédures collectives en Ille-et-Vilaine",
-      "valeur": "57 annonces",
-      "periode": "du 14/10/2026 au 20/10/2026",
+      "valeur": "65 annonces",
+      "periode": "du 15/10/2026 au 21/10/2026",
       "source": "BODACC (DILA)",
       "url": "https://www.bodacc.fr/",
-      "date_publication": "2026-10-20",
-      "collecte_le": "2026-10-21"
+      "date_publication": "2026-10-21",
+      "collecte_le": "2026-10-22"
     },
     {
       "source_id": "bodacc-35",
       "libelle": "Ventes et cessions de fonds en Ille-et-Vilaine",
       "valeur": "33 annonces",
-      "periode": "du 14/10/2026 au 20/10/2026",
+      "periode": "du 15/10/2026 au 21/10/2026",
       "source": "BODACC (DILA)",
       "url": "https://www.bodacc.fr/",
-      "date_publication": "2026-10-20",
-      "collecte_le": "2026-10-21"
+      "date_publication": "2026-10-21",
+      "collecte_le": "2026-10-22"
     },
     {
       "source_id": "bodacc-35",
       "libelle": "Radiations en Ille-et-Vilaine",
       "valeur": "215 annonces",
-      "periode": "du 14/10/2026 au 20/10/2026",
+      "periode": "du 15/10/2026 au 21/10/2026",
       "source": "BODACC (DILA)",
       "url": "https://www.bodacc.fr/",
-      "date_publication": "2026-10-20",
-      "collecte_le": "2026-10-21"
+      "date_publication": "2026-10-21",
+      "collecte_le": "2026-10-22"
     }
   ],
   "suivi": {
@@ -3641,7 +3829,7 @@
       ],
       "source": "Assemblée nationale — dossier législatif",
       "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/PLF_2027",
-      "mis_a_jour_le": "2026-10-21",
+      "mis_a_jour_le": "2026-10-22",
       "mesures": {
         "libelle": "Projet de loi n° 3210 (texte déposé par le Gouvernement)",
         "url": "https://www.assemblee-nationale.fr/dyn/17/textes/l17b3210_projet-loi",
@@ -4922,8 +5110,8 @@
         }
       ],
       "prochaine_echeance": {
-        "libelle": "Fin du délai de 1re lecture à l’Assemblée (20 jours, art. 47-1 de la Constitution)",
-        "date": "2026-10-21",
+        "libelle": "Fin du délai d’examen par le Parlement (50 jours, art. 47-1 de la Constitution)",
+        "date": "2026-11-20",
         "indicative": true
       },
       "delais": [
@@ -4940,7 +5128,7 @@
       ],
       "source": "Assemblée nationale et Sénat — dossiers législatifs",
       "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/PLFSS_2027",
-      "mis_a_jour_le": "2026-10-21",
+      "mis_a_jour_le": "2026-10-22",
       "mesures": {
         "libelle": "Projet de loi n° 3211 (texte déposé par le Gouvernement)",
         "url": "https://www.assemblee-nationale.fr/dyn/17/textes/l17b3211_projet-loi",
