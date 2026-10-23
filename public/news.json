@@ -1,7 +1,200 @@
 {
   "version": 1,
-  "genere_le": "2026-10-22T04:59:34.795Z",
+  "genere_le": "2026-10-23T04:57:42.188Z",
   "articles": [
+    {
+      "id": "03d7c6c70797b37e",
+      "titre": "Accord de protection des investissements entre l'Union européenne et le Vietnam - rapport n° 90",
+      "source": "Sénat — Derniers rapports",
+      "source_id": "senat-rapports",
+      "url": "https://www.senat.fr/rap/l26-090/l26-090.html",
+      "date": "2026-10-23",
+      "theme": "Économie et statistiques",
+      "resume": "Rapport n° 90 de M. Akli MELLOULI, fait au nom de la commission des affaires étrangères, de la défense et des forces armées, sur le projet de loi autorisant la ratification de l'accord de protection des investissements entre l'Union européenne et ses États membres, d'une part, et la République…",
+      "importance": 2,
+      "public": [
+        "Conseil aux dirigeants"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-10-23",
+      "score": 3,
+      "pourquoi": {
+        "mots": [
+          {
+            "mot": "investissement",
+            "poids": 1
+          }
+        ],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 2,
+        "score": 1
+      }
+    },
+    {
+      "id": "925558ed73ce7656",
+      "titre": "N° 3394 tome VI - Avis de M. Julien Limongi sur le projet de loi de finances pour 2027 (n°3210).",
+      "source": "Assemblée nationale — Publications parlementaires",
+      "source_id": "an-documents",
+      "url": "https://www.assemblee-nationale.fr/17/budget/plf2027/a3394-tVI.asp",
+      "date": "2026-10-22",
+      "theme": "Loi de finances",
+      "resume": null,
+      "importance": 5,
+      "public": [
+        "Expertise comptable",
+        "Conseil aux dirigeants"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-10-23",
+      "score": 13,
+      "pourquoi": {
+        "mots": [
+          {
+            "mot": "projet de loi de finances",
+            "poids": 6
+          },
+          {
+            "mot": "loi de finances",
+            "poids": 5
+          }
+        ],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 2,
+        "score": 11
+      }
+    },
+    {
+      "id": "227dcd3eef5baebf",
+      "titre": "N° 3394 tome VIII - Avis de Mme Anne-Laure Blin sur le projet de loi de finances pour 2027 (n°3210).",
+      "source": "Assemblée nationale — Publications parlementaires",
+      "source_id": "an-documents",
+      "url": "https://www.assemblee-nationale.fr/17/budget/plf2027/a3394-tVIII.asp",
+      "date": "2026-10-22",
+      "theme": "Loi de finances",
+      "resume": null,
+      "importance": 5,
+      "public": [
+        "Expertise comptable",
+        "Conseil aux dirigeants"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-10-23",
+      "autres_sources": [
+        {
+          "source": "Assemblée nationale — Commission des finances",
+          "url": "https://www.assemblee-nationale.fr/17/budget/plf2027/a3394-tIII.asp",
+          "titre": "N° 3394 tome III - Avis de M. Bastien Lachaud sur le projet de loi de finances pour 2027 (n°3210)."
+        },
+        {
+          "source": "Assemblée nationale — Commission des finances",
+          "url": "https://www.assemblee-nationale.fr/17/budget/plf2027/a3394-tIV.asp",
+          "titre": "N° 3394 tome IV - Avis de Mme Anna Pic sur le projet de loi de finances pour 2027 (n°3210)."
+        }
+      ],
+      "score": 13,
+      "pourquoi": {
+        "mots": [
+          {
+            "mot": "projet de loi de finances",
+            "poids": 6
+          },
+          {
+            "mot": "loi de finances",
+            "poids": 5
+          }
+        ],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 2,
+        "score": 11
+      }
+    },
+    {
+      "id": "d2b76505e2d80935",
+      "titre": "N° 3389 rapport - Rapport de Mme Aurélie Trouvé sur la proposition de loi de Mme Aurélie Trouvé et plusieurs de ses collègues visant un contrôle réel des investissements étrangers en France (3177).",
+      "source": "Assemblée nationale — Commission des finances",
+      "source_id": "an-commission-finances",
+      "url": "https://www.assemblee-nationale.fr/17/rapports/r3389.asp",
+      "date": "2026-10-22",
+      "theme": "Économie et statistiques",
+      "resume": null,
+      "importance": 2,
+      "public": [
+        "Conseil aux dirigeants"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-10-23",
+      "score": 3,
+      "pourquoi": {
+        "mots": [
+          {
+            "mot": "investissement",
+            "poids": 1
+          }
+        ],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 2,
+        "score": 1
+      }
+    },
+    {
+      "id": "211ed839119e870c",
+      "titre": "N° 3351 - Proposition de loi, modifiée par le Sénat, pour l'égalité d'accès aux soins des Ultramarins sur l'ensemble du territoire national",
+      "source": "Assemblée nationale — Commission des affaires sociales",
+      "source_id": "an-commission-affaires-sociales",
+      "url": "https://www.assemblee-nationale.fr/17/propositions/pion3351.asp",
+      "date": "2026-10-22",
+      "theme": "Sécurité sociale",
+      "resume": null,
+      "importance": 1,
+      "public": [
+        "Social / paie"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-10-23",
+      "score": 2,
+      "pourquoi": {
+        "mots": [],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 2,
+        "score": 0
+      }
+    },
+    {
+      "id": "53fdd5e4be215890",
+      "titre": "Protection des enfants - texte de la commission N° 89",
+      "source": "Sénat — Derniers textes",
+      "source_id": "senat-textes",
+      "url": "https://www.senat.fr/leg/pjl26-089.html",
+      "date": "2026-10-22",
+      "theme": "Loi de finances",
+      "resume": "Projet de loi relatif à la protection des enfants : texte de la commission N° 89 déposé le 21 octobre 2026",
+      "importance": 1,
+      "public": [
+        "Expertise comptable",
+        "Conseil aux dirigeants"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-10-23",
+      "score": 2,
+      "pourquoi": {
+        "mots": [],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 2,
+        "score": 0
+      }
+    },
     {
       "id": "33f2d9648501ad79",
       "titre": "Réparation des dommages résultant de dégradations commises dans l'espace public - texte de la commission N° 87",
@@ -44,7 +237,7 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-21",
-      "score": 8,
+      "score": 7,
       "pourquoi": {
         "mots": [
           {
@@ -58,7 +251,7 @@
         ],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 2,
+        "bonus_fraicheur": 1,
         "score": 6
       }
     },
@@ -78,7 +271,7 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-22",
-      "score": 4,
+      "score": 3,
       "pourquoi": {
         "mots": [
           {
@@ -88,7 +281,7 @@
         ],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 2,
+        "bonus_fraicheur": 1,
         "score": 2
       }
     },
@@ -108,7 +301,7 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-22",
-      "score": 4,
+      "score": 3,
       "pourquoi": {
         "mots": [
           {
@@ -118,7 +311,7 @@
         ],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 2,
+        "bonus_fraicheur": 1,
         "score": 2
       }
     },
@@ -138,12 +331,12 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-22",
-      "score": 2,
+      "score": 1,
       "pourquoi": {
         "mots": [],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 2,
+        "bonus_fraicheur": 1,
         "score": 0
       }
     },
@@ -163,12 +356,12 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-22",
-      "score": 2,
+      "score": 1,
       "pourquoi": {
         "mots": [],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 2,
+        "bonus_fraicheur": 1,
         "score": 0
       }
     },
@@ -189,12 +382,12 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-21",
-      "score": 2,
+      "score": 1,
       "pourquoi": {
         "mots": [],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 2,
+        "bonus_fraicheur": 1,
         "score": 0
       }
     },
@@ -215,12 +408,37 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-22",
-      "score": 2,
+      "score": 1,
       "pourquoi": {
         "mots": [],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 2,
+        "bonus_fraicheur": 1,
+        "score": 0
+      }
+    },
+    {
+      "id": "404b6247310e3600",
+      "titre": "Le Conseil d'État participe à un séminaire avec le Conseil d'État belge",
+      "source": "Conseil d'État — Actualités",
+      "source_id": "ce-actualites",
+      "url": "https://www.conseil-etat.fr/actualites/le-conseil-d-etat-participe-a-un-seminaire-avec-le-conseil-d-etat-belge",
+      "date": "2026-10-21",
+      "theme": "Fiscal et comptable",
+      "resume": null,
+      "importance": 1,
+      "public": [
+        "Expertise comptable"
+      ],
+      "type": null,
+      "origine": "flux",
+      "collecte_le": "2026-10-23",
+      "score": 1,
+      "pourquoi": {
+        "mots": [],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 1,
         "score": 0
       }
     },
@@ -241,12 +459,12 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-22",
-      "score": 2,
+      "score": 1,
       "pourquoi": {
         "mots": [],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 2,
+        "bonus_fraicheur": 1,
         "score": 0
       }
     },
@@ -267,12 +485,12 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-21",
-      "score": 2,
+      "score": 1,
       "pourquoi": {
         "mots": [],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 2,
+        "bonus_fraicheur": 1,
         "score": 0
       }
     },
@@ -648,12 +866,12 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-20",
-      "score": 1,
+      "score": 0,
       "pourquoi": {
         "mots": [],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 1,
+        "bonus_fraicheur": 0,
         "score": 0
       }
     },
@@ -674,12 +892,12 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-20",
-      "score": 1,
+      "score": 0,
       "pourquoi": {
         "mots": [],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 1,
+        "bonus_fraicheur": 0,
         "score": 0
       }
     },
@@ -699,12 +917,12 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-20",
-      "score": 1,
+      "score": 0,
       "pourquoi": {
         "mots": [],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 1,
+        "bonus_fraicheur": 0,
         "score": 0
       }
     },
@@ -724,12 +942,12 @@
       "type": null,
       "origine": "flux",
       "collecte_le": "2026-10-20",
-      "score": 1,
+      "score": 0,
       "pourquoi": {
         "mots": [],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 1,
+        "bonus_fraicheur": 0,
         "score": 0
       }
     },
@@ -1031,14 +1249,14 @@
       },
       "autres_sources": [
         {
-          "source": "Sénat — Économie et finances, fiscalité",
+          "source": "Sénat — Derniers rapports",
           "url": "https://www.senat.fr/rap/a26-043/a26-043.html",
-          "titre": "Contributions à l'ONF et composition de son conseil d'administration - Avis n° 43"
+          "titre": "Contributions à l'ONF et composition de son conseil d'administration - avis n° 43"
         },
         {
-          "source": "Sénat — Économie et finances, fiscalité",
+          "source": "Sénat — Derniers rapports",
           "url": "https://www.senat.fr/rap/l26-059/l26-059.html",
-          "titre": "Contributions à l'ONF et composition de son conseil d'administration - Rapport n° 59"
+          "titre": "Contributions à l'ONF et composition de son conseil d'administration - rapport n° 59"
         }
       ]
     },
@@ -3691,7 +3909,7 @@
       "source": "INSEE",
       "url": "https://www.insee.fr/fr/statistiques/serie/011812232",
       "date_publication": "2026-10-15",
-      "collecte_le": "2026-10-22"
+      "collecte_le": "2026-10-23"
     },
     {
       "source_id": "insee-bdm",
@@ -3701,7 +3919,7 @@
       "source": "INSEE",
       "url": "https://www.insee.fr/fr/statistiques/serie/011794844",
       "date_publication": "2026-08-28",
-      "collecte_le": "2026-10-22"
+      "collecte_le": "2026-10-23"
     },
     {
       "source_id": "insee-bdm",
@@ -3711,17 +3929,17 @@
       "source": "INSEE",
       "url": "https://www.insee.fr/fr/statistiques/serie/001688527",
       "date_publication": "2026-08-07",
-      "collecte_le": "2026-10-22"
+      "collecte_le": "2026-10-23"
     },
     {
       "source_id": "insee-bdm",
       "libelle": "Climat des affaires (100 = moyenne de long terme)",
-      "valeur": "96,4",
-      "periode": "septembre 2026",
+      "valeur": "97,5",
+      "periode": "octobre 2026",
       "source": "INSEE",
       "url": "https://www.insee.fr/fr/statistiques/serie/001565530",
-      "date_publication": "2026-09-24",
-      "collecte_le": "2026-10-22"
+      "date_publication": "2026-10-22",
+      "collecte_le": "2026-10-23"
     },
     {
       "source_id": "insee-bdm",
@@ -3731,47 +3949,47 @@
       "source": "INSEE",
       "url": "https://www.insee.fr/fr/statistiques/serie/010755537",
       "date_publication": "2026-10-16",
-      "collecte_le": "2026-10-22"
+      "collecte_le": "2026-10-23"
     },
     {
       "source_id": "bodacc-35",
       "libelle": "Créations d’entreprises en Ille-et-Vilaine",
-      "valeur": "222 annonces",
-      "periode": "du 15/10/2026 au 21/10/2026",
+      "valeur": "257 annonces",
+      "periode": "du 16/10/2026 au 22/10/2026",
       "source": "BODACC (DILA)",
       "url": "https://www.bodacc.fr/",
-      "date_publication": "2026-10-21",
-      "collecte_le": "2026-10-22"
+      "date_publication": "2026-10-22",
+      "collecte_le": "2026-10-23"
     },
     {
       "source_id": "bodacc-35",
       "libelle": "Procédures collectives en Ille-et-Vilaine",
-      "valeur": "65 annonces",
-      "periode": "du 15/10/2026 au 21/10/2026",
+      "valeur": "108 annonces",
+      "periode": "du 16/10/2026 au 22/10/2026",
       "source": "BODACC (DILA)",
       "url": "https://www.bodacc.fr/",
-      "date_publication": "2026-10-21",
-      "collecte_le": "2026-10-22"
+      "date_publication": "2026-10-22",
+      "collecte_le": "2026-10-23"
     },
     {
       "source_id": "bodacc-35",
       "libelle": "Ventes et cessions de fonds en Ille-et-Vilaine",
-      "valeur": "33 annonces",
-      "periode": "du 15/10/2026 au 21/10/2026",
+      "valeur": "39 annonces",
+      "periode": "du 16/10/2026 au 22/10/2026",
       "source": "BODACC (DILA)",
       "url": "https://www.bodacc.fr/",
-      "date_publication": "2026-10-21",
-      "collecte_le": "2026-10-22"
+      "date_publication": "2026-10-22",
+      "collecte_le": "2026-10-23"
     },
     {
       "source_id": "bodacc-35",
       "libelle": "Radiations en Ille-et-Vilaine",
-      "valeur": "215 annonces",
-      "periode": "du 15/10/2026 au 21/10/2026",
+      "valeur": "220 annonces",
+      "periode": "du 16/10/2026 au 22/10/2026",
       "source": "BODACC (DILA)",
       "url": "https://www.bodacc.fr/",
-      "date_publication": "2026-10-21",
-      "collecte_le": "2026-10-22"
+      "date_publication": "2026-10-22",
+      "collecte_le": "2026-10-23"
     }
   ],
   "suivi": {
@@ -3827,9 +4045,9 @@
           "indicative": true
         }
       ],
-      "source": "Assemblée nationale — dossier législatif",
+      "source": "Assemblée nationale et Sénat — dossiers législatifs",
       "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/PLF_2027",
-      "mis_a_jour_le": "2026-10-22",
+      "mis_a_jour_le": "2026-10-23",
       "mesures": {
         "libelle": "Projet de loi n° 3210 (texte déposé par le Gouvernement)",
         "url": "https://www.assemblee-nationale.fr/dyn/17/textes/l17b3210_projet-loi",
@@ -5065,6 +5283,7 @@
           "etablie_le": "2026-10-08"
         }
       },
+      "url_senat": "https://www.senat.fr/dossier-legislatif/pjlf2027.html",
       "mots_cles": [
         "projet de loi de finances",
         "loi de finances pour 2027",
@@ -5128,7 +5347,7 @@
       ],
       "source": "Assemblée nationale et Sénat — dossiers législatifs",
       "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/PLFSS_2027",
-      "mis_a_jour_le": "2026-10-22",
+      "mis_a_jour_le": "2026-10-23",
       "mesures": {
         "libelle": "Projet de loi n° 3211 (texte déposé par le Gouvernement)",
         "url": "https://www.assemblee-nationale.fr/dyn/17/textes/l17b3211_projet-loi",
@@ -5875,96 +6094,6 @@
     }
   ],
   "echeances": [
-    {
-      "id": "impots-2026-10-15-849d3efc",
-      "date": "2026-10-15",
-      "titre": "Prélèvement et retenues à la source sur les RCM",
-      "detail": "Date limite de : dépôt de la déclaration de retenue à la source sur les revenus des obligations et autres titres d'emprunt négociables relative au mois de septembre 2026 (déclaration n° 2753) ; dépôt de la déclaration relative au mois de septembre 2026 concernant les prélèvements et retenues à la source sur les revenus de capitaux mobiliers (déclaration n° 2777).",
-      "categorie": "fiscal",
-      "source": "impots.gouv.fr — calendrier fiscal",
-      "url": "https://www.impots.gouv.fr/professionnel/calendrier-fiscal/2026-10",
-      "origine": "calendrier_officiel"
-    },
-    {
-      "id": "impots-2026-10-15-e066979f",
-      "date": "2026-10-15",
-      "titre": "Retenue à la source - Prélèvement libératoire",
-      "detail": "Date limite de versement de l’acompte dû (acquitté à l'appui de la déclaration n° 2777 relative au mois de septembre 2026 déposée en octobre 2026) au titre : de la contribution sociale généralisée, du prélèvement de solidarité et de la contribution pour le remboursement de la dette sociale ; et du prélèvement forfaitaire et de la retenue à la source.",
-      "categorie": "fiscal",
-      "source": "impots.gouv.fr — calendrier fiscal",
-      "url": "https://www.impots.gouv.fr/professionnel/calendrier-fiscal/2026-10",
-      "origine": "calendrier_officiel"
-    },
-    {
-      "id": "impots-2026-10-15-1ef59e08",
-      "date": "2026-10-15",
-      "titre": "Sociétés soumises à l'IS",
-      "detail": "Date limite de télépaiement du solde de l'impôt sur les sociétés (IS)et de la contribution sociale sur l'IS de 3,3 %, à l'aide du relevé de solde n° 2572, si votre exercice est clos le 30 juin 2026.",
-      "categorie": "fiscal",
-      "source": "impots.gouv.fr — calendrier fiscal",
-      "url": "https://www.impots.gouv.fr/professionnel/calendrier-fiscal/2026-10",
-      "origine": "calendrier_officiel"
-    },
-    {
-      "id": "impots-2026-10-15-4d87e62c",
-      "date": "2026-10-15",
-      "titre": "Taxe Générale sur les Activités Polluantes (TGAP)",
-      "detail": "Entre les 15 et 26 octobre 2026 : date limite de dépôt de la déclaration d’acompte n°2020-TGAP-AC au titre de la TGAP 2026 pour les redevables soumis au régime réel normal en TVA à la date figurant dans votre espace professionnel.",
-      "categorie": "fiscal",
-      "source": "impots.gouv.fr — calendrier fiscal",
-      "url": "https://www.impots.gouv.fr/professionnel/calendrier-fiscal/2026-10",
-      "origine": "calendrier_officiel"
-    },
-    {
-      "id": "impots-2026-10-15-037a97ea",
-      "date": "2026-10-15",
-      "titre": "Taxe sur les conventions d'assurances",
-      "detail": "La taxe due doit être télédéclarée et télépayée avec le formulaire n°2787-SD au titre des primes émises, des conventions conclues et des sommes échues au cours du mois de septembre 2026.",
-      "categorie": "fiscal",
-      "source": "impots.gouv.fr — calendrier fiscal",
-      "url": "https://www.impots.gouv.fr/professionnel/calendrier-fiscal/2026-10",
-      "origine": "calendrier_officiel"
-    },
-    {
-      "id": "impots-2026-10-15-198600ed",
-      "date": "2026-10-15",
-      "titre": "Taxe sur les salaires",
-      "detail": "Date limite de télépaiement de la taxe concernant les salaires payés en septembre (redevables mensuels) ou les salaires payés au cours du 3ème trimestre (redevables trimestriels) à l'aide du relevé de versement provisionnel n° 2501.",
-      "categorie": "fiscal",
-      "source": "impots.gouv.fr — calendrier fiscal",
-      "url": "https://www.impots.gouv.fr/professionnel/calendrier-fiscal/2026-10",
-      "origine": "calendrier_officiel"
-    },
-    {
-      "id": "impots-2026-10-15-dcec54cd",
-      "date": "2026-10-15",
-      "titre": "Taxe sur les services numériques (TSN)",
-      "detail": "Entre les 15 et 24 octobre 2026 : paiement du 2ème acompte de TSN pour les redevables déposant des déclarations mensuelles de TVA ou non assujettis à la TVA à la date figurant dans votre espace professionnel.",
-      "categorie": "fiscal",
-      "source": "impots.gouv.fr — calendrier fiscal",
-      "url": "https://www.impots.gouv.fr/professionnel/calendrier-fiscal/2026-10",
-      "origine": "calendrier_officiel"
-    },
-    {
-      "id": "impots-2026-10-15-4b23ca42",
-      "date": "2026-10-15",
-      "titre": "TVA régime réel normal d'imposition",
-      "detail": "Entre les 15 et 24 octobre 2026, dépôt et paiement de la déclaration mensuelle ou trimestrielle de TVA à la date figurant dans votre espace professionnel.",
-      "categorie": "fiscal",
-      "source": "impots.gouv.fr — calendrier fiscal",
-      "url": "https://www.impots.gouv.fr/professionnel/calendrier-fiscal/2026-10",
-      "origine": "calendrier_officiel"
-    },
-    {
-      "id": "impots-2026-10-15-e3d43af0",
-      "date": "2026-10-15",
-      "titre": "Prélèvement à la source – DSN",
-      "detail": "Date limite pour la télédéclaration DSN de septembre 2026 (entreprises de moins de 50 salariés) et le télépaiement (paiement mensuel et option de paiement trimestriel).",
-      "categorie": "social",
-      "source": "impots.gouv.fr — calendrier fiscal",
-      "url": "https://www.impots.gouv.fr/professionnel/calendrier-fiscal/2026-10",
-      "origine": "calendrier_officiel"
-    },
     {
       "id": "urssaf-ti-mensuel-20-2026-10-20",
       "date": "2026-10-20",
