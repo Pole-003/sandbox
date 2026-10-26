@@ -1,7 +1,132 @@
 {
   "version": 1,
-  "genere_le": "2026-10-23T04:57:42.188Z",
+  "genere_le": "2026-10-26T05:59:09.192Z",
   "articles": [
+    {
+      "id": "0c5ab321429dc80b",
+      "titre": "Protection des enfants - rapport n° 88",
+      "source": "Sénat — Derniers rapports",
+      "source_id": "senat-rapports",
+      "url": "https://www.senat.fr/rap/l26-088/l26-088.html",
+      "date": "2026-10-24",
+      "theme": "Loi de finances",
+      "resume": "Rapport n° 88 de Mmes Agnès CANAYER et Dominique VÉRIEN, fait au nom de la commission des lois constitutionnelles, de législation, du suffrage universel, du Règlement et d'administration générale, sur le projet de loi relatif à la protection des enfants (21 octobre 2026)",
+      "importance": 1,
+      "public": [
+        "Expertise comptable",
+        "Conseil aux dirigeants"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-10-26",
+      "score": 1,
+      "pourquoi": {
+        "mots": [],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 1,
+        "score": 0
+      }
+    },
+    {
+      "id": "e9d697aa9f11a086",
+      "titre": "N° 3279 tome IV - Avis de M. Christophe Naegelen sur le projet de loi de finances pour 2027 (n°3210).",
+      "source": "Assemblée nationale — Publications parlementaires",
+      "source_id": "an-documents",
+      "url": "https://www.assemblee-nationale.fr/17/budget/plf2027/a3279-tIV.asp",
+      "date": "2026-10-23",
+      "theme": "Loi de finances",
+      "resume": null,
+      "importance": 5,
+      "public": [
+        "Expertise comptable",
+        "Conseil aux dirigeants"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-10-26",
+      "score": 12,
+      "pourquoi": {
+        "mots": [
+          {
+            "mot": "projet de loi de finances",
+            "poids": 6
+          },
+          {
+            "mot": "loi de finances",
+            "poids": 5
+          }
+        ],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 1,
+        "score": 11
+      }
+    },
+    {
+      "id": "0208da080a749d6e",
+      "titre": "Texte adopté n° 358 - Projet de loi de financement de la sécurité sociale rejeté par l'Assemblée nationale, pour 2027",
+      "source": "Assemblée nationale — Publications parlementaires",
+      "source_id": "an-documents",
+      "url": "https://www.assemblee-nationale.fr/17/ta/ta0358.asp",
+      "date": "2026-10-23",
+      "theme": "Sécurité sociale",
+      "resume": null,
+      "importance": 4,
+      "public": [
+        "Social / paie"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-10-26",
+      "score": 9,
+      "pourquoi": {
+        "mots": [
+          {
+            "mot": "financement de la sécurité sociale",
+            "poids": 6
+          },
+          {
+            "mot": "sécurité sociale",
+            "poids": 2
+          }
+        ],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 1,
+        "score": 8
+      }
+    },
+    {
+      "id": "9de75e61d285394d",
+      "titre": "Protéger nos enfants : 25 mesures pour mettre fin aux défaillances systémiques du périscolaire - rapport d'information n° 73",
+      "source": "Sénat — Derniers rapports",
+      "source_id": "senat-rapports",
+      "url": "https://www.senat.fr/notice-rapport/2026/r26-073-notice.html",
+      "date": "2026-10-23",
+      "theme": "Économie et statistiques",
+      "resume": "Rapport d'information n° 73 de Mme Agnès EVREN, fait au nom de la commission de la culture, de l'éducation, de la communication et du sport : Protéger nos enfants : 25 mesures pour mettre fin aux défaillances systémiques du périscolaire (14 octobre 2026)",
+      "importance": 3,
+      "public": [
+        "Conseil aux dirigeants"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-10-26",
+      "score": 5,
+      "pourquoi": {
+        "mots": [
+          {
+            "mot": "défaillances",
+            "poids": 4
+          }
+        ],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 1,
+        "score": 4
+      }
+    },
     {
       "id": "03d7c6c70797b37e",
       "titre": "Accord de protection des investissements entre l'Union européenne et le Vietnam - rapport n° 90",
@@ -18,7 +143,7 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-23",
-      "score": 3,
+      "score": 2,
       "pourquoi": {
         "mots": [
           {
@@ -28,8 +153,164 @@
         ],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 2,
+        "bonus_fraicheur": 1,
         "score": 1
+      }
+    },
+    {
+      "id": "1411f932a4fe054e",
+      "titre": "Accord France - Inde - rapport n° 81",
+      "source": "Sénat — Derniers rapports",
+      "source_id": "senat-rapports",
+      "url": "https://www.senat.fr/rap/l26-081/l26-081.html",
+      "date": "2026-10-23",
+      "theme": "Loi de finances",
+      "resume": "Rapport n° 81 de Mme Nathalie GOULET, fait au nom de la commission des finances, sur le projet de loi autorisant l'approbation de l'avenant à la convention entre le Gouvernement de la République française et le Gouvernement de la République de l'Inde du 29 septembre 1992 (21 octobre 2026)",
+      "importance": 1,
+      "public": [
+        "Expertise comptable",
+        "Conseil aux dirigeants"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-10-26",
+      "score": 1,
+      "pourquoi": {
+        "mots": [],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 1,
+        "score": 0
+      }
+    },
+    {
+      "id": "3a8478429b89dfab",
+      "titre": "Emplois saisonniers des jeunes dans le milieu agricole - texte N° 29",
+      "source": "Sénat — Derniers textes",
+      "source_id": "senat-textes",
+      "url": "https://www.senat.fr/leg/ppl26-029.html",
+      "date": "2026-10-23",
+      "theme": "Loi de finances",
+      "resume": "Proposition de loi visant à faciliter les emplois saisonniers des jeunes dans le milieu agricole : texte N° 29 de M. Emmanuel CAPUS, déposé au Sénat le 12 octobre 2026",
+      "importance": 1,
+      "public": [
+        "Expertise comptable",
+        "Conseil aux dirigeants"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-10-26",
+      "score": 1,
+      "pourquoi": {
+        "mots": [],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 1,
+        "score": 0
+      }
+    },
+    {
+      "id": "08bd2a8de00d04c0",
+      "titre": "Lutte contre les violences sexuelles et intrafamiliales - texte N° 46",
+      "source": "Sénat — Derniers textes",
+      "source_id": "senat-textes",
+      "url": "https://www.senat.fr/leg/ppl26-046.html",
+      "date": "2026-10-23",
+      "theme": "Loi de finances",
+      "resume": "Proposition de loi organique visant à adapter l'autorité judiciaire à la lutte contre les violences sexuelles et intrafamiliales : texte N° 46 transmis au Sénat le 13 octobre 2026",
+      "importance": 1,
+      "public": [
+        "Expertise comptable",
+        "Conseil aux dirigeants"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-10-26",
+      "score": 1,
+      "pourquoi": {
+        "mots": [],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 1,
+        "score": 0
+      }
+    },
+    {
+      "id": "118fe1c803d84e36",
+      "titre": "Règlement européen sur la maîtrise des coûts de l'électricité - texte N° 93",
+      "source": "Sénat — Derniers textes",
+      "source_id": "senat-textes",
+      "url": "https://www.senat.fr/leg/ppr26-093.html",
+      "date": "2026-10-23",
+      "theme": "Loi de finances",
+      "resume": "Proposition de résolution afin d'assurer la maîtrise anticipative des factures d'électricité dans l'Union européenne en réduisant les coûts du système et en favorisant l'électrification et la numérisation : texte N° 93 de M. Daniel GREMILLET, déposé au Sénat le 22 octobre 2026",
+      "importance": 1,
+      "public": [
+        "Expertise comptable",
+        "Conseil aux dirigeants"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-10-26",
+      "score": 1,
+      "pourquoi": {
+        "mots": [],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 1,
+        "score": 0
+      }
+    },
+    {
+      "id": "1a28226132b7dd22",
+      "titre": "Règlement européen sur la maîtrise des coûts de l'électricité : Redevances de réseau et taxation de l'électricité : concilier ambition européenne et subsidiarité - rapport d'information n° 94",
+      "source": "Sénat — Derniers rapports",
+      "source_id": "senat-rapports",
+      "url": "https://www.senat.fr/notice-rapport/2026/r26-094-notice.html",
+      "date": "2026-10-23",
+      "theme": "Loi de finances",
+      "resume": "Rapport d'information n° 94 de M. Daniel GREMILLET, fait au nom de la commission des affaires européennes, sur la proposition de résolution afin d'assurer la maîtrise anticipative des factures d'électricité dans l'Union européenne en réduisant les coûts du système et en favorisant…",
+      "importance": 1,
+      "public": [
+        "Expertise comptable",
+        "Conseil aux dirigeants"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-10-26",
+      "score": 1,
+      "pourquoi": {
+        "mots": [],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 1,
+        "score": 0
+      }
+    },
+    {
+      "id": "46993acaa850a75a",
+      "titre": "Une Corse autonome au sein de la République - rapport n° 85",
+      "source": "Sénat — Derniers rapports",
+      "source_id": "senat-rapports",
+      "url": "https://www.senat.fr/rap/l26-085/l26-085.html",
+      "date": "2026-10-23",
+      "theme": "Loi de finances",
+      "resume": "Rapport n° 85 de Mme Muriel JOURDA, fait au nom de la commission des lois constitutionnelles, de législation, du suffrage universel, du Règlement et d'administration générale, sur le projet de loi constitutionnelle pour une Corse autonome au sein de la République (21 octobre 2026)",
+      "importance": 1,
+      "public": [
+        "Expertise comptable",
+        "Conseil aux dirigeants"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-10-26",
+      "score": 1,
+      "pourquoi": {
+        "mots": [],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 1,
+        "score": 0
       }
     },
     {
@@ -49,7 +330,7 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-23",
-      "score": 13,
+      "score": 11,
       "pourquoi": {
         "mots": [
           {
@@ -63,9 +344,26 @@
         ],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 2,
+        "bonus_fraicheur": 0,
         "score": 11
-      }
+      },
+      "autres_sources": [
+        {
+          "source": "Assemblée nationale — Commission des finances",
+          "url": "https://www.assemblee-nationale.fr/17/budget/plf2027/a3394-tV.asp",
+          "titre": "N° 3394 tome V - Avis de M. Yannick Chenevard sur le projet de loi de finances pour 2027 (n°3210)."
+        },
+        {
+          "source": "Assemblée nationale — Commission des finances",
+          "url": "https://www.assemblee-nationale.fr/17/budget/plf2027/a3394-tI.asp",
+          "titre": "N° 3394 tome I - Avis de M. Laurent Jacobelli sur le projet de loi de finances pour 2027 (n°3210)."
+        },
+        {
+          "source": "Assemblée nationale — Commission des finances",
+          "url": "https://www.assemblee-nationale.fr/17/budget/plf2027/a3394-tII.asp",
+          "titre": "N° 3394 tome II - Avis de Mme Isabelle Rauch sur le projet de loi de finances pour 2027 (n°3210)."
+        }
+      ]
     },
     {
       "id": "227dcd3eef5baebf",
@@ -84,19 +382,7 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-23",
-      "autres_sources": [
-        {
-          "source": "Assemblée nationale — Commission des finances",
-          "url": "https://www.assemblee-nationale.fr/17/budget/plf2027/a3394-tIII.asp",
-          "titre": "N° 3394 tome III - Avis de M. Bastien Lachaud sur le projet de loi de finances pour 2027 (n°3210)."
-        },
-        {
-          "source": "Assemblée nationale — Commission des finances",
-          "url": "https://www.assemblee-nationale.fr/17/budget/plf2027/a3394-tIV.asp",
-          "titre": "N° 3394 tome IV - Avis de Mme Anna Pic sur le projet de loi de finances pour 2027 (n°3210)."
-        }
-      ],
-      "score": 13,
+      "score": 11,
       "pourquoi": {
         "mots": [
           {
@@ -110,9 +396,21 @@
         ],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 2,
+        "bonus_fraicheur": 0,
         "score": 11
-      }
+      },
+      "autres_sources": [
+        {
+          "source": "Assemblée nationale — Commission des finances",
+          "url": "https://www.assemblee-nationale.fr/17/budget/plf2027/a3394-tIII.asp",
+          "titre": "N° 3394 tome III - Avis de M. Bastien Lachaud sur le projet de loi de finances pour 2027 (n°3210)."
+        },
+        {
+          "source": "Assemblée nationale — Commission des finances",
+          "url": "https://www.assemblee-nationale.fr/17/budget/plf2027/a3394-tIV.asp",
+          "titre": "N° 3394 tome IV - Avis de Mme Anna Pic sur le projet de loi de finances pour 2027 (n°3210)."
+        }
+      ]
     },
     {
       "id": "d2b76505e2d80935",
@@ -130,7 +428,7 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-23",
-      "score": 3,
+      "score": 1,
       "pourquoi": {
         "mots": [
           {
@@ -140,7 +438,7 @@
         ],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 2,
+        "bonus_fraicheur": 0,
         "score": 1
       }
     },
@@ -160,12 +458,12 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-23",
-      "score": 2,
+      "score": 0,
       "pourquoi": {
         "mots": [],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 2,
+        "bonus_fraicheur": 0,
         "score": 0
       }
     },
@@ -186,12 +484,12 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-23",
-      "score": 2,
+      "score": 0,
       "pourquoi": {
         "mots": [],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 2,
+        "bonus_fraicheur": 0,
         "score": 0
       }
     },
@@ -212,13 +510,54 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-22",
-      "score": 2,
+      "score": 0,
       "pourquoi": {
         "mots": [],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 2,
+        "bonus_fraicheur": 0,
         "score": 0
+      },
+      "autres_sources": [
+        {
+          "source": "Sénat — Derniers rapports",
+          "url": "https://www.senat.fr/rap/l26-086/l26-086.html",
+          "titre": "Réparation des dommages résultant de dégradations commises dans l'espace public - rapport n° 86"
+        }
+      ]
+    },
+    {
+      "id": "5d43db648946b720",
+      "titre": "TVA - Mise à jour des commentaires relatifs aux taux réduits applicables aux opérations d’accession sociale à la propriété (loi n° 2023-1322 du 29 décembre 2023 de finances pour 2024, art. 86 ; loi n° 2026-103 du 19 février 2026 de finances pour 2026, art. 95) - Rescrit",
+      "source": "BOFiP-Impôts — Actualités",
+      "source_id": "bofip-actualites",
+      "url": "https://bofip.impots.gouv.fr/bofip/14376-PGP.html/ACTU-2024-00177",
+      "date": "2026-10-21",
+      "theme": "Fiscal et comptable",
+      "resume": "TVA - Mise à jour des commentaires relatifs aux taux réduits applicables aux opérations d’accession sociale à la propriété (loi n° 2023-1322 du 29 décembre 2023 de finances pour 2024, art. 86 ; loi n° 2026-103 du 19 février 2026 de finances pour 2026, art. 95) - Rescrit (identifiant juridique…",
+      "importance": 4,
+      "public": [
+        "Expertise comptable"
+      ],
+      "type": "doctrine",
+      "origine": "flux",
+      "collecte_le": "2026-10-26",
+      "score": 8,
+      "pourquoi": {
+        "mots": [
+          {
+            "mot": "tva",
+            "poids": 3
+          },
+          {
+            "mot": "rescrit",
+            "poids": 3
+          }
+        ],
+        "coefficient": 1,
+        "bonus_source": 2,
+        "bonus_fraicheur": 0,
+        "score": 8
       }
     },
     {
@@ -237,7 +576,7 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-21",
-      "score": 7,
+      "score": 6,
       "pourquoi": {
         "mots": [
           {
@@ -251,8 +590,38 @@
         ],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 1,
+        "bonus_fraicheur": 0,
         "score": 6
+      }
+    },
+    {
+      "id": "98bf1b2a019bb837",
+      "titre": "TVA - Mise à jour des commentaires relatifs aux livraisons et livraisons à soi-même de locaux directement destinés ou mis à la disposition de certaines structures du secteur social et médico-social",
+      "source": "BOFiP-Impôts — Actualités",
+      "source_id": "bofip-actualites",
+      "url": "https://bofip.impots.gouv.fr/bofip/14712-PGP.html/ACTU-2025-00108",
+      "date": "2026-10-21",
+      "theme": "Fiscal et comptable",
+      "resume": "TVA - Mise à jour des commentaires relatifs aux livraisons et livraisons à soi-même de locaux directement destinés ou mis à la disposition de certaines structures du secteur social et médico-social (identifiant juridique ACTU-2025-00108; publié le 21/10/2026)",
+      "importance": 3,
+      "public": [
+        "Expertise comptable"
+      ],
+      "type": "doctrine",
+      "origine": "flux",
+      "collecte_le": "2026-10-26",
+      "score": 5,
+      "pourquoi": {
+        "mots": [
+          {
+            "mot": "tva",
+            "poids": 3
+          }
+        ],
+        "coefficient": 1,
+        "bonus_source": 2,
+        "bonus_fraicheur": 0,
+        "score": 5
       }
     },
     {
@@ -271,7 +640,7 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-22",
-      "score": 3,
+      "score": 2,
       "pourquoi": {
         "mots": [
           {
@@ -281,7 +650,7 @@
         ],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 1,
+        "bonus_fraicheur": 0,
         "score": 2
       }
     },
@@ -301,7 +670,7 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-22",
-      "score": 3,
+      "score": 2,
       "pourquoi": {
         "mots": [
           {
@@ -311,7 +680,7 @@
         ],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 1,
+        "bonus_fraicheur": 0,
         "score": 2
       }
     },
@@ -331,12 +700,12 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-22",
-      "score": 1,
+      "score": 0,
       "pourquoi": {
         "mots": [],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 1,
+        "bonus_fraicheur": 0,
         "score": 0
       }
     },
@@ -356,14 +725,21 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-22",
-      "score": 1,
+      "score": 0,
       "pourquoi": {
         "mots": [],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 1,
+        "bonus_fraicheur": 0,
         "score": 0
-      }
+      },
+      "autres_sources": [
+        {
+          "source": "Sénat — Derniers rapports",
+          "url": "https://www.senat.fr/rap/l26-083/l26-083.html",
+          "titre": "Accords multilatéraux concernant l'échange automatique de renseignements - rapport n° 83"
+        }
+      ]
     },
     {
       "id": "fd409955a6d53675",
@@ -382,12 +758,12 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-21",
-      "score": 1,
+      "score": 0,
       "pourquoi": {
         "mots": [],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 1,
+        "bonus_fraicheur": 0,
         "score": 0
       }
     },
@@ -408,12 +784,12 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-22",
-      "score": 1,
+      "score": 0,
       "pourquoi": {
         "mots": [],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 1,
+        "bonus_fraicheur": 0,
         "score": 0
       }
     },
@@ -433,12 +809,12 @@
       "type": null,
       "origine": "flux",
       "collecte_le": "2026-10-23",
-      "score": 1,
+      "score": 0,
       "pourquoi": {
         "mots": [],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 1,
+        "bonus_fraicheur": 0,
         "score": 0
       }
     },
@@ -459,12 +835,12 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-22",
-      "score": 1,
+      "score": 0,
       "pourquoi": {
         "mots": [],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 1,
+        "bonus_fraicheur": 0,
         "score": 0
       }
     },
@@ -485,12 +861,12 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-21",
-      "score": 1,
+      "score": 0,
       "pourquoi": {
         "mots": [],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 1,
+        "bonus_fraicheur": 0,
         "score": 0
       }
     },
@@ -510,7 +886,7 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-20",
-      "score": 9,
+      "score": 8,
       "pourquoi": {
         "mots": [
           {
@@ -524,7 +900,7 @@
         ],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 1,
+        "bonus_fraicheur": 0,
         "score": 8
       }
     },
@@ -544,7 +920,7 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-21",
-      "score": 9,
+      "score": 8,
       "pourquoi": {
         "mots": [
           {
@@ -558,7 +934,7 @@
         ],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 1,
+        "bonus_fraicheur": 0,
         "score": 8
       }
     },
@@ -578,7 +954,7 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-21",
-      "score": 3,
+      "score": 2,
       "pourquoi": {
         "mots": [
           {
@@ -588,7 +964,7 @@
         ],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 1,
+        "bonus_fraicheur": 0,
         "score": 2
       }
     },
@@ -609,7 +985,7 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-21",
-      "score": 2,
+      "score": 1,
       "pourquoi": {
         "mots": [
           {
@@ -619,7 +995,7 @@
         ],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 1,
+        "bonus_fraicheur": 0,
         "score": 1
       }
     },
@@ -639,12 +1015,12 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-21",
-      "score": 1,
+      "score": 0,
       "pourquoi": {
         "mots": [],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 1,
+        "bonus_fraicheur": 0,
         "score": 0
       }
     },
@@ -664,12 +1040,12 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-21",
-      "score": 1,
+      "score": 0,
       "pourquoi": {
         "mots": [],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 1,
+        "bonus_fraicheur": 0,
         "score": 0
       }
     },
@@ -689,12 +1065,12 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-21",
-      "score": 1,
+      "score": 0,
       "pourquoi": {
         "mots": [],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 1,
+        "bonus_fraicheur": 0,
         "score": 0
       }
     },
@@ -714,12 +1090,12 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-21",
-      "score": 1,
+      "score": 0,
       "pourquoi": {
         "mots": [],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 1,
+        "bonus_fraicheur": 0,
         "score": 0
       }
     },
@@ -739,12 +1115,12 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-21",
-      "score": 1,
+      "score": 0,
       "pourquoi": {
         "mots": [],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 1,
+        "bonus_fraicheur": 0,
         "score": 0
       }
     },
@@ -764,12 +1140,12 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-21",
-      "score": 1,
+      "score": 0,
       "pourquoi": {
         "mots": [],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 1,
+        "bonus_fraicheur": 0,
         "score": 0
       }
     },
@@ -790,12 +1166,12 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-21",
-      "score": 1,
+      "score": 0,
       "pourquoi": {
         "mots": [],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 1,
+        "bonus_fraicheur": 0,
         "score": 0
       }
     },
@@ -815,12 +1191,12 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-21",
-      "score": 1,
+      "score": 0,
       "pourquoi": {
         "mots": [],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 1,
+        "bonus_fraicheur": 0,
         "score": 0
       }
     },
@@ -840,12 +1216,12 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-21",
-      "score": 1,
+      "score": 0,
       "pourquoi": {
         "mots": [],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 1,
+        "bonus_fraicheur": 0,
         "score": 0
       }
     },
@@ -3909,7 +4285,7 @@
       "source": "INSEE",
       "url": "https://www.insee.fr/fr/statistiques/serie/011812232",
       "date_publication": "2026-10-15",
-      "collecte_le": "2026-10-23"
+      "collecte_le": "2026-10-26"
     },
     {
       "source_id": "insee-bdm",
@@ -3919,7 +4295,7 @@
       "source": "INSEE",
       "url": "https://www.insee.fr/fr/statistiques/serie/011794844",
       "date_publication": "2026-08-28",
-      "collecte_le": "2026-10-23"
+      "collecte_le": "2026-10-26"
     },
     {
       "source_id": "insee-bdm",
@@ -3929,7 +4305,7 @@
       "source": "INSEE",
       "url": "https://www.insee.fr/fr/statistiques/serie/001688527",
       "date_publication": "2026-08-07",
-      "collecte_le": "2026-10-23"
+      "collecte_le": "2026-10-26"
     },
     {
       "source_id": "insee-bdm",
@@ -3939,7 +4315,7 @@
       "source": "INSEE",
       "url": "https://www.insee.fr/fr/statistiques/serie/001565530",
       "date_publication": "2026-10-22",
-      "collecte_le": "2026-10-23"
+      "collecte_le": "2026-10-26"
     },
     {
       "source_id": "insee-bdm",
@@ -3949,47 +4325,47 @@
       "source": "INSEE",
       "url": "https://www.insee.fr/fr/statistiques/serie/010755537",
       "date_publication": "2026-10-16",
-      "collecte_le": "2026-10-23"
+      "collecte_le": "2026-10-26"
     },
     {
       "source_id": "bodacc-35",
       "libelle": "Créations d’entreprises en Ille-et-Vilaine",
-      "valeur": "257 annonces",
-      "periode": "du 16/10/2026 au 22/10/2026",
+      "valeur": "235 annonces",
+      "periode": "du 19/10/2026 au 25/10/2026",
       "source": "BODACC (DILA)",
       "url": "https://www.bodacc.fr/",
-      "date_publication": "2026-10-22",
-      "collecte_le": "2026-10-23"
+      "date_publication": "2026-10-25",
+      "collecte_le": "2026-10-26"
     },
     {
       "source_id": "bodacc-35",
       "libelle": "Procédures collectives en Ille-et-Vilaine",
-      "valeur": "108 annonces",
-      "periode": "du 16/10/2026 au 22/10/2026",
+      "valeur": "122 annonces",
+      "periode": "du 19/10/2026 au 25/10/2026",
       "source": "BODACC (DILA)",
       "url": "https://www.bodacc.fr/",
-      "date_publication": "2026-10-22",
-      "collecte_le": "2026-10-23"
+      "date_publication": "2026-10-25",
+      "collecte_le": "2026-10-26"
     },
     {
       "source_id": "bodacc-35",
       "libelle": "Ventes et cessions de fonds en Ille-et-Vilaine",
-      "valeur": "39 annonces",
-      "periode": "du 16/10/2026 au 22/10/2026",
+      "valeur": "27 annonces",
+      "periode": "du 19/10/2026 au 25/10/2026",
       "source": "BODACC (DILA)",
       "url": "https://www.bodacc.fr/",
-      "date_publication": "2026-10-22",
-      "collecte_le": "2026-10-23"
+      "date_publication": "2026-10-25",
+      "collecte_le": "2026-10-26"
     },
     {
       "source_id": "bodacc-35",
       "libelle": "Radiations en Ille-et-Vilaine",
-      "valeur": "220 annonces",
-      "periode": "du 16/10/2026 au 22/10/2026",
+      "valeur": "180 annonces",
+      "periode": "du 19/10/2026 au 25/10/2026",
       "source": "BODACC (DILA)",
       "url": "https://www.bodacc.fr/",
-      "date_publication": "2026-10-22",
-      "collecte_le": "2026-10-23"
+      "date_publication": "2026-10-25",
+      "collecte_le": "2026-10-26"
     }
   ],
   "suivi": {
@@ -4047,7 +4423,7 @@
       ],
       "source": "Assemblée nationale et Sénat — dossiers législatifs",
       "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/PLF_2027",
-      "mis_a_jour_le": "2026-10-23",
+      "mis_a_jour_le": "2026-10-26",
       "mesures": {
         "libelle": "Projet de loi n° 3210 (texte déposé par le Gouvernement)",
         "url": "https://www.assemblee-nationale.fr/dyn/17/textes/l17b3210_projet-loi",
@@ -5347,7 +5723,7 @@
       ],
       "source": "Assemblée nationale et Sénat — dossiers législatifs",
       "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/PLFSS_2027",
-      "mis_a_jour_le": "2026-10-23",
+      "mis_a_jour_le": "2026-10-26",
       "mesures": {
         "libelle": "Projet de loi n° 3211 (texte déposé par le Gouvernement)",
         "url": "https://www.assemblee-nationale.fr/dyn/17/textes/l17b3211_projet-loi",
