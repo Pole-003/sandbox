@@ -1,7 +1,177 @@
 {
   "version": 1,
-  "genere_le": "2026-10-26T05:59:09.192Z",
+  "genere_le": "2026-10-27T05:58:16.502Z",
   "articles": [
+    {
+      "id": "7a1f99c208b99c84",
+      "titre": "La pratique de la dépense fiscale : étude de cas européens - rapport d'information n° 80",
+      "source": "Sénat — Derniers rapports",
+      "source_id": "senat-rapports",
+      "url": "https://www.senat.fr/notice-rapport/2026/r26-080-notice.html",
+      "date": "2026-10-27",
+      "theme": "Fiscal et comptable",
+      "resume": "Rapport d'information n° 80 de M. Pascal SAVOLDELLI, fait au nom de la commission des finances : La pratique de la dépense fiscale : étude de cas européens (20 octobre 2026)",
+      "importance": 2,
+      "public": [
+        "Expertise comptable"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-10-27",
+      "score": 4,
+      "pourquoi": {
+        "mots": [
+          {
+            "mot": "fiscal",
+            "poids": 2
+          }
+        ],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 2,
+        "score": 2
+      }
+    },
+    {
+      "id": "9dcfa75f04d807b7",
+      "titre": "N° 3337 tome IX - Avis de M. Stéphane Buchou sur le projet de loi de finances pour 2027 (n°3210).",
+      "source": "Assemblée nationale — Commission des affaires économiques",
+      "source_id": "an-commission-affaires-economiques",
+      "url": "https://www.assemblee-nationale.fr/17/budget/plf2027/a3337-tIX.asp",
+      "date": "2026-10-26",
+      "theme": "Loi de finances",
+      "resume": null,
+      "importance": 5,
+      "public": [
+        "Expertise comptable",
+        "Conseil aux dirigeants"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-10-27",
+      "score": 13,
+      "pourquoi": {
+        "mots": [
+          {
+            "mot": "projet de loi de finances",
+            "poids": 6
+          },
+          {
+            "mot": "loi de finances",
+            "poids": 5
+          }
+        ],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 2,
+        "score": 11
+      }
+    },
+    {
+      "id": "7475c4d21baf0d47",
+      "titre": "RPPM - Modification des emplois éligibles au PEA et au PEA-PME et aménagement des modalités de fonctionnement du PEA et du PEA-PME (loi n° 2025-127 du 14 février 2025 de finances pour 2025, art. 92 et 93 ; loi n° 2026-103 du 19 février 2026 de finances pour 2026, art. 24)",
+      "source": "BOFiP-Impôts — Actualités",
+      "source_id": "bofip-actualites",
+      "url": "https://bofip.impots.gouv.fr/bofip/14721-PGP.html/ACTU-2025-00113",
+      "date": "2026-10-26",
+      "theme": "Économie et statistiques",
+      "resume": "RPPM - Modification des emplois éligibles au PEA et au PEA-PME et aménagement des modalités de fonctionnement du PEA et du PEA-PME (loi n° 2025-127 du 14 février 2025 de finances pour 2025, art. 92 et 93 ; loi n° 2026-103 du 19 février 2026 de finances pour 2026, art. 24) (identifiant juridique…",
+      "importance": 3,
+      "public": [
+        "Conseil aux dirigeants"
+      ],
+      "type": "doctrine",
+      "origine": "flux",
+      "collecte_le": "2026-10-27",
+      "score": 6,
+      "pourquoi": {
+        "mots": [
+          {
+            "mot": "pme",
+            "poids": 2
+          }
+        ],
+        "coefficient": 1,
+        "bonus_source": 2,
+        "bonus_fraicheur": 2,
+        "score": 4
+      }
+    },
+    {
+      "id": "96fa9b84ffeb993b",
+      "titre": "N° 3350 rapport - Rapport de M. Hadrien Clouet sur la proposition de loi de M. Hadrien Clouet et plusieurs de ses collègues visant l'augmentation des salaires et des pensions (3176).",
+      "source": "Assemblée nationale — Commission des affaires sociales",
+      "source_id": "an-commission-affaires-sociales",
+      "url": "https://www.assemblee-nationale.fr/17/rapports/r3350.asp",
+      "date": "2026-10-26",
+      "theme": "Sécurité sociale",
+      "resume": null,
+      "importance": 1,
+      "public": [
+        "Social / paie"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-10-27",
+      "score": 2,
+      "pourquoi": {
+        "mots": [],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 2,
+        "score": 0
+      }
+    },
+    {
+      "id": "a1f030883a27ebce",
+      "titre": "N° 3381 rapport - Rapport de Mme Marianne Maximi sur la proposition de loi de Mme Marianne Maximi et plusieurs de ses collègues pour protéger durablement les jeunes majeurs de l'aide sociale à l'enfance et de la protection judiciaire de la jeunesse (2774).",
+      "source": "Assemblée nationale — Commission des affaires sociales",
+      "source_id": "an-commission-affaires-sociales",
+      "url": "https://www.assemblee-nationale.fr/17/rapports/r3381.asp",
+      "date": "2026-10-26",
+      "theme": "Sécurité sociale",
+      "resume": null,
+      "importance": 1,
+      "public": [
+        "Social / paie"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-10-27",
+      "score": 2,
+      "pourquoi": {
+        "mots": [],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 2,
+        "score": 0
+      }
+    },
+    {
+      "id": "39754c003c9831a7",
+      "titre": "Simplifier l'ouverture des débits de boissons en zone rurale - Texte n° 16",
+      "source": "Sénat — PME, commerce et artisanat",
+      "source_id": "senat-pme",
+      "url": "https://www.senat.fr/leg/tas26-016.html",
+      "date": "2026-10-26",
+      "theme": "Économie et statistiques",
+      "resume": "Texte",
+      "importance": 1,
+      "public": [
+        "Conseil aux dirigeants"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-10-27",
+      "score": 2,
+      "pourquoi": {
+        "mots": [],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 2,
+        "score": 0
+      }
+    },
     {
       "id": "0c5ab321429dc80b",
       "titre": "Protection des enfants - rapport n° 88",
@@ -45,7 +215,7 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-26",
-      "score": 12,
+      "score": 11,
       "pourquoi": {
         "mots": [
           {
@@ -59,7 +229,7 @@
         ],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 1,
+        "bonus_fraicheur": 0,
         "score": 11
       }
     },
@@ -79,7 +249,7 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-26",
-      "score": 9,
+      "score": 8,
       "pourquoi": {
         "mots": [
           {
@@ -93,7 +263,7 @@
         ],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 1,
+        "bonus_fraicheur": 0,
         "score": 8
       }
     },
@@ -113,7 +283,7 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-26",
-      "score": 5,
+      "score": 4,
       "pourquoi": {
         "mots": [
           {
@@ -123,7 +293,7 @@
         ],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 1,
+        "bonus_fraicheur": 0,
         "score": 4
       }
     },
@@ -143,7 +313,7 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-23",
-      "score": 2,
+      "score": 1,
       "pourquoi": {
         "mots": [
           {
@@ -153,7 +323,7 @@
         ],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 1,
+        "bonus_fraicheur": 0,
         "score": 1
       }
     },
@@ -174,12 +344,12 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-26",
-      "score": 1,
+      "score": 0,
       "pourquoi": {
         "mots": [],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 1,
+        "bonus_fraicheur": 0,
         "score": 0
       }
     },
@@ -200,12 +370,12 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-26",
-      "score": 1,
+      "score": 0,
       "pourquoi": {
         "mots": [],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 1,
+        "bonus_fraicheur": 0,
         "score": 0
       }
     },
@@ -226,12 +396,12 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-26",
-      "score": 1,
+      "score": 0,
       "pourquoi": {
         "mots": [],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 1,
+        "bonus_fraicheur": 0,
         "score": 0
       }
     },
@@ -252,12 +422,12 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-26",
-      "score": 1,
+      "score": 0,
       "pourquoi": {
         "mots": [],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 1,
+        "bonus_fraicheur": 0,
         "score": 0
       }
     },
@@ -278,12 +448,12 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-26",
-      "score": 1,
+      "score": 0,
       "pourquoi": {
         "mots": [],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 1,
+        "bonus_fraicheur": 0,
         "score": 0
       }
     },
@@ -304,12 +474,12 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-26",
-      "score": 1,
+      "score": 0,
       "pourquoi": {
         "mots": [],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 1,
+        "bonus_fraicheur": 0,
         "score": 0
       }
     },
@@ -682,7 +852,14 @@
         "bonus_source": 0,
         "bonus_fraicheur": 0,
         "score": 2
-      }
+      },
+      "autres_sources": [
+        {
+          "source": "Assemblée nationale — Commission des affaires sociales",
+          "url": "https://www.assemblee-nationale.fr/17/rapports/r3379.asp",
+          "titre": "N° 3379 rapport - Rapport de Mme Gabrielle Cathala sur la proposition de loi de Mme Gabrielle Cathala et plusieurs de ses collègues visant à créer un parcours de soins intégralement pris en charge par la sécurité sociale pour toutes les victimes de violences sexuelles (3168)."
+        }
+      ]
     },
     {
       "id": "f72f78120ba7e5a8",
@@ -1489,13 +1666,6 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-21",
-      "autres_sources": [
-        {
-          "source": "Assemblée nationale — Commission des finances",
-          "url": "https://www.assemblee-nationale.fr/17/budget/plf2027/a3344-tIV.asp",
-          "titre": "N° 3344 tome IV - Avis de M. Vincent Descoeur sur le projet de loi de finances pour 2027 (n°3210)."
-        }
-      ],
       "score": 11,
       "pourquoi": {
         "mots": [
@@ -1512,7 +1682,24 @@
         "bonus_source": 0,
         "bonus_fraicheur": 0,
         "score": 11
-      }
+      },
+      "autres_sources": [
+        {
+          "source": "Assemblée nationale — Commission des finances",
+          "url": "https://www.assemblee-nationale.fr/17/budget/plf2027/a3344-tIV.asp",
+          "titre": "N° 3344 tome IV - Avis de M. Vincent Descoeur sur le projet de loi de finances pour 2027 (n°3210)."
+        },
+        {
+          "source": "Assemblée nationale — Commission des affaires économiques",
+          "url": "https://www.assemblee-nationale.fr/17/budget/plf2027/a3337-tI.asp",
+          "titre": "N° 3337 tome I - Avis de Mme Hélène Laporte sur le projet de loi de finances pour 2027 (n°3210)."
+        },
+        {
+          "source": "Assemblée nationale — Commission des affaires économiques",
+          "url": "https://www.assemblee-nationale.fr/17/budget/plf2027/a3337-tX.asp",
+          "titre": "N° 3337 tome X - Avis de M. Alexis Jolly sur le projet de loi de finances pour 2027 (n°3210)."
+        }
+      ]
     },
     {
       "id": "4cd405225ef5298c",
@@ -1979,6 +2166,41 @@
           "titre": "Simplifier l'ouverture des débits de boissons en zone rurale - Rapport n° 69"
         }
       ]
+    },
+    {
+      "id": "a7002022d62603e8",
+      "titre": "N° 3337 tome III - Avis de M. René Pilato sur le projet de loi de finances pour 2027 (n°3210).",
+      "source": "Assemblée nationale — Commission des affaires économiques",
+      "source_id": "an-commission-affaires-economiques",
+      "url": "https://www.assemblee-nationale.fr/17/budget/plf2027/a3337-tIII.asp",
+      "date": "2026-10-14",
+      "theme": "Loi de finances",
+      "resume": null,
+      "importance": 5,
+      "public": [
+        "Expertise comptable",
+        "Conseil aux dirigeants"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-10-27",
+      "score": 11,
+      "pourquoi": {
+        "mots": [
+          {
+            "mot": "projet de loi de finances",
+            "poids": 6
+          },
+          {
+            "mot": "loi de finances",
+            "poids": 5
+          }
+        ],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 0,
+        "score": 11
+      }
     },
     {
       "id": "c81f5ed0449d2651",
@@ -4285,7 +4507,7 @@
       "source": "INSEE",
       "url": "https://www.insee.fr/fr/statistiques/serie/011812232",
       "date_publication": "2026-10-15",
-      "collecte_le": "2026-10-26"
+      "collecte_le": "2026-10-27"
     },
     {
       "source_id": "insee-bdm",
@@ -4295,7 +4517,7 @@
       "source": "INSEE",
       "url": "https://www.insee.fr/fr/statistiques/serie/011794844",
       "date_publication": "2026-08-28",
-      "collecte_le": "2026-10-26"
+      "collecte_le": "2026-10-27"
     },
     {
       "source_id": "insee-bdm",
@@ -4305,7 +4527,7 @@
       "source": "INSEE",
       "url": "https://www.insee.fr/fr/statistiques/serie/001688527",
       "date_publication": "2026-08-07",
-      "collecte_le": "2026-10-26"
+      "collecte_le": "2026-10-27"
     },
     {
       "source_id": "insee-bdm",
@@ -4315,7 +4537,7 @@
       "source": "INSEE",
       "url": "https://www.insee.fr/fr/statistiques/serie/001565530",
       "date_publication": "2026-10-22",
-      "collecte_le": "2026-10-26"
+      "collecte_le": "2026-10-27"
     },
     {
       "source_id": "insee-bdm",
@@ -4325,47 +4547,47 @@
       "source": "INSEE",
       "url": "https://www.insee.fr/fr/statistiques/serie/010755537",
       "date_publication": "2026-10-16",
-      "collecte_le": "2026-10-26"
+      "collecte_le": "2026-10-27"
     },
     {
       "source_id": "bodacc-35",
       "libelle": "Créations d’entreprises en Ille-et-Vilaine",
       "valeur": "235 annonces",
-      "periode": "du 19/10/2026 au 25/10/2026",
+      "periode": "du 20/10/2026 au 26/10/2026",
       "source": "BODACC (DILA)",
       "url": "https://www.bodacc.fr/",
-      "date_publication": "2026-10-25",
-      "collecte_le": "2026-10-26"
+      "date_publication": "2026-10-26",
+      "collecte_le": "2026-10-27"
     },
     {
       "source_id": "bodacc-35",
       "libelle": "Procédures collectives en Ille-et-Vilaine",
       "valeur": "122 annonces",
-      "periode": "du 19/10/2026 au 25/10/2026",
+      "periode": "du 20/10/2026 au 26/10/2026",
       "source": "BODACC (DILA)",
       "url": "https://www.bodacc.fr/",
-      "date_publication": "2026-10-25",
-      "collecte_le": "2026-10-26"
+      "date_publication": "2026-10-26",
+      "collecte_le": "2026-10-27"
     },
     {
       "source_id": "bodacc-35",
       "libelle": "Ventes et cessions de fonds en Ille-et-Vilaine",
       "valeur": "27 annonces",
-      "periode": "du 19/10/2026 au 25/10/2026",
+      "periode": "du 20/10/2026 au 26/10/2026",
       "source": "BODACC (DILA)",
       "url": "https://www.bodacc.fr/",
-      "date_publication": "2026-10-25",
-      "collecte_le": "2026-10-26"
+      "date_publication": "2026-10-26",
+      "collecte_le": "2026-10-27"
     },
     {
       "source_id": "bodacc-35",
       "libelle": "Radiations en Ille-et-Vilaine",
       "valeur": "180 annonces",
-      "periode": "du 19/10/2026 au 25/10/2026",
+      "periode": "du 20/10/2026 au 26/10/2026",
       "source": "BODACC (DILA)",
       "url": "https://www.bodacc.fr/",
-      "date_publication": "2026-10-25",
-      "collecte_le": "2026-10-26"
+      "date_publication": "2026-10-26",
+      "collecte_le": "2026-10-27"
     }
   ],
   "suivi": {
@@ -4423,7 +4645,7 @@
       ],
       "source": "Assemblée nationale et Sénat — dossiers législatifs",
       "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/PLF_2027",
-      "mis_a_jour_le": "2026-10-26",
+      "mis_a_jour_le": "2026-10-27",
       "mesures": {
         "libelle": "Projet de loi n° 3210 (texte déposé par le Gouvernement)",
         "url": "https://www.assemblee-nationale.fr/dyn/17/textes/l17b3210_projet-loi",
@@ -5723,7 +5945,7 @@
       ],
       "source": "Assemblée nationale et Sénat — dossiers législatifs",
       "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/PLFSS_2027",
-      "mis_a_jour_le": "2026-10-26",
+      "mis_a_jour_le": "2026-10-27",
       "mesures": {
         "libelle": "Projet de loi n° 3211 (texte déposé par le Gouvernement)",
         "url": "https://www.assemblee-nationale.fr/dyn/17/textes/l17b3211_projet-loi",
