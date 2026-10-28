@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "genere_le": "2026-10-28T16:09:27.193Z",
+  "genere_le": "2026-10-28T19:21:17.446Z",
   "indicateurs": [
     {
       "id": "dette",
@@ -2718,48 +2718,32 @@
       "decimales": 2,
       "genre": "niveau",
       "nature": "quotidien, publié chaque semaine",
-      "valeur": 115.22,
-      "date_valeur": "2026-10-20",
-      "recupere_le": "2026-10-22T05:27:46.425Z",
+      "valeur": 123.1,
+      "date_valeur": "2026-10-27",
+      "recupere_le": "2026-10-28T19:21:17.446Z",
       "variations": {
         "precedente": {
-          "depuis": "2026-10-19",
-          "absolue": -3.6,
-          "relative": -3.0298
+          "depuis": "2026-10-26",
+          "absolue": -5.02,
+          "relative": -3.9182
         },
         "un_mois": {
-          "depuis": "2026-09-18",
-          "absolue": -4.44,
-          "relative": -3.7105
+          "depuis": "2026-09-25",
+          "absolue": 7.09,
+          "relative": 6.1115
         },
         "debut_annee": {
           "depuis": "2025-12-31",
-          "absolue": 53.87,
-          "relative": 87.8077
+          "absolue": 61.75,
+          "relative": 100.652
         },
         "un_an": {
-          "depuis": "2025-10-20",
-          "absolue": 54.51,
-          "relative": 89.7875
+          "depuis": "2025-10-27",
+          "absolue": 57.58,
+          "relative": 87.8816
         }
       },
       "historique": [
-        [
-          "2024-10-22",
-          75.59
-        ],
-        [
-          "2024-10-23",
-          74.68
-        ],
-        [
-          "2024-10-24",
-          74.27
-        ],
-        [
-          "2024-10-25",
-          75.62
-        ],
         [
           "2024-10-28",
           71.87
@@ -4763,6 +4747,26 @@
         [
           "2026-10-20",
           115.22
+        ],
+        [
+          "2026-10-21",
+          117.37
+        ],
+        [
+          "2026-10-22",
+          125.39
+        ],
+        [
+          "2026-10-23",
+          128.3
+        ],
+        [
+          "2026-10-26",
+          128.12
+        ],
+        [
+          "2026-10-27",
+          123.1
         ]
       ],
       "complements": [],
@@ -4782,12 +4786,12 @@
         "tolerance_jours_ouvres": 2
       },
       "prochaine_publication": {
-        "date": "2026-10-28",
+        "date": "2026-11-04",
         "heure": "19:00",
         "estimee": true
       },
-      "derniere_tentative": "2026-10-22T05:27:46.425Z",
-      "derniere_reussite": "2026-10-22T05:27:46.425Z",
+      "derniere_tentative": "2026-10-28T19:21:17.446Z",
+      "derniere_reussite": "2026-10-28T19:21:17.446Z",
       "derniere_erreur": null,
       "remarque": null,
       "journal": [
@@ -4813,6 +4817,10 @@
         },
         {
           "date": "2026-10-22",
+          "etat": "ok"
+        },
+        {
+          "date": "2026-10-28",
           "etat": "ok"
         }
       ]
