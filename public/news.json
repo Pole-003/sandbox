@@ -1,7 +1,241 @@
 {
   "version": 1,
-  "genere_le": "2026-10-27T05:58:16.502Z",
+  "genere_le": "2026-10-28T06:04:12.257Z",
   "articles": [
+    {
+      "id": "fc220c12070c1954",
+      "titre": "Délits routiers - texte N° 37",
+      "source": "Sénat — Derniers textes",
+      "source_id": "senat-textes",
+      "url": "https://www.senat.fr/leg/ppl26-037.html",
+      "date": "2026-10-28",
+      "theme": "Loi de finances",
+      "resume": "Proposition de loi supprimant l'excuse de minorité pour les délits routiers : texte N° 37 de M. Dany WATTEBLED, déposé au Sénat le 13 octobre 2026",
+      "importance": 1,
+      "public": [
+        "Expertise comptable",
+        "Conseil aux dirigeants"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-10-28",
+      "score": 2,
+      "pourquoi": {
+        "mots": [],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 2,
+        "score": 0
+      }
+    },
+    {
+      "id": "45c1295677a0b68a",
+      "titre": "Droit des victimes à l'information et à la compréhension des procédures - texte de la commission N° 107",
+      "source": "Sénat — Derniers textes",
+      "source_id": "senat-textes",
+      "url": "https://www.senat.fr/leg/ppl26-107.html",
+      "date": "2026-10-28",
+      "theme": "Loi de finances",
+      "resume": "Proposition de loi relative au droit des victimes à l'information et à la compréhension des procédures et décisions de justice : texte de la commission N° 107 déposé le 27 octobre 2026",
+      "importance": 1,
+      "public": [
+        "Expertise comptable",
+        "Conseil aux dirigeants"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-10-28",
+      "score": 2,
+      "pourquoi": {
+        "mots": [],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 2,
+        "score": 0
+      }
+    },
+    {
+      "id": "0ac846c9f1cb73b3",
+      "titre": "Engagement associatif et citoyen - texte N° 31",
+      "source": "Sénat — Derniers textes",
+      "source_id": "senat-textes",
+      "url": "https://www.senat.fr/leg/ppl26-031.html",
+      "date": "2026-10-28",
+      "theme": "Loi de finances",
+      "resume": "Proposition de loi visant à mieux valoriser l'engagement associatif et citoyen tout au long de la vie : texte N° 31 de M. Dany WATTEBLED et Mme Marie-Claude LERMYTTE, déposé au Sénat le 12 octobre 2026",
+      "importance": 1,
+      "public": [
+        "Expertise comptable",
+        "Conseil aux dirigeants"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-10-28",
+      "score": 2,
+      "pourquoi": {
+        "mots": [],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 2,
+        "score": 0
+      }
+    },
+    {
+      "id": "43417ad712395614",
+      "titre": "Instaurer un moratoire sur le déremboursement des cures thermales - texte N° 99",
+      "source": "Sénat — Derniers textes",
+      "source_id": "senat-textes",
+      "url": "https://www.senat.fr/leg/ppr26-099.html",
+      "date": "2026-10-28",
+      "theme": "Loi de finances",
+      "resume": "Proposition de résolution en application de l'article 34-1 de la Constitution, appelant le Gouvernement à instaurer un moratoire sur le déremboursement des cures thermales : texte N° 99 de MM. Éric GOLD et Jean-Yves ROUX, déposé au Sénat le 23 octobre 2026",
+      "importance": 1,
+      "public": [
+        "Expertise comptable",
+        "Conseil aux dirigeants"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-10-28",
+      "score": 2,
+      "pourquoi": {
+        "mots": [],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 2,
+        "score": 0
+      }
+    },
+    {
+      "id": "5049c4fa78c2b29e",
+      "titre": "Loi SRU et communes accueillant un établissement pénitentiaire - texte N° 42",
+      "source": "Sénat — Derniers textes",
+      "source_id": "senat-textes",
+      "url": "https://www.senat.fr/leg/ppl26-042.html",
+      "date": "2026-10-28",
+      "theme": "Loi de finances",
+      "resume": "Proposition de loi en faveur d'une application raisonnée de l'article 55 de la loi SRU dans les communes accueillant un établissement pénitentiaire : texte N° 42 de M. Dany WATTEBLED, déposé au Sénat le 13 octobre 2026",
+      "importance": 1,
+      "public": [
+        "Expertise comptable",
+        "Conseil aux dirigeants"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-10-28",
+      "score": 2,
+      "pourquoi": {
+        "mots": [],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 2,
+        "score": 0
+      }
+    },
+    {
+      "id": "51a2addc8ee5f8d3",
+      "titre": "Risques d'intoxication au monoxyde de carbone - texte N° 27",
+      "source": "Sénat — Derniers textes",
+      "source_id": "senat-textes",
+      "url": "https://www.senat.fr/leg/ppl26-027.html",
+      "date": "2026-10-28",
+      "theme": "Loi de finances",
+      "resume": "Proposition de loi relative à la prévention des risques d'intoxication au monoxyde de carbone : texte N° 27 de M. Dany WATTEBLED et Mme Marie-Claude LERMYTTE, déposé au Sénat le 12 octobre 2026",
+      "importance": 1,
+      "public": [
+        "Expertise comptable",
+        "Conseil aux dirigeants"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-10-28",
+      "score": 2,
+      "pourquoi": {
+        "mots": [],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 2,
+        "score": 0
+      }
+    },
+    {
+      "id": "5586456f95b76cbd",
+      "titre": "Suppression des titres de séjour territorialisés à Mayotte - texte N° 104",
+      "source": "Sénat — Derniers textes",
+      "source_id": "senat-textes",
+      "url": "https://www.senat.fr/leg/ppl26-104.html",
+      "date": "2026-10-28",
+      "theme": "Loi de finances",
+      "resume": "Proposition de loi visant à la suppression des titres de séjour territorialisés à Mayotte : texte N° 104 résultat des travaux de la commission le 27 octobre 2026",
+      "importance": 1,
+      "public": [
+        "Expertise comptable",
+        "Conseil aux dirigeants"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-10-28",
+      "score": 2,
+      "pourquoi": {
+        "mots": [],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 2,
+        "score": 0
+      }
+    },
+    {
+      "id": "7c0dcd522a575bc5",
+      "titre": "Victimes de violences conjugales - texte N° 30",
+      "source": "Sénat — Derniers textes",
+      "source_id": "senat-textes",
+      "url": "https://www.senat.fr/leg/ppl26-030.html",
+      "date": "2026-10-28",
+      "theme": "Loi de finances",
+      "resume": "Proposition de loi créant un dispositif d'accompagnateur vigilant au bénéfice des victimes de violences conjugales : texte N° 30 de M. Dany WATTEBLED et Mme Marie-Claude LERMYTTE, déposé au Sénat le 12 octobre 2026",
+      "importance": 1,
+      "public": [
+        "Expertise comptable",
+        "Conseil aux dirigeants"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-10-28",
+      "score": 2,
+      "pourquoi": {
+        "mots": [],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 2,
+        "score": 0
+      }
+    },
+    {
+      "id": "28871c19f384fc50",
+      "titre": "Zones de protection des aires d'alimentation des captages - texte N° 36",
+      "source": "Sénat — Derniers textes",
+      "source_id": "senat-textes",
+      "url": "https://www.senat.fr/leg/ppl26-036.html",
+      "date": "2026-10-28",
+      "theme": "Loi de finances",
+      "resume": "Proposition de loi visant à prendre en compte les zones de protection des aires d'alimentation des captages dans l'application de la loi SRU : texte N° 36 de M. Dany WATTEBLED, déposé au Sénat le 13 octobre 2026",
+      "importance": 1,
+      "public": [
+        "Expertise comptable",
+        "Conseil aux dirigeants"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-10-28",
+      "score": 2,
+      "pourquoi": {
+        "mots": [],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 2,
+        "score": 0
+      }
+    },
     {
       "id": "7a1f99c208b99c84",
       "titre": "La pratique de la dépense fiscale : étude de cas européens - rapport d'information n° 80",
@@ -33,6 +267,258 @@
       }
     },
     {
+      "id": "89dbed903dda48dd",
+      "titre": "Accord France - Inde - Texte n° 20",
+      "source": "Sénat — Économie et finances, fiscalité",
+      "source_id": "senat-fiscalite",
+      "url": "https://www.senat.fr/leg/tas26-020.html",
+      "date": "2026-10-27",
+      "theme": "Fiscal et comptable",
+      "resume": "Texte",
+      "importance": 1,
+      "public": [
+        "Expertise comptable"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-10-28",
+      "score": 2,
+      "pourquoi": {
+        "mots": [],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 2,
+        "score": 0
+      }
+    },
+    {
+      "id": "a8bc0fcb8bf69f17",
+      "titre": "Accords multilatéraux concernant l'échange automatique de renseignements - Texte n° 21",
+      "source": "Sénat — Économie et finances, fiscalité",
+      "source_id": "senat-fiscalite",
+      "url": "https://www.senat.fr/leg/tas26-021.html",
+      "date": "2026-10-27",
+      "theme": "Fiscal et comptable",
+      "resume": "Texte",
+      "importance": 1,
+      "public": [
+        "Expertise comptable"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-10-28",
+      "score": 2,
+      "pourquoi": {
+        "mots": [],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 2,
+        "score": 0
+      }
+    },
+    {
+      "id": "4d1c8a57bc184752",
+      "titre": "Contributions à l'ONF et composition de son conseil d'administration - Texte n° 15",
+      "source": "Sénat — Économie et finances, fiscalité",
+      "source_id": "senat-fiscalite",
+      "url": "https://www.senat.fr/leg/tas26-015.html",
+      "date": "2026-10-27",
+      "theme": "Fiscal et comptable",
+      "resume": "Texte",
+      "importance": 1,
+      "public": [
+        "Expertise comptable"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-10-28",
+      "score": 2,
+      "pourquoi": {
+        "mots": [],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 2,
+        "score": 0
+      }
+    },
+    {
+      "id": "178d75d3fa8590a9",
+      "titre": "N° 3402 - Proposition de loi de Mme Geneviève Darrieussecq pour une meilleure prise en charge collective des obligations légales de débroussaillement",
+      "source": "Assemblée nationale — Commission des finances",
+      "source_id": "an-commission-finances",
+      "url": "https://www.assemblee-nationale.fr/17/propositions/pion3402.asp",
+      "date": "2026-10-27",
+      "theme": "Loi de finances",
+      "resume": null,
+      "importance": 1,
+      "public": [
+        "Expertise comptable",
+        "Conseil aux dirigeants"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-10-28",
+      "score": 2,
+      "pourquoi": {
+        "mots": [],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 2,
+        "score": 0
+      }
+    },
+    {
+      "id": "239fe9c109d56465",
+      "titre": "N° 3404 - Proposition de loi de M. Alexandre Allegret-Pilot tendant à renforcer la protection des salariés licenciés en cas de liquidation judiciaire de leur employeur",
+      "source": "Assemblée nationale — Commission des affaires sociales",
+      "source_id": "an-commission-affaires-sociales",
+      "url": "https://www.assemblee-nationale.fr/17/propositions/pion3404.asp",
+      "date": "2026-10-27",
+      "theme": "Sécurité sociale",
+      "resume": null,
+      "importance": 1,
+      "public": [
+        "Social / paie"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-10-28",
+      "score": 2,
+      "pourquoi": {
+        "mots": [],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 2,
+        "score": 0
+      }
+    },
+    {
+      "id": "3a40d7ef848f1789",
+      "titre": "N° 3411 - Proposition de loi de Mme Patricia Maussion visant à encadrer l'usage du terme fermier pour les produits laitiers",
+      "source": "Assemblée nationale — Commission des affaires économiques",
+      "source_id": "an-commission-affaires-economiques",
+      "url": "https://www.assemblee-nationale.fr/17/propositions/pion3411.asp",
+      "date": "2026-10-27",
+      "theme": "Économie et statistiques",
+      "resume": null,
+      "importance": 1,
+      "public": [
+        "Conseil aux dirigeants"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-10-28",
+      "score": 2,
+      "pourquoi": {
+        "mots": [],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 2,
+        "score": 0
+      }
+    },
+    {
+      "id": "594f5eb67159f8ce",
+      "titre": "N° 3412 - Proposition de loi de M. Éric Martineau visant à faciliter le financement de la rénovation énergétique par les économies d'énergie",
+      "source": "Assemblée nationale — Commission des finances",
+      "source_id": "an-commission-finances",
+      "url": "https://www.assemblee-nationale.fr/17/propositions/pion3412.asp",
+      "date": "2026-10-27",
+      "theme": "Loi de finances",
+      "resume": null,
+      "importance": 1,
+      "public": [
+        "Expertise comptable",
+        "Conseil aux dirigeants"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-10-28",
+      "score": 2,
+      "pourquoi": {
+        "mots": [],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 2,
+        "score": 0
+      }
+    },
+    {
+      "id": "e44ef200ab0b2bfb",
+      "titre": "N° 3413 - Proposition de loi de M. Jean-Carles Grelier portant obligation de vaccination des jeunes de 11 à 26 ans contre les papillomavirus humains",
+      "source": "Assemblée nationale — Commission des affaires sociales",
+      "source_id": "an-commission-affaires-sociales",
+      "url": "https://www.assemblee-nationale.fr/17/propositions/pion3413.asp",
+      "date": "2026-10-27",
+      "theme": "Sécurité sociale",
+      "resume": null,
+      "importance": 1,
+      "public": [
+        "Social / paie"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-10-28",
+      "score": 2,
+      "pourquoi": {
+        "mots": [],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 2,
+        "score": 0
+      }
+    },
+    {
+      "id": "79a52f05e6a55af9",
+      "titre": "N° 3418 - Proposition de loi de M. Cyrille Isaac-Sibille visant à généraliser les contrats locaux de santé en France",
+      "source": "Assemblée nationale — Commission des affaires sociales",
+      "source_id": "an-commission-affaires-sociales",
+      "url": "https://www.assemblee-nationale.fr/17/propositions/pion3418.asp",
+      "date": "2026-10-27",
+      "theme": "Sécurité sociale",
+      "resume": null,
+      "importance": 1,
+      "public": [
+        "Social / paie"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-10-28",
+      "score": 2,
+      "pourquoi": {
+        "mots": [],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 2,
+        "score": 0
+      }
+    },
+    {
+      "id": "99a25da942787a6e",
+      "titre": "N° 3420 - Proposition de loi de M. Hubert Ott visant à préserver le potentiel viticole français et à donner de nouveaux outils aux élus locaux en matière de protection des espaces agricoles et d'aménagement du territoire",
+      "source": "Assemblée nationale — Commission des affaires économiques",
+      "source_id": "an-commission-affaires-economiques",
+      "url": "https://www.assemblee-nationale.fr/17/propositions/pion3420.asp",
+      "date": "2026-10-27",
+      "theme": "Économie et statistiques",
+      "resume": null,
+      "importance": 1,
+      "public": [
+        "Conseil aux dirigeants"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-10-28",
+      "score": 2,
+      "pourquoi": {
+        "mots": [],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 2,
+        "score": 0
+      }
+    },
+    {
       "id": "9dcfa75f04d807b7",
       "titre": "N° 3337 tome IX - Avis de M. Stéphane Buchou sur le projet de loi de finances pour 2027 (n°3210).",
       "source": "Assemblée nationale — Commission des affaires économiques",
@@ -49,7 +535,7 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-27",
-      "score": 13,
+      "score": 12,
       "pourquoi": {
         "mots": [
           {
@@ -63,7 +549,7 @@
         ],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 2,
+        "bonus_fraicheur": 1,
         "score": 11
       }
     },
@@ -83,7 +569,7 @@
       "type": "doctrine",
       "origine": "flux",
       "collecte_le": "2026-10-27",
-      "score": 6,
+      "score": 5,
       "pourquoi": {
         "mots": [
           {
@@ -93,7 +579,7 @@
         ],
         "coefficient": 1,
         "bonus_source": 2,
-        "bonus_fraicheur": 2,
+        "bonus_fraicheur": 1,
         "score": 4
       }
     },
@@ -113,12 +599,12 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-27",
-      "score": 2,
+      "score": 1,
       "pourquoi": {
         "mots": [],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 2,
+        "bonus_fraicheur": 1,
         "score": 0
       }
     },
@@ -138,12 +624,12 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-27",
-      "score": 2,
+      "score": 1,
       "pourquoi": {
         "mots": [],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 2,
+        "bonus_fraicheur": 1,
         "score": 0
       }
     },
@@ -163,12 +649,12 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-27",
-      "score": 2,
+      "score": 1,
       "pourquoi": {
         "mots": [],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 2,
+        "bonus_fraicheur": 1,
         "score": 0
       }
     },
@@ -189,12 +675,12 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-26",
-      "score": 1,
+      "score": 0,
       "pourquoi": {
         "mots": [],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 1,
+        "bonus_fraicheur": 0,
         "score": 0
       }
     },
@@ -986,6 +1472,31 @@
       "type": null,
       "origine": "flux",
       "collecte_le": "2026-10-23",
+      "score": 0,
+      "pourquoi": {
+        "mots": [],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 0,
+        "score": 0
+      }
+    },
+    {
+      "id": "a5b5755892d0ac7a",
+      "titre": "N° 3384 rapport - Rapport de Mme Mathilde Panot sur la proposition de loi de Mme Mathilde Panot et plusieurs de ses collègues d'urgence visant à rétablir l'interdiction de l'acétamipride et du flupyradifurone pour garantir la protection de la santé humaine, de la biodiversité, de l'environnement et notre souveraineté alimentaire (3172).",
+      "source": "Assemblée nationale — Commission des affaires économiques",
+      "source_id": "an-commission-affaires-economiques",
+      "url": "https://www.assemblee-nationale.fr/17/rapports/r3384.asp",
+      "date": "2026-10-21",
+      "theme": "Économie et statistiques",
+      "resume": null,
+      "importance": 1,
+      "public": [
+        "Conseil aux dirigeants"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-10-28",
       "score": 0,
       "pourquoi": {
         "mots": [],
@@ -4507,7 +5018,7 @@
       "source": "INSEE",
       "url": "https://www.insee.fr/fr/statistiques/serie/011812232",
       "date_publication": "2026-10-15",
-      "collecte_le": "2026-10-27"
+      "collecte_le": "2026-10-28"
     },
     {
       "source_id": "insee-bdm",
@@ -4517,7 +5028,7 @@
       "source": "INSEE",
       "url": "https://www.insee.fr/fr/statistiques/serie/011794844",
       "date_publication": "2026-08-28",
-      "collecte_le": "2026-10-27"
+      "collecte_le": "2026-10-28"
     },
     {
       "source_id": "insee-bdm",
@@ -4527,7 +5038,7 @@
       "source": "INSEE",
       "url": "https://www.insee.fr/fr/statistiques/serie/001688527",
       "date_publication": "2026-08-07",
-      "collecte_le": "2026-10-27"
+      "collecte_le": "2026-10-28"
     },
     {
       "source_id": "insee-bdm",
@@ -4537,7 +5048,7 @@
       "source": "INSEE",
       "url": "https://www.insee.fr/fr/statistiques/serie/001565530",
       "date_publication": "2026-10-22",
-      "collecte_le": "2026-10-27"
+      "collecte_le": "2026-10-28"
     },
     {
       "source_id": "insee-bdm",
@@ -4547,47 +5058,47 @@
       "source": "INSEE",
       "url": "https://www.insee.fr/fr/statistiques/serie/010755537",
       "date_publication": "2026-10-16",
-      "collecte_le": "2026-10-27"
+      "collecte_le": "2026-10-28"
     },
     {
       "source_id": "bodacc-35",
       "libelle": "Créations d’entreprises en Ille-et-Vilaine",
-      "valeur": "235 annonces",
-      "periode": "du 20/10/2026 au 26/10/2026",
+      "valeur": "215 annonces",
+      "periode": "du 21/10/2026 au 27/10/2026",
       "source": "BODACC (DILA)",
       "url": "https://www.bodacc.fr/",
-      "date_publication": "2026-10-26",
-      "collecte_le": "2026-10-27"
+      "date_publication": "2026-10-27",
+      "collecte_le": "2026-10-28"
     },
     {
       "source_id": "bodacc-35",
       "libelle": "Procédures collectives en Ille-et-Vilaine",
-      "valeur": "122 annonces",
-      "periode": "du 20/10/2026 au 26/10/2026",
+      "valeur": "125 annonces",
+      "periode": "du 21/10/2026 au 27/10/2026",
       "source": "BODACC (DILA)",
       "url": "https://www.bodacc.fr/",
-      "date_publication": "2026-10-26",
-      "collecte_le": "2026-10-27"
+      "date_publication": "2026-10-27",
+      "collecte_le": "2026-10-28"
     },
     {
       "source_id": "bodacc-35",
       "libelle": "Ventes et cessions de fonds en Ille-et-Vilaine",
-      "valeur": "27 annonces",
-      "periode": "du 20/10/2026 au 26/10/2026",
+      "valeur": "15 annonces",
+      "periode": "du 21/10/2026 au 27/10/2026",
       "source": "BODACC (DILA)",
       "url": "https://www.bodacc.fr/",
-      "date_publication": "2026-10-26",
-      "collecte_le": "2026-10-27"
+      "date_publication": "2026-10-27",
+      "collecte_le": "2026-10-28"
     },
     {
       "source_id": "bodacc-35",
       "libelle": "Radiations en Ille-et-Vilaine",
-      "valeur": "180 annonces",
-      "periode": "du 20/10/2026 au 26/10/2026",
+      "valeur": "154 annonces",
+      "periode": "du 21/10/2026 au 27/10/2026",
       "source": "BODACC (DILA)",
       "url": "https://www.bodacc.fr/",
-      "date_publication": "2026-10-26",
-      "collecte_le": "2026-10-27"
+      "date_publication": "2026-10-27",
+      "collecte_le": "2026-10-28"
     }
   ],
   "suivi": {
@@ -4645,7 +5156,7 @@
       ],
       "source": "Assemblée nationale et Sénat — dossiers législatifs",
       "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/PLF_2027",
-      "mis_a_jour_le": "2026-10-27",
+      "mis_a_jour_le": "2026-10-28",
       "mesures": {
         "libelle": "Projet de loi n° 3210 (texte déposé par le Gouvernement)",
         "url": "https://www.assemblee-nationale.fr/dyn/17/textes/l17b3210_projet-loi",
@@ -5945,7 +6456,7 @@
       ],
       "source": "Assemblée nationale et Sénat — dossiers législatifs",
       "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/PLFSS_2027",
-      "mis_a_jour_le": "2026-10-27",
+      "mis_a_jour_le": "2026-10-28",
       "mesures": {
         "libelle": "Projet de loi n° 3211 (texte déposé par le Gouvernement)",
         "url": "https://www.assemblee-nationale.fr/dyn/17/textes/l17b3211_projet-loi",
@@ -6693,16 +7204,6 @@
   ],
   "echeances": [
     {
-      "id": "urssaf-ti-mensuel-20-2026-10-20",
-      "date": "2026-10-20",
-      "titre": "Travailleurs indépendants : prélèvement mensuel des cotisations (échéance du 20)",
-      "detail": "Pour ceux qui ont choisi le prélèvement le 20 de chaque mois.",
-      "categorie": "social",
-      "source": "Urssaf",
-      "url": "https://www.urssaf.fr/accueil/independant/comprendre-payer-cotisations/calendrier-paiement-cotisations.html",
-      "origine": "saisie"
-    },
-    {
       "id": "impots-2026-10-26-a8c68c9e",
       "date": "2026-10-26",
       "titre": "Taxe Générale sur les Activités Polluantes (TGAP)",
@@ -7147,6 +7648,26 @@
       "date": "2027-01-20",
       "titre": "Travailleurs indépendants : prélèvement mensuel des cotisations (échéance du 20)",
       "detail": "Pour ceux qui ont choisi le prélèvement le 20 de chaque mois.",
+      "categorie": "social",
+      "source": "Urssaf",
+      "url": "https://www.urssaf.fr/accueil/independant/comprendre-payer-cotisations/calendrier-paiement-cotisations.html",
+      "origine": "saisie"
+    },
+    {
+      "id": "urssaf-ti-trimestriel-2027-02-05",
+      "date": "2027-02-05",
+      "titre": "Travailleurs indépendants : paiement trimestriel des cotisations",
+      "detail": "Échéances trimestrielles les 5 février, 5 mai, 5 août et 5 novembre.",
+      "categorie": "social",
+      "source": "Urssaf",
+      "url": "https://www.urssaf.fr/accueil/independant/comprendre-payer-cotisations/calendrier-paiement-cotisations.html",
+      "origine": "saisie"
+    },
+    {
+      "id": "urssaf-ti-mensuel-5-2027-02-05",
+      "date": "2027-02-05",
+      "titre": "Travailleurs indépendants : prélèvement mensuel des cotisations (échéance du 5)",
+      "detail": "Prélèvement le 5 de chaque mois, de janvier à décembre (date par défaut). Montants sur l'échéancier de l'espace en ligne Urssaf.",
       "categorie": "social",
       "source": "Urssaf",
       "url": "https://www.urssaf.fr/accueil/independant/comprendre-payer-cotisations/calendrier-paiement-cotisations.html",
