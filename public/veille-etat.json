@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "genere_le": "2026-10-28T06:04:12.257Z",
+  "genere_le": "2026-10-29T06:05:18.377Z",
   "sources": [
     {
       "id": "bofip-actualites",
@@ -9,12 +9,12 @@
       "theme": "Fiscal et comptable",
       "statut_catalogue": "verifie",
       "etat": "ok",
-      "derniere_tentative": "2026-10-28T06:04:12.257Z",
-      "derniere_reussite": "2026-10-28T06:04:12.257Z",
+      "derniere_tentative": "2026-10-29T06:05:18.377Z",
+      "derniere_reussite": "2026-10-29T06:05:18.377Z",
       "erreur": null,
-      "nb_articles": 3,
+      "nb_articles": 2,
       "nb_elements": 5,
-      "duree_ms": 877,
+      "duree_ms": 643,
       "historique": [
         {
           "date": "2026-10-09",
@@ -70,6 +70,10 @@
         },
         {
           "date": "2026-10-28",
+          "etat": "ok"
+        },
+        {
+          "date": "2026-10-29",
           "etat": "ok"
         }
       ]
@@ -81,12 +85,12 @@
       "theme": "Loi de finances",
       "statut_catalogue": "verifie",
       "etat": "ok",
-      "derniere_tentative": "2026-10-28T06:04:12.257Z",
-      "derniere_reussite": "2026-10-28T06:04:12.257Z",
+      "derniere_tentative": "2026-10-29T06:05:18.377Z",
+      "derniere_reussite": "2026-10-29T06:05:18.377Z",
       "erreur": null,
-      "nb_articles": 14,
-      "nb_elements": 45,
-      "duree_ms": 298,
+      "nb_articles": 19,
+      "nb_elements": 51,
+      "duree_ms": 209,
       "historique": [
         {
           "date": "2026-10-09",
@@ -142,6 +146,10 @@
         },
         {
           "date": "2026-10-28",
+          "etat": "ok"
+        },
+        {
+          "date": "2026-10-29",
           "etat": "ok"
         }
       ]
@@ -153,12 +161,12 @@
       "theme": "Loi de finances",
       "statut_catalogue": "verifie",
       "etat": "ok",
-      "derniere_tentative": "2026-10-28T06:04:12.257Z",
-      "derniere_reussite": "2026-10-28T06:04:12.257Z",
+      "derniere_tentative": "2026-10-29T06:05:18.377Z",
+      "derniere_reussite": "2026-10-29T06:05:18.377Z",
       "erreur": null,
-      "nb_articles": 11,
+      "nb_articles": 10,
       "nb_elements": 43,
-      "duree_ms": 299,
+      "duree_ms": 209,
       "historique": [
         {
           "date": "2026-10-09",
@@ -214,6 +222,10 @@
         },
         {
           "date": "2026-10-28",
+          "etat": "ok"
+        },
+        {
+          "date": "2026-10-29",
           "etat": "ok"
         }
       ]
@@ -225,12 +237,12 @@
       "theme": "Loi de finances",
       "statut_catalogue": "verifie",
       "etat": "ok",
-      "derniere_tentative": "2026-10-28T06:04:12.257Z",
-      "derniere_reussite": "2026-10-28T06:04:12.257Z",
+      "derniere_tentative": "2026-10-29T06:05:18.377Z",
+      "derniere_reussite": "2026-10-29T06:05:18.377Z",
       "erreur": null,
       "nb_articles": 0,
       "nb_elements": 174,
-      "duree_ms": 300,
+      "duree_ms": 209,
       "historique": [
         {
           "date": "2026-10-09",
@@ -286,6 +298,10 @@
         },
         {
           "date": "2026-10-28",
+          "etat": "ok"
+        },
+        {
+          "date": "2026-10-29",
           "etat": "ok"
         }
       ]
@@ -297,12 +313,12 @@
       "theme": "Fiscal et comptable",
       "statut_catalogue": "verifie",
       "etat": "ok",
-      "derniere_tentative": "2026-10-28T06:04:12.257Z",
-      "derniere_reussite": "2026-10-28T06:04:12.257Z",
+      "derniere_tentative": "2026-10-29T06:05:18.377Z",
+      "derniere_reussite": "2026-10-29T06:05:18.377Z",
       "erreur": null,
-      "nb_articles": 6,
-      "nb_elements": 331,
-      "duree_ms": 444,
+      "nb_articles": 7,
+      "nb_elements": 330,
+      "duree_ms": 310,
       "historique": [
         {
           "date": "2026-10-09",
@@ -358,6 +374,10 @@
         },
         {
           "date": "2026-10-28",
+          "etat": "ok"
+        },
+        {
+          "date": "2026-10-29",
           "etat": "ok"
         }
       ]
@@ -369,12 +389,12 @@
       "theme": "Économie et statistiques",
       "statut_catalogue": "verifie",
       "etat": "ok",
-      "derniere_tentative": "2026-10-28T06:04:12.257Z",
-      "derniere_reussite": "2026-10-28T06:04:12.257Z",
+      "derniere_tentative": "2026-10-29T06:05:18.377Z",
+      "derniere_reussite": "2026-10-29T06:05:18.377Z",
       "erreur": null,
       "nb_articles": 0,
       "nb_elements": 36,
-      "duree_ms": 152,
+      "duree_ms": 107,
       "historique": [
         {
           "date": "2026-10-09",
@@ -430,6 +450,10 @@
         },
         {
           "date": "2026-10-28",
+          "etat": "ok"
+        },
+        {
+          "date": "2026-10-29",
           "etat": "ok"
         }
       ]
@@ -441,12 +465,12 @@
       "theme": "Économie et statistiques",
       "statut_catalogue": "verifie",
       "etat": "ok",
-      "derniere_tentative": "2026-10-28T06:04:12.257Z",
-      "derniere_reussite": "2026-10-28T06:04:12.257Z",
+      "derniere_tentative": "2026-10-29T06:05:18.377Z",
+      "derniere_reussite": "2026-10-29T06:05:18.377Z",
       "erreur": null,
       "nb_articles": 2,
       "nb_elements": 26,
-      "duree_ms": 152,
+      "duree_ms": 108,
       "historique": [
         {
           "date": "2026-10-09",
@@ -502,6 +526,10 @@
         },
         {
           "date": "2026-10-28",
+          "etat": "ok"
+        },
+        {
+          "date": "2026-10-29",
           "etat": "ok"
         }
       ]
@@ -513,12 +541,12 @@
       "theme": "Sécurité sociale",
       "statut_catalogue": "verifie",
       "etat": "ok",
-      "derniere_tentative": "2026-10-28T06:04:12.257Z",
-      "derniere_reussite": "2026-10-28T06:04:12.257Z",
+      "derniere_tentative": "2026-10-29T06:05:18.377Z",
+      "derniere_reussite": "2026-10-29T06:05:18.377Z",
       "erreur": null,
       "nb_articles": 1,
       "nb_elements": 26,
-      "duree_ms": 152,
+      "duree_ms": 106,
       "historique": [
         {
           "date": "2026-10-09",
@@ -574,6 +602,10 @@
         },
         {
           "date": "2026-10-28",
+          "etat": "ok"
+        },
+        {
+          "date": "2026-10-29",
           "etat": "ok"
         }
       ]
@@ -584,13 +616,13 @@
       "type": "rss",
       "theme": "Loi de finances",
       "statut_catalogue": "verifie",
-      "etat": "ok",
-      "derniere_tentative": "2026-10-28T06:04:12.257Z",
+      "etat": "erreur",
+      "derniere_tentative": "2026-10-29T06:05:18.377Z",
       "derniere_reussite": "2026-10-28T06:04:12.257Z",
-      "erreur": null,
+      "erreur": "HTTP 500",
       "nb_articles": 0,
-      "nb_elements": 10,
-      "duree_ms": 593,
+      "nb_elements": null,
+      "duree_ms": null,
       "historique": [
         {
           "date": "2026-10-09",
@@ -647,6 +679,10 @@
         {
           "date": "2026-10-28",
           "etat": "ok"
+        },
+        {
+          "date": "2026-10-29",
+          "etat": "erreur"
         }
       ]
     },
@@ -657,12 +693,12 @@
       "theme": "Loi de finances",
       "statut_catalogue": "verifie",
       "etat": "ok",
-      "derniere_tentative": "2026-10-28T06:04:12.257Z",
-      "derniere_reussite": "2026-10-28T06:04:12.257Z",
+      "derniere_tentative": "2026-10-29T06:05:18.377Z",
+      "derniere_reussite": "2026-10-29T06:05:18.377Z",
       "erreur": null,
-      "nb_articles": 10,
+      "nb_articles": 9,
       "nb_elements": 10,
-      "duree_ms": 215,
+      "duree_ms": 297,
       "historique": [
         {
           "date": "2026-10-09",
@@ -718,6 +754,10 @@
         },
         {
           "date": "2026-10-28",
+          "etat": "ok"
+        },
+        {
+          "date": "2026-10-29",
           "etat": "ok"
         }
       ]
@@ -729,12 +769,12 @@
       "theme": "Sécurité sociale",
       "statut_catalogue": "verifie",
       "etat": "ok",
-      "derniere_tentative": "2026-10-28T06:04:12.257Z",
-      "derniere_reussite": "2026-10-28T06:04:12.257Z",
+      "derniere_tentative": "2026-10-29T06:05:18.377Z",
+      "derniere_reussite": "2026-10-29T06:05:18.377Z",
       "erreur": null,
       "nb_articles": 8,
       "nb_elements": 10,
-      "duree_ms": 212,
+      "duree_ms": 301,
       "historique": [
         {
           "date": "2026-10-09",
@@ -790,6 +830,10 @@
         },
         {
           "date": "2026-10-28",
+          "etat": "ok"
+        },
+        {
+          "date": "2026-10-29",
           "etat": "ok"
         }
       ]
@@ -801,12 +845,12 @@
       "theme": "Économie et statistiques",
       "statut_catalogue": "verifie",
       "etat": "ok",
-      "derniere_tentative": "2026-10-28T06:04:12.257Z",
-      "derniere_reussite": "2026-10-28T06:04:12.257Z",
+      "derniere_tentative": "2026-10-29T06:05:18.377Z",
+      "derniere_reussite": "2026-10-29T06:05:18.377Z",
       "erreur": null,
       "nb_articles": 10,
       "nb_elements": 10,
-      "duree_ms": 212,
+      "duree_ms": 320,
       "historique": [
         {
           "date": "2026-10-09",
@@ -862,6 +906,10 @@
         },
         {
           "date": "2026-10-28",
+          "etat": "ok"
+        },
+        {
+          "date": "2026-10-29",
           "etat": "ok"
         }
       ]
@@ -935,6 +983,10 @@
         {
           "date": "2026-10-28",
           "etat": "inactive"
+        },
+        {
+          "date": "2026-10-29",
+          "etat": "inactive"
         }
       ]
     },
@@ -945,12 +997,12 @@
       "theme": "Fiscal et comptable",
       "statut_catalogue": "verifie",
       "etat": "ok",
-      "derniere_tentative": "2026-10-28T06:04:12.257Z",
-      "derniere_reussite": "2026-10-28T06:04:12.257Z",
+      "derniere_tentative": "2026-10-29T06:05:18.377Z",
+      "derniere_reussite": "2026-10-29T06:05:18.377Z",
       "erreur": null,
       "nb_articles": 0,
       "nb_elements": 20,
-      "duree_ms": 176,
+      "duree_ms": 130,
       "historique": [
         {
           "date": "2026-10-09",
@@ -1006,6 +1058,10 @@
         },
         {
           "date": "2026-10-28",
+          "etat": "ok"
+        },
+        {
+          "date": "2026-10-29",
           "etat": "ok"
         }
       ]
@@ -1017,12 +1073,12 @@
       "theme": "Fiscal et comptable",
       "statut_catalogue": "verifie",
       "etat": "ok",
-      "derniere_tentative": "2026-10-28T06:04:12.257Z",
-      "derniere_reussite": "2026-10-28T06:04:12.257Z",
+      "derniere_tentative": "2026-10-29T06:05:18.377Z",
+      "derniere_reussite": "2026-10-29T06:05:18.377Z",
       "erreur": null,
-      "nb_articles": 0,
+      "nb_articles": 1,
       "nb_elements": 20,
-      "duree_ms": 176,
+      "duree_ms": 131,
       "historique": [
         {
           "date": "2026-10-09",
@@ -1078,6 +1134,10 @@
         },
         {
           "date": "2026-10-28",
+          "etat": "ok"
+        },
+        {
+          "date": "2026-10-29",
           "etat": "ok"
         }
       ]
@@ -1089,12 +1149,12 @@
       "theme": "Loi de finances",
       "statut_catalogue": "verifie",
       "etat": "ok",
-      "derniere_tentative": "2026-10-28T06:04:12.257Z",
-      "derniere_reussite": "2026-10-28T06:04:12.257Z",
+      "derniere_tentative": "2026-10-29T06:05:18.377Z",
+      "derniere_reussite": "2026-10-29T06:05:18.377Z",
       "erreur": null,
       "nb_articles": 0,
       "nb_elements": 20,
-      "duree_ms": 175,
+      "duree_ms": 129,
       "historique": [
         {
           "date": "2026-10-09",
@@ -1150,6 +1210,10 @@
         },
         {
           "date": "2026-10-28",
+          "etat": "ok"
+        },
+        {
+          "date": "2026-10-29",
           "etat": "ok"
         }
       ]
@@ -1223,6 +1287,10 @@
         {
           "date": "2026-10-28",
           "etat": "non_configuree"
+        },
+        {
+          "date": "2026-10-29",
+          "etat": "non_configuree"
         }
       ]
     },
@@ -1233,12 +1301,12 @@
       "theme": "Fiscal et comptable",
       "statut_catalogue": "verifie",
       "etat": "ok",
-      "derniere_tentative": "2026-10-28T06:04:12.257Z",
-      "derniere_reussite": "2026-10-28T06:04:12.257Z",
+      "derniere_tentative": "2026-10-29T06:05:18.377Z",
+      "derniere_reussite": "2026-10-29T06:05:18.377Z",
       "erreur": null,
       "nb_articles": 51,
       "nb_elements": 51,
-      "duree_ms": 3265,
+      "duree_ms": 3193,
       "historique": [
         {
           "date": "2026-10-09",
@@ -1294,6 +1362,10 @@
         },
         {
           "date": "2026-10-28",
+          "etat": "ok"
+        },
+        {
+          "date": "2026-10-29",
           "etat": "ok"
         }
       ]
@@ -1305,12 +1377,12 @@
       "theme": "Loi de finances",
       "statut_catalogue": "verifie",
       "etat": "ok",
-      "derniere_tentative": "2026-10-28T06:04:12.257Z",
-      "derniere_reussite": "2026-10-28T06:04:12.257Z",
+      "derniere_tentative": "2026-10-29T06:05:18.377Z",
+      "derniere_reussite": "2026-10-29T06:05:18.377Z",
       "erreur": null,
       "nb_articles": 0,
       "nb_elements": 2,
-      "duree_ms": 344,
+      "duree_ms": 480,
       "empreinte": "66199c507c9f9f30",
       "historique": [
         {
@@ -1367,6 +1439,10 @@
         },
         {
           "date": "2026-10-28",
+          "etat": "ok"
+        },
+        {
+          "date": "2026-10-29",
           "etat": "ok"
         }
       ]
@@ -1378,12 +1454,12 @@
       "theme": "Sécurité sociale",
       "statut_catalogue": "verifie",
       "etat": "ok",
-      "derniere_tentative": "2026-10-28T06:04:12.257Z",
-      "derniere_reussite": "2026-10-28T06:04:12.257Z",
+      "derniere_tentative": "2026-10-29T06:05:18.377Z",
+      "derniere_reussite": "2026-10-29T06:05:18.377Z",
       "erreur": null,
       "nb_articles": 0,
       "nb_elements": 2,
-      "duree_ms": 621,
+      "duree_ms": 559,
       "empreinte": "66199c507c9f9f30",
       "historique": [
         {
@@ -1441,6 +1517,10 @@
         {
           "date": "2026-10-28",
           "etat": "ok"
+        },
+        {
+          "date": "2026-10-29",
+          "etat": "ok"
         }
       ]
     },
@@ -1451,12 +1531,12 @@
       "theme": "Loi de finances",
       "statut_catalogue": "verifie",
       "etat": "ok",
-      "derniere_tentative": "2026-10-28T06:04:12.257Z",
-      "derniere_reussite": "2026-10-28T06:04:12.257Z",
+      "derniere_tentative": "2026-10-29T06:05:18.377Z",
+      "derniere_reussite": "2026-10-29T06:05:18.377Z",
       "erreur": null,
       "nb_articles": 0,
       "nb_elements": 1,
-      "duree_ms": 1163,
+      "duree_ms": 1124,
       "empreinte": "27121c2535975fb7",
       "historique": [
         {
@@ -1513,6 +1593,10 @@
         },
         {
           "date": "2026-10-28",
+          "etat": "ok"
+        },
+        {
+          "date": "2026-10-29",
           "etat": "ok"
         }
       ]
@@ -1524,12 +1608,12 @@
       "theme": "Sécurité sociale",
       "statut_catalogue": "verifie",
       "etat": "ok",
-      "derniere_tentative": "2026-10-28T06:04:12.257Z",
-      "derniere_reussite": "2026-10-28T06:04:12.257Z",
+      "derniere_tentative": "2026-10-29T06:05:18.377Z",
+      "derniere_reussite": "2026-10-29T06:05:18.377Z",
       "erreur": null,
       "nb_articles": 0,
       "nb_elements": 1,
-      "duree_ms": 187,
+      "duree_ms": 132,
       "empreinte": "27121c2535975fb7",
       "historique": [
         {
@@ -1586,6 +1670,10 @@
         },
         {
           "date": "2026-10-28",
+          "etat": "ok"
+        },
+        {
+          "date": "2026-10-29",
           "etat": "ok"
         }
       ]
@@ -1659,6 +1747,10 @@
         {
           "date": "2026-10-28",
           "etat": "non_configuree"
+        },
+        {
+          "date": "2026-10-29",
+          "etat": "non_configuree"
         }
       ]
     },
@@ -1731,6 +1823,10 @@
         {
           "date": "2026-10-28",
           "etat": "non_configuree"
+        },
+        {
+          "date": "2026-10-29",
+          "etat": "non_configuree"
         }
       ]
     },
@@ -1741,12 +1837,12 @@
       "theme": "Économie et statistiques",
       "statut_catalogue": "verifie",
       "etat": "ok",
-      "derniere_tentative": "2026-10-28T06:04:12.257Z",
-      "derniere_reussite": "2026-10-28T06:04:12.257Z",
+      "derniere_tentative": "2026-10-29T06:05:18.377Z",
+      "derniere_reussite": "2026-10-29T06:05:18.377Z",
       "erreur": null,
       "nb_articles": 5,
       "nb_elements": null,
-      "duree_ms": 1903,
+      "duree_ms": 1557,
       "historique": [
         {
           "date": "2026-10-09",
@@ -1802,6 +1898,10 @@
         },
         {
           "date": "2026-10-28",
+          "etat": "ok"
+        },
+        {
+          "date": "2026-10-29",
           "etat": "ok"
         }
       ]
@@ -1813,12 +1913,12 @@
       "theme": "Rennes et Bretagne",
       "statut_catalogue": "verifie",
       "etat": "ok",
-      "derniere_tentative": "2026-10-28T06:04:12.257Z",
-      "derniere_reussite": "2026-10-28T06:04:12.257Z",
+      "derniere_tentative": "2026-10-29T06:05:18.377Z",
+      "derniere_reussite": "2026-10-29T06:05:18.377Z",
       "erreur": null,
       "nb_articles": 4,
       "nb_elements": null,
-      "duree_ms": 1134,
+      "duree_ms": 1180,
       "historique": [
         {
           "date": "2026-10-09",
@@ -1875,6 +1975,10 @@
         {
           "date": "2026-10-28",
           "etat": "ok"
+        },
+        {
+          "date": "2026-10-29",
+          "etat": "ok"
         }
       ]
     }
@@ -1884,8 +1988,8 @@
     "raison": "désactivée : la veille fonctionne à 0 €, sans appel à un service d’IA"
   },
   "classement": {
-    "articles": 178,
+    "articles": 188,
     "exclus": 4,
-    "marginaux": 139
+    "marginaux": 148
   }
 }

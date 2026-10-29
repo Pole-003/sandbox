@@ -1,7 +1,214 @@
 {
   "version": 1,
-  "genere_le": "2026-10-28T06:04:12.257Z",
+  "genere_le": "2026-10-29T06:05:18.377Z",
   "articles": [
+    {
+      "id": "b6714ca43271b67c",
+      "titre": "Améliorer la gestion des biens des sections de commune - texte de la commission N° 114",
+      "source": "Sénat — Derniers textes",
+      "source_id": "senat-textes",
+      "url": "https://www.senat.fr/leg/ppl26-114.html",
+      "date": "2026-10-29",
+      "theme": "Loi de finances",
+      "resume": "Proposition de loi visant à améliorer la gestion des biens des sections de commune : texte de la commission N° 114 déposé le 28 octobre 2026",
+      "importance": 1,
+      "public": [
+        "Expertise comptable",
+        "Conseil aux dirigeants"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-10-29",
+      "score": 2,
+      "pourquoi": {
+        "mots": [],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 2,
+        "score": 0
+      }
+    },
+    {
+      "id": "efac2bcbf861eb88",
+      "titre": "Créer un parc social d'un million d'automobiles électriques à loyer modéré - texte N° 95",
+      "source": "Sénat — Derniers textes",
+      "source_id": "senat-textes",
+      "url": "https://www.senat.fr/leg/ppl26-095.html",
+      "date": "2026-10-29",
+      "theme": "Loi de finances",
+      "resume": "Proposition de loi visant à créer un parc social d'un million d'automobiles électriques à loyer modéré : texte N° 95 de M. Daniel SALMON et plusieurs de ses collègues, déposé au Sénat le 22 octobre 2026",
+      "importance": 1,
+      "public": [
+        "Expertise comptable",
+        "Conseil aux dirigeants"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-10-29",
+      "score": 2,
+      "pourquoi": {
+        "mots": [],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 2,
+        "score": 0
+      }
+    },
+    {
+      "id": "4a4a419ae74c8f49",
+      "titre": "Faciliter l'emploi des étrangers dans les secteurs d'activités en tension - texte N° 118",
+      "source": "Sénat — Derniers textes",
+      "source_id": "senat-textes",
+      "url": "https://www.senat.fr/leg/ppl26-118.html",
+      "date": "2026-10-29",
+      "theme": "Loi de finances",
+      "resume": "Proposition de loi visant à faciliter l'emploi des étrangers dans les secteurs d'activités en tension : texte N° 118 résultat des travaux de la commission le 28 octobre 2026",
+      "importance": 1,
+      "public": [
+        "Expertise comptable",
+        "Conseil aux dirigeants"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-10-29",
+      "score": 2,
+      "pourquoi": {
+        "mots": [],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 2,
+        "score": 0
+      }
+    },
+    {
+      "id": "c65c834eb7eb1b47",
+      "titre": "Le Contrat d'objectifs et de moyens de l'Agence française de développement (AFD) - rapport d'information n° 119",
+      "source": "Sénat — Derniers rapports",
+      "source_id": "senat-rapports",
+      "url": "https://www.senat.fr/notice-rapport/2026/r26-119-notice.html",
+      "date": "2026-10-29",
+      "theme": "Loi de finances",
+      "resume": "Rapport d'information n° 119 de MM. Christian CAMBON et François REBSAMEN, fait au nom de la commission des affaires étrangères, de la défense et des forces armées : Le Contrat d'objectifs et de moyens de l'Agence française de développement (AFD) (28 octobre 2026)",
+      "importance": 1,
+      "public": [
+        "Expertise comptable",
+        "Conseil aux dirigeants"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-10-29",
+      "score": 2,
+      "pourquoi": {
+        "mots": [],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 2,
+        "score": 0
+      }
+    },
+    {
+      "id": "48818e42a3831454",
+      "titre": "Protéger les demandeurs de logement contre les sollicitations sexuelles - texte de la commission N° 112",
+      "source": "Sénat — Derniers textes",
+      "source_id": "senat-textes",
+      "url": "https://www.senat.fr/leg/ppl26-112.html",
+      "date": "2026-10-29",
+      "theme": "Loi de finances",
+      "resume": "Proposition de loi visant à protéger les demandeurs de logement contre les sollicitations sexuelles abusives : texte de la commission N° 112 déposé le 28 octobre 2026",
+      "importance": 1,
+      "public": [
+        "Expertise comptable",
+        "Conseil aux dirigeants"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-10-29",
+      "score": 2,
+      "pourquoi": {
+        "mots": [],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 2,
+        "score": 0
+      }
+    },
+    {
+      "id": "ff2351f1a15271a4",
+      "titre": "Résoudre le fléau des désordres fonciers outre-mer - texte de la commission N° 116",
+      "source": "Sénat — Derniers textes",
+      "source_id": "senat-textes",
+      "url": "https://www.senat.fr/leg/ppl26-116.html",
+      "date": "2026-10-29",
+      "theme": "Loi de finances",
+      "resume": "Proposition de loi visant à résoudre le fléau des désordres fonciers outre-mer : texte de la commission N° 116 déposé le 28 octobre 2026",
+      "importance": 1,
+      "public": [
+        "Expertise comptable",
+        "Conseil aux dirigeants"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-10-29",
+      "score": 2,
+      "pourquoi": {
+        "mots": [],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 2,
+        "score": 0
+      }
+    },
+    {
+      "id": "dea2c5b5a0a22dfc",
+      "titre": "Valoriser la réserve communale de sécurité civile - texte de la commission N° 121",
+      "source": "Sénat — Derniers textes",
+      "source_id": "senat-textes",
+      "url": "https://www.senat.fr/leg/ppl26-121.html",
+      "date": "2026-10-29",
+      "theme": "Loi de finances",
+      "resume": "Proposition de loi visant à valoriser la réserve communale de sécurité civile : texte de la commission N° 121 déposé le 28 octobre 2026",
+      "importance": 1,
+      "public": [
+        "Expertise comptable",
+        "Conseil aux dirigeants"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-10-29",
+      "score": 2,
+      "pourquoi": {
+        "mots": [],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 2,
+        "score": 0
+      }
+    },
+    {
+      "id": "777d497bc7e6623c",
+      "titre": "CF - Précision sur l’articulation des sanctions applicables en cas de non-respect des obligations permettant les échanges automatiques de renseignements",
+      "source": "BOFiP-Impôts — Actualités",
+      "source_id": "bofip-actualites",
+      "url": "https://bofip.impots.gouv.fr/bofip/15224-PGP.html/ACTU-2026-00167",
+      "date": "2026-10-28",
+      "theme": "Fiscal et comptable",
+      "resume": "CF - Précision sur l’articulation des sanctions applicables en cas de non-respect des obligations permettant les échanges automatiques de renseignements (identifiant juridique ACTU-2026-00167; publié le 28/10/2026)",
+      "importance": 2,
+      "public": [
+        "Expertise comptable"
+      ],
+      "type": "doctrine",
+      "origine": "flux",
+      "collecte_le": "2026-10-29",
+      "score": 4,
+      "pourquoi": {
+        "mots": [],
+        "coefficient": 1,
+        "bonus_source": 2,
+        "bonus_fraicheur": 2,
+        "score": 2
+      }
+    },
     {
       "id": "fc220c12070c1954",
       "titre": "Délits routiers - texte N° 37",
@@ -133,6 +340,31 @@
       }
     },
     {
+      "id": "6afd3e52046dffa1",
+      "titre": "N° 3398 - Proposition de loi, modifiée par le Sénat, simplifiant l'ouverture des débits de boissons en zone rurale",
+      "source": "Assemblée nationale — Commission des affaires sociales",
+      "source_id": "an-commission-affaires-sociales",
+      "url": "https://www.assemblee-nationale.fr/17/propositions/pion3398.asp",
+      "date": "2026-10-28",
+      "theme": "Sécurité sociale",
+      "resume": null,
+      "importance": 1,
+      "public": [
+        "Social / paie"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-10-29",
+      "score": 2,
+      "pourquoi": {
+        "mots": [],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 2,
+        "score": 0
+      }
+    },
+    {
       "id": "51a2addc8ee5f8d3",
       "titre": "Risques d'intoxication au monoxyde de carbone - texte N° 27",
       "source": "Sénat — Derniers textes",
@@ -252,7 +484,7 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-27",
-      "score": 4,
+      "score": 3,
       "pourquoi": {
         "mots": [
           {
@@ -262,7 +494,7 @@
         ],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 2,
+        "bonus_fraicheur": 1,
         "score": 2
       }
     },
@@ -282,12 +514,12 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-28",
-      "score": 2,
+      "score": 1,
       "pourquoi": {
         "mots": [],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 2,
+        "bonus_fraicheur": 1,
         "score": 0
       }
     },
@@ -307,12 +539,12 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-28",
-      "score": 2,
+      "score": 1,
       "pourquoi": {
         "mots": [],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 2,
+        "bonus_fraicheur": 1,
         "score": 0
       }
     },
@@ -332,12 +564,12 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-28",
-      "score": 2,
+      "score": 1,
       "pourquoi": {
         "mots": [],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 2,
+        "bonus_fraicheur": 1,
         "score": 0
       }
     },
@@ -358,12 +590,12 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-28",
-      "score": 2,
+      "score": 1,
       "pourquoi": {
         "mots": [],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 2,
+        "bonus_fraicheur": 1,
         "score": 0
       }
     },
@@ -383,12 +615,12 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-28",
-      "score": 2,
+      "score": 1,
       "pourquoi": {
         "mots": [],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 2,
+        "bonus_fraicheur": 1,
         "score": 0
       }
     },
@@ -408,12 +640,12 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-28",
-      "score": 2,
+      "score": 1,
       "pourquoi": {
         "mots": [],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 2,
+        "bonus_fraicheur": 1,
         "score": 0
       }
     },
@@ -434,12 +666,12 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-28",
-      "score": 2,
+      "score": 1,
       "pourquoi": {
         "mots": [],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 2,
+        "bonus_fraicheur": 1,
         "score": 0
       }
     },
@@ -459,12 +691,12 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-28",
-      "score": 2,
+      "score": 1,
       "pourquoi": {
         "mots": [],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 2,
+        "bonus_fraicheur": 1,
         "score": 0
       }
     },
@@ -484,12 +716,12 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-28",
-      "score": 2,
+      "score": 1,
       "pourquoi": {
         "mots": [],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 2,
+        "bonus_fraicheur": 1,
         "score": 0
       }
     },
@@ -509,12 +741,37 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-28",
-      "score": 2,
+      "score": 1,
       "pourquoi": {
         "mots": [],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 2,
+        "bonus_fraicheur": 1,
+        "score": 0
+      }
+    },
+    {
+      "id": "e8eaaf0af516dd95",
+      "titre": "Titre",
+      "source": "Conseil d'État — Actualités",
+      "source_id": "ce-actualites",
+      "url": "https://www.conseil-etat.fr/actualites/titre",
+      "date": "2026-10-27",
+      "theme": "Fiscal et comptable",
+      "resume": null,
+      "importance": 1,
+      "public": [
+        "Expertise comptable"
+      ],
+      "type": null,
+      "origine": "flux",
+      "collecte_le": "2026-10-29",
+      "score": 1,
+      "pourquoi": {
+        "mots": [],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 1,
         "score": 0
       }
     },
@@ -5018,7 +5275,7 @@
       "source": "INSEE",
       "url": "https://www.insee.fr/fr/statistiques/serie/011812232",
       "date_publication": "2026-10-15",
-      "collecte_le": "2026-10-28"
+      "collecte_le": "2026-10-29"
     },
     {
       "source_id": "insee-bdm",
@@ -5028,7 +5285,7 @@
       "source": "INSEE",
       "url": "https://www.insee.fr/fr/statistiques/serie/011794844",
       "date_publication": "2026-08-28",
-      "collecte_le": "2026-10-28"
+      "collecte_le": "2026-10-29"
     },
     {
       "source_id": "insee-bdm",
@@ -5038,7 +5295,7 @@
       "source": "INSEE",
       "url": "https://www.insee.fr/fr/statistiques/serie/001688527",
       "date_publication": "2026-08-07",
-      "collecte_le": "2026-10-28"
+      "collecte_le": "2026-10-29"
     },
     {
       "source_id": "insee-bdm",
@@ -5048,7 +5305,7 @@
       "source": "INSEE",
       "url": "https://www.insee.fr/fr/statistiques/serie/001565530",
       "date_publication": "2026-10-22",
-      "collecte_le": "2026-10-28"
+      "collecte_le": "2026-10-29"
     },
     {
       "source_id": "insee-bdm",
@@ -5058,47 +5315,47 @@
       "source": "INSEE",
       "url": "https://www.insee.fr/fr/statistiques/serie/010755537",
       "date_publication": "2026-10-16",
-      "collecte_le": "2026-10-28"
+      "collecte_le": "2026-10-29"
     },
     {
       "source_id": "bodacc-35",
       "libelle": "Créations d’entreprises en Ille-et-Vilaine",
       "valeur": "215 annonces",
-      "periode": "du 21/10/2026 au 27/10/2026",
+      "periode": "du 22/10/2026 au 28/10/2026",
       "source": "BODACC (DILA)",
       "url": "https://www.bodacc.fr/",
-      "date_publication": "2026-10-27",
-      "collecte_le": "2026-10-28"
+      "date_publication": "2026-10-28",
+      "collecte_le": "2026-10-29"
     },
     {
       "source_id": "bodacc-35",
       "libelle": "Procédures collectives en Ille-et-Vilaine",
-      "valeur": "125 annonces",
-      "periode": "du 21/10/2026 au 27/10/2026",
+      "valeur": "119 annonces",
+      "periode": "du 22/10/2026 au 28/10/2026",
       "source": "BODACC (DILA)",
       "url": "https://www.bodacc.fr/",
-      "date_publication": "2026-10-27",
-      "collecte_le": "2026-10-28"
+      "date_publication": "2026-10-28",
+      "collecte_le": "2026-10-29"
     },
     {
       "source_id": "bodacc-35",
       "libelle": "Ventes et cessions de fonds en Ille-et-Vilaine",
       "valeur": "15 annonces",
-      "periode": "du 21/10/2026 au 27/10/2026",
+      "periode": "du 22/10/2026 au 28/10/2026",
       "source": "BODACC (DILA)",
       "url": "https://www.bodacc.fr/",
-      "date_publication": "2026-10-27",
-      "collecte_le": "2026-10-28"
+      "date_publication": "2026-10-28",
+      "collecte_le": "2026-10-29"
     },
     {
       "source_id": "bodacc-35",
       "libelle": "Radiations en Ille-et-Vilaine",
       "valeur": "154 annonces",
-      "periode": "du 21/10/2026 au 27/10/2026",
+      "periode": "du 22/10/2026 au 28/10/2026",
       "source": "BODACC (DILA)",
       "url": "https://www.bodacc.fr/",
-      "date_publication": "2026-10-27",
-      "collecte_le": "2026-10-28"
+      "date_publication": "2026-10-28",
+      "collecte_le": "2026-10-29"
     }
   ],
   "suivi": {
@@ -5156,7 +5413,7 @@
       ],
       "source": "Assemblée nationale et Sénat — dossiers législatifs",
       "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/PLF_2027",
-      "mis_a_jour_le": "2026-10-28",
+      "mis_a_jour_le": "2026-10-29",
       "mesures": {
         "libelle": "Projet de loi n° 3210 (texte déposé par le Gouvernement)",
         "url": "https://www.assemblee-nationale.fr/dyn/17/textes/l17b3210_projet-loi",
@@ -6456,7 +6713,7 @@
       ],
       "source": "Assemblée nationale et Sénat — dossiers législatifs",
       "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/PLFSS_2027",
-      "mis_a_jour_le": "2026-10-28",
+      "mis_a_jour_le": "2026-10-29",
       "mesures": {
         "libelle": "Projet de loi n° 3211 (texte déposé par le Gouvernement)",
         "url": "https://www.assemblee-nationale.fr/dyn/17/textes/l17b3211_projet-loi",
