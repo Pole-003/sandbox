@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "genere_le": "2026-10-30T06:06:36.810Z",
+  "genere_le": "2026-11-02T06:24:39.356Z",
   "articles": [
     {
       "id": "160cdf485f9997af",
@@ -18,12 +18,12 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-30",
-      "score": 2,
+      "score": 1,
       "pourquoi": {
         "mots": [],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 2,
+        "bonus_fraicheur": 1,
         "score": 0
       }
     },
@@ -44,12 +44,12 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-30",
-      "score": 2,
+      "score": 1,
       "pourquoi": {
         "mots": [],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 2,
+        "bonus_fraicheur": 1,
         "score": 0
       }
     },
@@ -70,12 +70,12 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-30",
-      "score": 2,
+      "score": 1,
       "pourquoi": {
         "mots": [],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 2,
+        "bonus_fraicheur": 1,
         "score": 0
       }
     },
@@ -96,12 +96,12 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-30",
-      "score": 2,
+      "score": 1,
       "pourquoi": {
         "mots": [],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 2,
+        "bonus_fraicheur": 1,
         "score": 0
       }
     },
@@ -122,12 +122,12 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-30",
-      "score": 2,
+      "score": 1,
       "pourquoi": {
         "mots": [],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 2,
+        "bonus_fraicheur": 1,
         "score": 0
       }
     },
@@ -147,7 +147,7 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-30",
-      "score": 4,
+      "score": 2,
       "pourquoi": {
         "mots": [
           {
@@ -157,7 +157,7 @@
         ],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 2,
+        "bonus_fraicheur": 0,
         "score": 2
       }
     },
@@ -178,12 +178,12 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-29",
-      "score": 2,
+      "score": 0,
       "pourquoi": {
         "mots": [],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 2,
+        "bonus_fraicheur": 0,
         "score": 0
       }
     },
@@ -204,12 +204,12 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-29",
-      "score": 2,
+      "score": 0,
       "pourquoi": {
         "mots": [],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 2,
+        "bonus_fraicheur": 0,
         "score": 0
       }
     },
@@ -230,12 +230,12 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-29",
-      "score": 2,
+      "score": 0,
       "pourquoi": {
         "mots": [],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 2,
+        "bonus_fraicheur": 0,
         "score": 0
       }
     },
@@ -256,12 +256,12 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-29",
-      "score": 2,
+      "score": 0,
       "pourquoi": {
         "mots": [],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 2,
+        "bonus_fraicheur": 0,
         "score": 0
       }
     },
@@ -282,12 +282,12 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-30",
-      "score": 2,
+      "score": 0,
       "pourquoi": {
         "mots": [],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 2,
+        "bonus_fraicheur": 0,
         "score": 0
       }
     },
@@ -307,12 +307,37 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-30",
-      "score": 2,
+      "score": 0,
       "pourquoi": {
         "mots": [],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 2,
+        "bonus_fraicheur": 0,
+        "score": 0
+      }
+    },
+    {
+      "id": "08b542731e5aab88",
+      "titre": "Prévention des conflits d’intérêts : Le Conseil d’État précise les règles et l’office de la Haute autorité pour la transparence de la vie publique",
+      "source": "Conseil d'État — Actualités",
+      "source_id": "ce-actualites",
+      "url": "https://www.conseil-etat.fr/actualites/prevention-des-conflits-d-interets-le-conseil-d-etat-precise-les-regles-et-l-office-de-la-haute-autorite-pour-la-transparence-de-la-vie-publique",
+      "date": "2026-10-29",
+      "theme": "Fiscal et comptable",
+      "resume": null,
+      "importance": 1,
+      "public": [
+        "Expertise comptable"
+      ],
+      "type": null,
+      "origine": "flux",
+      "collecte_le": "2026-11-02",
+      "score": 0,
+      "pourquoi": {
+        "mots": [],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 0,
         "score": 0
       }
     },
@@ -333,12 +358,12 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-29",
-      "score": 2,
+      "score": 0,
       "pourquoi": {
         "mots": [],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 2,
+        "bonus_fraicheur": 0,
         "score": 0
       }
     },
@@ -359,12 +384,12 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-29",
-      "score": 2,
+      "score": 0,
       "pourquoi": {
         "mots": [],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 2,
+        "bonus_fraicheur": 0,
         "score": 0
       }
     },
@@ -385,12 +410,12 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-29",
-      "score": 2,
+      "score": 0,
       "pourquoi": {
         "mots": [],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 2,
+        "bonus_fraicheur": 0,
         "score": 0
       }
     },
@@ -410,12 +435,12 @@
       "type": "doctrine",
       "origine": "flux",
       "collecte_le": "2026-10-29",
-      "score": 3,
+      "score": 2,
       "pourquoi": {
         "mots": [],
         "coefficient": 1,
         "bonus_source": 2,
-        "bonus_fraicheur": 1,
+        "bonus_fraicheur": 0,
         "score": 2
       }
     },
@@ -436,12 +461,12 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-28",
-      "score": 1,
+      "score": 0,
       "pourquoi": {
         "mots": [],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 1,
+        "bonus_fraicheur": 0,
         "score": 0
       }
     },
@@ -462,12 +487,12 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-28",
-      "score": 1,
+      "score": 0,
       "pourquoi": {
         "mots": [],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 1,
+        "bonus_fraicheur": 0,
         "score": 0
       },
       "autres_sources": [
@@ -495,12 +520,12 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-28",
-      "score": 1,
+      "score": 0,
       "pourquoi": {
         "mots": [],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 1,
+        "bonus_fraicheur": 0,
         "score": 0
       }
     },
@@ -521,12 +546,12 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-28",
-      "score": 1,
+      "score": 0,
       "pourquoi": {
         "mots": [],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 1,
+        "bonus_fraicheur": 0,
         "score": 0
       }
     },
@@ -547,12 +572,12 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-28",
-      "score": 1,
+      "score": 0,
       "pourquoi": {
         "mots": [],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 1,
+        "bonus_fraicheur": 0,
         "score": 0
       }
     },
@@ -572,12 +597,12 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-29",
-      "score": 1,
+      "score": 0,
       "pourquoi": {
         "mots": [],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 1,
+        "bonus_fraicheur": 0,
         "score": 0
       }
     },
@@ -598,12 +623,12 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-28",
-      "score": 1,
+      "score": 0,
       "pourquoi": {
         "mots": [],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 1,
+        "bonus_fraicheur": 0,
         "score": 0
       }
     },
@@ -624,12 +649,12 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-28",
-      "score": 1,
+      "score": 0,
       "pourquoi": {
         "mots": [],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 1,
+        "bonus_fraicheur": 0,
         "score": 0
       },
       "autres_sources": [
@@ -657,12 +682,12 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-28",
-      "score": 1,
+      "score": 0,
       "pourquoi": {
         "mots": [],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 1,
+        "bonus_fraicheur": 0,
         "score": 0
       }
     },
@@ -683,12 +708,12 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-28",
-      "score": 1,
+      "score": 0,
       "pourquoi": {
         "mots": [],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 1,
+        "bonus_fraicheur": 0,
         "score": 0
       }
     },
@@ -709,7 +734,7 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-30",
-      "score": 12,
+      "score": 11,
       "pourquoi": {
         "mots": [
           {
@@ -723,7 +748,7 @@
         ],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 1,
+        "bonus_fraicheur": 0,
         "score": 11
       }
     },
@@ -743,7 +768,7 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-27",
-      "score": 3,
+      "score": 2,
       "pourquoi": {
         "mots": [
           {
@@ -753,7 +778,7 @@
         ],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 1,
+        "bonus_fraicheur": 0,
         "score": 2
       }
     },
@@ -773,12 +798,12 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-28",
-      "score": 1,
+      "score": 0,
       "pourquoi": {
         "mots": [],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 1,
+        "bonus_fraicheur": 0,
         "score": 0
       }
     },
@@ -798,12 +823,12 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-28",
-      "score": 1,
+      "score": 0,
       "pourquoi": {
         "mots": [],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 1,
+        "bonus_fraicheur": 0,
         "score": 0
       }
     },
@@ -823,12 +848,12 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-28",
-      "score": 1,
+      "score": 0,
       "pourquoi": {
         "mots": [],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 1,
+        "bonus_fraicheur": 0,
         "score": 0
       }
     },
@@ -849,12 +874,12 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-28",
-      "score": 1,
+      "score": 0,
       "pourquoi": {
         "mots": [],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 1,
+        "bonus_fraicheur": 0,
         "score": 0
       }
     },
@@ -874,12 +899,12 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-28",
-      "score": 1,
+      "score": 0,
       "pourquoi": {
         "mots": [],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 1,
+        "bonus_fraicheur": 0,
         "score": 0
       }
     },
@@ -899,12 +924,12 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-28",
-      "score": 1,
+      "score": 0,
       "pourquoi": {
         "mots": [],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 1,
+        "bonus_fraicheur": 0,
         "score": 0
       }
     },
@@ -925,12 +950,12 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-28",
-      "score": 1,
+      "score": 0,
       "pourquoi": {
         "mots": [],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 1,
+        "bonus_fraicheur": 0,
         "score": 0
       }
     },
@@ -950,12 +975,12 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-28",
-      "score": 1,
+      "score": 0,
       "pourquoi": {
         "mots": [],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 1,
+        "bonus_fraicheur": 0,
         "score": 0
       }
     },
@@ -975,12 +1000,12 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-28",
-      "score": 1,
+      "score": 0,
       "pourquoi": {
         "mots": [],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 1,
+        "bonus_fraicheur": 0,
         "score": 0
       }
     },
@@ -1000,12 +1025,12 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-28",
-      "score": 1,
+      "score": 0,
       "pourquoi": {
         "mots": [],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 1,
+        "bonus_fraicheur": 0,
         "score": 0
       }
     },
@@ -1025,12 +1050,12 @@
       "type": null,
       "origine": "flux",
       "collecte_le": "2026-10-29",
-      "score": 1,
+      "score": 0,
       "pourquoi": {
         "mots": [],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 1,
+        "bonus_fraicheur": 0,
         "score": 0
       }
     },
@@ -5534,17 +5559,17 @@
       "source": "INSEE",
       "url": "https://www.insee.fr/fr/statistiques/serie/011812232",
       "date_publication": "2026-10-15",
-      "collecte_le": "2026-10-30"
+      "collecte_le": "2026-11-02"
     },
     {
       "source_id": "insee-bdm",
       "libelle": "Croissance du PIB sur un trimestre",
-      "valeur": "0,0 %",
-      "periode": "2e trimestre 2026",
+      "valeur": "-0,1 %",
+      "periode": "3e trimestre 2026",
       "source": "INSEE",
       "url": "https://www.insee.fr/fr/statistiques/serie/011794844",
-      "date_publication": "2026-08-28",
-      "collecte_le": "2026-10-30"
+      "date_publication": "2026-10-30",
+      "collecte_le": "2026-11-02"
     },
     {
       "source_id": "insee-bdm",
@@ -5554,7 +5579,7 @@
       "source": "INSEE",
       "url": "https://www.insee.fr/fr/statistiques/serie/001688527",
       "date_publication": "2026-08-07",
-      "collecte_le": "2026-10-30"
+      "collecte_le": "2026-11-02"
     },
     {
       "source_id": "insee-bdm",
@@ -5564,7 +5589,7 @@
       "source": "INSEE",
       "url": "https://www.insee.fr/fr/statistiques/serie/001565530",
       "date_publication": "2026-10-22",
-      "collecte_le": "2026-10-30"
+      "collecte_le": "2026-11-02"
     },
     {
       "source_id": "insee-bdm",
@@ -5574,47 +5599,47 @@
       "source": "INSEE",
       "url": "https://www.insee.fr/fr/statistiques/serie/010755537",
       "date_publication": "2026-10-16",
-      "collecte_le": "2026-10-30"
+      "collecte_le": "2026-11-02"
     },
     {
       "source_id": "bodacc-35",
       "libelle": "Créations d’entreprises en Ille-et-Vilaine",
-      "valeur": "139 annonces",
-      "periode": "du 23/10/2026 au 29/10/2026",
+      "valeur": "221 annonces",
+      "periode": "du 26/10/2026 au 01/11/2026",
       "source": "BODACC (DILA)",
       "url": "https://www.bodacc.fr/",
-      "date_publication": "2026-10-29",
-      "collecte_le": "2026-10-30"
+      "date_publication": "2026-11-01",
+      "collecte_le": "2026-11-02"
     },
     {
       "source_id": "bodacc-35",
       "libelle": "Procédures collectives en Ille-et-Vilaine",
-      "valeur": "69 annonces",
-      "periode": "du 23/10/2026 au 29/10/2026",
+      "valeur": "72 annonces",
+      "periode": "du 26/10/2026 au 01/11/2026",
       "source": "BODACC (DILA)",
       "url": "https://www.bodacc.fr/",
-      "date_publication": "2026-10-29",
-      "collecte_le": "2026-10-30"
+      "date_publication": "2026-11-01",
+      "collecte_le": "2026-11-02"
     },
     {
       "source_id": "bodacc-35",
       "libelle": "Ventes et cessions de fonds en Ille-et-Vilaine",
-      "valeur": "16 annonces",
-      "periode": "du 23/10/2026 au 29/10/2026",
+      "valeur": "32 annonces",
+      "periode": "du 26/10/2026 au 01/11/2026",
       "source": "BODACC (DILA)",
       "url": "https://www.bodacc.fr/",
-      "date_publication": "2026-10-29",
-      "collecte_le": "2026-10-30"
+      "date_publication": "2026-11-01",
+      "collecte_le": "2026-11-02"
     },
     {
       "source_id": "bodacc-35",
       "libelle": "Radiations en Ille-et-Vilaine",
-      "valeur": "147 annonces",
-      "periode": "du 23/10/2026 au 29/10/2026",
+      "valeur": "145 annonces",
+      "periode": "du 26/10/2026 au 01/11/2026",
       "source": "BODACC (DILA)",
       "url": "https://www.bodacc.fr/",
-      "date_publication": "2026-10-29",
-      "collecte_le": "2026-10-30"
+      "date_publication": "2026-11-01",
+      "collecte_le": "2026-11-02"
     }
   ],
   "suivi": {
@@ -5670,9 +5695,9 @@
           "indicative": true
         }
       ],
-      "source": "Assemblée nationale et Sénat — dossiers législatifs",
+      "source": "Assemblée nationale — dossier législatif",
       "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/PLF_2027",
-      "mis_a_jour_le": "2026-10-30",
+      "mis_a_jour_le": "2026-11-02",
       "mesures": {
         "libelle": "Projet de loi n° 3210 (texte déposé par le Gouvernement)",
         "url": "https://www.assemblee-nationale.fr/dyn/17/textes/l17b3210_projet-loi",
@@ -6908,7 +6933,6 @@
           "etablie_le": "2026-10-08"
         }
       },
-      "url_senat": "https://www.senat.fr/dossier-legislatif/pjlf2027.html",
       "mots_cles": [
         "projet de loi de finances",
         "loi de finances pour 2027",
@@ -6970,9 +6994,9 @@
           "indicative": true
         }
       ],
-      "source": "Assemblée nationale et Sénat — dossiers législatifs",
+      "source": "Assemblée nationale — dossier législatif",
       "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/PLFSS_2027",
-      "mis_a_jour_le": "2026-10-30",
+      "mis_a_jour_le": "2026-11-02",
       "mesures": {
         "libelle": "Projet de loi n° 3211 (texte déposé par le Gouvernement)",
         "url": "https://www.assemblee-nationale.fr/dyn/17/textes/l17b3211_projet-loi",
@@ -7607,7 +7631,6 @@
           "etablie_le": "2026-10-08"
         }
       },
-      "url_senat": "https://www.senat.fr/dossier-legislatif/plfss2027.html",
       "mots_cles": [
         "financement de la sécurité sociale",
         "plfss",
@@ -7787,6 +7810,16 @@
       "categorie": "fiscal",
       "source": "impots.gouv.fr — calendrier fiscal",
       "url": "https://www.impots.gouv.fr/professionnel/calendrier-fiscal/2026-10",
+      "origine": "calendrier_officiel"
+    },
+    {
+      "id": "impots-2026-11-02-c01d74d0",
+      "date": "2026-11-02",
+      "titre": "CFE et/ou IFER (solde) : mise en ligne des avis d'impôt",
+      "detail": "À partir de cette date et avant l'échéance de paiement, les avis d'impôt dématérialisés sont consultables dans l'espace professionnel sur le site impots.gouv.fr.",
+      "categorie": "fiscal",
+      "source": "impots.gouv.fr — calendrier fiscal",
+      "url": "https://www.impots.gouv.fr/professionnel/calendrier-fiscal/2026-11",
       "origine": "calendrier_officiel"
     },
     {
@@ -8150,6 +8183,16 @@
       "origine": "calendrier_officiel"
     },
     {
+      "id": "impots-2027-01-05-bf08e57d",
+      "date": "2027-01-05",
+      "titre": "Prélèvement à la source – DSN",
+      "detail": "Date limite pour la télédéclaration DSN de décembre 2026 et le télépaiement (entreprises de 50 salariés ou plus).",
+      "categorie": "social",
+      "source": "impots.gouv.fr — calendrier fiscal",
+      "url": "https://www.impots.gouv.fr/professionnel/calendrier-fiscal/2027-01",
+      "origine": "calendrier_officiel"
+    },
+    {
       "id": "urssaf-ti-mensuel-5-2027-01-05",
       "date": "2027-01-05",
       "titre": "Travailleurs indépendants : prélèvement mensuel des cotisations (échéance du 5)",
@@ -8158,6 +8201,26 @@
       "source": "Urssaf",
       "url": "https://www.urssaf.fr/accueil/independant/comprendre-payer-cotisations/calendrier-paiement-cotisations.html",
       "origine": "saisie"
+    },
+    {
+      "id": "impots-2027-01-12-cfaa58e9",
+      "date": "2027-01-12",
+      "titre": "Prélèvement à la source – PASRAU",
+      "detail": "Date limite pour la télédéclaration PASRAU (revenus de remplacement) de décembre 2026 et le télépaiement (paiement mensuel et option de paiement trimestriel).",
+      "categorie": "social",
+      "source": "impots.gouv.fr — calendrier fiscal",
+      "url": "https://www.impots.gouv.fr/professionnel/calendrier-fiscal/2027-01",
+      "origine": "calendrier_officiel"
+    },
+    {
+      "id": "impots-2027-01-15-1ea9a609",
+      "date": "2027-01-15",
+      "titre": "Prélèvement à la source – DSN",
+      "detail": "Date limite pour la télédéclaration DSN de décembre 2026 (entreprises de moins de 50 salariés) et le télépaiement (paiement mensuel et option de paiement trimestriel).",
+      "categorie": "social",
+      "source": "impots.gouv.fr — calendrier fiscal",
+      "url": "https://www.impots.gouv.fr/professionnel/calendrier-fiscal/2027-01",
+      "origine": "calendrier_officiel"
     },
     {
       "id": "urssaf-ti-mensuel-20-2027-01-20",
