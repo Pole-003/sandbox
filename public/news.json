@@ -1,7 +1,37 @@
 {
   "version": 1,
-  "genere_le": "2026-11-02T06:24:39.356Z",
+  "genere_le": "2026-11-03T12:54:25.621Z",
   "articles": [
+    {
+      "id": "ee2047dc91fa1218",
+      "titre": "PLFSS 2027 : nouvelle étape — Première lecture au Sénat",
+      "source": "Assemblée nationale — Dossier législatif du PLFSS",
+      "source_id": "an-dossier-plfss",
+      "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/PLFSS_2027",
+      "date": "2026-11-02",
+      "theme": "Sécurité sociale",
+      "resume": "Étape « Première lecture au Sénat » (02/11/2026), d’après le dossier législatif de l’Assemblée nationale.",
+      "importance": 5,
+      "public": [
+        "Social / paie"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-11-03",
+      "score": 12,
+      "pourquoi": {
+        "mots": [
+          {
+            "mot": "plfss",
+            "poids": 6
+          }
+        ],
+        "coefficient": 1,
+        "bonus_source": 4,
+        "bonus_fraicheur": 2,
+        "score": 10
+      }
+    },
     {
       "id": "160cdf485f9997af",
       "titre": "Création d'une délégation parlementaire au numérique - texte N° 101",
@@ -18,12 +48,12 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-30",
-      "score": 1,
+      "score": 0,
       "pourquoi": {
         "mots": [],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 1,
+        "bonus_fraicheur": 0,
         "score": 0
       }
     },
@@ -44,12 +74,12 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-30",
-      "score": 1,
+      "score": 0,
       "pourquoi": {
         "mots": [],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 1,
+        "bonus_fraicheur": 0,
         "score": 0
       }
     },
@@ -70,12 +100,12 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-30",
-      "score": 1,
+      "score": 0,
       "pourquoi": {
         "mots": [],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 1,
+        "bonus_fraicheur": 0,
         "score": 0
       }
     },
@@ -96,12 +126,12 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-30",
-      "score": 1,
+      "score": 0,
       "pourquoi": {
         "mots": [],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 1,
+        "bonus_fraicheur": 0,
         "score": 0
       }
     },
@@ -122,12 +152,12 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-30",
-      "score": 1,
+      "score": 0,
       "pourquoi": {
         "mots": [],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 1,
+        "bonus_fraicheur": 0,
         "score": 0
       }
     },
@@ -5559,7 +5589,7 @@
       "source": "INSEE",
       "url": "https://www.insee.fr/fr/statistiques/serie/011812232",
       "date_publication": "2026-10-15",
-      "collecte_le": "2026-11-02"
+      "collecte_le": "2026-11-03"
     },
     {
       "source_id": "insee-bdm",
@@ -5569,7 +5599,7 @@
       "source": "INSEE",
       "url": "https://www.insee.fr/fr/statistiques/serie/011794844",
       "date_publication": "2026-10-30",
-      "collecte_le": "2026-11-02"
+      "collecte_le": "2026-11-03"
     },
     {
       "source_id": "insee-bdm",
@@ -5579,7 +5609,7 @@
       "source": "INSEE",
       "url": "https://www.insee.fr/fr/statistiques/serie/001688527",
       "date_publication": "2026-08-07",
-      "collecte_le": "2026-11-02"
+      "collecte_le": "2026-11-03"
     },
     {
       "source_id": "insee-bdm",
@@ -5589,7 +5619,7 @@
       "source": "INSEE",
       "url": "https://www.insee.fr/fr/statistiques/serie/001565530",
       "date_publication": "2026-10-22",
-      "collecte_le": "2026-11-02"
+      "collecte_le": "2026-11-03"
     },
     {
       "source_id": "insee-bdm",
@@ -5599,47 +5629,47 @@
       "source": "INSEE",
       "url": "https://www.insee.fr/fr/statistiques/serie/010755537",
       "date_publication": "2026-10-16",
-      "collecte_le": "2026-11-02"
+      "collecte_le": "2026-11-03"
     },
     {
       "source_id": "bodacc-35",
       "libelle": "Créations d’entreprises en Ille-et-Vilaine",
-      "valeur": "221 annonces",
-      "periode": "du 26/10/2026 au 01/11/2026",
+      "valeur": "265 annonces",
+      "periode": "du 27/10/2026 au 02/11/2026",
       "source": "BODACC (DILA)",
       "url": "https://www.bodacc.fr/",
-      "date_publication": "2026-11-01",
-      "collecte_le": "2026-11-02"
+      "date_publication": "2026-11-02",
+      "collecte_le": "2026-11-03"
     },
     {
       "source_id": "bodacc-35",
       "libelle": "Procédures collectives en Ille-et-Vilaine",
-      "valeur": "72 annonces",
-      "periode": "du 26/10/2026 au 01/11/2026",
+      "valeur": "73 annonces",
+      "periode": "du 27/10/2026 au 02/11/2026",
       "source": "BODACC (DILA)",
       "url": "https://www.bodacc.fr/",
-      "date_publication": "2026-11-01",
-      "collecte_le": "2026-11-02"
+      "date_publication": "2026-11-02",
+      "collecte_le": "2026-11-03"
     },
     {
       "source_id": "bodacc-35",
       "libelle": "Ventes et cessions de fonds en Ille-et-Vilaine",
-      "valeur": "32 annonces",
-      "periode": "du 26/10/2026 au 01/11/2026",
+      "valeur": "34 annonces",
+      "periode": "du 27/10/2026 au 02/11/2026",
       "source": "BODACC (DILA)",
       "url": "https://www.bodacc.fr/",
-      "date_publication": "2026-11-01",
-      "collecte_le": "2026-11-02"
+      "date_publication": "2026-11-02",
+      "collecte_le": "2026-11-03"
     },
     {
       "source_id": "bodacc-35",
       "libelle": "Radiations en Ille-et-Vilaine",
-      "valeur": "145 annonces",
-      "periode": "du 26/10/2026 au 01/11/2026",
+      "valeur": "160 annonces",
+      "periode": "du 27/10/2026 au 02/11/2026",
       "source": "BODACC (DILA)",
       "url": "https://www.bodacc.fr/",
-      "date_publication": "2026-11-01",
-      "collecte_le": "2026-11-02"
+      "date_publication": "2026-11-02",
+      "collecte_le": "2026-11-03"
     }
   ],
   "suivi": {
@@ -5697,7 +5727,7 @@
       ],
       "source": "Assemblée nationale — dossier législatif",
       "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/PLF_2027",
-      "mis_a_jour_le": "2026-11-02",
+      "mis_a_jour_le": "2026-11-03",
       "mesures": {
         "libelle": "Projet de loi n° 3210 (texte déposé par le Gouvernement)",
         "url": "https://www.assemblee-nationale.fr/dyn/17/textes/l17b3210_projet-loi",
@@ -6944,7 +6974,7 @@
     },
     "plfss": {
       "texte": "PLFSS 2027",
-      "etape_actuelle": "Première lecture à l'Assemblée nationale",
+      "etape_actuelle": "Première lecture au Sénat",
       "etapes": [
         {
           "libelle": "Dépôt à l'Assemblée nationale",
@@ -6954,12 +6984,12 @@
         {
           "libelle": "Première lecture à l'Assemblée nationale",
           "date": "2026-10-01",
-          "statut": "en_cours"
+          "statut": "fait"
         },
         {
           "libelle": "Première lecture au Sénat",
-          "date": null,
-          "statut": "a_venir"
+          "date": "2026-11-02",
+          "statut": "en_cours"
         },
         {
           "libelle": "Commission mixte paritaire",
@@ -6996,7 +7026,7 @@
       ],
       "source": "Assemblée nationale — dossier législatif",
       "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/PLFSS_2027",
-      "mis_a_jour_le": "2026-11-02",
+      "mis_a_jour_le": "2026-11-03",
       "mesures": {
         "libelle": "Projet de loi n° 3211 (texte déposé par le Gouvernement)",
         "url": "https://www.assemblee-nationale.fr/dyn/17/textes/l17b3211_projet-loi",
@@ -7742,26 +7772,6 @@
     }
   ],
   "echeances": [
-    {
-      "id": "impots-2026-10-26-a8c68c9e",
-      "date": "2026-10-26",
-      "titre": "Taxe Générale sur les Activités Polluantes (TGAP)",
-      "detail": "Date limite de dépôt de la déclaration d’acompte n°2020-TGAP-AC au titre de la TGAP 2026 pour les redevables non imposables ou en franchise de TVA.",
-      "categorie": "fiscal",
-      "source": "impots.gouv.fr — calendrier fiscal",
-      "url": "https://www.impots.gouv.fr/professionnel/calendrier-fiscal/2026-10",
-      "origine": "calendrier_officiel"
-    },
-    {
-      "id": "impots-2026-10-26-177124e1",
-      "date": "2026-10-26",
-      "titre": "Taxe Générale sur les Activités Polluantes (TGAP)",
-      "detail": "Date limite de dépôt de la déclaration d’acompte n°2020-TGAP-AC au titre de la TGAP 2026 pour les redevables soumis au régime simplifié d’imposition en TVA.",
-      "categorie": "fiscal",
-      "source": "impots.gouv.fr — calendrier fiscal",
-      "url": "https://www.impots.gouv.fr/professionnel/calendrier-fiscal/2026-10",
-      "origine": "calendrier_officiel"
-    },
     {
       "id": "impots-2026-10-27-9da332b2",
       "date": "2026-10-27",
