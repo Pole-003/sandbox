@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "genere_le": "2026-11-03T12:54:25.621Z",
+  "genere_le": "2026-11-04T13:08:34.529Z",
   "sources": [
     {
       "id": "bofip-actualites",
@@ -9,12 +9,12 @@
       "theme": "Fiscal et comptable",
       "statut_catalogue": "verifie",
       "etat": "ok",
-      "derniere_tentative": "2026-11-03T12:54:25.621Z",
-      "derniere_reussite": "2026-11-03T12:54:25.621Z",
+      "derniere_tentative": "2026-11-04T13:08:34.529Z",
+      "derniere_reussite": "2026-11-04T13:08:34.529Z",
       "erreur": null,
-      "nb_articles": 1,
+      "nb_articles": 0,
       "nb_elements": 4,
-      "duree_ms": 575,
+      "duree_ms": 619,
       "historique": [
         {
           "date": "2026-10-09",
@@ -86,6 +86,10 @@
         },
         {
           "date": "2026-11-03",
+          "etat": "ok"
+        },
+        {
+          "date": "2026-11-04",
           "etat": "ok"
         }
       ]
@@ -97,7 +101,7 @@
       "theme": "Loi de finances",
       "statut_catalogue": "verifie",
       "etat": "erreur",
-      "derniere_tentative": "2026-11-03T12:54:25.621Z",
+      "derniere_tentative": "2026-11-04T13:08:34.529Z",
       "derniere_reussite": "2026-10-30T06:06:36.810Z",
       "erreur": "robots.txt injoignable : erreur réseau : ETIMEDOUT (www.senat.fr)",
       "nb_articles": 0,
@@ -174,6 +178,10 @@
         },
         {
           "date": "2026-11-03",
+          "etat": "erreur"
+        },
+        {
+          "date": "2026-11-04",
           "etat": "erreur"
         }
       ]
@@ -185,7 +193,7 @@
       "theme": "Loi de finances",
       "statut_catalogue": "verifie",
       "etat": "erreur",
-      "derniere_tentative": "2026-11-03T12:54:25.621Z",
+      "derniere_tentative": "2026-11-04T13:08:34.529Z",
       "derniere_reussite": "2026-10-30T06:06:36.810Z",
       "erreur": "robots.txt injoignable : erreur réseau : ETIMEDOUT (www.senat.fr)",
       "nb_articles": 0,
@@ -262,6 +270,10 @@
         },
         {
           "date": "2026-11-03",
+          "etat": "erreur"
+        },
+        {
+          "date": "2026-11-04",
           "etat": "erreur"
         }
       ]
@@ -273,7 +285,7 @@
       "theme": "Loi de finances",
       "statut_catalogue": "verifie",
       "etat": "erreur",
-      "derniere_tentative": "2026-11-03T12:54:25.621Z",
+      "derniere_tentative": "2026-11-04T13:08:34.529Z",
       "derniere_reussite": "2026-10-30T06:06:36.810Z",
       "erreur": "robots.txt injoignable : erreur réseau : ETIMEDOUT (www.senat.fr)",
       "nb_articles": 0,
@@ -350,6 +362,10 @@
         },
         {
           "date": "2026-11-03",
+          "etat": "erreur"
+        },
+        {
+          "date": "2026-11-04",
           "etat": "erreur"
         }
       ]
@@ -361,7 +377,7 @@
       "theme": "Fiscal et comptable",
       "statut_catalogue": "verifie",
       "etat": "erreur",
-      "derniere_tentative": "2026-11-03T12:54:25.621Z",
+      "derniere_tentative": "2026-11-04T13:08:34.529Z",
       "derniere_reussite": "2026-10-30T06:06:36.810Z",
       "erreur": "robots.txt injoignable : erreur réseau : ETIMEDOUT (www.senat.fr)",
       "nb_articles": 0,
@@ -438,6 +454,10 @@
         },
         {
           "date": "2026-11-03",
+          "etat": "erreur"
+        },
+        {
+          "date": "2026-11-04",
           "etat": "erreur"
         }
       ]
@@ -449,7 +469,7 @@
       "theme": "Économie et statistiques",
       "statut_catalogue": "verifie",
       "etat": "erreur",
-      "derniere_tentative": "2026-11-03T12:54:25.621Z",
+      "derniere_tentative": "2026-11-04T13:08:34.529Z",
       "derniere_reussite": "2026-10-30T06:06:36.810Z",
       "erreur": "robots.txt injoignable : erreur réseau : ETIMEDOUT (www.senat.fr)",
       "nb_articles": 0,
@@ -526,6 +546,10 @@
         },
         {
           "date": "2026-11-03",
+          "etat": "erreur"
+        },
+        {
+          "date": "2026-11-04",
           "etat": "erreur"
         }
       ]
@@ -537,7 +561,7 @@
       "theme": "Économie et statistiques",
       "statut_catalogue": "verifie",
       "etat": "erreur",
-      "derniere_tentative": "2026-11-03T12:54:25.621Z",
+      "derniere_tentative": "2026-11-04T13:08:34.529Z",
       "derniere_reussite": "2026-10-30T06:06:36.810Z",
       "erreur": "robots.txt injoignable : erreur réseau : ETIMEDOUT (www.senat.fr)",
       "nb_articles": 0,
@@ -614,6 +638,10 @@
         },
         {
           "date": "2026-11-03",
+          "etat": "erreur"
+        },
+        {
+          "date": "2026-11-04",
           "etat": "erreur"
         }
       ]
@@ -625,7 +653,7 @@
       "theme": "Sécurité sociale",
       "statut_catalogue": "verifie",
       "etat": "erreur",
-      "derniere_tentative": "2026-11-03T12:54:25.621Z",
+      "derniere_tentative": "2026-11-04T13:08:34.529Z",
       "derniere_reussite": "2026-10-30T06:06:36.810Z",
       "erreur": "robots.txt injoignable : erreur réseau : ETIMEDOUT (www.senat.fr)",
       "nb_articles": 0,
@@ -703,6 +731,10 @@
         {
           "date": "2026-11-03",
           "etat": "erreur"
+        },
+        {
+          "date": "2026-11-04",
+          "etat": "erreur"
         }
       ]
     },
@@ -713,12 +745,12 @@
       "theme": "Loi de finances",
       "statut_catalogue": "verifie",
       "etat": "ok",
-      "derniere_tentative": "2026-11-03T12:54:25.621Z",
-      "derniere_reussite": "2026-11-03T12:54:25.621Z",
+      "derniere_tentative": "2026-11-04T13:08:34.529Z",
+      "derniere_reussite": "2026-11-04T13:08:34.529Z",
       "erreur": null,
       "nb_articles": 0,
       "nb_elements": 10,
-      "duree_ms": 412,
+      "duree_ms": 259,
       "historique": [
         {
           "date": "2026-10-09",
@@ -790,6 +822,10 @@
         },
         {
           "date": "2026-11-03",
+          "etat": "ok"
+        },
+        {
+          "date": "2026-11-04",
           "etat": "ok"
         }
       ]
@@ -801,12 +837,12 @@
       "theme": "Loi de finances",
       "statut_catalogue": "verifie",
       "etat": "ok",
-      "derniere_tentative": "2026-11-03T12:54:25.621Z",
-      "derniere_reussite": "2026-11-03T12:54:25.621Z",
+      "derniere_tentative": "2026-11-04T13:08:34.529Z",
+      "derniere_reussite": "2026-11-04T13:08:34.529Z",
       "erreur": null,
       "nb_articles": 2,
       "nb_elements": 10,
-      "duree_ms": 184,
+      "duree_ms": 468,
       "historique": [
         {
           "date": "2026-10-09",
@@ -878,6 +914,10 @@
         },
         {
           "date": "2026-11-03",
+          "etat": "ok"
+        },
+        {
+          "date": "2026-11-04",
           "etat": "ok"
         }
       ]
@@ -889,12 +929,12 @@
       "theme": "Sécurité sociale",
       "statut_catalogue": "verifie",
       "etat": "ok",
-      "derniere_tentative": "2026-11-03T12:54:25.621Z",
-      "derniere_reussite": "2026-11-03T12:54:25.621Z",
+      "derniere_tentative": "2026-11-04T13:08:34.529Z",
+      "derniere_reussite": "2026-11-04T13:08:34.529Z",
       "erreur": null,
       "nb_articles": 2,
       "nb_elements": 10,
-      "duree_ms": 450,
+      "duree_ms": 324,
       "historique": [
         {
           "date": "2026-10-09",
@@ -966,6 +1006,10 @@
         },
         {
           "date": "2026-11-03",
+          "etat": "ok"
+        },
+        {
+          "date": "2026-11-04",
           "etat": "ok"
         }
       ]
@@ -977,12 +1021,12 @@
       "theme": "Économie et statistiques",
       "statut_catalogue": "verifie",
       "etat": "ok",
-      "derniere_tentative": "2026-11-03T12:54:25.621Z",
-      "derniere_reussite": "2026-11-03T12:54:25.621Z",
+      "derniere_tentative": "2026-11-04T13:08:34.529Z",
+      "derniere_reussite": "2026-11-04T13:08:34.529Z",
       "erreur": null,
-      "nb_articles": 9,
+      "nb_articles": 7,
       "nb_elements": 10,
-      "duree_ms": 305,
+      "duree_ms": 344,
       "historique": [
         {
           "date": "2026-10-09",
@@ -1054,6 +1098,10 @@
         },
         {
           "date": "2026-11-03",
+          "etat": "ok"
+        },
+        {
+          "date": "2026-11-04",
           "etat": "ok"
         }
       ]
@@ -1143,6 +1191,10 @@
         {
           "date": "2026-11-03",
           "etat": "inactive"
+        },
+        {
+          "date": "2026-11-04",
+          "etat": "inactive"
         }
       ]
     },
@@ -1153,12 +1205,12 @@
       "theme": "Fiscal et comptable",
       "statut_catalogue": "verifie",
       "etat": "ok",
-      "derniere_tentative": "2026-11-03T12:54:25.621Z",
-      "derniere_reussite": "2026-11-03T12:54:25.621Z",
+      "derniere_tentative": "2026-11-04T13:08:34.529Z",
+      "derniere_reussite": "2026-11-04T13:08:34.529Z",
       "erreur": null,
       "nb_articles": 0,
       "nb_elements": 20,
-      "duree_ms": 103,
+      "duree_ms": 130,
       "historique": [
         {
           "date": "2026-10-09",
@@ -1230,6 +1282,10 @@
         },
         {
           "date": "2026-11-03",
+          "etat": "ok"
+        },
+        {
+          "date": "2026-11-04",
           "etat": "ok"
         }
       ]
@@ -1241,12 +1297,12 @@
       "theme": "Fiscal et comptable",
       "statut_catalogue": "verifie",
       "etat": "ok",
-      "derniere_tentative": "2026-11-03T12:54:25.621Z",
-      "derniere_reussite": "2026-11-03T12:54:25.621Z",
+      "derniere_tentative": "2026-11-04T13:08:34.529Z",
+      "derniere_reussite": "2026-11-04T13:08:34.529Z",
       "erreur": null,
       "nb_articles": 1,
       "nb_elements": 20,
-      "duree_ms": 102,
+      "duree_ms": 128,
       "historique": [
         {
           "date": "2026-10-09",
@@ -1318,6 +1374,10 @@
         },
         {
           "date": "2026-11-03",
+          "etat": "ok"
+        },
+        {
+          "date": "2026-11-04",
           "etat": "ok"
         }
       ]
@@ -1329,12 +1389,12 @@
       "theme": "Loi de finances",
       "statut_catalogue": "verifie",
       "etat": "ok",
-      "derniere_tentative": "2026-11-03T12:54:25.621Z",
-      "derniere_reussite": "2026-11-03T12:54:25.621Z",
+      "derniere_tentative": "2026-11-04T13:08:34.529Z",
+      "derniere_reussite": "2026-11-04T13:08:34.529Z",
       "erreur": null,
       "nb_articles": 0,
       "nb_elements": 20,
-      "duree_ms": 102,
+      "duree_ms": 130,
       "historique": [
         {
           "date": "2026-10-09",
@@ -1406,6 +1466,10 @@
         },
         {
           "date": "2026-11-03",
+          "etat": "ok"
+        },
+        {
+          "date": "2026-11-04",
           "etat": "ok"
         }
       ]
@@ -1495,6 +1559,10 @@
         {
           "date": "2026-11-03",
           "etat": "non_configuree"
+        },
+        {
+          "date": "2026-11-04",
+          "etat": "non_configuree"
         }
       ]
     },
@@ -1505,12 +1573,12 @@
       "theme": "Fiscal et comptable",
       "statut_catalogue": "verifie",
       "etat": "ok",
-      "derniere_tentative": "2026-11-03T12:54:25.621Z",
-      "derniere_reussite": "2026-11-03T12:54:25.621Z",
+      "derniere_tentative": "2026-11-04T13:08:34.529Z",
+      "derniere_reussite": "2026-11-04T13:08:34.529Z",
       "erreur": null,
       "nb_articles": 35,
       "nb_elements": 35,
-      "duree_ms": 3108,
+      "duree_ms": 3708,
       "historique": [
         {
           "date": "2026-10-09",
@@ -1583,6 +1651,10 @@
         {
           "date": "2026-11-03",
           "etat": "ok"
+        },
+        {
+          "date": "2026-11-04",
+          "etat": "ok"
         }
       ]
     },
@@ -1593,12 +1665,12 @@
       "theme": "Loi de finances",
       "statut_catalogue": "verifie",
       "etat": "ok",
-      "derniere_tentative": "2026-11-03T12:54:25.621Z",
-      "derniere_reussite": "2026-11-03T12:54:25.621Z",
+      "derniere_tentative": "2026-11-04T13:08:34.529Z",
+      "derniere_reussite": "2026-11-04T13:08:34.529Z",
       "erreur": null,
       "nb_articles": 0,
       "nb_elements": 2,
-      "duree_ms": 648,
+      "duree_ms": 758,
       "empreinte": "66199c507c9f9f30",
       "historique": [
         {
@@ -1672,6 +1744,10 @@
         {
           "date": "2026-11-03",
           "etat": "ok"
+        },
+        {
+          "date": "2026-11-04",
+          "etat": "ok"
         }
       ]
     },
@@ -1682,12 +1758,12 @@
       "theme": "Sécurité sociale",
       "statut_catalogue": "verifie",
       "etat": "ok",
-      "derniere_tentative": "2026-11-03T12:54:25.621Z",
-      "derniere_reussite": "2026-11-03T12:54:25.621Z",
+      "derniere_tentative": "2026-11-04T13:08:34.529Z",
+      "derniere_reussite": "2026-11-04T13:08:34.529Z",
       "erreur": null,
-      "nb_articles": 1,
+      "nb_articles": 0,
       "nb_elements": 3,
-      "duree_ms": 625,
+      "duree_ms": 277,
       "empreinte": "a0536c6305662782",
       "historique": [
         {
@@ -1761,6 +1837,10 @@
         {
           "date": "2026-11-03",
           "etat": "ok"
+        },
+        {
+          "date": "2026-11-04",
+          "etat": "ok"
         }
       ]
     },
@@ -1771,7 +1851,7 @@
       "theme": "Loi de finances",
       "statut_catalogue": "verifie",
       "etat": "erreur",
-      "derniere_tentative": "2026-11-03T12:54:25.621Z",
+      "derniere_tentative": "2026-11-04T13:08:34.529Z",
       "derniere_reussite": "2026-10-30T06:06:36.810Z",
       "erreur": "robots.txt injoignable : erreur réseau : ETIMEDOUT (www.senat.fr)",
       "nb_articles": 0,
@@ -1849,6 +1929,10 @@
         },
         {
           "date": "2026-11-03",
+          "etat": "erreur"
+        },
+        {
+          "date": "2026-11-04",
           "etat": "erreur"
         }
       ]
@@ -1860,7 +1944,7 @@
       "theme": "Sécurité sociale",
       "statut_catalogue": "verifie",
       "etat": "erreur",
-      "derniere_tentative": "2026-11-03T12:54:25.621Z",
+      "derniere_tentative": "2026-11-04T13:08:34.529Z",
       "derniere_reussite": "2026-10-30T06:06:36.810Z",
       "erreur": "robots.txt injoignable : erreur réseau : ETIMEDOUT (www.senat.fr)",
       "nb_articles": 0,
@@ -1938,6 +2022,10 @@
         },
         {
           "date": "2026-11-03",
+          "etat": "erreur"
+        },
+        {
+          "date": "2026-11-04",
           "etat": "erreur"
         }
       ]
@@ -2027,6 +2115,10 @@
         {
           "date": "2026-11-03",
           "etat": "non_configuree"
+        },
+        {
+          "date": "2026-11-04",
+          "etat": "non_configuree"
         }
       ]
     },
@@ -2115,6 +2207,10 @@
         {
           "date": "2026-11-03",
           "etat": "non_configuree"
+        },
+        {
+          "date": "2026-11-04",
+          "etat": "non_configuree"
         }
       ]
     },
@@ -2125,12 +2221,12 @@
       "theme": "Économie et statistiques",
       "statut_catalogue": "verifie",
       "etat": "ok",
-      "derniere_tentative": "2026-11-03T12:54:25.621Z",
-      "derniere_reussite": "2026-11-03T12:54:25.621Z",
+      "derniere_tentative": "2026-11-04T13:08:34.529Z",
+      "derniere_reussite": "2026-11-04T13:08:34.529Z",
       "erreur": null,
       "nb_articles": 5,
       "nb_elements": null,
-      "duree_ms": 1469,
+      "duree_ms": 1583,
       "historique": [
         {
           "date": "2026-10-09",
@@ -2202,6 +2298,10 @@
         },
         {
           "date": "2026-11-03",
+          "etat": "ok"
+        },
+        {
+          "date": "2026-11-04",
           "etat": "ok"
         }
       ]
@@ -2213,12 +2313,12 @@
       "theme": "Rennes et Bretagne",
       "statut_catalogue": "verifie",
       "etat": "ok",
-      "derniere_tentative": "2026-11-03T12:54:25.621Z",
-      "derniere_reussite": "2026-11-03T12:54:25.621Z",
+      "derniere_tentative": "2026-11-04T13:08:34.529Z",
+      "derniere_reussite": "2026-11-04T13:08:34.529Z",
       "erreur": null,
       "nb_articles": 4,
       "nb_elements": null,
-      "duree_ms": 574,
+      "duree_ms": 790,
       "historique": [
         {
           "date": "2026-10-09",
@@ -2291,6 +2391,10 @@
         {
           "date": "2026-11-03",
           "etat": "ok"
+        },
+        {
+          "date": "2026-11-04",
+          "etat": "ok"
         }
       ]
     }
@@ -2300,8 +2404,8 @@
     "raison": "désactivée : la veille fonctionne à 0 €, sans appel à un service d’IA"
   },
   "classement": {
-    "articles": 199,
-    "exclus": 5,
-    "marginaux": 156
+    "articles": 200,
+    "exclus": 4,
+    "marginaux": 157
   }
 }

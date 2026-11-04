@@ -1,7 +1,32 @@
 {
   "version": 1,
-  "genere_le": "2026-11-03T12:54:25.621Z",
+  "genere_le": "2026-11-04T13:08:34.529Z",
   "articles": [
+    {
+      "id": "b1126b48f1475e6d",
+      "titre": "Texte adopté n° 353 - Proposition de loi, adoptée sans modification, par l'Assemblée nationale, visant à assouplir la procédure d'autorisation des établissements et services sociaux et médico-sociaux à caractère expérimental",
+      "source": "Assemblée nationale — Commission des affaires sociales",
+      "source_id": "an-commission-affaires-sociales",
+      "url": "https://www.assemblee-nationale.fr/17/ta/ta0353.asp",
+      "date": "2026-11-03",
+      "theme": "Sécurité sociale",
+      "resume": null,
+      "importance": 1,
+      "public": [
+        "Social / paie"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-11-04",
+      "score": 2,
+      "pourquoi": {
+        "mots": [],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 2,
+        "score": 0
+      }
+    },
     {
       "id": "ee2047dc91fa1218",
       "titre": "PLFSS 2027 : nouvelle étape — Première lecture au Sénat",
@@ -18,7 +43,7 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-11-03",
-      "score": 12,
+      "score": 11,
       "pourquoi": {
         "mots": [
           {
@@ -28,7 +53,7 @@
         ],
         "coefficient": 1,
         "bonus_source": 4,
-        "bonus_fraicheur": 2,
+        "bonus_fraicheur": 1,
         "score": 10
       }
     },
@@ -5589,7 +5614,7 @@
       "source": "INSEE",
       "url": "https://www.insee.fr/fr/statistiques/serie/011812232",
       "date_publication": "2026-10-15",
-      "collecte_le": "2026-11-03"
+      "collecte_le": "2026-11-04"
     },
     {
       "source_id": "insee-bdm",
@@ -5599,7 +5624,7 @@
       "source": "INSEE",
       "url": "https://www.insee.fr/fr/statistiques/serie/011794844",
       "date_publication": "2026-10-30",
-      "collecte_le": "2026-11-03"
+      "collecte_le": "2026-11-04"
     },
     {
       "source_id": "insee-bdm",
@@ -5609,7 +5634,7 @@
       "source": "INSEE",
       "url": "https://www.insee.fr/fr/statistiques/serie/001688527",
       "date_publication": "2026-08-07",
-      "collecte_le": "2026-11-03"
+      "collecte_le": "2026-11-04"
     },
     {
       "source_id": "insee-bdm",
@@ -5619,7 +5644,7 @@
       "source": "INSEE",
       "url": "https://www.insee.fr/fr/statistiques/serie/001565530",
       "date_publication": "2026-10-22",
-      "collecte_le": "2026-11-03"
+      "collecte_le": "2026-11-04"
     },
     {
       "source_id": "insee-bdm",
@@ -5629,47 +5654,47 @@
       "source": "INSEE",
       "url": "https://www.insee.fr/fr/statistiques/serie/010755537",
       "date_publication": "2026-10-16",
-      "collecte_le": "2026-11-03"
+      "collecte_le": "2026-11-04"
     },
     {
       "source_id": "bodacc-35",
       "libelle": "Créations d’entreprises en Ille-et-Vilaine",
-      "valeur": "265 annonces",
-      "periode": "du 27/10/2026 au 02/11/2026",
+      "valeur": "192 annonces",
+      "periode": "du 28/10/2026 au 03/11/2026",
       "source": "BODACC (DILA)",
       "url": "https://www.bodacc.fr/",
-      "date_publication": "2026-11-02",
-      "collecte_le": "2026-11-03"
+      "date_publication": "2026-11-03",
+      "collecte_le": "2026-11-04"
     },
     {
       "source_id": "bodacc-35",
       "libelle": "Procédures collectives en Ille-et-Vilaine",
-      "valeur": "73 annonces",
-      "periode": "du 27/10/2026 au 02/11/2026",
+      "valeur": "61 annonces",
+      "periode": "du 28/10/2026 au 03/11/2026",
       "source": "BODACC (DILA)",
       "url": "https://www.bodacc.fr/",
-      "date_publication": "2026-11-02",
-      "collecte_le": "2026-11-03"
+      "date_publication": "2026-11-03",
+      "collecte_le": "2026-11-04"
     },
     {
       "source_id": "bodacc-35",
       "libelle": "Ventes et cessions de fonds en Ille-et-Vilaine",
-      "valeur": "34 annonces",
-      "periode": "du 27/10/2026 au 02/11/2026",
+      "valeur": "30 annonces",
+      "periode": "du 28/10/2026 au 03/11/2026",
       "source": "BODACC (DILA)",
       "url": "https://www.bodacc.fr/",
-      "date_publication": "2026-11-02",
-      "collecte_le": "2026-11-03"
+      "date_publication": "2026-11-03",
+      "collecte_le": "2026-11-04"
     },
     {
       "source_id": "bodacc-35",
       "libelle": "Radiations en Ille-et-Vilaine",
-      "valeur": "160 annonces",
-      "periode": "du 27/10/2026 au 02/11/2026",
+      "valeur": "110 annonces",
+      "periode": "du 28/10/2026 au 03/11/2026",
       "source": "BODACC (DILA)",
       "url": "https://www.bodacc.fr/",
-      "date_publication": "2026-11-02",
-      "collecte_le": "2026-11-03"
+      "date_publication": "2026-11-03",
+      "collecte_le": "2026-11-04"
     }
   ],
   "suivi": {
@@ -5727,7 +5752,7 @@
       ],
       "source": "Assemblée nationale — dossier législatif",
       "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/PLF_2027",
-      "mis_a_jour_le": "2026-11-03",
+      "mis_a_jour_le": "2026-11-04",
       "mesures": {
         "libelle": "Projet de loi n° 3210 (texte déposé par le Gouvernement)",
         "url": "https://www.assemblee-nationale.fr/dyn/17/textes/l17b3210_projet-loi",
@@ -7026,7 +7051,7 @@
       ],
       "source": "Assemblée nationale — dossier législatif",
       "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/PLFSS_2027",
-      "mis_a_jour_le": "2026-11-03",
+      "mis_a_jour_le": "2026-11-04",
       "mesures": {
         "libelle": "Projet de loi n° 3211 (texte déposé par le Gouvernement)",
         "url": "https://www.assemblee-nationale.fr/dyn/17/textes/l17b3211_projet-loi",
@@ -7772,16 +7797,6 @@
     }
   ],
   "echeances": [
-    {
-      "id": "impots-2026-10-27-9da332b2",
-      "date": "2026-10-27",
-      "titre": "Accise sur l’électricité, les gaz naturels et les charbons",
-      "detail": "Date limite de dépôt de la déclaration n°2040-TIC mensuelle ou trimestrielle pour l’accise sur l’électricité, trimestrielle pour l’accise sur les gaz naturels et l’accise sur les charbons en rythme trimestriel.",
-      "categorie": "fiscal",
-      "source": "impots.gouv.fr — calendrier fiscal",
-      "url": "https://www.impots.gouv.fr/professionnel/calendrier-fiscal/2026-10",
-      "origine": "calendrier_officiel"
-    },
     {
       "id": "impots-2026-10-30-d8d21475",
       "date": "2026-10-30",
