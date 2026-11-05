@@ -1,7 +1,365 @@
 {
   "version": 1,
-  "genere_le": "2026-11-04T13:08:34.529Z",
+  "genere_le": "2026-11-05T13:22:48.716Z",
   "articles": [
+    {
+      "id": "4225990188fb68ad",
+      "titre": "Texte adopté n° 362 - Projet de loi de finances rejeté par l'Assemblée nationale, pour 2027",
+      "source": "Assemblée nationale — Commission des finances",
+      "source_id": "an-commission-finances",
+      "url": "https://www.assemblee-nationale.fr/17/ta/ta0362.asp",
+      "date": "2026-11-05",
+      "theme": "Loi de finances",
+      "resume": null,
+      "importance": 5,
+      "public": [
+        "Expertise comptable",
+        "Conseil aux dirigeants"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-11-05",
+      "score": 13,
+      "pourquoi": {
+        "mots": [
+          {
+            "mot": "projet de loi de finances",
+            "poids": 6
+          },
+          {
+            "mot": "loi de finances",
+            "poids": 5
+          }
+        ],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 2,
+        "score": 11
+      }
+    },
+    {
+      "id": "8a4efb8c4635687c",
+      "titre": "Inscrire les élus locaux sur la liste des salariés protégés - texte N° 133",
+      "source": "Sénat — Derniers textes",
+      "source_id": "senat-textes",
+      "url": "https://www.senat.fr/leg/ppl26-133.html",
+      "date": "2026-11-05",
+      "theme": "Loi de finances",
+      "resume": "Proposition de loi visant à inscrire les élus locaux sur la liste des salariés protégés : texte N° 133 de M. Éric KERROUCHE, déposé au Sénat le 30 octobre 2026",
+      "importance": 1,
+      "public": [
+        "Social / paie"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-11-05",
+      "score": 2,
+      "pourquoi": {
+        "mots": [],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 2,
+        "score": 0
+      }
+    },
+    {
+      "id": "c8c9952c02c16fd2",
+      "titre": "Moderniser et rééquilibrer le fonctionnement du titre-restaurant - texte de la commission N° 142",
+      "source": "Sénat — Derniers textes",
+      "source_id": "senat-textes",
+      "url": "https://www.senat.fr/leg/ppl26-142.html",
+      "date": "2026-11-05",
+      "theme": "Loi de finances",
+      "resume": "Proposition de loi visant à moderniser et rééquilibrer le fonctionnement du titre-restaurant : texte de la commission N° 142 déposé le 3 novembre 2026",
+      "importance": 1,
+      "public": [
+        "Expertise comptable",
+        "Conseil aux dirigeants"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-11-05",
+      "score": 2,
+      "pourquoi": {
+        "mots": [],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 2,
+        "score": 0
+      }
+    },
+    {
+      "id": "a3a2d375ee847da3",
+      "titre": "Moderniser les modalités de vote pour les scrutins électoraux - texte N° 134",
+      "source": "Sénat — Derniers textes",
+      "source_id": "senat-textes",
+      "url": "https://www.senat.fr/leg/ppl26-134.html",
+      "date": "2026-11-05",
+      "theme": "Loi de finances",
+      "resume": "Proposition de loi visant à moderniser les modalités de vote pour les scrutins électoraux et les opérations référendaires : texte N° 134 de M. Éric KERROUCHE, déposé au Sénat le 30 octobre 2026",
+      "importance": 1,
+      "public": [
+        "Expertise comptable",
+        "Conseil aux dirigeants"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-11-05",
+      "score": 2,
+      "pourquoi": {
+        "mots": [],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 2,
+        "score": 0
+      }
+    },
+    {
+      "id": "f69a2a532d23c08a",
+      "titre": "Renforcer l'effectivité des droits voisins des éditeurs et des agences de press - texte de la commission N° 146",
+      "source": "Sénat — Derniers textes",
+      "source_id": "senat-textes",
+      "url": "https://www.senat.fr/leg/ppl26-146.html",
+      "date": "2026-11-05",
+      "theme": "Loi de finances",
+      "resume": "Proposition de loi visant à renforcer l'effectivité des droits voisins des éditeurs et des agences de presse : texte de la commission N° 146 déposé le 4 novembre 2026",
+      "importance": 1,
+      "public": [
+        "Expertise comptable",
+        "Conseil aux dirigeants"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-11-05",
+      "score": 2,
+      "pourquoi": {
+        "mots": [],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 2,
+        "score": 0
+      }
+    },
+    {
+      "id": "5316e6b97e5041e6",
+      "titre": "IF - Actualisation des plafonds d’exonération de cotisation foncière des entreprises (CFE) pour 2027 dans les zones urbaines en difficulté",
+      "source": "BOFiP-Impôts — Actualités",
+      "source_id": "bofip-actualites",
+      "url": "https://bofip.impots.gouv.fr/bofip/15227-PGP.html/ACTU-2026-00169",
+      "date": "2026-11-04",
+      "theme": "Fiscal et comptable",
+      "resume": "IF - Actualisation des plafonds d’exonération de cotisation foncière des entreprises (CFE) pour 2027 dans les zones urbaines en difficulté (identifiant juridique ACTU-2026-00169; publié le 04/11/2026)",
+      "importance": 3,
+      "public": [
+        "Social / paie",
+        "Conseil aux dirigeants"
+      ],
+      "type": "doctrine",
+      "origine": "flux",
+      "collecte_le": "2026-11-05",
+      "score": 7,
+      "pourquoi": {
+        "mots": [
+          {
+            "mot": "cfe",
+            "poids": 3
+          }
+        ],
+        "coefficient": 1,
+        "bonus_source": 2,
+        "bonus_fraicheur": 2,
+        "score": 5
+      }
+    },
+    {
+      "id": "911bfe79d1954651",
+      "titre": "Création de groupe d'élus dans les communautés de communes - texte N° 28",
+      "source": "Sénat — Derniers textes",
+      "source_id": "senat-textes",
+      "url": "https://www.senat.fr/leg/ppl26-028.html",
+      "date": "2026-11-04",
+      "theme": "Loi de finances",
+      "resume": "Proposition de loi relative à la création de groupe d'élus dans les communautés de communes : texte N° 28 de M. Dany WATTEBLED et Mme Marie-Claude LERMYTTE, déposé au Sénat le 12 octobre 2026",
+      "importance": 1,
+      "public": [
+        "Conseil aux dirigeants"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-11-05",
+      "score": 2,
+      "pourquoi": {
+        "mots": [],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 2,
+        "score": 0
+      }
+    },
+    {
+      "id": "de3066b0356bde84",
+      "titre": "Garantir l'exercice du droit de manifester et protéger les manifestants - texte N° 131",
+      "source": "Sénat — Derniers textes",
+      "source_id": "senat-textes",
+      "url": "https://www.senat.fr/leg/ppl26-131.html",
+      "date": "2026-11-04",
+      "theme": "Loi de finances",
+      "resume": "Proposition de loi visant à garantir l'exercice du droit de manifester et à protéger l'intégrité physique des manifestants : texte N° 131 de Mmes Cécile CUKIERMAN, Evelyne CORBIÈRE NAMINZO, Marie-Claude VARAILLAS et plusieurs de leurs collègues, déposé au Sénat le 30 octobre 2026",
+      "importance": 1,
+      "public": [
+        "Expertise comptable",
+        "Conseil aux dirigeants"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-11-05",
+      "score": 2,
+      "pourquoi": {
+        "mots": [],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 2,
+        "score": 0
+      }
+    },
+    {
+      "id": "c6f8385ca85caae8",
+      "titre": "N° 3434 - Projet de loi pour 2026",
+      "source": "Assemblée nationale — Commission des finances",
+      "source_id": "an-commission-finances",
+      "url": "https://www.assemblee-nationale.fr/17/projets/pl3434.asp",
+      "date": "2026-11-04",
+      "theme": "Loi de finances",
+      "resume": null,
+      "importance": 1,
+      "public": [
+        "Expertise comptable",
+        "Conseil aux dirigeants"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-11-05",
+      "score": 2,
+      "pourquoi": {
+        "mots": [],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 2,
+        "score": 0
+      }
+    },
+    {
+      "id": "d56069a0c854d615",
+      "titre": "Sécurisation des immeubles - texte N° 110",
+      "source": "Sénat — Derniers textes",
+      "source_id": "senat-textes",
+      "url": "https://www.senat.fr/leg/ppl26-110.html",
+      "date": "2026-11-04",
+      "theme": "Loi de finances",
+      "resume": "Proposition de loi visant à renforcer la prise en charge par l'Agence nationale de l'habitat (ANAH) du financement des travaux exécutés d'office par les petites communes pour la sécurisation des immeubles : texte N° 110 de M. Cédric CHEVALIER et plusieurs de ses collègues, déposé au Sénat le 27…",
+      "importance": 1,
+      "public": [
+        "Expertise comptable",
+        "Conseil aux dirigeants"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-11-05",
+      "score": 2,
+      "pourquoi": {
+        "mots": [],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 2,
+        "score": 0
+      }
+    },
+    {
+      "id": "65e483cf176760bb",
+      "titre": "Financement de la sécurité sociale pour 2027 - texte N° 138",
+      "source": "Sénat — Derniers textes",
+      "source_id": "senat-textes",
+      "url": "https://www.senat.fr/leg/pjl26-138.html",
+      "date": "2026-11-03",
+      "theme": "Sécurité sociale",
+      "resume": "Projet de loi de financement de la sécurité sociale pour 2027 : texte N° 138 transmis au Sénat le 2 novembre 2026",
+      "importance": 4,
+      "public": [
+        "Social / paie"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-11-05",
+      "score": 9,
+      "pourquoi": {
+        "mots": [
+          {
+            "mot": "financement de la sécurité sociale",
+            "poids": 6
+          },
+          {
+            "mot": "sécurité sociale",
+            "poids": 2
+          }
+        ],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 1,
+        "score": 8
+      }
+    },
+    {
+      "id": "0b52417d7a7af504",
+      "titre": "Peines planchers pour les crimes et délits - texte N° 124",
+      "source": "Sénat — Derniers textes",
+      "source_id": "senat-textes",
+      "url": "https://www.senat.fr/leg/ppl26-124.html",
+      "date": "2026-11-03",
+      "theme": "Loi de finances",
+      "resume": "Proposition de loi visant à instaurer des peines planchers pour les crimes et délits commis contre les membres de la force publique et les pompiers : texte N° 124 de M. Laurent CASTILLO et plusieurs de ses collègues, déposé au Sénat le 28 octobre 2026",
+      "importance": 1,
+      "public": [
+        "Expertise comptable",
+        "Conseil aux dirigeants"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-11-05",
+      "score": 1,
+      "pourquoi": {
+        "mots": [],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 1,
+        "score": 0
+      }
+    },
+    {
+      "id": "ac4ce5105bb8f35c",
+      "titre": "Reconnaître et sécuriser le métier de médiateur en santé - texte N° 122",
+      "source": "Sénat — Derniers textes",
+      "source_id": "senat-textes",
+      "url": "https://www.senat.fr/leg/ppl26-122.html",
+      "date": "2026-11-03",
+      "theme": "Loi de finances",
+      "resume": "Proposition de loi visant à reconnaître et sécuriser le métier de médiateur en santé : texte N° 122 de Mme Anne SOUYRIS et plusieurs de ses collègues, déposé au Sénat le 28 octobre 2026",
+      "importance": 1,
+      "public": [
+        "Expertise comptable",
+        "Conseil aux dirigeants"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-11-05",
+      "score": 1,
+      "pourquoi": {
+        "mots": [],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 1,
+        "score": 0
+      }
+    },
     {
       "id": "b1126b48f1475e6d",
       "titre": "Texte adopté n° 353 - Proposition de loi, adoptée sans modification, par l'Assemblée nationale, visant à assouplir la procédure d'autorisation des établissements et services sociaux et médico-sociaux à caractère expérimental",
@@ -18,12 +376,12 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-11-04",
-      "score": 2,
+      "score": 1,
       "pourquoi": {
         "mots": [],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 2,
+        "bonus_fraicheur": 1,
         "score": 0
       }
     },
@@ -55,6 +413,100 @@
         "bonus_source": 4,
         "bonus_fraicheur": 1,
         "score": 10
+      },
+      "autres_sources": [
+        {
+          "source": "Sénat — Dossier législatif du PLFSS",
+          "url": "https://www.senat.fr/dossier-legislatif/plfss2027.html",
+          "titre": "PLFSS 2027 : nouvelle étape au Sénat — Première lecture - Sénat"
+        }
+      ]
+    },
+    {
+      "id": "03d8a15b16231941",
+      "titre": "Parcours de soins pour toutes les victimes de violences sexuelles - texte N° 128",
+      "source": "Sénat — Derniers textes",
+      "source_id": "senat-textes",
+      "url": "https://www.senat.fr/leg/ppl26-128.html",
+      "date": "2026-10-31",
+      "theme": "Sécurité sociale",
+      "resume": "Proposition de loi visant à créer un parcours de soins intégralement pris en charge par la sécurité sociale pour toutes les victimes de violences sexuelles : texte N° 128 transmis au Sénat le 29 octobre 2026",
+      "importance": 2,
+      "public": [
+        "Social / paie"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-11-05",
+      "score": 2,
+      "pourquoi": {
+        "mots": [
+          {
+            "mot": "sécurité sociale",
+            "poids": 2
+          }
+        ],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 0,
+        "score": 2
+      }
+    },
+    {
+      "id": "c12946e3bca1f69c",
+      "titre": "Transparence, l'équité et l'information dans l'accès à l'enseignement supérieur - texte N° 109",
+      "source": "Sénat — Derniers textes",
+      "source_id": "senat-textes",
+      "url": "https://www.senat.fr/leg/ppl26-109.html",
+      "date": "2026-10-31",
+      "theme": "Loi de finances",
+      "resume": "Proposition de loi visant à renforcer la transparence, l'équité et l'information dans l'accès à l'enseignementsupérieur : texte N° 109 de M. Ahmed LAOUEDJ, déposé au Sénat le 27 octobre 2026",
+      "importance": 1,
+      "public": [
+        "Expertise comptable",
+        "Conseil aux dirigeants"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-11-05",
+      "score": 0,
+      "pourquoi": {
+        "mots": [],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 0,
+        "score": 0
+      }
+    },
+    {
+      "id": "f1e3f12f84ae58ad",
+      "titre": "Adaptation du code de la justice pénale des mineurs - texte N° 105",
+      "source": "Sénat — Derniers textes",
+      "source_id": "senat-textes",
+      "url": "https://www.senat.fr/leg/ppl26-105.html",
+      "date": "2026-10-30",
+      "theme": "Loi de finances",
+      "resume": "Proposition de loi portant diverses mesures d'adaptation du code de la justice pénale des mineurs et visant à tirer les conséquences de diverses décisions du Conseil constitutionnel en matière pénale : texte N° 105 de MM. Louis VOGEL et Jean-Baptiste BLANC, déposé au Sénat le 27 octobre 2026",
+      "importance": 2,
+      "public": [
+        "Expertise comptable",
+        "Conseil aux dirigeants"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-11-05",
+      "score": 2,
+      "pourquoi": {
+        "mots": [
+          {
+            "mot": "conseil constitutionnel",
+            "poids": 2
+          }
+        ],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 0,
+        "score": 2
       }
     },
     {
@@ -99,6 +551,32 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-10-30",
+      "score": 0,
+      "pourquoi": {
+        "mots": [],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 0,
+        "score": 0
+      }
+    },
+    {
+      "id": "783e90398324aac7",
+      "titre": "Prescription acquisitive dans les collectivités régies par l'article 73 - texte N° 126",
+      "source": "Sénat — Derniers textes",
+      "source_id": "senat-textes",
+      "url": "https://www.senat.fr/leg/ppl26-126.html",
+      "date": "2026-10-30",
+      "theme": "Loi de finances",
+      "resume": "Proposition de loi visant à rétablir le droit commun de la prescription acquisitive dans les Collectivités régies par l'article 73 de la Constitution ainsi qu'à Saint-Martin et Saint-Barthélemy : texte N° 126 transmis au Sénat le 29 octobre 2026",
+      "importance": 1,
+      "public": [
+        "Expertise comptable",
+        "Conseil aux dirigeants"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-11-05",
       "score": 0,
       "pourquoi": {
         "mots": [],
@@ -240,7 +718,14 @@
         "bonus_source": 0,
         "bonus_fraicheur": 0,
         "score": 0
-      }
+      },
+      "autres_sources": [
+        {
+          "source": "Sénat — Derniers rapports",
+          "url": "https://www.senat.fr/rap/l26-113/l26-113.html",
+          "titre": "Améliorer la gestion des biens des sections de commune - rapport n° 113"
+        }
+      ]
     },
     {
       "id": "efac2bcbf861eb88",
@@ -292,7 +777,14 @@
         "bonus_source": 0,
         "bonus_fraicheur": 0,
         "score": 0
-      }
+      },
+      "autres_sources": [
+        {
+          "source": "Sénat — Derniers rapports",
+          "url": "https://www.senat.fr/rap/l26-117/l26-117.html",
+          "titre": "Faciliter l'emploi des étrangers dans les secteurs d'activités en tension - rapport n° 117"
+        }
+      ]
     },
     {
       "id": "c65c834eb7eb1b47",
@@ -420,7 +912,14 @@
         "bonus_source": 0,
         "bonus_fraicheur": 0,
         "score": 0
-      }
+      },
+      "autres_sources": [
+        {
+          "source": "Sénat — Derniers rapports",
+          "url": "https://www.senat.fr/rap/l26-111/l26-111.html",
+          "titre": "Protéger les demandeurs de logement contre les sollicitations sexuelles - rapport n° 111"
+        }
+      ]
     },
     {
       "id": "ff2351f1a15271a4",
@@ -446,7 +945,14 @@
         "bonus_source": 0,
         "bonus_fraicheur": 0,
         "score": 0
-      }
+      },
+      "autres_sources": [
+        {
+          "source": "Sénat — Économie et finances, fiscalité",
+          "url": "https://www.senat.fr/rap/l26-115/l26-115.html",
+          "titre": "Résoudre le fléau des désordres fonciers outre-mer - Rapport n° 115"
+        }
+      ]
     },
     {
       "id": "dea2c5b5a0a22dfc",
@@ -472,7 +978,14 @@
         "bonus_source": 0,
         "bonus_fraicheur": 0,
         "score": 0
-      }
+      },
+      "autres_sources": [
+        {
+          "source": "Sénat — Derniers rapports",
+          "url": "https://www.senat.fr/rap/l26-120/l26-120.html",
+          "titre": "Valoriser la réserve communale de sécurité civile - rapport n° 120"
+        }
+      ]
     },
     {
       "id": "777d497bc7e6623c",
@@ -5614,7 +6127,7 @@
       "source": "INSEE",
       "url": "https://www.insee.fr/fr/statistiques/serie/011812232",
       "date_publication": "2026-10-15",
-      "collecte_le": "2026-11-04"
+      "collecte_le": "2026-11-05"
     },
     {
       "source_id": "insee-bdm",
@@ -5624,7 +6137,7 @@
       "source": "INSEE",
       "url": "https://www.insee.fr/fr/statistiques/serie/011794844",
       "date_publication": "2026-10-30",
-      "collecte_le": "2026-11-04"
+      "collecte_le": "2026-11-05"
     },
     {
       "source_id": "insee-bdm",
@@ -5634,7 +6147,7 @@
       "source": "INSEE",
       "url": "https://www.insee.fr/fr/statistiques/serie/001688527",
       "date_publication": "2026-08-07",
-      "collecte_le": "2026-11-04"
+      "collecte_le": "2026-11-05"
     },
     {
       "source_id": "insee-bdm",
@@ -5644,7 +6157,7 @@
       "source": "INSEE",
       "url": "https://www.insee.fr/fr/statistiques/serie/001565530",
       "date_publication": "2026-10-22",
-      "collecte_le": "2026-11-04"
+      "collecte_le": "2026-11-05"
     },
     {
       "source_id": "insee-bdm",
@@ -5654,47 +6167,47 @@
       "source": "INSEE",
       "url": "https://www.insee.fr/fr/statistiques/serie/010755537",
       "date_publication": "2026-10-16",
-      "collecte_le": "2026-11-04"
+      "collecte_le": "2026-11-05"
     },
     {
       "source_id": "bodacc-35",
       "libelle": "Créations d’entreprises en Ille-et-Vilaine",
       "valeur": "192 annonces",
-      "periode": "du 28/10/2026 au 03/11/2026",
+      "periode": "du 29/10/2026 au 04/11/2026",
       "source": "BODACC (DILA)",
       "url": "https://www.bodacc.fr/",
-      "date_publication": "2026-11-03",
-      "collecte_le": "2026-11-04"
+      "date_publication": "2026-11-04",
+      "collecte_le": "2026-11-05"
     },
     {
       "source_id": "bodacc-35",
       "libelle": "Procédures collectives en Ille-et-Vilaine",
-      "valeur": "61 annonces",
-      "periode": "du 28/10/2026 au 03/11/2026",
+      "valeur": "56 annonces",
+      "periode": "du 29/10/2026 au 04/11/2026",
       "source": "BODACC (DILA)",
       "url": "https://www.bodacc.fr/",
-      "date_publication": "2026-11-03",
-      "collecte_le": "2026-11-04"
+      "date_publication": "2026-11-04",
+      "collecte_le": "2026-11-05"
     },
     {
       "source_id": "bodacc-35",
       "libelle": "Ventes et cessions de fonds en Ille-et-Vilaine",
       "valeur": "30 annonces",
-      "periode": "du 28/10/2026 au 03/11/2026",
+      "periode": "du 29/10/2026 au 04/11/2026",
       "source": "BODACC (DILA)",
       "url": "https://www.bodacc.fr/",
-      "date_publication": "2026-11-03",
-      "collecte_le": "2026-11-04"
+      "date_publication": "2026-11-04",
+      "collecte_le": "2026-11-05"
     },
     {
       "source_id": "bodacc-35",
       "libelle": "Radiations en Ille-et-Vilaine",
       "valeur": "110 annonces",
-      "periode": "du 28/10/2026 au 03/11/2026",
+      "periode": "du 29/10/2026 au 04/11/2026",
       "source": "BODACC (DILA)",
       "url": "https://www.bodacc.fr/",
-      "date_publication": "2026-11-03",
-      "collecte_le": "2026-11-04"
+      "date_publication": "2026-11-04",
+      "collecte_le": "2026-11-05"
     }
   ],
   "suivi": {
@@ -5750,9 +6263,9 @@
           "indicative": true
         }
       ],
-      "source": "Assemblée nationale — dossier législatif",
+      "source": "Assemblée nationale et Sénat — dossiers législatifs",
       "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/PLF_2027",
-      "mis_a_jour_le": "2026-11-04",
+      "mis_a_jour_le": "2026-11-05",
       "mesures": {
         "libelle": "Projet de loi n° 3210 (texte déposé par le Gouvernement)",
         "url": "https://www.assemblee-nationale.fr/dyn/17/textes/l17b3210_projet-loi",
@@ -6988,6 +7501,7 @@
           "etablie_le": "2026-10-08"
         }
       },
+      "url_senat": "https://www.senat.fr/dossier-legislatif/pjlf2027.html",
       "mots_cles": [
         "projet de loi de finances",
         "loi de finances pour 2027",
@@ -7049,9 +7563,9 @@
           "indicative": true
         }
       ],
-      "source": "Assemblée nationale — dossier législatif",
+      "source": "Assemblée nationale et Sénat — dossiers législatifs",
       "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/PLFSS_2027",
-      "mis_a_jour_le": "2026-11-04",
+      "mis_a_jour_le": "2026-11-05",
       "mesures": {
         "libelle": "Projet de loi n° 3211 (texte déposé par le Gouvernement)",
         "url": "https://www.assemblee-nationale.fr/dyn/17/textes/l17b3211_projet-loi",
@@ -7686,6 +8200,7 @@
           "etablie_le": "2026-10-08"
         }
       },
+      "url_senat": "https://www.senat.fr/dossier-legislatif/plfss2027.html",
       "mots_cles": [
         "financement de la sécurité sociale",
         "plfss",
@@ -8256,6 +8771,26 @@
       "source": "Urssaf",
       "url": "https://www.urssaf.fr/accueil/independant/comprendre-payer-cotisations/calendrier-paiement-cotisations.html",
       "origine": "saisie"
+    },
+    {
+      "id": "impots-2027-01-25-9da332b2",
+      "date": "2027-01-25",
+      "titre": "Accise sur l’électricité, les gaz naturels et les charbons",
+      "detail": "Date limite de dépôt de la déclaration n°2040-TIC mensuelle ou trimestrielle pour l’accise sur l’électricité, trimestrielle pour l’accise sur les gaz naturels et l’accise sur les charbons en rythme trimestriel.",
+      "categorie": "fiscal",
+      "source": "impots.gouv.fr — calendrier fiscal",
+      "url": "https://www.impots.gouv.fr/professionnel/calendrier-fiscal/2027-01",
+      "origine": "calendrier_officiel"
+    },
+    {
+      "id": "impots-2027-01-31-f696924f",
+      "date": "2027-01-31",
+      "titre": "Accise sur l’électricité, les gaz naturels et les charbons",
+      "detail": "Date limite de dépôt de la déclaration annuelle n°2040-TIC pour les redevables de l’accise sur les charbons en rythme annuel.",
+      "categorie": "fiscal",
+      "source": "impots.gouv.fr — calendrier fiscal",
+      "url": "https://www.impots.gouv.fr/professionnel/calendrier-fiscal/2027-01",
+      "origine": "calendrier_officiel"
     },
     {
       "id": "urssaf-ti-trimestriel-2027-02-05",
