@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "genere_le": "2026-11-05T13:22:48.716Z",
+  "genere_le": "2026-11-06T13:05:50.573Z",
   "articles": [
     {
       "id": "4225990188fb68ad",
@@ -157,7 +157,7 @@
       "type": "doctrine",
       "origine": "flux",
       "collecte_le": "2026-11-05",
-      "score": 7,
+      "score": 6,
       "pourquoi": {
         "mots": [
           {
@@ -167,7 +167,7 @@
         ],
         "coefficient": 1,
         "bonus_source": 2,
-        "bonus_fraicheur": 2,
+        "bonus_fraicheur": 1,
         "score": 5
       }
     },
@@ -187,12 +187,12 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-11-05",
-      "score": 2,
+      "score": 1,
       "pourquoi": {
         "mots": [],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 2,
+        "bonus_fraicheur": 1,
         "score": 0
       }
     },
@@ -213,12 +213,12 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-11-05",
-      "score": 2,
+      "score": 1,
       "pourquoi": {
         "mots": [],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 2,
+        "bonus_fraicheur": 1,
         "score": 0
       }
     },
@@ -239,12 +239,12 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-11-05",
-      "score": 2,
+      "score": 1,
       "pourquoi": {
         "mots": [],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 2,
+        "bonus_fraicheur": 1,
         "score": 0
       }
     },
@@ -265,12 +265,12 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-11-05",
-      "score": 2,
+      "score": 1,
       "pourquoi": {
         "mots": [],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 2,
+        "bonus_fraicheur": 1,
         "score": 0
       }
     },
@@ -401,7 +401,7 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-11-03",
-      "score": 11,
+      "score": 10,
       "pourquoi": {
         "mots": [
           {
@@ -411,7 +411,7 @@
         ],
         "coefficient": 1,
         "bonus_source": 4,
-        "bonus_fraicheur": 1,
+        "bonus_fraicheur": 0,
         "score": 10
       },
       "autres_sources": [
@@ -6127,7 +6127,7 @@
       "source": "INSEE",
       "url": "https://www.insee.fr/fr/statistiques/serie/011812232",
       "date_publication": "2026-10-15",
-      "collecte_le": "2026-11-05"
+      "collecte_le": "2026-11-06"
     },
     {
       "source_id": "insee-bdm",
@@ -6137,7 +6137,7 @@
       "source": "INSEE",
       "url": "https://www.insee.fr/fr/statistiques/serie/011794844",
       "date_publication": "2026-10-30",
-      "collecte_le": "2026-11-05"
+      "collecte_le": "2026-11-06"
     },
     {
       "source_id": "insee-bdm",
@@ -6147,7 +6147,7 @@
       "source": "INSEE",
       "url": "https://www.insee.fr/fr/statistiques/serie/001688527",
       "date_publication": "2026-08-07",
-      "collecte_le": "2026-11-05"
+      "collecte_le": "2026-11-06"
     },
     {
       "source_id": "insee-bdm",
@@ -6157,7 +6157,7 @@
       "source": "INSEE",
       "url": "https://www.insee.fr/fr/statistiques/serie/001565530",
       "date_publication": "2026-10-22",
-      "collecte_le": "2026-11-05"
+      "collecte_le": "2026-11-06"
     },
     {
       "source_id": "insee-bdm",
@@ -6167,47 +6167,47 @@
       "source": "INSEE",
       "url": "https://www.insee.fr/fr/statistiques/serie/010755537",
       "date_publication": "2026-10-16",
-      "collecte_le": "2026-11-05"
+      "collecte_le": "2026-11-06"
     },
     {
       "source_id": "bodacc-35",
       "libelle": "Créations d’entreprises en Ille-et-Vilaine",
-      "valeur": "192 annonces",
-      "periode": "du 29/10/2026 au 04/11/2026",
+      "valeur": "223 annonces",
+      "periode": "du 30/10/2026 au 05/11/2026",
       "source": "BODACC (DILA)",
       "url": "https://www.bodacc.fr/",
-      "date_publication": "2026-11-04",
-      "collecte_le": "2026-11-05"
+      "date_publication": "2026-11-05",
+      "collecte_le": "2026-11-06"
     },
     {
       "source_id": "bodacc-35",
       "libelle": "Procédures collectives en Ille-et-Vilaine",
-      "valeur": "56 annonces",
-      "periode": "du 29/10/2026 au 04/11/2026",
+      "valeur": "57 annonces",
+      "periode": "du 30/10/2026 au 05/11/2026",
       "source": "BODACC (DILA)",
       "url": "https://www.bodacc.fr/",
-      "date_publication": "2026-11-04",
-      "collecte_le": "2026-11-05"
+      "date_publication": "2026-11-05",
+      "collecte_le": "2026-11-06"
     },
     {
       "source_id": "bodacc-35",
       "libelle": "Ventes et cessions de fonds en Ille-et-Vilaine",
-      "valeur": "30 annonces",
-      "periode": "du 29/10/2026 au 04/11/2026",
+      "valeur": "21 annonces",
+      "periode": "du 30/10/2026 au 05/11/2026",
       "source": "BODACC (DILA)",
       "url": "https://www.bodacc.fr/",
-      "date_publication": "2026-11-04",
-      "collecte_le": "2026-11-05"
+      "date_publication": "2026-11-05",
+      "collecte_le": "2026-11-06"
     },
     {
       "source_id": "bodacc-35",
       "libelle": "Radiations en Ille-et-Vilaine",
-      "valeur": "110 annonces",
-      "periode": "du 29/10/2026 au 04/11/2026",
+      "valeur": "115 annonces",
+      "periode": "du 30/10/2026 au 05/11/2026",
       "source": "BODACC (DILA)",
       "url": "https://www.bodacc.fr/",
-      "date_publication": "2026-11-04",
-      "collecte_le": "2026-11-05"
+      "date_publication": "2026-11-05",
+      "collecte_le": "2026-11-06"
     }
   ],
   "suivi": {
@@ -6263,9 +6263,9 @@
           "indicative": true
         }
       ],
-      "source": "Assemblée nationale et Sénat — dossiers législatifs",
+      "source": "Assemblée nationale — dossier législatif",
       "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/PLF_2027",
-      "mis_a_jour_le": "2026-11-05",
+      "mis_a_jour_le": "2026-11-06",
       "mesures": {
         "libelle": "Projet de loi n° 3210 (texte déposé par le Gouvernement)",
         "url": "https://www.assemblee-nationale.fr/dyn/17/textes/l17b3210_projet-loi",
@@ -7501,7 +7501,6 @@
           "etablie_le": "2026-10-08"
         }
       },
-      "url_senat": "https://www.senat.fr/dossier-legislatif/pjlf2027.html",
       "mots_cles": [
         "projet de loi de finances",
         "loi de finances pour 2027",
@@ -7563,9 +7562,9 @@
           "indicative": true
         }
       ],
-      "source": "Assemblée nationale et Sénat — dossiers législatifs",
+      "source": "Assemblée nationale — dossier législatif",
       "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/PLFSS_2027",
-      "mis_a_jour_le": "2026-11-05",
+      "mis_a_jour_le": "2026-11-06",
       "mesures": {
         "libelle": "Projet de loi n° 3211 (texte déposé par le Gouvernement)",
         "url": "https://www.assemblee-nationale.fr/dyn/17/textes/l17b3211_projet-loi",
@@ -8200,7 +8199,6 @@
           "etablie_le": "2026-10-08"
         }
       },
-      "url_senat": "https://www.senat.fr/dossier-legislatif/plfss2027.html",
       "mots_cles": [
         "financement de la sécurité sociale",
         "plfss",
@@ -8753,6 +8751,96 @@
       "origine": "calendrier_officiel"
     },
     {
+      "id": "impots-2027-01-13-8fd810d8",
+      "date": "2027-01-13",
+      "titre": "Entreprises soumises à la TVA",
+      "detail": "Date limite de dépôt de la DES (déclaration européenne de services) pour les opérations intracommunautaires réalisées en décembre 2026.",
+      "categorie": "fiscal",
+      "source": "impots.gouv.fr — calendrier fiscal",
+      "url": "https://www.impots.gouv.fr/professionnel/calendrier-fiscal/2027-01",
+      "origine": "calendrier_officiel"
+    },
+    {
+      "id": "impots-2027-01-13-aa90a2aa",
+      "date": "2027-01-13",
+      "titre": "Entreprises soumises à la TVA",
+      "detail": "Date limite de dépôt de l'état récapitulatif des clients pour les opérations intracommunautaires réalisées en décembre 2026.",
+      "categorie": "fiscal",
+      "source": "impots.gouv.fr — calendrier fiscal",
+      "url": "https://www.impots.gouv.fr/professionnel/calendrier-fiscal/2027-01",
+      "origine": "calendrier_officiel"
+    },
+    {
+      "id": "impots-2027-01-15-241da0eb",
+      "date": "2027-01-15",
+      "titre": "Prélèvement et retenues à la source sur les RCM",
+      "detail": "Date limite de : dépôt de la déclaration de retenue à la source sur les revenus des obligations et autres titres d'emprunt négociables relative au mois de décembre 2026 (déclaration n° 2753) ; dépôt de la déclaration relative au mois de décembre 2026 concernant les prélèvements et retenues à la source sur les revenus de capitaux mobiliers (déclaration n° 2777).",
+      "categorie": "fiscal",
+      "source": "impots.gouv.fr — calendrier fiscal",
+      "url": "https://www.impots.gouv.fr/professionnel/calendrier-fiscal/2027-01",
+      "origine": "calendrier_officiel"
+    },
+    {
+      "id": "impots-2027-01-15-4df2c032",
+      "date": "2027-01-15",
+      "titre": "Sociétés soumises à l'IS",
+      "detail": "Date limite de télépaiement du solde de l'IS, de la contribution sociale sur l'IS de 3,3 % à l'aide du relevé de solde n° 2572, si votre exercice est clos le 30 septembre 2027.",
+      "categorie": "fiscal",
+      "source": "impots.gouv.fr — calendrier fiscal",
+      "url": "https://www.impots.gouv.fr/professionnel/calendrier-fiscal/2027-01",
+      "origine": "calendrier_officiel"
+    },
+    {
+      "id": "impots-2027-01-15-5dd3bda0",
+      "date": "2027-01-15",
+      "titre": "Taxe annuelle sur les véhicules lourds de transport de marchandises",
+      "detail": "Entre les 15 et 25 janvier 2027 : dépôt et paiement de l’annexe 3310 A pour les redevables au régime réel normal de TVA à la date de dépôt de la déclaration de TVA figurant dans votre espace professionnel.",
+      "categorie": "fiscal",
+      "source": "impots.gouv.fr — calendrier fiscal",
+      "url": "https://www.impots.gouv.fr/professionnel/calendrier-fiscal/2027-01",
+      "origine": "calendrier_officiel"
+    },
+    {
+      "id": "impots-2027-01-15-5d80a42d",
+      "date": "2027-01-15",
+      "titre": "Taxe sur les conventions d'assurances",
+      "detail": "La taxe due doit être télédéclarée et télépayée avec le formulaire n°2787-SD au titre des primes émises, des conventions conclues et des sommes échues au cours du mois de décembre 2026.",
+      "categorie": "fiscal",
+      "source": "impots.gouv.fr — calendrier fiscal",
+      "url": "https://www.impots.gouv.fr/professionnel/calendrier-fiscal/2027-01",
+      "origine": "calendrier_officiel"
+    },
+    {
+      "id": "impots-2027-01-15-86704f42",
+      "date": "2027-01-15",
+      "titre": "Taxe sur les salaires",
+      "detail": "Date limite de télédéclaration annuelle portant liquidation et régularisation de la taxe sur les salaires (n° 2502) pour les rémunérations versées au titre de l'année 2026. Cette déclaration intègre la taxe concernant les salaires payés en décembre 2026 (redevables mensuels) ou les salaires payés au cours du dernier trimestre 2026 (redevables trimestriels).",
+      "categorie": "fiscal",
+      "source": "impots.gouv.fr — calendrier fiscal",
+      "url": "https://www.impots.gouv.fr/professionnel/calendrier-fiscal/2027-01",
+      "origine": "calendrier_officiel"
+    },
+    {
+      "id": "impots-2027-01-15-838969e3",
+      "date": "2027-01-15",
+      "titre": "Taxe sur les véhicules de tourisme (taxe sur les émissions de dioxyde de carbone ; taxe sur l’ancienneté des véhicules)",
+      "detail": "Entre le 15 et le 25 janvier 2027 : Si l'entreprise relève d'un régime réel d'imposition : les taxes seront télédéclarées et télépayées sur l'annexe n° 3310 A à la déclaration de la TVA de décembre ou du quatrième trimestre civil. Si l'entreprise n'est pas redevable de la TVA : les taxes seront télédéclarées et télépayées sur l'annexe n° 3310 A à la déclaration de TVA.",
+      "categorie": "fiscal",
+      "source": "impots.gouv.fr — calendrier fiscal",
+      "url": "https://www.impots.gouv.fr/professionnel/calendrier-fiscal/2027-01",
+      "origine": "calendrier_officiel"
+    },
+    {
+      "id": "impots-2027-01-15-0a34f6a6",
+      "date": "2027-01-15",
+      "titre": "TVA régime réel normal d'imposition",
+      "detail": "Entre les 15 et 25 janvier 2027, dépôt et paiement de la déclaration mensuelle ou trimestrielle de TVA à la date figurant dans votre espace professionnel.",
+      "categorie": "fiscal",
+      "source": "impots.gouv.fr — calendrier fiscal",
+      "url": "https://www.impots.gouv.fr/professionnel/calendrier-fiscal/2027-01",
+      "origine": "calendrier_officiel"
+    },
+    {
       "id": "impots-2027-01-15-1ea9a609",
       "date": "2027-01-15",
       "titre": "Prélèvement à la source – DSN",
@@ -8777,6 +8865,26 @@
       "date": "2027-01-25",
       "titre": "Accise sur l’électricité, les gaz naturels et les charbons",
       "detail": "Date limite de dépôt de la déclaration n°2040-TIC mensuelle ou trimestrielle pour l’accise sur l’électricité, trimestrielle pour l’accise sur les gaz naturels et l’accise sur les charbons en rythme trimestriel.",
+      "categorie": "fiscal",
+      "source": "impots.gouv.fr — calendrier fiscal",
+      "url": "https://www.impots.gouv.fr/professionnel/calendrier-fiscal/2027-01",
+      "origine": "calendrier_officiel"
+    },
+    {
+      "id": "impots-2027-01-25-00b1e679",
+      "date": "2027-01-25",
+      "titre": "Taxe annuelle sur les véhicules lourds de transport de marchandises",
+      "detail": "Dépôt et paiement de l’annexe 3310 A pour les non redevables de la TVA.",
+      "categorie": "fiscal",
+      "source": "impots.gouv.fr — calendrier fiscal",
+      "url": "https://www.impots.gouv.fr/professionnel/calendrier-fiscal/2027-01",
+      "origine": "calendrier_officiel"
+    },
+    {
+      "id": "impots-2027-01-29-1f5d7498",
+      "date": "2027-01-29",
+      "titre": "TVA - franchise en base",
+      "detail": "Date limite d'option pour le paiement de la TVA à partir du 1er janvier 2027 pour les entreprises bénéficiant de la franchise en base (article 293 F du CGI).",
       "categorie": "fiscal",
       "source": "impots.gouv.fr — calendrier fiscal",
       "url": "https://www.impots.gouv.fr/professionnel/calendrier-fiscal/2027-01",
