@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "genere_le": "2026-11-09T14:08:06.635Z",
+  "genere_le": "2026-11-10T13:39:12.489Z",
   "sources": [
     {
       "id": "bofip-actualites",
@@ -9,12 +9,12 @@
       "theme": "Fiscal et comptable",
       "statut_catalogue": "verifie",
       "etat": "ok",
-      "derniere_tentative": "2026-11-09T14:08:06.635Z",
-      "derniere_reussite": "2026-11-09T14:08:06.635Z",
+      "derniere_tentative": "2026-11-10T13:39:12.489Z",
+      "derniere_reussite": "2026-11-10T13:39:12.489Z",
       "erreur": null,
       "nb_articles": 1,
-      "nb_elements": 3,
-      "duree_ms": 538,
+      "nb_elements": 2,
+      "duree_ms": 457,
       "historique": [
         {
           "date": "2026-10-12",
@@ -98,6 +98,10 @@
         },
         {
           "date": "2026-11-09",
+          "etat": "ok"
+        },
+        {
+          "date": "2026-11-10",
           "etat": "ok"
         }
       ]
@@ -109,12 +113,12 @@
       "theme": "Loi de finances",
       "statut_catalogue": "verifie",
       "etat": "ok",
-      "derniere_tentative": "2026-11-09T14:08:06.635Z",
-      "derniere_reussite": "2026-11-09T14:08:06.635Z",
+      "derniere_tentative": "2026-11-10T13:39:12.489Z",
+      "derniere_reussite": "2026-11-10T13:39:12.489Z",
       "erreur": null,
-      "nb_articles": 14,
-      "nb_elements": 64,
-      "duree_ms": 302,
+      "nb_articles": 12,
+      "nb_elements": 65,
+      "duree_ms": 199,
       "historique": [
         {
           "date": "2026-10-12",
@@ -198,6 +202,10 @@
         },
         {
           "date": "2026-11-09",
+          "etat": "ok"
+        },
+        {
+          "date": "2026-11-10",
           "etat": "ok"
         }
       ]
@@ -209,12 +217,12 @@
       "theme": "Loi de finances",
       "statut_catalogue": "verifie",
       "etat": "ok",
-      "derniere_tentative": "2026-11-09T14:08:06.635Z",
-      "derniere_reussite": "2026-11-09T14:08:06.635Z",
+      "derniere_tentative": "2026-11-10T13:39:12.489Z",
+      "derniere_reussite": "2026-11-10T13:39:12.489Z",
       "erreur": null,
       "nb_articles": 8,
-      "nb_elements": 42,
-      "duree_ms": 301,
+      "nb_elements": 41,
+      "duree_ms": 103,
       "historique": [
         {
           "date": "2026-10-12",
@@ -298,6 +306,10 @@
         },
         {
           "date": "2026-11-09",
+          "etat": "ok"
+        },
+        {
+          "date": "2026-11-10",
           "etat": "ok"
         }
       ]
@@ -309,12 +321,12 @@
       "theme": "Loi de finances",
       "statut_catalogue": "verifie",
       "etat": "ok",
-      "derniere_tentative": "2026-11-09T14:08:06.635Z",
-      "derniere_reussite": "2026-11-09T14:08:06.635Z",
+      "derniere_tentative": "2026-11-10T13:39:12.489Z",
+      "derniere_reussite": "2026-11-10T13:39:12.489Z",
       "erreur": null,
-      "nb_articles": 3,
+      "nb_articles": 2,
       "nb_elements": 177,
-      "duree_ms": 497,
+      "duree_ms": 201,
       "historique": [
         {
           "date": "2026-10-12",
@@ -398,6 +410,10 @@
         },
         {
           "date": "2026-11-09",
+          "etat": "ok"
+        },
+        {
+          "date": "2026-11-10",
           "etat": "ok"
         }
       ]
@@ -409,12 +425,12 @@
       "theme": "Fiscal et comptable",
       "statut_catalogue": "verifie",
       "etat": "ok",
-      "derniere_tentative": "2026-11-09T14:08:06.635Z",
-      "derniere_reussite": "2026-11-09T14:08:06.635Z",
+      "derniere_tentative": "2026-11-10T13:39:12.489Z",
+      "derniere_reussite": "2026-11-10T13:39:12.489Z",
       "erreur": null,
       "nb_articles": 2,
       "nb_elements": 322,
-      "duree_ms": 714,
+      "duree_ms": 292,
       "historique": [
         {
           "date": "2026-10-12",
@@ -498,6 +514,10 @@
         },
         {
           "date": "2026-11-09",
+          "etat": "ok"
+        },
+        {
+          "date": "2026-11-10",
           "etat": "ok"
         }
       ]
@@ -509,12 +529,12 @@
       "theme": "Économie et statistiques",
       "statut_catalogue": "verifie",
       "etat": "ok",
-      "derniere_tentative": "2026-11-09T14:08:06.635Z",
-      "derniere_reussite": "2026-11-09T14:08:06.635Z",
+      "derniere_tentative": "2026-11-10T13:39:12.489Z",
+      "derniere_reussite": "2026-11-10T13:39:12.489Z",
       "erreur": null,
       "nb_articles": 3,
       "nb_elements": 37,
-      "duree_ms": 104,
+      "duree_ms": 102,
       "historique": [
         {
           "date": "2026-10-12",
@@ -598,6 +618,10 @@
         },
         {
           "date": "2026-11-09",
+          "etat": "ok"
+        },
+        {
+          "date": "2026-11-10",
           "etat": "ok"
         }
       ]
@@ -609,12 +633,12 @@
       "theme": "Économie et statistiques",
       "statut_catalogue": "verifie",
       "etat": "ok",
-      "derniere_tentative": "2026-11-09T14:08:06.635Z",
-      "derniere_reussite": "2026-11-09T14:08:06.635Z",
+      "derniere_tentative": "2026-11-10T13:39:12.489Z",
+      "derniere_reussite": "2026-11-10T13:39:12.489Z",
       "erreur": null,
       "nb_articles": 0,
       "nb_elements": 25,
-      "duree_ms": 106,
+      "duree_ms": 101,
       "historique": [
         {
           "date": "2026-10-12",
@@ -698,6 +722,10 @@
         },
         {
           "date": "2026-11-09",
+          "etat": "ok"
+        },
+        {
+          "date": "2026-11-10",
           "etat": "ok"
         }
       ]
@@ -709,12 +737,12 @@
       "theme": "Sécurité sociale",
       "statut_catalogue": "verifie",
       "etat": "ok",
-      "derniere_tentative": "2026-11-09T14:08:06.635Z",
-      "derniere_reussite": "2026-11-09T14:08:06.635Z",
+      "derniere_tentative": "2026-11-10T13:39:12.489Z",
+      "derniere_reussite": "2026-11-10T13:39:12.489Z",
       "erreur": null,
-      "nb_articles": 3,
+      "nb_articles": 2,
       "nb_elements": 31,
-      "duree_ms": 105,
+      "duree_ms": 102,
       "historique": [
         {
           "date": "2026-10-12",
@@ -799,6 +827,10 @@
         {
           "date": "2026-11-09",
           "etat": "ok"
+        },
+        {
+          "date": "2026-11-10",
+          "etat": "ok"
         }
       ]
     },
@@ -809,10 +841,322 @@
       "theme": "Loi de finances",
       "statut_catalogue": "verifie",
       "etat": "ok",
-      "derniere_tentative": "2026-11-09T14:08:06.635Z",
-      "derniere_reussite": "2026-11-09T14:08:06.635Z",
+      "derniere_tentative": "2026-11-10T13:39:12.489Z",
+      "derniere_reussite": "2026-11-10T13:39:12.489Z",
       "erreur": null,
       "nb_articles": 0,
+      "nb_elements": 10,
+      "duree_ms": 352,
+      "historique": [
+        {
+          "date": "2026-10-12",
+          "etat": "ok"
+        },
+        {
+          "date": "2026-10-13",
+          "etat": "ok"
+        },
+        {
+          "date": "2026-10-14",
+          "etat": "ok"
+        },
+        {
+          "date": "2026-10-15",
+          "etat": "ok"
+        },
+        {
+          "date": "2026-10-16",
+          "etat": "ok"
+        },
+        {
+          "date": "2026-10-19",
+          "etat": "ok"
+        },
+        {
+          "date": "2026-10-20",
+          "etat": "ok"
+        },
+        {
+          "date": "2026-10-21",
+          "etat": "ok"
+        },
+        {
+          "date": "2026-10-22",
+          "etat": "ok"
+        },
+        {
+          "date": "2026-10-23",
+          "etat": "ok"
+        },
+        {
+          "date": "2026-10-26",
+          "etat": "ok"
+        },
+        {
+          "date": "2026-10-27",
+          "etat": "ok"
+        },
+        {
+          "date": "2026-10-28",
+          "etat": "ok"
+        },
+        {
+          "date": "2026-10-29",
+          "etat": "erreur"
+        },
+        {
+          "date": "2026-10-30",
+          "etat": "ok"
+        },
+        {
+          "date": "2026-11-02",
+          "etat": "erreur"
+        },
+        {
+          "date": "2026-11-03",
+          "etat": "ok"
+        },
+        {
+          "date": "2026-11-04",
+          "etat": "ok"
+        },
+        {
+          "date": "2026-11-05",
+          "etat": "ok"
+        },
+        {
+          "date": "2026-11-06",
+          "etat": "erreur"
+        },
+        {
+          "date": "2026-11-09",
+          "etat": "ok"
+        },
+        {
+          "date": "2026-11-10",
+          "etat": "ok"
+        }
+      ]
+    },
+    {
+      "id": "an-commission-finances",
+      "nom": "Assemblée nationale — Commission des finances",
+      "type": "rss",
+      "theme": "Loi de finances",
+      "statut_catalogue": "verifie",
+      "etat": "ok",
+      "derniere_tentative": "2026-11-10T13:39:12.489Z",
+      "derniere_reussite": "2026-11-10T13:39:12.489Z",
+      "erreur": null,
+      "nb_articles": 4,
+      "nb_elements": 10,
+      "duree_ms": 304,
+      "historique": [
+        {
+          "date": "2026-10-12",
+          "etat": "ok"
+        },
+        {
+          "date": "2026-10-13",
+          "etat": "ok"
+        },
+        {
+          "date": "2026-10-14",
+          "etat": "ok"
+        },
+        {
+          "date": "2026-10-15",
+          "etat": "ok"
+        },
+        {
+          "date": "2026-10-16",
+          "etat": "ok"
+        },
+        {
+          "date": "2026-10-19",
+          "etat": "ok"
+        },
+        {
+          "date": "2026-10-20",
+          "etat": "ok"
+        },
+        {
+          "date": "2026-10-21",
+          "etat": "ok"
+        },
+        {
+          "date": "2026-10-22",
+          "etat": "ok"
+        },
+        {
+          "date": "2026-10-23",
+          "etat": "ok"
+        },
+        {
+          "date": "2026-10-26",
+          "etat": "ok"
+        },
+        {
+          "date": "2026-10-27",
+          "etat": "ok"
+        },
+        {
+          "date": "2026-10-28",
+          "etat": "ok"
+        },
+        {
+          "date": "2026-10-29",
+          "etat": "ok"
+        },
+        {
+          "date": "2026-10-30",
+          "etat": "ok"
+        },
+        {
+          "date": "2026-11-02",
+          "etat": "ok"
+        },
+        {
+          "date": "2026-11-03",
+          "etat": "ok"
+        },
+        {
+          "date": "2026-11-04",
+          "etat": "ok"
+        },
+        {
+          "date": "2026-11-05",
+          "etat": "ok"
+        },
+        {
+          "date": "2026-11-06",
+          "etat": "ok"
+        },
+        {
+          "date": "2026-11-09",
+          "etat": "ok"
+        },
+        {
+          "date": "2026-11-10",
+          "etat": "ok"
+        }
+      ]
+    },
+    {
+      "id": "an-commission-affaires-sociales",
+      "nom": "Assemblée nationale — Commission des affaires sociales",
+      "type": "rss",
+      "theme": "Sécurité sociale",
+      "statut_catalogue": "verifie",
+      "etat": "ok",
+      "derniere_tentative": "2026-11-10T13:39:12.489Z",
+      "derniere_reussite": "2026-11-10T13:39:12.489Z",
+      "erreur": null,
+      "nb_articles": 4,
+      "nb_elements": 10,
+      "duree_ms": 166,
+      "historique": [
+        {
+          "date": "2026-10-12",
+          "etat": "ok"
+        },
+        {
+          "date": "2026-10-13",
+          "etat": "ok"
+        },
+        {
+          "date": "2026-10-14",
+          "etat": "ok"
+        },
+        {
+          "date": "2026-10-15",
+          "etat": "ok"
+        },
+        {
+          "date": "2026-10-16",
+          "etat": "ok"
+        },
+        {
+          "date": "2026-10-19",
+          "etat": "ok"
+        },
+        {
+          "date": "2026-10-20",
+          "etat": "ok"
+        },
+        {
+          "date": "2026-10-21",
+          "etat": "ok"
+        },
+        {
+          "date": "2026-10-22",
+          "etat": "ok"
+        },
+        {
+          "date": "2026-10-23",
+          "etat": "ok"
+        },
+        {
+          "date": "2026-10-26",
+          "etat": "ok"
+        },
+        {
+          "date": "2026-10-27",
+          "etat": "ok"
+        },
+        {
+          "date": "2026-10-28",
+          "etat": "ok"
+        },
+        {
+          "date": "2026-10-29",
+          "etat": "ok"
+        },
+        {
+          "date": "2026-10-30",
+          "etat": "ok"
+        },
+        {
+          "date": "2026-11-02",
+          "etat": "ok"
+        },
+        {
+          "date": "2026-11-03",
+          "etat": "ok"
+        },
+        {
+          "date": "2026-11-04",
+          "etat": "ok"
+        },
+        {
+          "date": "2026-11-05",
+          "etat": "ok"
+        },
+        {
+          "date": "2026-11-06",
+          "etat": "ok"
+        },
+        {
+          "date": "2026-11-09",
+          "etat": "ok"
+        },
+        {
+          "date": "2026-11-10",
+          "etat": "ok"
+        }
+      ]
+    },
+    {
+      "id": "an-commission-affaires-economiques",
+      "nom": "Assemblée nationale — Commission des affaires économiques",
+      "type": "rss",
+      "theme": "Économie et statistiques",
+      "statut_catalogue": "verifie",
+      "etat": "ok",
+      "derniere_tentative": "2026-11-10T13:39:12.489Z",
+      "derniere_reussite": "2026-11-10T13:39:12.489Z",
+      "erreur": null,
+      "nb_articles": 7,
       "nb_elements": 10,
       "duree_ms": 168,
       "historique": [
@@ -870,106 +1214,6 @@
         },
         {
           "date": "2026-10-29",
-          "etat": "erreur"
-        },
-        {
-          "date": "2026-10-30",
-          "etat": "ok"
-        },
-        {
-          "date": "2026-11-02",
-          "etat": "erreur"
-        },
-        {
-          "date": "2026-11-03",
-          "etat": "ok"
-        },
-        {
-          "date": "2026-11-04",
-          "etat": "ok"
-        },
-        {
-          "date": "2026-11-05",
-          "etat": "ok"
-        },
-        {
-          "date": "2026-11-06",
-          "etat": "erreur"
-        },
-        {
-          "date": "2026-11-09",
-          "etat": "ok"
-        }
-      ]
-    },
-    {
-      "id": "an-commission-finances",
-      "nom": "Assemblée nationale — Commission des finances",
-      "type": "rss",
-      "theme": "Loi de finances",
-      "statut_catalogue": "verifie",
-      "etat": "ok",
-      "derniere_tentative": "2026-11-09T14:08:06.635Z",
-      "derniere_reussite": "2026-11-09T14:08:06.635Z",
-      "erreur": null,
-      "nb_articles": 3,
-      "nb_elements": 10,
-      "duree_ms": 309,
-      "historique": [
-        {
-          "date": "2026-10-12",
-          "etat": "ok"
-        },
-        {
-          "date": "2026-10-13",
-          "etat": "ok"
-        },
-        {
-          "date": "2026-10-14",
-          "etat": "ok"
-        },
-        {
-          "date": "2026-10-15",
-          "etat": "ok"
-        },
-        {
-          "date": "2026-10-16",
-          "etat": "ok"
-        },
-        {
-          "date": "2026-10-19",
-          "etat": "ok"
-        },
-        {
-          "date": "2026-10-20",
-          "etat": "ok"
-        },
-        {
-          "date": "2026-10-21",
-          "etat": "ok"
-        },
-        {
-          "date": "2026-10-22",
-          "etat": "ok"
-        },
-        {
-          "date": "2026-10-23",
-          "etat": "ok"
-        },
-        {
-          "date": "2026-10-26",
-          "etat": "ok"
-        },
-        {
-          "date": "2026-10-27",
-          "etat": "ok"
-        },
-        {
-          "date": "2026-10-28",
-          "etat": "ok"
-        },
-        {
-          "date": "2026-10-29",
           "etat": "ok"
         },
         {
@@ -999,205 +1243,9 @@
         {
           "date": "2026-11-09",
           "etat": "ok"
-        }
-      ]
-    },
-    {
-      "id": "an-commission-affaires-sociales",
-      "nom": "Assemblée nationale — Commission des affaires sociales",
-      "type": "rss",
-      "theme": "Sécurité sociale",
-      "statut_catalogue": "verifie",
-      "etat": "ok",
-      "derniere_tentative": "2026-11-09T14:08:06.635Z",
-      "derniere_reussite": "2026-11-09T14:08:06.635Z",
-      "erreur": null,
-      "nb_articles": 4,
-      "nb_elements": 10,
-      "duree_ms": 308,
-      "historique": [
-        {
-          "date": "2026-10-12",
-          "etat": "ok"
         },
         {
-          "date": "2026-10-13",
-          "etat": "ok"
-        },
-        {
-          "date": "2026-10-14",
-          "etat": "ok"
-        },
-        {
-          "date": "2026-10-15",
-          "etat": "ok"
-        },
-        {
-          "date": "2026-10-16",
-          "etat": "ok"
-        },
-        {
-          "date": "2026-10-19",
-          "etat": "ok"
-        },
-        {
-          "date": "2026-10-20",
-          "etat": "ok"
-        },
-        {
-          "date": "2026-10-21",
-          "etat": "ok"
-        },
-        {
-          "date": "2026-10-22",
-          "etat": "ok"
-        },
-        {
-          "date": "2026-10-23",
-          "etat": "ok"
-        },
-        {
-          "date": "2026-10-26",
-          "etat": "ok"
-        },
-        {
-          "date": "2026-10-27",
-          "etat": "ok"
-        },
-        {
-          "date": "2026-10-28",
-          "etat": "ok"
-        },
-        {
-          "date": "2026-10-29",
-          "etat": "ok"
-        },
-        {
-          "date": "2026-10-30",
-          "etat": "ok"
-        },
-        {
-          "date": "2026-11-02",
-          "etat": "ok"
-        },
-        {
-          "date": "2026-11-03",
-          "etat": "ok"
-        },
-        {
-          "date": "2026-11-04",
-          "etat": "ok"
-        },
-        {
-          "date": "2026-11-05",
-          "etat": "ok"
-        },
-        {
-          "date": "2026-11-06",
-          "etat": "ok"
-        },
-        {
-          "date": "2026-11-09",
-          "etat": "ok"
-        }
-      ]
-    },
-    {
-      "id": "an-commission-affaires-economiques",
-      "nom": "Assemblée nationale — Commission des affaires économiques",
-      "type": "rss",
-      "theme": "Économie et statistiques",
-      "statut_catalogue": "verifie",
-      "etat": "ok",
-      "derniere_tentative": "2026-11-09T14:08:06.635Z",
-      "derniere_reussite": "2026-11-09T14:08:06.635Z",
-      "erreur": null,
-      "nb_articles": 10,
-      "nb_elements": 10,
-      "duree_ms": 310,
-      "historique": [
-        {
-          "date": "2026-10-12",
-          "etat": "ok"
-        },
-        {
-          "date": "2026-10-13",
-          "etat": "ok"
-        },
-        {
-          "date": "2026-10-14",
-          "etat": "ok"
-        },
-        {
-          "date": "2026-10-15",
-          "etat": "ok"
-        },
-        {
-          "date": "2026-10-16",
-          "etat": "ok"
-        },
-        {
-          "date": "2026-10-19",
-          "etat": "ok"
-        },
-        {
-          "date": "2026-10-20",
-          "etat": "ok"
-        },
-        {
-          "date": "2026-10-21",
-          "etat": "ok"
-        },
-        {
-          "date": "2026-10-22",
-          "etat": "ok"
-        },
-        {
-          "date": "2026-10-23",
-          "etat": "ok"
-        },
-        {
-          "date": "2026-10-26",
-          "etat": "ok"
-        },
-        {
-          "date": "2026-10-27",
-          "etat": "ok"
-        },
-        {
-          "date": "2026-10-28",
-          "etat": "ok"
-        },
-        {
-          "date": "2026-10-29",
-          "etat": "ok"
-        },
-        {
-          "date": "2026-10-30",
-          "etat": "ok"
-        },
-        {
-          "date": "2026-11-02",
-          "etat": "ok"
-        },
-        {
-          "date": "2026-11-03",
-          "etat": "ok"
-        },
-        {
-          "date": "2026-11-04",
-          "etat": "ok"
-        },
-        {
-          "date": "2026-11-05",
-          "etat": "ok"
-        },
-        {
-          "date": "2026-11-06",
-          "etat": "ok"
-        },
-        {
-          "date": "2026-11-09",
+          "date": "2026-11-10",
           "etat": "ok"
         }
       ]
@@ -1299,6 +1347,10 @@
         {
           "date": "2026-11-09",
           "etat": "inactive"
+        },
+        {
+          "date": "2026-11-10",
+          "etat": "inactive"
         }
       ]
     },
@@ -1309,12 +1361,12 @@
       "theme": "Fiscal et comptable",
       "statut_catalogue": "verifie",
       "etat": "ok",
-      "derniere_tentative": "2026-11-09T14:08:06.635Z",
-      "derniere_reussite": "2026-11-09T14:08:06.635Z",
+      "derniere_tentative": "2026-11-10T13:39:12.489Z",
+      "derniere_reussite": "2026-11-10T13:39:12.489Z",
       "erreur": null,
       "nb_articles": 0,
       "nb_elements": 20,
-      "duree_ms": 114,
+      "duree_ms": 108,
       "historique": [
         {
           "date": "2026-10-12",
@@ -1398,6 +1450,10 @@
         },
         {
           "date": "2026-11-09",
+          "etat": "ok"
+        },
+        {
+          "date": "2026-11-10",
           "etat": "ok"
         }
       ]
@@ -1409,12 +1465,12 @@
       "theme": "Fiscal et comptable",
       "statut_catalogue": "verifie",
       "etat": "ok",
-      "derniere_tentative": "2026-11-09T14:08:06.635Z",
-      "derniere_reussite": "2026-11-09T14:08:06.635Z",
+      "derniere_tentative": "2026-11-10T13:39:12.489Z",
+      "derniere_reussite": "2026-11-10T13:39:12.489Z",
       "erreur": null,
       "nb_articles": 0,
       "nb_elements": 20,
-      "duree_ms": 113,
+      "duree_ms": 107,
       "historique": [
         {
           "date": "2026-10-12",
@@ -1498,6 +1554,10 @@
         },
         {
           "date": "2026-11-09",
+          "etat": "ok"
+        },
+        {
+          "date": "2026-11-10",
           "etat": "ok"
         }
       ]
@@ -1509,12 +1569,12 @@
       "theme": "Loi de finances",
       "statut_catalogue": "verifie",
       "etat": "ok",
-      "derniere_tentative": "2026-11-09T14:08:06.635Z",
-      "derniere_reussite": "2026-11-09T14:08:06.635Z",
+      "derniere_tentative": "2026-11-10T13:39:12.489Z",
+      "derniere_reussite": "2026-11-10T13:39:12.489Z",
       "erreur": null,
       "nb_articles": 0,
       "nb_elements": 20,
-      "duree_ms": 115,
+      "duree_ms": 107,
       "historique": [
         {
           "date": "2026-10-12",
@@ -1598,6 +1658,10 @@
         },
         {
           "date": "2026-11-09",
+          "etat": "ok"
+        },
+        {
+          "date": "2026-11-10",
           "etat": "ok"
         }
       ]
@@ -1699,6 +1763,10 @@
         {
           "date": "2026-11-09",
           "etat": "non_configuree"
+        },
+        {
+          "date": "2026-11-10",
+          "etat": "non_configuree"
         }
       ]
     },
@@ -1709,12 +1777,12 @@
       "theme": "Fiscal et comptable",
       "statut_catalogue": "verifie",
       "etat": "ok",
-      "derniere_tentative": "2026-11-09T14:08:06.635Z",
-      "derniere_reussite": "2026-11-09T14:08:06.635Z",
+      "derniere_tentative": "2026-11-10T13:39:12.489Z",
+      "derniere_reussite": "2026-11-10T13:39:12.489Z",
       "erreur": null,
       "nb_articles": 48,
       "nb_elements": 48,
-      "duree_ms": 3192,
+      "duree_ms": 3169,
       "historique": [
         {
           "date": "2026-10-12",
@@ -1799,6 +1867,10 @@
         {
           "date": "2026-11-09",
           "etat": "ok"
+        },
+        {
+          "date": "2026-11-10",
+          "etat": "ok"
         }
       ]
     },
@@ -1809,12 +1881,12 @@
       "theme": "Loi de finances",
       "statut_catalogue": "verifie",
       "etat": "ok",
-      "derniere_tentative": "2026-11-09T14:08:06.635Z",
-      "derniere_reussite": "2026-11-09T14:08:06.635Z",
+      "derniere_tentative": "2026-11-10T13:39:12.489Z",
+      "derniere_reussite": "2026-11-10T13:39:12.489Z",
       "erreur": null,
       "nb_articles": 0,
       "nb_elements": 2,
-      "duree_ms": 675,
+      "duree_ms": 13321,
       "empreinte": "66199c507c9f9f30",
       "historique": [
         {
@@ -1900,6 +1972,10 @@
         {
           "date": "2026-11-09",
           "etat": "ok"
+        },
+        {
+          "date": "2026-11-10",
+          "etat": "ok"
         }
       ]
     },
@@ -1910,12 +1986,12 @@
       "theme": "Sécurité sociale",
       "statut_catalogue": "verifie",
       "etat": "ok",
-      "derniere_tentative": "2026-11-09T14:08:06.635Z",
-      "derniere_reussite": "2026-11-09T14:08:06.635Z",
+      "derniere_tentative": "2026-11-10T13:39:12.489Z",
+      "derniere_reussite": "2026-11-10T13:39:12.489Z",
       "erreur": null,
       "nb_articles": 0,
       "nb_elements": 3,
-      "duree_ms": 328,
+      "duree_ms": 574,
       "empreinte": "a0536c6305662782",
       "historique": [
         {
@@ -2001,6 +2077,10 @@
         {
           "date": "2026-11-09",
           "etat": "ok"
+        },
+        {
+          "date": "2026-11-10",
+          "etat": "ok"
         }
       ]
     },
@@ -2011,12 +2091,12 @@
       "theme": "Loi de finances",
       "statut_catalogue": "verifie",
       "etat": "ok",
-      "derniere_tentative": "2026-11-09T14:08:06.635Z",
-      "derniere_reussite": "2026-11-09T14:08:06.635Z",
+      "derniere_tentative": "2026-11-10T13:39:12.489Z",
+      "derniere_reussite": "2026-11-10T13:39:12.489Z",
       "erreur": null,
       "nb_articles": 0,
       "nb_elements": 1,
-      "duree_ms": 1055,
+      "duree_ms": 930,
       "empreinte": "27121c2535975fb7",
       "historique": [
         {
@@ -2102,6 +2182,10 @@
         {
           "date": "2026-11-09",
           "etat": "ok"
+        },
+        {
+          "date": "2026-11-10",
+          "etat": "ok"
         }
       ]
     },
@@ -2112,12 +2196,12 @@
       "theme": "Sécurité sociale",
       "statut_catalogue": "verifie",
       "etat": "ok",
-      "derniere_tentative": "2026-11-09T14:08:06.635Z",
-      "derniere_reussite": "2026-11-09T14:08:06.635Z",
+      "derniere_tentative": "2026-11-10T13:39:12.489Z",
+      "derniere_reussite": "2026-11-10T13:39:12.489Z",
       "erreur": null,
       "nb_articles": 0,
       "nb_elements": 2,
-      "duree_ms": 126,
+      "duree_ms": 124,
       "empreinte": "0bc9810ed2e1e2f7",
       "historique": [
         {
@@ -2202,6 +2286,10 @@
         },
         {
           "date": "2026-11-09",
+          "etat": "ok"
+        },
+        {
+          "date": "2026-11-10",
           "etat": "ok"
         }
       ]
@@ -2303,6 +2391,10 @@
         {
           "date": "2026-11-09",
           "etat": "non_configuree"
+        },
+        {
+          "date": "2026-11-10",
+          "etat": "non_configuree"
         }
       ]
     },
@@ -2403,6 +2495,10 @@
         {
           "date": "2026-11-09",
           "etat": "non_configuree"
+        },
+        {
+          "date": "2026-11-10",
+          "etat": "non_configuree"
         }
       ]
     },
@@ -2413,12 +2509,12 @@
       "theme": "Économie et statistiques",
       "statut_catalogue": "verifie",
       "etat": "ok",
-      "derniere_tentative": "2026-11-09T14:08:06.635Z",
-      "derniere_reussite": "2026-11-09T14:08:06.635Z",
+      "derniere_tentative": "2026-11-10T13:39:12.489Z",
+      "derniere_reussite": "2026-11-10T13:39:12.489Z",
       "erreur": null,
       "nb_articles": 5,
       "nb_elements": null,
-      "duree_ms": 1663,
+      "duree_ms": 1516,
       "historique": [
         {
           "date": "2026-10-12",
@@ -2502,6 +2598,10 @@
         },
         {
           "date": "2026-11-09",
+          "etat": "ok"
+        },
+        {
+          "date": "2026-11-10",
           "etat": "ok"
         }
       ]
@@ -2513,12 +2613,12 @@
       "theme": "Rennes et Bretagne",
       "statut_catalogue": "verifie",
       "etat": "ok",
-      "derniere_tentative": "2026-11-09T14:08:06.635Z",
-      "derniere_reussite": "2026-11-09T14:08:06.635Z",
+      "derniere_tentative": "2026-11-10T13:39:12.489Z",
+      "derniere_reussite": "2026-11-10T13:39:12.489Z",
       "erreur": null,
       "nb_articles": 4,
       "nb_elements": null,
-      "duree_ms": 2879,
+      "duree_ms": 679,
       "historique": [
         {
           "date": "2026-10-12",
@@ -2603,6 +2703,10 @@
         {
           "date": "2026-11-09",
           "etat": "ok"
+        },
+        {
+          "date": "2026-11-10",
+          "etat": "ok"
         }
       ]
     }
@@ -2612,8 +2716,8 @@
     "raison": "désactivée : la veille fonctionne à 0 €, sans appel à un service d’IA"
   },
   "classement": {
-    "articles": 227,
+    "articles": 229,
     "exclus": 7,
-    "marginaux": 176
+    "marginaux": 177
   }
 }

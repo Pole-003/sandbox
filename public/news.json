@@ -1,7 +1,68 @@
 {
   "version": 1,
-  "genere_le": "2026-11-09T14:08:06.635Z",
+  "genere_le": "2026-11-10T13:39:12.489Z",
   "articles": [
+    {
+      "id": "09f9164880b1be27",
+      "titre": "Lutter contre la banalisation des discours de haine dans le débat public - texte N° 137",
+      "source": "Sénat — Derniers textes",
+      "source_id": "senat-textes",
+      "url": "https://www.senat.fr/leg/ppr26-137.html",
+      "date": "2026-11-10",
+      "theme": "Loi de finances",
+      "resume": "Proposition de résolution en application de l'article 34-1 de la Constitution, visant à lutter contre la banalisation des discours de haine dans le débat public : texte N° 137 de Mmes Cécile CUKIERMAN, Evelyne CORBIÈRE NAMINZO, Marie-Claude VARAILLAS et plusieurs de leurs collègues, déposé au…",
+      "importance": 1,
+      "public": [
+        "Expertise comptable",
+        "Conseil aux dirigeants"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-11-10",
+      "score": 2,
+      "pourquoi": {
+        "mots": [],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 2,
+        "score": 0
+      }
+    },
+    {
+      "id": "b2dbee1da9d8dcf6",
+      "titre": "N° 3394 tome VII - Avis de M. François Cormier-Bouligeon sur le projet de loi de finances pour 2027 (n°3210).",
+      "source": "Assemblée nationale — Commission des finances",
+      "source_id": "an-commission-finances",
+      "url": "https://www.assemblee-nationale.fr/17/budget/plf2027/a3394-tVII.asp",
+      "date": "2026-11-09",
+      "theme": "Loi de finances",
+      "resume": null,
+      "importance": 5,
+      "public": [
+        "Expertise comptable",
+        "Conseil aux dirigeants"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-11-10",
+      "score": 13,
+      "pourquoi": {
+        "mots": [
+          {
+            "mot": "projet de loi de finances",
+            "poids": 6
+          },
+          {
+            "mot": "loi de finances",
+            "poids": 5
+          }
+        ],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 2,
+        "score": 11
+      }
+    },
     {
       "id": "aa25359a95f19856",
       "titre": "Financement de la sécurité sociale pour 2027 : Examen des articles - rapport n° 144 tome II",
@@ -18,7 +79,7 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-11-09",
-      "score": 9,
+      "score": 8,
       "pourquoi": {
         "mots": [
           {
@@ -32,7 +93,7 @@
         ],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 1,
+        "bonus_fraicheur": 0,
         "score": 8
       }
     },
@@ -52,7 +113,7 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-11-09",
-      "score": 9,
+      "score": 8,
       "pourquoi": {
         "mots": [
           {
@@ -66,7 +127,7 @@
         ],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 1,
+        "bonus_fraicheur": 0,
         "score": 8
       }
     },
@@ -87,7 +148,7 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-11-09",
-      "score": 3,
+      "score": 2,
       "pourquoi": {
         "mots": [
           {
@@ -97,7 +158,7 @@
         ],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 1,
+        "bonus_fraicheur": 0,
         "score": 2
       }
     },
@@ -118,12 +179,12 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-11-09",
-      "score": 1,
+      "score": 0,
       "pourquoi": {
         "mots": [],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 1,
+        "bonus_fraicheur": 0,
         "score": 0
       }
     },
@@ -144,12 +205,12 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-11-09",
-      "score": 1,
+      "score": 0,
       "pourquoi": {
         "mots": [],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 1,
+        "bonus_fraicheur": 0,
         "score": 0
       }
     },
@@ -170,12 +231,12 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-11-09",
-      "score": 1,
+      "score": 0,
       "pourquoi": {
         "mots": [],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 1,
+        "bonus_fraicheur": 0,
         "score": 0
       }
     },
@@ -196,12 +257,12 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-11-09",
-      "score": 1,
+      "score": 0,
       "pourquoi": {
         "mots": [],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 1,
+        "bonus_fraicheur": 0,
         "score": 0
       }
     },
@@ -597,9 +658,9 @@
       },
       "autres_sources": [
         {
-          "source": "Sénat — Sécurité sociale",
+          "source": "Sénat — Derniers rapports",
           "url": "https://www.senat.fr/rap/a26-139/a26-139.html",
-          "titre": "Financement de la sécurité sociale pour 2027 - Avis n° 139"
+          "titre": "Financement de la sécurité sociale pour 2027 - avis n° 139"
         }
       ]
     },
@@ -6422,7 +6483,7 @@
       "source": "INSEE",
       "url": "https://www.insee.fr/fr/statistiques/serie/011812232",
       "date_publication": "2026-10-15",
-      "collecte_le": "2026-11-09"
+      "collecte_le": "2026-11-10"
     },
     {
       "source_id": "insee-bdm",
@@ -6432,17 +6493,17 @@
       "source": "INSEE",
       "url": "https://www.insee.fr/fr/statistiques/serie/011794844",
       "date_publication": "2026-10-30",
-      "collecte_le": "2026-11-09"
+      "collecte_le": "2026-11-10"
     },
     {
       "source_id": "insee-bdm",
       "libelle": "Taux de chômage (BIT)",
-      "valeur": "8,3 %",
-      "periode": "2e trimestre 2026",
+      "valeur": "8,2 %",
+      "periode": "3e trimestre 2026",
       "source": "INSEE",
       "url": "https://www.insee.fr/fr/statistiques/serie/001688527",
-      "date_publication": "2026-08-07",
-      "collecte_le": "2026-11-09"
+      "date_publication": "2026-11-10",
+      "collecte_le": "2026-11-10"
     },
     {
       "source_id": "insee-bdm",
@@ -6452,7 +6513,7 @@
       "source": "INSEE",
       "url": "https://www.insee.fr/fr/statistiques/serie/001565530",
       "date_publication": "2026-10-22",
-      "collecte_le": "2026-11-09"
+      "collecte_le": "2026-11-10"
     },
     {
       "source_id": "insee-bdm",
@@ -6462,47 +6523,47 @@
       "source": "INSEE",
       "url": "https://www.insee.fr/fr/statistiques/serie/010755537",
       "date_publication": "2026-10-16",
-      "collecte_le": "2026-11-09"
+      "collecte_le": "2026-11-10"
     },
     {
       "source_id": "bodacc-35",
       "libelle": "Créations d’entreprises en Ille-et-Vilaine",
-      "valeur": "172 annonces",
-      "periode": "du 02/11/2026 au 08/11/2026",
+      "valeur": "128 annonces",
+      "periode": "du 03/11/2026 au 09/11/2026",
       "source": "BODACC (DILA)",
       "url": "https://www.bodacc.fr/",
-      "date_publication": "2026-11-08",
-      "collecte_le": "2026-11-09"
+      "date_publication": "2026-11-09",
+      "collecte_le": "2026-11-10"
     },
     {
       "source_id": "bodacc-35",
       "libelle": "Procédures collectives en Ille-et-Vilaine",
-      "valeur": "15 annonces",
-      "periode": "du 02/11/2026 au 08/11/2026",
+      "valeur": "14 annonces",
+      "periode": "du 03/11/2026 au 09/11/2026",
       "source": "BODACC (DILA)",
       "url": "https://www.bodacc.fr/",
-      "date_publication": "2026-11-08",
-      "collecte_le": "2026-11-09"
+      "date_publication": "2026-11-09",
+      "collecte_le": "2026-11-10"
     },
     {
       "source_id": "bodacc-35",
       "libelle": "Ventes et cessions de fonds en Ille-et-Vilaine",
-      "valeur": "18 annonces",
-      "periode": "du 02/11/2026 au 08/11/2026",
+      "valeur": "16 annonces",
+      "periode": "du 03/11/2026 au 09/11/2026",
       "source": "BODACC (DILA)",
       "url": "https://www.bodacc.fr/",
-      "date_publication": "2026-11-08",
-      "collecte_le": "2026-11-09"
+      "date_publication": "2026-11-09",
+      "collecte_le": "2026-11-10"
     },
     {
       "source_id": "bodacc-35",
       "libelle": "Radiations en Ille-et-Vilaine",
-      "valeur": "92 annonces",
-      "periode": "du 02/11/2026 au 08/11/2026",
+      "valeur": "77 annonces",
+      "periode": "du 03/11/2026 au 09/11/2026",
       "source": "BODACC (DILA)",
       "url": "https://www.bodacc.fr/",
-      "date_publication": "2026-11-08",
-      "collecte_le": "2026-11-09"
+      "date_publication": "2026-11-09",
+      "collecte_le": "2026-11-10"
     }
   ],
   "suivi": {
@@ -6560,7 +6621,7 @@
       ],
       "source": "Assemblée nationale et Sénat — dossiers législatifs",
       "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/PLF_2027",
-      "mis_a_jour_le": "2026-11-09",
+      "mis_a_jour_le": "2026-11-10",
       "mesures": {
         "libelle": "Projet de loi n° 3210 (texte déposé par le Gouvernement)",
         "url": "https://www.assemblee-nationale.fr/dyn/17/textes/l17b3210_projet-loi",
@@ -7860,7 +7921,7 @@
       ],
       "source": "Assemblée nationale et Sénat — dossiers législatifs",
       "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/PLFSS_2027",
-      "mis_a_jour_le": "2026-11-09",
+      "mis_a_jour_le": "2026-11-10",
       "mesures": {
         "libelle": "Projet de loi n° 3211 (texte déposé par le Gouvernement)",
         "url": "https://www.assemblee-nationale.fr/dyn/17/textes/l17b3211_projet-loi",
@@ -8607,16 +8668,6 @@
     }
   ],
   "echeances": [
-    {
-      "id": "impots-2026-11-02-c01d74d0",
-      "date": "2026-11-02",
-      "titre": "CFE et/ou IFER (solde) : mise en ligne des avis d'impôt",
-      "detail": "À partir de cette date et avant l'échéance de paiement, les avis d'impôt dématérialisés sont consultables dans l'espace professionnel sur le site impots.gouv.fr.",
-      "categorie": "fiscal",
-      "source": "impots.gouv.fr — calendrier fiscal",
-      "url": "https://www.impots.gouv.fr/professionnel/calendrier-fiscal/2026-11",
-      "origine": "calendrier_officiel"
-    },
     {
       "id": "impots-2026-11-05-6869b79c",
       "date": "2026-11-05",
