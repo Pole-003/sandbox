@@ -1,7 +1,167 @@
 {
   "version": 1,
-  "genere_le": "2026-11-10T13:39:12.489Z",
+  "genere_le": "2026-11-11T12:51:25.598Z",
   "articles": [
+    {
+      "id": "d2528a50dfdc859d",
+      "titre": "Diverses dispositions relatives à l'intégrité publique (PJL) - texte N° 163",
+      "source": "Sénat — Derniers textes",
+      "source_id": "senat-textes",
+      "url": "https://www.senat.fr/leg/pjl26-163.html",
+      "date": "2026-11-11",
+      "theme": "Loi de finances",
+      "resume": "Projet de loi portant diverses dispositions relatives à l'intégrité publique : texte N° 163 de M. Sébastien LECORNU, Premier ministre, déposé au Sénat le 10 novembre 2026",
+      "importance": 1,
+      "public": [
+        "Expertise comptable",
+        "Conseil aux dirigeants"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-11-11",
+      "score": 2,
+      "pourquoi": {
+        "mots": [],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 2,
+        "score": 0
+      }
+    },
+    {
+      "id": "181f599032defd82",
+      "titre": "Diverses dispositions relatives à l'intégrité publique (PJLO) - texte N° 164",
+      "source": "Sénat — Derniers textes",
+      "source_id": "senat-textes",
+      "url": "https://www.senat.fr/leg/pjl26-164.html",
+      "date": "2026-11-11",
+      "theme": "Loi de finances",
+      "resume": "Projet de loi organique portant diverses dispositions relatives à l'intégrité publique : texte N° 164 de M. Sébastien LECORNU, Premier ministre, déposé au Sénat le 10 novembre 2026",
+      "importance": 1,
+      "public": [
+        "Expertise comptable",
+        "Conseil aux dirigeants"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-11-11",
+      "score": 2,
+      "pourquoi": {
+        "mots": [],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 2,
+        "score": 0
+      }
+    },
+    {
+      "id": "d04c029787ab71a6",
+      "titre": "Garantir un accès continu à l'eau potable dans les territoires ultramarins - texte N° 154",
+      "source": "Sénat — Derniers textes",
+      "source_id": "senat-textes",
+      "url": "https://www.senat.fr/leg/ppr26-154.html",
+      "date": "2026-11-11",
+      "theme": "Loi de finances",
+      "resume": "Proposition de résolution en application de l'article 34-1 de la Constitution, visant à garantir un accès continu à l'eau potable dans les territoires ultramarins : texte N° 154 de Mme Edwige DIAZ et plusieurs de ses collègues, déposé au Sénat le 5 novembre 2026",
+      "importance": 1,
+      "public": [
+        "Expertise comptable",
+        "Conseil aux dirigeants"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-11-11",
+      "score": 2,
+      "pourquoi": {
+        "mots": [],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 2,
+        "score": 0
+      }
+    },
+    {
+      "id": "e543319013b26311",
+      "titre": "Lutte contre les discours incitant à la haine et aux actes racistes - texte N° 125",
+      "source": "Sénat — Derniers textes",
+      "source_id": "senat-textes",
+      "url": "https://www.senat.fr/leg/ppl26-125.html",
+      "date": "2026-11-11",
+      "theme": "Loi de finances",
+      "resume": "Proposition de loi visant à renforcer la lutte contre les discours incitant à la haine et aux actes racistes et xénophobes : texte N° 125 de M. Akli MELLOULI et plusieurs de ses collègues, déposé au Sénat le 29 octobre 2026",
+      "importance": 1,
+      "public": [
+        "Expertise comptable",
+        "Conseil aux dirigeants"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-11-11",
+      "score": 2,
+      "pourquoi": {
+        "mots": [],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 2,
+        "score": 0
+      }
+    },
+    {
+      "id": "bccfc8752e45d65c",
+      "titre": "Reconnaître une présomption de légitime défense pour les forces de l'ordre - texte de la commission N° 168",
+      "source": "Sénat — Derniers textes",
+      "source_id": "senat-textes",
+      "url": "https://www.senat.fr/leg/ppl26-168.html",
+      "date": "2026-11-11",
+      "theme": "Loi de finances",
+      "resume": "Proposition de loi visant à reconnaître une présomption de légitime défense pour les forces de l'ordre dans l'exercice de leurs fonctions : texte de la commission N° 168 déposé le 10 novembre 2026",
+      "importance": 1,
+      "public": [
+        "Expertise comptable",
+        "Conseil aux dirigeants"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-11-11",
+      "score": 2,
+      "pourquoi": {
+        "mots": [],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 2,
+        "score": 0
+      }
+    },
+    {
+      "id": "9fa60b718e35bc78",
+      "titre": "N° 3465 - Proposition de loi de M. Romain Eskenazi visant à lutter contre les dérives du commerce en ligne",
+      "source": "Assemblée nationale — Commission des affaires économiques",
+      "source_id": "an-commission-affaires-economiques",
+      "url": "https://www.assemblee-nationale.fr/17/propositions/pion3465.asp",
+      "date": "2026-11-10",
+      "theme": "Économie et statistiques",
+      "resume": null,
+      "importance": 2,
+      "public": [
+        "Conseil aux dirigeants"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-11-11",
+      "score": 3,
+      "pourquoi": {
+        "mots": [
+          {
+            "mot": "commerce",
+            "poids": 1
+          }
+        ],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 2,
+        "score": 1
+      }
+    },
     {
       "id": "09f9164880b1be27",
       "titre": "Lutter contre la banalisation des discours de haine dans le débat public - texte N° 137",
@@ -29,6 +189,158 @@
       }
     },
     {
+      "id": "12264a59eeb79541",
+      "titre": "N° 3451 - Proposition de loi de M. Yannick Neuder visant à lutter contre l'impact de la prolifération des mégots et à accélérer la prévention des incendies, la régénération des forêts et des milieux aquatiques",
+      "source": "Assemblée nationale — Commission des finances",
+      "source_id": "an-commission-finances",
+      "url": "https://www.assemblee-nationale.fr/17/propositions/pion3451.asp",
+      "date": "2026-11-10",
+      "theme": "Loi de finances",
+      "resume": null,
+      "importance": 1,
+      "public": [
+        "Expertise comptable",
+        "Conseil aux dirigeants"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-11-11",
+      "score": 2,
+      "pourquoi": {
+        "mots": [],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 2,
+        "score": 0
+      }
+    },
+    {
+      "id": "8aefca108b92a48d",
+      "titre": "N° 3453 - Proposition de loi de Mme Julie Laernoes visant à instaurer un congé pour temps de trajet responsable",
+      "source": "Assemblée nationale — Commission des affaires sociales",
+      "source_id": "an-commission-affaires-sociales",
+      "url": "https://www.assemblee-nationale.fr/17/propositions/pion3453.asp",
+      "date": "2026-11-10",
+      "theme": "Sécurité sociale",
+      "resume": null,
+      "importance": 1,
+      "public": [
+        "Social / paie"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-11-11",
+      "score": 2,
+      "pourquoi": {
+        "mots": [],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 2,
+        "score": 0
+      }
+    },
+    {
+      "id": "0a4db5c602f491c5",
+      "titre": "N° 3456 - Proposition de loi de Mme Zahia Hamdane visant à ne plus séparer les frères et soeurs placés à l'aide sociale à l'enfance",
+      "source": "Assemblée nationale — Commission des affaires sociales",
+      "source_id": "an-commission-affaires-sociales",
+      "url": "https://www.assemblee-nationale.fr/17/propositions/pion3456.asp",
+      "date": "2026-11-10",
+      "theme": "Sécurité sociale",
+      "resume": null,
+      "importance": 1,
+      "public": [
+        "Social / paie"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-11-11",
+      "score": 2,
+      "pourquoi": {
+        "mots": [],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 2,
+        "score": 0
+      }
+    },
+    {
+      "id": "ee19c63914f660ea",
+      "titre": "N° 3457 - Proposition de loi de M. Yannick Neuder visant à protéger les professionnels de santé et les scientifiques des procédures abusives ainsi qu'à lutter contre la désinformation en santé",
+      "source": "Assemblée nationale — Commission des affaires sociales",
+      "source_id": "an-commission-affaires-sociales",
+      "url": "https://www.assemblee-nationale.fr/17/propositions/pion3457.asp",
+      "date": "2026-11-10",
+      "theme": "Sécurité sociale",
+      "resume": null,
+      "importance": 1,
+      "public": [
+        "Social / paie"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-11-11",
+      "score": 2,
+      "pourquoi": {
+        "mots": [],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 2,
+        "score": 0
+      }
+    },
+    {
+      "id": "b328247570e15466",
+      "titre": "N° 3459 - Proposition de loi de M. François Cormier-Bouligeon portant une gouvernance claire, juste et solidaire pour la gestion des milieux aquatiques et la prévention des inondations",
+      "source": "Assemblée nationale — Commission des finances",
+      "source_id": "an-commission-finances",
+      "url": "https://www.assemblee-nationale.fr/17/propositions/pion3459.asp",
+      "date": "2026-11-10",
+      "theme": "Loi de finances",
+      "resume": null,
+      "importance": 1,
+      "public": [
+        "Expertise comptable",
+        "Conseil aux dirigeants"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-11-11",
+      "score": 2,
+      "pourquoi": {
+        "mots": [],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 2,
+        "score": 0
+      }
+    },
+    {
+      "id": "8bd271ab6a19bf4e",
+      "titre": "N° 3466 - Proposition de loi de M. François-Xavier Ceccoli visant à soutenir le pouvoir d'achat des ménages en Corse",
+      "source": "Assemblée nationale — Commission des affaires économiques",
+      "source_id": "an-commission-affaires-economiques",
+      "url": "https://www.assemblee-nationale.fr/17/propositions/pion3466.asp",
+      "date": "2026-11-10",
+      "theme": "Économie et statistiques",
+      "resume": null,
+      "importance": 1,
+      "public": [
+        "Conseil aux dirigeants"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-11-11",
+      "score": 2,
+      "pourquoi": {
+        "mots": [],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 2,
+        "score": 0
+      }
+    },
+    {
       "id": "b2dbee1da9d8dcf6",
       "titre": "N° 3394 tome VII - Avis de M. François Cormier-Bouligeon sur le projet de loi de finances pour 2027 (n°3210).",
       "source": "Assemblée nationale — Commission des finances",
@@ -45,7 +357,7 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-11-10",
-      "score": 13,
+      "score": 12,
       "pourquoi": {
         "mots": [
           {
@@ -59,7 +371,7 @@
         ],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 2,
+        "bonus_fraicheur": 1,
         "score": 11
       }
     },
@@ -454,6 +766,32 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-11-05",
+      "score": 0,
+      "pourquoi": {
+        "mots": [],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 0,
+        "score": 0
+      }
+    },
+    {
+      "id": "ea8355725be06da4",
+      "titre": "Règlement sur le logement abordable : Règlement sur le logement abordable - rapport d'information n° 153",
+      "source": "Sénat — Derniers rapports",
+      "source_id": "senat-rapports",
+      "url": "https://www.senat.fr/notice-rapport/2026/r26-153-notice.html",
+      "date": "2026-11-05",
+      "theme": "Loi de finances",
+      "resume": "Rapport d'information n° 153 de Mme Brigitte DEVÉSA et M. Ahmed LAOUEDJ, fait au nom de la commission des affaires européennes, sur la proposition de résolution règlement sur le logement abordable : Règlement sur le logement abordable (5 novembre 2026)",
+      "importance": 1,
+      "public": [
+        "Expertise comptable",
+        "Conseil aux dirigeants"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-11-11",
       "score": 0,
       "pourquoi": {
         "mots": [],
@@ -6483,7 +6821,7 @@
       "source": "INSEE",
       "url": "https://www.insee.fr/fr/statistiques/serie/011812232",
       "date_publication": "2026-10-15",
-      "collecte_le": "2026-11-10"
+      "collecte_le": "2026-11-11"
     },
     {
       "source_id": "insee-bdm",
@@ -6493,7 +6831,7 @@
       "source": "INSEE",
       "url": "https://www.insee.fr/fr/statistiques/serie/011794844",
       "date_publication": "2026-10-30",
-      "collecte_le": "2026-11-10"
+      "collecte_le": "2026-11-11"
     },
     {
       "source_id": "insee-bdm",
@@ -6503,7 +6841,7 @@
       "source": "INSEE",
       "url": "https://www.insee.fr/fr/statistiques/serie/001688527",
       "date_publication": "2026-11-10",
-      "collecte_le": "2026-11-10"
+      "collecte_le": "2026-11-11"
     },
     {
       "source_id": "insee-bdm",
@@ -6513,7 +6851,7 @@
       "source": "INSEE",
       "url": "https://www.insee.fr/fr/statistiques/serie/001565530",
       "date_publication": "2026-10-22",
-      "collecte_le": "2026-11-10"
+      "collecte_le": "2026-11-11"
     },
     {
       "source_id": "insee-bdm",
@@ -6523,47 +6861,47 @@
       "source": "INSEE",
       "url": "https://www.insee.fr/fr/statistiques/serie/010755537",
       "date_publication": "2026-10-16",
-      "collecte_le": "2026-11-10"
+      "collecte_le": "2026-11-11"
     },
     {
       "source_id": "bodacc-35",
       "libelle": "Créations d’entreprises en Ille-et-Vilaine",
-      "valeur": "128 annonces",
-      "periode": "du 03/11/2026 au 09/11/2026",
+      "valeur": "201 annonces",
+      "periode": "du 04/11/2026 au 10/11/2026",
       "source": "BODACC (DILA)",
       "url": "https://www.bodacc.fr/",
-      "date_publication": "2026-11-09",
-      "collecte_le": "2026-11-10"
+      "date_publication": "2026-11-10",
+      "collecte_le": "2026-11-11"
     },
     {
       "source_id": "bodacc-35",
       "libelle": "Procédures collectives en Ille-et-Vilaine",
-      "valeur": "14 annonces",
-      "periode": "du 03/11/2026 au 09/11/2026",
+      "valeur": "25 annonces",
+      "periode": "du 04/11/2026 au 10/11/2026",
       "source": "BODACC (DILA)",
       "url": "https://www.bodacc.fr/",
-      "date_publication": "2026-11-09",
-      "collecte_le": "2026-11-10"
+      "date_publication": "2026-11-10",
+      "collecte_le": "2026-11-11"
     },
     {
       "source_id": "bodacc-35",
       "libelle": "Ventes et cessions de fonds en Ille-et-Vilaine",
-      "valeur": "16 annonces",
-      "periode": "du 03/11/2026 au 09/11/2026",
+      "valeur": "24 annonces",
+      "periode": "du 04/11/2026 au 10/11/2026",
       "source": "BODACC (DILA)",
       "url": "https://www.bodacc.fr/",
-      "date_publication": "2026-11-09",
-      "collecte_le": "2026-11-10"
+      "date_publication": "2026-11-10",
+      "collecte_le": "2026-11-11"
     },
     {
       "source_id": "bodacc-35",
       "libelle": "Radiations en Ille-et-Vilaine",
-      "valeur": "77 annonces",
-      "periode": "du 03/11/2026 au 09/11/2026",
+      "valeur": "119 annonces",
+      "periode": "du 04/11/2026 au 10/11/2026",
       "source": "BODACC (DILA)",
       "url": "https://www.bodacc.fr/",
-      "date_publication": "2026-11-09",
-      "collecte_le": "2026-11-10"
+      "date_publication": "2026-11-10",
+      "collecte_le": "2026-11-11"
     }
   ],
   "suivi": {
@@ -6603,8 +6941,8 @@
         }
       ],
       "prochaine_echeance": {
-        "libelle": "Fin du délai de 1re lecture à l’Assemblée (40 jours, art. 47 de la Constitution)",
-        "date": "2026-11-10",
+        "libelle": "Fin du délai d’examen par le Parlement (70 jours, art. 47 de la Constitution)",
+        "date": "2026-12-10",
         "indicative": true
       },
       "delais": [
@@ -6621,7 +6959,7 @@
       ],
       "source": "Assemblée nationale et Sénat — dossiers législatifs",
       "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/PLF_2027",
-      "mis_a_jour_le": "2026-11-10",
+      "mis_a_jour_le": "2026-11-11",
       "mesures": {
         "libelle": "Projet de loi n° 3210 (texte déposé par le Gouvernement)",
         "url": "https://www.assemblee-nationale.fr/dyn/17/textes/l17b3210_projet-loi",
@@ -7921,7 +8259,7 @@
       ],
       "source": "Assemblée nationale et Sénat — dossiers législatifs",
       "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/PLFSS_2027",
-      "mis_a_jour_le": "2026-11-10",
+      "mis_a_jour_le": "2026-11-11",
       "mesures": {
         "libelle": "Projet de loi n° 3211 (texte déposé par le Gouvernement)",
         "url": "https://www.assemblee-nationale.fr/dyn/17/textes/l17b3211_projet-loi",
