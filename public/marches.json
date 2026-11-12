@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "genere_le": "2026-11-12T00:55:18.571Z",
+  "genere_le": "2026-11-12T15:03:35.299Z",
   "indicateurs": [
     {
       "id": "dette",
@@ -542,8 +542,8 @@
         "libelle": "TEC 10",
         "organisme": "Banque de France",
         "mention": "Le TEC 10 (indice CNO-TEC® calculé par Euronext Paris) est publié chaque jour ouvré par la Banque de France et l'Agence France Trésor. Sa licence en interdit la redistribution : il se consulte sur le site de la Banque de France ; la carte affiche la moyenne mensuelle officielle de la BCE.",
-        "url": "https://www.banque-france.fr/fr/statistiques/taux-et-cours/indices-obligataires-2026-11-10",
-        "date": "2026-11-10"
+        "url": "https://www.banque-france.fr/fr/statistiques/taux-et-cours/indices-obligataires-2026-11-12",
+        "date": "2026-11-12"
       }
     },
     {
@@ -4794,8 +4794,8 @@
         "heure": "19:00",
         "estimee": true
       },
-      "derniere_tentative": "2026-11-12T00:55:18.571Z",
-      "derniere_reussite": "2026-11-12T00:55:18.571Z",
+      "derniere_tentative": "2026-11-12T15:03:35.299Z",
+      "derniere_reussite": "2026-11-12T15:03:35.299Z",
       "derniere_erreur": null,
       "remarque": null,
       "journal": [
