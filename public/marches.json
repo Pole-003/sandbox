@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "genere_le": "2026-11-11T21:27:44.338Z",
+  "genere_le": "2026-11-12T00:55:18.571Z",
   "indicateurs": [
     {
       "id": "dette",
@@ -336,36 +336,32 @@
       "decimales": 2,
       "genre": "taux",
       "nature": "quotidien officiel",
-      "valeur": 4.44,
-      "date_valeur": "2026-09-30",
-      "recupere_le": "2026-10-12T13:51:58.171Z",
+      "valeur": 4.89,
+      "date_valeur": "2026-10-31",
+      "recupere_le": "2026-11-12T00:55:18.571Z",
       "variations": {
         "precedente": {
-          "depuis": "2026-08-31",
-          "absolue": 0.44,
+          "depuis": "2026-09-30",
+          "absolue": 0.45,
           "relative": null
         },
         "un_mois": {
-          "depuis": "2026-07-31",
-          "absolue": 0.59,
+          "depuis": "2026-09-30",
+          "absolue": 0.45,
           "relative": null
         },
         "debut_annee": {
           "depuis": "2025-12-31",
-          "absolue": 0.88,
+          "absolue": 1.33,
           "relative": null
         },
         "un_an": {
-          "depuis": "2025-09-30",
-          "absolue": 0.93,
+          "depuis": "2025-10-31",
+          "absolue": 1.45,
           "relative": null
         }
       },
       "historique": [
-        [
-          "2023-10-31",
-          3.45
-        ],
         [
           "2023-11-30",
           3.19
@@ -505,6 +501,10 @@
         [
           "2026-09-30",
           4.44
+        ],
+        [
+          "2026-10-31",
+          4.89
         ]
       ],
       "complements": [],
@@ -524,21 +524,17 @@
         "tolerance_jours_ouvres": 10
       },
       "prochaine_publication": {
-        "date": "2026-11-12",
+        "date": "2026-12-14",
         "heure": null,
         "estimee": true
       },
-      "derniere_tentative": "2026-10-12T13:51:58.171Z",
-      "derniere_reussite": "2026-10-12T13:51:58.171Z",
+      "derniere_tentative": "2026-11-12T00:55:18.571Z",
+      "derniere_reussite": "2026-11-12T00:55:18.571Z",
       "derniere_erreur": null,
       "remarque": null,
       "journal": [
         {
-          "date": "2026-10-09",
-          "etat": "ok"
-        },
-        {
-          "date": "2026-10-12",
+          "date": "2026-11-12",
           "etat": "ok"
         }
       ],
@@ -2777,10 +2773,6 @@
       },
       "historique": [
         [
-          "2024-11-11",
-          72.19
-        ],
-        [
           "2024-11-12",
           72.56
         ],
@@ -4802,8 +4794,8 @@
         "heure": "19:00",
         "estimee": true
       },
-      "derniere_tentative": "2026-11-11T21:27:44.338Z",
-      "derniere_reussite": "2026-11-11T21:27:44.338Z",
+      "derniere_tentative": "2026-11-12T00:55:18.571Z",
+      "derniere_reussite": "2026-11-12T00:55:18.571Z",
       "derniere_erreur": null,
       "remarque": null,
       "journal": [
@@ -4837,6 +4829,10 @@
         },
         {
           "date": "2026-11-11",
+          "etat": "sans_nouveaute"
+        },
+        {
+          "date": "2026-11-12",
           "etat": "sans_nouveaute"
         }
       ]
