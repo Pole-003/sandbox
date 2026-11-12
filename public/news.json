@@ -1,7 +1,77 @@
 {
   "version": 1,
-  "genere_le": "2026-11-11T12:51:25.598Z",
+  "genere_le": "2026-11-12T13:53:43.999Z",
   "articles": [
+    {
+      "id": "f3af87fc2e5ecc7b",
+      "titre": "N° 3291 annexe 29 - Rapport de M. Denis Masséglia sur le projet de loi de finances pour 2027 (n°3210).",
+      "source": "Assemblée nationale — Publications parlementaires",
+      "source_id": "an-documents",
+      "url": "https://www.assemblee-nationale.fr/17/budget/plf2027/b3291-tIII-a29.asp",
+      "date": "2026-11-12",
+      "theme": "Loi de finances",
+      "resume": null,
+      "importance": 5,
+      "public": [
+        "Expertise comptable",
+        "Conseil aux dirigeants"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-11-12",
+      "score": 13,
+      "pourquoi": {
+        "mots": [
+          {
+            "mot": "projet de loi de finances",
+            "poids": 6
+          },
+          {
+            "mot": "loi de finances",
+            "poids": 5
+          }
+        ],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 2,
+        "score": 11
+      }
+    },
+    {
+      "id": "6d5b3bf52738810a",
+      "titre": "N° 3443 rapport - Rapport de M. Philippe Juvin sur le projet de loi de finances de fin de gestion, après engagement de la procédure accélérée, pour 2026 (n°3434).",
+      "source": "Assemblée nationale — Commission des finances",
+      "source_id": "an-commission-finances",
+      "url": "https://www.assemblee-nationale.fr/17/rapports/r3443.asp",
+      "date": "2026-11-11",
+      "theme": "Loi de finances",
+      "resume": null,
+      "importance": 5,
+      "public": [
+        "Expertise comptable",
+        "Conseil aux dirigeants"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-11-12",
+      "score": 13,
+      "pourquoi": {
+        "mots": [
+          {
+            "mot": "projet de loi de finances",
+            "poids": 6
+          },
+          {
+            "mot": "loi de finances",
+            "poids": 5
+          }
+        ],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 2,
+        "score": 11
+      }
+    },
     {
       "id": "d2528a50dfdc859d",
       "titre": "Diverses dispositions relatives à l'intégrité publique (PJL) - texte N° 163",
@@ -148,7 +218,7 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-11-11",
-      "score": 3,
+      "score": 2,
       "pourquoi": {
         "mots": [
           {
@@ -158,7 +228,7 @@
         ],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 2,
+        "bonus_fraicheur": 1,
         "score": 1
       }
     },
@@ -179,12 +249,12 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-11-10",
-      "score": 2,
+      "score": 1,
       "pourquoi": {
         "mots": [],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 2,
+        "bonus_fraicheur": 1,
         "score": 0
       }
     },
@@ -205,12 +275,12 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-11-11",
-      "score": 2,
+      "score": 1,
       "pourquoi": {
         "mots": [],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 2,
+        "bonus_fraicheur": 1,
         "score": 0
       }
     },
@@ -230,12 +300,12 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-11-11",
-      "score": 2,
+      "score": 1,
       "pourquoi": {
         "mots": [],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 2,
+        "bonus_fraicheur": 1,
         "score": 0
       }
     },
@@ -255,12 +325,12 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-11-11",
-      "score": 2,
+      "score": 1,
       "pourquoi": {
         "mots": [],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 2,
+        "bonus_fraicheur": 1,
         "score": 0
       }
     },
@@ -280,12 +350,12 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-11-11",
-      "score": 2,
+      "score": 1,
       "pourquoi": {
         "mots": [],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 2,
+        "bonus_fraicheur": 1,
         "score": 0
       }
     },
@@ -306,12 +376,12 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-11-11",
-      "score": 2,
+      "score": 1,
       "pourquoi": {
         "mots": [],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 2,
+        "bonus_fraicheur": 1,
         "score": 0
       }
     },
@@ -331,12 +401,12 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-11-11",
-      "score": 2,
+      "score": 1,
       "pourquoi": {
         "mots": [],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 2,
+        "bonus_fraicheur": 1,
         "score": 0
       }
     },
@@ -6821,7 +6891,7 @@
       "source": "INSEE",
       "url": "https://www.insee.fr/fr/statistiques/serie/011812232",
       "date_publication": "2026-10-15",
-      "collecte_le": "2026-11-11"
+      "collecte_le": "2026-11-12"
     },
     {
       "source_id": "insee-bdm",
@@ -6831,7 +6901,7 @@
       "source": "INSEE",
       "url": "https://www.insee.fr/fr/statistiques/serie/011794844",
       "date_publication": "2026-10-30",
-      "collecte_le": "2026-11-11"
+      "collecte_le": "2026-11-12"
     },
     {
       "source_id": "insee-bdm",
@@ -6841,7 +6911,7 @@
       "source": "INSEE",
       "url": "https://www.insee.fr/fr/statistiques/serie/001688527",
       "date_publication": "2026-11-10",
-      "collecte_le": "2026-11-11"
+      "collecte_le": "2026-11-12"
     },
     {
       "source_id": "insee-bdm",
@@ -6851,7 +6921,7 @@
       "source": "INSEE",
       "url": "https://www.insee.fr/fr/statistiques/serie/001565530",
       "date_publication": "2026-10-22",
-      "collecte_le": "2026-11-11"
+      "collecte_le": "2026-11-12"
     },
     {
       "source_id": "insee-bdm",
@@ -6861,47 +6931,47 @@
       "source": "INSEE",
       "url": "https://www.insee.fr/fr/statistiques/serie/010755537",
       "date_publication": "2026-10-16",
-      "collecte_le": "2026-11-11"
+      "collecte_le": "2026-11-12"
     },
     {
       "source_id": "bodacc-35",
       "libelle": "Créations d’entreprises en Ille-et-Vilaine",
       "valeur": "201 annonces",
-      "periode": "du 04/11/2026 au 10/11/2026",
+      "periode": "du 05/11/2026 au 11/11/2026",
       "source": "BODACC (DILA)",
       "url": "https://www.bodacc.fr/",
-      "date_publication": "2026-11-10",
-      "collecte_le": "2026-11-11"
+      "date_publication": "2026-11-11",
+      "collecte_le": "2026-11-12"
     },
     {
       "source_id": "bodacc-35",
       "libelle": "Procédures collectives en Ille-et-Vilaine",
       "valeur": "25 annonces",
-      "periode": "du 04/11/2026 au 10/11/2026",
+      "periode": "du 05/11/2026 au 11/11/2026",
       "source": "BODACC (DILA)",
       "url": "https://www.bodacc.fr/",
-      "date_publication": "2026-11-10",
-      "collecte_le": "2026-11-11"
+      "date_publication": "2026-11-11",
+      "collecte_le": "2026-11-12"
     },
     {
       "source_id": "bodacc-35",
       "libelle": "Ventes et cessions de fonds en Ille-et-Vilaine",
       "valeur": "24 annonces",
-      "periode": "du 04/11/2026 au 10/11/2026",
+      "periode": "du 05/11/2026 au 11/11/2026",
       "source": "BODACC (DILA)",
       "url": "https://www.bodacc.fr/",
-      "date_publication": "2026-11-10",
-      "collecte_le": "2026-11-11"
+      "date_publication": "2026-11-11",
+      "collecte_le": "2026-11-12"
     },
     {
       "source_id": "bodacc-35",
       "libelle": "Radiations en Ille-et-Vilaine",
       "valeur": "119 annonces",
-      "periode": "du 04/11/2026 au 10/11/2026",
+      "periode": "du 05/11/2026 au 11/11/2026",
       "source": "BODACC (DILA)",
       "url": "https://www.bodacc.fr/",
-      "date_publication": "2026-11-10",
-      "collecte_le": "2026-11-11"
+      "date_publication": "2026-11-11",
+      "collecte_le": "2026-11-12"
     }
   ],
   "suivi": {
@@ -6959,7 +7029,7 @@
       ],
       "source": "Assemblée nationale et Sénat — dossiers législatifs",
       "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/PLF_2027",
-      "mis_a_jour_le": "2026-11-11",
+      "mis_a_jour_le": "2026-11-12",
       "mesures": {
         "libelle": "Projet de loi n° 3210 (texte déposé par le Gouvernement)",
         "url": "https://www.assemblee-nationale.fr/dyn/17/textes/l17b3210_projet-loi",
@@ -8259,7 +8329,7 @@
       ],
       "source": "Assemblée nationale et Sénat — dossiers législatifs",
       "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/PLFSS_2027",
-      "mis_a_jour_le": "2026-11-11",
+      "mis_a_jour_le": "2026-11-12",
       "mesures": {
         "libelle": "Projet de loi n° 3211 (texte déposé par le Gouvernement)",
         "url": "https://www.assemblee-nationale.fr/dyn/17/textes/l17b3211_projet-loi",
