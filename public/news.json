@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "genere_le": "2026-11-12T13:53:43.999Z",
+  "genere_le": "2026-11-13T13:17:35.241Z",
   "articles": [
     {
       "id": "f3af87fc2e5ecc7b",
@@ -38,6 +38,58 @@
       }
     },
     {
+      "id": "864bdd1363d28511",
+      "titre": "Avis sur un projet de loi organique portant diverses dispositions relatives à l’intégrité publique et un projet de loi portant diverses disposition...",
+      "source": "Conseil d'État — Avis au Gouvernement et au Parlement",
+      "source_id": "ce-avis",
+      "url": "https://www.conseil-etat.fr/avis-consultatifs/derniers-avis-rendus/au-gouvernement/avis-sur-un-projet-de-loi-organique-portant-diverses-dispositions-relatives-a-l-integrite-publique-et-un-projet-de-loi-portant-diverses-disposition",
+      "date": "2026-11-12",
+      "theme": "Loi de finances",
+      "resume": null,
+      "importance": 1,
+      "public": [
+        "Expertise comptable",
+        "Conseil aux dirigeants"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-11-13",
+      "score": 2,
+      "pourquoi": {
+        "mots": [],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 2,
+        "score": 0
+      }
+    },
+    {
+      "id": "1e483bd5bc16dc7d",
+      "titre": "Texte adopté n° 364 - Projet de loi, rejeté par l'Assemblée nationale après engagement de la procédure accélérée, pour 2026",
+      "source": "Assemblée nationale — Commission des finances",
+      "source_id": "an-commission-finances",
+      "url": "https://www.assemblee-nationale.fr/17/ta/ta0364.asp",
+      "date": "2026-11-12",
+      "theme": "Loi de finances",
+      "resume": null,
+      "importance": 1,
+      "public": [
+        "Expertise comptable",
+        "Conseil aux dirigeants"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-11-13",
+      "score": 2,
+      "pourquoi": {
+        "mots": [],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 2,
+        "score": 0
+      }
+    },
+    {
       "id": "6d5b3bf52738810a",
       "titre": "N° 3443 rapport - Rapport de M. Philippe Juvin sur le projet de loi de finances de fin de gestion, après engagement de la procédure accélérée, pour 2026 (n°3434).",
       "source": "Assemblée nationale — Commission des finances",
@@ -54,7 +106,7 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-11-12",
-      "score": 13,
+      "score": 12,
       "pourquoi": {
         "mots": [
           {
@@ -68,7 +120,7 @@
         ],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 2,
+        "bonus_fraicheur": 1,
         "score": 11
       }
     },
@@ -89,12 +141,12 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-11-11",
-      "score": 2,
+      "score": 1,
       "pourquoi": {
         "mots": [],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 2,
+        "bonus_fraicheur": 1,
         "score": 0
       }
     },
@@ -115,12 +167,12 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-11-11",
-      "score": 2,
+      "score": 1,
       "pourquoi": {
         "mots": [],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 2,
+        "bonus_fraicheur": 1,
         "score": 0
       }
     },
@@ -141,12 +193,12 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-11-11",
-      "score": 2,
+      "score": 1,
       "pourquoi": {
         "mots": [],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 2,
+        "bonus_fraicheur": 1,
         "score": 0
       }
     },
@@ -167,12 +219,12 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-11-11",
-      "score": 2,
+      "score": 1,
       "pourquoi": {
         "mots": [],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 2,
+        "bonus_fraicheur": 1,
         "score": 0
       }
     },
@@ -193,12 +245,12 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-11-11",
-      "score": 2,
+      "score": 1,
       "pourquoi": {
         "mots": [],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 2,
+        "bonus_fraicheur": 1,
         "score": 0
       }
     },
@@ -427,7 +479,7 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-11-10",
-      "score": 12,
+      "score": 11,
       "pourquoi": {
         "mots": [
           {
@@ -441,7 +493,7 @@
         ],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 1,
+        "bonus_fraicheur": 0,
         "score": 11
       }
     },
@@ -6886,12 +6938,12 @@
     {
       "source_id": "insee-bdm",
       "libelle": "Inflation sur un an (IPCH)",
-      "valeur": "3,4 %",
-      "periode": "septembre 2026",
+      "valeur": "3,7 %",
+      "periode": "octobre 2026",
       "source": "INSEE",
       "url": "https://www.insee.fr/fr/statistiques/serie/011812232",
-      "date_publication": "2026-10-15",
-      "collecte_le": "2026-11-12"
+      "date_publication": "2026-11-13",
+      "collecte_le": "2026-11-13"
     },
     {
       "source_id": "insee-bdm",
@@ -6901,7 +6953,7 @@
       "source": "INSEE",
       "url": "https://www.insee.fr/fr/statistiques/serie/011794844",
       "date_publication": "2026-10-30",
-      "collecte_le": "2026-11-12"
+      "collecte_le": "2026-11-13"
     },
     {
       "source_id": "insee-bdm",
@@ -6911,7 +6963,7 @@
       "source": "INSEE",
       "url": "https://www.insee.fr/fr/statistiques/serie/001688527",
       "date_publication": "2026-11-10",
-      "collecte_le": "2026-11-12"
+      "collecte_le": "2026-11-13"
     },
     {
       "source_id": "insee-bdm",
@@ -6921,7 +6973,7 @@
       "source": "INSEE",
       "url": "https://www.insee.fr/fr/statistiques/serie/001565530",
       "date_publication": "2026-10-22",
-      "collecte_le": "2026-11-12"
+      "collecte_le": "2026-11-13"
     },
     {
       "source_id": "insee-bdm",
@@ -6931,47 +6983,47 @@
       "source": "INSEE",
       "url": "https://www.insee.fr/fr/statistiques/serie/010755537",
       "date_publication": "2026-10-16",
-      "collecte_le": "2026-11-12"
+      "collecte_le": "2026-11-13"
     },
     {
       "source_id": "bodacc-35",
       "libelle": "Créations d’entreprises en Ille-et-Vilaine",
-      "valeur": "201 annonces",
-      "periode": "du 05/11/2026 au 11/11/2026",
+      "valeur": "150 annonces",
+      "periode": "du 06/11/2026 au 12/11/2026",
       "source": "BODACC (DILA)",
       "url": "https://www.bodacc.fr/",
-      "date_publication": "2026-11-11",
-      "collecte_le": "2026-11-12"
+      "date_publication": "2026-11-12",
+      "collecte_le": "2026-11-13"
     },
     {
       "source_id": "bodacc-35",
       "libelle": "Procédures collectives en Ille-et-Vilaine",
-      "valeur": "25 annonces",
-      "periode": "du 05/11/2026 au 11/11/2026",
+      "valeur": "27 annonces",
+      "periode": "du 06/11/2026 au 12/11/2026",
       "source": "BODACC (DILA)",
       "url": "https://www.bodacc.fr/",
-      "date_publication": "2026-11-11",
-      "collecte_le": "2026-11-12"
+      "date_publication": "2026-11-12",
+      "collecte_le": "2026-11-13"
     },
     {
       "source_id": "bodacc-35",
       "libelle": "Ventes et cessions de fonds en Ille-et-Vilaine",
-      "valeur": "24 annonces",
-      "periode": "du 05/11/2026 au 11/11/2026",
+      "valeur": "22 annonces",
+      "periode": "du 06/11/2026 au 12/11/2026",
       "source": "BODACC (DILA)",
       "url": "https://www.bodacc.fr/",
-      "date_publication": "2026-11-11",
-      "collecte_le": "2026-11-12"
+      "date_publication": "2026-11-12",
+      "collecte_le": "2026-11-13"
     },
     {
       "source_id": "bodacc-35",
       "libelle": "Radiations en Ille-et-Vilaine",
-      "valeur": "119 annonces",
-      "periode": "du 05/11/2026 au 11/11/2026",
+      "valeur": "93 annonces",
+      "periode": "du 06/11/2026 au 12/11/2026",
       "source": "BODACC (DILA)",
       "url": "https://www.bodacc.fr/",
-      "date_publication": "2026-11-11",
-      "collecte_le": "2026-11-12"
+      "date_publication": "2026-11-12",
+      "collecte_le": "2026-11-13"
     }
   ],
   "suivi": {
@@ -7027,9 +7079,9 @@
           "indicative": true
         }
       ],
-      "source": "Assemblée nationale et Sénat — dossiers législatifs",
+      "source": "Assemblée nationale — dossier législatif",
       "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/PLF_2027",
-      "mis_a_jour_le": "2026-11-12",
+      "mis_a_jour_le": "2026-11-13",
       "mesures": {
         "libelle": "Projet de loi n° 3210 (texte déposé par le Gouvernement)",
         "url": "https://www.assemblee-nationale.fr/dyn/17/textes/l17b3210_projet-loi",
@@ -8265,7 +8317,6 @@
           "etablie_le": "2026-10-08"
         }
       },
-      "url_senat": "https://www.senat.fr/dossier-legislatif/pjlf2027.html",
       "mots_cles": [
         "projet de loi de finances",
         "loi de finances pour 2027",
@@ -8327,9 +8378,9 @@
           "indicative": true
         }
       ],
-      "source": "Assemblée nationale et Sénat — dossiers législatifs",
+      "source": "Assemblée nationale — dossier législatif",
       "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/PLFSS_2027",
-      "mis_a_jour_le": "2026-11-12",
+      "mis_a_jour_le": "2026-11-13",
       "mesures": {
         "libelle": "Projet de loi n° 3211 (texte déposé par le Gouvernement)",
         "url": "https://www.assemblee-nationale.fr/dyn/17/textes/l17b3211_projet-loi",
@@ -8964,7 +9015,6 @@
           "etablie_le": "2026-10-08"
         }
       },
-      "url_senat": "https://www.senat.fr/dossier-legislatif/plfss2027.html",
       "mots_cles": [
         "financement de la sécurité sociale",
         "plfss",
@@ -9076,46 +9126,6 @@
     }
   ],
   "echeances": [
-    {
-      "id": "impots-2026-11-05-6869b79c",
-      "date": "2026-11-05",
-      "titre": "Agriculteurs soumis au régime simplifié agricole et déposant une CA12A annuelle",
-      "detail": "Date limite de dépôt du bulletin d'échéance n° 3525 bis relatif au troisième trimestre 2026.",
-      "categorie": "fiscal",
-      "source": "impots.gouv.fr — calendrier fiscal",
-      "url": "https://www.impots.gouv.fr/professionnel/calendrier-fiscal/2026-11",
-      "origine": "calendrier_officiel"
-    },
-    {
-      "id": "impots-2026-11-05-dc5dd57b",
-      "date": "2026-11-05",
-      "titre": "Prélèvement à la source – DSN",
-      "detail": "Date limite pour la télédéclaration DSN d’octobre 2026 et le télépaiement (entreprises de 50 salariés ou plus).",
-      "categorie": "social",
-      "source": "impots.gouv.fr — calendrier fiscal",
-      "url": "https://www.impots.gouv.fr/professionnel/calendrier-fiscal/2026-11",
-      "origine": "calendrier_officiel"
-    },
-    {
-      "id": "urssaf-ti-trimestriel-2026-11-05",
-      "date": "2026-11-05",
-      "titre": "Travailleurs indépendants : paiement trimestriel des cotisations",
-      "detail": "Échéances trimestrielles les 5 février, 5 mai, 5 août et 5 novembre.",
-      "categorie": "social",
-      "source": "Urssaf",
-      "url": "https://www.urssaf.fr/accueil/independant/comprendre-payer-cotisations/calendrier-paiement-cotisations.html",
-      "origine": "saisie"
-    },
-    {
-      "id": "urssaf-ti-mensuel-5-2026-11-05",
-      "date": "2026-11-05",
-      "titre": "Travailleurs indépendants : prélèvement mensuel des cotisations (échéance du 5)",
-      "detail": "Prélèvement le 5 de chaque mois, de janvier à décembre (date par défaut). Montants sur l'échéancier de l'espace en ligne Urssaf.",
-      "categorie": "social",
-      "source": "Urssaf",
-      "url": "https://www.urssaf.fr/accueil/independant/comprendre-payer-cotisations/calendrier-paiement-cotisations.html",
-      "origine": "saisie"
-    },
     {
       "id": "impots-2026-11-10-bf20a9b0",
       "date": "2026-11-10",
