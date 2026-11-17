@@ -1,7 +1,177 @@
 {
   "version": 1,
-  "genere_le": "2026-11-16T13:51:51.899Z",
+  "genere_le": "2026-11-17T14:44:15.523Z",
   "articles": [
+    {
+      "id": "decd3591ce10533d",
+      "titre": "Le Conseil d'Etat ouvre un nouveau cycle de conférences sur « Les politiques publiques face aux drogues »",
+      "source": "Conseil d'État — Actualités",
+      "source_id": "ce-actualites",
+      "url": "https://www.conseil-etat.fr/actualites/le-conseil-d-etat-ouvre-un-nouveau-cycle-de-conferences-sur-les-politiques-publiques-face-aux-drogues",
+      "date": "2026-11-16",
+      "theme": "Fiscal et comptable",
+      "resume": null,
+      "importance": 1,
+      "public": [
+        "Expertise comptable"
+      ],
+      "type": null,
+      "origine": "flux",
+      "collecte_le": "2026-11-17",
+      "score": 2,
+      "pourquoi": {
+        "mots": [],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 2,
+        "score": 0
+      }
+    },
+    {
+      "id": "6c5cbee4ad101aed",
+      "titre": "Projet de loi de finances de fin de gestion pour 2026 - texte N° 172",
+      "source": "Sénat — Derniers textes",
+      "source_id": "senat-textes",
+      "url": "https://www.senat.fr/leg/pjl26-172.html",
+      "date": "2026-11-14",
+      "theme": "Loi de finances",
+      "resume": "Projet de loi de finances de fin de gestion pour 2026 : texte N° 172 transmis au Sénat le 13 novembre 2026",
+      "importance": 5,
+      "public": [
+        "Expertise comptable",
+        "Conseil aux dirigeants"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-11-17",
+      "autres_sources": [
+        {
+          "source": "Sénat — Derniers rapports",
+          "url": "https://www.senat.fr/rap/l26-176/l26-176.html",
+          "titre": "Projet de loi de finances de fin de gestion pour 2026 - rapport n° 176"
+        }
+      ],
+      "score": 12,
+      "pourquoi": {
+        "mots": [
+          {
+            "mot": "projet de loi de finances",
+            "poids": 6
+          },
+          {
+            "mot": "loi de finances",
+            "poids": 5
+          }
+        ],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 1,
+        "score": 11
+      }
+    },
+    {
+      "id": "9ef42afeb17a0db8",
+      "titre": "Création d'une commission d'enquête sur la gestion de l'amiante en outre-mer - texte N° 147",
+      "source": "Sénat — Derniers textes",
+      "source_id": "senat-textes",
+      "url": "https://www.senat.fr/leg/ppr26-147.html",
+      "date": "2026-11-13",
+      "theme": "Loi de finances",
+      "resume": "Proposition de résolution tendant à la création d'une commission d'enquête sur le suivi de la gestion de l'amiante dans les outre-mer : texte N° 147 de M. Dominique THÉOPHILE, déposé au Sénat le 4 novembre 2026",
+      "importance": 1,
+      "public": [
+        "Conseil aux dirigeants"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-11-17",
+      "score": 0,
+      "pourquoi": {
+        "mots": [],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 0,
+        "score": 0
+      }
+    },
+    {
+      "id": "4d1cf5f5fe4a34eb",
+      "titre": "Octroi des prérogatives d'une commission d'enquête - rapport n° 166",
+      "source": "Sénat — Derniers rapports",
+      "source_id": "senat-rapports",
+      "url": "https://www.senat.fr/rap/l26-166/l26-166.html",
+      "date": "2026-11-13",
+      "theme": "Loi de finances",
+      "resume": "Rapport n° 166 de Mme Muriel JOURDA, fait au nom de la commission des lois constitutionnelles, de législation, du suffrage universel, du Règlement et d'administration générale, sur la demande d'attribution des prérogatives d'une commission d'enquête par la commission des lois des prérogatives…",
+      "importance": 1,
+      "public": [
+        "Expertise comptable",
+        "Conseil aux dirigeants"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-11-17",
+      "score": 0,
+      "pourquoi": {
+        "mots": [],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 0,
+        "score": 0
+      }
+    },
+    {
+      "id": "a771a754aa77302f",
+      "titre": "Périmètre de l'utilisation du produit du droit départemental de passage - texte N° 140",
+      "source": "Sénat — Derniers textes",
+      "source_id": "senat-textes",
+      "url": "https://www.senat.fr/leg/ppl26-140.html",
+      "date": "2026-11-13",
+      "theme": "Loi de finances",
+      "resume": "Proposition de loi visant à élargir le périmètre de l'utilisation du produit du droit départemental de passage : texte N° 140 de M. Mickaël VALLET, déposé au Sénat le 3 novembre 2026",
+      "importance": 1,
+      "public": [
+        "Expertise comptable",
+        "Conseil aux dirigeants"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-11-17",
+      "score": 0,
+      "pourquoi": {
+        "mots": [],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 0,
+        "score": 0
+      }
+    },
+    {
+      "id": "a8eae03d4e6a69be",
+      "titre": "Règlement sur le logement abordable - texte N° 152",
+      "source": "Sénat — Derniers textes",
+      "source_id": "senat-textes",
+      "url": "https://www.senat.fr/leg/ppr26-152.html",
+      "date": "2026-11-13",
+      "theme": "Loi de finances",
+      "resume": "Proposition de résolution règlement sur le logement abordable : texte N° 152 de Mme Brigitte DEVÉSA et M. Ahmed LAOUEDJ, déposé au Sénat le 5 novembre 2026",
+      "importance": 1,
+      "public": [
+        "Expertise comptable",
+        "Conseil aux dirigeants"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-11-17",
+      "score": 0,
+      "pourquoi": {
+        "mots": [],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 0,
+        "score": 0
+      }
+    },
     {
       "id": "f3af87fc2e5ecc7b",
       "titre": "N° 3291 annexe 29 - Rapport de M. Denis Masséglia sur le projet de loi de finances pour 2027 (n°3210).",
@@ -54,6 +224,31 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-11-13",
+      "score": 0,
+      "pourquoi": {
+        "mots": [],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 0,
+        "score": 0
+      }
+    },
+    {
+      "id": "ac437d954d2aaf3a",
+      "titre": "Résoudre le fléau des désordres fonciers outre-mer - Texte n° 25",
+      "source": "Sénat — Économie et finances, fiscalité",
+      "source_id": "senat-fiscalite",
+      "url": "https://www.senat.fr/leg/tas26-025.html",
+      "date": "2026-11-12",
+      "theme": "Fiscal et comptable",
+      "resume": "Texte",
+      "importance": 1,
+      "public": [
+        "Expertise comptable"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-11-17",
       "score": 0,
       "pourquoi": {
         "mots": [],
@@ -252,7 +447,14 @@
         "bonus_source": 0,
         "bonus_fraicheur": 0,
         "score": 0
-      }
+      },
+      "autres_sources": [
+        {
+          "source": "Sénat — Derniers rapports",
+          "url": "https://www.senat.fr/rap/l26-167/l26-167.html",
+          "titre": "Reconnaître une présomption de légitime défense pour les forces de l'ordre - rapport n° 167"
+        }
+      ]
     },
     {
       "id": "99a9b3759919d4c5",
@@ -550,6 +752,56 @@
         "bonus_source": 0,
         "bonus_fraicheur": 0,
         "score": 11
+      }
+    },
+    {
+      "id": "da1dc642b1575e0c",
+      "titre": "N° 3444 rapport - Rapport de M. Christian Baptiste sur la proposition de loi, adoptée par le Sénat, visant à lutter contre la vie chère en renforçant le droit de la concurrence et de la régulation économique outre-mer (n°1033).",
+      "source": "Assemblée nationale — Commission des affaires économiques",
+      "source_id": "an-commission-affaires-economiques",
+      "url": "https://www.assemblee-nationale.fr/17/rapports/r3444.asp",
+      "date": "2026-11-09",
+      "theme": "Économie et statistiques",
+      "resume": null,
+      "importance": 1,
+      "public": [
+        "Conseil aux dirigeants"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-11-17",
+      "score": 0,
+      "pourquoi": {
+        "mots": [],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 0,
+        "score": 0
+      }
+    },
+    {
+      "id": "e07873346b1008ea",
+      "titre": "N° 3446 rapport - Rapport de M. Olivier Faure sur la proposition de loi de M. Olivier Faure et plusieurs de ses collègues visant à l'interdiction de relations commerciales contribuant, par aide ou assistance, à la politique de colonisation dans le Territoire palestinien occupé et dans le Territoire syrien occupé des hauteurs du Golan (3088).",
+      "source": "Assemblée nationale — Commission des affaires économiques",
+      "source_id": "an-commission-affaires-economiques",
+      "url": "https://www.assemblee-nationale.fr/17/rapports/r3446.asp",
+      "date": "2026-11-09",
+      "theme": "Économie et statistiques",
+      "resume": null,
+      "importance": 1,
+      "public": [
+        "Conseil aux dirigeants"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-11-17",
+      "score": 0,
+      "pourquoi": {
+        "mots": [],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 0,
+        "score": 0
       }
     },
     {
@@ -7023,7 +7275,7 @@
       "source": "INSEE",
       "url": "https://www.insee.fr/fr/statistiques/serie/011812232",
       "date_publication": "2026-11-13",
-      "collecte_le": "2026-11-16"
+      "collecte_le": "2026-11-17"
     },
     {
       "source_id": "insee-bdm",
@@ -7033,7 +7285,7 @@
       "source": "INSEE",
       "url": "https://www.insee.fr/fr/statistiques/serie/011794844",
       "date_publication": "2026-10-30",
-      "collecte_le": "2026-11-16"
+      "collecte_le": "2026-11-17"
     },
     {
       "source_id": "insee-bdm",
@@ -7043,7 +7295,7 @@
       "source": "INSEE",
       "url": "https://www.insee.fr/fr/statistiques/serie/001688527",
       "date_publication": "2026-11-10",
-      "collecte_le": "2026-11-16"
+      "collecte_le": "2026-11-17"
     },
     {
       "source_id": "insee-bdm",
@@ -7053,7 +7305,7 @@
       "source": "INSEE",
       "url": "https://www.insee.fr/fr/statistiques/serie/001565530",
       "date_publication": "2026-10-22",
-      "collecte_le": "2026-11-16"
+      "collecte_le": "2026-11-17"
     },
     {
       "source_id": "insee-bdm",
@@ -7063,47 +7315,47 @@
       "source": "INSEE",
       "url": "https://www.insee.fr/fr/statistiques/serie/010755537",
       "date_publication": "2026-10-16",
-      "collecte_le": "2026-11-16"
+      "collecte_le": "2026-11-17"
     },
     {
       "source_id": "bodacc-35",
       "libelle": "Créations d’entreprises en Ille-et-Vilaine",
       "valeur": "170 annonces",
-      "periode": "du 09/11/2026 au 15/11/2026",
+      "periode": "du 10/11/2026 au 16/11/2026",
       "source": "BODACC (DILA)",
       "url": "https://www.bodacc.fr/",
-      "date_publication": "2026-11-15",
-      "collecte_le": "2026-11-16"
+      "date_publication": "2026-11-16",
+      "collecte_le": "2026-11-17"
     },
     {
       "source_id": "bodacc-35",
       "libelle": "Procédures collectives en Ille-et-Vilaine",
       "valeur": "46 annonces",
-      "periode": "du 09/11/2026 au 15/11/2026",
+      "periode": "du 10/11/2026 au 16/11/2026",
       "source": "BODACC (DILA)",
       "url": "https://www.bodacc.fr/",
-      "date_publication": "2026-11-15",
-      "collecte_le": "2026-11-16"
+      "date_publication": "2026-11-16",
+      "collecte_le": "2026-11-17"
     },
     {
       "source_id": "bodacc-35",
       "libelle": "Ventes et cessions de fonds en Ille-et-Vilaine",
       "valeur": "14 annonces",
-      "periode": "du 09/11/2026 au 15/11/2026",
+      "periode": "du 10/11/2026 au 16/11/2026",
       "source": "BODACC (DILA)",
       "url": "https://www.bodacc.fr/",
-      "date_publication": "2026-11-15",
-      "collecte_le": "2026-11-16"
+      "date_publication": "2026-11-16",
+      "collecte_le": "2026-11-17"
     },
     {
       "source_id": "bodacc-35",
       "libelle": "Radiations en Ille-et-Vilaine",
       "valeur": "98 annonces",
-      "periode": "du 09/11/2026 au 15/11/2026",
+      "periode": "du 10/11/2026 au 16/11/2026",
       "source": "BODACC (DILA)",
       "url": "https://www.bodacc.fr/",
-      "date_publication": "2026-11-15",
-      "collecte_le": "2026-11-16"
+      "date_publication": "2026-11-16",
+      "collecte_le": "2026-11-17"
     }
   ],
   "suivi": {
@@ -7159,9 +7411,9 @@
           "indicative": true
         }
       ],
-      "source": "Assemblée nationale — dossier législatif",
+      "source": "Assemblée nationale et Sénat — dossiers législatifs",
       "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/PLF_2027",
-      "mis_a_jour_le": "2026-11-16",
+      "mis_a_jour_le": "2026-11-17",
       "mesures": {
         "libelle": "Projet de loi n° 3210 (texte déposé par le Gouvernement)",
         "url": "https://www.assemblee-nationale.fr/dyn/17/textes/l17b3210_projet-loi",
@@ -8397,6 +8649,7 @@
           "etablie_le": "2026-10-08"
         }
       },
+      "url_senat": "https://www.senat.fr/dossier-legislatif/pjlf2027.html",
       "mots_cles": [
         "projet de loi de finances",
         "loi de finances pour 2027",
@@ -8458,9 +8711,9 @@
           "indicative": true
         }
       ],
-      "source": "Assemblée nationale — dossier législatif",
+      "source": "Assemblée nationale et Sénat — dossiers législatifs",
       "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/PLFSS_2027",
-      "mis_a_jour_le": "2026-11-16",
+      "mis_a_jour_le": "2026-11-17",
       "mesures": {
         "libelle": "Projet de loi n° 3211 (texte déposé par le Gouvernement)",
         "url": "https://www.assemblee-nationale.fr/dyn/17/textes/l17b3211_projet-loi",
@@ -9095,6 +9348,7 @@
           "etablie_le": "2026-10-08"
         }
       },
+      "url_senat": "https://www.senat.fr/dossier-legislatif/plfss2027.html",
       "mots_cles": [
         "financement de la sécurité sociale",
         "plfss",
