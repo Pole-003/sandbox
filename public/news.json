@@ -1,7 +1,32 @@
 {
   "version": 1,
-  "genere_le": "2026-11-17T14:44:15.523Z",
+  "genere_le": "2026-11-18T14:22:54.990Z",
   "articles": [
+    {
+      "id": "0d5aecb9cbcb7db6",
+      "titre": "Sanctuariser la liberté des artistes - texte N° 169",
+      "source": "Sénat — Derniers textes",
+      "source_id": "senat-textes",
+      "url": "https://www.senat.fr/leg/ppl26-169.html",
+      "date": "2026-11-18",
+      "theme": "Loi de finances",
+      "resume": "Proposition de loi visant à sanctuariser la liberté des artistes et à renforcer l'effectivité des libertés de création, de diffusion et de programmation artistiques et culturelles : texte N° 169 de Mme Sylvie ROBERT et plusieurs de ses collègues, déposé au Sénat le 12 novembre 2026",
+      "importance": 1,
+      "public": [
+        "Conseil aux dirigeants"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-11-18",
+      "score": 2,
+      "pourquoi": {
+        "mots": [],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 2,
+        "score": 0
+      }
+    },
     {
       "id": "decd3591ce10533d",
       "titre": "Le Conseil d'Etat ouvre un nouveau cycle de conférences sur « Les politiques publiques face aux drogues »",
@@ -18,12 +43,12 @@
       "type": null,
       "origine": "flux",
       "collecte_le": "2026-11-17",
-      "score": 2,
+      "score": 1,
       "pourquoi": {
         "mots": [],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 2,
+        "bonus_fraicheur": 1,
         "score": 0
       }
     },
@@ -44,14 +69,7 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-11-17",
-      "autres_sources": [
-        {
-          "source": "Sénat — Derniers rapports",
-          "url": "https://www.senat.fr/rap/l26-176/l26-176.html",
-          "titre": "Projet de loi de finances de fin de gestion pour 2026 - rapport n° 176"
-        }
-      ],
-      "score": 12,
+      "score": 11,
       "pourquoi": {
         "mots": [
           {
@@ -65,9 +83,16 @@
         ],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 1,
+        "bonus_fraicheur": 0,
         "score": 11
-      }
+      },
+      "autres_sources": [
+        {
+          "source": "Sénat — Économie et finances, fiscalité",
+          "url": "https://www.senat.fr/rap/l26-176/l26-176.html",
+          "titre": "Projet de loi de finances de fin de gestion pour 2026 - Rapport n° 176"
+        }
+      ]
     },
     {
       "id": "9ef42afeb17a0db8",
@@ -7275,7 +7300,7 @@
       "source": "INSEE",
       "url": "https://www.insee.fr/fr/statistiques/serie/011812232",
       "date_publication": "2026-11-13",
-      "collecte_le": "2026-11-17"
+      "collecte_le": "2026-11-18"
     },
     {
       "source_id": "insee-bdm",
@@ -7285,7 +7310,7 @@
       "source": "INSEE",
       "url": "https://www.insee.fr/fr/statistiques/serie/011794844",
       "date_publication": "2026-10-30",
-      "collecte_le": "2026-11-17"
+      "collecte_le": "2026-11-18"
     },
     {
       "source_id": "insee-bdm",
@@ -7295,7 +7320,7 @@
       "source": "INSEE",
       "url": "https://www.insee.fr/fr/statistiques/serie/001688527",
       "date_publication": "2026-11-10",
-      "collecte_le": "2026-11-17"
+      "collecte_le": "2026-11-18"
     },
     {
       "source_id": "insee-bdm",
@@ -7305,57 +7330,57 @@
       "source": "INSEE",
       "url": "https://www.insee.fr/fr/statistiques/serie/001565530",
       "date_publication": "2026-10-22",
-      "collecte_le": "2026-11-17"
+      "collecte_le": "2026-11-18"
     },
     {
       "source_id": "insee-bdm",
       "libelle": "Créations d’entreprises dans le mois",
-      "valeur": "124 240 créations",
-      "periode": "septembre 2026",
+      "valeur": "129 968 créations",
+      "periode": "octobre 2026",
       "source": "INSEE",
       "url": "https://www.insee.fr/fr/statistiques/serie/010755537",
-      "date_publication": "2026-10-16",
-      "collecte_le": "2026-11-17"
+      "date_publication": "2026-11-18",
+      "collecte_le": "2026-11-18"
     },
     {
       "source_id": "bodacc-35",
       "libelle": "Créations d’entreprises en Ille-et-Vilaine",
-      "valeur": "170 annonces",
-      "periode": "du 10/11/2026 au 16/11/2026",
+      "valeur": "163 annonces",
+      "periode": "du 11/11/2026 au 17/11/2026",
       "source": "BODACC (DILA)",
       "url": "https://www.bodacc.fr/",
-      "date_publication": "2026-11-16",
-      "collecte_le": "2026-11-17"
+      "date_publication": "2026-11-17",
+      "collecte_le": "2026-11-18"
     },
     {
       "source_id": "bodacc-35",
       "libelle": "Procédures collectives en Ille-et-Vilaine",
-      "valeur": "46 annonces",
-      "periode": "du 10/11/2026 au 16/11/2026",
+      "valeur": "45 annonces",
+      "periode": "du 11/11/2026 au 17/11/2026",
       "source": "BODACC (DILA)",
       "url": "https://www.bodacc.fr/",
-      "date_publication": "2026-11-16",
-      "collecte_le": "2026-11-17"
+      "date_publication": "2026-11-17",
+      "collecte_le": "2026-11-18"
     },
     {
       "source_id": "bodacc-35",
       "libelle": "Ventes et cessions de fonds en Ille-et-Vilaine",
-      "valeur": "14 annonces",
-      "periode": "du 10/11/2026 au 16/11/2026",
+      "valeur": "16 annonces",
+      "periode": "du 11/11/2026 au 17/11/2026",
       "source": "BODACC (DILA)",
       "url": "https://www.bodacc.fr/",
-      "date_publication": "2026-11-16",
-      "collecte_le": "2026-11-17"
+      "date_publication": "2026-11-17",
+      "collecte_le": "2026-11-18"
     },
     {
       "source_id": "bodacc-35",
       "libelle": "Radiations en Ille-et-Vilaine",
-      "valeur": "98 annonces",
-      "periode": "du 10/11/2026 au 16/11/2026",
+      "valeur": "108 annonces",
+      "periode": "du 11/11/2026 au 17/11/2026",
       "source": "BODACC (DILA)",
       "url": "https://www.bodacc.fr/",
-      "date_publication": "2026-11-16",
-      "collecte_le": "2026-11-17"
+      "date_publication": "2026-11-17",
+      "collecte_le": "2026-11-18"
     }
   ],
   "suivi": {
@@ -7413,7 +7438,7 @@
       ],
       "source": "Assemblée nationale et Sénat — dossiers législatifs",
       "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/PLF_2027",
-      "mis_a_jour_le": "2026-11-17",
+      "mis_a_jour_le": "2026-11-18",
       "mesures": {
         "libelle": "Projet de loi n° 3210 (texte déposé par le Gouvernement)",
         "url": "https://www.assemblee-nationale.fr/dyn/17/textes/l17b3210_projet-loi",
@@ -8713,7 +8738,7 @@
       ],
       "source": "Assemblée nationale et Sénat — dossiers législatifs",
       "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/PLFSS_2027",
-      "mis_a_jour_le": "2026-11-17",
+      "mis_a_jour_le": "2026-11-18",
       "mesures": {
         "libelle": "Projet de loi n° 3211 (texte déposé par le Gouvernement)",
         "url": "https://www.assemblee-nationale.fr/dyn/17/textes/l17b3211_projet-loi",
@@ -9460,16 +9485,6 @@
     }
   ],
   "echeances": [
-    {
-      "id": "impots-2026-11-10-bf20a9b0",
-      "date": "2026-11-10",
-      "titre": "Prélèvement à la source – PASRAU",
-      "detail": "Date limite pour la télédéclaration PASRAU (revenus de remplacement) d’octobre 2026 et le télépaiement (paiement mensuel).",
-      "categorie": "social",
-      "source": "impots.gouv.fr — calendrier fiscal",
-      "url": "https://www.impots.gouv.fr/professionnel/calendrier-fiscal/2026-11",
-      "origine": "calendrier_officiel"
-    },
     {
       "id": "impots-2026-11-13-5da84577",
       "date": "2026-11-13",
