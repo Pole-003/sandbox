@@ -1,7 +1,73 @@
 {
   "version": 1,
-  "genere_le": "2026-11-18T14:22:54.990Z",
+  "genere_le": "2026-11-19T14:34:07.190Z",
   "articles": [
+    {
+      "id": "7365369a690818ad",
+      "titre": "PLF 2027 : nouvelle étape — Première lecture au Sénat",
+      "source": "Assemblée nationale — Dossier législatif du PLF",
+      "source_id": "an-dossier-plf",
+      "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/PLF_2027",
+      "date": "2026-11-19",
+      "theme": "Loi de finances",
+      "resume": "Étape « Première lecture au Sénat » (19/11/2026), d’après le dossier législatif de l’Assemblée nationale.",
+      "importance": 5,
+      "public": [
+        "Expertise comptable",
+        "Conseil aux dirigeants"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-11-19",
+      "score": 11,
+      "pourquoi": {
+        "mots": [
+          {
+            "mot": "plf",
+            "poids": 5
+          }
+        ],
+        "coefficient": 1,
+        "bonus_source": 4,
+        "bonus_fraicheur": 2,
+        "score": 9
+      }
+    },
+    {
+      "id": "47c0cf79432b2f4b",
+      "titre": "BIC - Prise en compte dans l’assiette du crédit d’impôt recherche des dépenses relatives aux remboursements de frais de trajet domicile-travail engagés par des personnels de recherche dans le cadre d’un accord d’entreprise - Rescrit",
+      "source": "BOFiP-Impôts — Actualités",
+      "source_id": "bofip-actualites",
+      "url": "https://bofip.impots.gouv.fr/bofip/14814-PGP.html/ACTU-2025-00154",
+      "date": "2026-11-18",
+      "theme": "Fiscal et comptable",
+      "resume": "BIC - Prise en compte dans l’assiette du crédit d’impôt recherche des dépenses relatives aux remboursements de frais de trajet domicile-travail engagés par des personnels de recherche dans le cadre d’un accord d’entreprise - Rescrit (identifiant juridique ACTU-2025-00154; publié le 18/11/2026)",
+      "importance": 4,
+      "public": [
+        "Expertise comptable",
+        "Conseil aux dirigeants"
+      ],
+      "type": "doctrine",
+      "origine": "flux",
+      "collecte_le": "2026-11-19",
+      "score": 9,
+      "pourquoi": {
+        "mots": [
+          {
+            "mot": "impôt",
+            "poids": 2
+          },
+          {
+            "mot": "rescrit",
+            "poids": 3
+          }
+        ],
+        "coefficient": 1,
+        "bonus_source": 2,
+        "bonus_fraicheur": 2,
+        "score": 7
+      }
+    },
     {
       "id": "0d5aecb9cbcb7db6",
       "titre": "Sanctuariser la liberté des artistes - texte N° 169",
@@ -7300,7 +7366,7 @@
       "source": "INSEE",
       "url": "https://www.insee.fr/fr/statistiques/serie/011812232",
       "date_publication": "2026-11-13",
-      "collecte_le": "2026-11-18"
+      "collecte_le": "2026-11-19"
     },
     {
       "source_id": "insee-bdm",
@@ -7310,7 +7376,7 @@
       "source": "INSEE",
       "url": "https://www.insee.fr/fr/statistiques/serie/011794844",
       "date_publication": "2026-10-30",
-      "collecte_le": "2026-11-18"
+      "collecte_le": "2026-11-19"
     },
     {
       "source_id": "insee-bdm",
@@ -7320,7 +7386,7 @@
       "source": "INSEE",
       "url": "https://www.insee.fr/fr/statistiques/serie/001688527",
       "date_publication": "2026-11-10",
-      "collecte_le": "2026-11-18"
+      "collecte_le": "2026-11-19"
     },
     {
       "source_id": "insee-bdm",
@@ -7330,7 +7396,7 @@
       "source": "INSEE",
       "url": "https://www.insee.fr/fr/statistiques/serie/001565530",
       "date_publication": "2026-10-22",
-      "collecte_le": "2026-11-18"
+      "collecte_le": "2026-11-19"
     },
     {
       "source_id": "insee-bdm",
@@ -7340,53 +7406,53 @@
       "source": "INSEE",
       "url": "https://www.insee.fr/fr/statistiques/serie/010755537",
       "date_publication": "2026-11-18",
-      "collecte_le": "2026-11-18"
+      "collecte_le": "2026-11-19"
     },
     {
       "source_id": "bodacc-35",
       "libelle": "Créations d’entreprises en Ille-et-Vilaine",
-      "valeur": "163 annonces",
-      "periode": "du 11/11/2026 au 17/11/2026",
+      "valeur": "205 annonces",
+      "periode": "du 12/11/2026 au 18/11/2026",
       "source": "BODACC (DILA)",
       "url": "https://www.bodacc.fr/",
-      "date_publication": "2026-11-17",
-      "collecte_le": "2026-11-18"
+      "date_publication": "2026-11-18",
+      "collecte_le": "2026-11-19"
     },
     {
       "source_id": "bodacc-35",
       "libelle": "Procédures collectives en Ille-et-Vilaine",
       "valeur": "45 annonces",
-      "periode": "du 11/11/2026 au 17/11/2026",
+      "periode": "du 12/11/2026 au 18/11/2026",
       "source": "BODACC (DILA)",
       "url": "https://www.bodacc.fr/",
-      "date_publication": "2026-11-17",
-      "collecte_le": "2026-11-18"
+      "date_publication": "2026-11-18",
+      "collecte_le": "2026-11-19"
     },
     {
       "source_id": "bodacc-35",
       "libelle": "Ventes et cessions de fonds en Ille-et-Vilaine",
-      "valeur": "16 annonces",
-      "periode": "du 11/11/2026 au 17/11/2026",
+      "valeur": "19 annonces",
+      "periode": "du 12/11/2026 au 18/11/2026",
       "source": "BODACC (DILA)",
       "url": "https://www.bodacc.fr/",
-      "date_publication": "2026-11-17",
-      "collecte_le": "2026-11-18"
+      "date_publication": "2026-11-18",
+      "collecte_le": "2026-11-19"
     },
     {
       "source_id": "bodacc-35",
       "libelle": "Radiations en Ille-et-Vilaine",
       "valeur": "108 annonces",
-      "periode": "du 11/11/2026 au 17/11/2026",
+      "periode": "du 12/11/2026 au 18/11/2026",
       "source": "BODACC (DILA)",
       "url": "https://www.bodacc.fr/",
-      "date_publication": "2026-11-17",
-      "collecte_le": "2026-11-18"
+      "date_publication": "2026-11-18",
+      "collecte_le": "2026-11-19"
     }
   ],
   "suivi": {
     "plf": {
       "texte": "PLF 2027",
-      "etape_actuelle": "Première lecture à l'Assemblée nationale",
+      "etape_actuelle": "Première lecture au Sénat",
       "etapes": [
         {
           "libelle": "Dépôt à l'Assemblée nationale",
@@ -7396,12 +7462,12 @@
         {
           "libelle": "Première lecture à l'Assemblée nationale",
           "date": "2026-10-01",
-          "statut": "en_cours"
+          "statut": "fait"
         },
         {
           "libelle": "Première lecture au Sénat",
-          "date": null,
-          "statut": "a_venir"
+          "date": "2026-11-19",
+          "statut": "en_cours"
         },
         {
           "libelle": "Commission mixte paritaire",
@@ -7436,9 +7502,9 @@
           "indicative": true
         }
       ],
-      "source": "Assemblée nationale et Sénat — dossiers législatifs",
+      "source": "Assemblée nationale — dossier législatif",
       "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/PLF_2027",
-      "mis_a_jour_le": "2026-11-18",
+      "mis_a_jour_le": "2026-11-19",
       "mesures": {
         "libelle": "Projet de loi n° 3210 (texte déposé par le Gouvernement)",
         "url": "https://www.assemblee-nationale.fr/dyn/17/textes/l17b3210_projet-loi",
@@ -8674,7 +8740,6 @@
           "etablie_le": "2026-10-08"
         }
       },
-      "url_senat": "https://www.senat.fr/dossier-legislatif/pjlf2027.html",
       "mots_cles": [
         "projet de loi de finances",
         "loi de finances pour 2027",
@@ -8736,9 +8801,9 @@
           "indicative": true
         }
       ],
-      "source": "Assemblée nationale et Sénat — dossiers législatifs",
+      "source": "Assemblée nationale — dossier législatif",
       "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/PLFSS_2027",
-      "mis_a_jour_le": "2026-11-18",
+      "mis_a_jour_le": "2026-11-19",
       "mesures": {
         "libelle": "Projet de loi n° 3211 (texte déposé par le Gouvernement)",
         "url": "https://www.assemblee-nationale.fr/dyn/17/textes/l17b3211_projet-loi",
@@ -9373,7 +9438,6 @@
           "etablie_le": "2026-10-08"
         }
       },
-      "url_senat": "https://www.senat.fr/dossier-legislatif/plfss2027.html",
       "mots_cles": [
         "financement de la sécurité sociale",
         "plfss",
