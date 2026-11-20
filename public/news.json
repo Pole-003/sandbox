@@ -1,7 +1,609 @@
 {
   "version": 1,
-  "genere_le": "2026-11-19T14:34:07.190Z",
+  "genere_le": "2026-11-20T14:12:34.973Z",
   "articles": [
+    {
+      "id": "d35a87a55011cc51",
+      "titre": "N° 3291 annexe 23 - Rapport de M. Anthony Boulogne sur le projet de loi de finances pour 2027 (n°3210).",
+      "source": "Assemblée nationale — Publications parlementaires",
+      "source_id": "an-documents",
+      "url": "https://www.assemblee-nationale.fr/17/budget/plf2027/b3291-tIII-a23.asp",
+      "date": "2026-11-20",
+      "theme": "Loi de finances",
+      "resume": null,
+      "importance": 5,
+      "public": [
+        "Expertise comptable",
+        "Conseil aux dirigeants"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-11-20",
+      "score": 13,
+      "pourquoi": {
+        "mots": [
+          {
+            "mot": "projet de loi de finances",
+            "poids": 6
+          },
+          {
+            "mot": "loi de finances",
+            "poids": 5
+          }
+        ],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 2,
+        "score": 11
+      }
+    },
+    {
+      "id": "df02b2a9497fa3e6",
+      "titre": "Financement de la sécurité sociale pour 2027 - Texte n° 33",
+      "source": "Sénat — Thème Budget",
+      "source_id": "senat-budget",
+      "url": "https://www.senat.fr/leg/tas26-033.html",
+      "date": "2026-11-20",
+      "theme": "Sécurité sociale",
+      "resume": "Texte",
+      "importance": 4,
+      "public": [
+        "Social / paie"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-11-20",
+      "score": 10,
+      "pourquoi": {
+        "mots": [
+          {
+            "mot": "financement de la sécurité sociale",
+            "poids": 6
+          },
+          {
+            "mot": "sécurité sociale",
+            "poids": 2
+          }
+        ],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 2,
+        "score": 8
+      }
+    },
+    {
+      "id": "4b4a5aa2cc14bb78",
+      "titre": "N° 3486 - Projet de loi, modifié par le Sénat, pour 2026",
+      "source": "Assemblée nationale — Commission des finances",
+      "source_id": "an-commission-finances",
+      "url": "https://www.assemblee-nationale.fr/17/projets/pl3486.asp",
+      "date": "2026-11-20",
+      "theme": "Loi de finances",
+      "resume": null,
+      "importance": 1,
+      "public": [
+        "Expertise comptable",
+        "Conseil aux dirigeants"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-11-20",
+      "score": 2,
+      "pourquoi": {
+        "mots": [],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 2,
+        "score": 0
+      }
+    },
+    {
+      "id": "de9ede3f9abd315f",
+      "titre": "Budget 2027 : Les conditions générales de l'équilibre financier (article liminaire et première partie de la loi de finances) - rapport général n° 156 tome II",
+      "source": "Sénat — Derniers rapports",
+      "source_id": "senat-rapports",
+      "url": "https://www.senat.fr/rap/l26-156-21/l26-156-21.html",
+      "date": "2026-11-19",
+      "theme": "Loi de finances",
+      "resume": "Rapport général n° 156 tome II de Mme Christine LAVARDE, rapporteur général, fait au nom de la commission des finances, sur le projet de loi de finances pour 2027 : Les conditions générales de l'équilibre financier (article liminaire et première partie de la loi de finances) (19 novembre 2026)",
+      "importance": 5,
+      "public": [
+        "Expertise comptable",
+        "Conseil aux dirigeants"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-11-20",
+      "score": 15,
+      "pourquoi": {
+        "mots": [
+          {
+            "mot": "projet de loi de finances",
+            "poids": 6
+          },
+          {
+            "mot": "loi de finances",
+            "poids": 5
+          },
+          {
+            "mot": "budget",
+            "poids": 1
+          },
+          {
+            "mot": "première partie",
+            "poids": 1
+          }
+        ],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 2,
+        "score": 13
+      }
+    },
+    {
+      "id": "8e7daf14e6cae81d",
+      "titre": "Budget 2027 - texte N° 155",
+      "source": "Sénat — Derniers textes",
+      "source_id": "senat-textes",
+      "url": "https://www.senat.fr/leg/pjl26-155.html",
+      "date": "2026-11-19",
+      "theme": "Loi de finances",
+      "resume": "Projet de loi de finances pour 2027 : texte N° 155 transmis au Sénat le 19 novembre 2026",
+      "importance": 5,
+      "public": [
+        "Expertise comptable",
+        "Conseil aux dirigeants"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-11-20",
+      "score": 14,
+      "pourquoi": {
+        "mots": [
+          {
+            "mot": "projet de loi de finances",
+            "poids": 6
+          },
+          {
+            "mot": "loi de finances",
+            "poids": 5
+          },
+          {
+            "mot": "budget",
+            "poids": 1
+          }
+        ],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 2,
+        "score": 12
+      }
+    },
+    {
+      "id": "47841967a45c2e54",
+      "titre": "Budget 2027 : Administration générale et territoriale de l'État - avis n° 162 tome I",
+      "source": "Sénat — Derniers rapports",
+      "source_id": "senat-rapports",
+      "url": "https://www.senat.fr/rap/a26-162-1/a26-162-1.html",
+      "date": "2026-11-19",
+      "theme": "Loi de finances",
+      "resume": "Avis n° 162 tome I de Mme Cécile CUKIERMAN, fait au nom de la commission des lois constitutionnelles, de législation, du suffrage universel, du Règlement et d'administration générale, sur le projet de loi de finances pour 2027 : Administration générale et territoriale de l'État (19 novembre 2026)",
+      "importance": 5,
+      "public": [
+        "Expertise comptable",
+        "Conseil aux dirigeants"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-11-20",
+      "score": 14,
+      "pourquoi": {
+        "mots": [
+          {
+            "mot": "projet de loi de finances",
+            "poids": 6
+          },
+          {
+            "mot": "loi de finances",
+            "poids": 5
+          },
+          {
+            "mot": "budget",
+            "poids": 1
+          }
+        ],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 2,
+        "score": 12
+      }
+    },
+    {
+      "id": "2650c7025902a000",
+      "titre": "Budget 2027 : Affaires européennes - rapport général n° 156 tome II",
+      "source": "Sénat — Derniers rapports",
+      "source_id": "senat-rapports",
+      "url": "https://www.senat.fr/rap/l26-156-22/l26-156-22.html",
+      "date": "2026-11-19",
+      "theme": "Loi de finances",
+      "resume": "Rapport général n° 156 tome II de M. Jean-Marie MIZZON, fait au nom de la commission des finances, sur le projet de loi de finances pour 2027 : Affaires européennes (19 novembre 2026)",
+      "importance": 5,
+      "public": [
+        "Expertise comptable",
+        "Conseil aux dirigeants"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-11-20",
+      "score": 14,
+      "pourquoi": {
+        "mots": [
+          {
+            "mot": "projet de loi de finances",
+            "poids": 6
+          },
+          {
+            "mot": "loi de finances",
+            "poids": 5
+          },
+          {
+            "mot": "budget",
+            "poids": 1
+          }
+        ],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 2,
+        "score": 12
+      }
+    },
+    {
+      "id": "3f9ddeab8c753031",
+      "titre": "Budget 2027 : Diplomatie culturelle et d'influence - avis n° 161 tome I",
+      "source": "Sénat — Derniers rapports",
+      "source_id": "senat-rapports",
+      "url": "https://www.senat.fr/rap/a26-161-1/a26-161-1.html",
+      "date": "2026-11-19",
+      "theme": "Loi de finances",
+      "resume": "Avis n° 161 tome I de Mme Mathilde OLLIVIER, fait au nom de la commission de la culture, de l'éducation, de la communication et du sport, sur le projet de loi de finances pour 2027 : Diplomatie culturelle et d'influence (19 novembre 2026)",
+      "importance": 5,
+      "public": [
+        "Expertise comptable",
+        "Conseil aux dirigeants"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-11-20",
+      "score": 14,
+      "pourquoi": {
+        "mots": [
+          {
+            "mot": "projet de loi de finances",
+            "poids": 6
+          },
+          {
+            "mot": "loi de finances",
+            "poids": 5
+          },
+          {
+            "mot": "budget",
+            "poids": 1
+          }
+        ],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 2,
+        "score": 12
+      }
+    },
+    {
+      "id": "320bb01839ede16d",
+      "titre": "Budget 2027 : Direction de l'action du Gouvernement - Publications officielles et information administrative - avis n° 162 tome IX",
+      "source": "Sénat — Derniers rapports",
+      "source_id": "senat-rapports",
+      "url": "https://www.senat.fr/rap/a26-162-9/a26-162-9.html",
+      "date": "2026-11-19",
+      "theme": "Loi de finances",
+      "resume": "Avis n° 162 tome IX de M. Michel MASSET, fait au nom de la commission des lois constitutionnelles, de législation, du suffrage universel, du Règlement et d'administration générale, sur le projet de loi de finances pour 2027 : Direction de l'action du Gouvernement - Publications officielles et…",
+      "importance": 5,
+      "public": [
+        "Expertise comptable",
+        "Conseil aux dirigeants"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-11-20",
+      "score": 14,
+      "pourquoi": {
+        "mots": [
+          {
+            "mot": "projet de loi de finances",
+            "poids": 6
+          },
+          {
+            "mot": "loi de finances",
+            "poids": 5
+          },
+          {
+            "mot": "budget",
+            "poids": 1
+          }
+        ],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 2,
+        "score": 12
+      }
+    },
+    {
+      "id": "095f02b646ac83f2",
+      "titre": "Budget 2027 : Le budget de 2027 et son contexte économique et financier - rapport général n° 156 tome I",
+      "source": "Sénat — Derniers rapports",
+      "source_id": "senat-rapports",
+      "url": "https://www.senat.fr/rap/l26-156-1/l26-156-1.html",
+      "date": "2026-11-19",
+      "theme": "Loi de finances",
+      "resume": "Rapport général n° 156 tome I de Mme Christine LAVARDE, rapporteur général, fait au nom de la commission des finances, sur le projet de loi de finances pour 2027 : Le budget de 2027 et son contexte économique et financier (19 novembre 2026)",
+      "importance": 5,
+      "public": [
+        "Expertise comptable",
+        "Conseil aux dirigeants"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-11-20",
+      "score": 14,
+      "pourquoi": {
+        "mots": [
+          {
+            "mot": "projet de loi de finances",
+            "poids": 6
+          },
+          {
+            "mot": "loi de finances",
+            "poids": 5
+          },
+          {
+            "mot": "budget",
+            "poids": 1
+          }
+        ],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 2,
+        "score": 12
+      }
+    },
+    {
+      "id": "2eb1fc09cc7f3071",
+      "titre": "Budget 2027 : Livre et industries culturelles - avis n° 161 tome IV",
+      "source": "Sénat — Derniers rapports",
+      "source_id": "senat-rapports",
+      "url": "https://www.senat.fr/rap/a26-161-44/a26-161-44.html",
+      "date": "2026-11-19",
+      "theme": "Loi de finances",
+      "resume": "Avis n° 161 tome IV de Mme Laure DARCOS, fait au nom de la commission de la culture, de l'éducation, de la communication et du sport, sur le projet de loi de finances pour 2027 : Livre et industries culturelles (19 novembre 2026)",
+      "importance": 5,
+      "public": [
+        "Expertise comptable",
+        "Conseil aux dirigeants"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-11-20",
+      "score": 14,
+      "pourquoi": {
+        "mots": [
+          {
+            "mot": "projet de loi de finances",
+            "poids": 6
+          },
+          {
+            "mot": "loi de finances",
+            "poids": 5
+          },
+          {
+            "mot": "budget",
+            "poids": 1
+          }
+        ],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 2,
+        "score": 12
+      }
+    },
+    {
+      "id": "54e5406d45b47edc",
+      "titre": "Budget 2027 : Participations financières de l'État - avis n° 157 tome VIII",
+      "source": "Sénat — Derniers rapports",
+      "source_id": "senat-rapports",
+      "url": "https://www.senat.fr/rap/a26-157-8/a26-157-8.html",
+      "date": "2026-11-19",
+      "theme": "Loi de finances",
+      "resume": "Avis n° 157 tome VIII de Mme Martine BERTHET, fait au nom de la commission des affaires économiques, sur le projet de loi de finances pour 2027 : Participations financières de l'État (19 novembre 2026)",
+      "importance": 5,
+      "public": [
+        "Expertise comptable",
+        "Conseil aux dirigeants"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-11-20",
+      "score": 14,
+      "pourquoi": {
+        "mots": [
+          {
+            "mot": "projet de loi de finances",
+            "poids": 6
+          },
+          {
+            "mot": "loi de finances",
+            "poids": 5
+          },
+          {
+            "mot": "budget",
+            "poids": 1
+          }
+        ],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 2,
+        "score": 12
+      }
+    },
+    {
+      "id": "771a2a3ac4621deb",
+      "titre": "Budget 2027 : Pouvoirs publics - avis n° 162 tome X",
+      "source": "Sénat — Derniers rapports",
+      "source_id": "senat-rapports",
+      "url": "https://www.senat.fr/rap/a26-162-10/a26-162-10.html",
+      "date": "2026-11-19",
+      "theme": "Loi de finances",
+      "resume": "Avis n° 162 tome X de M. Éric KERROUCHE, fait au nom de la commission des lois constitutionnelles, de législation, du suffrage universel, du Règlement et d'administration générale, sur le projet de loi de finances pour 2027 : Pouvoirs publics (19 novembre 2026)",
+      "importance": 5,
+      "public": [
+        "Expertise comptable",
+        "Conseil aux dirigeants"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-11-20",
+      "score": 14,
+      "pourquoi": {
+        "mots": [
+          {
+            "mot": "projet de loi de finances",
+            "poids": 6
+          },
+          {
+            "mot": "loi de finances",
+            "poids": 5
+          },
+          {
+            "mot": "budget",
+            "poids": 1
+          }
+        ],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 2,
+        "score": 12
+      }
+    },
+    {
+      "id": "4724b591074bbbcc",
+      "titre": "Budget 2027 : Presse - avis n° 161 tome IV",
+      "source": "Sénat — Derniers rapports",
+      "source_id": "senat-rapports",
+      "url": "https://www.senat.fr/rap/a26-161-42/a26-161-42.html",
+      "date": "2026-11-19",
+      "theme": "Loi de finances",
+      "resume": "Avis n° 161 tome IV de M. Michel LAUGIER, fait au nom de la commission de la culture, de l'éducation, de la communication et du sport, sur le projet de loi de finances pour 2027 : Presse (19 novembre 2026)",
+      "importance": 5,
+      "public": [
+        "Expertise comptable",
+        "Conseil aux dirigeants"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-11-20",
+      "score": 14,
+      "pourquoi": {
+        "mots": [
+          {
+            "mot": "projet de loi de finances",
+            "poids": 6
+          },
+          {
+            "mot": "loi de finances",
+            "poids": 5
+          },
+          {
+            "mot": "budget",
+            "poids": 1
+          }
+        ],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 2,
+        "score": 12
+      }
+    },
+    {
+      "id": "74523c99218a11b5",
+      "titre": "Budget 2027 : Relations avec les collectivités territoriales - avis n° 162 tome XI",
+      "source": "Sénat — Derniers rapports",
+      "source_id": "senat-rapports",
+      "url": "https://www.senat.fr/rap/a26-162-11/a26-162-11.html",
+      "date": "2026-11-19",
+      "theme": "Loi de finances",
+      "resume": "Avis n° 162 tome XI de M. Jean-Michel ARNAUD, fait au nom de la commission des lois constitutionnelles, de législation, du suffrage universel, du Règlement et d'administration générale, sur le projet de loi de finances pour 2027 : Relations avec les collectivités territoriales (19 novembre 2026)",
+      "importance": 5,
+      "public": [
+        "Expertise comptable",
+        "Conseil aux dirigeants"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-11-20",
+      "score": 14,
+      "pourquoi": {
+        "mots": [
+          {
+            "mot": "projet de loi de finances",
+            "poids": 6
+          },
+          {
+            "mot": "loi de finances",
+            "poids": 5
+          },
+          {
+            "mot": "budget",
+            "poids": 1
+          }
+        ],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 2,
+        "score": 12
+      }
+    },
+    {
+      "id": "a01f0fafde41c4a4",
+      "titre": "Projet de loi de finances de fin de gestion pour 2026 - Texte n° 34",
+      "source": "Sénat — Thème Budget",
+      "source_id": "senat-budget",
+      "url": "https://www.senat.fr/leg/tas26-034.html",
+      "date": "2026-11-19",
+      "theme": "Loi de finances",
+      "resume": "Texte",
+      "importance": 5,
+      "public": [
+        "Expertise comptable",
+        "Conseil aux dirigeants"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-11-20",
+      "score": 13,
+      "pourquoi": {
+        "mots": [
+          {
+            "mot": "projet de loi de finances",
+            "poids": 6
+          },
+          {
+            "mot": "loi de finances",
+            "poids": 5
+          }
+        ],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 2,
+        "score": 11
+      }
+    },
     {
       "id": "7365369a690818ad",
       "titre": "PLF 2027 : nouvelle étape — Première lecture au Sénat",
@@ -31,6 +633,44 @@
         "bonus_source": 4,
         "bonus_fraicheur": 2,
         "score": 9
+      },
+      "autres_sources": [
+        {
+          "source": "Sénat — Dossier législatif du PLF",
+          "url": "https://www.senat.fr/dossier-legislatif/pjlf2027.html",
+          "titre": "PLF 2027 : nouvelle étape au Sénat — Première lecture - Sénat"
+        }
+      ]
+    },
+    {
+      "id": "db6c2f39942fb5db",
+      "titre": "Améliorer les moyens d'action de l'AGRASC - rapport n° 179",
+      "source": "Sénat — Derniers rapports",
+      "source_id": "senat-rapports",
+      "url": "https://www.senat.fr/rap/l26-179/l26-179.html",
+      "date": "2026-11-19",
+      "theme": "Loi de finances",
+      "resume": "Rapport n° 179 de Mme Nadine BELLUROT, sénatrice et M. Jean-Luc WARSMANN, député, fait au nom de la commission mixte paritaire, sur la proposition de loi visant à améliorer les moyens d'action de l'AGRASC et à faciliter l'exercice des missions d'expert judiciaire (17 novembre 2026)",
+      "importance": 2,
+      "public": [
+        "Expertise comptable",
+        "Conseil aux dirigeants"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-11-20",
+      "score": 4,
+      "pourquoi": {
+        "mots": [
+          {
+            "mot": "commission mixte paritaire",
+            "poids": 2
+          }
+        ],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 2,
+        "score": 2
       }
     },
     {
@@ -50,7 +690,7 @@
       "type": "doctrine",
       "origine": "flux",
       "collecte_le": "2026-11-19",
-      "score": 9,
+      "score": 8,
       "pourquoi": {
         "mots": [
           {
@@ -64,8 +704,86 @@
         ],
         "coefficient": 1,
         "bonus_source": 2,
-        "bonus_fraicheur": 2,
+        "bonus_fraicheur": 1,
         "score": 7
+      }
+    },
+    {
+      "id": "f2a7c74909eb9308",
+      "titre": "Agence pour l'enseignement français à l'étranger et emprunt à long terme - texte N° 174",
+      "source": "Sénat — Derniers textes",
+      "source_id": "senat-textes",
+      "url": "https://www.senat.fr/leg/ppl26-174.html",
+      "date": "2026-11-18",
+      "theme": "Loi de finances",
+      "resume": "Proposition de loi visant à permettre à l'Agence pour l'enseignement français à l'étranger de recourir à l'emprunt à long terme : texte N° 174 de Mme Sophie BRIANTE GUILLEMONT et plusieurs de ses collègues, déposé au Sénat le 13 novembre 2026",
+      "importance": 1,
+      "public": [
+        "Expertise comptable",
+        "Conseil aux dirigeants"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-11-20",
+      "score": 1,
+      "pourquoi": {
+        "mots": [],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 1,
+        "score": 0
+      }
+    },
+    {
+      "id": "844668ac07596fec",
+      "titre": "Améliorer les moyens d'action de l'AGRASC - texte de la commission N° 180",
+      "source": "Sénat — Derniers textes",
+      "source_id": "senat-textes",
+      "url": "https://www.senat.fr/leg/ppl26-180.html",
+      "date": "2026-11-18",
+      "theme": "Loi de finances",
+      "resume": "Proposition de loi visant à améliorer les moyens d'action de l'AGRASC et à faciliter l'exercice des missions d'expert judiciaire : texte de la commission N° 180 déposé le 17 novembre 2026",
+      "importance": 1,
+      "public": [
+        "Expertise comptable",
+        "Conseil aux dirigeants"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-11-20",
+      "score": 1,
+      "pourquoi": {
+        "mots": [],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 1,
+        "score": 0
+      }
+    },
+    {
+      "id": "9fcd2a737b582abd",
+      "titre": "Cérémonie de remise du Prix 2026 de la délégation aux droits des femmes - 3 novembre 2026 - rapport d'information n° 143",
+      "source": "Sénat — Derniers rapports",
+      "source_id": "senat-rapports",
+      "url": "https://www.senat.fr/notice-rapport/2026/r26-143-notice.html",
+      "date": "2026-11-18",
+      "theme": "Loi de finances",
+      "resume": "Rapport d'information n° 143 de Mme Dominique VÉRIEN, fait au nom de la délégation aux droits des femmes et à l'égalité des chances entre les hommes et les femmes : Cérémonie de remise du Prix 2026 de la délégation aux droits des femmes - 3 novembre 2026 (4 novembre 2026)",
+      "importance": 1,
+      "public": [
+        "Expertise comptable",
+        "Conseil aux dirigeants"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-11-20",
+      "score": 1,
+      "pourquoi": {
+        "mots": [],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 1,
+        "score": 0
       }
     },
     {
@@ -84,12 +802,38 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-11-18",
-      "score": 2,
+      "score": 1,
       "pourquoi": {
         "mots": [],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 2,
+        "bonus_fraicheur": 1,
+        "score": 0
+      }
+    },
+    {
+      "id": "02acce856e649919",
+      "titre": "Sécuriser la procédure de mainlevée des mesures de soins psychiatriques - texte N° 132",
+      "source": "Sénat — Derniers textes",
+      "source_id": "senat-textes",
+      "url": "https://www.senat.fr/leg/ppl26-132.html",
+      "date": "2026-11-18",
+      "theme": "Loi de finances",
+      "resume": "Proposition de loi visant à sécuriser la procédure de mainlevée des mesures de soins psychiatriques sans consentement des patients pris en charge en unités pour malades difficiles : texte N° 132 de M. Khalifé KHALIFÉ et Mme Lauriane JOSENDE, déposé au Sénat le 30 octobre 2026",
+      "importance": 1,
+      "public": [
+        "Expertise comptable",
+        "Conseil aux dirigeants"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-11-20",
+      "score": 1,
+      "pourquoi": {
+        "mots": [],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 1,
         "score": 0
       }
     },
@@ -109,12 +853,12 @@
       "type": null,
       "origine": "flux",
       "collecte_le": "2026-11-17",
-      "score": 1,
+      "score": 0,
       "pourquoi": {
         "mots": [],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 1,
+        "bonus_fraicheur": 0,
         "score": 0
       }
     },
@@ -1657,7 +2401,7 @@
         {
           "source": "Sénat — Dossier législatif du PLFSS",
           "url": "https://www.senat.fr/dossier-legislatif/plfss2027.html",
-          "titre": "PLFSS 2027 : nouvelle étape au Sénat — Première lecture - Sénat"
+          "titre": "PLFSS 2027 : nouvelle étape au Sénat — CMP"
         }
       ]
     },
@@ -7366,7 +8110,7 @@
       "source": "INSEE",
       "url": "https://www.insee.fr/fr/statistiques/serie/011812232",
       "date_publication": "2026-11-13",
-      "collecte_le": "2026-11-19"
+      "collecte_le": "2026-11-20"
     },
     {
       "source_id": "insee-bdm",
@@ -7376,7 +8120,7 @@
       "source": "INSEE",
       "url": "https://www.insee.fr/fr/statistiques/serie/011794844",
       "date_publication": "2026-10-30",
-      "collecte_le": "2026-11-19"
+      "collecte_le": "2026-11-20"
     },
     {
       "source_id": "insee-bdm",
@@ -7386,17 +8130,17 @@
       "source": "INSEE",
       "url": "https://www.insee.fr/fr/statistiques/serie/001688527",
       "date_publication": "2026-11-10",
-      "collecte_le": "2026-11-19"
+      "collecte_le": "2026-11-20"
     },
     {
       "source_id": "insee-bdm",
       "libelle": "Climat des affaires (100 = moyenne de long terme)",
-      "valeur": "97,5",
-      "periode": "octobre 2026",
+      "valeur": "94,6",
+      "periode": "novembre 2026",
       "source": "INSEE",
       "url": "https://www.insee.fr/fr/statistiques/serie/001565530",
-      "date_publication": "2026-10-22",
-      "collecte_le": "2026-11-19"
+      "date_publication": "2026-11-20",
+      "collecte_le": "2026-11-20"
     },
     {
       "source_id": "insee-bdm",
@@ -7406,47 +8150,47 @@
       "source": "INSEE",
       "url": "https://www.insee.fr/fr/statistiques/serie/010755537",
       "date_publication": "2026-11-18",
-      "collecte_le": "2026-11-19"
+      "collecte_le": "2026-11-20"
     },
     {
       "source_id": "bodacc-35",
       "libelle": "Créations d’entreprises en Ille-et-Vilaine",
       "valeur": "205 annonces",
-      "periode": "du 12/11/2026 au 18/11/2026",
+      "periode": "du 13/11/2026 au 19/11/2026",
       "source": "BODACC (DILA)",
       "url": "https://www.bodacc.fr/",
-      "date_publication": "2026-11-18",
-      "collecte_le": "2026-11-19"
+      "date_publication": "2026-11-19",
+      "collecte_le": "2026-11-20"
     },
     {
       "source_id": "bodacc-35",
       "libelle": "Procédures collectives en Ille-et-Vilaine",
-      "valeur": "45 annonces",
-      "periode": "du 12/11/2026 au 18/11/2026",
+      "valeur": "62 annonces",
+      "periode": "du 13/11/2026 au 19/11/2026",
       "source": "BODACC (DILA)",
       "url": "https://www.bodacc.fr/",
-      "date_publication": "2026-11-18",
-      "collecte_le": "2026-11-19"
+      "date_publication": "2026-11-19",
+      "collecte_le": "2026-11-20"
     },
     {
       "source_id": "bodacc-35",
       "libelle": "Ventes et cessions de fonds en Ille-et-Vilaine",
       "valeur": "19 annonces",
-      "periode": "du 12/11/2026 au 18/11/2026",
+      "periode": "du 13/11/2026 au 19/11/2026",
       "source": "BODACC (DILA)",
       "url": "https://www.bodacc.fr/",
-      "date_publication": "2026-11-18",
-      "collecte_le": "2026-11-19"
+      "date_publication": "2026-11-19",
+      "collecte_le": "2026-11-20"
     },
     {
       "source_id": "bodacc-35",
       "libelle": "Radiations en Ille-et-Vilaine",
-      "valeur": "108 annonces",
-      "periode": "du 12/11/2026 au 18/11/2026",
+      "valeur": "127 annonces",
+      "periode": "du 13/11/2026 au 19/11/2026",
       "source": "BODACC (DILA)",
       "url": "https://www.bodacc.fr/",
-      "date_publication": "2026-11-18",
-      "collecte_le": "2026-11-19"
+      "date_publication": "2026-11-19",
+      "collecte_le": "2026-11-20"
     }
   ],
   "suivi": {
@@ -7502,9 +8246,9 @@
           "indicative": true
         }
       ],
-      "source": "Assemblée nationale — dossier législatif",
+      "source": "Assemblée nationale et Sénat — dossiers législatifs",
       "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/PLF_2027",
-      "mis_a_jour_le": "2026-11-19",
+      "mis_a_jour_le": "2026-11-20",
       "mesures": {
         "libelle": "Projet de loi n° 3210 (texte déposé par le Gouvernement)",
         "url": "https://www.assemblee-nationale.fr/dyn/17/textes/l17b3210_projet-loi",
@@ -8740,6 +9484,7 @@
           "etablie_le": "2026-10-08"
         }
       },
+      "url_senat": "https://www.senat.fr/dossier-legislatif/pjlf2027.html",
       "mots_cles": [
         "projet de loi de finances",
         "loi de finances pour 2027",
@@ -8751,7 +9496,7 @@
     },
     "plfss": {
       "texte": "PLFSS 2027",
-      "etape_actuelle": "Première lecture au Sénat",
+      "etape_actuelle": "Commission Mixte Paritaire",
       "etapes": [
         {
           "libelle": "Dépôt à l'Assemblée nationale",
@@ -8766,12 +9511,12 @@
         {
           "libelle": "Première lecture au Sénat",
           "date": "2026-11-02",
-          "statut": "en_cours"
+          "statut": "fait"
         },
         {
-          "libelle": "Commission mixte paritaire",
-          "date": null,
-          "statut": "a_venir"
+          "libelle": "Commission Mixte Paritaire",
+          "date": "2026-11-20",
+          "statut": "en_cours"
         },
         {
           "libelle": "Conseil constitutionnel",
@@ -8801,9 +9546,9 @@
           "indicative": true
         }
       ],
-      "source": "Assemblée nationale — dossier législatif",
+      "source": "Assemblée nationale et Sénat — dossiers législatifs",
       "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/PLFSS_2027",
-      "mis_a_jour_le": "2026-11-19",
+      "mis_a_jour_le": "2026-11-20",
       "mesures": {
         "libelle": "Projet de loi n° 3211 (texte déposé par le Gouvernement)",
         "url": "https://www.assemblee-nationale.fr/dyn/17/textes/l17b3211_projet-loi",
@@ -9438,6 +10183,7 @@
           "etablie_le": "2026-10-08"
         }
       },
+      "url_senat": "https://www.senat.fr/dossier-legislatif/plfss2027.html",
       "mots_cles": [
         "financement de la sécurité sociale",
         "plfss",
