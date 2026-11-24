@@ -1,7 +1,400 @@
 {
   "version": 1,
-  "genere_le": "2026-11-23T16:16:22.894Z",
+  "genere_le": "2026-11-24T16:03:41.196Z",
   "articles": [
+    {
+      "id": "713a6e02b3dfa29c",
+      "titre": "Budget 2027 : Gestion des finances publiques et lutte contre les fraudes - Transformation et fonction publiques - rapport spécial n° 156 annexe 15 tome III",
+      "source": "Sénat — Derniers rapports",
+      "source_id": "senat-rapports",
+      "url": "https://www.senat.fr/rap/l26-156-315/l26-156-315.html",
+      "date": "2026-11-24",
+      "theme": "Loi de finances",
+      "resume": "Rapport spécial n° 156 annexe 15 tome III de M. Albéric de MONTGOLFIER et Mme Florence BLATRIX CONTAT, fait au nom de la commission des finances, sur le projet de loi de finances pour 2027 : Gestion des finances publiques et lutte contre les fraudes - Transformation et fonction publiques (19…",
+      "importance": 5,
+      "public": [
+        "Expertise comptable",
+        "Conseil aux dirigeants"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-11-24",
+      "score": 16,
+      "pourquoi": {
+        "mots": [
+          {
+            "mot": "projet de loi de finances",
+            "poids": 6
+          },
+          {
+            "mot": "loi de finances",
+            "poids": 5
+          },
+          {
+            "mot": "budget",
+            "poids": 1
+          },
+          {
+            "mot": "finances publiques",
+            "poids": 2
+          }
+        ],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 2,
+        "score": 14
+      }
+    },
+    {
+      "id": "be217e5f18f064be",
+      "titre": "Budget 2027 : Crédits non répartis - rapport spécial n° 156 annexe 7 tome III",
+      "source": "Sénat — Derniers rapports",
+      "source_id": "senat-rapports",
+      "url": "https://www.senat.fr/rap/l26-156-37/l26-156-37.html",
+      "date": "2026-11-24",
+      "theme": "Loi de finances",
+      "resume": "Rapport spécial n° 156 annexe 7 tome III de M. Gabriel AMARD, fait au nom de la commission des finances, sur le projet de loi de finances pour 2027 : Crédits non répartis (19 novembre 2026)",
+      "importance": 5,
+      "public": [
+        "Expertise comptable",
+        "Conseil aux dirigeants"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-11-24",
+      "score": 14,
+      "pourquoi": {
+        "mots": [
+          {
+            "mot": "projet de loi de finances",
+            "poids": 6
+          },
+          {
+            "mot": "loi de finances",
+            "poids": 5
+          },
+          {
+            "mot": "budget",
+            "poids": 1
+          }
+        ],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 2,
+        "score": 12
+      }
+    },
+    {
+      "id": "3bd22017729b9860",
+      "titre": "Budget 2027 : Fonction publique - avis n° 162 tome V",
+      "source": "Sénat — Derniers rapports",
+      "source_id": "senat-rapports",
+      "url": "https://www.senat.fr/rap/a26-162-5/a26-162-5.html",
+      "date": "2026-11-24",
+      "theme": "Loi de finances",
+      "resume": "Avis n° 162 tome V de Mme Catherine DI FOLCO, fait au nom de la commission des lois constitutionnelles, de législation, du suffrage universel, du Règlement et d'administration générale, sur le projet de loi de finances pour 2027 : Fonction publique (19 novembre 2026)",
+      "importance": 5,
+      "public": [
+        "Expertise comptable",
+        "Conseil aux dirigeants"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-11-24",
+      "score": 14,
+      "pourquoi": {
+        "mots": [
+          {
+            "mot": "projet de loi de finances",
+            "poids": 6
+          },
+          {
+            "mot": "loi de finances",
+            "poids": 5
+          },
+          {
+            "mot": "budget",
+            "poids": 1
+          }
+        ],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 2,
+        "score": 12
+      }
+    },
+    {
+      "id": "68f64a5c59fa19fb",
+      "titre": "Budget 2027 : Monde combattant, mémoire et liens avec la Nation - avis n° 158 tome XI",
+      "source": "Sénat — Derniers rapports",
+      "source_id": "senat-rapports",
+      "url": "https://www.senat.fr/rap/a26-158-11/a26-158-11.html",
+      "date": "2026-11-24",
+      "theme": "Loi de finances",
+      "resume": "Avis n° 158 tome XI de MM. Christophe GUILLOTEAU et Loïc KERVRAN, fait au nom de la commission des affaires étrangères, de la défense et des forces armées, sur le projet de loi de finances pour 2027 : Monde combattant, mémoire et liens avec la Nation (19 novembre 2026)",
+      "importance": 5,
+      "public": [
+        "Expertise comptable",
+        "Conseil aux dirigeants"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-11-24",
+      "score": 14,
+      "pourquoi": {
+        "mots": [
+          {
+            "mot": "projet de loi de finances",
+            "poids": 6
+          },
+          {
+            "mot": "loi de finances",
+            "poids": 5
+          },
+          {
+            "mot": "budget",
+            "poids": 1
+          }
+        ],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 2,
+        "score": 12
+      }
+    },
+    {
+      "id": "3c2ffff72b5880dd",
+      "titre": "Projet de loi de finances de fin de gestion pour 2026 - rapport n° 186",
+      "source": "Sénat — Derniers rapports",
+      "source_id": "senat-rapports",
+      "url": "https://www.senat.fr/rap/l26-186/l26-186.html",
+      "date": "2026-11-23",
+      "theme": "Loi de finances",
+      "resume": "Rapport n° 186 de Mme Christine LAVARDE, rapporteur général et M. Philippe JUVIN, rapporteur général, fait au nom de la commission mixte paritaire, sur le projet de loi de finances de fin de gestion pour 2026 (20 novembre 2026)",
+      "importance": 5,
+      "public": [
+        "Expertise comptable",
+        "Conseil aux dirigeants"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-11-24",
+      "score": 15,
+      "pourquoi": {
+        "mots": [
+          {
+            "mot": "projet de loi de finances",
+            "poids": 6
+          },
+          {
+            "mot": "loi de finances",
+            "poids": 5
+          },
+          {
+            "mot": "commission mixte paritaire",
+            "poids": 2
+          }
+        ],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 2,
+        "score": 13
+      }
+    },
+    {
+      "id": "1e35804da302120f",
+      "titre": "Budget 2027 : Cohésion des territoires - Aménagement des territoires - rapport spécial n° 156 annexe 5 tome III",
+      "source": "Sénat — Derniers rapports",
+      "source_id": "senat-rapports",
+      "url": "https://www.senat.fr/rap/l26-156-35-2/l26-156-35-2.html",
+      "date": "2026-11-23",
+      "theme": "Loi de finances",
+      "resume": "Rapport spécial n° 156 annexe 5 tome III de M. Bernard DELCROS, fait au nom de la commission des finances, sur le projet de loi de finances pour 2027 : Cohésion des territoires - Aménagement des territoires (19 novembre 2026)",
+      "importance": 5,
+      "public": [
+        "Expertise comptable",
+        "Conseil aux dirigeants"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-11-24",
+      "score": 14,
+      "pourquoi": {
+        "mots": [
+          {
+            "mot": "projet de loi de finances",
+            "poids": 6
+          },
+          {
+            "mot": "loi de finances",
+            "poids": 5
+          },
+          {
+            "mot": "budget",
+            "poids": 1
+          }
+        ],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 2,
+        "score": 12
+      }
+    },
+    {
+      "id": "06f8fe8ea1777b6e",
+      "titre": "Budget 2027 : Cohésion des territoires - Logement et ville - rapport spécial n° 156 annexe 5 tome III",
+      "source": "Sénat — Derniers rapports",
+      "source_id": "senat-rapports",
+      "url": "https://www.senat.fr/rap/l26-156-35-1/l26-156-35-1.html",
+      "date": "2026-11-23",
+      "theme": "Loi de finances",
+      "resume": "Rapport spécial n° 156 annexe 5 tome III de Mme Sophie PRIMAS, fait au nom de la commission des finances, sur le projet de loi de finances pour 2027 : Cohésion des territoires - Logement et ville (19 novembre 2026)",
+      "importance": 5,
+      "public": [
+        "Expertise comptable",
+        "Conseil aux dirigeants"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-11-24",
+      "score": 14,
+      "pourquoi": {
+        "mots": [
+          {
+            "mot": "projet de loi de finances",
+            "poids": 6
+          },
+          {
+            "mot": "loi de finances",
+            "poids": 5
+          },
+          {
+            "mot": "budget",
+            "poids": 1
+          }
+        ],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 2,
+        "score": 12
+      }
+    },
+    {
+      "id": "2f633c2e428f5c8a",
+      "titre": "Budget 2027 : Écologie, développement et mobilité durables - rapport spécial n° 156 annexe 11 tome III",
+      "source": "Sénat — Derniers rapports",
+      "source_id": "senat-rapports",
+      "url": "https://www.senat.fr/rap/l26-156-311-3/l26-156-311-3.html",
+      "date": "2026-11-23",
+      "theme": "Loi de finances",
+      "resume": "Rapport spécial n° 156 annexe 11 tome III de M. Christopher SZCZUREK, fait au nom de la commission des finances, sur le projet de loi de finances pour 2027 : Écologie, développement et mobilité durables (19 novembre 2026)",
+      "importance": 5,
+      "public": [
+        "Expertise comptable",
+        "Conseil aux dirigeants"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-11-24",
+      "score": 14,
+      "pourquoi": {
+        "mots": [
+          {
+            "mot": "projet de loi de finances",
+            "poids": 6
+          },
+          {
+            "mot": "loi de finances",
+            "poids": 5
+          },
+          {
+            "mot": "budget",
+            "poids": 1
+          }
+        ],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 2,
+        "score": 12
+      }
+    },
+    {
+      "id": "3b7c7b015df600ec",
+      "titre": "Budget 2027 : Régimes sociaux et de retraite et compte d'affectation spéciale « Pensions » - avis n° 159 tome III",
+      "source": "Sénat — Derniers rapports",
+      "source_id": "senat-rapports",
+      "url": "https://www.senat.fr/rap/a26-159-3/a26-159-3.html",
+      "date": "2026-11-23",
+      "theme": "Loi de finances",
+      "resume": "Avis n° 159 tome III de Mme Marie-Do AESCHLIMANN, fait au nom de la commission des affaires sociales, sur le projet de loi de finances pour 2027 : Régimes sociaux et de retraite et compte d'affectation spéciale « Pensions » (19 novembre 2026)",
+      "importance": 5,
+      "public": [
+        "Social / paie"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-11-24",
+      "score": 14,
+      "pourquoi": {
+        "mots": [
+          {
+            "mot": "projet de loi de finances",
+            "poids": 6
+          },
+          {
+            "mot": "loi de finances",
+            "poids": 5
+          },
+          {
+            "mot": "budget",
+            "poids": 1
+          }
+        ],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 2,
+        "score": 12
+      }
+    },
+    {
+      "id": "90455020b2ccc1b5",
+      "titre": "Budget 2027 : Travail, emploi et administration des ministères sociaux - rapport spécial n° 156 annexe 32 tome III",
+      "source": "Sénat — Derniers rapports",
+      "source_id": "senat-rapports",
+      "url": "https://www.senat.fr/rap/l26-156-332/l26-156-332.html",
+      "date": "2026-11-23",
+      "theme": "Loi de finances",
+      "resume": "Rapport spécial n° 156 annexe 32 tome III de Mme Marie-Claire CARRÈRE-GÉE, fait au nom de la commission des finances, sur le projet de loi de finances pour 2027 : Travail, emploi et administration des ministères sociaux (19 novembre 2026)",
+      "importance": 5,
+      "public": [
+        "Expertise comptable",
+        "Conseil aux dirigeants"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-11-24",
+      "score": 14,
+      "pourquoi": {
+        "mots": [
+          {
+            "mot": "projet de loi de finances",
+            "poids": 6
+          },
+          {
+            "mot": "loi de finances",
+            "poids": 5
+          },
+          {
+            "mot": "budget",
+            "poids": 1
+          }
+        ],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 2,
+        "score": 12
+      }
+    },
     {
       "id": "029dbbc8160acf66",
       "titre": "N° 3488 - Projet de loi de financement de la sécurité sociale, modifié par le Sénat, pour 2027",
@@ -34,6 +427,36 @@
         "bonus_source": 0,
         "bonus_fraicheur": 2,
         "score": 8
+      }
+    },
+    {
+      "id": "b0c06b86ca20d065",
+      "titre": "Renforcement de l'attractivité de l'épargne salariale - texte N° 175",
+      "source": "Sénat — Derniers textes",
+      "source_id": "senat-textes",
+      "url": "https://www.senat.fr/leg/ppl26-175.html",
+      "date": "2026-11-23",
+      "theme": "Sécurité sociale",
+      "resume": "Proposition de loi visant au renforcement de l'attractivité de l'épargne salariale et à la mise en oeuvre d'une procédure de déblocage exceptionnelle : texte N° 175 transmis au Sénat le 16 novembre 2026",
+      "importance": 3,
+      "public": [
+        "Social / paie"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-11-24",
+      "score": 5,
+      "pourquoi": {
+        "mots": [
+          {
+            "mot": "épargne salariale",
+            "poids": 3
+          }
+        ],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 2,
+        "score": 3
       }
     },
     {
@@ -94,6 +517,84 @@
         "bonus_source": 0,
         "bonus_fraicheur": 2,
         "score": 1
+      }
+    },
+    {
+      "id": "c1e0095f7ab41533",
+      "titre": "Prévenir, reconnaître et sanctionner la sérophobie - texte N° 177",
+      "source": "Sénat — Derniers textes",
+      "source_id": "senat-textes",
+      "url": "https://www.senat.fr/leg/ppl26-177.html",
+      "date": "2026-11-23",
+      "theme": "Loi de finances",
+      "resume": "Proposition de loi visant à prévenir, reconnaître et sanctionner la sérophobie : texte N° 177 de Mme Anne SOUYRIS et plusieurs de ses collègues, déposé au Sénat le 17 novembre 2026",
+      "importance": 1,
+      "public": [
+        "Expertise comptable",
+        "Conseil aux dirigeants"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-11-24",
+      "score": 2,
+      "pourquoi": {
+        "mots": [],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 2,
+        "score": 0
+      }
+    },
+    {
+      "id": "8c1d27bdae77e198",
+      "titre": "Soutien financier des collectivités territoriales par les conseils régionaux - texte N° 182",
+      "source": "Sénat — Derniers textes",
+      "source_id": "senat-textes",
+      "url": "https://www.senat.fr/leg/ppl26-182.html",
+      "date": "2026-11-23",
+      "theme": "Loi de finances",
+      "resume": "Proposition de loi relative à la faculté pour les conseils régionaux de soutenir financièrement des collectivités territoriales en matière de prévention de la délinquance et de sécurité publique : texte N° 182 de M. Rachid TEMAL, déposé au Sénat le 20 novembre 2026",
+      "importance": 1,
+      "public": [
+        "Expertise comptable",
+        "Conseil aux dirigeants"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-11-24",
+      "score": 2,
+      "pourquoi": {
+        "mots": [],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 2,
+        "score": 0
+      }
+    },
+    {
+      "id": "2e03ea8c05dcb80c",
+      "titre": "Transport de marchandises et transport routier de personnes - texte N° 171",
+      "source": "Sénat — Derniers textes",
+      "source_id": "senat-textes",
+      "url": "https://www.senat.fr/leg/ppl26-171.html",
+      "date": "2026-11-23",
+      "theme": "Loi de finances",
+      "resume": "Proposition de loi relative au dispositif de sanction pour l'application du code des transports en matière de contrats de transport de marchandises et instaurant un mécanisme d'indexation pour les services occasionnels du transport routier de personnes : texte N° 171 de M. Franck DHERSIN, déposé…",
+      "importance": 1,
+      "public": [
+        "Expertise comptable",
+        "Conseil aux dirigeants"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-11-24",
+      "score": 2,
+      "pourquoi": {
+        "mots": [],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 2,
+        "score": 0
       }
     },
     {
@@ -256,7 +757,7 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-11-20",
-      "score": 12,
+      "score": 11,
       "pourquoi": {
         "mots": [
           {
@@ -270,7 +771,7 @@
         ],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 1,
+        "bonus_fraicheur": 0,
         "score": 11
       }
     },
@@ -290,7 +791,7 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-11-20",
-      "score": 9,
+      "score": 8,
       "pourquoi": {
         "mots": [
           {
@@ -304,7 +805,7 @@
         ],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 1,
+        "bonus_fraicheur": 0,
         "score": 8
       }
     },
@@ -324,12 +825,12 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-11-23",
-      "score": 1,
+      "score": 0,
       "pourquoi": {
         "mots": [],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 1,
+        "bonus_fraicheur": 0,
         "score": 0
       }
     },
@@ -350,12 +851,12 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-11-20",
-      "score": 1,
+      "score": 0,
       "pourquoi": {
         "mots": [],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 1,
+        "bonus_fraicheur": 0,
         "score": 0
       }
     },
@@ -1071,6 +1572,31 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-11-20",
+      "score": 0,
+      "pourquoi": {
+        "mots": [],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 0,
+        "score": 0
+      }
+    },
+    {
+      "id": "7263203ca0796cd5",
+      "titre": "N° 3480 rapport - Rapport de M. Sébastien Huyghe sur la proposition de loi de M. Sébastien Huyghe et plusieurs de ses collègues visant à moderniser les communications d'urgence (3319).",
+      "source": "Assemblée nationale — Commission des affaires économiques",
+      "source_id": "an-commission-affaires-economiques",
+      "url": "https://www.assemblee-nationale.fr/17/rapports/r3480.asp",
+      "date": "2026-11-18",
+      "theme": "Économie et statistiques",
+      "resume": null,
+      "importance": 1,
+      "public": [
+        "Conseil aux dirigeants"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-11-24",
       "score": 0,
       "pourquoi": {
         "mots": [],
@@ -8404,7 +8930,7 @@
       "source": "INSEE",
       "url": "https://www.insee.fr/fr/statistiques/serie/011812232",
       "date_publication": "2026-11-13",
-      "collecte_le": "2026-11-23"
+      "collecte_le": "2026-11-24"
     },
     {
       "source_id": "insee-bdm",
@@ -8414,7 +8940,7 @@
       "source": "INSEE",
       "url": "https://www.insee.fr/fr/statistiques/serie/011794844",
       "date_publication": "2026-10-30",
-      "collecte_le": "2026-11-23"
+      "collecte_le": "2026-11-24"
     },
     {
       "source_id": "insee-bdm",
@@ -8424,7 +8950,7 @@
       "source": "INSEE",
       "url": "https://www.insee.fr/fr/statistiques/serie/001688527",
       "date_publication": "2026-11-10",
-      "collecte_le": "2026-11-23"
+      "collecte_le": "2026-11-24"
     },
     {
       "source_id": "insee-bdm",
@@ -8434,7 +8960,7 @@
       "source": "INSEE",
       "url": "https://www.insee.fr/fr/statistiques/serie/001565530",
       "date_publication": "2026-11-20",
-      "collecte_le": "2026-11-23"
+      "collecte_le": "2026-11-24"
     },
     {
       "source_id": "insee-bdm",
@@ -8444,47 +8970,47 @@
       "source": "INSEE",
       "url": "https://www.insee.fr/fr/statistiques/serie/010755537",
       "date_publication": "2026-11-18",
-      "collecte_le": "2026-11-23"
+      "collecte_le": "2026-11-24"
     },
     {
       "source_id": "bodacc-35",
       "libelle": "Créations d’entreprises en Ille-et-Vilaine",
       "valeur": "248 annonces",
-      "periode": "du 16/11/2026 au 22/11/2026",
+      "periode": "du 17/11/2026 au 23/11/2026",
       "source": "BODACC (DILA)",
       "url": "https://www.bodacc.fr/",
-      "date_publication": "2026-11-22",
-      "collecte_le": "2026-11-23"
+      "date_publication": "2026-11-23",
+      "collecte_le": "2026-11-24"
     },
     {
       "source_id": "bodacc-35",
       "libelle": "Procédures collectives en Ille-et-Vilaine",
       "valeur": "39 annonces",
-      "periode": "du 16/11/2026 au 22/11/2026",
+      "periode": "du 17/11/2026 au 23/11/2026",
       "source": "BODACC (DILA)",
       "url": "https://www.bodacc.fr/",
-      "date_publication": "2026-11-22",
-      "collecte_le": "2026-11-23"
+      "date_publication": "2026-11-23",
+      "collecte_le": "2026-11-24"
     },
     {
       "source_id": "bodacc-35",
       "libelle": "Ventes et cessions de fonds en Ille-et-Vilaine",
       "valeur": "38 annonces",
-      "periode": "du 16/11/2026 au 22/11/2026",
+      "periode": "du 17/11/2026 au 23/11/2026",
       "source": "BODACC (DILA)",
       "url": "https://www.bodacc.fr/",
-      "date_publication": "2026-11-22",
-      "collecte_le": "2026-11-23"
+      "date_publication": "2026-11-23",
+      "collecte_le": "2026-11-24"
     },
     {
       "source_id": "bodacc-35",
       "libelle": "Radiations en Ille-et-Vilaine",
       "valeur": "157 annonces",
-      "periode": "du 16/11/2026 au 22/11/2026",
+      "periode": "du 17/11/2026 au 23/11/2026",
       "source": "BODACC (DILA)",
       "url": "https://www.bodacc.fr/",
-      "date_publication": "2026-11-22",
-      "collecte_le": "2026-11-23"
+      "date_publication": "2026-11-23",
+      "collecte_le": "2026-11-24"
     }
   ],
   "suivi": {
@@ -8542,7 +9068,7 @@
       ],
       "source": "Assemblée nationale et Sénat — dossiers législatifs",
       "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/PLF_2027",
-      "mis_a_jour_le": "2026-11-23",
+      "mis_a_jour_le": "2026-11-24",
       "mesures": {
         "libelle": "Projet de loi n° 3210 (texte déposé par le Gouvernement)",
         "url": "https://www.assemblee-nationale.fr/dyn/17/textes/l17b3210_projet-loi",
@@ -9841,7 +10367,7 @@
       ],
       "source": "Assemblée nationale et Sénat — dossiers législatifs",
       "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/PLFSS_2027",
-      "mis_a_jour_le": "2026-11-23",
+      "mis_a_jour_le": "2026-11-24",
       "mesures": {
         "libelle": "Projet de loi n° 3211 (texte déposé par le Gouvernement)",
         "url": "https://www.assemblee-nationale.fr/dyn/17/textes/l17b3211_projet-loi",
@@ -10588,66 +11114,6 @@
     }
   ],
   "echeances": [
-    {
-      "id": "impots-2026-11-16-aa60a7e9",
-      "date": "2026-11-16",
-      "titre": "Prélèvement et retenues à la source sur les RCM",
-      "detail": "Date limite de : dépôt de la déclaration de retenue à la source sur les revenus des obligations et autres titres d'emprunt négociables relative au mois d'octobre 2026 (déclaration n° 2753) ; dépôt de la déclaration relative au mois d’octobre 2026 concernant les prélèvements et retenues à la source sur les revenus de capitaux mobiliers (déclaration n° 2777).",
-      "categorie": "fiscal",
-      "source": "impots.gouv.fr — calendrier fiscal",
-      "url": "https://www.impots.gouv.fr/professionnel/calendrier-fiscal/2026-11",
-      "origine": "calendrier_officiel"
-    },
-    {
-      "id": "impots-2026-11-16-06b19ab1",
-      "date": "2026-11-16",
-      "titre": "Sociétés soumises à l'IS",
-      "detail": "Date limite de télépaiement du solde de l'impôt sur les sociétés et de la contribution sociale sur l'IS de 3,3 %, à l'aide du relevé de solde n° 2572 si votre exercice est clos le 31 juillet 2026.",
-      "categorie": "fiscal",
-      "source": "impots.gouv.fr — calendrier fiscal",
-      "url": "https://www.impots.gouv.fr/professionnel/calendrier-fiscal/2026-11",
-      "origine": "calendrier_officiel"
-    },
-    {
-      "id": "impots-2026-11-16-7387214a",
-      "date": "2026-11-16",
-      "titre": "Taxe sur les conventions d'assurances",
-      "detail": "La taxe due doit être télédéclarée et télépayée avec le formulaire n°2787-SD au titre des primes émises, des conventions conclues et des sommes échues au cours du mois d'octobre 2026.",
-      "categorie": "fiscal",
-      "source": "impots.gouv.fr — calendrier fiscal",
-      "url": "https://www.impots.gouv.fr/professionnel/calendrier-fiscal/2026-11",
-      "origine": "calendrier_officiel"
-    },
-    {
-      "id": "impots-2026-11-16-0e913eba",
-      "date": "2026-11-16",
-      "titre": "Taxe sur les salaires",
-      "detail": "Date limite de télépaiement de la taxe concernant les salaires payés en octobre (redevables mensuels) à l'aide du relevé de versement provisionnel n° 2501.",
-      "categorie": "fiscal",
-      "source": "impots.gouv.fr — calendrier fiscal",
-      "url": "https://www.impots.gouv.fr/professionnel/calendrier-fiscal/2026-11",
-      "origine": "calendrier_officiel"
-    },
-    {
-      "id": "impots-2026-11-16-cd627d45",
-      "date": "2026-11-16",
-      "titre": "TVA régime réel normal d'imposition",
-      "detail": "Entre les 16 et 24 novembre 2026, dépôt et paiement de la déclaration mensuelle de TVA à la date figurant dans votre espace professionnel.",
-      "categorie": "fiscal",
-      "source": "impots.gouv.fr — calendrier fiscal",
-      "url": "https://www.impots.gouv.fr/professionnel/calendrier-fiscal/2026-11",
-      "origine": "calendrier_officiel"
-    },
-    {
-      "id": "impots-2026-11-16-07b7ab32",
-      "date": "2026-11-16",
-      "titre": "Prélèvement à la source – DSN",
-      "detail": "Date limite pour la télédéclaration DSN d’octobre 2026 (entreprises de moins de 50 salariés) et le télépaiement (paiement mensuel).",
-      "categorie": "social",
-      "source": "impots.gouv.fr — calendrier fiscal",
-      "url": "https://www.impots.gouv.fr/professionnel/calendrier-fiscal/2026-11",
-      "origine": "calendrier_officiel"
-    },
     {
       "id": "urssaf-ti-mensuel-20-2026-11-20",
       "date": "2026-11-20",
