@@ -1,7 +1,655 @@
 {
   "version": 1,
-  "genere_le": "2026-11-24T16:03:41.196Z",
+  "genere_le": "2026-11-25T15:52:09.099Z",
   "articles": [
+    {
+      "id": "b9df455970de9bf3",
+      "titre": "Budget 2027 : Audiovisuel et avances à l'audiovisuel public - avis n° 161 tome IV",
+      "source": "Sénat — Derniers rapports",
+      "source_id": "senat-rapports",
+      "url": "https://www.senat.fr/rap/a26-161-41/a26-161-41.html",
+      "date": "2026-11-25",
+      "theme": "Loi de finances",
+      "resume": "Avis n° 161 tome IV de M. Cédric VIAL, fait au nom de la commission de la culture, de l'éducation, de la communication et du sport, sur le projet de loi de finances pour 2027 : Audiovisuel et avances à l'audiovisuel public (19 novembre 2026)",
+      "importance": 5,
+      "public": [
+        "Expertise comptable",
+        "Conseil aux dirigeants"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-11-25",
+      "score": 14,
+      "pourquoi": {
+        "mots": [
+          {
+            "mot": "projet de loi de finances",
+            "poids": 6
+          },
+          {
+            "mot": "loi de finances",
+            "poids": 5
+          },
+          {
+            "mot": "budget",
+            "poids": 1
+          }
+        ],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 2,
+        "score": 12
+      }
+    },
+    {
+      "id": "4f0fe6e289141c7e",
+      "titre": "Budget 2027 : Cohésion des territoires (Logement) - avis n° 157 tome VI",
+      "source": "Sénat — Derniers rapports",
+      "source_id": "senat-rapports",
+      "url": "https://www.senat.fr/rap/a26-157-6/a26-157-6.html",
+      "date": "2026-11-25",
+      "theme": "Loi de finances",
+      "resume": "Avis n° 157 tome VI de Mme Amel GACQUERRE, fait au nom de la commission des affaires économiques, sur le projet de loi de finances pour 2027 : Cohésion des territoires (Logement) (19 novembre 2026)",
+      "importance": 5,
+      "public": [
+        "Expertise comptable",
+        "Conseil aux dirigeants"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-11-25",
+      "score": 14,
+      "pourquoi": {
+        "mots": [
+          {
+            "mot": "projet de loi de finances",
+            "poids": 6
+          },
+          {
+            "mot": "loi de finances",
+            "poids": 5
+          },
+          {
+            "mot": "budget",
+            "poids": 1
+          }
+        ],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 2,
+        "score": 12
+      }
+    },
+    {
+      "id": "0d812a2c4e6584a1",
+      "titre": "Budget 2027 : Cohésion des territoires (Politique de la ville) - avis n° 157 tome VII",
+      "source": "Sénat — Derniers rapports",
+      "source_id": "senat-rapports",
+      "url": "https://www.senat.fr/rap/a26-157-7/a26-157-7.html",
+      "date": "2026-11-25",
+      "theme": "Loi de finances",
+      "resume": "Avis n° 157 tome VII de M. Denis BOUAD, fait au nom de la commission des affaires économiques, sur le projet de loi de finances pour 2027 : Cohésion des territoires (Politique de la ville) (19 novembre 2026)",
+      "importance": 5,
+      "public": [
+        "Expertise comptable",
+        "Conseil aux dirigeants"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-11-25",
+      "score": 14,
+      "pourquoi": {
+        "mots": [
+          {
+            "mot": "projet de loi de finances",
+            "poids": 6
+          },
+          {
+            "mot": "loi de finances",
+            "poids": 5
+          },
+          {
+            "mot": "budget",
+            "poids": 1
+          }
+        ],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 2,
+        "score": 12
+      }
+    },
+    {
+      "id": "f79804c691d46ff6",
+      "titre": "Budget 2027 : Création et Transmission des savoirs et démocratisation de la culture - avis n° 161 tome II",
+      "source": "Sénat — Derniers rapports",
+      "source_id": "senat-rapports",
+      "url": "https://www.senat.fr/rap/a26-161-22/a26-161-22.html",
+      "date": "2026-11-25",
+      "theme": "Loi de finances",
+      "resume": "Avis n° 161 tome II de Mme Sonia de LA PROVÔTÉ, fait au nom de la commission de la culture, de l'éducation, de la communication et du sport, sur le projet de loi de finances pour 2027 : Création et Transmission des savoirs et démocratisation de la culture (19 novembre 2026)",
+      "importance": 5,
+      "public": [
+        "Conseil aux dirigeants"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-11-25",
+      "score": 14,
+      "pourquoi": {
+        "mots": [
+          {
+            "mot": "projet de loi de finances",
+            "poids": 6
+          },
+          {
+            "mot": "loi de finances",
+            "poids": 5
+          },
+          {
+            "mot": "budget",
+            "poids": 1
+          }
+        ],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 2,
+        "score": 12
+      }
+    },
+    {
+      "id": "d89187e0a635b1ea",
+      "titre": "Budget 2027 : Écologie, développement et mobilité durables (Énergie) - avis n° 157 tome II",
+      "source": "Sénat — Derniers rapports",
+      "source_id": "senat-rapports",
+      "url": "https://www.senat.fr/rap/a26-157-2/a26-157-2.html",
+      "date": "2026-11-25",
+      "theme": "Loi de finances",
+      "resume": "Avis n° 157 tome II de M. Daniel GREMILLET, fait au nom de la commission des affaires économiques, sur le projet de loi de finances pour 2027 : Écologie, développement et mobilité durables (Énergie) (19 novembre 2026)",
+      "importance": 5,
+      "public": [
+        "Expertise comptable",
+        "Conseil aux dirigeants"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-11-25",
+      "score": 14,
+      "pourquoi": {
+        "mots": [
+          {
+            "mot": "projet de loi de finances",
+            "poids": 6
+          },
+          {
+            "mot": "loi de finances",
+            "poids": 5
+          },
+          {
+            "mot": "budget",
+            "poids": 1
+          }
+        ],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 2,
+        "score": 12
+      }
+    },
+    {
+      "id": "26383dbedc6cc18d",
+      "titre": "Budget 2027 : Économie - avis n° 157 tome III",
+      "source": "Sénat — Derniers rapports",
+      "source_id": "senat-rapports",
+      "url": "https://www.senat.fr/rap/a26-157-3/a26-157-3.html",
+      "date": "2026-11-25",
+      "theme": "Loi de finances",
+      "resume": "Avis n° 157 tome III de Mmes Anne-Catherine LOISIER, Sylviane NOËL et Pernelle RICHARDOT, fait au nom de la commission des affaires économiques, sur le projet de loi de finances pour 2027 : Économie (19 novembre 2026)",
+      "importance": 5,
+      "public": [
+        "Expertise comptable",
+        "Conseil aux dirigeants"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-11-25",
+      "score": 14,
+      "pourquoi": {
+        "mots": [
+          {
+            "mot": "projet de loi de finances",
+            "poids": 6
+          },
+          {
+            "mot": "loi de finances",
+            "poids": 5
+          },
+          {
+            "mot": "budget",
+            "poids": 1
+          }
+        ],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 2,
+        "score": 12
+      }
+    },
+    {
+      "id": "8e756d97dbe41f0d",
+      "titre": "Budget 2027 : Forêt - avis n° 157 tome IV",
+      "source": "Sénat — Derniers rapports",
+      "source_id": "senat-rapports",
+      "url": "https://www.senat.fr/rap/a26-157-4/a26-157-4.html",
+      "date": "2026-11-25",
+      "theme": "Loi de finances",
+      "resume": "Avis n° 157 tome IV de M. Jean-Marc BOYER, fait au nom de la commission des affaires économiques, sur le projet de loi de finances pour 2027 : Forêt (19 novembre 2026)",
+      "importance": 5,
+      "public": [
+        "Expertise comptable",
+        "Conseil aux dirigeants"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-11-25",
+      "score": 14,
+      "pourquoi": {
+        "mots": [
+          {
+            "mot": "projet de loi de finances",
+            "poids": 6
+          },
+          {
+            "mot": "loi de finances",
+            "poids": 5
+          },
+          {
+            "mot": "budget",
+            "poids": 1
+          }
+        ],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 2,
+        "score": 12
+      }
+    },
+    {
+      "id": "d3dab3a3184eaa6a",
+      "titre": "Budget 2027 : Justice judiciaire et accès au droit - avis n° 162 tome VII",
+      "source": "Sénat — Derniers rapports",
+      "source_id": "senat-rapports",
+      "url": "https://www.senat.fr/rap/a26-162-7/a26-162-7.html",
+      "date": "2026-11-25",
+      "theme": "Loi de finances",
+      "resume": "Avis n° 162 tome VII de Mmes Elsa SCHALCK et Dominique VÉRIEN, fait au nom de la commission des lois constitutionnelles, de législation, du suffrage universel, du Règlement et d'administration générale, sur le projet de loi de finances pour 2027 : Justice judiciaire et accès au droit (19 novembre…",
+      "importance": 5,
+      "public": [
+        "Expertise comptable",
+        "Conseil aux dirigeants"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-11-25",
+      "score": 14,
+      "pourquoi": {
+        "mots": [
+          {
+            "mot": "projet de loi de finances",
+            "poids": 6
+          },
+          {
+            "mot": "loi de finances",
+            "poids": 5
+          },
+          {
+            "mot": "budget",
+            "poids": 1
+          }
+        ],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 2,
+        "score": 12
+      }
+    },
+    {
+      "id": "770134bc6d2ba013",
+      "titre": "Budget 2027 : Outre-mer - avis n° 162 tome III",
+      "source": "Sénat — Derniers rapports",
+      "source_id": "senat-rapports",
+      "url": "https://www.senat.fr/rap/a26-162-3/a26-162-3.html",
+      "date": "2026-11-25",
+      "theme": "Loi de finances",
+      "resume": "Avis n° 162 tome III de M. Thani MOHAMED SOILIHI, fait au nom de la commission des lois constitutionnelles, de législation, du suffrage universel, du Règlement et d'administration générale, sur le projet de loi de finances pour 2027 : Outre-mer (19 novembre 2026)",
+      "importance": 5,
+      "public": [
+        "Expertise comptable",
+        "Conseil aux dirigeants"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-11-25",
+      "score": 14,
+      "pourquoi": {
+        "mots": [
+          {
+            "mot": "projet de loi de finances",
+            "poids": 6
+          },
+          {
+            "mot": "loi de finances",
+            "poids": 5
+          },
+          {
+            "mot": "budget",
+            "poids": 1
+          }
+        ],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 2,
+        "score": 12
+      }
+    },
+    {
+      "id": "de81a311d6800554",
+      "titre": "Budget 2027 : Patrimoines - avis n° 161 tome II",
+      "source": "Sénat — Derniers rapports",
+      "source_id": "senat-rapports",
+      "url": "https://www.senat.fr/rap/a26-161-21/a26-161-21.html",
+      "date": "2026-11-25",
+      "theme": "Loi de finances",
+      "resume": "Avis n° 161 tome II de Mme Sabine DREXLER, fait au nom de la commission de la culture, de l'éducation, de la communication et du sport, sur le projet de loi de finances pour 2027 : Patrimoines (19 novembre 2026)",
+      "importance": 5,
+      "public": [
+        "Expertise comptable",
+        "Conseil aux dirigeants"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-11-25",
+      "score": 14,
+      "pourquoi": {
+        "mots": [
+          {
+            "mot": "projet de loi de finances",
+            "poids": 6
+          },
+          {
+            "mot": "loi de finances",
+            "poids": 5
+          },
+          {
+            "mot": "budget",
+            "poids": 1
+          }
+        ],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 2,
+        "score": 12
+      }
+    },
+    {
+      "id": "f2415bbac4451b29",
+      "titre": "Budget 2027 : Protection judiciaire de la jeunesse - avis n° 162 tome VIII",
+      "source": "Sénat — Derniers rapports",
+      "source_id": "senat-rapports",
+      "url": "https://www.senat.fr/rap/a26-162-8/a26-162-8.html",
+      "date": "2026-11-25",
+      "theme": "Loi de finances",
+      "resume": "Avis n° 162 tome VIII de M. Christophe CHAILLOU, fait au nom de la commission des lois constitutionnelles, de législation, du suffrage universel, du Règlement et d'administration générale, sur le projet de loi de finances pour 2027 : Protection judiciaire de la jeunesse (19 novembre 2026)",
+      "importance": 5,
+      "public": [
+        "Expertise comptable",
+        "Conseil aux dirigeants"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-11-25",
+      "score": 14,
+      "pourquoi": {
+        "mots": [
+          {
+            "mot": "projet de loi de finances",
+            "poids": 6
+          },
+          {
+            "mot": "loi de finances",
+            "poids": 5
+          },
+          {
+            "mot": "budget",
+            "poids": 1
+          }
+        ],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 2,
+        "score": 12
+      }
+    },
+    {
+      "id": "9023e94918592e44",
+      "titre": "Budget 2027 : Recherche - avis n° 161 tome V",
+      "source": "Sénat — Derniers rapports",
+      "source_id": "senat-rapports",
+      "url": "https://www.senat.fr/rap/a26-161-51/a26-161-51.html",
+      "date": "2026-11-25",
+      "theme": "Loi de finances",
+      "resume": "Avis n° 161 tome V de Mme Alexandra BORCHIO FONTIMP, fait au nom de la commission de la culture, de l'éducation, de la communication et du sport, sur le projet de loi de finances pour 2027 : Recherche (19 novembre 2026)",
+      "importance": 5,
+      "public": [
+        "Expertise comptable",
+        "Conseil aux dirigeants"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-11-25",
+      "score": 14,
+      "pourquoi": {
+        "mots": [
+          {
+            "mot": "projet de loi de finances",
+            "poids": 6
+          },
+          {
+            "mot": "loi de finances",
+            "poids": 5
+          },
+          {
+            "mot": "budget",
+            "poids": 1
+          }
+        ],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 2,
+        "score": 12
+      }
+    },
+    {
+      "id": "11ec7ff84e7dd846",
+      "titre": "Budget 2027 : Recherche et enseignement supérieur - avis n° 157 tome V",
+      "source": "Sénat — Derniers rapports",
+      "source_id": "senat-rapports",
+      "url": "https://www.senat.fr/rap/a26-157-5/a26-157-5.html",
+      "date": "2026-11-25",
+      "theme": "Loi de finances",
+      "resume": "Avis n° 157 tome V de M. Stéphane PIEDNOIR, fait au nom de la commission des affaires économiques, sur le projet de loi de finances pour 2027 : Recherche et enseignement supérieur (19 novembre 2026)",
+      "importance": 5,
+      "public": [
+        "Expertise comptable",
+        "Conseil aux dirigeants"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-11-25",
+      "score": 14,
+      "pourquoi": {
+        "mots": [
+          {
+            "mot": "projet de loi de finances",
+            "poids": 6
+          },
+          {
+            "mot": "loi de finances",
+            "poids": 5
+          },
+          {
+            "mot": "budget",
+            "poids": 1
+          }
+        ],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 2,
+        "score": 12
+      }
+    },
+    {
+      "id": "13c07461be75f272",
+      "titre": "Budget 2027 : Santé - avis n° 159 tome IV",
+      "source": "Sénat — Derniers rapports",
+      "source_id": "senat-rapports",
+      "url": "https://www.senat.fr/rap/a26-159-4/a26-159-4.html",
+      "date": "2026-11-25",
+      "theme": "Loi de finances",
+      "resume": "Avis n° 159 tome IV de M. Jean-François RAPIN, fait au nom de la commission des affaires sociales, sur le projet de loi de finances pour 2027 : Santé (19 novembre 2026)",
+      "importance": 5,
+      "public": [
+        "Expertise comptable",
+        "Conseil aux dirigeants"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-11-25",
+      "score": 14,
+      "pourquoi": {
+        "mots": [
+          {
+            "mot": "projet de loi de finances",
+            "poids": 6
+          },
+          {
+            "mot": "loi de finances",
+            "poids": 5
+          },
+          {
+            "mot": "budget",
+            "poids": 1
+          }
+        ],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 2,
+        "score": 12
+      }
+    },
+    {
+      "id": "ab48af8b00eb4dd0",
+      "titre": "Budget 2027 : Sécurité civile - avis n° 162 tome XIII",
+      "source": "Sénat — Derniers rapports",
+      "source_id": "senat-rapports",
+      "url": "https://www.senat.fr/rap/a26-162-13/a26-162-13.html",
+      "date": "2026-11-25",
+      "theme": "Loi de finances",
+      "resume": "Avis n° 162 tome XIII de Mme Françoise DUMONT, fait au nom de la commission des lois constitutionnelles, de législation, du suffrage universel, du Règlement et d'administration générale, sur le projet de loi de finances pour 2027 : Sécurité civile (19 novembre 2026)",
+      "importance": 5,
+      "public": [
+        "Expertise comptable",
+        "Conseil aux dirigeants"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-11-25",
+      "score": 14,
+      "pourquoi": {
+        "mots": [
+          {
+            "mot": "projet de loi de finances",
+            "poids": 6
+          },
+          {
+            "mot": "loi de finances",
+            "poids": 5
+          },
+          {
+            "mot": "budget",
+            "poids": 1
+          }
+        ],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 2,
+        "score": 12
+      }
+    },
+    {
+      "id": "34e8a69c1c45d5cb",
+      "titre": "Budget 2027 : Solidarité, insertion et égalité des chances - avis n° 159 tome V",
+      "source": "Sénat — Derniers rapports",
+      "source_id": "senat-rapports",
+      "url": "https://www.senat.fr/rap/a26-159-5/a26-159-5.html",
+      "date": "2026-11-25",
+      "theme": "Loi de finances",
+      "resume": "Avis n° 159 tome V de Mme Micheline JACQUES, fait au nom de la commission des affaires sociales, sur le projet de loi de finances pour 2027 : Solidarité, insertion et égalité des chances (19 novembre 2026)",
+      "importance": 5,
+      "public": [
+        "Expertise comptable",
+        "Conseil aux dirigeants"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-11-25",
+      "score": 14,
+      "pourquoi": {
+        "mots": [
+          {
+            "mot": "projet de loi de finances",
+            "poids": 6
+          },
+          {
+            "mot": "loi de finances",
+            "poids": 5
+          },
+          {
+            "mot": "budget",
+            "poids": 1
+          }
+        ],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 2,
+        "score": 12
+      }
+    },
+    {
+      "id": "6cfd11a590dd9a61",
+      "titre": "N° 3487 - Proposition de loi, modifiée par le Sénat, visant à moderniser et rééquilibrer le fonctionnement du titre-restaurant",
+      "source": "Assemblée nationale — Commission des affaires sociales",
+      "source_id": "an-commission-affaires-sociales",
+      "url": "https://www.assemblee-nationale.fr/17/propositions/pion3487.asp",
+      "date": "2026-11-25",
+      "theme": "Sécurité sociale",
+      "resume": null,
+      "importance": 1,
+      "public": [
+        "Social / paie"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-11-25",
+      "score": 2,
+      "pourquoi": {
+        "mots": [],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 2,
+        "score": 0
+      }
+    },
     {
       "id": "713a6e02b3dfa29c",
       "titre": "Budget 2027 : Gestion des finances publiques et lutte contre les fraudes - Transformation et fonction publiques - rapport spécial n° 156 annexe 15 tome III",
@@ -46,6 +694,45 @@
       }
     },
     {
+      "id": "800b0c16928e0a81",
+      "titre": "Budget 2027 : Compte d'affectation spéciale : participations financières de l'État - rapport spécial n° 156 annexe 22 tome III",
+      "source": "Sénat — Derniers rapports",
+      "source_id": "senat-rapports",
+      "url": "https://www.senat.fr/rap/l26-156-322/l26-156-322.html",
+      "date": "2026-11-24",
+      "theme": "Loi de finances",
+      "resume": "Rapport spécial n° 156 annexe 22 tome III de M. Édouard FRITCH, fait au nom de la commission des finances, sur le projet de loi de finances pour 2027 : Compte d'affectation spéciale : participations financières de l'État (19 novembre 2026)",
+      "importance": 5,
+      "public": [
+        "Expertise comptable",
+        "Conseil aux dirigeants"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-11-25",
+      "score": 14,
+      "pourquoi": {
+        "mots": [
+          {
+            "mot": "projet de loi de finances",
+            "poids": 6
+          },
+          {
+            "mot": "loi de finances",
+            "poids": 5
+          },
+          {
+            "mot": "budget",
+            "poids": 1
+          }
+        ],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 2,
+        "score": 12
+      }
+    },
+    {
       "id": "be217e5f18f064be",
       "titre": "Budget 2027 : Crédits non répartis - rapport spécial n° 156 annexe 7 tome III",
       "source": "Sénat — Derniers rapports",
@@ -62,6 +749,45 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-11-24",
+      "score": 14,
+      "pourquoi": {
+        "mots": [
+          {
+            "mot": "projet de loi de finances",
+            "poids": 6
+          },
+          {
+            "mot": "loi de finances",
+            "poids": 5
+          },
+          {
+            "mot": "budget",
+            "poids": 1
+          }
+        ],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 2,
+        "score": 12
+      }
+    },
+    {
+      "id": "bfaf60ef0b2d916a",
+      "titre": "Budget 2027 : Engagements financiers de l'État - rapport spécial n° 156 annexe 13 tome III",
+      "source": "Sénat — Derniers rapports",
+      "source_id": "senat-rapports",
+      "url": "https://www.senat.fr/rap/l26-156-313/l26-156-313.html",
+      "date": "2026-11-24",
+      "theme": "Loi de finances",
+      "resume": "Rapport spécial n° 156 annexe 13 tome III de M. Albéric de MONTGOLFIER, fait au nom de la commission des finances, sur le projet de loi de finances pour 2027 : Engagements financiers de l'État (19 novembre 2026)",
+      "importance": 5,
+      "public": [
+        "Expertise comptable",
+        "Conseil aux dirigeants"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-11-25",
       "score": 14,
       "pourquoi": {
         "mots": [
@@ -163,6 +889,353 @@
       }
     },
     {
+      "id": "90c41e2719b0fc6e",
+      "titre": "Budget 2027 : Régimes sociaux et de retraite - rapport spécial n° 156 annexe 25 tome III",
+      "source": "Sénat — Derniers rapports",
+      "source_id": "senat-rapports",
+      "url": "https://www.senat.fr/rap/l26-156-325/l26-156-325.html",
+      "date": "2026-11-24",
+      "theme": "Loi de finances",
+      "resume": "Rapport spécial n° 156 annexe 25 tome III de Mme Sylvie VERMEILLET, fait au nom de la commission des finances, sur le projet de loi de finances pour 2027 : Régimes sociaux et de retraite (19 novembre 2026)",
+      "importance": 5,
+      "public": [
+        "Social / paie"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-11-25",
+      "score": 14,
+      "pourquoi": {
+        "mots": [
+          {
+            "mot": "projet de loi de finances",
+            "poids": 6
+          },
+          {
+            "mot": "loi de finances",
+            "poids": 5
+          },
+          {
+            "mot": "budget",
+            "poids": 1
+          }
+        ],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 2,
+        "score": 12
+      }
+    },
+    {
+      "id": "483fb8a0268d261d",
+      "titre": "Budget 2027 : Remboursements et dégrèvements - rapport spécial n° 156 annexe 27 tome III",
+      "source": "Sénat — Derniers rapports",
+      "source_id": "senat-rapports",
+      "url": "https://www.senat.fr/rap/l26-156-327/l26-156-327.html",
+      "date": "2026-11-24",
+      "theme": "Loi de finances",
+      "resume": "Rapport spécial n° 156 annexe 27 tome III de M. Pascal SAVOLDELLI, fait au nom de la commission des finances, sur le projet de loi de finances pour 2027 : Remboursements et dégrèvements (19 novembre 2026)",
+      "importance": 5,
+      "public": [
+        "Expertise comptable",
+        "Conseil aux dirigeants"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-11-25",
+      "score": 14,
+      "pourquoi": {
+        "mots": [
+          {
+            "mot": "projet de loi de finances",
+            "poids": 6
+          },
+          {
+            "mot": "loi de finances",
+            "poids": 5
+          },
+          {
+            "mot": "budget",
+            "poids": 1
+          }
+        ],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 2,
+        "score": 12
+      }
+    },
+    {
+      "id": "9b18bf9900cfbfd7",
+      "titre": "Budget 2027 : Transformation publique - avis n° 162 tome XIV",
+      "source": "Sénat — Derniers rapports",
+      "source_id": "senat-rapports",
+      "url": "https://www.senat.fr/rap/a26-162-14/a26-162-14.html",
+      "date": "2026-11-24",
+      "theme": "Loi de finances",
+      "resume": "Avis n° 162 tome XIV de M. Fabien BRAVI, fait au nom de la commission des lois constitutionnelles, de législation, du suffrage universel, du Règlement et d'administration générale, sur le projet de loi de finances pour 2027 : Transformation publique (19 novembre 2026)",
+      "importance": 5,
+      "public": [
+        "Expertise comptable",
+        "Conseil aux dirigeants"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-11-25",
+      "score": 14,
+      "pourquoi": {
+        "mots": [
+          {
+            "mot": "projet de loi de finances",
+            "poids": 6
+          },
+          {
+            "mot": "loi de finances",
+            "poids": 5
+          },
+          {
+            "mot": "budget",
+            "poids": 1
+          }
+        ],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 2,
+        "score": 12
+      }
+    },
+    {
+      "id": "594aa29bd9ee9f81",
+      "titre": "N° 3510 - Proposition de loi de M. Laurent Mazaury visant à alléger la périodicité des réunions du comité social et économique dans les entreprises de onze à moins de cinquante salariés",
+      "source": "Assemblée nationale — Commission des affaires sociales",
+      "source_id": "an-commission-affaires-sociales",
+      "url": "https://www.assemblee-nationale.fr/17/propositions/pion3510.asp",
+      "date": "2026-11-24",
+      "theme": "Économie et statistiques",
+      "resume": null,
+      "importance": 2,
+      "public": [
+        "Social / paie",
+        "Conseil aux dirigeants"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-11-25",
+      "score": 3,
+      "pourquoi": {
+        "mots": [
+          {
+            "mot": "entreprises",
+            "poids": 1
+          }
+        ],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 2,
+        "score": 1
+      }
+    },
+    {
+      "id": "d7ddbf3112b37afa",
+      "titre": "N° 3503 - Proposition de loi de Mme Delphine Lingemann visant à renforcer les moyens d'action des maires et des sociétés d'aménagement foncier et d'établissement rural contre les installations illicites et les contournements du droit de préemption",
+      "source": "Assemblée nationale — Commission des affaires économiques",
+      "source_id": "an-commission-affaires-economiques",
+      "url": "https://www.assemblee-nationale.fr/17/propositions/pion3503.asp",
+      "date": "2026-11-24",
+      "theme": "Économie et statistiques",
+      "resume": null,
+      "importance": 1,
+      "public": [
+        "Conseil aux dirigeants"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-11-25",
+      "score": 2,
+      "pourquoi": {
+        "mots": [],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 2,
+        "score": 0
+      }
+    },
+    {
+      "id": "80a67bc4fbe3640d",
+      "titre": "N° 3511 - Proposition de loi de M. Laurent Mazaury visant à instaurer un plafond de logements relevant du dispositif d'intermédiation locative",
+      "source": "Assemblée nationale — Commission des affaires économiques",
+      "source_id": "an-commission-affaires-economiques",
+      "url": "https://www.assemblee-nationale.fr/17/propositions/pion3511.asp",
+      "date": "2026-11-24",
+      "theme": "Économie et statistiques",
+      "resume": null,
+      "importance": 1,
+      "public": [
+        "Conseil aux dirigeants"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-11-25",
+      "score": 2,
+      "pourquoi": {
+        "mots": [],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 2,
+        "score": 0
+      }
+    },
+    {
+      "id": "22dc61d770137e73",
+      "titre": "N° 3513 - Proposition de loi de M. Pierrick Courbon visant à rendre obligatoire le maintien de la complémentaire santé lors du congé supplémentaire de naissance",
+      "source": "Assemblée nationale — Commission des affaires sociales",
+      "source_id": "an-commission-affaires-sociales",
+      "url": "https://www.assemblee-nationale.fr/17/propositions/pion3513.asp",
+      "date": "2026-11-24",
+      "theme": "Sécurité sociale",
+      "resume": null,
+      "importance": 1,
+      "public": [
+        "Social / paie"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-11-25",
+      "score": 2,
+      "pourquoi": {
+        "mots": [],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 2,
+        "score": 0
+      }
+    },
+    {
+      "id": "71532f5925f34822",
+      "titre": "N° 3516 - Proposition de loi de M. Laurent Marcangeli visant à ce que toute amende soit payée",
+      "source": "Assemblée nationale — Commission des affaires sociales",
+      "source_id": "an-commission-affaires-sociales",
+      "url": "https://www.assemblee-nationale.fr/17/propositions/pion3516.asp",
+      "date": "2026-11-24",
+      "theme": "Sécurité sociale",
+      "resume": null,
+      "importance": 1,
+      "public": [
+        "Social / paie"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-11-25",
+      "score": 2,
+      "pourquoi": {
+        "mots": [],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 2,
+        "score": 0
+      }
+    },
+    {
+      "id": "b682b52edb89be80",
+      "titre": "N° 3518 - Proposition de loi de Mme Anne-Cécile Violland visant à reconnaître l'approche « Une seule santé »",
+      "source": "Assemblée nationale — Commission des affaires sociales",
+      "source_id": "an-commission-affaires-sociales",
+      "url": "https://www.assemblee-nationale.fr/17/propositions/pion3518.asp",
+      "date": "2026-11-24",
+      "theme": "Sécurité sociale",
+      "resume": null,
+      "importance": 1,
+      "public": [
+        "Social / paie"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-11-25",
+      "score": 2,
+      "pourquoi": {
+        "mots": [],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 2,
+        "score": 0
+      }
+    },
+    {
+      "id": "98afc850fee031bd",
+      "titre": "Résilience des infrastructures critiques et renforcement de la cybersécurité - Texte n° 189",
+      "source": "Sénat — Entreprises",
+      "source_id": "senat-entreprises",
+      "url": "https://www.senat.fr/leg/pjl26-189.html",
+      "date": "2026-11-24",
+      "theme": "Économie et statistiques",
+      "resume": "Texte",
+      "importance": 1,
+      "public": [
+        "Conseil aux dirigeants"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-11-25",
+      "score": 2,
+      "pourquoi": {
+        "mots": [],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 2,
+        "score": 0
+      }
+    },
+    {
+      "id": "1fa56fe09964d4c5",
+      "titre": "Texte adopté n° 372 - Projet de loi, modifié, par l'Assemblée nationale, visant la relance et la décentralisation du logement",
+      "source": "Assemblée nationale — Commission des affaires économiques",
+      "source_id": "an-commission-affaires-economiques",
+      "url": "https://www.assemblee-nationale.fr/17/ta/ta0372.asp",
+      "date": "2026-11-24",
+      "theme": "Économie et statistiques",
+      "resume": null,
+      "importance": 1,
+      "public": [
+        "Conseil aux dirigeants"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-11-25",
+      "score": 2,
+      "pourquoi": {
+        "mots": [],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 2,
+        "score": 0
+      }
+    },
+    {
+      "id": "a09b48f997b7621c",
+      "titre": "Un mois, une juridiction : le tribunal administratif de Montreuil",
+      "source": "Conseil d'État — Actualités",
+      "source_id": "ce-actualites",
+      "url": "https://www.conseil-etat.fr/actualites/un-mois-une-juridiction-le-tribunal-administratif-de-montreuil2",
+      "date": "2026-11-24",
+      "theme": "Fiscal et comptable",
+      "resume": null,
+      "importance": 1,
+      "public": [
+        "Expertise comptable"
+      ],
+      "type": null,
+      "origine": "flux",
+      "collecte_le": "2026-11-25",
+      "score": 2,
+      "pourquoi": {
+        "mots": [],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 2,
+        "score": 0
+      }
+    },
+    {
       "id": "3c2ffff72b5880dd",
       "titre": "Projet de loi de finances de fin de gestion pour 2026 - rapport n° 186",
       "source": "Sénat — Derniers rapports",
@@ -179,7 +1252,7 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-11-24",
-      "score": 15,
+      "score": 14,
       "pourquoi": {
         "mots": [
           {
@@ -197,7 +1270,7 @@
         ],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 2,
+        "bonus_fraicheur": 1,
         "score": 13
       }
     },
@@ -218,7 +1291,7 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-11-24",
-      "score": 14,
+      "score": 13,
       "pourquoi": {
         "mots": [
           {
@@ -236,7 +1309,7 @@
         ],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 2,
+        "bonus_fraicheur": 1,
         "score": 12
       }
     },
@@ -257,7 +1330,7 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-11-24",
-      "score": 14,
+      "score": 13,
       "pourquoi": {
         "mots": [
           {
@@ -275,7 +1348,7 @@
         ],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 2,
+        "bonus_fraicheur": 1,
         "score": 12
       }
     },
@@ -296,7 +1369,7 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-11-24",
-      "score": 14,
+      "score": 13,
       "pourquoi": {
         "mots": [
           {
@@ -314,7 +1387,7 @@
         ],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 2,
+        "bonus_fraicheur": 1,
         "score": 12
       }
     },
@@ -334,7 +1407,7 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-11-24",
-      "score": 14,
+      "score": 13,
       "pourquoi": {
         "mots": [
           {
@@ -352,7 +1425,7 @@
         ],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 2,
+        "bonus_fraicheur": 1,
         "score": 12
       }
     },
@@ -373,7 +1446,7 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-11-24",
-      "score": 14,
+      "score": 13,
       "pourquoi": {
         "mots": [
           {
@@ -391,7 +1464,7 @@
         ],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 2,
+        "bonus_fraicheur": 1,
         "score": 12
       }
     },
@@ -411,7 +1484,7 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-11-23",
-      "score": 10,
+      "score": 9,
       "pourquoi": {
         "mots": [
           {
@@ -425,7 +1498,7 @@
         ],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 2,
+        "bonus_fraicheur": 1,
         "score": 8
       }
     },
@@ -445,7 +1518,7 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-11-24",
-      "score": 5,
+      "score": 4,
       "pourquoi": {
         "mots": [
           {
@@ -455,7 +1528,7 @@
         ],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 2,
+        "bonus_fraicheur": 1,
         "score": 3
       }
     },
@@ -475,7 +1548,7 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-11-23",
-      "score": 5,
+      "score": 4,
       "pourquoi": {
         "mots": [
           {
@@ -485,7 +1558,7 @@
         ],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 2,
+        "bonus_fraicheur": 1,
         "score": 3
       }
     },
@@ -505,7 +1578,7 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-11-23",
-      "score": 3,
+      "score": 2,
       "pourquoi": {
         "mots": [
           {
@@ -515,7 +1588,7 @@
         ],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 2,
+        "bonus_fraicheur": 1,
         "score": 1
       }
     },
@@ -536,12 +1609,12 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-11-24",
-      "score": 2,
+      "score": 1,
       "pourquoi": {
         "mots": [],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 2,
+        "bonus_fraicheur": 1,
         "score": 0
       }
     },
@@ -562,12 +1635,12 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-11-24",
-      "score": 2,
+      "score": 1,
       "pourquoi": {
         "mots": [],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 2,
+        "bonus_fraicheur": 1,
         "score": 0
       }
     },
@@ -588,12 +1661,12 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-11-24",
-      "score": 2,
+      "score": 1,
       "pourquoi": {
         "mots": [],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 2,
+        "bonus_fraicheur": 1,
         "score": 0
       }
     },
@@ -614,7 +1687,7 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-11-23",
-      "score": 13,
+      "score": 12,
       "pourquoi": {
         "mots": [
           {
@@ -632,7 +1705,7 @@
         ],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 1,
+        "bonus_fraicheur": 0,
         "score": 12
       }
     },
@@ -653,7 +1726,7 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-11-23",
-      "score": 13,
+      "score": 12,
       "pourquoi": {
         "mots": [
           {
@@ -671,7 +1744,7 @@
         ],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 1,
+        "bonus_fraicheur": 0,
         "score": 12
       }
     },
@@ -692,7 +1765,7 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-11-23",
-      "score": 13,
+      "score": 12,
       "pourquoi": {
         "mots": [
           {
@@ -710,7 +1783,7 @@
         ],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 1,
+        "bonus_fraicheur": 0,
         "score": 12
       }
     },
@@ -731,12 +1804,12 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-11-23",
-      "score": 1,
+      "score": 0,
       "pourquoi": {
         "mots": [],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 1,
+        "bonus_fraicheur": 0,
         "score": 0
       }
     },
@@ -8930,7 +10003,7 @@
       "source": "INSEE",
       "url": "https://www.insee.fr/fr/statistiques/serie/011812232",
       "date_publication": "2026-11-13",
-      "collecte_le": "2026-11-24"
+      "collecte_le": "2026-11-25"
     },
     {
       "source_id": "insee-bdm",
@@ -8940,7 +10013,7 @@
       "source": "INSEE",
       "url": "https://www.insee.fr/fr/statistiques/serie/011794844",
       "date_publication": "2026-10-30",
-      "collecte_le": "2026-11-24"
+      "collecte_le": "2026-11-25"
     },
     {
       "source_id": "insee-bdm",
@@ -8950,7 +10023,7 @@
       "source": "INSEE",
       "url": "https://www.insee.fr/fr/statistiques/serie/001688527",
       "date_publication": "2026-11-10",
-      "collecte_le": "2026-11-24"
+      "collecte_le": "2026-11-25"
     },
     {
       "source_id": "insee-bdm",
@@ -8960,7 +10033,7 @@
       "source": "INSEE",
       "url": "https://www.insee.fr/fr/statistiques/serie/001565530",
       "date_publication": "2026-11-20",
-      "collecte_le": "2026-11-24"
+      "collecte_le": "2026-11-25"
     },
     {
       "source_id": "insee-bdm",
@@ -8970,47 +10043,47 @@
       "source": "INSEE",
       "url": "https://www.insee.fr/fr/statistiques/serie/010755537",
       "date_publication": "2026-11-18",
-      "collecte_le": "2026-11-24"
+      "collecte_le": "2026-11-25"
     },
     {
       "source_id": "bodacc-35",
       "libelle": "Créations d’entreprises en Ille-et-Vilaine",
-      "valeur": "248 annonces",
-      "periode": "du 17/11/2026 au 23/11/2026",
+      "valeur": "217 annonces",
+      "periode": "du 18/11/2026 au 24/11/2026",
       "source": "BODACC (DILA)",
       "url": "https://www.bodacc.fr/",
-      "date_publication": "2026-11-23",
-      "collecte_le": "2026-11-24"
+      "date_publication": "2026-11-24",
+      "collecte_le": "2026-11-25"
     },
     {
       "source_id": "bodacc-35",
       "libelle": "Procédures collectives en Ille-et-Vilaine",
-      "valeur": "39 annonces",
-      "periode": "du 17/11/2026 au 23/11/2026",
+      "valeur": "58 annonces",
+      "periode": "du 18/11/2026 au 24/11/2026",
       "source": "BODACC (DILA)",
       "url": "https://www.bodacc.fr/",
-      "date_publication": "2026-11-23",
-      "collecte_le": "2026-11-24"
+      "date_publication": "2026-11-24",
+      "collecte_le": "2026-11-25"
     },
     {
       "source_id": "bodacc-35",
       "libelle": "Ventes et cessions de fonds en Ille-et-Vilaine",
-      "valeur": "38 annonces",
-      "periode": "du 17/11/2026 au 23/11/2026",
+      "valeur": "39 annonces",
+      "periode": "du 18/11/2026 au 24/11/2026",
       "source": "BODACC (DILA)",
       "url": "https://www.bodacc.fr/",
-      "date_publication": "2026-11-23",
-      "collecte_le": "2026-11-24"
+      "date_publication": "2026-11-24",
+      "collecte_le": "2026-11-25"
     },
     {
       "source_id": "bodacc-35",
       "libelle": "Radiations en Ille-et-Vilaine",
-      "valeur": "157 annonces",
-      "periode": "du 17/11/2026 au 23/11/2026",
+      "valeur": "124 annonces",
+      "periode": "du 18/11/2026 au 24/11/2026",
       "source": "BODACC (DILA)",
       "url": "https://www.bodacc.fr/",
-      "date_publication": "2026-11-23",
-      "collecte_le": "2026-11-24"
+      "date_publication": "2026-11-24",
+      "collecte_le": "2026-11-25"
     }
   ],
   "suivi": {
@@ -9068,7 +10141,7 @@
       ],
       "source": "Assemblée nationale et Sénat — dossiers législatifs",
       "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/PLF_2027",
-      "mis_a_jour_le": "2026-11-24",
+      "mis_a_jour_le": "2026-11-25",
       "mesures": {
         "libelle": "Projet de loi n° 3210 (texte déposé par le Gouvernement)",
         "url": "https://www.assemblee-nationale.fr/dyn/17/textes/l17b3210_projet-loi",
@@ -10367,7 +11440,7 @@
       ],
       "source": "Assemblée nationale et Sénat — dossiers législatifs",
       "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/PLFSS_2027",
-      "mis_a_jour_le": "2026-11-24",
+      "mis_a_jour_le": "2026-11-25",
       "mesures": {
         "libelle": "Projet de loi n° 3211 (texte déposé par le Gouvernement)",
         "url": "https://www.assemblee-nationale.fr/dyn/17/textes/l17b3211_projet-loi",
@@ -11562,6 +12635,16 @@
       "categorie": "social",
       "source": "Ministère du Travail",
       "url": "https://travail-emploi.gouv.fr/lindex-de-legalite-professionnelle-femmes-hommes",
+      "origine": "saisie"
+    },
+    {
+      "id": "urssaf-ti-mensuel-5-2027-03-05",
+      "date": "2027-03-05",
+      "titre": "Travailleurs indépendants : prélèvement mensuel des cotisations (échéance du 5)",
+      "detail": "Prélèvement le 5 de chaque mois, de janvier à décembre (date par défaut). Montants sur l'échéancier de l'espace en ligne Urssaf.",
+      "categorie": "social",
+      "source": "Urssaf",
+      "url": "https://www.urssaf.fr/accueil/independant/comprendre-payer-cotisations/calendrier-paiement-cotisations.html",
       "origine": "saisie"
     }
   ]
