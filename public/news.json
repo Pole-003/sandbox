@@ -1,7 +1,110 @@
 {
   "version": 1,
-  "genere_le": "2026-11-26T15:30:48.245Z",
+  "genere_le": "2026-11-27T15:24:38.022Z",
   "articles": [
+    {
+      "id": "37124f7692c36b0f",
+      "titre": "Budget 2027 : Environnement - avis n° 160 tome III",
+      "source": "Sénat — Derniers rapports",
+      "source_id": "senat-rapports",
+      "url": "https://www.senat.fr/rap/a26-160-3/a26-160-3.html",
+      "date": "2026-11-27",
+      "theme": "Loi de finances",
+      "resume": "Avis n° 160 tome III de M. Jean-Claude ANGLARS, Mme Jocelyne ANTOINE et M. Laurent SOMON, fait au nom de la commission de l'aménagement du territoire et du développement durable, sur le projet de loi de finances pour 2027 : Environnement (19 novembre 2026)",
+      "importance": 5,
+      "public": [
+        "Expertise comptable",
+        "Conseil aux dirigeants"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-11-27",
+      "score": 14,
+      "pourquoi": {
+        "mots": [
+          {
+            "mot": "projet de loi de finances",
+            "poids": 6
+          },
+          {
+            "mot": "loi de finances",
+            "poids": 5
+          },
+          {
+            "mot": "budget",
+            "poids": 1
+          }
+        ],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 2,
+        "score": 12
+      }
+    },
+    {
+      "id": "4131620408f10c1b",
+      "titre": "N° 2227 - Proposition de loi de M. Laurent Wauquiez visant à limiter à deux ans le versement du revenu de solidarité active pour les personnes aptes à travailler",
+      "source": "Assemblée nationale — Commission des affaires sociales",
+      "source_id": "an-commission-affaires-sociales",
+      "url": "https://www.assemblee-nationale.fr/17/propositions/pion2227.asp",
+      "date": "2026-11-27",
+      "theme": "Sécurité sociale",
+      "resume": null,
+      "importance": 1,
+      "public": [
+        "Social / paie"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-11-27",
+      "score": 2,
+      "pourquoi": {
+        "mots": [],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 2,
+        "score": 0
+      }
+    },
+    {
+      "id": "f3a04d18eaa6efb4",
+      "titre": "Budget 2027 : Action extérieure de l'État - rapport spécial n° 156 annexe 1 tome III",
+      "source": "Sénat — Derniers rapports",
+      "source_id": "senat-rapports",
+      "url": "https://www.senat.fr/rap/l26-156-31/l26-156-31.html",
+      "date": "2026-11-26",
+      "theme": "Loi de finances",
+      "resume": "Rapport spécial n° 156 annexe 1 tome III de MM. Grégory BLANC et Rémi FÉRAUD, fait au nom de la commission des finances, sur le projet de loi de finances pour 2027 : Action extérieure de l'État (19 novembre 2026)",
+      "importance": 5,
+      "public": [
+        "Expertise comptable",
+        "Conseil aux dirigeants"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-11-27",
+      "score": 14,
+      "pourquoi": {
+        "mots": [
+          {
+            "mot": "projet de loi de finances",
+            "poids": 6
+          },
+          {
+            "mot": "loi de finances",
+            "poids": 5
+          },
+          {
+            "mot": "budget",
+            "poids": 1
+          }
+        ],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 2,
+        "score": 12
+      }
+    },
     {
       "id": "8ab4d92298f4caa4",
       "titre": "Budget 2027 : Action extérieure de l'État : Diplomatie culturelle et d'influence - Français à l'étranger et affaires consulaires - avis n° 158 tome II",
@@ -19,6 +122,45 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-11-26",
+      "score": 14,
+      "pourquoi": {
+        "mots": [
+          {
+            "mot": "projet de loi de finances",
+            "poids": 6
+          },
+          {
+            "mot": "loi de finances",
+            "poids": 5
+          },
+          {
+            "mot": "budget",
+            "poids": 1
+          }
+        ],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 2,
+        "score": 12
+      }
+    },
+    {
+      "id": "84dabc06f614ab6b",
+      "titre": "Budget 2027 : Aide publique au développement - rapport spécial n° 156 annexe 4 tome III",
+      "source": "Sénat — Derniers rapports",
+      "source_id": "senat-rapports",
+      "url": "https://www.senat.fr/rap/l26-156-34/l26-156-34.html",
+      "date": "2026-11-26",
+      "theme": "Loi de finances",
+      "resume": "Rapport spécial n° 156 annexe 4 tome III de MM. Michel CANÉVET et Raphaël DAUBET, fait au nom de la commission des finances, sur le projet de loi de finances pour 2027 : Aide publique au développement (19 novembre 2026)",
+      "importance": 5,
+      "public": [
+        "Expertise comptable",
+        "Conseil aux dirigeants"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-11-27",
       "score": 14,
       "pourquoi": {
         "mots": [
@@ -120,6 +262,123 @@
       }
     },
     {
+      "id": "9e26436f24843ee3",
+      "titre": "Budget 2027 : Santé - rapport spécial n° 156 annexe 28 tome III",
+      "source": "Sénat — Derniers rapports",
+      "source_id": "senat-rapports",
+      "url": "https://www.senat.fr/rap/l26-156-328/l26-156-328.html",
+      "date": "2026-11-26",
+      "theme": "Loi de finances",
+      "resume": "Rapport spécial n° 156 annexe 28 tome III de M. Vincent DELAHAYE, fait au nom de la commission des finances, sur le projet de loi de finances pour 2027 : Santé (19 novembre 2026)",
+      "importance": 5,
+      "public": [
+        "Expertise comptable",
+        "Conseil aux dirigeants"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-11-27",
+      "score": 14,
+      "pourquoi": {
+        "mots": [
+          {
+            "mot": "projet de loi de finances",
+            "poids": 6
+          },
+          {
+            "mot": "loi de finances",
+            "poids": 5
+          },
+          {
+            "mot": "budget",
+            "poids": 1
+          }
+        ],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 2,
+        "score": 12
+      }
+    },
+    {
+      "id": "a0302dda5b66ff44",
+      "titre": "Budget 2027 : Sécurités (Gendarmerie nationale - Police nationale - Sécurité et éducation routières) - rapport spécial n° 156 annexe 29 tome III",
+      "source": "Sénat — Derniers rapports",
+      "source_id": "senat-rapports",
+      "url": "https://www.senat.fr/rap/l26-156-329-1/l26-156-329-1.html",
+      "date": "2026-11-26",
+      "theme": "Loi de finances",
+      "resume": "Rapport spécial n° 156 annexe 29 tome III de M. Bruno BELIN, fait au nom de la commission des finances, sur le projet de loi de finances pour 2027 : Sécurités (Gendarmerie nationale - Police nationale - Sécurité et éducation routières) (19 novembre 2026)",
+      "importance": 5,
+      "public": [
+        "Expertise comptable",
+        "Conseil aux dirigeants"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-11-27",
+      "score": 14,
+      "pourquoi": {
+        "mots": [
+          {
+            "mot": "projet de loi de finances",
+            "poids": 6
+          },
+          {
+            "mot": "loi de finances",
+            "poids": 5
+          },
+          {
+            "mot": "budget",
+            "poids": 1
+          }
+        ],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 2,
+        "score": 12
+      }
+    },
+    {
+      "id": "5e78af6efec9aa82",
+      "titre": "Budget 2027 : Sécurités (Sécurité civile) - rapport spécial n° 156 annexe 29 tome III",
+      "source": "Sénat — Derniers rapports",
+      "source_id": "senat-rapports",
+      "url": "https://www.senat.fr/rap/l26-156-329-2/l26-156-329-2.html",
+      "date": "2026-11-26",
+      "theme": "Loi de finances",
+      "resume": "Rapport spécial n° 156 annexe 29 tome III de M. Jean Pierre VOGEL, fait au nom de la commission des finances, sur le projet de loi de finances pour 2027 : Sécurités (Sécurité civile) (19 novembre 2026)",
+      "importance": 5,
+      "public": [
+        "Expertise comptable",
+        "Conseil aux dirigeants"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-11-27",
+      "score": 14,
+      "pourquoi": {
+        "mots": [
+          {
+            "mot": "projet de loi de finances",
+            "poids": 6
+          },
+          {
+            "mot": "loi de finances",
+            "poids": 5
+          },
+          {
+            "mot": "budget",
+            "poids": 1
+          }
+        ],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 2,
+        "score": 12
+      }
+    },
+    {
       "id": "021fcd5a3d449ba5",
       "titre": "Budget 2027 : Sport - avis n° 161 tome VI",
       "source": "Sénat — Derniers rapports",
@@ -136,6 +395,45 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-11-26",
+      "score": 14,
+      "pourquoi": {
+        "mots": [
+          {
+            "mot": "projet de loi de finances",
+            "poids": 6
+          },
+          {
+            "mot": "loi de finances",
+            "poids": 5
+          },
+          {
+            "mot": "budget",
+            "poids": 1
+          }
+        ],
+        "coefficient": 1,
+        "bonus_source": 0,
+        "bonus_fraicheur": 2,
+        "score": 12
+      }
+    },
+    {
+      "id": "83e3d50afaef28dd",
+      "titre": "Budget 2027 : Travail, emploi et administration des ministères sociaux - avis n° 159 tome VI",
+      "source": "Sénat — Derniers rapports",
+      "source_id": "senat-rapports",
+      "url": "https://www.senat.fr/rap/a26-159-6/a26-159-6.html",
+      "date": "2026-11-26",
+      "theme": "Loi de finances",
+      "resume": "Avis n° 159 tome VI de Mme Frédérique PUISSAT, fait au nom de la commission des affaires sociales, sur le projet de loi de finances pour 2027 : Travail, emploi et administration des ministères sociaux (19 novembre 2026)",
+      "importance": 5,
+      "public": [
+        "Expertise comptable",
+        "Conseil aux dirigeants"
+      ],
+      "type": "texte_officiel",
+      "origine": "flux",
+      "collecte_le": "2026-11-27",
       "score": 14,
       "pourquoi": {
         "mots": [
@@ -260,7 +558,7 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-11-26",
-      "score": 14,
+      "score": 13,
       "pourquoi": {
         "mots": [
           {
@@ -278,7 +576,7 @@
         ],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 2,
+        "bonus_fraicheur": 1,
         "score": 12
       }
     },
@@ -299,7 +597,7 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-11-26",
-      "score": 14,
+      "score": 13,
       "pourquoi": {
         "mots": [
           {
@@ -317,7 +615,7 @@
         ],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 2,
+        "bonus_fraicheur": 1,
         "score": 12
       }
     },
@@ -338,7 +636,7 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-11-25",
-      "score": 14,
+      "score": 13,
       "pourquoi": {
         "mots": [
           {
@@ -356,7 +654,7 @@
         ],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 2,
+        "bonus_fraicheur": 1,
         "score": 12
       }
     },
@@ -377,7 +675,7 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-11-25",
-      "score": 14,
+      "score": 13,
       "pourquoi": {
         "mots": [
           {
@@ -395,7 +693,7 @@
         ],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 2,
+        "bonus_fraicheur": 1,
         "score": 12
       }
     },
@@ -416,7 +714,7 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-11-25",
-      "score": 14,
+      "score": 13,
       "pourquoi": {
         "mots": [
           {
@@ -434,7 +732,7 @@
         ],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 2,
+        "bonus_fraicheur": 1,
         "score": 12
       }
     },
@@ -455,7 +753,7 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-11-26",
-      "score": 14,
+      "score": 13,
       "pourquoi": {
         "mots": [
           {
@@ -473,7 +771,7 @@
         ],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 2,
+        "bonus_fraicheur": 1,
         "score": 12
       }
     },
@@ -493,7 +791,7 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-11-25",
-      "score": 14,
+      "score": 13,
       "pourquoi": {
         "mots": [
           {
@@ -511,7 +809,7 @@
         ],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 2,
+        "bonus_fraicheur": 1,
         "score": 12
       }
     },
@@ -532,7 +830,7 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-11-26",
-      "score": 14,
+      "score": 13,
       "pourquoi": {
         "mots": [
           {
@@ -550,7 +848,7 @@
         ],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 2,
+        "bonus_fraicheur": 1,
         "score": 12
       }
     },
@@ -571,7 +869,7 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-11-25",
-      "score": 14,
+      "score": 13,
       "pourquoi": {
         "mots": [
           {
@@ -589,7 +887,7 @@
         ],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 2,
+        "bonus_fraicheur": 1,
         "score": 12
       }
     },
@@ -610,7 +908,7 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-11-25",
-      "score": 14,
+      "score": 13,
       "pourquoi": {
         "mots": [
           {
@@ -628,7 +926,7 @@
         ],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 2,
+        "bonus_fraicheur": 1,
         "score": 12
       }
     },
@@ -649,7 +947,7 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-11-25",
-      "score": 14,
+      "score": 13,
       "pourquoi": {
         "mots": [
           {
@@ -667,7 +965,7 @@
         ],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 2,
+        "bonus_fraicheur": 1,
         "score": 12
       }
     },
@@ -688,7 +986,7 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-11-26",
-      "score": 14,
+      "score": 13,
       "pourquoi": {
         "mots": [
           {
@@ -706,7 +1004,7 @@
         ],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 2,
+        "bonus_fraicheur": 1,
         "score": 12
       }
     },
@@ -727,7 +1025,7 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-11-26",
-      "score": 14,
+      "score": 13,
       "pourquoi": {
         "mots": [
           {
@@ -745,7 +1043,7 @@
         ],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 2,
+        "bonus_fraicheur": 1,
         "score": 12
       }
     },
@@ -766,7 +1064,7 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-11-25",
-      "score": 14,
+      "score": 13,
       "pourquoi": {
         "mots": [
           {
@@ -784,7 +1082,7 @@
         ],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 2,
+        "bonus_fraicheur": 1,
         "score": 12
       }
     },
@@ -805,7 +1103,7 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-11-25",
-      "score": 14,
+      "score": 13,
       "pourquoi": {
         "mots": [
           {
@@ -823,7 +1121,7 @@
         ],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 2,
+        "bonus_fraicheur": 1,
         "score": 12
       }
     },
@@ -844,7 +1142,7 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-11-25",
-      "score": 14,
+      "score": 13,
       "pourquoi": {
         "mots": [
           {
@@ -862,7 +1160,7 @@
         ],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 2,
+        "bonus_fraicheur": 1,
         "score": 12
       }
     },
@@ -883,7 +1181,7 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-11-26",
-      "score": 14,
+      "score": 13,
       "pourquoi": {
         "mots": [
           {
@@ -901,7 +1199,7 @@
         ],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 2,
+        "bonus_fraicheur": 1,
         "score": 12
       }
     },
@@ -922,7 +1220,7 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-11-25",
-      "score": 14,
+      "score": 13,
       "pourquoi": {
         "mots": [
           {
@@ -940,7 +1238,7 @@
         ],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 2,
+        "bonus_fraicheur": 1,
         "score": 12
       }
     },
@@ -961,7 +1259,7 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-11-25",
-      "score": 14,
+      "score": 13,
       "pourquoi": {
         "mots": [
           {
@@ -979,7 +1277,7 @@
         ],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 2,
+        "bonus_fraicheur": 1,
         "score": 12
       }
     },
@@ -1000,7 +1298,7 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-11-25",
-      "score": 14,
+      "score": 13,
       "pourquoi": {
         "mots": [
           {
@@ -1018,7 +1316,7 @@
         ],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 2,
+        "bonus_fraicheur": 1,
         "score": 12
       }
     },
@@ -1039,7 +1337,7 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-11-26",
-      "score": 14,
+      "score": 13,
       "pourquoi": {
         "mots": [
           {
@@ -1057,7 +1355,7 @@
         ],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 2,
+        "bonus_fraicheur": 1,
         "score": 12
       }
     },
@@ -1078,7 +1376,7 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-11-25",
-      "score": 14,
+      "score": 13,
       "pourquoi": {
         "mots": [
           {
@@ -1096,7 +1394,7 @@
         ],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 2,
+        "bonus_fraicheur": 1,
         "score": 12
       }
     },
@@ -1117,7 +1415,7 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-11-25",
-      "score": 14,
+      "score": 13,
       "pourquoi": {
         "mots": [
           {
@@ -1135,7 +1433,7 @@
         ],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 2,
+        "bonus_fraicheur": 1,
         "score": 12
       }
     },
@@ -1156,7 +1454,7 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-11-25",
-      "score": 14,
+      "score": 13,
       "pourquoi": {
         "mots": [
           {
@@ -1174,7 +1472,7 @@
         ],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 2,
+        "bonus_fraicheur": 1,
         "score": 12
       }
     },
@@ -1194,7 +1492,7 @@
       "type": "doctrine",
       "origine": "flux",
       "collecte_le": "2026-11-26",
-      "score": 10,
+      "score": 9,
       "pourquoi": {
         "mots": [
           {
@@ -1208,7 +1506,7 @@
         ],
         "coefficient": 1,
         "bonus_source": 2,
-        "bonus_fraicheur": 2,
+        "bonus_fraicheur": 1,
         "score": 8
       }
     },
@@ -1229,7 +1527,7 @@
       "type": "doctrine",
       "origine": "flux",
       "collecte_le": "2026-11-26",
-      "score": 8,
+      "score": 7,
       "pourquoi": {
         "mots": [
           {
@@ -1243,7 +1541,7 @@
         ],
         "coefficient": 1,
         "bonus_source": 2,
-        "bonus_fraicheur": 2,
+        "bonus_fraicheur": 1,
         "score": 6
       }
     },
@@ -1263,7 +1561,7 @@
       "type": "doctrine",
       "origine": "flux",
       "collecte_le": "2026-11-26",
-      "score": 6,
+      "score": 5,
       "pourquoi": {
         "mots": [
           {
@@ -1273,7 +1571,7 @@
         ],
         "coefficient": 1,
         "bonus_source": 2,
-        "bonus_fraicheur": 2,
+        "bonus_fraicheur": 1,
         "score": 4
       }
     },
@@ -1293,12 +1591,12 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-11-25",
-      "score": 2,
+      "score": 1,
       "pourquoi": {
         "mots": [],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 2,
+        "bonus_fraicheur": 1,
         "score": 0
       }
     },
@@ -1904,7 +2202,7 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-11-24",
-      "score": 14,
+      "score": 13,
       "pourquoi": {
         "mots": [
           {
@@ -1922,7 +2220,7 @@
         ],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 1,
+        "bonus_fraicheur": 0,
         "score": 13
       }
     },
@@ -1943,7 +2241,7 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-11-24",
-      "score": 13,
+      "score": 12,
       "pourquoi": {
         "mots": [
           {
@@ -1961,7 +2259,7 @@
         ],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 1,
+        "bonus_fraicheur": 0,
         "score": 12
       }
     },
@@ -1982,7 +2280,7 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-11-24",
-      "score": 13,
+      "score": 12,
       "pourquoi": {
         "mots": [
           {
@@ -2000,7 +2298,7 @@
         ],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 1,
+        "bonus_fraicheur": 0,
         "score": 12
       }
     },
@@ -2021,7 +2319,7 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-11-24",
-      "score": 13,
+      "score": 12,
       "pourquoi": {
         "mots": [
           {
@@ -2039,7 +2337,7 @@
         ],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 1,
+        "bonus_fraicheur": 0,
         "score": 12
       }
     },
@@ -2059,7 +2357,7 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-11-24",
-      "score": 13,
+      "score": 12,
       "pourquoi": {
         "mots": [
           {
@@ -2077,7 +2375,7 @@
         ],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 1,
+        "bonus_fraicheur": 0,
         "score": 12
       }
     },
@@ -2098,7 +2396,7 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-11-24",
-      "score": 13,
+      "score": 12,
       "pourquoi": {
         "mots": [
           {
@@ -2116,7 +2414,7 @@
         ],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 1,
+        "bonus_fraicheur": 0,
         "score": 12
       }
     },
@@ -2136,7 +2434,7 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-11-23",
-      "score": 9,
+      "score": 8,
       "pourquoi": {
         "mots": [
           {
@@ -2150,7 +2448,7 @@
         ],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 1,
+        "bonus_fraicheur": 0,
         "score": 8
       }
     },
@@ -2170,7 +2468,7 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-11-24",
-      "score": 4,
+      "score": 3,
       "pourquoi": {
         "mots": [
           {
@@ -2180,7 +2478,7 @@
         ],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 1,
+        "bonus_fraicheur": 0,
         "score": 3
       }
     },
@@ -2200,7 +2498,7 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-11-23",
-      "score": 4,
+      "score": 3,
       "pourquoi": {
         "mots": [
           {
@@ -2210,7 +2508,7 @@
         ],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 1,
+        "bonus_fraicheur": 0,
         "score": 3
       }
     },
@@ -2230,7 +2528,7 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-11-23",
-      "score": 2,
+      "score": 1,
       "pourquoi": {
         "mots": [
           {
@@ -2240,7 +2538,7 @@
         ],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 1,
+        "bonus_fraicheur": 0,
         "score": 1
       }
     },
@@ -2261,12 +2559,12 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-11-24",
-      "score": 1,
+      "score": 0,
       "pourquoi": {
         "mots": [],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 1,
+        "bonus_fraicheur": 0,
         "score": 0
       }
     },
@@ -2287,12 +2585,12 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-11-24",
-      "score": 1,
+      "score": 0,
       "pourquoi": {
         "mots": [],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 1,
+        "bonus_fraicheur": 0,
         "score": 0
       }
     },
@@ -2313,12 +2611,12 @@
       "type": "texte_officiel",
       "origine": "flux",
       "collecte_le": "2026-11-24",
-      "score": 1,
+      "score": 0,
       "pourquoi": {
         "mots": [],
         "coefficient": 1,
         "bonus_source": 0,
-        "bonus_fraicheur": 1,
+        "bonus_fraicheur": 0,
         "score": 0
       }
     },
@@ -3093,9 +3391,9 @@
       },
       "autres_sources": [
         {
-          "source": "Sénat — Économie et finances, fiscalité",
+          "source": "Sénat — Derniers textes",
           "url": "https://www.senat.fr/leg/pjl26-187.html",
-          "titre": "Projet de loi de finances de fin de gestion pour 2026 - Texte de la commission n° 187"
+          "titre": "Projet de loi de finances de fin de gestion pour 2026 - texte de la commission N° 187"
         }
       ]
     },
@@ -4946,7 +5244,7 @@
         {
           "source": "Sénat — Dossier législatif du PLFSS",
           "url": "https://www.senat.fr/dossier-legislatif/plfss2027.html",
-          "titre": "PLFSS 2027 : nouvelle étape au Sénat — CMP"
+          "titre": "PLFSS 2027 : nouvelle étape au Sénat — nouvelle lecture - Assemblée nationale"
         }
       ]
     },
@@ -10655,17 +10953,17 @@
       "source": "INSEE",
       "url": "https://www.insee.fr/fr/statistiques/serie/011812232",
       "date_publication": "2026-11-13",
-      "collecte_le": "2026-11-26"
+      "collecte_le": "2026-11-27"
     },
     {
       "source_id": "insee-bdm",
       "libelle": "Croissance du PIB sur un trimestre",
-      "valeur": "-0,1 %",
+      "valeur": "-0,2 %",
       "periode": "3e trimestre 2026",
       "source": "INSEE",
       "url": "https://www.insee.fr/fr/statistiques/serie/011794844",
-      "date_publication": "2026-10-30",
-      "collecte_le": "2026-11-26"
+      "date_publication": "2026-11-27",
+      "collecte_le": "2026-11-27"
     },
     {
       "source_id": "insee-bdm",
@@ -10675,7 +10973,7 @@
       "source": "INSEE",
       "url": "https://www.insee.fr/fr/statistiques/serie/001688527",
       "date_publication": "2026-11-10",
-      "collecte_le": "2026-11-26"
+      "collecte_le": "2026-11-27"
     },
     {
       "source_id": "insee-bdm",
@@ -10685,7 +10983,7 @@
       "source": "INSEE",
       "url": "https://www.insee.fr/fr/statistiques/serie/001565530",
       "date_publication": "2026-11-20",
-      "collecte_le": "2026-11-26"
+      "collecte_le": "2026-11-27"
     },
     {
       "source_id": "insee-bdm",
@@ -10695,47 +10993,47 @@
       "source": "INSEE",
       "url": "https://www.insee.fr/fr/statistiques/serie/010755537",
       "date_publication": "2026-11-18",
-      "collecte_le": "2026-11-26"
+      "collecte_le": "2026-11-27"
     },
     {
       "source_id": "bodacc-35",
       "libelle": "Créations d’entreprises en Ille-et-Vilaine",
-      "valeur": "229 annonces",
-      "periode": "du 19/11/2026 au 25/11/2026",
+      "valeur": "258 annonces",
+      "periode": "du 20/11/2026 au 26/11/2026",
       "source": "BODACC (DILA)",
       "url": "https://www.bodacc.fr/",
-      "date_publication": "2026-11-25",
-      "collecte_le": "2026-11-26"
+      "date_publication": "2026-11-26",
+      "collecte_le": "2026-11-27"
     },
     {
       "source_id": "bodacc-35",
       "libelle": "Procédures collectives en Ille-et-Vilaine",
-      "valeur": "118 annonces",
-      "periode": "du 19/11/2026 au 25/11/2026",
+      "valeur": "96 annonces",
+      "periode": "du 20/11/2026 au 26/11/2026",
       "source": "BODACC (DILA)",
       "url": "https://www.bodacc.fr/",
-      "date_publication": "2026-11-25",
-      "collecte_le": "2026-11-26"
+      "date_publication": "2026-11-26",
+      "collecte_le": "2026-11-27"
     },
     {
       "source_id": "bodacc-35",
       "libelle": "Ventes et cessions de fonds en Ille-et-Vilaine",
-      "valeur": "47 annonces",
-      "periode": "du 19/11/2026 au 25/11/2026",
+      "valeur": "54 annonces",
+      "periode": "du 20/11/2026 au 26/11/2026",
       "source": "BODACC (DILA)",
       "url": "https://www.bodacc.fr/",
-      "date_publication": "2026-11-25",
-      "collecte_le": "2026-11-26"
+      "date_publication": "2026-11-26",
+      "collecte_le": "2026-11-27"
     },
     {
       "source_id": "bodacc-35",
       "libelle": "Radiations en Ille-et-Vilaine",
-      "valeur": "199 annonces",
-      "periode": "du 19/11/2026 au 25/11/2026",
+      "valeur": "215 annonces",
+      "periode": "du 20/11/2026 au 26/11/2026",
       "source": "BODACC (DILA)",
       "url": "https://www.bodacc.fr/",
-      "date_publication": "2026-11-25",
-      "collecte_le": "2026-11-26"
+      "date_publication": "2026-11-26",
+      "collecte_le": "2026-11-27"
     }
   ],
   "suivi": {
@@ -10793,7 +11091,7 @@
       ],
       "source": "Assemblée nationale et Sénat — dossiers législatifs",
       "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/PLF_2027",
-      "mis_a_jour_le": "2026-11-26",
+      "mis_a_jour_le": "2026-11-27",
       "mesures": {
         "libelle": "Projet de loi n° 3210 (texte déposé par le Gouvernement)",
         "url": "https://www.assemblee-nationale.fr/dyn/17/textes/l17b3210_projet-loi",
@@ -12041,7 +12339,7 @@
     },
     "plfss": {
       "texte": "PLFSS 2027",
-      "etape_actuelle": "Commission Mixte Paritaire",
+      "etape_actuelle": "Nouvelle lecture à l'Assemblée nationale",
       "etapes": [
         {
           "libelle": "Dépôt à l'Assemblée nationale",
@@ -12060,6 +12358,11 @@
         },
         {
           "libelle": "Commission Mixte Paritaire",
+          "date": "2026-11-20",
+          "statut": "fait"
+        },
+        {
+          "libelle": "Nouvelle lecture à l'Assemblée nationale",
           "date": "2026-11-20",
           "statut": "en_cours"
         },
@@ -12092,7 +12395,7 @@
       ],
       "source": "Assemblée nationale et Sénat — dossiers législatifs",
       "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/PLFSS_2027",
-      "mis_a_jour_le": "2026-11-26",
+      "mis_a_jour_le": "2026-11-27",
       "mesures": {
         "libelle": "Projet de loi n° 3211 (texte déposé par le Gouvernement)",
         "url": "https://www.assemblee-nationale.fr/dyn/17/textes/l17b3211_projet-loi",
